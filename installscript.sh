@@ -1,6 +1,7 @@
+sudo su
+
 mkdir gentoo
 
-sudo su
 echo -e "o\nn\np\n1\n\n\nw" | fdisk /dev/sda
 mkfs.ext4 /dev/sda1
 mount /dev/sda1 gentoo
