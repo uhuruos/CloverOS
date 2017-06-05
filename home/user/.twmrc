@@ -1,0 +1,42 @@
+NoTitle
+RandomPlacement
+OpaqueMove
+BorderWidth 1
+NoHighlight
+ShowIconManager
+IconManagerGeometry "1440+0+1025" 10
+IconifyByUnmapping
+
+Button1 =: root : f.menu "Applications"
+Button3 = c m : window : f.delete
+Button1 = m : window : f.move
+Button3 = m : window : f.resize
+
+Function "winup" { f.circleup }
+"Tab" = m : root|window|frame|title : f.function "winup"
+
+Function "windown" { f.circledown }
+"Tab" = s m : root|window|frame|title : f.function "windown"
+
+Color
+{
+IconManagerForeground "white"
+IconManagerBackground "black"
+}
+
+menu "Applications"
+{
+"Applications" f.title
+"aterm" !"aterm +sb -tr -sh 30 -e dash &"
+"porthole" !"porthole &"
+"xfe" !"xfe &"
+"firefox" !"firefox &"
+"emacs" !"emacs &"
+"gimp" !"gimp &"
+"smplayer" !"smplayer &"
+}
+
+IconManagerDontShow
+{
+"Wine System Tray"
+}
