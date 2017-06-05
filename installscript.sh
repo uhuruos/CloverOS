@@ -21,7 +21,7 @@ chroot .
 
 emerge-webrsync
 
-echo -e "\nPORTAGE_BINHOST=\"https://cloveros.ga\"\nMAKEOPTS=\"-j8\"\nEMERGE_DEFAULT_OPTS=\"--keep-going=y --autounmask-write=y --jobs=2 -G\"\nCFLAGS=\"-O2 -pipe -march=native\"\nCXXFLAGS=\"\${CFLAGS}\"" >> /etc/portage/make.conf
+echo -e '\nPORTAGE_BINHOST="https://cloveros.ga"\nMAKEOPTS="-j8"\nEMERGE_DEFAULT_OPTS="--keep-going=y --autounmask-write=y --jobs=2 -G"\nCFLAGS="-O2 -pipe -march=native"\nCXXFLAGS="${CFLAGS}"' >> /etc/portage/make.conf
 
 emerge grub dhcpcd gentoo-sources genkernel
 
