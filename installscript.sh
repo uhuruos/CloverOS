@@ -5,7 +5,7 @@ mkdir gentoo
 mount /dev/sda1 gentoo
 cd gentoo
 
-wget http://distfiles.gentoo.org/releases/amd64/autobuilds/20170504/stage3-amd64-20170504.tar.bz2
+wget https://gentoo.osuosl.org/releases/amd64/autobuilds/current-stage3-amd64/stage3-amd64-20170525.tar.bz2
 tar pxvf stage3*
 rm stage3*
 
@@ -18,8 +18,7 @@ chroot .
 
 emerge-webrsync
 
-echo -e "\nMAKEOPTS=\"-j8\"\nEMERGE_DEFAULT_OPTS=\"--keep-going=y --autounmask-write=y --jobs=8\"\nCFLAGS=\"-O3 -pipe -march=native\"\nCXXFLAGS=\"\${CFLAGS}\"" 
->> /etc/portage/make.conf
+echo -e "\nPORTAGE_BINHOST=\"https://cloveros.ga\"\nMAKEOPTS=\"-j8\"\nEMERGE_DEFAULT_OPTS=\"--keep-going=y --autounmask-write=y --jobs=8 -G\"\nCFLAGS=\"-O2 -pipe -march=native\"\nCXXFLAGS=\"\${CFLAGS}\"" >> /etc/portage/make.conf
 
 emerge grub dhcpcd gentoo-sources genkernel
 
@@ -37,10 +36,4 @@ exit
 
 reboot
 
-emerge xorg-server enlightenment:0.17
-useradd -m user
-gpasswd -a user wheel
-passwd user
-echo "enlightenment_start" > /home/user/.xinitrc
-echo '[[ $(tty) = "/dev/tty1" ]] && exec startx' >> /home/user/.bash_profile
 
