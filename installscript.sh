@@ -1,8 +1,10 @@
+mkdir gentoo
+
 sudo su
 echo -e "o\nn\np\n1\n\n\nw" | fdisk /dev/sda
 mkfs.ext4 /dev/sda1
-mkdir gentoo
 mount /dev/sda1 gentoo
+
 cd gentoo
 
 wget https://gentoo.osuosl.org/releases/amd64/autobuilds/current-stage3-amd64/stage3-amd64-20170525.tar.bz2
