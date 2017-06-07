@@ -5,6 +5,6 @@ if [ -z "$DISPLAY" ]; then
        X&
        sleep 1
        twm&
-       feh --bg-scale wall.png
+       feh --bg-fill wall.png
     fi
 fi
