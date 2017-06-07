@@ -1,5 +1,3 @@
-sudo su
-
 mkdir gentoo
 
 echo -e "o\nn\np\n1\n\n\nw" | fdisk /dev/sda
@@ -17,7 +15,7 @@ mount -t proc none proc
 mount --rbind /dev dev
 mount --rbind /sys sys
 
-chroot .
+chroot . /bin/bash -x <<'EOF'
 
 emerge-webrsync
 
@@ -36,5 +34,7 @@ rc-update add dhcpcd default
 passwd
 
 exit
+
+EOF
 
 reboot
