@@ -19,7 +19,7 @@ mount -t proc none proc
 mount --rbind /dev dev
 mount --rbind /sys sys
 
-chroot . /bin/bash -x <<'EOF'
+cat << EOF | chroot .
 
 emerge-webrsync
 
