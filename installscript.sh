@@ -1,3 +1,7 @@
+read -p "Enter preferred root password " rootpassword
+read -p "Enter preferred username " user
+read -p "Enter preferred user password " userpassword
+
 mkdir gentoo
 
 echo -e "o\nn\np\n1\n\n\nw" | fdisk /dev/sda
@@ -31,12 +35,12 @@ grub-mkconfig > /boot/grub/grub.cfg
 
 rc-update add dhcpcd default
 
-passwd
+echo -e "$rootpassword\n$rootpassword" | passwd
 
-useradd user
-passwd user
+useradd $user
+echo -e "$userpassword\n$userpassword" | passwd user
 emerge xorg-server twm feh
-cd /home/user/
+cd /home/$user/
 wget https://raw.githubusercontent.com/chiru-no/cloveros/master/home/user/.twmrc
 wget https://raw.githubusercontent.com/chiru-no/cloveros/master/home/user/.bash_profile
 
