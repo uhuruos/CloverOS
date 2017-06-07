@@ -15,7 +15,7 @@ mount /dev/sda1 gentoo
 cd gentoo
 
 wget https://gentoo.osuosl.org/releases/amd64/autobuilds/current-stage3-amd64/stage3-amd64-20170525.tar.bz2
-tar pxvf stage3*
+tar pxf stage3*
 rm stage3*
 
 cp /etc/resolv.conf etc
@@ -29,10 +29,18 @@ emerge-webrsync
 
 echo -e '\nPORTAGE_BINHOST="https://cloveros.ga"\nMAKEOPTS="-j8"\nEMERGE_DEFAULT_OPTS="--keep-going=y --autounmask-write=y --jobs=2 -G"\nCFLAGS="-O2 -pipe -march=native"\nCXXFLAGS="${CFLAGS}"' >> /etc/portage/make.conf
 
-emerge grub dhcpcd gentoo-sources genkernel
+emerge grub dhcpcd
 
-wget http://liquorix.net/sources/4.9/config.amd64
-MAKEOPTS="-j8" genkernel --kernel-config=config.amd64 all
+#emerge gentoo-sources genkernel
+#wget http://liquorix.net/sources/4.9/config.amd64
+#MAKEOPTS="-j8" genkernel --kernel-config=config.amd64 all
+
+wget https://cloveros.ga/s/kernel.xz
+tar xf kernel.xz
+mkdir /lib/modules/
+mv kernel/*/ /lib/modules
+mv kernel/* /boot/
+rmdir kernel
 
 grub-install /dev/sda
 grub-mkconfig > /boot/grub/grub.cfg
