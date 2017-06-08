@@ -54,6 +54,8 @@ echo -e "$userpassword\n$userpassword" | passwd user
 gpasswd -a $user wheel
 emerge xorg-server twm feh aterm sudo xfe wpa_supplicant dash
 sed -i 's/# %wheel ALL=(ALL) NOPASSWD: ALL/%wheel ALL=(ALL) NOPASSWD: ALL/' /etc/sudoers
+sed -iE 's/^c([2-6]):2345/#\0/' /etc/inittab
+rc-update add wpa_supplicant default
 cd /home/$user/
 rm .bash_profile
 wget https://raw.githubusercontent.com/chiru-no/cloveros/master/home/user/.bash_profile
