@@ -28,9 +28,9 @@ menu "Applications"
 {
 "Applications" f.title
 "aterm" !"aterm +sb -tr -sh 30 -e dash &"
+"xfe" !"xfe &"
 "wifi" !"wpa_gui &"
 "porthole" !"porthole &"
-"xfe" !"xfe &"
 "firefox" !"firefox &"
 "emacs" !"emacs &"
 "gimp" !"gimp &"
