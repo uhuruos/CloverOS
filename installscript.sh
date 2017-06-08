@@ -51,7 +51,7 @@ echo -e "$rootpassword\n$rootpassword" | passwd
 
 useradd $user
 echo -e "$userpassword\n$userpassword" | passwd user
-emerge xorg-server twm feh
+emerge xorg-server twm feh aterm
 cd /home/$user/
 rm .bash_profile
 wget https://raw.githubusercontent.com/chiru-no/cloveros/master/home/user/.bash_profile
