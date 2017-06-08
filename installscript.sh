@@ -57,6 +57,7 @@ cd /home/$user/
 rm .bash_profile
 wget https://raw.githubusercontent.com/chiru-no/cloveros/master/home/user/.bash_profile
 wget https://raw.githubusercontent.com/chiru-no/cloveros/master/home/user/.twmrc
+wget https://raw.githubusercontent.com/chiru-no/cloveros/master/home/user/wallpaper.png
 
 exit
 
