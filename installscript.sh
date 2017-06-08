@@ -53,8 +53,9 @@ useradd $user
 echo -e "$userpassword\n$userpassword" | passwd user
 emerge xorg-server twm feh
 cd /home/$user/
-wget -c https://raw.githubusercontent.com/chiru-no/cloveros/master/home/user/.twmrc
-wget -c https://raw.githubusercontent.com/chiru-no/cloveros/master/home/user/.bash_profile
+rm .bash_profile
+wget https://raw.githubusercontent.com/chiru-no/cloveros/master/home/user/.bash_profile
+wget https://raw.githubusercontent.com/chiru-no/cloveros/master/home/user/.twmrc
 
 exit
 
