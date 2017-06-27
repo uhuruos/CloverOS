@@ -104,3 +104,13 @@ cd ..
 umount -l image/*
 mksquashfs image image.squashfs -b 1024k -comp xz -Xbcj x86 -Xdict-size 100%
 rm -Rf image/
+wget https://raw.githubusercontent.com/chiru-no/cloveros/master/livecd_files.tar.gz
+mv image.squashfs files
+xorriso -as mkisofs -r -J \
+       	-joliet-long -l -cache-inodes \
+       	-isohybrid-mbr isohdpfx.bin \
+       	-partition_offset 16 -A "Gentoo Live" \
+       	-b isolinux/isolinux.bin -c isolinux/boot.cat \
+       	-no-emul-boot -boot-load-size 4 -boot-info-table  \
+	-o CloverOS.iso files
+rm -R files isohdpfx.bin
