@@ -113,5 +113,5 @@ xorriso -as mkisofs -r -J \
        	-partition_offset 16 -A "Gentoo Live" \
        	-b isolinux/isolinux.bin -c isolinux/boot.cat \
        	-no-emul-boot -boot-load-size 4 -boot-info-table  \
-	-o CloverOS.iso files
+	-o CloverOS-x86_64-$(date +"%Y%m%d").iso files
 rm -R files isohdpfx.bin livecd_files.tar.gz
