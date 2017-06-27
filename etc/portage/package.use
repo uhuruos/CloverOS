@@ -1,11 +1,13 @@
 #preference
+sys-libs/ncurses -minimal
 x11-wm/compiz-fusion emerald unsupported
 media-sound/audacious qt5
 media-plugins/audacious-plugins qt5
 x11-themes/qtcurve qt5
 mail-client/thunderbird -crypt system-harfbuzz system-icu system-jpeg system-libevent system-libvpx system-sqlite
 media-fonts/acroread-asianfonts -minimal
-kde-plasma/plasma-meta bluetooth grub
+kde-plasma/plasma-meta bluetooth grub gtk
+kde-plasma/plasma-desktop gtk3 gtk2 legacy-systray
 app-misc/neofetch X
 app-emulation/virtualbox-guest-additions X
 media-gfx/krita color-management
@@ -53,6 +55,7 @@ virtual/ffmpeg X
 media-video/ffmpeg X gnutls x265 hevc libass vorbis ogg network vpx rtmp x264 aac wavpack opus mp3 sdl theora xvid gme
 app-text/texlive X cjk context detex dvi2tty dvipdfm epspdf extra games graphics humanities jadetex luatex metapost music omega png pstricks publishers science tex4ht texi2html truetype xetex xindy xml
 dev-cpp/gtkmm wayland X
+media-libs/clutter -wayland X
 dev-libs/weston xwayland
 media-video/mpv bluray encode lua libmpv wayland -xscreensaver
 x11-base/xorg-server glamor wayland xvfb -minimal
@@ -83,7 +86,7 @@ net-irc/hexchat spell
 dev-qt/qtgui gtkstyle
 dev-qt/qtwidgets gtkstyle
 media-libs/mesa d3d9 vulkan llvm gallium gles2 wayland
-x11-drivers/xf86-video-intel uxa sna
+x11-drivers/xf86-video-intel uxa sna dri3
 www-serverrs/nginx http2
 net-misc/curl http2
 media-libs/freetype infinality
@@ -138,7 +141,7 @@ app-arch/p7zip wxwidgets rar
 media-gfx/imagemagick png
 media-libs/x264 -10bit
 media-gfx/feh exif curl
-x11-terms/rxvt-unicode -vanilla alt-font-width xft -256-color
+x11-terms/rxvt-unicode -vanilla alt-font-width xft 256-color
 net-analyzer/vnstat gd
 dev-lang/php curl gd fpm pdo
 app-eselect/eselect-php fpm
@@ -961,3 +964,19 @@ sys-apps/dbus X
 # required by x11-themes/vdrgraphtft-deepblue-0.3.1::gentoo
 # required by vdrgraphtft-deepblue (argument)
 >=media-video/vdr-2.2.0-r1 graphtft
+# required by xfce-extra/thunar-volman-0.8.1::gentoo
+# required by thunar-volman (argument)
+>=xfce-base/thunar-1.6.10-r1 udisks
+# required by xfce-extra/eatmonkey-0.1.4::gentoo
+# required by eatmonkey (argument)
+>=net-misc/aria2-1.30.0 bittorrent xmlrpc
+# required by dev-libs/libappindicator-12.10.0-r301::gentoo
+# required by kde-plasma/plasma-desktop-5.8.6::gentoo[legacy-systray,gtk3]
+# required by kde-plasma/plasma-meta-5.8.6::gentoo
+# required by @selected
+# required by @world (argument)
+>=dev-libs/libdbusmenu-12.10.2-r2 gtk gtk3
+# required by x11-libs/bamf-0.5.3::elementary
+# required by pantheon-base/plank-0.11.2::elementary
+# required by x11-themes/plank-theme-pantheon-0.1::elementary
+>=dev-libs/libxslt-1.1.29-r1 python
