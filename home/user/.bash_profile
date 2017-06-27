@@ -9,7 +9,7 @@ if [ -z "$DISPLAY" ]; then
     wms[i]=i3
     wms[a]=awesome
     wms[o]=openbox
-    wms[e]=enlightenment
+    wms[e]=enlightenment_start
     wms[k]=startkde
     wms[m]=mate-session
     wms[x]=startxfce4
