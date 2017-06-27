@@ -1,7 +1,5 @@
 - build more software (need user input)
-- more terminal rice
-- try tinycore kernel config and see if it's viable
-- test deblobbed kernel
-- script for upgrading dotfiles
-- script for upgrading kernel
-- script for changing cloveros.ga mirror
+- try tinycore kernel config and see if it works
+- try deblobbed kernel and see if it works
+- multi script for upgrading dotfiles, kernel and changing cloveros.ga mirror
+- make LiveCD from scratch (kernel, kernel modules)
