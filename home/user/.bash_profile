@@ -20,7 +20,7 @@ if [ -z "$DISPLAY" ]; then
     wmspkg[a]=awesome
     wmspkg[o]=openbox
     wmspkg[e]="enlightenment:0.17 terminology"
-    wmspkg[k]="plasma-desktop dolphin dolphin-plugins"
+    wmspkg[k]="plasma-meta dolphin dolphin-plugins"
     wmspkg[m]=mate
     wmspkg[x]=xfce4-meta
     wmspkg[l]=lxde-meta
