@@ -19,7 +19,7 @@ if [ -z "$DISPLAY" ]; then
     wmspkg[i]=i3
     wmspkg[a]=awesome
     wmspkg[o]=openbox
-    wmspkg[e]="enlightenment:0.17"
+    wmspkg[e]="enlightenment:0.17 terminology"
     wmspkg[k]=plasma-desktop
     wmspkg[m]=mate
     wmspkg[x]=xfce4-meta
