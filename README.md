@@ -1,7 +1,7 @@
 # cloveros
 ![CloverOS GNU/Linux](https://raw.githubusercontent.com/chiru-no/cloveros/master/logo.png "CloverOS GNU/Linux")
 
-CloverOS GNU/Linux is a GNU/Linux distro that runs on Gentoo GNU/Linux. It consists of the install script and the CloverOS GNU/Linux packages repo (Binhost) that contains unique USE flags and CFLAGS. You can download CloverOS GNU/Linux here https://github.com/chiru-no/cloveros/releases
+CloverOS GNU/Linux is scripts that creates a Gentoo image and a packages repo (Binhost) that contains unique USE flags and CFLAGS. It aims to be an out of the box desktop distro. You can download CloverOS GNU/Linux here https://github.com/chiru-no/cloveros/releases
 
 ## Cheat sheet
 
