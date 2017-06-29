@@ -1,14 +1,16 @@
 #preference
 media-video/mpv ~amd64
+app-emulation/virtualbox ~amd64
+app-emulation/virtualbox-modules ~amd64
 app-emulation/virtualbox-guest-additions ~amd64
+app-emulation/virtualbox-additions ~amd64
+dev-util/kbuild ~amd64
 
 #qt5
 media-sound/mixxx ~amd64
 media-gfx/librecad ~amd64
 media-sound/rosegarden ~amd64
 sci-mathematics/rstudio ~amd64
-app-emulation/virtualbox ~amd64
-app-emulation/virtualbox-modules ~amd64
 
 #dependencies
 #media-libs/lv2 ~amd64
@@ -45,8 +47,9 @@ x11-libs/compiz-bcop ~amd64
 x11-plugins/compiz-plugins-unsupported ~amd64
 x11-themes/emerald-themes ~amd64
 x11-wm/emerald ~amd64
-#virtualbox
-dev-util/kbuild ~amd64
+#qutebrowser
+dev-python/pygments ~amd64
+dev-python/pypeg2 ~amd64
 
 #keyworded
 x11-wm/compiz ~amd64
@@ -102,7 +105,10 @@ x11-themes/emerald-themes ~amd64
 media-sound/mp3splt ~amd64
 net-analyzer/metasploit **
 games-roguelike/dwarf-fortress ~amd64
-
+games-fps/lsdldoom **
+games-fps/tribes2 **
+games-fps/wolfgl **
+www-client/qutebrowser ~amd64
 
 # required by lohit-gujarati (argument)
 =media-fonts/lohit-gujarati-2.92.2 ~amd64

@@ -131,6 +131,8 @@ games-simulation/openttd
 games-strategy/wesnoth
 games-util/higan-purify
 games-util/steam-launcher
+kde-apps/dolphin
+kde-apps/dolphin-plugins
 kde-apps/kdenlive
 kde-apps/konsole
 kde-plasma/plasma-desktop
@@ -523,6 +525,7 @@ sys-process/parallel
 www-client/chromium
 www-client/dillo
 www-client/firefox
+www-client/qutebrowser
 www-client/surf
 www-client/w3m
 www-misc/fcgiwrap
