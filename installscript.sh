@@ -41,7 +41,7 @@ mount /dev/$partition gentoo
 
 cd gentoo
 
-wget http://distfiles.gentoo.org/releases/amd64/autobuilds/current-stage3-amd64/stage3-amd64-20170622.tar.bz2
+wget http://distfiles.gentoo.org/releases/amd64/autobuilds/current-stage3-amd64/stage3-amd64-20170627.tar.bz2
 tar pxf stage3*
 rm -f stage3*
 
