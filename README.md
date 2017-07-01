@@ -38,13 +38,13 @@ No, this uses regular Gentoo Portage only. Same versions and USE flag options.
 
 ### What makes CloverOS different/special/why is it made/what is it/who/where/when/how
 
-CloverOS is a pre-riced, out-of-the-box Gentoo that's by /g/, for /g/. It's as close to default Gentoo as possible, with all of the configuration made in `/etc/portage/make.conf` unlike other Gentoo-based distros like Sabayon. The scripts can be used to install it to hard drive, generate a LiveCD and create the CloverOS repo. The CloverOS repo is built with custom CFLAGS for optimum performance, and the USE flags are configured for desktop use. It focuses on speed and low ram usage, doesn't have systemd or other service bloat, and has software out of the box. There's some dotfiles in the home directory by default to save time. CloverOS should be an all-around good desktop distro while remaining simple. The default WM is twm, which allows you to move, resize, minimize/restore windows and launch programs.
+CloverOS is a pre-riced, out-of-the-box Gentoo that's by /g/, for /g/. It's as close to default Gentoo as possible, with all of the configuration made in `/etc/portage/make.conf` unlike other Gentoo-based distros like Sabayon. The scripts can be used to install it to hard drive, generate a LiveCD and create the CloverOS repo. The CloverOS repo is built with custom CFLAGS for optimum performance, and the USE flags are configured for desktop use. It focuses on speed and low ram usage, doesn't have systemd or other service bloat, and has software out of the box. There's some dotfiles in the home directory by default to save time. CloverOS should be an all-around good desktop distro while remaining simple. Packages are built with the newest GCC features such as Ofast, Graphite and LTO. I don't see any other distro putting in the effort of utilizing them, so I took it upon myself to ensure the latest breakthroughs in compiler tech doesn't go unused.
 
 If you use Gentoo, you'll probably come to a similar conclusion as CloverOS (package.use, installed packages). The original goal was to be similar to CrunchBang/BunsenLabs, but with Gentoo instead of Debian. This has some speed and memory advantages, as well as including programs and configuration for the average /g/ user.
 
 ### Why twm?
 
-Low ram footprint. You can move windows by holding alt+leftclick, resize windows with alt+rightclick and close windows with ctrl+alt+rightclick. The taskbar minimizes and restores windows. twm's settings are in `~/.twmrc`.
+The default WM is twm, which has a low memory footprint. It allows you to move, resize, minimize/restore windows and launch programs. You can move windows by holding alt+leftclick, resize windows with alt+rightclick and close windows with ctrl+alt+rightclick. The taskbar minimizes and restores windows. twm's settings are in `~/.twmrc`.
 
 ### What programs does this come with?
 
