@@ -42,9 +42,9 @@ CloverOS is a pre-riced, out-of-the-box Gentoo that's by /g/, for /g/. It focuse
 
 It's as close to default Gentoo as possible, with all of the configuration made in `/etc/portage/make.conf`, unlike other Gentoo-based distros. The scripts can be used to install it to hard drive, generate a LiveCD and create the CloverOS repo. It's very easy to modify the bash script to make your own Gentoo livecd. In short: CloverOS is Gentoo.
 
-The CloverOS repo is built with custom CFLAGS for optimum performance, and the USE flags are configured for desktop use.There's some dotfiles in the home directory by default to save time. Packages are built with the newest GCC features such as Ofast, Graphite and LTO. I don't see any other distro putting in the effort of utilizing them, so I took it upon myself to ensure the latest breakthroughs in compiler tech doesn't go unused.
+The CloverOS repo is built with custom CFLAGS for optimum performance, and the USE flags are configured for desktop use. There's some dotfiles in the home directory by default to save time. Packages are built with the newest GCC features such as Ofast, Graphite and LTO. I don't see any other distro putting in the effort of utilizing them, so I took it upon myself to ensure the latest breakthroughs in compiler tech doesn't go unused.
 
-If you use Gentoo, you'll probably come to a similar conclusion as CloverOS (package.use, installed packages). The original goal was to be similar to CrunchBang/BunsenLabs, but with Gentoo instead of Debian. This has some speed and memory advantages, as well as including programs and configuration for the average /g/ user.
+If you use Gentoo, you'll probably come to a similar conclusion as CloverOS (package.use, installed packages). The original goal was to be similar to CrunchBang, but with Gentoo.
 
 ### Why twm?
 
