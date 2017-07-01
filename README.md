@@ -38,7 +38,7 @@ No, this uses regular Gentoo Portage only. Same versions and USE flag options.
 
 ### What makes CloverOS different?
 
-CloverOS is a pre-riced, out-of-the-box Gentoo that's by /g/, for /g/. It focuses on speed and low ram usage, doesn't have systemd or other service bloat, and has software.
+CloverOS is a pre-riced, out-of-the-box Gentoo that's by /g/, for /g/. It focuses on speed and low ram usage, doesn't have systemd or other service bloat, and includes commonly used software.
 
 It's as close to default Gentoo as possible, with all of the configuration made in `/etc/portage/make.conf`, unlike other Gentoo-based distros. The scripts can be used to install it to hard drive, generate a LiveCD and create the CloverOS repo. It's very easy to modify the bash script to make your own Gentoo livecd. In short: CloverOS is Gentoo.
 
