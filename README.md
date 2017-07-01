@@ -20,6 +20,17 @@ CloverOS GNU/Linux is scripts that creates a Gentoo image and a packages repo (B
 
 `emerge -uavD filezilla world`
 
+### Package isn't available
+Make an issue so I can add the package. In the meantime, edit `/etc/portage/make.conf` and edit the following line:
+
+`EMERGE_DEFAULT_OPTS="--keep-going=y --autounmask-write=y --jobs=2 -G"`
+
+to
+
+`EMERGE_DEFAULT_OPTS="--keep-going=y --autounmask-write=y --jobs=2"`
+
+This disables the binhost and uses Portage's ebuilds for packages.
+
 ## FAQ
 
 ### Is this an overlay?
@@ -59,17 +70,6 @@ IRC client - weechat
 
 ### Installing a DE
 After you log in and the "Start X?" dialog pops up, instead of y/n, type one of the WM options and hit y when it asks to install.
-
-### Package isn't available
-Make an issue so I can add the package. In the meantime, edit /etc/portage/make.conf and edit the following line:
-
-`EMERGE_DEFAULT_OPTS="--keep-going=y --autounmask-write=y --jobs=2 -G"`
-
-to
-
-`EMERGE_DEFAULT_OPTS="--keep-going=y --autounmask-write=y --jobs=2"`
-
-This disables the binhost and uses Portage's ebuilds for packages.
 
 ### How do I install systemd and pulseaudio?
 
