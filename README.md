@@ -48,7 +48,17 @@ If you use Gentoo, you'll probably come to a similar conclusion as CloverOS (pac
 
 ### Why twm?
 
-The default WM is twm, which has a low memory footprint. It allows you to move, resize, minimize/restore windows and launch programs. You can move windows by holding alt+leftclick, resize windows with alt+rightclick and close windows with ctrl+alt+rightclick. The taskbar minimizes and restores windows. twm's settings are in `~/.twmrc`.
+The default WM is twm, which has a low memory footprint.
+
+Move windows: alt + leftclick
+
+Resize Windows: alt + rightclick
+
+Close windows: ctrl + alt + rightclick
+
+The taskbar minimizes and restores windows.
+
+twm's settings are in `~/.twmrc`
 
 ### What programs does this come with?
 
