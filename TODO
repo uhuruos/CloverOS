@@ -1,5 +1,6 @@
 - build more software (need user input)
 - try tinycore kernel config and see if it works
-- try deblobbed kernel and see if it works
+- make cloveros-libre fork
 - multi script for upgrading dotfiles, kernel and changing cloveros.ga mirror
 - make LiveCD from scratch (kernel, kernel modules)
+- twm/conky config
