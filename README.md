@@ -85,6 +85,6 @@ IRC client - weechat
 ### Installing a DE
 After you log in and the "Start X?" dialog pops up, instead of y/n, type one of the WM options and hit y when it asks to install.
 
-### How do I install systemd and pulseaudio?
+### How do I install systemd/avahi/pulseaudio?
 
 I am proud to announce that CloverOS is 100% Poettering-free.
