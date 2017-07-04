@@ -45,7 +45,7 @@ gpasswd -a $user wheel
 
 emerge -1 openssh openssl
 echo "media-video/mpv ~amd64" >> /etc/portage/package.accept_keywords
-emerge xorg-server twm feh aterm sudo xfe wpa_supplicant dash porthole firefox emacs gimp mpv smplayer rtorrent weechat conky linux-firmware alsa-utils rxvt-unicode zsh zsh-completions gentoo-zsh-completions inconsolata vlgothic liberation-fonts bind-tools colordiff xdg-utils nano filezilla scrot gparted squashfs-tools
+emerge -uvD world xorg-server twm feh aterm sudo xfe wpa_supplicant dash porthole firefox emacs gimp mpv smplayer rtorrent weechat conky linux-firmware alsa-utils rxvt-unicode zsh zsh-completions gentoo-zsh-completions inconsolata vlgothic liberation-fonts bind-tools colordiff xdg-utils nano filezilla scrot gparted squashfs-tools
 sed -i "s/# %wheel ALL=(ALL) NOPASSWD: ALL/%wheel ALL=(ALL) NOPASSWD: ALL/" /etc/sudoers
 sed -Ei "s@c([2-6]):2345:respawn:/sbin/agetty 38400 tty@#\0@" /etc/inittab
 sed -i "s@c1:12345:respawn:/sbin/agetty 38400 tty1 linux@c1:12345:respawn:/sbin/agetty --noclear 38400 tty1 linux@" /etc/inittab
@@ -98,7 +98,6 @@ fi' >> /home/user/.bash_profile
 wget https://raw.githubusercontent.com/chiru-no/cloveros/master/livecd_install.sh -O /home/user/livecd_install.sh
 chmod +x /home/user/livecd_install.sh
 
-emerge -uvD world
 emerge --depclean
 rm -Rf /usr/portage/packages/*
 
