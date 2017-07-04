@@ -1,16 +1,34 @@
-NoTitle
+NoDefaults
 RandomPlacement
 OpaqueMove
 BorderWidth 1
 NoHighlight
 ShowIconManager
-IconManagerGeometry "1440+0+1025" 10
+IconManagerGeometry "2000+0-18" 20
 IconifyByUnmapping
+FramePadding 1
+TitleButtonBorderWidth 0
+TitlePadding 1
+ButtonIndent 0
+MenuBorderWidth 1
+NoMenuShadows
 
-Button1 =: root : f.menu "Applications"
 Button3 = c m : window : f.delete
 Button1 = m : window : f.move
 Button3 = m : window : f.resize
+
+Button3 = : root : f.menu "Applications"
+
+Button1 = : iconmgr : f.iconify
+Button3 = : iconmgr : f.iconify
+
+IconDirectory "~/.twm/"
+RightTitleButton "minimize.xbm" = f.iconify
+RightTitleButton "maximize.xbm" = f.fullzoom
+RightTitleButton "close.xbm" = f.delete
+
+Function "raise-lower-move" { f.move f.raiselower }
+Button1 = : title : f.function "raise-lower-move"
 
 Function "winup" { f.circleup }
 "Tab" = m : root|window|frame|title : f.function "winup"
@@ -18,33 +36,39 @@ Function "winup" { f.circleup }
 Function "windown" { f.circledown }
 "Tab" = s m : root|window|frame|title : f.function "windown"
 
-Color
-{
-IconManagerForeground "white"
-IconManagerBackground "black"
+Color {
+	IconManagerBackground "#056839"
+	IconManagerForeground "white"
+	MenuTitleBackground "#056839"
+	MenuTitleForeground "white"
+	TitleBackground "#056839"
+	TitleForeground "white"
 }
 
-menu "Applications"
-{
-"Applications" f.title
-"aterm" !"aterm +sb -tr -sh 10 -e dash &"
-"urxvt" !"urxvt -e zsh &"
-"xfe" !"xfe &"
-"wifi" !"wpa_gui &"
-"porthole" !"porthole &"
-"firefox" !"firefox &"
-"emacs" !"emacs &"
-"gimp" !"gimp &"
-"smplayer" !"smplayer &"
-"filezilla" !"filezilla &"
-"rtorrent" !"aterm +sb -tr -sh 30 -e rtorrent &"
-"weechat" !"aterm +sb -tr -sh 30 -e weechat &"
-"exit X" !"killall X"
-"reboot" !"sudo reboot"
-"shutdown" !"sudo poweroff"
+menu "Applications" {
+	"Applications" f.title
+	"aterm" !"aterm +sb -tr -sh 10 -e dash &"
+	"urxvt" !"urxvt -e zsh &"
+	"xfe" !"xfe &"
+	"wifi" !"wpa_gui &"
+	"porthole" !"porthole &"
+	"firefox" !"firefox &"
+	"emacs" !"emacs &"
+	"gimp" !"gimp &"
+	"smplayer" !"smplayer &"
+	"filezilla" !"filezilla &"
+	"rtorrent" !"aterm +sb -tr -sh 30 -e rtorrent &"
+	"weechat" !"aterm +sb -tr -sh 30 -e weechat &"
+	"exit X" !"killall X"
+	"reboot" !"sudo reboot"
+	"shutdown" !"sudo poweroff"
 }
 
-IconManagerDontShow
-{
-"Wine System Tray"
+IconManagerDontShow {
+	"Wine System Tray"
+}
+
+NoTitle {
+	"TWM Icon Manager"
+	"Wine System Tray"
 }
