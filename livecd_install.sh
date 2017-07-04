@@ -65,8 +65,6 @@ if [[ $user != "user" ]]; then
     userdel user
 fi
 rm /home/$user/livecd_install.sh
-emerge -C squashfs-tools gparted
-emerge --depclean
 
 EOF
 
