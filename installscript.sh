@@ -77,7 +77,7 @@ useradd $user
 echo -e "$userpassword\n$userpassword" | passwd $user
 gpasswd -a $user wheel
 
-emerge -1 openssh openssl gcc
+emerge -1 openssh openssl
 echo "media-video/mpv ~amd64" >> /etc/portage/package.accept_keywords
 emerge -uvD world xorg-server twm feh aterm sudo xfe wpa_supplicant dash porthole firefox emacs gimp mpv smplayer rtorrent weechat conky linux-firmware alsa-utils rxvt-unicode zsh zsh-completions gentoo-zsh-completions inconsolata vlgothic liberation-fonts bind-tools colordiff xdg-utils nano filezilla scrot gparted squashfs-tools
 sed -i "s/# %wheel ALL=(ALL) NOPASSWD: ALL/%wheel ALL=(ALL) NOPASSWD: ALL/" /etc/sudoers
