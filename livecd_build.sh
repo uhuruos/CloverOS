@@ -27,14 +27,15 @@ emerge-webrsync
 
 echo -e '\nPORTAGE_BINHOST="https://cloveros.ga"\nMAKEOPTS="-j8"\nEMERGE_DEFAULT_OPTS="--keep-going=y --autounmask-write=y --jobs=2 -G"\nCFLAGS="-O3 -pipe -march=native -funroll-loops -floop-block -floop-interchange -floop-strip-mine -ftree-loop-distribution"\nCXXFLAGS="\${CFLAGS}"' >> /etc/portage/make.conf
 
+#emerge gentoo-sources genkernel
+#wget http://liquorix.net/sources/4.9/config.amd64
+#genkernel --kernel-config=config.amd64 all
+
 wget -O - https://raw.githubusercontent.com/chiru-no/cloveros/master/kernel.tar.xz | tar xJ -C /boot/
 mkdir /lib/modules/
 wget -O - https://raw.githubusercontent.com/chiru-no/cloveros/master/modules.tar.xz | tar xJ -C /lib/modules/
 
 emerge grub dhcpcd
-
-grub-install /dev/$drive
-grub-mkconfig > /boot/grub/grub.cfg
 
 rc-update add dhcpcd default
 
