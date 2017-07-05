@@ -1,6 +1,10 @@
 - build more software (need user input)
 - try tinycore kernel config and see if it works
 - make cloveros-libre fork
+- make cloveros-full fork
 - multi script for upgrading dotfiles, kernel and changing cloveros.ga mirror
 - make LiveCD from scratch (kernel, kernel modules)
 - twm/conky config
+- Get brightness buttons working on modern laptops
+- Get sound buttons working on modern laptops
+- Tap to click
