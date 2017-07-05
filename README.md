@@ -1,7 +1,11 @@
 # cloveros
 ![CloverOS GNU/Linux](https://raw.githubusercontent.com/chiru-no/cloveros/master/artwork/logo.png "CloverOS GNU/Linux")
 
-CloverOS GNU/Linux is scripts that creates a Gentoo image and a packages repo (Binhost) that contains unique USE flags and CFLAGS. It aims to be an out of the box desktop distro. You can download CloverOS GNU/Linux here https://github.com/chiru-no/cloveros/releases
+CloverOS GNU/Linux is scripts that creates a Gentoo image and a packages repo (Binhost) that contains unique USE flags and CFLAGS. It aims to be an out of the box desktop distro.
+
+You can download CloverOS GNU/Linux here: https://github.com/chiru-no/cloveros/releases
+
+Video demonstration: https://my.mixtape.moe/qsmcje.mp4
 
 ## Cheat sheet
 
@@ -31,6 +35,31 @@ to
 
 This disables the binhost and uses Portage's ebuilds for packages.
 
+### Controlling twm
+
+Open Applications menu: rightclick on desktop
+
+Move windows: alt + leftclick
+
+Resize Windows: alt + rightclick
+
+Close windows: ctrl + alt + rightclick
+
+The taskbar minimizes and restores windows.
+
+twm's settings are in `~/.twmrc`
+
+### Listing available packages
+
+https://packages.gentoo.org
+
+or run Porthole
+
+### Installing a DE
+First, connect to wifi using wpa_gui ('wifi' in twm)
+
+Kill X and relog. After you log in and the "Start X?" dialog pops up, instead of y/n, type one of the WM options and hit y when it asks to install.
+
 ## FAQ
 
 ### Is this an overlay?
@@ -45,20 +74,6 @@ It's as close to default Gentoo as possible, with all of the configuration made 
 The CloverOS repo is built with custom CFLAGS for optimum performance, and the USE flags are configured for desktop use. There's some dotfiles in the home directory by default to save time. Packages are built with the newest GCC features such as Ofast, Graphite and LTO. I don't see any other distro putting in the effort of utilizing them, so I took it upon myself to ensure the latest breakthroughs in compiler tech doesn't go unused.
 
 If you use Gentoo, you'll probably come to a similar conclusion as CloverOS (package.use, installed packages). The original goal was to be similar to CrunchBang, but with Gentoo.
-
-### Why twm?
-
-The default WM is twm, which has a low memory footprint.
-
-Move windows: alt + leftclick
-
-Resize Windows: alt + rightclick
-
-Close windows: ctrl + alt + rightclick
-
-The taskbar minimizes and restores windows.
-
-twm's settings are in `~/.twmrc`
 
 ### What programs does this come with?
 
@@ -81,11 +96,6 @@ FTP client - filezilla
 Torrent client - rtorrent
 
 IRC client - weechat
-
-### Installing a DE
-First, connect to wifi using wpa_gui ('wifi' in twm) if needed.
-
-After you log in and the "Start X?" dialog pops up, instead of y/n, type one of the WM options and hit y when it asks to install.
 
 ### How do I install systemd/avahi/pulseaudio?
 
