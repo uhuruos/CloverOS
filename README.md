@@ -83,6 +83,8 @@ Torrent client - rtorrent
 IRC client - weechat
 
 ### Installing a DE
+First, connect to wifi using wpa_gui ('wifi' in twm) if needed.
+
 After you log in and the "Start X?" dialog pops up, instead of y/n, type one of the WM options and hit y when it asks to install.
 
 ### How do I install systemd/avahi/pulseaudio?
