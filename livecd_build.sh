@@ -4,7 +4,7 @@ if [ "$(id -u)" != "0" ]; then
 fi
 
 rootpassword=password
-user=user
+user=livecd
 userpassword=password
 
 mkdir image
@@ -83,10 +83,11 @@ mkdir .rtorrent
 mkdir .mpv
 cd .mpv
 wget https://raw.githubusercontent.com/chiru-no/cloveros/master/home/user/.mpv/config
+cd ..
 chown -R $user /home/$user/
 
 sed -i "s@c1:12345:respawn:/sbin/agetty --noclear 38400 tty1 linux@c1:12345:respawn:/sbin/agetty -a user --noclear 38400 tty1 linux@" /etc/inittab
-sed -i 's/^/#/' /home/user/.bash_profile
+sed -i 's/^/#/' /home/$user/.bash_profile
 echo -e 'if [ -z "\$DISPLAY" ]; then
 export DISPLAY=:0
 X&
@@ -94,10 +95,9 @@ sleep 1
 twm&
 feh --bg-max wallpaper.png
 urxvt -e sudo ./livecd_install.sh
-fi' >> /home/user/.bash_profile
-
-wget https://raw.githubusercontent.com/chiru-no/cloveros/master/livecd_install.sh -O /home/user/livecd_install.sh
-chmod +x /home/user/livecd_install.sh
+fi' >> /home/$user/.bash_profile
+wget https://raw.githubusercontent.com/chiru-no/cloveros/master/livecd_install.sh -O /home/$user/livecd_install.sh
+chmod +x /home/$user/livecd_install.sh
 
 emerge --depclean
 rm -Rf /usr/portage/packages/*

@@ -31,6 +31,8 @@ read -p "Enter preferred root password " rootpassword
 read -p "Enter preferred username " user
 read -p "Enter preferred user password " userpassword
 
+livecduser=livecd
+
 mkdir gentoo
 
 if [[ $partitioning = "a" ]]; then
@@ -52,17 +54,17 @@ grub-mkconfig > /boot/grub/grub.cfg
 
 sed -i "s/set timeout=5/set timeout=0/" /boot/grub/grub.cfg
 sed -i "s@c1:12345:respawn:/sbin/agetty -a user --noclear 38400 tty1 linux@c1:12345:respawn:/sbin/agetty --noclear 38400 tty1 linux@" /etc/inittab
-sed -i '/^#/!d' /home/user/.bash_profile
-sed -i 's/^#\(.*\)/\1/g' /home/user/.bash_profile
-sed -i "s@/home/user/@/home/$user/@" /home/user/.rtorrent.rc
+sed -i '/^#/!d' /home/$livecduser/.bash_profile
+sed -i 's/^#\(.*\)/\1/g' /home/$livecduser/.bash_profile
+sed -i "s@/home/$livecduser/@/home/$user/@" /home/$livecduser/.rtorrent.rc
 
 gpasswd -a $user wheel
 gpasswd -a $user video
 gpasswd -a $user audio
-mv /home/user/ /home/$user/
+mv /home/$livecduser/ /home/$user/
 chown -R $user /home/$user/
-if [[ $user != "user" ]]; then
-    userdel user
+if [[ $user != $livecduser ]]; then
+    userdel $livecduser
 fi
 rm /home/$user/livecd_install.sh
 
