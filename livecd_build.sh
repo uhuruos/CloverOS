@@ -96,6 +96,7 @@ X&
 sleep 1
 twm&
 feh --bg-max wallpaper.png
+xbindkeys
 urxvt -e sudo ./livecd_install.sh
 fi' >> /home/$user/.bash_profile
 wget https://raw.githubusercontent.com/chiru-no/cloveros/master/livecd_install.sh -O /home/$user/livecd_install.sh
