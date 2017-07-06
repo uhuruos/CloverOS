@@ -79,7 +79,7 @@ gpasswd -a $user wheel
 
 emerge -1 openssh openssl
 echo "media-video/mpv ~amd64" >> /etc/portage/package.accept_keywords
-emerge -uvD world xorg-server twm feh aterm sudo xfe wpa_supplicant dash porthole firefox emacs gimp mpv smplayer rtorrent weechat conky linux-firmware alsa-utils rxvt-unicode zsh zsh-completions gentoo-zsh-completions inconsolata vlgothic liberation-fonts bind-tools colordiff xdg-utils nano filezilla scrot gparted squashfs-tools
+emerge -uvD world xorg-server twm feh aterm sudo xfe wpa_supplicant dash porthole firefox emacs gimp mpv smplayer rtorrent weechat conky linux-firmware alsa-utils rxvt-unicode zsh zsh-completions gentoo-zsh-completions inconsolata vlgothic liberation-fonts bind-tools colordiff xdg-utils nano filezilla scrot xbindkeys gparted squashfs-tools
 sed -i "s/# %wheel ALL=(ALL) NOPASSWD: ALL/%wheel ALL=(ALL) NOPASSWD: ALL/" /etc/sudoers
 sed -Ei "s@c([2-6]):2345:respawn:/sbin/agetty 38400 tty@#\0@" /etc/inittab
 sed -i "s@c1:12345:respawn:/sbin/agetty 38400 tty1 linux@c1:12345:respawn:/sbin/agetty --noclear 38400 tty1 linux@" /etc/inittab
@@ -103,13 +103,16 @@ wget https://raw.githubusercontent.com/chiru-no/cloveros/master/home/user/.twmrc
 wget https://raw.githubusercontent.com/chiru-no/cloveros/master/home/user/.Xdefaults
 wget https://raw.githubusercontent.com/chiru-no/cloveros/master/home/user/wallpaper.png
 wget https://raw.githubusercontent.com/chiru-no/cloveros/master/home/user/screenfetch-dev
+wget https://raw.githubusercontent.com/chiru-no/cloveros/master/home/user/.xbindkeysrc
+wget https://raw.githubusercontent.com/chiru-no/cloveros/master/home/user/bl
+chmod +x screenfetch-dev
+chmod +x bl
 mkdir .twm
 cd .twm
 wget https://raw.githubusercontent.com/chiru-no/cloveros/master/home/user/.twm/minimize.xbm
 wget https://raw.githubusercontent.com/chiru-no/cloveros/master/home/user/.twm/maximize.xbm
 wget https://raw.githubusercontent.com/chiru-no/cloveros/master/home/user/.twm/close.xbm
 cd ..
-chmod +x screenfetch-dev
 echo -e "session = /home/$user/.rtorrent\ndirectory = /home/$user/Downloads/\nport_range = 53165-62153\ndht = on\npeer_exchange = yes\nuse_udp_trackers = yes" > .rtorrent.rc
 mkdir Downloads
 mkdir .rtorrent

@@ -24,11 +24,11 @@ if [ -z "$DISPLAY" ]; then
     wmspkg[m]=mate
     wmspkg[x]=xfce4-meta
     wmspkg[l]=lxde-meta
-    wmspost[y]="feh --bg-max wallpaper.png"
-    wmspost[Y]="feh --bg-max wallpaper.png"
-    wmspost[i]="feh --bg-max wallpaper.png"
+    wmspost[y]="feh --bg-max wallpaper.png & xbindkeys"
+    wmspost[Y]="feh --bg-max wallpaper.png & xbindkeys"
+    wmspost[i]="feh --bg-max wallpaper.png & xbindkeys"
     wmspost[a]=""
-    wmspost[o]="feh --bg-max wallpaper.png"
+    wmspost[o]="feh --bg-max wallpaper.png & xbindkeys"
     wmspost[e]=""
     wmspost[k]=""
     wmspost[m]=""
