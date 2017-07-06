@@ -27,6 +27,7 @@ app-cdr/kcdemu
 app-cdr/xcdroast
 app-crypt/certbot
 app-crypt/gpa
+app-doc/phrack-all
 app-editors/emacs
 app-editors/mousepad
 app-editors/nano
@@ -56,6 +57,7 @@ app-misc/screenfetch
 app-misc/srm
 app-misc/tmux
 app-misc/wipe
+app-office/calligra
 app-office/libreoffice
 app-office/texmaker
 app-office/texstudio
@@ -120,10 +122,20 @@ games-emulation/vbam
 games-emulation/yabause
 games-emulation/zsnes
 games-engines/scummvm
+games-fps/alienarena
+games-fps/avp
+games-fps/darkplaces
+games-fps/doomsday
 games-fps/ezquake-bin
+games-fps/lsdldoom
+games-fps/nexuiz
 games-fps/openarena
 games-fps/quake3
 games-fps/sauerbraten
+games-fps/urbanterror
+games-fps/warsow
+games-fps/wolfgl
+games-fps/xonotic
 games-misc/cowsay
 games-misc/fortune-mod-all
 games-roguelike/dwarf-fortress
@@ -353,13 +365,16 @@ media-gfx/scrot
 media-libs/libtxc_dxtn
 media-sound/alsa-utils
 media-sound/amsynth
+media-sound/aqualung
 media-sound/ario
 media-sound/audacious
 media-sound/audacity
 media-sound/cmus
+media-sound/darksnow
 media-sound/deadbeef
 media-sound/flacon
 media-sound/gmpc
+media-sound/gmusicbrowser
 media-sound/gstreamripper
 media-sound/herrie
 media-sound/jamin
@@ -401,6 +416,7 @@ media-video/aegisub
 media-video/avidemux
 media-video/cinelerra
 media-video/dvdbackup
+media-video/kaffeine
 media-video/makemkv
 media-video/mkvtoolnix
 media-video/mpv
@@ -462,6 +478,7 @@ net-misc/zssh
 net-p2p/amule
 net-p2p/deluge
 net-p2p/eiskaltdcpp
+net-p2p/freenet
 net-p2p/mktorrent
 net-p2p/ncdc
 net-p2p/nicotine+
@@ -472,6 +489,7 @@ net-p2p/transmission
 net-vpn/i2p
 net-vpn/logmein-hamachi
 net-vpn/tor
+net-wireless/rfkill
 net-wireless/wpa_supplicant
 pantheon-base/plank
 sci-calculators/calcoo
@@ -502,7 +520,9 @@ sys-fs/cachefilesd
 sys-fs/cryptsetup
 sys-fs/ddrescue
 sys-fs/dosfstools
+sys-fs/exfat-utils
 sys-fs/extundelete
+sys-fs/fuse-exfat
 sys-fs/ncdu
 sys-fs/ntfs3g
 sys-fs/safecopy
@@ -531,8 +551,10 @@ www-client/w3m
 www-misc/fcgiwrap
 www-plugins/adobe-flash
 www-servers/nginx
+x11-apps/fusion-icon
 x11-apps/mesa-progs
 x11-apps/xbacklight
+x11-apps/xev
 x11-apps/xhost
 x11-apps/xkill
 x11-apps/xrandr
@@ -543,6 +565,7 @@ x11-misc/dmenu
 x11-misc/i3lock
 x11-misc/i3status
 x11-misc/lsw
+x11-misc/obmenu
 x11-misc/redshift
 x11-misc/rofi
 x11-misc/slock
@@ -552,6 +575,7 @@ x11-misc/tint2
 x11-misc/virtualgl
 x11-misc/wmname
 x11-misc/x11vnc
+x11-misc/xbindkeys
 x11-misc/xclip
 x11-misc/xdotool
 x11-misc/xfe
@@ -562,6 +586,7 @@ x11-terms/aterm
 x11-terms/rxvt-unicode
 x11-terms/st
 x11-terms/terminology
+x11-terms/termite
 x11-terms/xfce4-terminal
 x11-themes/Tulliana
 x11-themes/adwaita-icon-theme
@@ -672,6 +697,7 @@ x11-wm/fluxbox
 x11-wm/fvwm
 x11-wm/i3
 x11-wm/openbox
+x11-wm/ratpoison
 x11-wm/twm
 x11-wm/windowmaker
 x11-wm/xmonad

@@ -1,4 +1,8 @@
 #preference
+media-video/handbrake gtk -fdk libav-aac
+sys-kernel/genkernel cryptsetup
+media-sound/darkice vorbis mp3
+games-fps/urbanterror server
 sys-libs/ncurses -minimal
 x11-wm/compiz-fusion emerald unsupported
 media-sound/audacious qt5
@@ -13,7 +17,6 @@ app-emulation/virtualbox-guest-additions X
 media-gfx/krita color-management
 app-emulation/wine -custom-cflags
 x11-wm/xmonad -default-term
-sys-boot/grub -grub_platforms_efi-64
 sys-auth/pambase -gnome-keyring
 sys-block/gparted btrfs dmraid f2fs fat hfs jfs mdadm ntfs reiserfs reiser4 xfs
 kde-plasma/powerdevil -wireless
@@ -37,7 +40,6 @@ net-misc/iputils -caps -filecaps
 app-admin/sudo -pam -sendmail
 media-libs/harfbuzz icu
 media-libs/libvpx postproc
-dev-libs/boost icu
 app-crypt/gcr gtk
 net-p2p/transmission qt5
 net-wireless/wpa_supplicant qt5
@@ -150,6 +152,9 @@ media-sound/deadbeef aac adplug alac alsa cdda converter cover cover-imlib2 cove
 app-emulation/qemu sdl usb virgl
 
 #required
+dev-libs/boost icu nls
+dev-libs/libdbusmenu gtk gtk3 abi_x86_64
+media-libs/sdl-mixer vorbis
 net-nds/openldap sasl
 media-libs/libsdl2 gles
 sci-libs/hdf5 -threads
@@ -158,9 +163,7 @@ dev-libs/glib dbus
 dev-lang/luajit lua52compat
 dev-libs/libxml2 python
 dev-lang/python sqlite
-dev-lang/yasm nls
 dev-libs/libpcre pcre16
-dev-libs/boost nls
 dev-qt/qtcore icu
 x11-libs/libxcb xkb
 dev-libs/libcdio -minimal
@@ -1000,3 +1003,16 @@ sys-apps/dbus X
 # required by www-client/qupzilla-2.0.2::gentoo
 # required by qupzilla (argument)
 >=dev-qt/qtwebengine-5.6.2 widgets
+# required by games-fps/urbanterror-4.3.2_p20170426::gentoo[client]
+# required by urbanterror (argument)
+>=media-libs/libsdl2-2.0.4 X
+# required by app-emulation/wine-2.0::gentoo[udisks]
+# required by @selected
+# required by @world (argument)
+>=sys-apps/dbus-1.10.18 abi_x86_32
+# required by app-office/calligra-3.0.1::gentoo[calligra_features_karbon]
+# required by calligra (argument)
+>=media-gfx/pstoedit-3.70-r1 plotutils
+# required by x11-terms/termite-12::eroen
+# required by x11-terms/termite (argument)
+>=x11-libs/vte-0.46.1 termite-patch

@@ -1,4 +1,4 @@
-#preference
+#preference, remove when stable is bumped up
 media-video/mpv ~amd64
 app-emulation/virtualbox ~amd64
 app-emulation/virtualbox-modules ~amd64
@@ -6,52 +6,13 @@ app-emulation/virtualbox-guest-additions ~amd64
 app-emulation/virtualbox-additions ~amd64
 dev-util/kbuild ~amd64
 
-#qt5
-media-sound/mixxx ~amd64
+#qt5, remove when stable is qt5
 media-gfx/librecad ~amd64
 media-sound/rosegarden ~amd64
 sci-mathematics/rstudio ~amd64
 
-#dependencies
-#media-libs/lv2 ~amd64
-#media-libs/stk ~amd64
-#media-plugins/calf ~amd64
-sci-calculators/calcoo ~amd64
-#certbot
-app-crypt/acme ~amd64
-#openshot
-net-libs/cppzmq ~amd64
-media-libs/libopenshot ~amd64
-media-libs/libopenshot-audio ~amd64
-#ardour
-media-libs/suil ~amd64
-#tomahawk
-dev-cpp/websocketpp ~amd64
-#rstudio
-dev-libs/mathjax ~amd64
-#sidplayfp
-media-libs/libsidplayfp ~amd64
-#deadbeef
-media-plugins/deadbeef-plugins-meta ~amd64
-#virtualbox
-x11-drivers/xf86-video-virtualbox ~amd64
-#rust
-dev-util/cargo ~amd64
-#compiz
-x11-plugins/compiz-plugins-extra ~amd64
-x11-misc/ccsm ~amd64
-dev-python/compizconfig-python ~amd64
-x11-plugins/compiz-plugins-main ~amd64
-x11-libs/libcompizconfig ~amd64
-x11-libs/compiz-bcop ~amd64
-x11-plugins/compiz-plugins-unsupported ~amd64
-x11-themes/emerald-themes ~amd64
-x11-wm/emerald ~amd64
-#qutebrowser
-dev-python/pygments ~amd64
-dev-python/pypeg2 ~amd64
-
-#keyworded
+#keyworded, remove when stable exists
+net-p2p/freenet ~amd64
 x11-wm/compiz ~amd64
 media-sound/tomahawk ~amd64
 sys-fs/zfs-kmod ~amd64
@@ -109,6 +70,57 @@ games-fps/lsdldoom **
 games-fps/tribes2 **
 games-fps/wolfgl **
 www-client/qutebrowser ~amd64
+sys-power/phc-intel ~amd64
+x11-terms/termite ~amd64
+media-video/handbrake ~amd64
+
+#dependencies
+#media-libs/lv2 ~amd64
+#media-libs/stk ~amd64
+#media-plugins/calf ~amd64
+sci-calculators/calcoo ~amd64
+#certbot
+app-crypt/acme ~amd64
+#openshot
+net-libs/cppzmq ~amd64
+media-libs/libopenshot ~amd64
+media-libs/libopenshot-audio ~amd64
+#ardour
+media-libs/suil ~amd64
+#tomahawk
+dev-cpp/websocketpp ~amd64
+#rstudio
+dev-libs/mathjax ~amd64
+#sidplayfp
+media-libs/libsidplayfp ~amd64
+#deadbeef
+media-plugins/deadbeef-plugins-meta ~amd64
+#virtualbox
+x11-drivers/xf86-video-virtualbox ~amd64
+#rust
+dev-util/cargo ~amd64
+#compiz
+x11-plugins/compiz-plugins-extra ~amd64
+x11-misc/ccsm ~amd64
+dev-python/compizconfig-python ~amd64
+x11-plugins/compiz-plugins-main ~amd64
+x11-libs/libcompizconfig ~amd64
+x11-libs/compiz-bcop ~amd64
+x11-plugins/compiz-plugins-unsupported ~amd64
+x11-themes/emerald-themes ~amd64
+x11-wm/emerald ~amd64
+x11-apps/fusion-icon ~amd64
+#qutebrowser
+dev-python/pygments ~amd64
+dev-python/pypeg2 ~amd64
+#freenet
+dev-java/bcprov ~amd64
+net-libs/NativeThread ~amd64
+#avidemux
+media-libs/avidemux-plugins ~amd64
+media-libs/avidemux-core ~amd64
+#termite
+x11-libs/vte ~amd64
 
 # required by lohit-gujarati (argument)
 =media-fonts/lohit-gujarati-2.92.2 ~amd64
