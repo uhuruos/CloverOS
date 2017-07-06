@@ -27,9 +27,9 @@ if [[ $yn != "y" ]]; then
 fi
 echo
 
-read -p "Enter preferred root password " rootpassword
+read -rp "Enter preferred root password " rootpassword
 read -p "Enter preferred username " user
-read -p "Enter preferred user password " userpassword
+read -rp "Enter preferred user password " userpassword
 
 livecduser=livecd
 
