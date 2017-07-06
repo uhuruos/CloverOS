@@ -5,5 +5,4 @@
 - multi script for upgrading dotfiles, kernel and changing cloveros.ga mirror
 - make LiveCD from scratch (kernel, kernel modules)
 - twm/conky config
-- Get sound buttons working on modern laptops
 - Tap to click

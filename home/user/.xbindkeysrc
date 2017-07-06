@@ -1,5 +1,14 @@
+"sudo ~/bl -5"
+  c:232
+
 "sudo ~/bl +5"
   c:233
 
-"sudo ~/bl -5"
-  c:232
+"amixer set Master 5%+
+  c:122
+
+"amixer set Master 5%-"
+  c:123
+
+"amixer set Master toggle"
+  c:121
