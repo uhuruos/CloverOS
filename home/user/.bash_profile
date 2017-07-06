@@ -46,14 +46,14 @@ if [ -z "$DISPLAY" ]; then
                 X&
                 sleep 1
                 ${wms[$choice]}&
-                ${wmspost[$choice]}&
+                eval ${wmspost[$choice]}&
             fi
         else
             export DISPLAY=:0
             X&
             sleep 1
             ${wms[$choice]}&
-            ${wmspost[$choice]}&
+            eval ${wmspost[$choice]}&
         fi
     fi
 fi
