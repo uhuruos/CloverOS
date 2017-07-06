@@ -100,3 +100,19 @@ IRC client - weechat
 ### How do I install systemd/avahi/pulseaudio?
 
 I am proud to announce that CloverOS is 100% Poettering-free.
+
+### Dual booting with Windows
+
+I personally did this:
+
+Boot CloverOS liveCD, partition drive like this:
+
+GPT
+/dev/sda1 1mb unformatted
+/dev/sda2 50gb ext4
+/dev/sda3 50gb unformatted
+/dev/sda4 rest ext4 or ntfs
+
+Install Windows in /dev/sda3 (or more accurately, the space between /dev/sda2 and /dev/sda4)
+
+Use laptop settings to switch between BIOS and UEFI for Linux or Windows respectively
