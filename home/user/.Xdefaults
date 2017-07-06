@@ -3,10 +3,11 @@ URxvt.intensityStyles: false
 URxvt.scrollBar: false
 URxvt.cursorBlink: true
 URxvt.jumpScroll: true
-URxvt.url-launcher: /usr/bin/xdg-open
-URxvt.matcher.button: 1
 URxvt.transparent: true
 URxvt.shading: 10
+URxvt.url-launcher: /usr/bin/xdg-open
+URxvt.perl-ext-common: default,matcher
+URxvt.matcher.button: 1
 
 *.foreground:  #FFFFFF
 *.background:  #000000
