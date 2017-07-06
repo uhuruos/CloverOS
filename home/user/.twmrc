@@ -51,7 +51,7 @@ menu "Applications" {
 	"aterm" !"aterm +sb -tr -sh 10 -e dash &"
 	"urxvt" !"urxvt -e zsh &"
 	"xfe" !"xfe &"
-	"wifi" !"wpa_gui &"
+	"wifi" !"sudo rc-service wpa_supplicant start & wpa_gui &"
 	"porthole" !"porthole &"
 	"firefox" !"firefox &"
 	"emacs" !"emacs &"
