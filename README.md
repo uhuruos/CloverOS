@@ -107,11 +107,17 @@ I personally did this:
 
 Boot CloverOS liveCD, partition drive like this:
 
+
 GPT
+
 /dev/sda1 1mb unformatted
+
 /dev/sda2 50gb ext4
+
 /dev/sda3 50gb unformatted
+
 /dev/sda4 rest ext4 or ntfs
+
 
 Install Windows in /dev/sda3 (or more accurately, the space between /dev/sda2 and /dev/sda4)
 
