@@ -12,6 +12,7 @@ TitlePadding 1
 ButtonIndent 0
 MenuBorderWidth 1
 NoMenuShadows
+NoTitleHighlight
 
 Button3 = c m : window : f.delete
 Button1 = m : window : f.move

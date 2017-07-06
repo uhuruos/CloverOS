@@ -89,7 +89,7 @@ wget https://raw.githubusercontent.com/chiru-no/cloveros/master/home/user/.mpv/c
 cd ..
 chown -R $user /home/$user/
 
-sed -i "s@c1:12345:respawn:/sbin/agetty --noclear 38400 tty1 linux@c1:12345:respawn:/sbin/agetty -a user --noclear 38400 tty1 linux@" /etc/inittab
+sed -i "s@c1:12345:respawn:/sbin/agetty --noclear 38400 tty1 linux@c1:12345:respawn:/sbin/agetty -a $user --noclear 38400 tty1 linux@" /etc/inittab
 sed -i 's/^/#/' /home/$user/.bash_profile
 echo -e 'if [ -z "\$DISPLAY" ]; then
 export DISPLAY=:0
