@@ -4,7 +4,7 @@
 "sudo ~/bl +5"
   c:233
 
-"amixer set Master 5%+
+"amixer set Master 5%+"
   c:122
 
 "amixer set Master 5%-"
