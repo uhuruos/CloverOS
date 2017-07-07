@@ -8,7 +8,6 @@ You can download CloverOS GNU/Linux here: https://github.com/chiru-no/cloveros/r
 Video demonstration: https://my.mixtape.moe/qsmcje.mp4
 
 ## Cheat sheet
-
 ### Installing program
 `emerge filezilla`
 
@@ -34,7 +33,6 @@ to
 This disables the binhost and uses Portage's ebuilds for packages.
 
 ### Controlling twm
-
 Open Applications menu: rightclick on desktop
 
 Move windows: alt + leftclick
@@ -48,7 +46,6 @@ The taskbar minimizes and restores windows.
 twm's settings are in `~/.twmrc`
 
 ### Listing available packages
-
 https://packages.gentoo.org
 
 or run Porthole
@@ -59,16 +56,13 @@ First, connect to wifi using wpa_gui ('wifi' in twm)
 Kill X and relog. After you log in and the "Start X?" dialog pops up, instead of y/n, type one of the WM options and hit y when it asks to install.
 
 ### Fixing sound
-
 `echo -n "defaults.pcm.card 1\ndefaults.ctl.card 1" > ~/.asoundrc`
 
 ## FAQ
-
 ### Is this an overlay?
 No, this uses regular Gentoo Portage only. Same versions and USE flag options.
 
 ### What makes CloverOS different?
-
 CloverOS is a pre-riced, out-of-the-box Gentoo that's by /g/, for /g/. It focuses on speed and low ram usage, doesn't have systemd or other service bloat, and includes commonly used software.
 
 It's as close to default Gentoo as possible, with all of the configuration made in `/etc/portage/make.conf`, unlike other Gentoo-based distros. The scripts can be used to install it to hard drive, generate a LiveCD and create the CloverOS repo. It's very easy to modify the bash script to make your own Gentoo livecd. In short: CloverOS is Gentoo.
@@ -78,7 +72,6 @@ The CloverOS repo is built with custom CFLAGS for optimum performance, and the U
 If you use Gentoo, you'll probably come to a similar conclusion as CloverOS (package.use, installed packages). The original goal was to be similar to CrunchBang, but with Gentoo.
 
 ### What programs does this come with?
-
 Terminal - urxvt
 
 File manager - xfe
@@ -100,11 +93,9 @@ Torrent client - rtorrent
 IRC client - weechat
 
 ### How do I install systemd/avahi/pulseaudio?
-
 I am proud to announce that CloverOS is 100% Poettering-free.
 
 ### Dual booting with Windows
-
 I personally did this:
 
 Boot CloverOS liveCD, partition drive like this:
