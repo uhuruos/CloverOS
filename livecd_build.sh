@@ -24,7 +24,7 @@ cat << EOF | chroot .
 
 emerge-webrsync
 
-echo -e '\nPORTAGE_BINHOST="https://cloveros.ga"\nMAKEOPTS="-j8"\nEMERGE_DEFAULT_OPTS="--keep-going=y --autounmask-write=y --jobs=2 -G"\nCFLAGS="-O3 -pipe -march=native -funroll-loops -floop-block -floop-interchange -floop-strip-mine -ftree-loop-distribution"\nCXXFLAGS="\${CFLAGS}"' >> /etc/portage/make.conf
+echo -e '\nPORTAGE_BINHOST="https://cloveros.ga"\nMAKEOPTS="-j8"\nEMERGE_DEFAULT_OPTS="--keep-going=y --autounmask-write=y --jobs=2 -G"\nCFLAGS="-O3 -pipe -march=native -funroll-loops -floop-block -floop-interchange -floop-strip-mine -ftree-loop-distribution"\nCXXFLAGS="\${CFLAGS}"\nACCEPT_KEYWORDS="~amd64"' >> /etc/portage/make.conf
 
 #emerge gentoo-sources genkernel
 #wget http://liquorix.net/sources/4.9/config.amd64
@@ -44,8 +44,6 @@ echo -e "$userpassword\n$userpassword" | passwd $user
 gpasswd -a $user wheel
 
 emerge -1 openssh openssl
-echo "media-video/mpv" >> /etc/portage/package.accept_keywords
-echo "net-irc/weechat" >> /etc/portage/package.accept_keywords
 emerge -uvD world xorg-server twm feh aterm sudo xfe wpa_supplicant dash porthole firefox emacs gimp mpv smplayer rtorrent weechat conky linux-firmware alsa-utils rxvt-unicode zsh zsh-completions gentoo-zsh-completions inconsolata vlgothic liberation-fonts bind-tools colordiff xdg-utils nano filezilla scrot xbindkeys gparted squashfs-tools os-prober
 sed -i "s/# %wheel ALL=(ALL) NOPASSWD: ALL/%wheel ALL=(ALL) NOPASSWD: ALL/" /etc/sudoers
 sed -Ei "s@c([2-6]):2345:respawn:/sbin/agetty 38400 tty@#\0@" /etc/inittab
