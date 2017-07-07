@@ -69,7 +69,7 @@ wget https://raw.githubusercontent.com/chiru-no/cloveros/master/home/user/.Xdefa
 wget https://raw.githubusercontent.com/chiru-no/cloveros/master/home/user/wallpaper.png
 wget https://raw.githubusercontent.com/chiru-no/cloveros/master/home/user/screenfetch-dev
 wget https://raw.githubusercontent.com/chiru-no/cloveros/master/home/user/.xbindkeysrc
-wget https://raw.githubusercontent.com/chiru-no/cloveros/master/home/user/bl
+wget https://raw.githubusercontent.com/chiru-no/cloveros/master/home/user/bl.sh
 wget https://raw.githubusercontent.com/chiru-no/cloveros/master/home/user/.emacs
 mkdir .emacs.d
 mkdir .emacs.d/backups

@@ -1,7 +1,7 @@
-"sudo ~/bl -5"
+"sudo ~/bl.sh -5"
   c:232
 
-"sudo ~/bl +5"
+"sudo ~/bl.sh +5"
   c:233
 
 "amixer set Master 5%-"
