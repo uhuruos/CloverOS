@@ -18,11 +18,9 @@ Video demonstration: https://my.mixtape.moe/qsmcje.mp4
 `emerge -uavD world`
 
 ### Installing a program when emerge gives an error
-`emerge -uavD filezilla world`
-
 `dispatch-conf`
 
-`emerge -uavD filezilla world`
+Hit u to update `/etc/portage/package.accept_keywords` or z to forget changes. Then emerge again.
 
 ### Package isn't available
 Make an issue so I can add the package. In the meantime, edit `/etc/portage/make.conf` and edit the following line:
