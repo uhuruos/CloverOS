@@ -4,5 +4,6 @@
 - make cloveros-full fork
 - multi script for upgrading dotfiles, kernel and changing cloveros.ga mirror
 - make LiveCD from scratch (kernel, kernel modules)
-- twm/conky config
 - Tap to click
+- 32 bit
+- march optimized repos
