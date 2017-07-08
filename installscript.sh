@@ -99,6 +99,7 @@ gpasswd -a $user video
 cd /home/$user/
 rm .bash_profile
 wget https://raw.githubusercontent.com/chiru-no/cloveros/master/home/user/.bash_profile
+wget https://raw.githubusercontent.com/chiru-no/cloveros/master/home/user/.zprofile
 wget https://raw.githubusercontent.com/chiru-no/cloveros/master/home/user/.zshrc
 wget https://raw.githubusercontent.com/chiru-no/cloveros/master/home/user/.twmrc
 wget https://raw.githubusercontent.com/chiru-no/cloveros/master/home/user/.Xdefaults
