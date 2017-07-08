@@ -50,8 +50,13 @@ First, connect to wifi using wpa_gui ('wifi' in twm)
 
 Kill X and relog. After you log in and the "Start X?" dialog pops up, instead of y/n, type one of the WM options and hit y when it asks to install.
 
-### Fixing sound
-`echo -n "defaults.pcm.card 1\ndefaults.ctl.card 1" > ~/.asoundrc`
+### Sound doesn't work
+Run `alsamixer` and hit F6 to see your audio devices. 1 is probably the correct one.
+
+Edit `~/.asoundrc` and add this:
+
+`defaults.pcm.card 1
+defaults.ctl.card 1`
 
 ## FAQ
 ### Is this an overlay?
