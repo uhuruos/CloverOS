@@ -1,6 +1,7 @@
 NoDefaults
 RandomPlacement
 OpaqueMove
+NoGrabServer
 BorderWidth 1
 NoHighlight
 ShowIconManager
