@@ -8,10 +8,13 @@ app-admin/testdisk
 app-arch/advancecomp
 app-arch/cabextract
 app-arch/defluff
+app-arch/makeself
 app-arch/p7zip
 app-arch/par
 app-arch/sharutils
+app-arch/unmakeself
 app-arch/unp
+app-arch/unrar-gpl
 app-arch/zopfli
 app-arch/zpaq
 app-arch/zpaq-extras
@@ -42,6 +45,7 @@ app-emulation/wine
 app-emulation/winetricks
 app-forensics/aide
 app-i18n/fcitx-anthy
+app-i18n/ibus
 app-misc/ckermit
 app-misc/colordiff
 app-misc/dtach
@@ -74,6 +78,7 @@ app-shells/gentoo-zsh-completions
 app-shells/mpv-bash-completion
 app-shells/zsh
 app-shells/zsh-completions
+app-text/calibre
 app-text/convmv
 app-text/dos2unix
 app-text/tesseract
@@ -145,6 +150,7 @@ games-util/higan-purify
 games-util/steam-launcher
 kde-apps/dolphin
 kde-apps/dolphin-plugins
+kde-apps/gwenview
 kde-apps/kdenlive
 kde-apps/konsole
 kde-plasma/plasma-desktop
@@ -543,6 +549,7 @@ sys-process/iotop
 sys-process/lsof
 sys-process/parallel
 www-client/chromium
+www-client/conkeror
 www-client/dillo
 www-client/firefox
 www-client/qutebrowser
@@ -560,6 +567,7 @@ x11-apps/xkill
 x11-apps/xrandr
 x11-apps/xwininfo
 x11-base/xorg-server
+x11-libs/compizconfig-backend-gconf
 x11-misc/compton
 x11-misc/dmenu
 x11-misc/i3lock
@@ -695,7 +703,7 @@ x11-wm/dwm
 x11-wm/enlightenment:0.17
 x11-wm/fluxbox
 x11-wm/fvwm
-x11-wm/i3
+x11-wm/i3-gaps
 x11-wm/openbox
 x11-wm/ratpoison
 x11-wm/twm

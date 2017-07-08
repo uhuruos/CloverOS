@@ -1,4 +1,6 @@
 #preference
+app-admin/conky thinkpad mpd rss curl iostats
+games-emulation/retroarch X
 media-video/handbrake gtk -fdk libav-aac
 sys-kernel/genkernel cryptsetup
 media-sound/darkice vorbis mp3
@@ -1016,3 +1018,17 @@ sys-apps/dbus X
 # required by x11-terms/termite-12::eroen
 # required by x11-terms/termite (argument)
 >=x11-libs/vte-0.46.1 termite-patch
+# required by kde-plasma/ksysguard-5.9.5::gentoo
+# required by kde-plasma/plasma-workspace-5.9.5.1-r2::gentoo
+# required by kde-plasma/plasma-desktop-5.9.5::gentoo
+# required by kde-plasma/plasma-meta-5.9.5::gentoo
+# required by @selected
+# required by @world (argument)
+>=kde-plasma/libksysguard-5.9.5 -minimal
+# required by kde-plasma/plasma-integration-5.9.5::gentoo
+# required by kde-plasma/plasma-workspace-5.9.5.1-r2::gentoo
+# required by kde-plasma/plasma-desktop-5.9.5::gentoo
+# required by kde-plasma/plasma-meta-5.9.5::gentoo
+# required by @selected
+# required by @world (argument)
+>=dev-qt/qtgui-5.7.1-r1 dbus

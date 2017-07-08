@@ -1,231 +1,234 @@
 #preference, remove when stable is bumped up
-media-video/mpv ~amd64
-app-emulation/virtualbox ~amd64
-app-emulation/virtualbox-modules ~amd64
-app-emulation/virtualbox-guest-additions ~amd64
-app-emulation/virtualbox-additions ~amd64
-dev-util/kbuild ~amd64
+media-video/mpv
+net-irc/weechat
+app-emulation/virtualbox
+app-emulation/virtualbox-modules
+app-emulation/virtualbox-guest-additions
+app-emulation/virtualbox-additions
+dev-util/kbuild
 
 #qt5, remove when stable is qt5
-media-gfx/librecad ~amd64
-media-sound/rosegarden ~amd64
-sci-mathematics/rstudio ~amd64
+media-gfx/librecad
+media-sound/rosegarden
+sci-mathematics/rstudio
 
 #keyworded, remove when stable exists
-net-p2p/freenet ~amd64
-x11-wm/compiz ~amd64
-media-sound/tomahawk ~amd64
-sys-fs/zfs-kmod ~amd64
-sys-fs/zfs ~amd64
-sys-kernel/spl ~amd64
-app-text/zathura ~amd64
-net-vpn/logmein-hamachi ~amd64
-app-arch/zpaq-extras ~amd64
-app-crypt/certbot ~amd64
-dev-util/bless ~amd64
-media-gfx/apngdis ~amd64
-net-dns/dnscrypt-proxy ~amd64
-dev-python/potr ~amd64
-sys-apps/idle3-tools ~amd64
-app-text/zathura-pdf-mupdf ~amd64
-dev-util/plan9port ~amd64
-net-vpn/i2p ~amd64
-dev-util/vmtouch ~amd64
-app-arch/zpaq ~amd64
-media-video/makemkv ~amd64
-app-arch/defluff ~amd64
-games-fps/ezquake-bin ~amd64
-media-sound/spek ~amd64
-media-sound/ardour ~amd64
-media-video/makemkv ~amd64
-media-video/avidemux ~amd64
-games-emulation/ppsspp ~amd64
-games-emulation/pcsxr ~amd64
-media-video/openshot ~amd64
-media-sound/lmms ~amd64
-media-gfx/pngquant ~amd64
-media-sound/yoshimi ~amd64
-net-libs/tox ~amd64
-net-im/qtox ~amd64
-games-engines/openmw ~amd64
-media-sound/denemo ~amd64
-sci-calculators/tiemu ~amd64
-media-sound/supercollider ~amd64
-media-sound/sidplayfp ~amd64
-games-util/steam-launcher ~amd64
-media-sound/deadbeef ~amd64
-net-im/discord-bin ~amd64
-media-fonts/lohit-kannada ~amd64
-media-fonts/montecarlo ~amd64
-media-gfx/opentoonz ~amd64
-media-gfx/freecad ~amd64
-dev-lang/rust ~amd64
-x11-wm/compiz-fusion ~amd64
-x11-wm/emerald ~amd64
-x11-themes/emerald-themes ~amd64
-media-sound/mp3splt ~amd64
+x11-wm/i3-gaps
+net-p2p/freenet
+x11-wm/compiz
+media-sound/tomahawk
+sys-fs/zfs-kmod
+sys-fs/zfs
+sys-kernel/spl
+app-text/zathura
+net-vpn/logmein-hamachi
+app-arch/zpaq-extras
+app-crypt/certbot
+dev-util/bless
+media-gfx/apngdis
+net-dns/dnscrypt-proxy
+dev-python/potr
+sys-apps/idle3-tools
+app-text/zathura-pdf-mupdf
+dev-util/plan9port
+net-vpn/i2p
+dev-util/vmtouch
+app-arch/zpaq
+media-video/makemkv
+app-arch/defluff
+games-fps/ezquake-bin
+media-sound/spek
+media-sound/ardour
+media-video/makemkv
+media-video/avidemux
+games-emulation/ppsspp
+games-emulation/pcsxr
+media-video/openshot
+media-sound/lmms
+media-gfx/pngquant
+media-sound/yoshimi
+net-libs/tox
+net-im/qtox
+games-engines/openmw
+media-sound/denemo
+sci-calculators/tiemu
+media-sound/supercollider
+media-sound/sidplayfp
+games-util/steam-launcher
+media-sound/deadbeef
+net-im/discord-bin
+media-fonts/lohit-kannada
+media-fonts/montecarlo
+media-gfx/opentoonz
+media-gfx/freecad
+dev-lang/rust
+x11-wm/compiz-fusion
+x11-wm/emerald
+x11-themes/emerald-themes
+media-sound/mp3splt
 net-analyzer/metasploit **
-games-roguelike/dwarf-fortress ~amd64
+games-roguelike/dwarf-fortress
 games-fps/lsdldoom **
 games-fps/tribes2 **
 games-fps/wolfgl **
-www-client/qutebrowser ~amd64
-sys-power/phc-intel ~amd64
-x11-terms/termite ~amd64
-media-video/handbrake ~amd64
+www-client/qutebrowser
+sys-power/phc-intel
+x11-terms/termite
+media-video/handbrake
 
 #dependencies
-#media-libs/lv2 ~amd64
-#media-libs/stk ~amd64
-#media-plugins/calf ~amd64
-sci-calculators/calcoo ~amd64
+#media-libs/lv2
+#media-libs/stk
+#media-plugins/calf
+sci-calculators/calcoo
 #certbot
-app-crypt/acme ~amd64
+app-crypt/acme
 #openshot
-net-libs/cppzmq ~amd64
-media-libs/libopenshot ~amd64
-media-libs/libopenshot-audio ~amd64
+net-libs/cppzmq
+media-libs/libopenshot
+media-libs/libopenshot-audio
 #ardour
-media-libs/suil ~amd64
+media-libs/suil
 #tomahawk
-dev-cpp/websocketpp ~amd64
+dev-cpp/websocketpp
 #rstudio
-dev-libs/mathjax ~amd64
+dev-libs/mathjax
 #sidplayfp
-media-libs/libsidplayfp ~amd64
+media-libs/libsidplayfp
 #deadbeef
-media-plugins/deadbeef-plugins-meta ~amd64
+media-plugins/deadbeef-plugins-meta
 #virtualbox
-x11-drivers/xf86-video-virtualbox ~amd64
+x11-drivers/xf86-video-virtualbox
 #rust
-dev-util/cargo ~amd64
+dev-util/cargo
 #compiz
-x11-plugins/compiz-plugins-extra ~amd64
-x11-misc/ccsm ~amd64
-dev-python/compizconfig-python ~amd64
-x11-plugins/compiz-plugins-main ~amd64
-x11-libs/libcompizconfig ~amd64
-x11-libs/compiz-bcop ~amd64
-x11-plugins/compiz-plugins-unsupported ~amd64
-x11-themes/emerald-themes ~amd64
-x11-wm/emerald ~amd64
-x11-apps/fusion-icon ~amd64
+x11-plugins/compiz-plugins-extra
+x11-misc/ccsm
+dev-python/compizconfig-python
+x11-plugins/compiz-plugins-main
+x11-libs/libcompizconfig
+x11-libs/compiz-bcop
+x11-plugins/compiz-plugins-unsupported
+x11-themes/emerald-themes
+x11-wm/emerald
+x11-apps/fusion-icon
+x11-libs/compizconfig-backend-gconf
 #qutebrowser
-dev-python/pygments ~amd64
-dev-python/pypeg2 ~amd64
+dev-python/pygments
+dev-python/pypeg2
 #freenet
-dev-java/bcprov ~amd64
-net-libs/NativeThread ~amd64
+dev-java/bcprov
+net-libs/NativeThread
 #avidemux
-media-libs/avidemux-plugins ~amd64
-media-libs/avidemux-core ~amd64
+media-libs/avidemux-plugins
+media-libs/avidemux-core
 #termite
-x11-libs/vte ~amd64
+x11-libs/vte
 
 # required by lohit-gujarati (argument)
-=media-fonts/lohit-gujarati-2.92.2 ~amd64
+=media-fonts/lohit-gujarati-2.92.2
 # required by fantasque-sans-mono (argument)
-=media-fonts/fantasque-sans-mono-2014.07 ~amd64
+=media-fonts/fantasque-sans-mono-2014.07
 # required by lohit-marathi (argument)
-=media-fonts/lohit-marathi-2.94.0 ~amd64
+=media-fonts/lohit-marathi-2.94.0
 # required by lohit-nepali (argument)
-=media-fonts/lohit-nepali-2.94.0 ~amd64
+=media-fonts/lohit-nepali-2.94.0
 # required by fifth-leg (argument)
-=media-fonts/fifth-leg-0.6 ~amd64
+=media-fonts/fifth-leg-0.6
 # required by courier-prime (argument)
-=media-fonts/courier-prime-1.203 ~amd64
+=media-fonts/courier-prime-1.203
 # required by lohit-tamil (argument)
-=media-fonts/lohit-tamil-2.91.1 ~amd64
+=media-fonts/lohit-tamil-2.91.1
 # required by alegreya-sans (argument)
-=media-fonts/alegreya-sans-1.0.2 ~amd64
+=media-fonts/alegreya-sans-1.0.2
 # required by lohit-assamese (argument)
-=media-fonts/lohit-assamese-2.91.2 ~amd64
+=media-fonts/lohit-assamese-2.91.2
 # required by lohit-gurmukhi (argument)
-=media-fonts/lohit-gurmukhi-2.91.0 ~amd64
+=media-fonts/lohit-gurmukhi-2.91.0
 # required by jomolhari (argument)
-=media-fonts/jomolhari-0.003c ~amd64
+=media-fonts/jomolhari-0.003c
 # required by lohit-odia (argument)
-=media-fonts/lohit-odia-2.91.0 ~amd64
+=media-fonts/lohit-odia-2.91.0
 # required by infinality-ultimate-meta (argument)
-=media-fonts/infinality-ultimate-meta-1 ~amd64
+=media-fonts/infinality-ultimate-meta-1
 # required by lohit-tamil-classical (argument)
-=media-fonts/lohit-tamil-classical-2.5.3 ~amd64
+=media-fonts/lohit-tamil-classical-2.5.3
 # required by inconsolata-hellenic (argument)
-=media-fonts/inconsolata-hellenic-1.19 ~amd64
+=media-fonts/inconsolata-hellenic-1.19
 # required by clearsans (argument)
-=media-fonts/clearsans-1.00 ~amd64
+=media-fonts/clearsans-1.00
 # required by heuristica (argument)
-=media-fonts/heuristica-0.2.1 ~amd64
+=media-fonts/heuristica-0.2.1
 # required by ahem (argument)
-=media-fonts/ahem-1.0 ~amd64
+=media-fonts/ahem-1.0
 # required by hkscs-ming (argument)
-=media-fonts/hkscs-ming-1.0_pre20030919-r2 ~amd64
+=media-fonts/hkscs-ming-1.0_pre20030919-r2
 # required by hermit (argument)
-=media-fonts/hermit-1.21 ~amd64
+=media-fonts/hermit-1.21
 # required by lohit-bengali (argument)
-=media-fonts/lohit-bengali-2.91.2 ~amd64
+=media-fonts/lohit-bengali-2.91.2
 # required by lohit-devanagari (argument)
-=media-fonts/lohit-devanagari-2.95.1 ~amd64
+=media-fonts/lohit-devanagari-2.95.1
 # required by fira-mono (argument)
-=media-fonts/fira-mono-3.205 ~amd64
+=media-fonts/fira-mono-3.205
 # required by lohit-malayalam (argument)
-=media-fonts/lohit-malayalam-2.92.0 ~amd64
+=media-fonts/lohit-malayalam-2.92.0
 # required by jsmath-extra-dark (argument)
-=media-fonts/jsmath-extra-dark-1.0 ~amd64
+=media-fonts/jsmath-extra-dark-1.0
 # required by jsmath-extra-light (argument)
-=media-fonts/jsmath-extra-light-1.0 ~amd64
+=media-fonts/jsmath-extra-light-1.0
 # required by koruri (argument)
-=media-fonts/koruri-20141224 ~amd64
+=media-fonts/koruri-20141224
 # required by exljbris-free (argument)
-=media-fonts/exljbris-free-20100320 ~amd64
+=media-fonts/exljbris-free-20100320
 # required by Humor-Sans (argument)
-=media-fonts/Humor-Sans-1.0 ~amd64
+=media-fonts/Humor-Sans-1.0
 # required by lohit-telugu (argument)
-=media-fonts/lohit-telugu-2.5.3 ~amd64
+=media-fonts/lohit-telugu-2.5.3
 # required by paratype (argument)
-=media-fonts/paratype-2.5 ~amd64
+=media-fonts/paratype-2.5
 # required by ohsnap (argument)
-=media-fonts/ohsnap-1.8.0 ~amd64
+=media-fonts/ohsnap-1.8.0
 # required by monoid (argument)
-=media-fonts/monoid-0.61 ~amd64
+=media-fonts/monoid-0.61
 # required by nunito (argument)
-=media-fonts/nunito-1.0 ~amd64
+=media-fonts/nunito-1.0
 # required by vollkorn (argument)
-=media-fonts/vollkorn-2.1 ~amd64
+=media-fonts/vollkorn-2.1
 # required by nanum (argument)
-=media-fonts/nanum-3.0 ~amd64
+=media-fonts/nanum-3.0
 # required by quivira (argument)
-=media-fonts/quivira-4.1 ~amd64
+=media-fonts/quivira-4.1
 # required by qomolangma (argument)
-=media-fonts/qomolangma-2012.05 ~amd64
+=media-fonts/qomolangma-2012.05
 # required by signika (argument)
-=media-fonts/signika-1.001 ~amd64
+=media-fonts/signika-1.001
 # required by termsyn (argument)
-=media-fonts/termsyn-1.8.7 ~amd64
+=media-fonts/termsyn-1.8.7
 # required by tex-gyre (argument)
-=media-fonts/tex-gyre-2.005 ~amd64
+=media-fonts/tex-gyre-2.005
 # required by media-fonts/ricty-3.2.0-r1::gentoo
 # required by ricty (argument)
-=media-fonts/mix-mplus-ipa-20130617 ~amd64
+=media-fonts/mix-mplus-ipa-20130617
 # required by nuosu-sil (argument)
-=media-fonts/nuosu-sil-2.1.1 ~amd64
+=media-fonts/nuosu-sil-2.1.1
 # required by ricty (argument)
-=media-fonts/ricty-3.2.0-r1 ~amd64
+=media-fonts/ricty-3.2.0-r1
 # required by sophia-nubian (argument)
-=media-fonts/sophia-nubian-1.0 ~amd64
+=media-fonts/sophia-nubian-1.0
 # required by viga (argument)
-=media-fonts/viga-1 ~amd64
+=media-fonts/viga-1
 # required by xfce4-gvfs-mount (argument)
-=xfce-extra/xfce4-gvfs-mount-0.0.4 ~amd64
+=xfce-extra/xfce4-gvfs-mount-0.0.4
 # required by eatmonkey (argument)
-=xfce-extra/eatmonkey-0.1.4 ~amd64
+=xfce-extra/eatmonkey-0.1.4
 # required by xfce-theme-manager (argument)
-=xfce-extra/xfce-theme-manager-0.3.6 ~amd64
+=xfce-extra/xfce-theme-manager-0.3.6
 # required by xfce4-alsa-plugin (argument)
-=xfce-extra/xfce4-alsa-plugin-0.1.1 ~amd64
+=xfce-extra/xfce4-alsa-plugin-0.1.1
 # required by xfce4-indicator-plugin (argument)
-=xfce-extra/xfce4-indicator-plugin-2.3.3-r1 ~amd64
+=xfce-extra/xfce4-indicator-plugin-2.3.3-r1
 # required by multiload-nandhp (argument)
-=xfce-extra/multiload-nandhp-0.3 ~amd64
+=xfce-extra/multiload-nandhp-0.3
 # required by xfce4-composite-editor (argument)
-=xfce-extra/xfce4-composite-editor-0 ~amd64
+=xfce-extra/xfce4-composite-editor-0
