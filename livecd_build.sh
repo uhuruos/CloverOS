@@ -71,17 +71,16 @@ wget https://raw.githubusercontent.com/chiru-no/cloveros/master/home/user/screen
 wget https://raw.githubusercontent.com/chiru-no/cloveros/master/home/user/.xbindkeysrc
 wget https://raw.githubusercontent.com/chiru-no/cloveros/master/home/user/bl.sh
 wget https://raw.githubusercontent.com/chiru-no/cloveros/master/home/user/.emacs
-mkdir .emacs.d
-mkdir .emacs.d/backups
+mkdir -p .emacs.d/backups
 mkdir .emacs.d/autosaves
 chmod +x screenfetch-dev
-chmod +x bl
+chmod +x bl.sh
 mkdir .twm
-cd .twm
-wget https://raw.githubusercontent.com/chiru-no/cloveros/master/home/user/.twm/minimize.xbm
-wget https://raw.githubusercontent.com/chiru-no/cloveros/master/home/user/.twm/maximize.xbm
-wget https://raw.githubusercontent.com/chiru-no/cloveros/master/home/user/.twm/close.xbm
-cd ..
+wget https://raw.githubusercontent.com/chiru-no/cloveros/master/home/user/.twm/minimize.xbm -P .twm
+wget https://raw.githubusercontent.com/chiru-no/cloveros/master/home/user/.twm/maximize.xbm -P .twm
+wget https://raw.githubusercontent.com/chiru-no/cloveros/master/home/user/.twm/close.xbm -P .twm
+mkdir -p .config/xfe/
+wget https://raw.githubusercontent.com/chiru-no/cloveros/master/home/user/.config/xfe/xferc -P .config/xfe
 echo -e "session = /home/$user/.rtorrent\ndirectory = /home/$user/Downloads/\nport_range = 53165-62153\ndht = on\npeer_exchange = yes\nuse_udp_trackers = yes" > .rtorrent.rc
 mkdir Downloads
 mkdir .rtorrent
