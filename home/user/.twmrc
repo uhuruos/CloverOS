@@ -60,6 +60,7 @@ menu "Applications" {
 	"smplayer" !"smplayer &"
 	"filezilla" !"filezilla &"
 	"mirage" !"mirage &"
+	"engrampa" !"engrampa &"
 	"rtorrent" !"aterm +sb -tr -sh 10 -e rtorrent &"
 	"weechat" !"aterm +sb -tr -sh 10 -e weechat &"
 	"gparted" !"sudo gparted &"
