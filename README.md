@@ -55,9 +55,10 @@ Run `alsamixer` and hit F6 to see your audio devices.
 
 To make 1 the default device, edit `~/.asoundrc` and add this:
 
-```defaults.pcm.card 1
-
-defaults.ctl.card 1```
+```
+defaults.pcm.card 1
+defaults.ctl.card 1
+```
 
 ## FAQ
 ### Is this an overlay?
