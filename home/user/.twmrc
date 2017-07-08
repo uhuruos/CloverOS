@@ -59,7 +59,7 @@ menu "Applications" {
 	"gimp" !"gimp &"
 	"smplayer" !"smplayer &"
 	"filezilla" !"filezilla &"
-	"mirage" !"mirage &"
+	"mcomix" !"mcomix &"
 	"engrampa" !"engrampa &"
 	"rtorrent" !"aterm +sb -tr -sh 10 -e rtorrent &"
 	"weechat" !"aterm +sb -tr -sh 10 -e weechat &"
