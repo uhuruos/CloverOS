@@ -16,7 +16,7 @@ if [ -z "$DISPLAY" ]; then
     wms[l]=startlxde
     wmpkgs[y]=twm
     wmspkg[Y]=twm
-    wmspkg[i]=i3
+    wmspkg[i]=i3-gaps
     wmspkg[a]=awesome
     wmspkg[o]=openbox
     wmspkg[e]="enlightenment:0.17 terminology"
