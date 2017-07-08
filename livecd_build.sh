@@ -82,6 +82,7 @@ wget https://raw.githubusercontent.com/chiru-no/cloveros/master/home/user/.twm/c
 mkdir -p .config/xfe/
 wget https://raw.githubusercontent.com/chiru-no/cloveros/master/home/user/.config/xfe/xferc -P .config/xfe
 wget https://raw.githubusercontent.com/chiru-no/cloveros/master/home/user/.rtorrent.rc
+sed -i "s@/home/user/@/home/$user/@" .rtorrent.rc
 mkdir Downloads
 mkdir .rtorrent
 mkdir .mpv

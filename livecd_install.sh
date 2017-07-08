@@ -56,11 +56,11 @@ sed -i "s/set timeout=5/set timeout=0/" /boot/grub/grub.cfg
 sed -i "s@c1:12345:respawn:/sbin/agetty -a $livecduser --noclear 38400 tty1 linux@c1:12345:respawn:/sbin/agetty --noclear 38400 tty1 linux@" /etc/inittab
 sed -i '/^#/!d' /home/$livecduser/.bash_profile
 sed -i 's/^#\(.*\)/\1/g' /home/$livecduser/.bash_profile
-sed -i "s@/home/user/@/home/$user/@" /home/$livecduser/.rtorrent.rc
 
 gpasswd -a $user wheel
 gpasswd -a $user video
 gpasswd -a $user audio
+sed -i "s@/home/$livecduser/@/home/$user/@" /home/$livecduser/.rtorrent.rc
 mv /home/$livecduser/ /home/$user/
 chown -R $user /home/$user/
 if [[ $user != $livecduser ]]; then
