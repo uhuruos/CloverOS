@@ -60,6 +60,19 @@ defaults.pcm.card 1
 defaults.ctl.card 1
 ```
 
+### Changing mirrors
+Edit `/etc/portage/make.conf`
+
+The mirror used: `PORTAGE_BINHOST="https://cloveros.ga"`
+
+Available mirrors:
+
+https://useast.cloveros.ga
+
+https://uswest.cloveros.ga
+
+https://fr.cloveros.ga
+
 ## FAQ
 ### Is this an overlay?
 No, this uses regular Gentoo Portage only. Same versions and USE flag options.
