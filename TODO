@@ -2,7 +2,6 @@
 - try tinycore kernel config and see if it works
 - make cloveros-libre fork
 - make cloveros-full fork
-- multi script for upgrading dotfiles, kernel and changing cloveros.ga mirror
 - make LiveCD from scratch (kernel, kernel modules)
 - Tap to click
 - 32 bit
