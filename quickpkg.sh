@@ -18,6 +18,7 @@ cd ../../../
 find /usr/portage/packages/ -type f | pv -qB 1G | parallel gpg --armor --detach-sign --output .{}.asc --sign {}
 mv usr/portage/packages/* .
 rm -Rf usr
+rmdir * */* &> /dev/null
 cd ..
 
 chmod -R 755 /usr/portage/packages/
