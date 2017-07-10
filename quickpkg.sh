@@ -11,10 +11,9 @@ chmod -R 755 /usr/portage/packages/
 cd /usr/portage/packages/s/
 php website.php
 
-cd /usr/portage/packages/s/signatures/
-rm -Rf *
-mkdir -p usr/portage/packages/
-cd usr/portage/packages/
+rm -Rf signatures
+mkdir -p signatures/usr/portage/packages/
+cd signatures/usr/portage/packages/
 ls -1 /usr/portage/packages/ | parallel mkdir
 cd ../../../
 find /usr/portage/packages/ -type f | parallel gpg --armor --detach-sign --output .{}.asc --sign {}
@@ -24,3 +23,4 @@ rm -Rf usr
 sudo -u gentoo rsync -av --delete-after /usr/portage/packages/ root@useast.cloveros.ga:/var/www/htdocs/useast.cloveros.ga/
 sudo -u gentoo rsync -av --delete-after /usr/portage/packages/ root@uswest.cloveros.ga:/var/www/htdocs/uswest.cloveros.ga/
 sudo -u gentoo rsync -av --delete-after /usr/portage/packages/ root@fr.cloveros.ga:/var/www/html/
+php /home/gentoo/website-gentoo.php
