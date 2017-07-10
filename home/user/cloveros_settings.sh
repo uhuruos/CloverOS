@@ -12,7 +12,8 @@ mirrors=(
 
 echo "1) Change Mirrors
 2) Change default alsa device
-3) Upgrade kernel"
+3) Upgrade kernel
+4) Change binary/source"
 
 read -erp "Select option: " -n 1 choice
 echo

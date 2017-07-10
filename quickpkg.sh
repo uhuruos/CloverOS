@@ -1,5 +1,5 @@
 emerge --sync
-emerge -uvDN world
+emerge -uvDN --exclude=glibc world
 emerge --depclean
 mv /usr/portage/packages/s/ .
 rm -Rf /usr/portage/packages/*
@@ -10,4 +10,17 @@ mv s/ /usr/portage/packages/
 chmod -R 755 /usr/portage/packages/
 cd /usr/portage/packages/s/
 php website.php
-rsync -avz --delete /usr/portage/packages/ freebsd@cloveros.ga:/usr/local/www/nginx-dist/
+
+cd /usr/portage/packages/s/signatures/
+rm -Rf *
+mkdir -p usr/portage/packages/
+cd usr/portage/packages/
+ls -1 /usr/portage/packages/ | parallel mkdir
+cd ../../../
+find /usr/portage/packages/ -type f | parallel gpg --armor --detach-sign --output .{}.asc --sign {}
+mv usr/portage/packages/* .
+rm -Rf usr
+
+sudo -u gentoo rsync -av --delete-after /usr/portage/packages/ root@useast.cloveros.ga:/var/www/htdocs/useast.cloveros.ga/
+sudo -u gentoo rsync -av --delete-after /usr/portage/packages/ root@uswest.cloveros.ga:/var/www/htdocs/uswest.cloveros.ga/
+sudo -u gentoo rsync -av --delete-after /usr/portage/packages/ root@fr.cloveros.ga:/var/www/html/
