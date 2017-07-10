@@ -22,6 +22,6 @@ rmdir * */* &> /dev/null
 cd ..
 
 chmod -R 755 /usr/portage/packages/
-sudo -u gentoo rsync -av --delete-after /usr/portage/packages/ root@useast.cloveros.ga:/var/www/htdocs/useast.cloveros.ga/
-sudo -u gentoo rsync -av --delete-after /usr/portage/packages/ root@uswest.cloveros.ga:/var/www/htdocs/uswest.cloveros.ga/
-sudo -u gentoo rsync -av --delete-after /usr/portage/packages/ root@fr.cloveros.ga:/var/www/html/
+rsync -av --delete-after /usr/portage/packages/ root@useast.cloveros.ga:/var/www/htdocs/useast.cloveros.ga/
+rsync -av --delete-after /usr/portage/packages/ root@uswest.cloveros.ga:/var/www/htdocs/uswest.cloveros.ga/
+rsync -av --delete-after /usr/portage/packages/ root@fr.cloveros.ga:/var/www/html/
