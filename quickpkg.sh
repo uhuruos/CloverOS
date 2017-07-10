@@ -16,7 +16,7 @@ mkdir -p signatures/usr/portage/packages/
 cd signatures/usr/portage/packages/
 ls -1 /usr/portage/packages/ | parallel mkdir
 cd ../../../
-find /usr/portage/packages/ -type f | parallel gpg --armor --detach-sign --output .{}.asc --sign {}
+find /usr/portage/packages/ -type f | pv -qB 1G | parallel gpg --armor --detach-sign --output .{}.asc --sign {}
 mv usr/portage/packages/* .
 rm -Rf usr
 
