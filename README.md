@@ -12,9 +12,13 @@ Video demonstration: https://my.mixtape.moe/qsmcje.mp4
 `emerge filezilla`
 
 ### Upgrading system
-`emerge --sync`
+```
+emerge --sync
 
-`emerge -uavD world`
+emerge -uavD world
+
+emerge --depclean
+```
 
 ### Package isn't available
 Make an issue so I can add the package. In the meantime, edit `/etc/portage/make.conf` and edit the following line:
