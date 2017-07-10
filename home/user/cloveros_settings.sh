@@ -36,7 +36,7 @@ case "$choice" in
 	3)
 		wget -O - https://raw.githubusercontent.com/chiru-no/cloveros/master/kernel.tar.xz | sudo tar xJ -C /boot/
 		wget -O - https://raw.githubusercontent.com/chiru-no/cloveros/master/modules.tar.xz | sudo tar xJ -C /lib/modules/
-		grub-mkconfig -o /boot/grub/grub.cfg
+		sudo grub-mkconfig -o /boot/grub/grub.cfg
 		echo "Kernel updated."
 		;;
 
