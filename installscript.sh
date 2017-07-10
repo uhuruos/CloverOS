@@ -3,13 +3,13 @@ if [ "$(id -u)" != "0" ]; then
    exit 1
 fi
 
-read -p "Automatic partitioning (a) or manual partitioning? (m) [a/m] " -n 1 partitioning
+read -erp "Automatic partitioning (a) or manual partitioning? (m) [a/m] " -n 1 partitioning
 echo
 if [[ $partitioning = "a" ]]; then
-    read -e -p "Enter drive for CloverOS installation: " -i "/dev/sda" drive
+    read -erp "Enter drive for CloverOS installation: " -i "/dev/sda" drive
     partition=${drive}1
 elif [[ $partitioning = "m" ]]; then
-    read -e -p "Enter partition for CloverOS installation: " -i "/dev/sda1" partition
+    read -erp "Enter partition for CloverOS installation: " -i "/dev/sda1" partition
     drive=${partition%"${partition##*[!0-9]}"}
 else
     echo "Invalid option."
@@ -17,7 +17,7 @@ else
 fi
 drive=${drive#*/dev/}
 partition=${partition#*/dev/}
-read -p "Partitioning: $partitioning
+read -erp "Partitioning: $partitioning
 Drive: /dev/$drive
 Partition: /dev/$partition
 Is this correct? [y/n] " -n 1 yn
@@ -26,9 +26,9 @@ if [[ $yn != "y" ]]; then
 fi
 echo
 
-read -rp "Enter preferred root password " rootpassword
-read -p "Enter preferred username " user
-read -rp "Enter preferred user password " userpassword
+read -erp "Enter preferred root password " rootpassword
+read -erp "Enter preferred username " user
+read -erp "Enter preferred user password " userpassword
 
 mkdir gentoo
 

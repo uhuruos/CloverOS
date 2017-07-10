@@ -8,16 +8,16 @@ echo "1) Change Mirrors
 2) Change default alsa device
 3) Upgrade kernel"
 
-read -p "Select option: " -n 1 choice
+read -erp "Select option: " -n 1 choice
 echo
 if [[ $choice = "1" ]]; then
    mirrors=("useast.cloveros.ga" "uswest.cloveros.ga" "fr.cloveros.ga")
     i=0
     for i in "${!mirrors[@]}"; do
-        echo "$(($i+1))) ${mirrors[$i]}"
+        echo "$((i+1))) ${mirrors[$i]}"
     done
-    read -p "Select mirror: " -n 1 choicemirror
-    choicemirror=${choicemirror}-1
+    read -erp "Select mirror: " -n 1 choicemirror
+    choicemirror=$((choicemirror-1))
     sed -i "s@PORTAGE_BINHOST=\".*\"@PORTAGE_BINHOST=\"https://${mirrors[$choicemirror]}\"@" /etc/portage/make.conf
     echo
     echo "Mirror changed to: ${mirrors[$choicemirror]}"
