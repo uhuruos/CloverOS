@@ -21,7 +21,7 @@ if [ -z "$DISPLAY" ]; then
     wmspkg[o]=openbox
     wmspkg[e]="enlightenment:0.17 terminology"
     wmspkg[k]="plasma-meta kde-apps/dolphin dolphin-plugins konsole gwenview"
-    wmspkg[m]=mate
+    wmspkg[m]="mate engrampa pluma atril gnome-calculator caja-extensions mate-netbook mate-power-manager mate-screensaver mate-system-monitor mate-utils eom mate-netspeed"
     wmspkg[x]=xfce4-meta
     wmspkg[l]=lxde-meta
     wmspost[y]="feh --bg-max wallpaper.png & xbindkeys"
