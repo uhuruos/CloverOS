@@ -1,5 +1,5 @@
 emerge --sync
-emerge -uvDN --exclude=glibc world
+emerge -uvDN world
 emerge --depclean
 mv /usr/portage/packages/s/ .
 rm -Rf /usr/portage/packages/*
@@ -19,8 +19,8 @@ cd ../../../
 find /usr/portage/packages/ -type f | pv -qB 1G | parallel gpg --armor --detach-sign --output .{}.asc --sign {}
 mv usr/portage/packages/* .
 rm -Rf usr
+cd ..
 
 sudo -u gentoo rsync -av --delete-after /usr/portage/packages/ root@useast.cloveros.ga:/var/www/htdocs/useast.cloveros.ga/
 sudo -u gentoo rsync -av --delete-after /usr/portage/packages/ root@uswest.cloveros.ga:/var/www/htdocs/uswest.cloveros.ga/
 sudo -u gentoo rsync -av --delete-after /usr/portage/packages/ root@fr.cloveros.ga:/var/www/html/
-php /home/gentoo/website-gentoo.php
