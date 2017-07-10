@@ -22,7 +22,7 @@ case "$choice" in
 			echo "$((i+1))) ${mirrors[i]}"
 		done
 		read -erp "Select mirror: " -n 1 choicemirror
-		sudo sed -i "s@PORTAGE_BINHOST=\".*\"@PORTAGE_BINHOST=\"https://${mirrors[$choicemirror]}\"@" /etc/portage/make.conf
+		sudo sed -i "s@PORTAGE_BINHOST=\".*\"@PORTAGE_BINHOST=\"https://${mirrors[$choicemirror-1]}\"@" /etc/portage/make.conf
 		echo
 		echo "Mirror changed to: ${mirrors[choicemirror-1]}"
 		;;
