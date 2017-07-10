@@ -29,8 +29,8 @@ case "$choice" in
 
 	2)
 		cat /proc/asound/cards | grep " \["
-		read -erpn1 "Select the audio device to become default: " choiceaudio
-		echo "defaults.pcm.card ${choiceaudio}\ndefaults.ctl.card ${choiceaudio}" > ~/.asoundrc
+		read -erp "Select the audio device to become default: " -n 1 choiceaudio
+		echo -e "defaults.pcm.card ${choiceaudio}\ndefaults.ctl.card ${choiceaudio}" > ~/.asoundrc
 		;;
 
 	3)
