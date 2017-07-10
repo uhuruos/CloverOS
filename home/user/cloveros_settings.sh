@@ -1,4 +1,4 @@
-#!/usr/bin/sudo /bin/bash
+#!/bin/bash
 
 # This software is released into the public domain.
 # It is provided "as is", without warranties or conditions of any kind.
@@ -22,21 +22,21 @@ case "$choice" in
 			echo "$((i+1))) ${mirrors[i]}"
 		done
 		read -erp "Select mirror: " -n 1 choicemirror
-		sed -i "s@PORTAGE_BINHOST=\".*\"@PORTAGE_BINHOST=\"https://${mirrors[$choicemirror]}\"@" /etc/portage/make.conf
+		sudo sed -i "s@PORTAGE_BINHOST=\".*\"@PORTAGE_BINHOST=\"https://${mirrors[$choicemirror]}\"@" /etc/portage/make.conf
 		echo
 		echo "Mirror changed to: ${mirrors[choicemirror-1]}"
 		;;
 
 	2)
-		cat /proc/asound/cards | grep " \["
+		grep " \[" /proc/asound/cards
 		read -erp "Select the audio device to become default: " -n 1 choiceaudio
 		echo -e "defaults.pcm.card ${choiceaudio}\ndefaults.ctl.card ${choiceaudio}" > ~/.asoundrc
 		;;
 
 	3)
-		wget -O - https://raw.githubusercontent.com/chiru-no/cloveros/master/kernel.tar.xz | tar xJ -C /boot/
-		wget -O - https://raw.githubusercontent.com/chiru-no/cloveros/master/modules.tar.xz | tar xJ -C /lib/modules/
-		grub-mkconfig > /boot/grub/grub.cfg
+		wget -O - https://raw.githubusercontent.com/chiru-no/cloveros/master/kernel.tar.xz | sudo tar xJ -C /boot/
+		wget -O - https://raw.githubusercontent.com/chiru-no/cloveros/master/modules.tar.xz | sudo tar xJ -C /lib/modules/
+		grub-mkconfig -o /boot/grub/grub.cfg
 		echo "Kernel updated."
 		;;
 
