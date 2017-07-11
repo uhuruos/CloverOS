@@ -1,1 +1,1 @@
-bash .bash_profile
+emulate bash -c "source ~/.bash_profile"
