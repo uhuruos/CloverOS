@@ -127,4 +127,4 @@ xorriso -as mkisofs -r -J \
        	-b isolinux/isolinux.bin -c isolinux/boot.cat \
        	-no-emul-boot -boot-load-size 4 -boot-info-table  \
 	-o CloverOS-x86_64-$(date +"%Y%m%d").iso files
-rm -R files isohdpfx.bin livecd_files.tar.gz
+rm -R files isohdpfx.bin livecd_files.xz
