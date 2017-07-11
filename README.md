@@ -20,6 +20,21 @@ emerge -uavD world
 emerge --depclean
 ```
 
+### Updating config files after upgrading system
+`dispatch-conf`
+
+After you run it, it will show you the changes it's going to make:
+
+
+q To exit without making changes
+
+u To update and make the changes
+
+z To disregard the changes
+
+
+It will ask to modify the sudo settings back to default, just hit z there.
+
 ### Package isn't available
 Make an issue so I can add the package. In the meantime, edit `/etc/portage/make.conf` and edit the following line:
 
