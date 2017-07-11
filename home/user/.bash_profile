@@ -1,5 +1,5 @@
 if [ -z "$DISPLAY" ]; then
-    echo "WM Options: (y) Default (i) i3 (a) Awesome (o) Openbox (e) Enlightenment (k) KDE (m) MATE (x) XFCE (l) LXDE"
+    echo "WM Options: (y) Default (i) i3 (a) Awesome (o) Openbox (e) Enlightenment (k) KDE (m) MATE (x) XFCE (l) LXDE (f) Fluxbox"
     read -p "Start X? [y/n] " -n 1 choice
     declare -A wms
     declare -A wmspkg
@@ -14,6 +14,7 @@ if [ -z "$DISPLAY" ]; then
     wms[m]=mate-session
     wms[x]=startxfce4
     wms[l]=startlxde
+    wms[f]=fluxbox
     wmpkgs[y]=twm
     wmspkg[Y]=twm
     wmspkg[i]=i3-gaps
@@ -24,6 +25,7 @@ if [ -z "$DISPLAY" ]; then
     wmspkg[m]="mate engrampa pluma atril gnome-calculator caja-extensions mate-netbook mate-power-manager mate-screensaver mate-system-monitor mate-utils eom mate-netspeed"
     wmspkg[x]=xfce4-meta
     wmspkg[l]=lxde-meta
+    wmspkg[f]=fluxbox
     wmspost[y]="feh --bg-max wallpaper.png & xbindkeys"
     wmspost[Y]="feh --bg-max wallpaper.png & xbindkeys"
     wmspost[i]="feh --bg-max wallpaper.png & xbindkeys"
@@ -34,6 +36,7 @@ if [ -z "$DISPLAY" ]; then
     wmspost[m]=""
     wmspost[x]=""
     wmspost[l]=""
+    wmspost[l]="feh --bg-max wallpaper.png & xbindkeys"
     if [ -n "${wms[$choice] + 1}" ]; then
         if [ ! -f /usr/bin/${wms[$choice]} ]; then
             echo
