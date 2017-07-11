@@ -1,6 +1,6 @@
 if [ -z "$DISPLAY" ]; then
     echo "WM Options: (y) Default (i) i3 (a) Awesome (o) Openbox (e) Enlightenment (k) KDE (m) MATE (x) XFCE (l) LXDE (f) Fluxbox (d) dwm (w) icewm"
-    read -p "Start X? [y/n] " -n 1 choice
+    read -erp "Start X? [y/n] " -n 1 choice
     declare -A wms
     declare -A wmspkg
     declare -A wmspost
@@ -48,7 +48,7 @@ if [ -z "$DISPLAY" ]; then
             echo
             echo ${wms[$choice]} is not installed. Install it by running:
             echo $ sudo emerge ${wmspkg[$choice]}
-            read -p "Install now? [y/n] " -n 1 installyn
+            read -erp "Install now? [y/n] " -n 1 installyn
             if [[ "$installyn" == "y" || "$installyn" == "Y" ]]; then
                 sudo emerge -v ${wmspkg[$choice]}
                 export DISPLAY=:0
