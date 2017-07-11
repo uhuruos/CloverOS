@@ -8,6 +8,7 @@ app-admin/testdisk
 app-arch/advancecomp
 app-arch/cabextract
 app-arch/defluff
+app-arch/engrampa
 app-arch/makeself
 app-arch/p7zip
 app-arch/par
@@ -88,6 +89,8 @@ app-text/zathura-cb
 app-text/zathura-pdf-mupdf
 dev-games/ogre
 dev-haskell/haskell-platform
+dev-java/icedtea-bin:8
+dev-java/icedtea:8
 dev-lang/php
 dev-lang/python
 dev-lang/rust
@@ -489,7 +492,6 @@ net-p2p/mktorrent
 net-p2p/ncdc
 net-p2p/nicotine+
 net-p2p/qbittorrent
-net-p2p/retroshare
 net-p2p/rtorrent
 net-p2p/transmission
 net-vpn/i2p
@@ -552,13 +554,13 @@ www-client/chromium
 www-client/conkeror
 www-client/dillo
 www-client/firefox
+www-client/palemoon-bin
 www-client/qutebrowser
 www-client/surf
 www-client/w3m
 www-misc/fcgiwrap
 www-plugins/adobe-flash
 www-servers/nginx
-x11-apps/fusion-icon
 x11-apps/mesa-progs
 x11-apps/xbacklight
 x11-apps/xev
@@ -567,12 +569,15 @@ x11-apps/xkill
 x11-apps/xrandr
 x11-apps/xwininfo
 x11-base/xorg-server
+x11-drivers/nvidia-drivers
 x11-libs/compizconfig-backend-gconf
+x11-misc/bumblebee
 x11-misc/compton
 x11-misc/dmenu
 x11-misc/i3lock
 x11-misc/i3status
 x11-misc/lsw
+x11-misc/nitrogen
 x11-misc/obmenu
 x11-misc/redshift
 x11-misc/rofi
@@ -588,6 +593,7 @@ x11-misc/xclip
 x11-misc/xdotool
 x11-misc/xfe
 x11-misc/xkeyboard-config
+x11-misc/xscreensaver
 x11-misc/xsnow
 x11-plugins/wmfortune
 x11-terms/aterm
@@ -596,7 +602,6 @@ x11-terms/st
 x11-terms/terminology
 x11-terms/termite
 x11-terms/xfce4-terminal
-x11-themes/Tulliana
 x11-themes/adwaita-icon-theme
 x11-themes/arc-icon-theme
 x11-themes/audacious-themes

@@ -1,6 +1,11 @@
 #preference
+media-sound/audacity id3tag
+mate-extra/mate-screensaver -pam
+app-crypt/pinentry -gnome-keyring
+sys-auth/pambase -gnome-keyring
+mate-base/mate -extras
+x11-misc/nitrogen nls xinerama
 app-admin/conky thinkpad mpd rss curl iostats
-games-emulation/retroarch X
 media-video/handbrake gtk -fdk libav-aac
 sys-kernel/genkernel cryptsetup
 media-sound/darkice vorbis mp3
@@ -14,12 +19,9 @@ mail-client/thunderbird -crypt system-harfbuzz system-icu system-jpeg system-lib
 media-fonts/acroread-asianfonts -minimal
 kde-plasma/plasma-meta bluetooth grub gtk
 kde-plasma/plasma-desktop gtk3 gtk2 legacy-systray
-app-misc/neofetch X
-app-emulation/virtualbox-guest-additions X
 media-gfx/krita color-management
 app-emulation/wine -custom-cflags
 x11-wm/xmonad -default-term
-sys-auth/pambase -gnome-keyring
 sys-block/gparted btrfs dmraid f2fs fat hfs jfs mdadm ntfs reiserfs reiser4 xfs
 kde-plasma/powerdevil -wireless
 app-editors/vim -minimal
@@ -42,13 +44,16 @@ net-misc/iputils -caps -filecaps
 app-admin/sudo -pam -sendmail
 media-libs/harfbuzz icu
 media-libs/libvpx postproc
-app-crypt/gcr gtk
 net-p2p/transmission qt5
 net-wireless/wpa_supplicant qt5
 app-misc/recoll qt5
 media-gfx/fontforge X gtk
 media-gfx/graphviz gtk
 app-emulation/virt-manager gtk
+mate-extra/mate-screensaver X
+games-emulation/retroarch X
+app-misc/neofetch X
+app-emulation/virtualbox-guest-additions X
 sys-apps/xdg-desktop-portal-gtk X
 sys-apps/flatpak gtk
 media-video/xine-ui curl X
@@ -113,7 +118,6 @@ media-libs/flac ogg
 www-servers/varnish jit jemalloc
 app-portage/layman subversion
 net-analyzer/rrdtool perl graph
-media-sound/audacity alsa libsoxr flac id3tag ladspa libsamplerate midi mp3 soundtouch twolame vamp vorbis
 media-sound/lmms alsa fluidsynth ogg portaudio sdl stk qt5
 app-admin/testdisk ntfs
 www-client/netsurf fbcon fbcon_frontend_linux
@@ -154,6 +158,7 @@ media-sound/deadbeef aac adplug alac alsa cdda converter cover cover-imlib2 cove
 app-emulation/qemu sdl usb virgl
 
 #required
+app-crypt/gcr gtk
 dev-libs/boost icu nls
 dev-libs/libdbusmenu gtk gtk3 abi_x86_64
 media-libs/sdl-mixer vorbis
@@ -958,13 +963,6 @@ sys-apps/dbus X
 # required by sci-electronics/kicad-4.0.4::gentoo
 # required by kicad (argument)
 >=media-libs/tiff-4.0.8 abi_x86_32
-# required by gnome-base/gnome-keyring-3.20.0::gentoo
-# required by app-crypt/libsecret-0.18.5::gentoo
-# required by sys-apps/gnome-disk-utility-3.22.1::gentoo
-# required by mate-base/mate-1.12-r1::gentoo[extras]
-# required by @selected
-# required by @world (argument)
->=app-crypt/pinentry-0.9.7-r1 gnome-keyring
 # required by media-plugins/vdr-graphtft-0.3.7-r1::gentoo
 # required by x11-themes/vdrgraphtft-deepblue-0.3.1::gentoo
 # required by vdrgraphtft-deepblue (argument)
@@ -1032,3 +1030,10 @@ sys-apps/dbus X
 # required by @selected
 # required by @world (argument)
 >=dev-qt/qtgui-5.7.1-r1 dbus
+# required by www-client/palemoon-bin-27.3.0::palemoon
+# required by palemoon-bin (argument)
+>=virtual/ffmpeg-9-r2 x264
+# required by sci-libs/scipy-0.16.1::gentoo
+# required by net-wireless/gnuradio-3.7.11-r1::gentoo[filter]
+# required by gnuradio (argument)
+>=dev-python/numpy-1.10.4 lapack

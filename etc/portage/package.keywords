@@ -1,4 +1,5 @@
 #preference, remove when stable is bumped up
+media-sound/mpd
 media-video/mpv
 net-irc/weechat
 app-emulation/virtualbox
@@ -75,6 +76,8 @@ www-client/qutebrowser
 sys-power/phc-intel
 x11-terms/termite
 media-video/handbrake
+dev-java/icedtea
+www-client/palemoon-bin
 
 #dependencies
 #media-libs/lv2
@@ -111,7 +114,6 @@ x11-libs/compiz-bcop
 x11-plugins/compiz-plugins-unsupported
 x11-themes/emerald-themes
 x11-wm/emerald
-x11-apps/fusion-icon
 x11-libs/compizconfig-backend-gconf
 #qutebrowser
 dev-python/pygments
@@ -232,3 +234,5 @@ x11-libs/vte
 =xfce-extra/multiload-nandhp-0.3
 # required by xfce4-composite-editor (argument)
 =xfce-extra/xfce4-composite-editor-0
+# required by gnuradio (argument)
+=net-wireless/gnuradio-3.7.11-r1 ~amd64
