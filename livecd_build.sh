@@ -117,8 +117,8 @@ cd ..
 umount -l image/*
 mksquashfs image image.squashfs -b 1024k -comp xz -Xbcj x86 -Xdict-size 100%
 rm -Rf image/
-wget https://raw.githubusercontent.com/chiru-no/cloveros/master/livecd_files.xz
-tar xvf livecd_files.xz
+wget https://raw.githubusercontent.com/chiru-no/cloveros/master/livecd_files.tar.xz
+tar xvf livecd_files.tar.xz
 mv image.squashfs files
 xorriso -as mkisofs -r -J \
        	-joliet-long -l -cache-inodes \
@@ -127,4 +127,4 @@ xorriso -as mkisofs -r -J \
        	-b isolinux/isolinux.bin -c isolinux/boot.cat \
        	-no-emul-boot -boot-load-size 4 -boot-info-table  \
 	-o CloverOS-x86_64-$(date +"%Y%m%d").iso files
-rm -R files isohdpfx.bin livecd_files.xz
+rm -R files isohdpfx.bin livecd_files.tar.xz
