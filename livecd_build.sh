@@ -118,7 +118,7 @@ umount -l image/*
 mksquashfs image image.squashfs -b 1024k -comp xz -Xbcj x86 -Xdict-size 100%
 rm -Rf image/
 wget https://raw.githubusercontent.com/chiru-no/cloveros/master/livecd_files.xz
-tar xvf livecd_files.tar.gz
+tar xvf livecd_files.xz
 mv image.squashfs files
 xorriso -as mkisofs -r -J \
        	-joliet-long -l -cache-inodes \
