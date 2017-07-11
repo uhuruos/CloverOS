@@ -48,6 +48,7 @@ cat << EOF | chroot gentoo
 echo "root:$rootpassword" | chpasswd
 useradd -M $user
 echo "$user:$userpassword" | chpasswd
+gpasswd -a $user wheel
 
 grub-install --target=i386-pc /dev/$drive
 grub-mkconfig > /boot/grub/grub.cfg
@@ -57,7 +58,6 @@ sed -i "s@c1:12345:respawn:/sbin/agetty -a $livecduser --noclear 38400 tty1 linu
 sed -i '/^#/!d' /home/$livecduser/.bash_profile
 sed -i 's/^#\(.*\)/\1/g' /home/$livecduser/.bash_profile
 
-gpasswd -a $user wheel
 gpasswd -a $user video
 gpasswd -a $user audio
 sed -i "s@/home/$livecduser/@/home/$user/@" /home/$livecduser/.rtorrent.rc
