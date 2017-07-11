@@ -35,6 +35,7 @@ app-doc/phrack-all
 app-editors/emacs
 app-editors/mousepad
 app-editors/nano
+app-editors/pluma
 app-editors/vim
 app-editors/xemacs
 app-emulation/qemu
@@ -79,6 +80,7 @@ app-shells/gentoo-zsh-completions
 app-shells/mpv-bash-completion
 app-shells/zsh
 app-shells/zsh-completions
+app-text/atril
 app-text/calibre
 app-text/convmv
 app-text/dos2unix
@@ -151,6 +153,7 @@ games-simulation/openttd
 games-strategy/wesnoth
 games-util/higan-purify
 games-util/steam-launcher
+gnome-extra/gnome-calculator
 kde-apps/dolphin
 kde-apps/dolphin-plugins
 kde-apps/gwenview
@@ -163,6 +166,12 @@ lxde-base/lxde-meta
 lxde-base/lxtask
 mail-client/thunderbird
 mate-base/mate
+mate-extra/caja-extensions
+mate-extra/mate-netbook
+mate-extra/mate-power-manager
+mate-extra/mate-screensaver
+mate-extra/mate-system-monitor
+mate-extra/mate-utils
 media-fonts/Humor-Sans
 media-fonts/ahem
 media-fonts/alee-fonts
@@ -355,6 +364,7 @@ media-gfx/blender
 media-gfx/cropgui
 media-gfx/darktable
 media-gfx/digikam
+media-gfx/eom
 media-gfx/feh
 media-gfx/fontforge
 media-gfx/gifsicle
@@ -439,6 +449,7 @@ net-analyzer/bwm-ng
 net-analyzer/cutter
 net-analyzer/iftop
 net-analyzer/iptraf-ng
+net-analyzer/mate-netspeed
 net-analyzer/mtr
 net-analyzer/munin
 net-analyzer/nethogs

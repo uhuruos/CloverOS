@@ -1,8 +1,6 @@
 #preference
 media-sound/audacity id3tag
 mate-extra/mate-screensaver -pam
-app-crypt/pinentry -gnome-keyring
-sys-auth/pambase -gnome-keyring
 mate-base/mate -extras
 x11-misc/nitrogen nls xinerama
 app-admin/conky thinkpad mpd rss curl iostats
@@ -50,6 +48,7 @@ app-misc/recoll qt5
 media-gfx/fontforge X gtk
 media-gfx/graphviz gtk
 app-emulation/virt-manager gtk
+mate-extra/mate-utils X
 mate-extra/mate-screensaver X
 games-emulation/retroarch X
 app-misc/neofetch X
