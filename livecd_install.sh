@@ -45,9 +45,9 @@ unsquashfs -f -d gentoo /mnt/cdrom/image.squashfs
 
 cat << EOF | chroot gentoo
 
-echo -e "$rootpassword\n$rootpassword" | passwd
+echo "root:$rootpassword" | chpasswd
 useradd -M $user
-echo -e "$userpassword\n$userpassword" | passwd $user
+echo "$user:$userpassword" | chpasswd
 
 grub-install --target=i386-pc /dev/$drive
 grub-mkconfig > /boot/grub/grub.cfg
