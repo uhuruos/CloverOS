@@ -164,6 +164,8 @@ kde-plasma/plasma-meta
 lxde-base/lxappearance
 lxde-base/lxde-meta
 lxde-base/lxtask
+mail-client/alpine
+mail-client/mutt
 mail-client/thunderbird
 mate-base/mate
 mate-extra/caja-extensions

@@ -2,7 +2,7 @@
 media-sound/audacity id3tag
 mate-extra/mate-screensaver -pam
 mate-base/mate -extras
-x11-misc/nitrogen nls xinerama
+x11-misc/nitrogen nls
 app-admin/conky thinkpad mpd rss curl iostats
 media-video/handbrake gtk -fdk libav-aac
 sys-kernel/genkernel cryptsetup
@@ -1036,3 +1036,18 @@ sys-apps/dbus X
 # required by net-wireless/gnuradio-3.7.11-r1::gentoo[filter]
 # required by gnuradio (argument)
 >=dev-python/numpy-1.10.4 lapack
+# required by x11-libs/gtk+-2.24.31-r1::gentoo[xinerama]
+# required by x11-wm/marco-1.12.1::gentoo[-gtk3]
+# required by mate-base/mate-control-center-1.12.1-r1::gentoo
+# required by mate-base/mate-1.12-r1::gentoo[base]
+# required by @selected
+# required by @world (argument)
+>=x11-libs/libXinerama-1.1.3 abi_x86_32
+# required by media-gfx/gimp-2.9.4-r3::gentoo
+# required by @selected
+# required by @world (argument)
+>=media-libs/libmypaint-1.3.0 gegl
+# required by media-gfx/gimp-2.9.4-r3::gentoo
+# required by @selected
+# required by @world (argument)
+>=media-libs/gegl-0.3.8 cairo

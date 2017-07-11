@@ -2,11 +2,12 @@
 media-sound/mpd
 media-video/mpv
 net-irc/weechat
+media-gfx/gimp
 app-emulation/virtualbox
 app-emulation/virtualbox-modules
 app-emulation/virtualbox-guest-additions
 app-emulation/virtualbox-additions
-dev-util/kbuild
+#dev-util/kbuild
 
 #qt5, remove when stable is qt5
 media-gfx/librecad
@@ -127,6 +128,8 @@ media-libs/avidemux-plugins
 media-libs/avidemux-core
 #termite
 x11-libs/vte
+#gimp
+media-libs/libmypaint
 
 # required by lohit-gujarati (argument)
 =media-fonts/lohit-gujarati-2.92.2
