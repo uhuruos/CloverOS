@@ -14,7 +14,7 @@ media-sound/rosegarden
 sci-mathematics/rstudio
 
 #keyworded, remove when stable exists
-net-wireless/gnuradio-3.7.11-r1
+net-wireless/gnuradio
 x11-wm/i3-gaps
 net-p2p/freenet
 x11-wm/compiz
