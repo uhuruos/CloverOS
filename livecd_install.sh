@@ -9,7 +9,7 @@ if [[ $partitioning = "a" ]]; then
     read -erp "Enter drive for CloverOS installation: " -i "/dev/sda" drive
     partition=${drive}1
 elif [[ $partitioning = "m" ]]; then
-    sudo gparted > /dev/null &
+    sudo gparted &> /dev/null &
     read -erp "Enter partition for CloverOS installation: " -i "/dev/sda1" partition
     drive=${partition%"${partition##*[!0-9]}"}
 else
