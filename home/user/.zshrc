@@ -15,4 +15,4 @@ alias diff='colordiff' # color diff output
 alias ports='netstat -tulanp' # lists open network ports
 alias wget='wget -c' # make wget default to continue download on lost connections
 alias meminfo='free -m -l -t' # memory and swap information humanreadable output
-alias battery='echo $(cat /sys/class/power_supply/BAT0/capacity) %'
+alias battery='echo $(cat /sys/class/power_supply/BAT0/capacity)%'
