@@ -16,7 +16,8 @@ echo "1) Change Mirrors
 4) Change binary/source
 5) Check package validation
 6) Update dotfiles
-7) Set timezone
+7) Sync time
+8) Set timezone
 8) Clean binary cache"
 
 read -erp "Select option: " -n 1 choice
@@ -45,6 +46,14 @@ case "$choice" in
 		echo "Kernel updated."
 		;;
 
+	4)
+		echo ""
+		;;
+
+	7)
+		sudo ntpdate pool.ntp.org
+		echo "Time synced."
+		;;
 	*)
 		echo "Invalid option: '$choice'" >&2
 		exit 1
