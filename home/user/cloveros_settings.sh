@@ -14,11 +14,11 @@ echo "1) Change Mirrors
 2) Change default alsa device
 3) Upgrade kernel
 4) Change binary/source
-5) Check package validation
-6) Update dotfiles
+5) Check package validation (WIP)
+6) Update dotfiles (WIP)
 7) Sync time
-8) Set timezone
-8) Clean binary cache"
+8) Set timezone (WIP)
+9) Clean binary cache"
 
 read -erp "Select option: " -n 1 choice
 echo
@@ -47,13 +47,25 @@ case "$choice" in
 		;;
 
 	4)
-		echo ""
+		if grep -q 'EMERGE_DEFAULT_OPTS="--keep-going=y --autounmask-write=y --jobs=2 -G"' /etc/portage/make.conf; then
+			sed -i 's/EMERGE_DEFAULT_OPTS="--keep-going=y --autounmask-write=y --jobs=2 -G"/EMERGE_DEFAULT_OPTS="--keep-going=y --autounmask-write=y --jobs=2"/' /etc/portage/make.conf
+			echo "emerge will now install from source."
+		else
+			sed -i 's/EMERGE_DEFAULT_OPTS="--keep-going=y --autounmask-write=y --jobs=2"/EMERGE_DEFAULT_OPTS="--keep-going=y --autounmask-write=y --jobs=2 -G"/' /etc/portage/make.conf
+			echo "emerge will now install from binary."
+		fi
 		;;
 
 	7)
 		sudo ntpdate pool.ntp.org
 		echo "Time synced."
 		;;
+
+	9)
+		rm -Rf /usr/portage/packages/*
+		echo "Package cache cleared."
+		;;
+
 	*)
 		echo "Invalid option: '$choice'" >&2
 		exit 1
