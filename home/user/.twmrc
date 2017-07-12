@@ -65,7 +65,7 @@ menu "Applications" {
 	"rtorrent" !"aterm +sb -tr -sh 10 -e rtorrent &"
 	"weechat" !"aterm +sb -tr -sh 10 -e weechat &"
 	"gparted" !"sudo gparted &"
-	"lock screen" !"xscreensaver & xscreensaver-command --lock"
+	"lock screen" !"xscreensaver -no-splash & xscreensaver-command -lock"
 	"exit X" !"killall X"
 	"reboot" !"sudo reboot"
 	"shutdown" !"sudo poweroff"
