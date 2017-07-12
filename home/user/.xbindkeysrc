@@ -12,3 +12,6 @@
 
 "amixer set Master toggle"
   c:121
+
+"scrot"
+m:0x0 + c:107
