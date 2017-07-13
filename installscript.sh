@@ -61,9 +61,9 @@ echo -e '\nPORTAGE_BINHOST="https://cloveros.ga"\nMAKEOPTS="-j8"\nEMERGE_DEFAULT
 #wget http://liquorix.net/sources/4.9/config.amd64
 #genkernel --kernel-config=config.amd64 all
 
-wget -O - https://raw.githubusercontent.com/chiru-no/cloveros/master/kernel.tar.xz | tar xJ -C /boot/
+wget -O - https://cloveros.ga/s/kernel.tar.xz | tar xJ -C /boot/
 mkdir /lib/modules/
-wget -O - https://raw.githubusercontent.com/chiru-no/cloveros/master/modules.tar.xz | tar xJ -C /lib/modules/
+wget -O - https://cloveros.ga/s/modules.tar.xz | tar xJ -C /lib/modules/
 
 emerge grub dhcpcd
 
