@@ -15,9 +15,9 @@ echo "1) Change Mirrors
 3) Upgrade kernel
 4) Change binary/source
 5) Check package validation (WIP)
-6) Update dotfiles (WIP)
+6) Update dotfiles
 7) Sync time
-8) Set timezone (WIP)
+8) Set timezone
 9) Clean binary cache"
 
 read -erp "Select option: " -n 1 choice
@@ -56,9 +56,36 @@ case "$choice" in
 		fi
 		;;
 
+	5)
+		echo "WIP, nothing has been done."
+
+	6)
+		cd ~
+		mkdir backup
+		mv .bash_profile .zprofile .zshrc .twmrc .Xdefaults wallpaper.png .xbindkeysrc screenfetch-dev bl.sh cloveros_settings.sh .emacs .emacs.d .twm .rtorrent.rc .mpv backup/
+		wget https://raw.githubusercontent.com/chiru-no/cloveros/master/home/user/{.bash_profile,.zprofile,.zshrc,.twmrc,.Xdefaults,wallpaper.png,.xbindkeysrc,screenfetch-dev,bl.sh,cloveros_settings.sh,.emacs,.rtorrent.rc}
+		chmod +x screenfetch-dev bl.sh
+		mkdir -p .emacs.d/backups
+		mkdir .emacs.d/autosaves
+		mkdir .twm
+		wget https://raw.githubusercontent.com/chiru-no/cloveros/master/home/user/.twm/{minimize.xbm,maximize.xbm,close.xbm} -P .twm
+		mkdir -p .config/xfe/
+		wget https://raw.githubusercontent.com/chiru-no/cloveros/master/home/user/.config/xfe/xferc -P .config/xfe
+		sed -i "s@/home/user/@/home/$USER/@" .rtorrent.rc
+		mkdir .mpv
+		wget https://raw.githubusercontent.com/chiru-no/cloveros/master/home/user/.mpv/config -P .mpv
+		echo "Configuration updated to new CloverOS defaults, old settings are moved to ~/backup/"
+
 	7)
 		sudo ntpdate pool.ntp.org
 		echo "Time synced."
+		;;
+
+	8)
+		echo -e "Available timezones: $(ls -1 /usr/share/zoneinfo/ | tr "\n" " ") \n"
+		read -erp "Select a timezone: " timezone
+		sudo cp /usr/share/zoneinfo/${timezone} /etc/localtime
+		echo "Timezone set to ${timezone}."
 		;;
 
 	9)
