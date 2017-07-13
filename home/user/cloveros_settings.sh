@@ -60,7 +60,7 @@ case "$choice" in
 		mkdir backup
 		mv .bash_profile .zprofile .zshrc .twmrc .Xdefaults wallpaper.png .xbindkeysrc screenfetch-dev bl.sh cloveros_settings.sh .emacs .emacs.d .twm .rtorrent.rc .mpv .config/xfe/xferc backup/
 		wget -q https://raw.githubusercontent.com/chiru-no/cloveros/master/home/user/{.bash_profile,.zprofile,.zshrc,.twmrc,.Xdefaults,wallpaper.png,.xbindkeysrc,screenfetch-dev,bl.sh,cloveros_settings.sh,.emacs,.rtorrent.rc}
-		chmod +x screenfetch-dev bl.sh
+		chmod +x screenfetch-dev bl.sh cloveros_settings.sh
 		mkdir -p .emacs.d/backups
 		mkdir .emacs.d/autosaves
 		mkdir .twm
