@@ -42,7 +42,7 @@ case "$choice" in
 		wget -O - https://cloveros.ga/s/kernel.tar.xz | sudo tar xJ -C /boot/
 		wget -O - https://cloveros.ga/s/modules.tar.xz | sudo tar xJ -C /lib/modules/
 		sudo grub-mkconfig -o /boot/grub/grub.cfg
-		echo "Kernel updated."
+		echo "Kernel upgraded."
 		;;
 
 	4)
