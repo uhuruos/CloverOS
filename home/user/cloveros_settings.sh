@@ -65,12 +65,12 @@ case "$choice" in
 		mkdir -p .emacs.d/backups
 		mkdir .emacs.d/autosaves
 		mkdir .twm
-		wget https://raw.githubusercontent.com/chiru-no/cloveros/master/home/user/.twm/{minimize.xbm,maximize.xbm,close.xbm} -P .twm
+		wget -q https://raw.githubusercontent.com/chiru-no/cloveros/master/home/user/.twm/{minimize.xbm,maximize.xbm,close.xbm} -P .twm
 		mkdir -p .config/xfe/
-		wget https://raw.githubusercontent.com/chiru-no/cloveros/master/home/user/.config/xfe/xferc -P .config/xfe
+		wget -q https://raw.githubusercontent.com/chiru-no/cloveros/master/home/user/.config/xfe/xferc -P .config/xfe
 		sed -i "s@/home/user/@/home/$USER/@" .rtorrent.rc
 		mkdir .mpv
-		wget https://raw.githubusercontent.com/chiru-no/cloveros/master/home/user/.mpv/config -P .mpv
+		wget -q https://raw.githubusercontent.com/chiru-no/cloveros/master/home/user/.mpv/config -P .mpv
 		echo "Configuration updated to new CloverOS defaults, old settings are moved to ~/$backupdir/"
 		;;
 
