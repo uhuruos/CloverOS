@@ -57,7 +57,8 @@ case "$choice" in
 
 	5)
 		cd ~
-		mkdir backup
+		backupdir=backup$(< /dev/urandom tr -dc 0-9 | head -c 5)
+		mkdir $backupdir
 		mv .bash_profile .zprofile .zshrc .twmrc .Xdefaults wallpaper.png .xbindkeysrc screenfetch-dev bl.sh cloveros_settings.sh .emacs .emacs.d .twm .rtorrent.rc .mpv .config/xfe/xferc backup/
 		wget -q https://raw.githubusercontent.com/chiru-no/cloveros/master/home/user/{.bash_profile,.zprofile,.zshrc,.twmrc,.Xdefaults,wallpaper.png,.xbindkeysrc,screenfetch-dev,bl.sh,cloveros_settings.sh,.emacs,.rtorrent.rc}
 		chmod +x screenfetch-dev bl.sh cloveros_settings.sh
@@ -70,7 +71,7 @@ case "$choice" in
 		sed -i "s@/home/user/@/home/$USER/@" .rtorrent.rc
 		mkdir .mpv
 		wget https://raw.githubusercontent.com/chiru-no/cloveros/master/home/user/.mpv/config -P .mpv
-		echo "Configuration updated to new CloverOS defaults, old settings are moved to ~/backup/"
+		echo "Configuration updated to new CloverOS defaults, old settings are moved to ~/$backupdir/"
 		;;
 
 	6)
