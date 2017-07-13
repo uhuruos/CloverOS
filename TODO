@@ -2,7 +2,7 @@
 - build more software (need user input)
 - try tinycore kernel config and see if it works
 - make cloveros-libre fork
-- make cloveros-full fork
+- make cloveros-full iso
 - make LiveCD from scratch (kernel, kernel modules)
 - 32 bit
 - march optimized repos
