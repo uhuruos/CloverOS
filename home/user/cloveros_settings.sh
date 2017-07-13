@@ -71,6 +71,7 @@ case "$choice" in
 		mkdir .mpv
 		wget https://raw.githubusercontent.com/chiru-no/cloveros/master/home/user/.mpv/config -P .mpv
 		echo "Configuration updated to new CloverOS defaults, old settings are moved to ~/backup/"
+		;;
 
 	6)
 		sudo ntpdate pool.ntp.org
