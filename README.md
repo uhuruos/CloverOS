@@ -37,17 +37,6 @@ z To disregard the changes
 
 It will ask to modify the sudo settings back to default, just hit z there.
 
-### Package isn't available
-Make an issue so I can add the package. In the meantime, edit `/etc/portage/make.conf` and edit the following line:
-
-`EMERGE_DEFAULT_OPTS="--keep-going=y --autounmask-write=y --jobs=2 -G"`
-
-to
-
-`EMERGE_DEFAULT_OPTS="--keep-going=y --autounmask-write=y --jobs=2"`
-
-This disables the binhost and uses Portage's ebuilds for packages.
-
 ### Controlling twm
 Open Applications menu: rightclick on desktop
 
@@ -60,6 +49,23 @@ Close windows: ctrl + alt + rightclick
 The taskbar minimizes and restores windows.
 
 twm's settings are in `~/.twmrc`
+
+### Taking screenshots
+
+Type `scrot` or hit Print Screen.
+
+Key bindings are in `~/.xbindkeysrc`
+
+### Package isn't available
+Make an issue so I can add the package. In the meantime, edit `/etc/portage/make.conf` and edit the following line:
+
+`EMERGE_DEFAULT_OPTS="--keep-going=y --autounmask-write=y --jobs=2 -G"`
+
+to
+
+`EMERGE_DEFAULT_OPTS="--keep-going=y --autounmask-write=y --jobs=2"`
+
+This disables the binhost and uses Portage's ebuilds for packages.
 
 ### Listing available packages
 https://packages.gentoo.org
