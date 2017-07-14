@@ -67,6 +67,7 @@ menu "Applications" {
 	"gparted" !"sudo gparted &"
 	"lock screen" !"xscreensaver -no-splash & sleep 0.5 && xscreensaver-command -lock &"
 	"exit X" !"killall X"
+	"sleep" !"sudo hibernate-ram"
 	"reboot" !"sudo reboot"
 	"shutdown" !"sudo poweroff"
 }
