@@ -97,10 +97,10 @@ case "$choice" in
 		;;
 
 	9)
-		if ! grep -Fq 'FETCHCOMMAND_HTTPS="curlcache.sh \"\${URI}\" \"\${DISTDIR}/\${FILE}\""' /etc/portage/make.conf; then
-			echo 'FETCHCOMMAND_HTTPS="curlcache.sh \"\${URI}\" \"\${DISTDIR}/\${FILE}\""' | sudo tee -a /etc/portage/make.conf
-			sudo wget https://raw.githubusercontent.com/chiru-no/cloveros/master/home/user/curlcache.sh -O /usr/local/bin/curlcache.sh
-			sudo chmod +x /usr/local/bin/curlcache.sh
+		if ! grep -Fq 'FETCHCOMMAND_HTTPS="/home/$USER/curlcache.sh \"\${URI}\" \"\${DISTDIR}/\${FILE}\""' /etc/portage/make.conf; then
+			echo 'FETCHCOMMAND_HTTPS="/home/$USER/curlcache.sh \"\${URI}\" \"\${DISTDIR}/\${FILE}\""' | sudo tee -a /etc/portage/make.conf
+			wget https://raw.githubusercontent.com/chiru-no/cloveros/master/home/user/curlcache.sh
+			chmod +x curlcache.sh
 			if ! type /usr/bin/gpg > /dev/null; then
 				sudo emerge gnupg
 			fi
@@ -110,7 +110,6 @@ case "$choice" in
 			echo "Validation enabled; emerge will now check if Packages is outdated before redownloading."
 		else
 			sudo sed -i '/FETCHCOMMAND_HTTPS/d' /etc/portage/make.conf
-			sudo rm /usr/local/bin/curlcache.sh
 			echo "Validation disabled; emerge will now redownload Packages every time."
 		fi
 		;;
