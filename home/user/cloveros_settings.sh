@@ -1,9 +1,5 @@
 #!/bin/bash
 
-# This software is released into the public domain.
-# It is provided "as is", without warranties or conditions of any kind.
-# Anyone is free to use, modify, redistribute and do anything with this software.
-
 mirrors=(
 	"useast.cloveros.ga"
 	"uswest.cloveros.ga"
@@ -93,6 +89,7 @@ case "$choice" in
 
 	8)
 		rm -Rf /usr/portage/packages/*
+		rm -Rf /tmp/curlcache/*
 		echo "Package cache cleared."
 		;;
 
@@ -106,6 +103,7 @@ case "$choice" in
 			fi
 			if ! sudo gpg --list-keys "78F5 AC55 A120 07F2 2DF9 A28A 78B9 3F76 B8E4 2805"; then
 				sudo gpg --keyserver keys.gnupg.net --recv-key "78F5 AC55 A120 07F2 2DF9 A28A 78B9 3F76 B8E4 2805"
+				echo
 			fi
 			echo "Validation enabled; emerge will now check if Packages is outdated before redownloading."
 		else

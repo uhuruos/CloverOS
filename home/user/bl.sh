@@ -1,9 +1,5 @@
 #!/bin/sh
 
-# This software is released into the public domain.
-# It is provided "as is", without warranties or conditions of any kind.
-# Anyone is free to use, modify, redistribute and do anything with this software.
-
 set -e
 
 if [ -n "$BACKLIGHT" ]; then
