@@ -8,7 +8,7 @@ cachedir=/tmp/curlcache
 
 url="$1"
 dest="$2"
-package=$(echo $url | sed 's@\(.*\)/\(.*\)/\(.*\)@\2/\3@;')
+package=$(echo $url | sed 's@https://[^/]*/@@')
 name="$(sha1sum <<< "$package" | cut -d' ' -f1)"
 cachef="$cachedir/$name"
 
