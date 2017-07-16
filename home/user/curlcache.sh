@@ -8,7 +8,7 @@ cachedir=/tmp/curlcache
 
 url="$1"
 dest="$2"
-package=$(echo $url | awk -F/ '{print $4"/"$5}')
+package=$(echo $url | sed 's@https://[^/]*/@@')
 mirror=$(echo $url | awk -F/ '{print $3}')
 name="$(sha1sum <<< "$package" | cut -d' ' -f1)"
 cachef="$cachedir/$name"
