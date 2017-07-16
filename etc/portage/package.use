@@ -1,4 +1,7 @@
 #preference
+www-client/seamonkey -minimal -crypt system-harfbuzz system-icu system-jpeg system-libevent system-libvpx system-sqlite
+media-video/avidemux qt5
+media-libs/avidemux-plugins qt5
 media-sound/audacity id3tag
 mate-extra/mate-screensaver -pam
 mate-base/mate -extras
@@ -1051,3 +1054,6 @@ sys-apps/dbus X
 # required by @selected
 # required by @world (argument)
 >=media-libs/gegl-0.3.8 cairo
+# required by mail-client/alpine-2.00-r7::gentoo
+# required by alpine (argument)
+>=net-libs/c-client-2007f-r6 chappa

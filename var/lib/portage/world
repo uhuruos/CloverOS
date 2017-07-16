@@ -48,6 +48,7 @@ app-emulation/winetricks
 app-forensics/aide
 app-i18n/fcitx-anthy
 app-i18n/ibus
+app-laptop/thinkfan
 app-misc/ckermit
 app-misc/colordiff
 app-misc/dtach
@@ -65,6 +66,7 @@ app-misc/tmux
 app-misc/wipe
 app-office/calligra
 app-office/libreoffice
+app-office/orage
 app-office/texmaker
 app-office/texstudio
 app-portage/cpuid2cpuflags
@@ -377,12 +379,14 @@ media-gfx/inkscape
 media-gfx/jpegoptim
 media-gfx/krita
 media-gfx/librecad
+media-gfx/maim
 media-gfx/mcomix
 media-gfx/mirage
 media-gfx/optipng
 media-gfx/pngcrush
 media-gfx/pngquant
 media-gfx/scrot
+media-gfx/sxiv
 media-libs/libtxc_dxtn
 media-sound/alsa-utils
 media-sound/amsynth
@@ -497,6 +501,7 @@ net-misc/throttle
 net-misc/whois
 net-misc/youtube-dl
 net-misc/zssh
+net-nntp/pan
 net-p2p/amule
 net-p2p/deluge
 net-p2p/eiskaltdcpp
@@ -509,6 +514,7 @@ net-p2p/rtorrent
 net-p2p/transmission
 net-vpn/i2p
 net-vpn/logmein-hamachi
+net-vpn/openvpn
 net-vpn/tor
 net-wireless/rfkill
 net-wireless/wpa_supplicant
@@ -569,6 +575,7 @@ www-client/dillo
 www-client/firefox
 www-client/palemoon-bin
 www-client/qutebrowser
+www-client/seamonkey
 www-client/surf
 www-client/w3m
 www-misc/fcgiwrap
@@ -583,7 +590,6 @@ x11-apps/xrandr
 x11-apps/xwininfo
 x11-base/xorg-server
 x11-drivers/nvidia-drivers
-x11-libs/compizconfig-backend-gconf
 x11-misc/bumblebee
 x11-misc/compton
 x11-misc/dmenu
@@ -611,6 +617,7 @@ x11-misc/xsnow
 x11-plugins/wmfortune
 x11-terms/aterm
 x11-terms/rxvt-unicode
+x11-terms/sakura
 x11-terms/st
 x11-terms/terminology
 x11-terms/termite
