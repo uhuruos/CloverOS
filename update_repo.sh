@@ -6,8 +6,8 @@ emerge --depclean
 #quickpkg --include-unmodified-config=y "*/*" | ansi2html | tail -n +1081 | head -n -7 > s/quickpkg.txt
 #emerge --buildpkgonly vnstat sudo openssh dnscrypt-proxy
 #mv s/ /usr/portage/packages/
-EIX_LIMIT=0 eix --installed -F | grep -v "Available versions" | ansi2html > /usr/portage/s/packages.html
 cd /usr/portage/packages/s/
+EIX_LIMIT=0 eix --installed -F | grep -v "Available versions" | ansi2html > packages.html
 php website.php
 
 rm -Rf signatures
