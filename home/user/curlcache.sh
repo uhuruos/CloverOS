@@ -23,7 +23,8 @@ fi
 
 ln -sf "$cachef" "$dest"
 
-curl -z "$cachef".asc -s https://"$mirror"/s/signatures/"$package".asc -o "$cachef".asc
-if ! gpg --verify "$cachef".asc "$cachef"; then
+curl -z "$cachef.asc" -s "https://$mirror/s/signatures/$package.asc" -o "$cachef.asc"
+if ! gpg --verify "$cachef.asc" "$cachef"; then
 	echo "Package failed validation - this package is corrupt."
+	exit 1
 fi
