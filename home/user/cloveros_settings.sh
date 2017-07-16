@@ -17,7 +17,7 @@ echo "1) Change mirrors
 6) Sync time
 7) Set timezone
 8) Clean binary cache
-9) Disable/enable package signing validation and redownloading of Packages file
+9) Disable/enable package signing validation
 0) Update cloveros_settings.sh"
 
 read -erp "Select option: " -n 1 choice
@@ -106,10 +106,10 @@ case "$choice" in
 			echo 'FETCHCOMMAND_HTTPS="/home/'$USER'/curlcache.sh \"\${URI}\" \"\${DISTDIR}/\${FILE}\""' | sudo tee -a /etc/portage/make.conf
 			wget "$fileprefix"/curlcache.sh -O ~/curlcache.sh
 			chmod +x ~/curlcache.sh
-			echo -e "\nValidation enabled; emerge will now check if Packages is outdated before redownloading."
+			echo -e "\nPackage validation enabled."
 		else
 			sudo sed -i '/FETCHCOMMAND_HTTPS/d' /etc/portage/make.conf
-			echo -e "\nValidation disabled; emerge will now redownload Packages every time."
+			echo -e "\nPackage validation disabled."
 		fi
 		;;
 
