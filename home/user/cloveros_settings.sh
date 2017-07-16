@@ -94,7 +94,7 @@ case "$choice" in
 		;;
 
 	9)
-		if ! grep -q 'FETCHCOMMAND_HTTPS="curlcache.sh \"\${URI}\" \"\${DISTDIR}/\${FILE}\""' /etc/portage/make.conf; then
+		if ! grep -Fq 'FETCHCOMMAND_HTTPS="curlcache.sh \"\${URI}\" \"\${DISTDIR}/\${FILE}\""' /etc/portage/make.conf; then
 			echo 'FETCHCOMMAND_HTTPS="curlcache.sh \"\${URI}\" \"\${DISTDIR}/\${FILE}\""' | sudo tee -a /etc/portage/make.conf
 			sudo wget https://raw.githubusercontent.com/chiru-no/cloveros/master/home/user/curlcache.sh -o /usr/local/bin/curlcache.sh
 			echo "emerge will now check if Packages is outdated before redownloading."
