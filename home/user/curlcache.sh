@@ -22,7 +22,7 @@ fi
 ln -sf "$cachef" "$dest"
 
 siglocation=$(echo $1 | sed 's@https://cloveros.ga/@@')
-curl -s https://cloveros.ga/s/signatures/$siglocation.asc -o $cachef.asc
-if ! gpg --verify $cachef.asc $cachef; then
+curl -z "$cachef.asc" -s https://cloveros.ga/s/signatures/$siglocation.asc -o "$cachef.asc"
+if ! gpg --verify $cachef.asc "$cachef"; then
 	echo "Package failed validation - this package is corrupt."
 fi
