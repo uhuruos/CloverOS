@@ -97,8 +97,8 @@ case "$choice" in
 		;;
 
 	9)
-		if ! grep -Fq 'FETCHCOMMAND_HTTPS="/home/$USER/curlcache.sh \"\${URI}\" \"\${DISTDIR}/\${FILE}\""' /etc/portage/make.conf; then
-			echo 'FETCHCOMMAND_HTTPS="/home/$USER/curlcache.sh \"\${URI}\" \"\${DISTDIR}/\${FILE}\""' | sudo tee -a /etc/portage/make.conf
+		if ! grep -Fq "FETCHCOMMAND_HTTPS=\"/home/$USER/curlcache.sh \\"\${URI}\\" \\"\${DISTDIR}/\${FILE}\\"\"" /etc/portage/make.conf; then
+			echo "FETCHCOMMAND_HTTPS=\"/home/$USER/curlcache.sh \\"\${URI}\\" \\"\${DISTDIR}/\${FILE}\\"\"" | sudo tee -a /etc/portage/make.conf
 			wget https://raw.githubusercontent.com/chiru-no/cloveros/master/home/user/curlcache.sh
 			chmod +x curlcache.sh
 			if ! type /usr/bin/gpg > /dev/null; then
