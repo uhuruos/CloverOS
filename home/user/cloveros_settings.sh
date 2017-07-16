@@ -91,8 +91,8 @@ case "$choice" in
 		;;
 
 	8)
-		rm -Rf /usr/portage/packages/*
-		rm -Rf /tmp/curlcache/*
+		sudo rm -Rf /usr/portage/packages/*
+		sudo rm -Rf /tmp/curlcache/*
 		echo -e "\nPackage cache cleared."
 		;;
 
