@@ -98,6 +98,9 @@ case "$choice" in
 			echo 'FETCHCOMMAND_HTTPS="curlcache.sh \"\${URI}\" \"\${DISTDIR}/\${FILE}\""' | sudo tee -a /etc/portage/make.conf
 			sudo wget https://raw.githubusercontent.com/chiru-no/cloveros/master/home/user/curlcache.sh -O /usr/local/bin/curlcache.sh
 			sudo chmod +x /usr/local/bin/curlcache.sh
+			if ! sudo gpg --list-keys "78F5 AC55 A120 07F2 2DF9 A28A 78B9 3F76 B8E4 2805"; then
+				gpg --keyserver keys.gnupg.net --recv-key "78F5 AC55 A120 07F2 2DF9 A28A 78B9 3F76 B8E4 2805"
+			fi
 			echo "Validation enabled; emerge will now check if Packages is outdated before redownloading."
 		else
 			sudo sed -i '/FETCHCOMMAND_HTTPS/d' /etc/portage/make.conf
