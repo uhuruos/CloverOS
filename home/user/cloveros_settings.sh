@@ -111,7 +111,6 @@ case "$choice" in
 		else
 			sudo sed -i '/FETCHCOMMAND_HTTPS/d' /etc/portage/make.conf
 			sudo rm /usr/local/bin/curlcache.sh
-			sudo chmod +x /usr/local/bin/curlcache.sh
 			echo "Validation disabled; emerge will now redownload Packages every time."
 		fi
 		;;
