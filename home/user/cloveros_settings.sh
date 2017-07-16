@@ -4,7 +4,10 @@ mirrors=(
 	"useast.cloveros.ga"
 	"uswest.cloveros.ga"
 	"fr.cloveros.ga"
+	"uk.cloveros.ga"
 )
+
+fileprefix="https://raw.githubusercontent.com/chiru-no/cloveros/master/home/user"
 
 echo "1) Change mirrors
 2) Change default alsa device
@@ -58,17 +61,17 @@ case "$choice" in
 		backupdir=backup$(< /dev/urandom tr -dc 0-9 | head -c 5)
 		mkdir $backupdir
 		mv .bash_profile .zprofile .zshrc .twmrc .Xdefaults wallpaper.png .xbindkeysrc screenfetch-dev bl.sh cloveros_settings.sh .emacs .emacs.d .twm .rtorrent.rc .mpv .config/xfe/ $backupdir/
-		wget -q https://raw.githubusercontent.com/chiru-no/cloveros/master/home/user/{.bash_profile,.zprofile,.zshrc,.twmrc,.Xdefaults,wallpaper.png,.xbindkeysrc,screenfetch-dev,bl.sh,cloveros_settings.sh,.emacs,.rtorrent.rc}
+		wget -q "$fileprefix/{.bash_profile,.zprofile,.zshrc,.twmrc,.Xdefaults,wallpaper.png,.xbindkeysrc,screenfetch-dev,bl.sh,cloveros_settings.sh,.emacs,.rtorrent.rc}"
 		chmod +x screenfetch-dev bl.sh cloveros_settings.sh
 		mkdir -p .emacs.d/backups
 		mkdir .emacs.d/autosaves
 		mkdir .twm
-		wget -q https://raw.githubusercontent.com/chiru-no/cloveros/master/home/user/.twm/{minimize.xbm,maximize.xbm,close.xbm} -P .twm
+		wget -q "$fileprefix/.twm/{minimize.xbm,maximize.xbm,close.xbm}" -P .twm
 		mkdir -p .config/xfe/
-		wget -q https://raw.githubusercontent.com/chiru-no/cloveros/master/home/user/.config/xfe/xferc -P .config/xfe
+		wget -q "$fileprefix/.config/xfe/xferc" -P .config/xfe
 		sed -i "s@/home/user/@/home/$USER/@" .rtorrent.rc
 		mkdir .mpv
-		wget -q https://raw.githubusercontent.com/chiru-no/cloveros/master/home/user/.mpv/config -P .mpv
+		wget -q "$fileprefix/.mpv/config" -P .mpv
 		echo "Configuration updated to new CloverOS defaults, old settings are moved to ~/$backupdir/"
 		;;
 
@@ -96,7 +99,7 @@ case "$choice" in
 	9)
 		if ! grep -Fq 'FETCHCOMMAND_HTTPS="/home/'$USER'/curlcache.sh \"\${URI}\" \"\${DISTDIR}/\${FILE}\""' /etc/portage/make.conf; then
 			echo 'FETCHCOMMAND_HTTPS="/home/'$USER'/curlcache.sh \"\${URI}\" \"\${DISTDIR}/\${FILE}\""' | sudo tee -a /etc/portage/make.conf
-			wget https://raw.githubusercontent.com/chiru-no/cloveros/master/home/user/curlcache.sh -O ~/curlcache.sh
+			wget "$fileprefix/curlcache.sh" -O ~/curlcache.sh
 			chmod +x ~/curlcache.sh
 			if ! type /usr/bin/gpg > /dev/null; then
 				sudo emerge gnupg
@@ -113,7 +116,10 @@ case "$choice" in
 		;;
 
 	0)
-		wget https://raw.githubusercontent.com/chiru-no/cloveros/master/home/user/cloveros_settings.sh -O ~/cloveros_settings.sh
+		cd ~
+		rm cloveros_settings.sh
+		wget "$fileprefix/cloveros_settings.sh"
+		chmod +x cloveros_settings.sh
 		;;
 
 	*)
