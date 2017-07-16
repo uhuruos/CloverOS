@@ -10,14 +10,16 @@ mirrors=(
 	"fr.cloveros.ga"
 )
 
-echo "1) Change Mirrors
+echo "1) Change mirrors
 2) Change default alsa device
 3) Upgrade kernel
 4) Change binary/source
 5) Update dotfiles
 6) Sync time
 7) Set timezone
-8) Clean binary cache"
+8) Clean binary cache
+9) Disable/enable redownloading Packages file
+0) Update cloveros_settings.sh"
 
 read -erp "Select option: " -n 1 choice
 echo
@@ -89,6 +91,22 @@ case "$choice" in
 	8)
 		rm -Rf /usr/portage/packages/*
 		echo "Package cache cleared."
+		;;
+
+	9)
+		if ! grep -q 'FETCHCOMMAND_HTTPS="curlcache.sh \"\${URI}\" \"\${DISTDIR}/\${FILE}\""' /etc/portage/make.conf; then
+			echo 'FETCHCOMMAND_HTTPS="curlcache.sh \"\${URI}\" \"\${DISTDIR}/\${FILE}\""' | sudo tee -a /etc/portage/make.conf
+			sudo wget https://raw.githubusercontent.com/chiru-no/cloveros/master/home/user/curlcache.sh -o /usr/local/bin/curlcache.sh
+			echo "emerge will now check if Packages is outdated before redownloading."
+		else
+			sudo sed -i '/FETCHCOMMAND_HTTPS/d' /etc/portage/make.conf
+			sudo rm /usr/local/bin/curlcache.sh
+			echo "emerge will now redownload Packages every time."
+		fi
+		;;
+
+	0)
+		wget https://raw.githubusercontent.com/chiru-no/cloveros/master/home/user/cloveros_settings.sh -o ~/cloveros_settings.sh
 		;;
 
 	*)
