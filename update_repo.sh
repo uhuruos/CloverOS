@@ -1,12 +1,12 @@
 emerge --sync
 emerge -uvDN --buildpkg world
 emerge --depclean
-mv /usr/portage/packages/s/ .
+#mv /usr/portage/packages/s/ .
 #rm -Rf /usr/portage/packages/*
 #quickpkg --include-unmodified-config=y "*/*" | ansi2html | tail -n +1081 | head -n -7 > s/quickpkg.txt
 #emerge --buildpkgonly vnstat sudo openssh dnscrypt-proxy
-EIX_LIMIT=0 eix --installed -F | grep -v "Available versions" | ansi2html > s/packages.html
-mv s/ /usr/portage/packages/
+#mv s/ /usr/portage/packages/
+EIX_LIMIT=0 eix --installed -F | grep -v "Available versions" | ansi2html > /usr/portage/s/packages.html
 cd /usr/portage/packages/s/
 php website.php
 
