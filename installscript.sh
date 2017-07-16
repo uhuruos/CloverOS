@@ -80,7 +80,7 @@ gpasswd -a $user wheel
 emerge -1 openssh openssl
 echo "media-video/mpv" >> /etc/portage/package.accept_keywords
 echo "net-irc/weechat" >> /etc/portage/package.accept_keywords
-emerge -uvD world xorg-server twm feh aterm sudo xfe wpa_supplicant dash porthole firefox emacs gimp mpv smplayer rxvt-unicode filezilla engrampa p7zip zip rtorrent weechat linux-firmware alsa-utils zsh zsh-completions gentoo-zsh-completions inconsolata vlgothic liberation-fonts bind-tools colordiff ntp nano scrot xbindkeys hibernate-script xscreensaver gparted squashfs-tools os-prober
+emerge -uvD world xorg-server twm feh aterm sudo xfe wpa_supplicant dash porthole firefox emacs gimp mpv smplayer rxvt-unicode filezilla engrampa p7zip zip rtorrent weechat linux-firmware alsa-utils zsh zsh-completions gentoo-zsh-completions inconsolata vlgothic liberation-fonts bind-tools colordiff nano scrot xbindkeys hibernate-script xscreensaver gparted squashfs-tools os-prober
 sed -i "s/# %wheel ALL=(ALL) NOPASSWD: ALL/%wheel ALL=(ALL) NOPASSWD: ALL/" /etc/sudoers
 sed -Ei "s@c([2-6]):2345:respawn:/sbin/agetty 38400 tty@#\0@" /etc/inittab
 sed -i "s@c1:12345:respawn:/sbin/agetty 38400 tty1 linux@c1:12345:respawn:/sbin/agetty --noclear 38400 tty1 linux@" /etc/inittab
