@@ -76,7 +76,7 @@ case "$choice" in
 		;;
 
 	6)
-		if ! type /usr/sbin/ntpdate > /dev/null; then
+		if ! type /usr/sbin/ntpdate; then
 			sudo emerge ntp
 		fi
 		sudo ntpdate pool.ntp.org
@@ -100,7 +100,7 @@ case "$choice" in
 			echo 'FETCHCOMMAND_HTTPS="/home/'$USER'/curlcache.sh \"\${URI}\" \"\${DISTDIR}/\${FILE}\""' | sudo tee -a /etc/portage/make.conf
 			wget "$fileprefix"/curlcache.sh -O ~/curlcache.sh
 			chmod +x ~/curlcache.sh
-			if ! type /usr/bin/gpg > /dev/null; then
+			if ! type /usr/bin/gpg; then
 				sudo emerge gnupg
 			fi
 			if ! sudo gpg --list-keys "78F5 AC55 A120 07F2 2DF9 A28A 78B9 3F76 B8E4 2805"; then
