@@ -5,9 +5,9 @@
 
 CloverOS GNU/Linux is scripts that creates a Gentoo image and a packages repo (Binhost) that contains unique USE flags and CFLAGS. It aims to be a fast, poetterfrei, lightweight out of the box desktop.
 
-You can download CloverOS GNU/Linux here: https://github.com/chiru-no/cloveros/releases
+You can download a CloverOS GNU/Linux LiveCD here: https://github.com/chiru-no/cloveros/releases
 
-Video demonstration: https://my.mixtape.moe/qsmcje.mp4
+Technical details: https://cloveros.ga
 
 ## Cheat sheet
 ### Installing program
