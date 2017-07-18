@@ -113,6 +113,8 @@ wget https://raw.githubusercontent.com/chiru-no/cloveros/master/home/user/bl.sh
 chmod +x bl.sh
 wget https://raw.githubusercontent.com/chiru-no/cloveros/master/home/user/cloveros_settings.sh
 chmod +x cloveros_settings.sh
+wget https://raw.githubusercontent.com/chiru-no/cloveros/master/home/user/stats.sh
+chmod +x stats.sh
 wget https://raw.githubusercontent.com/chiru-no/cloveros/master/home/user/.emacs
 mkdir -p .emacs.d/backups
 mkdir .emacs.d/autosaves

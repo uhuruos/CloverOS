@@ -60,9 +60,9 @@ case "$choice" in
 		cd ~
 		backupdir=backup$(< /dev/urandom tr -dc 0-9 | head -c 5)
 		mkdir $backupdir
-		mv .bash_profile .zprofile .zshrc .twmrc .Xdefaults wallpaper.png .xbindkeysrc screenfetch-dev bl.sh cloveros_settings.sh .emacs .emacs.d .twm .rtorrent.rc .mpv .config/xfe/ $backupdir/
-		wget -q "$fileprefix"/{.bash_profile,.zprofile,.zshrc,.twmrc,.Xdefaults,wallpaper.png,.xbindkeysrc,screenfetch-dev,bl.sh,cloveros_settings.sh,.emacs,.rtorrent.rc}
-		chmod +x screenfetch-dev bl.sh cloveros_settings.sh
+		mv .bash_profile .zprofile .zshrc .twmrc .Xdefaults wallpaper.png .xbindkeysrc screenfetch-dev bl.sh cloveros_settings.sh stats.sh .emacs .emacs.d .twm .rtorrent.rc .mpv .config/xfe/ $backupdir/
+		wget -q "$fileprefix"/{.bash_profile,.zprofile,.zshrc,.twmrc,.Xdefaults,wallpaper.png,.xbindkeysrc,screenfetch-dev,bl.sh,cloveros_settings.sh,stats.sh,.emacs,.rtorrent.rc}
+		chmod +x screenfetch-dev bl.sh cloveros_settings.sh stats.sh
 		mkdir -p .emacs.d/backups
 		mkdir .emacs.d/autosaves
 		mkdir .twm
