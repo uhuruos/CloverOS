@@ -30,8 +30,8 @@ if [ -z "$DISPLAY" ]; then
     wmspkg[f]=fluxbox
     wmspkg[d]=dwm
     wmspkg[w]=icewm
-    wmspost[y]="feh --bg-max wallpaper.png & xbindkeys"
-    wmspost[Y]="feh --bg-max wallpaper.png & xbindkeys"
+    wmspost[y]="feh --bg-max wallpaper.png & xbindkeys & aterm +sb -tr -sh 10 -geometry 400x1+0+-16 -e ~/stats.sh &"
+    wmspost[Y]="feh --bg-max wallpaper.png & xbindkeys & aterm +sb -tr -sh 10 -geometry 400x1+0+-16 -e ~/stats.sh &"
     wmspost[i]="feh --bg-max wallpaper.png & xbindkeys"
     wmspost[a]=""
     wmspost[o]="feh --bg-max wallpaper.png & xbindkeys"
