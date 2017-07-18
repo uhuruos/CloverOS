@@ -65,11 +65,12 @@ menu "Applications" {
 	"rtorrent" !"aterm +sb -tr -sh 10 -e rtorrent &"
 	"weechat" !"aterm +sb -tr -sh 10 -e weechat &"
 	"gparted" !"sudo gparted &"
+	"exit X" !"killall X &"
 	"lock screen" !"xscreensaver -no-splash & sleep 0.5 && xscreensaver-command -lock &"
-	"exit X" !"killall X"
-	"sleep" !"sudo hibernate-ram"
-	"reboot" !"sudo reboot"
-	"shutdown" !"sudo poweroff"
+	"sleep" !"sudo hibernate-ram &"
+	"sleep and lock screen" !"xscreensaver -no-splash & sleep 0.5 && xscreensaver-command -lock && sudo hibernate-ram &"
+	"reboot" !"sudo reboot &"
+	"shutdown" !"sudo poweroff &"
 }
 
 IconManagerDontShow {
