@@ -16,7 +16,7 @@ echo -e "
 "$clr1"Battery: "$clr2"$(cat /sys/class/power_supply/BAT0/capacity)% 
 "$clr1"Brightness:"$clr2" $(awk "BEGIN{print $(cat /sys/class/backlight/*/actual_brightness) / $(cat /sys/class/backlight/*/max_brightness) * 100}")% 
 "$clr1"Volume:"$clr2" $(amixer | tr '\n' ' ' | awk -F '[][]' '{print $2}') 
-"$clr1"$(date) 
+"$clr1"$(date '+%c') 
         \r" | tr -d '\n'
 tput civis
 done
