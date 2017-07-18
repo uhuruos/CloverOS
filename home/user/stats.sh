@@ -1,10 +1,11 @@
+#!/bin/sh
+
 while :
 do
 topoutput=$(top -b -n2 | grep -v '    ' | tr '\n' ' ')
 ifoutput=$(ifconfig wlp1s0 | tr '\n' ' ')
 clr1="\033[0;37m"
 clr2="\033[0;34m"
-echo
 echo -e "
 "$clr1"$(uname -sr) 
 "$clr1"Up:"$clr2" $(echo $topoutput | awk -O '{print $3}') 
@@ -19,4 +20,6 @@ echo -e "
 "$clr1"Volume:"$clr2" $(amixer | tr '\n' ' ' | awk -F '[][]' '{print $2}') 
 "$clr1"$(date)
 " | tr -d '\n'
+echo
+tput cuu1
 done
