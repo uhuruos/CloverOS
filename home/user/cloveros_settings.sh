@@ -9,21 +9,39 @@ mirrors=(
 
 fileprefix="https://raw.githubusercontent.com/chiru-no/cloveros/master/home/user"
 
-echo "1) Change mirrors
-2) Change default alsa device
-3) Upgrade kernel
-4) Change binary/source
-5) Update dotfiles
-6) Sync time
-7) Set timezone
-8) Clean binary cache
-9) Disable/enable package signing validation
+echo "1) Enable/disable package signing validation
+2) Change mirrors
+3) Change default alsa device
+4) Upgrade kernel
+5) Change binary/source
+6) Update dotfiles
+7) Sync time
+8) Set timezone
+9) Clean binary cache
 0) Update cloveros_settings.sh"
 
 read -erp "Select option: " -n 1 choice
 echo
 case "$choice" in
 	1)
+		if ! grep -Fq 'FETCHCOMMAND_HTTPS="/home/'$USER'/curlcache.sh \"\${URI}\" \"\${DISTDIR}/\${FILE}\""' /etc/portage/make.conf; then
+			if ! type /usr/bin/gpg > /dev/null; then
+				sudo emerge gnupg
+			fi
+			if ! sudo gpg --list-keys "78F5 AC55 A120 07F2 2DF9 A28A 78B9 3F76 B8E4 2805"; then
+				sudo gpg --keyserver keys.gnupg.net --recv-key "78F5 AC55 A120 07F2 2DF9 A28A 78B9 3F76 B8E4 2805"
+			fi
+			echo 'FETCHCOMMAND_HTTPS="/home/'$USER'/curlcache.sh \"\${URI}\" \"\${DISTDIR}/\${FILE}\""' | sudo tee -a /etc/portage/make.conf
+			wget "$fileprefix"/curlcache.sh -O ~/curlcache.sh
+			chmod +x ~/curlcache.sh
+			echo -e "\nPackage validation enabled."
+		else
+			sudo sed -i '/FETCHCOMMAND_HTTPS/d' /etc/portage/make.conf
+			echo -e "\nPackage validation disabled."
+		fi
+		;;
+
+	2)
 		for i in "${!mirrors[@]}"; do
 			echo "$((i+1))) ${mirrors[i]}"
 		done
@@ -32,21 +50,21 @@ case "$choice" in
 		echo -e "\nMirror changed to: ${mirrors[choicemirror-1]}."
 		;;
 
-	2)
+	3)
 		grep " \[" /proc/asound/cards
 		read -erp "Select the audio device to become default: " -n 1 choiceaudio
 		echo -e "defaults.pcm.card ${choiceaudio}\ndefaults.ctl.card ${choiceaudio}" > ~/.asoundrc
 		echo -e "\nAudio device ${choiceaudio} is now the default for ALSA programs."
 		;;
 
-	3)
+	4)
 		wget -O - https://cloveros.ga/s/kernel.tar.xz | sudo tar xJ -C /boot/
 		wget -O - https://cloveros.ga/s/modules.tar.xz | sudo tar xJ -C /lib/modules/
 		sudo grub-mkconfig -o /boot/grub/grub.cfg
 		echo -e "\nKernel upgraded."
 		;;
 
-	4)
+	5)
 		if grep -q 'EMERGE_DEFAULT_OPTS="--keep-going=y --autounmask-write=y --jobs=2 -G"' /etc/portage/make.conf; then
 			sudo sed -i 's/EMERGE_DEFAULT_OPTS="--keep-going=y --autounmask-write=y --jobs=2 -G"/EMERGE_DEFAULT_OPTS="--keep-going=y --autounmask-write=y --jobs=2"/' /etc/portage/make.conf
 			echo -e "\nemerge will now install from source."
@@ -56,7 +74,7 @@ case "$choice" in
 		fi
 		;;
 
-	5)
+	6)
 		cd ~
 		backupdir=backup$(< /dev/urandom tr -dc 0-9 | head -c 5)
 		mkdir $backupdir
@@ -75,7 +93,7 @@ case "$choice" in
 		echo -e "\nConfiguration updated to new CloverOS defaults, old settings are moved to ~/$backupdir/"
 		;;
 
-	6)
+	7)
 		if ! type /usr/sbin/ntpdate > /dev/null; then
 			sudo emerge ntp
 		fi
@@ -83,34 +101,16 @@ case "$choice" in
 		echo -e "\nTime synced."
 		;;
 
-	7)
+	8)
 		echo -e "Available timezones: $(ls -1 /usr/share/zoneinfo/ | tr "\n" " ") \n"
 		read -erp "Select a timezone: " timezone
 		sudo cp /usr/share/zoneinfo/${timezone} /etc/localtime
 		echo -e "\nTimezone set to ${timezone}."
 		;;
 
-	8)
+	9)
 		sudo rm -Rf /usr/portage/packages/* /tmp/curlcache/*
 		echo -e "\nPackage cache cleared."
-		;;
-
-	9)
-		if ! grep -Fq 'FETCHCOMMAND_HTTPS="/home/'$USER'/curlcache.sh \"\${URI}\" \"\${DISTDIR}/\${FILE}\""' /etc/portage/make.conf; then
-			if ! type /usr/bin/gpg > /dev/null; then
-				sudo emerge gnupg
-			fi
-			if ! sudo gpg --list-keys "78F5 AC55 A120 07F2 2DF9 A28A 78B9 3F76 B8E4 2805"; then
-				sudo gpg --keyserver keys.gnupg.net --recv-key "78F5 AC55 A120 07F2 2DF9 A28A 78B9 3F76 B8E4 2805"
-			fi
-			echo 'FETCHCOMMAND_HTTPS="/home/'$USER'/curlcache.sh \"\${URI}\" \"\${DISTDIR}/\${FILE}\""' | sudo tee -a /etc/portage/make.conf
-			wget "$fileprefix"/curlcache.sh -O ~/curlcache.sh
-			chmod +x ~/curlcache.sh
-			echo -e "\nPackage validation enabled."
-		else
-			sudo sed -i '/FETCHCOMMAND_HTTPS/d' /etc/portage/make.conf
-			echo -e "\nPackage validation disabled."
-		fi
 		;;
 
 	0)
