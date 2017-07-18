@@ -3,7 +3,7 @@ while :
 do
 topoutput=$(top -b -n2 | grep -E '(load average|Tasks|Cpu|KiB Mem|KiB Swap)' | sed 's/ min//' | tr '\n' ' ')
 clr1="\033[0;37m"
-clr2="\033[0;39m"
+clr2="\033[0;96m"
 echo -e "
 "$clr1"$(uname -sr) 
 "$clr1"Up:"$clr2" $(echo $topoutput | awk '{print substr($5, 1, length($5)-1)}') 
