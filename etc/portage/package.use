@@ -1,4 +1,6 @@
 #preference
+media-libs/opencv qt5
+media-libs/vapoursynth vapoursynth_plugins_removegrain vapoursynth_plugins_eedi3 -vapoursynth_plugins_imagemagick vapoursynth_plugins_miscfilters vapoursynth_plugins_morpho vapoursynth_plugins_ocr vapoursynth_plugins_removegrain vapoursynth_plugins_subtext vapoursynth_plugins_vinverse vapoursynth_plugins_vivtc
 www-client/seamonkey -minimal -crypt system-harfbuzz system-icu system-jpeg system-libevent system-libvpx system-sqlite
 media-video/avidemux qt5
 media-libs/avidemux-plugins qt5
@@ -63,6 +65,7 @@ app-admin/conky X
 dev-lang/R X cairo
 x11-libs/gdk-pixbuf X
 virtual/ffmpeg X
+sci-mathematics/octave X gui fftw curl gnuplot postscript jit
 media-video/ffmpeg X gnutls x265 hevc libass vorbis ogg network vpx rtmp x264 aac wavpack opus mp3 sdl theora xvid gme
 app-text/texlive X cjk context detex dvi2tty dvipdfm epspdf extra games graphics humanities jadetex luatex metapost music omega png pstricks publishers science tex4ht texi2html truetype xetex xindy xml
 dev-cpp/gtkmm wayland X
@@ -144,7 +147,6 @@ sci-mathematics/maxima clisp gcl
 media-sound/mixxx shout aac ffmpeg hid mp3 mp4 wavpack
 www-client/w3m imlib gpm
 app-office/texstudio video
-sci-mathematics/octave gui fftw curl gnuplot postscript jit
 net-p2p/eiskaltdcpp json -emoticons -minimal -spell gtk dht pcre
 www-client/links fbcon gpm
 app-arch/p7zip wxwidgets rar
@@ -1057,3 +1059,9 @@ sys-apps/dbus X
 # required by mail-client/alpine-2.00-r7::gentoo
 # required by alpine (argument)
 >=net-libs/c-client-2007f-r6 chappa
+# required by app-editors/neovim-0.2.0::gentoo
+# required by neovim (argument)
+>=dev-lua/mpack-1.0.4 luajit
+# required by app-editors/neovim-0.2.0::gentoo
+# required by neovim (argument)
+>=dev-lua/lpeg-1.0.1 luajit
