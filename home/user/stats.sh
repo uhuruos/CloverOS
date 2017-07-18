@@ -1,7 +1,7 @@
 #!/bin/sh
 while :
 do
-topoutput=$(top -b -n2 | grep -v '    ' | sed 's/ min//' | tr '\n' ' ')
+topoutput=$(top -b -n2 | grep -E '(load average|Tasks|Cpu|KiB Mem|KiB Swap)' | sed 's/ min//' | tr '\n' ' ')
 ifoutput=$(ifconfig wlp1s0 | grep -E '(RX packets|TX packets)' | tr '\n' ' ')
 clr1="\033[0;37m"
 clr2="\033[0;34m"
