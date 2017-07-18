@@ -1,13 +1,13 @@
 #!/bin/sh
 while :
 do
-topoutput=$(top -b -n2 | grep -v '    ' | tr '\n' ' ')
+topoutput=$(top -b -n2 | grep -v '    ' | sed 's/ min//' | tr '\n' ' ')
 ifoutput=$(ifconfig wlp1s0 | tr '\n' ' ')
 clr1="\033[0;37m"
 clr2="\033[0;34m"
 echo -e "
 "$clr1"$(uname -sr) 
-"$clr1"Up:"$clr2" $(echo $topoutput | awk -O '{print $3}') 
+"$clr1"Up:"$clr2" $(echo $topoutput | awk -O '{print $5}') 
 "$clr1"Proc:"$clr2" $(echo $topoutput | awk -O '{print $14 - 3}') 
 "$clr1"Active:"$clr2" $(echo $topoutput | awk -O '{print $16}') 
 "$clr1"Cpu:"$clr2" $(echo $topoutput | awk -O '{print 100 - $82}')% 
@@ -18,6 +18,6 @@ echo -e "
 "$clr1"Brightness:"$clr2" $(awk "BEGIN{print $(cat /sys/class/backlight/*/actual_brightness) / $(cat /sys/class/backlight/*/max_brightness) * 100}")% 
 "$clr1"Volume:"$clr2" $(amixer | tr '\n' ' ' | awk -OF '[][]' '{print $2}') 
 "$clr1"$(date) 
-                         \r" | tr -d '\n'
+    \r" | tr -d '\n'
 tput civis
 done
