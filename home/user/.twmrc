@@ -51,7 +51,7 @@ Color {
 menu "Applications" {
 	"Applications" f.title
 	"aterm" !"aterm +sb -tr -sh 10 -e dash &"
-	"urxvt" !"if pgrep urxvtd; then urxvtc -e zsh; else urxvtd -o -f && urxvtc -e zsh"
+	"urxvt" !"if pgrep urxvtd; then urxvtc -e zsh; else urxvtd -o -f && urxvtc -e zsh; fi"
 	"xfe" !"xfe &"
 	"wifi" !"sudo rc-service wpa_supplicant start & wpa_gui &"
 	"porthole" !"porthole &"
