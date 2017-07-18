@@ -64,7 +64,7 @@ menu "Applications" {
 	"engrampa" !"engrampa &"
 	"rtorrent" !"aterm +sb -tr -sh 10 -e rtorrent &"
 	"weechat" !"aterm +sb -tr -sh 10 -e weechat &"
-	"stats.sh" !"aterm +sb -tr -sh 10 -geometry 400x1+0+0 -e ~/stats.sh &"
+	"stats.sh" !"aterm -fg 10 +sb -tr -sh 10 -geometry 400x1+0+0 -e ~/stats.sh &"
 	"gparted" !"sudo gparted &"
 	"exit X" !"killall X &"
 	"sleep & lock" !"slock & sudo sh -c 'echo -n mem > /sys/power/state' &"
