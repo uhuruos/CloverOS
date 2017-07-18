@@ -10,7 +10,7 @@ echo -e "
 "$clr1"Up:"$clr2" $(echo $topoutput | awk -O '{print substr($5, 1, length($5)-1)}') 
 "$clr1"Proc:"$clr2" $(echo $topoutput | awk -O '{print $14 - 3}') 
 "$clr1"Active:"$clr2" $(echo $topoutput | awk -O '{print $16}') 
-"$clr1"Cpu:"$clr2" $(echo $topoutput | awk -O '{print 100 - $82}')% 
+"$clr1"Cpu:"$clr2" $(echo $topoutput | awk -O '{print 100 - $93}')% 
 "$clr1"Mem:"$clr2" $(echo $topoutput | awk -O '{print int($48 / 1024)}') MiB / $(echo $topoutput | awk -O '{print int($44 / 1048576)}') GiB 
 "$clr1"Net in:"$clr2" $(echo $ifoutput | awk -O '{print int($5 / 1048576)}') MiB 
 "$clr1"Net out:"$clr2" $(echo $ifoutput | awk -O '{print int($12 / 1048576)}') MiB 
