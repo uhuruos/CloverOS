@@ -1,7 +1,7 @@
 #!/bin/sh
 while :
 do
-topoutput=$(top -b -n2 | grep -E '(load average|Tasks|Cpu|KiB Mem|KiB Swap)' | sed 's/ min//' | tr '\n' ' ')
+topoutput=$(top -b -n2 | grep -E '(load average|Tasks|Cpu|KiB Mem|KiB Swap)' | sed 's/ min//' | sed 's/ days//' | tr '\n' ' ')
 clr1="\e[37m"
 clr2="\e[39m"
 echo -e "
