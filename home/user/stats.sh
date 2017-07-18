@@ -19,4 +19,5 @@ echo -e "
 "$clr1"Volume:"$clr2" $(amixer | tr '\n' ' ' | awk -F '[][]' '{print $2}') 
 "$clr1"$(date) 
 \r" | tr -d '\n'
+tput civis
 done
