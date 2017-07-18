@@ -66,9 +66,9 @@ menu "Applications" {
 	"weechat" !"aterm +sb -tr -sh 10 -e weechat &"
 	"gparted" !"sudo gparted &"
 	"exit X" !"killall X &"
-	"sleep & lock" !"xscreensaver -no-splash & sleep 0.5 && xscreensaver-command -lock && sudo hibernate-ram &"
+	"sleep & lock" !"xscreensaver -no-splash & sleep 0.5 && xscreensaver-command -lock && sudo sh -c 'echo -n mem > /sys/power/state' &"
 	"lock" !"xscreensaver -no-splash & sleep 0.5 && xscreensaver-command -lock &"
-	"sleep" !"sudo hibernate-ram &"
+	"sleep" !"sudo sudo sh -c 'echo -n mem > /sys/power/state' &"
 	"reboot" !"sudo reboot &"
 	"shutdown" !"sudo poweroff &"
 }
