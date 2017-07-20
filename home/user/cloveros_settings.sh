@@ -58,8 +58,12 @@ case "$choice" in
 		;;
 
 	4)
-		wget -O - https://cloveros.ga/s/kernel.tar.xz | sudo tar xJ -C /boot/
-		wget -O - https://cloveros.ga/s/modules.tar.xz | sudo tar xJ -C /lib/modules/
+		cd ~
+		wget https://cloveros.ga/s/{kernel.tar.xz,modules.tar.xz,signatures/s/kernel.tar.xz.asc,signatures/s/modules.tar.xz.asc}
+		sudo gpg --verify kernel.tar.xz.asc kernel.tar.xz
+		sudo gpg --verify modules.tar.xz.asc modules.tar.xz
+		sudo tar xf kernel.tar.xz -C /boot/
+		sudo tar xf modules.tar.xz -C /lib/modules/
 		sudo grub-mkconfig -o /boot/grub/grub.cfg
 		sudo sed -i "s/set timeout=5/set timeout=0/" /boot/grub/grub.cfg
 		echo -e "\nKernel upgraded."
