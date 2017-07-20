@@ -32,7 +32,7 @@ MAKEOPTS="-j8"
 EMERGE_DEFAULT_OPTS="--keep-going=y --autounmask-write=y --jobs=2 -G"
 CFLAGS="-O3 -pipe -march=native -funroll-loops -floop-block -floop-interchange -floop-strip-mine -ftree-loop-distribution"
 CXXFLAGS="\${CFLAGS}"
-CPU_FLAGS_X86="mmx mmxext sse sse2 sse3"
+CPU_FLAGS_X86="mmx mmxext sse sse2 ssse3 sse3"
 ACCEPT_KEYWORDS="~amd64"' >> /etc/portage/make.conf
 
 #emerge gentoo-sources genkernel
