@@ -66,6 +66,7 @@ case "$choice" in
 		sudo tar xf modules.tar.xz -C /lib/modules/
 		sudo grub-mkconfig -o /boot/grub/grub.cfg
 		sudo sed -i "s/set timeout=5/set timeout=0/" /boot/grub/grub.cfg
+		rm kernel.tar.xz kernel.tar.xz.asc modules.tar.xz modules.tar.xz.asc
 		echo -e "\nKernel upgraded."
 		;;
 
