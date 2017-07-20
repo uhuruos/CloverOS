@@ -1,27 +1,18 @@
 #preference
-media-libs/opencv qt5
 media-libs/vapoursynth vapoursynth_plugins_removegrain vapoursynth_plugins_eedi3 -vapoursynth_plugins_imagemagick vapoursynth_plugins_miscfilters vapoursynth_plugins_morpho vapoursynth_plugins_ocr vapoursynth_plugins_removegrain vapoursynth_plugins_subtext vapoursynth_plugins_vinverse vapoursynth_plugins_vivtc
 www-client/seamonkey -minimal -crypt system-harfbuzz system-icu system-jpeg system-libevent system-libvpx system-sqlite
-media-video/avidemux qt5
-media-libs/avidemux-plugins qt5
 media-sound/audacity id3tag
 mate-extra/mate-screensaver -pam
 mate-base/mate -extras
 x11-misc/nitrogen nls
 app-admin/conky thinkpad mpd rss curl iostats
-media-video/handbrake gtk -fdk libav-aac
 sys-kernel/genkernel cryptsetup
 media-sound/darkice vorbis mp3
 games-fps/urbanterror server
 sys-libs/ncurses -minimal
 x11-wm/compiz-fusion emerald unsupported
-media-sound/audacious qt5
-media-plugins/audacious-plugins qt5
-x11-themes/qtcurve qt5
 mail-client/thunderbird -crypt system-harfbuzz system-icu system-jpeg system-libevent system-libvpx system-sqlite
 media-fonts/acroread-asianfonts -minimal
-kde-plasma/plasma-meta bluetooth grub gtk
-kde-plasma/plasma-desktop gtk3 gtk2 legacy-systray
 media-gfx/krita color-management
 app-emulation/wine -custom-cflags
 x11-wm/xmonad -default-term
@@ -47,9 +38,19 @@ net-misc/iputils -caps -filecaps
 app-admin/sudo -pam -sendmail
 media-libs/harfbuzz icu
 media-libs/libvpx postproc
+media-libs/opencv qt5
+net-p2p/bitcoin-qt qt5
+media-video/avidemux qt5
+media-libs/avidemux-plugins qt5
+media-sound/audacious qt5
+media-plugins/audacious-plugins qt5
+x11-themes/qtcurve qt5
 net-p2p/transmission qt5
 net-wireless/wpa_supplicant qt5
 app-misc/recoll qt5
+kde-plasma/plasma-meta bluetooth grub gtk
+media-video/handbrake gtk -fdk libav-aac
+kde-plasma/plasma-desktop gtk3 gtk2 legacy-systray
 media-gfx/fontforge X gtk
 media-gfx/graphviz gtk
 app-emulation/virt-manager gtk
@@ -99,7 +100,8 @@ net-im/pidgin spell
 net-irc/hexchat spell
 dev-qt/qtgui gtkstyle
 dev-qt/qtwidgets gtkstyle
-media-libs/mesa d3d9 vulkan llvm gallium gles2 wayland
+x11-base/xorg-drivers video_cards_vmware
+media-libs/mesa d3d9 vulkan llvm gallium gles2 wayland video_cards_vmware
 x11-drivers/xf86-video-intel uxa sna dri3
 www-serverrs/nginx http2
 net-misc/curl http2

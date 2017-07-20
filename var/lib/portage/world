@@ -9,6 +9,7 @@ app-arch/advancecomp
 app-arch/cabextract
 app-arch/defluff
 app-arch/engrampa
+app-arch/file-roller
 app-arch/makeself
 app-arch/p7zip
 app-arch/par
@@ -39,6 +40,7 @@ app-editors/neovim
 app-editors/pluma
 app-editors/vim
 app-editors/xemacs
+app-emulation/open-vm-tools
 app-emulation/qemu
 app-emulation/virt-manager
 app-emulation/virtualbox
@@ -389,6 +391,7 @@ media-gfx/pngcrush
 media-gfx/pngquant
 media-gfx/scrot
 media-gfx/sxiv
+media-libs/alsa-oss
 media-libs/libtxc_dxtn
 media-libs/vapoursynth
 media-plugins/vapoursynth-addgrain
@@ -516,6 +519,7 @@ media-video/kaffeine
 media-video/makemkv
 media-video/mkvtoolnix
 media-video/mpv
+media-video/obs-studio
 media-video/openshot
 media-video/smplayer
 media-video/subtitleripper
@@ -553,6 +557,7 @@ net-ftp/vsftpd
 net-im/discord-bin
 net-im/pidgin
 net-im/qtox
+net-im/telegram-desktop-bin
 net-irc/hexchat
 net-irc/irssi
 net-irc/sic
@@ -575,6 +580,7 @@ net-misc/youtube-dl
 net-misc/zssh
 net-nntp/pan
 net-p2p/amule
+net-p2p/bitcoin-qt
 net-p2p/deluge
 net-p2p/eiskaltdcpp
 net-p2p/freenet
@@ -604,6 +610,7 @@ sys-apps/kexec-tools
 sys-apps/lm_sensors
 sys-apps/lshw
 sys-apps/mlocate
+sys-apps/paludis
 sys-apps/pv
 sys-apps/smartmontools
 sys-apps/usermode-utilities
@@ -614,15 +621,16 @@ sys-boot/os-prober
 sys-boot/syslinux
 sys-devel/crossdev
 sys-devel/gcc
+sys-devel/gcc:7.1.0
 sys-devel/gdb
 sys-fs/cachefilesd
 sys-fs/cryptsetup
 sys-fs/ddrescue
 sys-fs/dosfstools
 sys-fs/ecryptfs-utils
+sys-fs/exfat-nofuse
 sys-fs/exfat-utils
 sys-fs/extundelete
-sys-fs/fuse-exfat
 sys-fs/ncdu
 sys-fs/ntfs3g
 sys-fs/safecopy
@@ -668,6 +676,7 @@ x11-drivers/nvidia-drivers
 x11-misc/bumblebee
 x11-misc/compton
 x11-misc/dmenu
+x11-misc/i3blocks-gaps
 x11-misc/i3lock
 x11-misc/i3status
 x11-misc/lsw

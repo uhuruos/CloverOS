@@ -17,16 +17,6 @@ sci-mathematics/rstudio
 kde-apps/k3b
 
 #keyworded, remove when stable exists
-media-libs/waifu2x-converter-cpp
-media-libs/vapoursynth
-app-editors/neovim
-sys-fs/ecryptfs-utils
-media-gfx/maim
-net-wireless/gnuradio
-x11-wm/i3-gaps
-net-p2p/freenet
-x11-wm/compiz-fusion
-media-sound/tomahawk
 sys-fs/zfs-kmod
 sys-fs/zfs
 sys-kernel/spl
@@ -84,6 +74,22 @@ x11-terms/termite
 media-video/handbrake
 dev-java/icedtea
 www-client/palemoon-bin
+x11-misc/i3blocks-gaps
+net-im/telegram-desktop-bin
+media-libs/waifu2x-converter-cpp
+media-libs/vapoursynth
+app-editors/neovim
+sys-fs/ecryptfs-utils
+media-gfx/maim
+net-wireless/gnuradio
+x11-wm/i3-gaps
+net-p2p/freenet
+x11-wm/compiz-fusion
+media-sound/tomahawk
+media-video/obs-studio
+media-sound/oss
+app-emulation/open-vm-tools
+sys-fs/exfat-nofuse **
 
 #dependencies
 sci-calculators/calcoo
@@ -140,11 +146,13 @@ dev-lua/lpeg
 dev-libs/msgpack
 dev-libs/libtermkey
 dev-libs/libvterm
-#media-plugins/vapoursynth-l-smash-works
 media-libs/l-smash
 #k3b
 kde-apps/libkcddb
+#oss
+media-sound/oss-driver
 
+#groups
 media-fonts/lohit-gujarati
 media-fonts/fantasque-sans-mono
 media-fonts/lohit-marathi
@@ -277,3 +285,6 @@ media-plugins/vapoursynth-vcmod
 media-plugins/vapoursynth-bilateral
 media-plugins/vapoursynth-vstaambk
 media-plugins/vapoursynth-cnr2
+
+# required by =gcc-7.1.0-r1 (argument)
+=sys-devel/gcc-7.1.0-r1 **
