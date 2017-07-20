@@ -53,7 +53,7 @@ echo "$user:$userpassword" | chpasswd
 gpasswd -a $user wheel
 
 grub-install --target=i386-pc /dev/$drive
-grub-mkconfig > /boot/grub/grub.cfg
+grub-mkconfig -o /boot/grub/grub.cfg
 
 sed -i "s/set timeout=5/set timeout=0/" /boot/grub/grub.cfg
 sed -i "s@c1:12345:respawn:/sbin/agetty -a $livecduser --noclear 38400 tty1 linux@c1:12345:respawn:/sbin/agetty --noclear 38400 tty1 linux@" /etc/inittab
