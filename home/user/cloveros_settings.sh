@@ -7,7 +7,8 @@ mirrors=(
 	"uk.cloveros.ga"
 )
 
-fileprefix="https://raw.githubusercontent.com/chiru-no/cloveros/master/home/user"
+gitprefix="https://raw.githubusercontent.com/chiru-no/cloveros/master"
+fileprefix="${gitprefix}/home/user"
 
 echo "1) Enable/disable package signing validation
 2) Change mirrors
@@ -74,6 +75,9 @@ case "$choice" in
 		if grep -q 'EMERGE_DEFAULT_OPTS="--keep-going=y --autounmask-write=y --jobs=2 -G"' /etc/portage/make.conf; then
 			sudo sed -i 's/EMERGE_DEFAULT_OPTS="--keep-going=y --autounmask-write=y --jobs=2 -G"/EMERGE_DEFAULT_OPTS="--keep-going=y --autounmask-write=y --jobs=2"/' /etc/portage/make.conf
 			echo -e "\nemerge will now install from source."
+			echo -e "\nTip: Copy over build settings from CloverOS:"
+			echo "sudo wget $gitprefix/etc/portage/package.use -P /etc/portage/package.use/"
+			echo "sudo sh -c 'curl -s $gitprefix/etc/portage/make.conf | grep '^USE=' >> /etc/portage/make.conf'"
 		else
 			sudo sed -i 's/EMERGE_DEFAULT_OPTS="--keep-going=y --autounmask-write=y --jobs=2"/EMERGE_DEFAULT_OPTS="--keep-going=y --autounmask-write=y --jobs=2 -G"/' /etc/portage/make.conf
 			echo -e "\nemerge will now install from binary."
