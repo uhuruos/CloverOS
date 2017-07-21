@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 while :
 do
 IFS=$'\n' read -d '' -ra toparray <<< "$(top -b -n2 | grep -E '(top - |Tasks: |Cpu\(s\)|KiB Mem|KiB Swap)')"
@@ -13,7 +13,7 @@ IFS=' ' read -d '' -r -a alsasound <<< $(amixer sget Master | grep 'Mono: ')
 clr1="\e[37m"
 clr2="\e[32m"
 echo -e "
-$clr1 $(uname -sr)
+$(uname -sr)
 $clr1 Up:$clr2 ${uptime:0:-1}
 $clr1 Proc:$clr2 ${topline2[1]}
 $clr1 Active:$clr2 ${topline2[3]}
