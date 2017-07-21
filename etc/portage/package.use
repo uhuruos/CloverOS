@@ -38,7 +38,6 @@ net-misc/iputils -caps -filecaps
 app-admin/sudo -pam -sendmail
 media-libs/harfbuzz icu
 media-libs/libvpx postproc
-media-libs/opencv qt5
 net-p2p/bitcoin-qt qt5
 media-video/avidemux qt5
 media-libs/avidemux-plugins qt5
@@ -48,6 +47,7 @@ x11-themes/qtcurve qt5
 net-p2p/transmission qt5
 net-wireless/wpa_supplicant qt5
 app-misc/recoll qt5
+sys-devel/distcc gtk crossdev
 kde-plasma/plasma-meta bluetooth grub gtk
 media-video/handbrake gtk -fdk libav-aac
 kde-plasma/plasma-desktop gtk3 gtk2 legacy-systray

@@ -109,6 +109,7 @@ dev-python/potr
 dev-python/virtualenv
 dev-qt/qt-creator
 dev-util/bless
+dev-util/ccache
 dev-util/dialog
 dev-util/geany
 dev-util/plan9port
@@ -620,6 +621,7 @@ sys-boot/grub
 sys-boot/os-prober
 sys-boot/syslinux
 sys-devel/crossdev
+sys-devel/distcc
 sys-devel/gcc
 sys-devel/gcc:7.1.0
 sys-devel/gdb

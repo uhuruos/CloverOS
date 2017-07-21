@@ -1,10 +1,8 @@
 #preference, remove when stable is bumped up
 media-sound/mpd
-media-video/mpv
 net-misc/youtube-dl
 net-irc/weechat
 media-gfx/gimp
-media-libs/opencv
 app-emulation/virtualbox
 app-emulation/virtualbox-modules
 app-emulation/virtualbox-guest-additions
