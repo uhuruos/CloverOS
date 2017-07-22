@@ -78,7 +78,7 @@ signal=${signal[2]}
 signal=${signal:0:-1}
 signal=$((signal*100/70))%
 
-date=$(printf 'printf '%(%c)T')
+date=$(printf '%(%c)T')
 
 clr1="\e[37m"
 clr2="\e[32m"
