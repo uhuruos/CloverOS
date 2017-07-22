@@ -8,13 +8,15 @@ IFS=' ' read -ra topline3 <<< ${toparray[7]}
 IFS=' ' read -ra topline4 <<< ${toparray[3]}
 IFS=' ' read -ra topline5 <<< ${toparray[4]}
 uptime="${topline1[4]} ${topline1[5]}"
+uptime=${uptime:0:-1}
+uptime=${uptime%, }
 brightness=$(awk '{print $1/$2*100}' <<< "$(cat /sys/class/backlight/*/actual_brightness) $(cat /sys/class/backlight/*/max_brightness)")
 IFS=' ' read -d '' -r -a alsasound <<< $(amixer sget Master | grep 'Mono: ')
 clr1="\e[37m"
 clr2="\e[32m"
 echo -e "
 $(uname -sr)
-$clr1 Up:$clr2 ${uptime:0:-1}
+$clr1 Up:$clr2 $uptime
 $clr1 Proc:$clr2 ${topline2[1]}
 $clr1 Active:$clr2 ${topline2[3]}
 $clr1 Cpu:$clr2 $(awk '{print 100-$1}' <<< ${topline3[7]})%
