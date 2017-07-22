@@ -99,5 +99,5 @@ $clr1 Volume:$clr2 $volume
 $clr1 Wifi:$clr2 $signal
 $clr1 $date
        	\r" | tr -d '\n'
-sleep 1
+sleep 2
 done
