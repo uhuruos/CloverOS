@@ -38,9 +38,9 @@ $clr1 Cpu:$clr2 $((100-$cpuidle))%
 $clr1 Mem:$clr2 $((${topline4[7]}/1024)) MiB / $((${topline4[3]}/1024)) MiB
 $clr1 Net in:$clr2 $((${netdev[1]}/1048576)) MiB
 $clr1 Net out:$clr2 $((${netdev[9]}/1048576)) MiB
+$clr1 Volume:$clr2 $volume
 $clr1 Battery:$clr2 $(</sys/class/power_supply/BAT0/capacity)%
 $clr1 Brightness:$clr2 $(($(</sys/class/backlight/*/actual_brightness)*100/$(</sys/class/backlight/*/max_brightness)))%
-$clr1 Volume:$clr2 $volume
 $clr1 Wifi:$clr2 $signal%
 $clr1 ${topline1[2]}
        	\r" | tr -d '\n'
