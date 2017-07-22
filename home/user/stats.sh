@@ -12,6 +12,9 @@ uptime=$(</proc/uptime)
 uptime=${uptime%%.*}
 hrs=$((uptime/3600))
 min=$((uptime/60%60))
+if [ ${#min} -eq 1 ]; then
+    min=0$min
+fi
 uptime="$hrs:$min"
 
 processes=()
