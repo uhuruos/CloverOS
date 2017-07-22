@@ -78,8 +78,7 @@ signal=${signal[2]}
 signal=${signal:0:-1}
 signal=$((signal*100/70))%
 
-read -r date < /proc/driver/rtc
-date=${date/rtc_time	: /}
+date=$(printf '%(%a %d %h %y %G %H:%M:%S)T')
 
 clr1="\e[37m"
 clr2="\e[32m"
