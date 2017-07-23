@@ -1,5 +1,4 @@
 #!/bin/bash
-echo "\e[?25l"
 enable -f sleep sleep
 cpulasttotal=0
 cpulastidle=0
@@ -103,7 +102,7 @@ date=$(printf '%(%c)T')
 clr1="\e[37m"
 clr2="\e[32m"
 
-echo -e "
+echo -e "\e[?25l
 $clr1 $system
 $clr1 Up:$clr2 $uptime
 $clr1 Proc:$clr2 $processes
