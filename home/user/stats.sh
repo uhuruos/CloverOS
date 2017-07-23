@@ -3,7 +3,7 @@ tput civis
 enable -f sleep sleep
 cpulasttotal=0
 cpulastidle=0
-if [ -f ~/.asoundrc ]; then
+if [[ -f ~/.asoundrc ]]; then
     read -r alsadevice < ~/.asoundrc
     alsadevice=${alsadevice/defaults.pcm.card /}
     if [ $alsadevice -eq $alsadevice ] 2>/dev/null; then
@@ -33,7 +33,7 @@ uptime=$(</proc/uptime)
 uptime=${uptime%%.*}
 hrs=$((uptime/3600))
 min=$((uptime/60%60))
-if [ ${#min} -eq 1 ]; then
+if [[ ${#min} -eq 1 ]]; then
     min=0$min
 fi
 uptime="$hrs:$min"
