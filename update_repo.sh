@@ -1,5 +1,5 @@
 emerge --sync
-emerge -uvDN --buildpkg world
+emerge -uvDN --with-bdeps=y --buildpkg world
 emerge --depclean
 
 #mv /usr/portage/packages/s/ .

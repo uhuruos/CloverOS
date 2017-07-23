@@ -1,7 +1,28 @@
 #!/bin/bash
 tput civis
+enable -f sleep sleep
 cpulasttotal=0
 cpulastidle=0
+if [ -f ~/.asoundrc ]; then
+    read -r alsadevice < ~/.asoundrc
+    alsadevice=${alsadevice/defaults.pcm.card /}
+    if [ $alsadevice -eq $alsadevice ] 2>/dev/null; then
+        :
+    else
+        alsadevice=0
+    fi
+else
+    alsadevice=0
+fi
+i=0
+while read line; do
+    if [[ $line == "Amp-Out vals:  "* ]]; then
+        alsaline=$i
+        break
+    fi
+((i++))
+done < /proc/asound/card$alsadevice/codec#0
+
 while :
 do
 system=$(</proc/version)
@@ -25,7 +46,7 @@ processes=${#processes[@]}
 
 mapfile -t procstat < /proc/stat
 activeprocesses=${procstat[-3]}
-activeprocesses=${activeprocesses/procs_running /}
+activeprocesses=${activeprocesses:13}
 
 IFS=' ' read -ra cpustats <<< ${procstat[0]}
 cpustats=("${cpustats[@]:1}")
@@ -61,11 +82,10 @@ IFS=' ' read -ra netdev <<< ${netdev}
 netin=$((${netdev[1]}/1048576))\ MiB
 netout=$((${netdev[9]}/1048576))\ MiB
 
-mapfile -t volume <<< "$(amixer sget Master)"
-volume=${volume[-1]}
-IFS=' ' read -ra volume <<< ${volume}
-volume=${volume[3]}
-volume=${volume:1:${#volume}-2}
+mapfile -t asound < /proc/asound/card$alsadevice/codec#0
+volume=${asound[$alsaline]}
+volume=${volume:20:2}
+volume=$((16#$volume))%
 
 battery=$(</sys/class/power_supply/BAT0/capacity)%
 
