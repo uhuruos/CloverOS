@@ -1,5 +1,5 @@
 #!/bin/bash
-tput civis
+echo "\e[?25l"
 enable -f sleep sleep
 cpulasttotal=0
 cpulastidle=0
