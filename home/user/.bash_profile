@@ -51,11 +51,16 @@ if [ -z "$DISPLAY" ]; then
             read -erp "Install now? [y/n] " -n 1 installyn
             if [[ "$installyn" == "y" || "$installyn" == "Y" ]]; then
                 sudo emerge -v ${wmspkg[$choice]}
-                export DISPLAY=:0
-                X&
-                sleep 1
-                ${wms[$choice]}&
-                eval ${wmspost[$choice]}&
+		if [ -f /usr/bin/${wms[$choice]} ]; then
+	                export DISPLAY=:0
+	                X&
+	                sleep 1
+	                ${wms[$choice]}&
+	                eval ${wmspost[$choice]}&
+		fi
+		else
+			echo Please connect to the Internet
+		fi
             fi
         else
             export DISPLAY=:0
