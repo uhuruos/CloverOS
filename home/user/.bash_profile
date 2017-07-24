@@ -57,7 +57,6 @@ if [ -z "$DISPLAY" ]; then
 	                sleep 1
 	                ${wms[$choice]}&
 	                eval ${wmspost[$choice]}&
-		fi
 		else
 			echo Please connect to the Internet
 		fi
