@@ -1,7 +1,9 @@
 #!/bin/bash
 enable -f sleep sleep
+
 cpulasttotal=0
 cpulastidle=0
+
 if [[ -f ~/.asoundrc ]]; then
     read -r alsadevice < ~/.asoundrc
     alsadevice=${alsadevice/defaults.pcm.card /}
@@ -21,6 +23,12 @@ while read line; do
     fi
 ((i++))
 done < /proc/asound/card$alsadevice/codec#0
+
+backlightdevice=()
+for line in /sys/class/backlight/*; do
+    backlightdevice+=($line)
+done
+backlightdevice=${backlightdevice[$((${#processes[@]}-1))]}
 
 while :
 do
@@ -88,7 +96,7 @@ volume=$((16#$volume))%
 
 battery=$(</sys/class/power_supply/BAT0/capacity)%
 
-brightness=$(($(</sys/class/backlight/*/actual_brightness)*100/$(</sys/class/backlight/*/max_brightness)))%
+brightness=$(($(<$backlightdevice/actual_brightness)*100/$(<$backlightdevice/max_brightness)))%
 
 mapfile -t signal -ra signal < /proc/net/wireless
 signal=${signal[2]}
