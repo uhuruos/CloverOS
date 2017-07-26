@@ -8,8 +8,7 @@ mirrors=(
 	"nl.cloveros.ga"
 )
 
-gitprefix="https://raw.githubusercontent.com/chiru-no/cloveros/master"
-fileprefix="${gitprefix}/home/user"
+gitprefix="https://gitgud.io/cloveros/cloveros/raw/master"
 
 echo "1) Enable/disable package signing validation
 2) Change mirrors
@@ -34,7 +33,7 @@ case "$choice" in
 				sudo gpg --keyserver keys.gnupg.net --recv-key "78F5 AC55 A120 07F2 2DF9 A28A 78B9 3F76 B8E4 2805"
 			fi
 			echo 'FETCHCOMMAND_HTTPS="/home/'$USER'/curlcache.sh \"\${URI}\" \"\${DISTDIR}/\${FILE}\""' | sudo tee -a /etc/portage/make.conf
-			wget "$fileprefix"/curlcache.sh -O ~/curlcache.sh
+			wget "$gitprefix"/home/user/curlcache.sh -O ~/curlcache.sh
 			chmod +x ~/curlcache.sh
 			echo -e "\nPackage validation enabled."
 		else
@@ -77,8 +76,8 @@ case "$choice" in
 			sudo sed -i 's/EMERGE_DEFAULT_OPTS="--keep-going=y --autounmask-write=y --jobs=2 -G"/EMERGE_DEFAULT_OPTS="--keep-going=y --autounmask-write=y --jobs=2"/' /etc/portage/make.conf
 			echo -e "\nemerge will now install from source."
 			echo -e "\nTip: Copy over build settings from CloverOS:"
-			echo "sudo wget $gitprefix/etc/portage/package.use -P /etc/portage/package.use/"
-			echo "sudo sh -c 'curl -s $gitprefix/etc/portage/make.conf | grep '^USE=' >> /etc/portage/make.conf'"
+			echo "sudo wget $gitprefix/binhost_settings/etc/portage/package.use -P /etc/portage/package.use/"
+			echo "sudo sh -c 'curl -s $gitprefix/binhost_settings/etc/portage/make.conf | grep '^USE=' >> /etc/portage/make.conf'"
 			echo 'And comment out ACCEPT_KEYWORDS="~amd64" from /etc/portage/make.conf'
 		else
 			sudo sed -i 's/EMERGE_DEFAULT_OPTS="--keep-going=y --autounmask-write=y --jobs=2"/EMERGE_DEFAULT_OPTS="--keep-going=y --autounmask-write=y --jobs=2 -G"/' /etc/portage/make.conf
@@ -91,17 +90,17 @@ case "$choice" in
 		backupdir=backup$(< /dev/urandom tr -dc 0-9 | head -c 5)
 		mkdir $backupdir
 		mv .bash_profile .zprofile .zshrc .twmrc .Xdefaults wallpaper.png .xbindkeysrc screenfetch-dev bl.sh cloveros_settings.sh stats.sh .emacs .emacs.d .twm .rtorrent.rc .mpv .config/xfe/ $backupdir/
-		wget -q "$fileprefix"/{.bash_profile,.zprofile,.zshrc,.twmrc,.Xdefaults,wallpaper.png,.xbindkeysrc,screenfetch-dev,bl.sh,cloveros_settings.sh,stats.sh,.emacs,.rtorrent.rc}
+		wget -q "$gitprefix"/home/user/{.bash_profile,.zprofile,.zshrc,.twmrc,.Xdefaults,wallpaper.png,.xbindkeysrc,screenfetch-dev,bl.sh,cloveros_settings.sh,stats.sh,.emacs,.rtorrent.rc}
 		chmod +x screenfetch-dev bl.sh cloveros_settings.sh stats.sh
 		mkdir -p .emacs.d/backups
 		mkdir .emacs.d/autosaves
 		mkdir .twm
-		wget -q "$fileprefix"/.twm/{minimize.xbm,maximize.xbm,close.xbm} -P .twm
+		wget -q "$gitprefix"/home/user/.twm/{minimize.xbm,maximize.xbm,close.xbm} -P .twm
 		mkdir -p .config/xfe/
-		wget -q "$fileprefix"/.config/xfe/xferc -P .config/xfe
+		wget -q "$gitprefix"/home/user/.config/xfe/xferc -P .config/xfe
 		sed -i "s@/home/user/@/home/$USER/@" .rtorrent.rc
 		mkdir .mpv
-		wget -q "$fileprefix"/.mpv/config -P .mpv
+		wget -q "$gitprefix"/home/user/.mpv/config -P .mpv
 		echo -e "\nConfiguration updated to new CloverOS defaults, old settings are moved to ~/$backupdir/"
 		;;
 
@@ -128,7 +127,7 @@ case "$choice" in
 	0)
 		cd ~
 		rm cloveros_settings.sh
-		wget "$fileprefix"/cloveros_settings.sh
+		wget "$gitprefix"/home/user/cloveros_settings.sh
 		chmod +x cloveros_settings.sh
 		echo -e "\ncloveros_settings.sh is now updated."
 		;;
