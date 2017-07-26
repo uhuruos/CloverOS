@@ -3,16 +3,18 @@ media-sound/mpd
 net-misc/youtube-dl
 net-irc/weechat
 media-gfx/gimp
-app-emulation/virtualbox
-app-emulation/virtualbox-modules
-app-emulation/virtualbox-guest-additions
-app-emulation/virtualbox-additions
+=app-emulation/virtualbox-5.1.22-r1
+=app-emulation/virtualbox-modules-5.1.22
+=app-emulation/virtualbox-guest-additions-5.1.22
+=app-emulation/virtualbox-additions-5.1.22
+=dev-util/kbuild-0.1.9998_pre20131130-r1
 
 #qt5, remove when stable is qt5
 media-gfx/librecad
 media-sound/rosegarden
 sci-mathematics/rstudio
 kde-apps/k3b
+media-sound/qjackctl
 
 #keyworded, remove when stable exists
 sys-fs/zfs-kmod
@@ -88,9 +90,9 @@ media-video/obs-studio
 media-sound/oss
 app-emulation/open-vm-tools
 sys-fs/exfat-nofuse **
+sci-calculators/calcoo
 
 #dependencies
-sci-calculators/calcoo
 #maim
 x11-misc/slop
 #certbot
@@ -149,6 +151,8 @@ media-libs/l-smash
 kde-apps/libkcddb
 #oss
 media-sound/oss-driver
+#waifu2x
+media-libs/opencv
 
 #groups
 media-fonts/lohit-gujarati
@@ -283,6 +287,47 @@ media-plugins/vapoursynth-vcmod
 media-plugins/vapoursynth-bilateral
 media-plugins/vapoursynth-vstaambk
 media-plugins/vapoursynth-cnr2
-
-# required by =gcc-7.1.0-r1 (argument)
-=sys-devel/gcc-7.1.0-r1 **
+# required by pam_yubico (argument)
+=sys-auth/pam_yubico-2.24 ~amd64
+# required by sys-auth/ykpers-1.18.0::gentoo
+# required by sys-auth/pam_yubico-2.24::gentoo
+# required by pam_yubico (argument)
+=sys-auth/libyubikey-1.13 ~amd64
+# required by sys-auth/pam_yubico-2.24::gentoo
+# required by pam_yubico (argument)
+=sys-auth/ykpers-1.18.0 ~amd64
+# required by sys-auth/pam_yubico-2.24::gentoo
+# required by pam_yubico (argument)
+=sys-auth/ykclient-2.15 ~amd64
+# required by passwordsafe (argument)
+=app-admin/passwordsafe-1.02.1_beta ~amd64
+# required by keepassxc (argument)
+=app-admin/keepassxc-2.2.0 ~amd64
+# required by dev-python/django-two-factor-auth-1.3.0::gentoo
+# required by django-two-factor-auth (argument)
+=dev-python/django-phonenumber-field-0.7.2 ~amd64
+# required by dev-python/django-otp-yubikey-0.3.3::gentoo
+# required by dev-python/django-two-factor-auth-1.3.0::gentoo[yubikey]
+# required by django-two-factor-auth (argument)
+=dev-python/yubiotp-0.2.1 ~amd64
+# required by django-two-factor-auth (argument)
+=dev-python/django-two-factor-auth-1.3.0 ~amd64
+# required by dev-python/django-two-factor-auth-1.3.0::gentoo
+# required by django-two-factor-auth (argument)
+=dev-python/twilio-3.6.9 ~amd64
+# required by dev-python/django-two-factor-auth-1.3.0::gentoo
+# required by django-two-factor-auth (argument)
+=dev-python/phonenumbers-8.3.1 ~amd64
+# required by dev-python/django-two-factor-auth-1.3.0::gentoo
+# required by django-two-factor-auth (argument)
+=dev-python/django-otp-0.3.4 ~amd64
+# required by dev-python/django-two-factor-auth-1.3.0::gentoo
+# required by django-two-factor-auth (argument)
+=dev-python/django-formtools-1.0 ~amd64
+# required by dev-python/django-two-factor-auth-1.3.0::gentoo[yubikey]
+# required by django-two-factor-auth (argument)
+=dev-python/django-otp-yubikey-0.3.3 ~amd64
+# required by media-libs/stk:0 (argument)
+=media-libs/stk-4.5.1 ~amd64
+# required by media-plugins/calf:0 (argument)
+=media-plugins/calf-0.0.60-r1 ~amd64

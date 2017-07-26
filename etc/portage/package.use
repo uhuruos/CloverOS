@@ -1,4 +1,8 @@
 #preference
+app-shells/bash plugins
+dev-python/django-two-factor-auth yubikey
+app-admin/keepassxc yubikey
+app-admin/passwordsafe yubikey -minimal
 media-libs/vapoursynth vapoursynth_plugins_removegrain vapoursynth_plugins_eedi3 -vapoursynth_plugins_imagemagick vapoursynth_plugins_miscfilters vapoursynth_plugins_morpho vapoursynth_plugins_ocr vapoursynth_plugins_removegrain vapoursynth_plugins_subtext vapoursynth_plugins_vinverse vapoursynth_plugins_vivtc
 www-client/seamonkey -minimal -crypt system-harfbuzz system-icu system-jpeg system-libevent system-libvpx system-sqlite
 media-sound/audacity id3tag
@@ -38,6 +42,8 @@ net-misc/iputils -caps -filecaps
 app-admin/sudo -pam -sendmail
 media-libs/harfbuzz icu
 media-libs/libvpx postproc
+media-video/vlc qt5 xml
+media-libs/opencv qt5
 net-p2p/bitcoin-qt qt5
 media-video/avidemux qt5
 media-libs/avidemux-plugins qt5
@@ -52,7 +58,7 @@ kde-plasma/plasma-meta bluetooth grub gtk
 media-video/handbrake gtk -fdk libav-aac
 kde-plasma/plasma-desktop gtk3 gtk2 legacy-systray
 media-gfx/fontforge X gtk
-media-gfx/graphviz gtk
+media-gfx/graphviz X gtk
 app-emulation/virt-manager gtk
 mate-extra/mate-utils X
 mate-extra/mate-screensaver X
@@ -68,6 +74,7 @@ x11-libs/gdk-pixbuf X
 virtual/ffmpeg X
 sci-mathematics/octave X gui fftw curl gnuplot postscript jit
 media-video/ffmpeg X gnutls x265 hevc libass vorbis ogg network vpx rtmp x264 aac wavpack opus mp3 sdl theora xvid gme
+media-video/handbrake x265
 app-text/texlive X cjk context detex dvi2tty dvipdfm epspdf extra games graphics humanities jadetex luatex metapost music omega png pstricks publishers science tex4ht texi2html truetype xetex xindy xml
 dev-cpp/gtkmm wayland X
 media-libs/clutter -wayland X
@@ -90,7 +97,7 @@ net-misc/freerdp X wayland
 media-video/smplayer streaming qt5
 media-video/mkvtoolnix qt5
 media-video/makemkv qt5
-app-editors/emacs X gtk toolkit-scroll-bars xft sound games alsa jpeg png gif
+app-editors/emacs X gtk toolkit-scroll-bars xft sound games alsa jpeg png gif libxml2
 app-emacs/emacs-common-gentoo X games
 app-editors/xemacs X
 games-emulation/snes9x gtk netplay
@@ -160,13 +167,67 @@ net-analyzer/vnstat gd
 dev-lang/php curl gd fpm pdo
 app-eselect/eselect-php fpm
 net-p2p/rtorrent xmlrpc
-media-sound/deadbeef aac adplug alac alsa cdda converter cover cover-imlib2 cover-network curl dts dumb equalizer ffmpeg flac -gtk2 hotkeys lastfm libnotify libsamplerate m3u mad midi mms mono2stereo mp3 musepack nullout oss psf shn sid sndfile tta vorbis vtx wavpack wma zip cdparanoia -gme gtk3 -libav mac mpg123 -nls playlist-browser -pulseaudio sc68 -shell-exec -unity
+media-sound/deadbeef aac adplug alac alsa cdda converter cover cover-imlib2 cover-network curl dts dumb equalizer ffmpeg flac hotkeys lastfm libnotify libsamplerate m3u mad midi mms mono2stereo mp3 musepack nullout oss psf shn sid sndfile tta vorbis vtx wavpack wma zip cdparanoia -gme gtk3 -libav mac mpg123 -nls playlist-browser -pulseaudio sc68 -shell-exec -unity
 app-emulation/qemu sdl usb virgl
+
+#steam
+dev-db/sqlite abi_x86_32
+dev-libs/expat abi_x86_32
+dev-libs/glib abi_x86_32
+dev-libs/libffi abi_x86_32
+dev-libs/libpthread-stubs abi_x86_32
+dev-libs/nspr abi_x86_32
+dev-libs/nss abi_x86_32
+dev-util/pkgconfig abi_x86_32
+media-libs/libtxc_dxtn abi_x86_32
+media-libs/mesa abi_x86_32
+net-misc/curl abi_x86_32
+sys-devel/llvm abi_x86_32
+sys-libs/gpm abi_x86_32
+sys-libs/ncurses abi_x86_32
+sys-libs/readline abi_x86_32
+sys-libs/zlib abi_x86_32
+virtual/libffi abi_x86_32
+virtual/libiconv abi_x86_32
+virtual/pkgconfig abi_x86_32
+x11-libs/gdk-pixbuf abi_x86_32
+x11-libs/gtk+:2 abi_x86_32
+x11-libs/libdrm abi_x86_32
+x11-libs/libpciaccess abi_x86_32
+x11-libs/libX11 abi_x86_32
+x11-libs/libXau abi_x86_32
+x11-libs/libxcb abi_x86_32
+x11-libs/libXdamage abi_x86_32
+x11-libs/libXdmcp abi_x86_32
+x11-libs/libXext abi_x86_32
+x11-libs/libXfixes abi_x86_32
+x11-libs/libXScrnSaver abi_x86_32
+x11-libs/libxshmfence abi_x86_32
+x11-libs/libXxf86vm abi_x86_32
+x11-proto/damageproto abi_x86_32
+x11-proto/dri2proto abi_x86_32
+x11-proto/dri3proto abi_x86_32
+x11-proto/fixesproto abi_x86_32
+x11-proto/glproto abi_x86_32
+x11-proto/inputproto abi_x86_32
+x11-proto/kbproto abi_x86_32
+x11-proto/presentproto abi_x86_32
+x11-proto/xcb-proto abi_x86_32
+x11-proto/xextproto abi_x86_32
+x11-proto/xf86bigfontproto abi_x86_32
+x11-proto/xf86driproto abi_x86_32
+x11-proto/xf86vidmodeproto abi_x86_32
+x11-proto/xproto abi_x86_32
+dev-libs/openssl abi_x86_32
+net-libs/nghttp2 abi_x86_32
+dev-libs/boost abi_x86_32
+sys-libs/libcap abi_x86_32
+x11-proto/scrnsaverproto abi_x86_32
 
 #required
 app-crypt/gcr gtk
 dev-libs/boost icu nls
-dev-libs/libdbusmenu gtk gtk3 abi_x86_64
+dev-libs/libdbusmenu gtk3 abi_x86_64
 media-libs/sdl-mixer vorbis
 net-nds/openldap sasl
 media-libs/libsdl2 gles
@@ -183,6 +244,8 @@ dev-libs/libcdio -minimal
 x11-libs/cairo xcb
 dev-qt/qtscript scripttools
 app-text/poppler qt5 cairo
+dev-qt/qtsingleapplication qt5 X
+dev-qt/qtlockedfile qt5
 dev-qt/qtmultimedia widgets
 app-text/xmlto text
 sys-libs/tevent python

@@ -2,7 +2,9 @@ app-admin/conky
 app-admin/cpulimit
 app-admin/hardinfo
 app-admin/hddtemp
+app-admin/keepassxc
 app-admin/mcelog
+app-admin/passwordsafe
 app-admin/sudo
 app-admin/testdisk
 app-arch/advancecomp
@@ -31,6 +33,7 @@ app-cdr/isomaster
 app-cdr/kcdemu
 app-cdr/xcdroast
 app-crypt/certbot
+app-crypt/gnupg
 app-crypt/gpa
 app-doc/phrack-all
 app-editors/emacs
@@ -105,6 +108,7 @@ dev-lang/rust
 dev-libs/libisoburn
 dev-libs/weston
 dev-python/ansi2html
+dev-python/django-two-factor-auth
 dev-python/potr
 dev-python/virtualenv
 dev-qt/qt-creator
@@ -156,6 +160,7 @@ games-misc/cowsay
 games-misc/fortune-mod-all
 games-roguelike/dwarf-fortress
 games-simulation/openttd
+games-strategy/freeciv
 games-strategy/wesnoth
 games-util/higan-purify
 games-util/steam-launcher
@@ -478,6 +483,7 @@ media-sound/gmpc
 media-sound/gmusicbrowser
 media-sound/gstreamripper
 media-sound/herrie
+media-sound/jack-rack
 media-sound/jamin
 media-sound/lash
 media-sound/lilypond
@@ -495,6 +501,7 @@ media-sound/mpd
 media-sound/mpdas
 media-sound/ncmpcpp
 media-sound/pianobar
+media-sound/qjackctl
 media-sound/ripperx
 media-sound/rosegarden
 media-sound/sexypsf
@@ -599,6 +606,7 @@ net-wireless/rfkill
 net-wireless/wpa_supplicant
 pantheon-base/plank
 sci-calculators/calcoo
+sci-calculators/qalculate-gtk
 sci-calculators/tiemu
 sci-electronics/eagle
 sci-mathematics/octave
@@ -615,6 +623,7 @@ sys-apps/paludis
 sys-apps/pv
 sys-apps/smartmontools
 sys-apps/usermode-utilities
+sys-auth/pam_yubico
 sys-block/gparted
 sys-block/open-iscsi
 sys-boot/grub
@@ -623,7 +632,6 @@ sys-boot/syslinux
 sys-devel/crossdev
 sys-devel/distcc
 sys-devel/gcc
-sys-devel/gcc:7.1.0
 sys-devel/gdb
 sys-fs/cachefilesd
 sys-fs/cryptsetup
@@ -684,6 +692,7 @@ x11-misc/i3status
 x11-misc/lsw
 x11-misc/nitrogen
 x11-misc/obmenu
+x11-misc/qt5ct
 x11-misc/redshift
 x11-misc/rofi
 x11-misc/slock
