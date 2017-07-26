@@ -105,36 +105,36 @@ gpasswd -a $user audio
 gpasswd -a $user video
 cd /home/$user/
 rm .bash_profile
-wget https://raw.githubusercontent.com/chiru-no/cloveros/master/home/user/.bash_profile
-wget https://raw.githubusercontent.com/chiru-no/cloveros/master/home/user/.zprofile
-wget https://raw.githubusercontent.com/chiru-no/cloveros/master/home/user/.zshrc
-wget https://raw.githubusercontent.com/chiru-no/cloveros/master/home/user/.twmrc
-wget https://raw.githubusercontent.com/chiru-no/cloveros/master/home/user/.Xdefaults
-wget https://raw.githubusercontent.com/chiru-no/cloveros/master/home/user/wallpaper.png
-wget https://raw.githubusercontent.com/chiru-no/cloveros/master/home/user/.xbindkeysrc
-wget https://raw.githubusercontent.com/chiru-no/cloveros/master/home/user/screenfetch-dev
+wget https://gitgud.io/cloveros/cloveros/raw/master/home/user/.bash_profile
+wget https://gitgud.io/cloveros/cloveros/raw/master/home/user/.zprofile
+wget https://gitgud.io/cloveros/cloveros/raw/master/home/user/.zshrc
+wget https://gitgud.io/cloveros/cloveros/raw/master/home/user/.twmrc
+wget https://gitgud.io/cloveros/cloveros/raw/master/home/user/.Xdefaults
+wget https://gitgud.io/cloveros/cloveros/raw/master/home/user/wallpaper.png
+wget https://gitgud.io/cloveros/cloveros/raw/master/home/user/.xbindkeysrc
+wget https://gitgud.io/cloveros/cloveros/raw/master/home/user/screenfetch-dev
 chmod +x screenfetch-dev
-wget https://raw.githubusercontent.com/chiru-no/cloveros/master/home/user/bl.sh
+wget https://gitgud.io/cloveros/cloveros/raw/master/home/user/bl.sh
 chmod +x bl.sh
-wget https://raw.githubusercontent.com/chiru-no/cloveros/master/home/user/cloveros_settings.sh
+wget https://gitgud.io/cloveros/cloveros/raw/master/home/user/cloveros_settings.sh
 chmod +x cloveros_settings.sh
-wget https://raw.githubusercontent.com/chiru-no/cloveros/master/home/user/stats.sh
+wget https://gitgud.io/cloveros/cloveros/raw/master/home/user/stats.sh
 chmod +x stats.sh
-wget https://raw.githubusercontent.com/chiru-no/cloveros/master/home/user/.emacs
+wget https://gitgud.io/cloveros/cloveros/raw/master/home/user/.emacs
 mkdir -p .emacs.d/backups
 mkdir .emacs.d/autosaves
 mkdir .twm
-wget https://raw.githubusercontent.com/chiru-no/cloveros/master/home/user/.twm/minimize.xbm -P .twm
-wget https://raw.githubusercontent.com/chiru-no/cloveros/master/home/user/.twm/maximize.xbm -P .twm
-wget https://raw.githubusercontent.com/chiru-no/cloveros/master/home/user/.twm/close.xbm -P .twm
+wget https://gitgud.io/cloveros/cloveros/raw/master/home/user/.twm/minimize.xbm -P .twm
+wget https://gitgud.io/cloveros/cloveros/raw/master/home/user/.twm/maximize.xbm -P .twm
+wget https://gitgud.io/cloveros/cloveros/raw/master/home/user/.twm/close.xbm -P .twm
 mkdir -p .config/xfe/
-wget https://raw.githubusercontent.com/chiru-no/cloveros/master/home/user/.config/xfe/xferc -P .config/xfe
-wget https://raw.githubusercontent.com/chiru-no/cloveros/master/home/user/.rtorrent.rc
+wget https://gitgud.io/cloveros/cloveros/raw/master/home/user/.config/xfe/xferc -P .config/xfe
+wget https://gitgud.io/cloveros/cloveros/raw/master/home/user/.rtorrent.rc
 sed -i "s@/home/user/@/home/$user/@" .rtorrent.rc
 mkdir Downloads
 mkdir .rtorrent
 mkdir .mpv
-wget https://raw.githubusercontent.com/chiru-no/cloveros/master/home/user/.mpv/config -P .mpv
+wget https://gitgud.io/cloveros/cloveros/raw/master/home/user/.mpv/config -P .mpv
 chown -R $user /home/$user/
 
 emerge --depclean
