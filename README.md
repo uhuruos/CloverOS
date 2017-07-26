@@ -1,11 +1,9 @@
 # cloveros
-![CloverOS GNU/Linux](https://raw.githubusercontent.com/chiru-no/cloveros/master/artwork/logo.png "CloverOS GNU/Linux")
+![CloverOS GNU/Linux](https://gitgud.io/cloveros/cloveros/raw/master/artwork/logo.png "CloverOS GNU/Linux")
 
-<img src="https://raw.githubusercontent.com/chiru-no/cloveros/master/artwork/desktop.png" alt="CloverOS GNU/Linux Desktop" width="250px" />
+<img src="https://gitgud.io/cloveros/cloveros/raw/master/artwork/desktop.png" alt="CloverOS GNU/Linux Desktop" width="250px" />
 
 CloverOS GNU/Linux is scripts that creates a Gentoo image and a packages repo (Binhost) that contains unique USE flags and CFLAGS. It aims to be a fast, poetterfrei, lightweight out of the box desktop.
-
-You can download a CloverOS GNU/Linux LiveCD here: https://github.com/chiru-no/cloveros/releases
 
 Technical details: https://cloveros.ga
 
