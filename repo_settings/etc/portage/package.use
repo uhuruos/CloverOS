@@ -223,6 +223,8 @@ net-libs/nghttp2 abi_x86_32
 dev-libs/boost abi_x86_32
 sys-libs/libcap abi_x86_32
 x11-proto/scrnsaverproto abi_x86_32
+x11-libs/libXtst abi_x86_32
+x11-proto/recordproto abi_x86_32
 
 #required
 app-crypt/gcr gtk
