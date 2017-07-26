@@ -47,9 +47,9 @@ emerge grub dhcpcd
 
 rc-update add dhcpcd default
 
-echo -e "$rootpassword\n$rootpassword" | passwd
+echo "root:$rootpassword" | chpasswd
 useradd $user
-echo -e "$userpassword\n$userpassword" | passwd $user
+echo "$user:$userpassword" | chpasswd
 gpasswd -a $user wheel
 
 emerge -1 openssh openssl
