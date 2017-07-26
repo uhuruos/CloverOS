@@ -5,6 +5,7 @@ mirrors=(
 	"uswest.cloveros.ga"
 	"fr.cloveros.ga"
 	"uk.cloveros.ga"
+	"nl.cloveros.ga"
 )
 
 gitprefix="https://raw.githubusercontent.com/chiru-no/cloveros/master"
