@@ -99,11 +99,15 @@ battery=$(</sys/class/power_supply/BAT0/capacity)%
 brightness=$(($(<$backlightdevice/actual_brightness)*100/$(<$backlightdevice/max_brightness)))%
 
 mapfile -t signal -ra signal < /proc/net/wireless
-signal=${signal[2]}
-IFS=' ' read -ra signal <<< $signal
-signal=${signal[2]}
-signal=${signal:0:-1}
-signal=$((signal*100/70))%
+if [[ ${#signal[@]} -gt 2 ]]; then
+    signal=${signal[2]}
+    IFS=' ' read -ra signal <<< $signal
+    signal=${signal[2]}
+    signal=${signal:0:-1}
+    signal=$((signal*100/70))%
+else
+    signal=
+fi
 
 date=$(printf '%(%c)T')
 
