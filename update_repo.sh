@@ -4,7 +4,7 @@ emerge --depclean
 
 #mv /usr/portage/packages/s/ .
 #rm -Rf /usr/portage/packages/*
-#quickpkg --include-unmodified-config=y "*/*" | ansi2html | tail -n +1081 | head -n -7 > s/quickpkg.txt
+#quickpkg --include-unmodified-config=y "*/*" 2>&1 | ansi2html | tail -n +1081 | head -n -7 > s/quickpkg.txt
 #emerge --buildpkgonly vnstat sudo openssh dnscrypt-proxy
 #mv s/ /usr/portage/packages/
 
