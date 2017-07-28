@@ -22,8 +22,8 @@ wget https://gitgud.io/cloveros/cloveros/raw/master/binhost_settings/etc/portage
 wget https://gitgud.io/cloveros/cloveros/raw/master/binhost_settings/etc/portage/package.env -O /etc/portage/package.env
 wget https://gitgud.io/cloveros/cloveros/raw/master/binhost_settings/etc/portage/package.keywords -O /etc/portage/package.keywords
 wget https://gitgud.io/cloveros/cloveros/raw/master/binhost_settings/etc/portage/make.conf -O /etc/portage/make.conf
-
-#put /etc/portage/env/ lines here
+mkdir /etc/portage/env
+wget https://gitgud.io/cloveros/cloveros/raw/master/binhost_settings/etc/portage/env/{no-lto,no-lto-graphite,no-lto-o3,no-lto-ofast,no-o3,no-ofast,size} -P /etc/portage/env/
 
 emerge $(curl https://gitgud.io/cloveros/cloveros/raw/master/binhost_settings/var/lib/portage/world)
 
