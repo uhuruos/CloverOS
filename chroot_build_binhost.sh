@@ -17,12 +17,6 @@ mount --rbind /sys sys
 cat << EOF | chroot .
 
 emerge-webrsync
-echo '
-MAKEOPTS="-j8"
-EMERGE_DEFAULT_OPTS="--keep-going=y --autounmask-write=y --jobs=2"
-CFLAGS="-O3 -march=native -pipe -funroll-loops"
-CXXFLAGS="\${CFLAGS}"
-CPU_FLAGS_X86="mmx mmxext sse sse2 ssse3 sse3"' >> /etc/portage/make.conf
 
 wget https://gitgud.io/cloveros/cloveros/raw/master/binhost_settings/etc/portage/package.use -O /etc/portage/package.use
 wget https://gitgud.io/cloveros/cloveros/raw/master/binhost_settings/etc/portage/package.env -O /etc/portage/package.env
