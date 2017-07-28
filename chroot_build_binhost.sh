@@ -33,6 +33,8 @@ wget https://gitgud.io/cloveros/cloveros/raw/master/binhost_settings/etc/portage
 
 emerge $(curl https://gitgud.io/cloveros/cloveros/raw/master/binhost_settings/var/lib/portage/world)
 
+quickpkg --include-unmodified-config=y "*/*"
+
 exit
 
 EOF
