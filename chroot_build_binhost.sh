@@ -33,4 +33,6 @@ exit
 
 EOF
 
+umount -l gentoo/*
+
 echo "Build finished. Packages are in gentoo/usr/portage/packages/"
