@@ -1,0 +1,2 @@
+CFLAGS="-Ofast -pipe -funroll-loops -floop-block -floop-interchange -floop-strip-mine -ftree-loop-distribution"
+CXXFLAGS="${CFLAGS}"
