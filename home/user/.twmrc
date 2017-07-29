@@ -6,7 +6,7 @@ NoGrabServer
 BorderWidth 1
 NoHighlight
 ShowIconManager
-IconManagerGeometry "3840+0-18" 20
+IconManagerGeometry "3840+0-18" 25
 IconifyByUnmapping
 FramePadding 1
 TitleButtonBorderWidth 0
