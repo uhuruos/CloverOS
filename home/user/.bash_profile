@@ -1,5 +1,5 @@
 if [ -z "$DISPLAY" ]; then
-    echo "WM Options: (y) Default (i) i3 (a) Awesome (o) Openbox (e) Enlightenment (k) KDE (m) MATE (x) XFCE (l) LXDE (f) Fluxbox (d) dwm (w) icewm"
+    echo "WM Options: (y) Default (i) i3 (a) Awesome (o) Openbox (e) Enlightenment (k) KDE (m) MATE (x) XFCE (l) LXDE (f) Fluxbox (d) dwm (w) icewm (m) windowmaker"
     read -erp "Start X? [y/n] " -n 1 choice
     declare -A wms
     declare -A wmspkg
@@ -17,6 +17,7 @@ if [ -z "$DISPLAY" ]; then
     wms[f]=fluxbox
     wms[d]=dwm
     wms[w]=icewm
+    wms[m]=wmaker
     wmpkgs[y]=twm
     wmspkg[Y]=twm
     wmspkg[i]=i3-gaps
@@ -30,6 +31,7 @@ if [ -z "$DISPLAY" ]; then
     wmspkg[f]=fluxbox
     wmspkg[d]=dwm
     wmspkg[w]=icewm
+    wmspkg[m]=windowmaker
     wmspost[y]="feh --bg-max wallpaper.png & xbindkeys"
     wmspost[Y]="feh --bg-max wallpaper.png & xbindkeys"
     wmspost[i]="feh --bg-max wallpaper.png & xbindkeys"
@@ -43,6 +45,7 @@ if [ -z "$DISPLAY" ]; then
     wmspost[f]="feh --bg-max wallpaper.png & xbindkeys"
     wmspost[d]=""
     wmspost[w]=""
+    wmspost[m]=""
     if [ -n "${wms[$choice] + 1}" ]; then
         if [ ! -f /usr/bin/${wms[$choice]} ]; then
             echo
