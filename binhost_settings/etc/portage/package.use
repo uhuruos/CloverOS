@@ -1,4 +1,7 @@
 #preference
+dev-java/icedtea:7 -sunec
+net-p2p/mldonkey bittorrent gnutella gtk magic fasttrack
+media-sound/qmmp alsa mad vorbis aac analyzer bs2b cdda cover crossfade cue curl enca ffmpeg flac game ladspa lyrics midi modplug musepack notifier opus projectm scrobbler sid sndfile soxr stereo tray wavpack
 app-shells/bash plugins
 dev-python/django-two-factor-auth yubikey
 app-admin/keepassxc yubikey
@@ -139,7 +142,7 @@ net-p2p/qbittorrent geoip webui
 media-gfx/gimp exif pdf tiff lcms curl
 net-fs/nfs-utils nfsv41
 net-irc/hexchat plugin-sysinfo
-net-fs/cifs-utils -acl -ads
+net-fs/cifs-utils -acl -ads -caps-ng
 media-sound/mpd sqlite alsa bzip2 curl ffmpeg fifo flac glib icu id3tag inotify mad network ogg opus tcpd unicode vorbis adplug ao audiofile cdio expat faad fluidsynth gme lame libsamplerate libsoxr mikmod mms modplug mp4v2 mpg123 musepack pipe recorder sid sndfile soundcloud twolame wavpack wildmidi zip libmpdclient
 media-sound/flacon aac opus vorbis qt5 flac mac mp3 mp4 ogg replaygain tta wavpack
 app-text/tesseract tiff
@@ -1132,3 +1135,9 @@ sys-apps/dbus X
 # required by app-editors/neovim-0.2.0::gentoo
 # required by neovim (argument)
 >=dev-lua/lpeg-1.0.1 luajit
+# required by app-text/llpp-26b::gentoo
+# required by llpp (argument)
+>=dev-ml/lablgl-1.05-r1 glut
+# required by net-p2p/mldonkey-3.1.5-r1::gentoo[gtk]
+# required by net-p2p/mldonkey (argument)
+>=dev-ml/lablgtk-2.18.5 svg

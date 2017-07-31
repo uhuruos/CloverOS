@@ -331,3 +331,5 @@ media-plugins/vapoursynth-cnr2
 =media-libs/stk-4.5.1 ~amd64
 # required by media-plugins/calf:0 (argument)
 =media-plugins/calf-0.0.60-r1 ~amd64
+# required by soulseek-qt (argument)
+=net-p2p/soulseek-qt-20160117 ~amd64

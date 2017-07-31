@@ -43,6 +43,7 @@ app-editors/neovim
 app-editors/pluma
 app-editors/vim
 app-editors/xemacs
+app-emulation/diskimage-builder
 app-emulation/open-vm-tools
 app-emulation/qemu
 app-emulation/virt-manager
@@ -69,6 +70,7 @@ app-misc/recoll
 app-misc/screenfetch
 app-misc/srm
 app-misc/tmux
+app-misc/toilet
 app-misc/wipe
 app-office/calligra
 app-office/libreoffice
@@ -100,7 +102,7 @@ app-text/zathura-cb
 app-text/zathura-pdf-mupdf
 dev-games/ogre
 dev-haskell/haskell-platform
-dev-java/icedtea-bin:8
+dev-java/icedtea:7
 dev-java/icedtea:8
 dev-lang/php
 dev-lang/python
@@ -113,6 +115,7 @@ dev-python/potr
 dev-python/virtualenv
 dev-qt/qt-creator
 dev-util/bless
+dev-util/catalyst
 dev-util/ccache
 dev-util/dialog
 dev-util/geany
@@ -129,6 +132,7 @@ games-emulation/desmume
 games-emulation/dgen-sdl
 games-emulation/dolphin
 games-emulation/dosbox
+games-emulation/fakenes
 games-emulation/generator
 games-emulation/gfceux
 games-emulation/higan
@@ -503,6 +507,7 @@ media-sound/mpdas
 media-sound/ncmpcpp
 media-sound/pianobar
 media-sound/qjackctl
+media-sound/qmmp
 media-sound/ripperx
 media-sound/rosegarden
 media-sound/sexypsf
@@ -587,6 +592,8 @@ net-misc/throttle
 net-misc/whois
 net-misc/youtube-dl
 net-misc/zssh
+net-news/liferea
+net-news/newsbeuter
 net-nntp/pan
 net-p2p/amule
 net-p2p/bitcoin-qt
@@ -598,6 +605,7 @@ net-p2p/ncdc
 net-p2p/nicotine+
 net-p2p/qbittorrent
 net-p2p/rtorrent
+net-p2p/soulseek-qt
 net-p2p/transmission
 net-vpn/i2p
 net-vpn/logmein-hamachi
@@ -614,6 +622,7 @@ sci-mathematics/octave
 sci-visualization/gnuplot
 sys-apps/dmidecode
 sys-apps/flatpak
+sys-apps/hwinfo
 sys-apps/idle3-tools
 sys-apps/iproute2
 sys-apps/kexec-tools
@@ -622,6 +631,7 @@ sys-apps/lshw
 sys-apps/mlocate
 sys-apps/paludis
 sys-apps/pv
+sys-apps/rng-tools
 sys-apps/smartmontools
 sys-apps/usermode-utilities
 sys-auth/pam_yubico
