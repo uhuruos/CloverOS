@@ -1,6 +1,4 @@
 #!/bin/bash
-enable -f sleep sleep
-
 cpulasttotal=0
 cpulastidle=0
 
