@@ -18,7 +18,7 @@ cat << EOF | chroot .
 
 emerge-webrsync
 
-rmdir /etc/portage/package.use
+rm -R /etc/portage/package.use
 wget https://gitgud.io/cloveros/cloveros/raw/master/binhost_settings/etc/portage/package.use -O /etc/portage/package.use
 wget https://gitgud.io/cloveros/cloveros/raw/master/binhost_settings/etc/portage/package.env -O /etc/portage/package.env
 wget https://gitgud.io/cloveros/cloveros/raw/master/binhost_settings/etc/portage/package.keywords -O /etc/portage/package.keywords
