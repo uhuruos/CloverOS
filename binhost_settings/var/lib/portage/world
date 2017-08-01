@@ -621,7 +621,6 @@ sci-electronics/eagle
 sci-mathematics/octave
 sci-visualization/gnuplot
 sys-apps/dmidecode
-sys-apps/flatpak
 sys-apps/hwinfo
 sys-apps/idle3-tools
 sys-apps/iproute2
@@ -685,6 +684,7 @@ www-client/w3m
 www-misc/fcgiwrap
 www-plugins/adobe-flash
 www-servers/nginx
+www-servers/onionshare
 x11-apps/mesa-progs
 x11-apps/xbacklight
 x11-apps/xev

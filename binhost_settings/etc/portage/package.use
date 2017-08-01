@@ -1,8 +1,9 @@
 #preference
+xfce-base/thunar dbus
+app-i18n/fcitx dbus
 dev-java/icedtea:7 -sunec
 net-p2p/mldonkey bittorrent gnutella gtk magic fasttrack
 media-sound/qmmp alsa mad vorbis aac analyzer bs2b cdda cover crossfade cue curl enca ffmpeg flac game ladspa lyrics midi modplug musepack notifier opus projectm scrobbler sid sndfile soxr stereo tray wavpack
-app-shells/bash plugins
 dev-python/django-two-factor-auth yubikey
 app-admin/keepassxc yubikey
 app-admin/passwordsafe yubikey -minimal
@@ -125,7 +126,6 @@ sys-fs/zfs-kmod -custom-cflags
 dev-db/sqlite secure-delete
 media-libs/phonon -vlc
 www-client/firefox -wifi pgo hwaccel system-jpeg system-cairo system-harfbuzz system-icu system-libevent system-libvpx system-sqlite system-cairo
-media-gfx/digikam video
 media-sound/sox alsa openmp png encode flac id3tag ladspa mad ogg opus sndfile twolame wavpack
 media-libs/libsamplerate sndfile
 media-libs/gd truetype fontconfig
@@ -230,6 +230,7 @@ x11-libs/libXtst abi_x86_32
 x11-proto/recordproto abi_x86_32
 
 #required
+dev-libs/glib dbus
 app-crypt/gcr gtk
 dev-libs/boost icu nls
 dev-libs/libdbusmenu gtk3 abi_x86_64
@@ -238,7 +239,6 @@ net-nds/openldap sasl
 media-libs/libsdl2 gles
 sci-libs/hdf5 -threads
 dev-games/mygui -opengl
-dev-libs/glib dbus
 dev-lang/luajit lua52compat
 dev-libs/libxml2 python
 dev-lang/python sqlite
