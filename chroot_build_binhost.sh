@@ -26,6 +26,11 @@ wget https://gitgud.io/cloveros/cloveros/raw/master/binhost_settings/etc/portage
 mkdir /etc/portage/env
 wget https://gitgud.io/cloveros/cloveros/raw/master/binhost_settings/etc/portage/env/{no-lto,no-lto-graphite,no-lto-o3,no-lto-ofast,no-o3,no-ofast,size} -P /etc/portage/env/
 
+echo "games-fps/urbanterror-data Q3AEULA-20000111
+games-fps/quake3-data Q3AEULA
+media-video/makemkv MakeMKV-EULA
+www-plugins/adobe-flash AdobeFlash-11.x" > /etc/portage/package.license
+
 CFLAGS="-Ofast -mssse3 -pipe -flto=8 -funroll-loops" emerge gcc
 
 emerge -uvDN world $(curl https://gitgud.io/cloveros/cloveros/raw/master/binhost_settings/var/lib/portage/world)
