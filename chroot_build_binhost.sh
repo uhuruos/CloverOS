@@ -31,7 +31,7 @@ CFLAGS="-Ofast -mssse3 -pipe -flto=8 -funroll-loops" emerge gcc layman
 
 layman -a 0x4d4c bobwya deadbeef-overlay elementary eroen palemoon science steam-overlay torbrowser vapoursynth
 
-emerge -uvDN world $(curl https://gitgud.io/cloveros/cloveros/raw/master/binhost_settings/var/lib/portage/world)
+emerge -uvDN world $(curl https://gitgud.io/cloveros/cloveros/raw/master/binhost_settings/var/lib/portage/world | tr "\n" " ")
 
 layman -D bobwya elementary
 
