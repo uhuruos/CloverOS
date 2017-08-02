@@ -29,8 +29,8 @@ mkdir /etc/portage/env
 wget https://gitgud.io/cloveros/cloveros/raw/master/binhost_settings/etc/portage/env/{no-lto,no-lto-graphite,no-lto-o3,no-lto-ofast,no-o3,no-ofast,size} -P /etc/portage/env/
 wget https://gitgud.io/cloveros/cloveros/raw/master/binhost_settings/var/lib/portage/world -O /var/lib/portage/world
 
-CFLAGS="-O2 -pipe" emerge openssl openssh
-CFLAGS="-O2 -pipe" emerge gcc
+CFLAGS="-Ofast -mssse3 -pipe -flto=8 -funroll-loops" emerge gcc
+emerge openssl openssh
 emerge layman mesa
 
 yes | layman -a 0x4d4c bobwya deadbeef-overlay elementary eroen palemoon steam-overlay torbrowser vapoursynth
