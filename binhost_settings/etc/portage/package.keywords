@@ -8,6 +8,7 @@ app-emulation/virtualbox-modules
 app-emulation/virtualbox-guest-additions
 app-emulation/virtualbox-additions
 =dev-util/kbuild-0.1.9998_pre20131130-r1
+=sys-libs/glibc-2.24-r3
 
 #qt5, remove when stable is qt5
 media-gfx/librecad
