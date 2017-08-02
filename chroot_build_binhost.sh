@@ -31,6 +31,9 @@ wget https://gitgud.io/cloveros/cloveros/raw/master/binhost_settings/var/lib/por
 CFLAGS="-Ofast -mssse3 -pipe -flto=8 -funroll-loops" emerge gcc
 emerge openssl openssh
 USE="-vaapi" emerge mesa
+emerge genkernel gentoo-sources
+wget https://liquorix.net/sources/4.9/config.amd64
+genkernel --kernel-config=config.amd64 all
 
 emerge layman
 layman -S
