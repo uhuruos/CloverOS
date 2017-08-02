@@ -7,6 +7,7 @@ app-emulation/virtualbox
 app-emulation/virtualbox-modules
 app-emulation/virtualbox-guest-additions
 app-emulation/virtualbox-additions
+=dev-util/kbuild-0.1.9998_pre20131130-r1
 
 #qt5, remove when stable is qt5
 media-gfx/librecad
@@ -101,6 +102,7 @@ sci-libs/libtifiles2
 sci-libs/libticables2
 #certbot
 dev-python/pyrfc3339
+dev-python/parsedatetime
 #maim
 x11-misc/slop
 #certbot
