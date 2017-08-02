@@ -18,6 +18,7 @@ cat << EOF | chroot .
 
 emerge-webrsync
 
+rm /var/lib/portage/world
 rm -R /etc/portage/package.use
 wget https://gitgud.io/cloveros/cloveros/raw/master/binhost_settings/etc/portage/package.use -O /etc/portage/package.use
 wget https://gitgud.io/cloveros/cloveros/raw/master/binhost_settings/etc/portage/package.env -O /etc/portage/package.env
@@ -26,12 +27,13 @@ wget https://gitgud.io/cloveros/cloveros/raw/master/binhost_settings/etc/portage
 wget https://gitgud.io/cloveros/cloveros/raw/master/binhost_settings/etc/portage/make.conf -O /etc/portage/make.conf
 mkdir /etc/portage/env
 wget https://gitgud.io/cloveros/cloveros/raw/master/binhost_settings/etc/portage/env/{no-lto,no-lto-graphite,no-lto-o3,no-lto-ofast,no-o3,no-ofast,size} -P /etc/portage/env/
+wget https://gitgud.io/cloveros/cloveros/raw/master/binhost_settings/var/lib/portage/world -O /var/lib/portage/world
 
 CFLAGS="-Ofast -mssse3 -pipe -flto=8 -funroll-loops" emerge gcc layman
 
 layman -a 0x4d4c bobwya deadbeef-overlay elementary eroen palemoon science steam-overlay torbrowser vapoursynth
 
-bash -c "emerge -uvDN world $(curl https://gitgud.io/cloveros/cloveros/raw/master/binhost_settings/var/lib/portage/world)"
+emerge -uvDN world
 
 layman -D bobwya elementary
 
