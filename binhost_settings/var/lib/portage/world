@@ -44,6 +44,7 @@ app-editors/neovim
 app-editors/pluma
 app-editors/vim
 app-editors/xemacs
+app-emacs/emms
 app-emulation/diskimage-builder
 app-emulation/open-vm-tools
 app-emulation/qemu

@@ -94,6 +94,7 @@ sci-calculators/calcoo
 net-p2p/soulseek-qt
 sys-fs/exfat-nofuse **
 www-servers/onionshare
+app-emacs/emms
 
 #dependencies
 #tiemu
@@ -303,6 +304,7 @@ media-plugins/vapoursynth-vcmod
 media-plugins/vapoursynth-bilateral
 media-plugins/vapoursynth-vstaambk
 media-plugins/vapoursynth-cnr2
+
 # required by pam_yubico (argument)
 =sys-auth/pam_yubico-2.24 ~amd64
 # required by sys-auth/ykpers-1.18.0::gentoo
