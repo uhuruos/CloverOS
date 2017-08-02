@@ -7,7 +7,6 @@ app-admin/logrotate
 app-admin/mcelog
 app-admin/passwordsafe
 app-admin/sudo
-app-admin/syslog-ng
 app-admin/testdisk
 app-arch/advancecomp
 app-arch/cabextract

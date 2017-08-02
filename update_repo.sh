@@ -1,5 +1,5 @@
 emerge --sync
-emerge -uvDN --with-bdeps=y --buildpkg @world
+emerge -uvDN --with-bdeps=y --buildpkg @world @systemd
 emerge @preserved-rebuild
 emerge --depclean
 
