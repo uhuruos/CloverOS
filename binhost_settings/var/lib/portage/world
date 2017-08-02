@@ -3,9 +3,11 @@ app-admin/cpulimit
 app-admin/hardinfo
 app-admin/hddtemp
 app-admin/keepassxc
+app-admin/logrotate
 app-admin/mcelog
 app-admin/passwordsafe
 app-admin/sudo
+app-admin/syslog-ng
 app-admin/testdisk
 app-arch/advancecomp
 app-arch/cabextract
@@ -103,8 +105,6 @@ app-text/zathura-cb
 app-text/zathura-pdf-mupdf
 dev-games/ogre
 dev-haskell/haskell-platform
-dev-java/icedtea:7
-dev-java/icedtea:8
 dev-lang/php
 dev-lang/python
 dev-lang/rust
