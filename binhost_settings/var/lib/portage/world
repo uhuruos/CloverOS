@@ -84,6 +84,7 @@ app-portage/gentoolkit
 app-portage/layman
 app-portage/pfl
 app-portage/porthole
+app-portage/repoman
 app-shells/bash-completion
 app-shells/dash
 app-shells/fish
@@ -621,6 +622,7 @@ sci-electronics/eagle
 sci-mathematics/octave
 sci-visualization/gnuplot
 sys-apps/dmidecode
+sys-apps/flatpak
 sys-apps/hwinfo
 sys-apps/idle3-tools
 sys-apps/iproute2

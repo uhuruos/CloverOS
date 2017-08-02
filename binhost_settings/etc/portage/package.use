@@ -1,4 +1,6 @@
 #preference
+sys-apps/smartmontools -minimal
+pantheon-base/plank dbus
 xfce-base/thunar dbus
 app-i18n/fcitx dbus
 dev-java/icedtea:7 -sunec
@@ -145,7 +147,6 @@ net-irc/hexchat plugin-sysinfo
 net-fs/cifs-utils -acl -ads -caps-ng
 media-sound/mpd sqlite alsa bzip2 curl ffmpeg fifo flac glib icu id3tag inotify mad network ogg opus tcpd unicode vorbis adplug ao audiofile cdio expat faad fluidsynth gme lame libsamplerate libsoxr mikmod mms modplug mp4v2 mpg123 musepack pipe recorder sid sndfile soundcloud twolame wavpack wildmidi zip libmpdclient
 media-sound/flacon aac opus vorbis qt5 flac mac mp3 mp4 ogg replaygain tta wavpack
-app-text/tesseract tiff
 media-sound/cmus ffmpeg alsa mad unicode aac ao cddb cdio cue discid examples flac mikmod modplug mp4 musepack opus vorbis wavpack wma zsh-completion
 media-sound/puddletag cover acoustid musicbrainz -quodlibet
 media-sound/streamripper vorbis
