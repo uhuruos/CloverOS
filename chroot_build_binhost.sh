@@ -1,5 +1,5 @@
 #!/bin/bash
-# not completely tested
+#almost working
 
 mkdir gentoo
 
@@ -31,7 +31,7 @@ wget https://gitgud.io/cloveros/cloveros/raw/master/binhost_settings/var/lib/por
 
 CFLAGS="-O2 -pipe" emerge openssl openssh
 CFLAGS="-O2 -pipe" emerge gcc
-emerge layman
+emerge layman mesa
 
 yes | layman -a 0x4d4c bobwya deadbeef-overlay elementary eroen palemoon steam-overlay torbrowser vapoursynth
 
