@@ -1,5 +1,5 @@
 #!/bin/bash
-# untested rough draft
+# not completely tested
 
 mkdir gentoo
 
