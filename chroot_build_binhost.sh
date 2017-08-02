@@ -30,7 +30,8 @@ wget https://gitgud.io/cloveros/cloveros/raw/master/binhost_settings/etc/portage
 wget https://gitgud.io/cloveros/cloveros/raw/master/binhost_settings/var/lib/portage/world -O /var/lib/portage/world
 
 CFLAGS="-O2 -pipe" emerge openssl openssh
-CFLAGS="-O2 -pipe" emerge gcc layman
+CFLAGS="-O2 -pipe" emerge gcc
+emerge layman
 
 yes | layman -a 0x4d4c bobwya deadbeef-overlay elementary eroen palemoon steam-overlay torbrowser vapoursynth
 
