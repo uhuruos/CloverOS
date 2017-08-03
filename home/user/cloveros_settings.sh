@@ -79,7 +79,7 @@ case "$choice" in
 			read -erp "Copy over binhost build settings? (USE flags: /etc/portage/make.conf, /etc/portage/package.use/package.use) [y/n]" -n 1 binhostyn
 			if [[ $binhostyn != "y" ]]; then
 				sudo wget $gitprefix/binhost_settings/etc/portage/package.use -O /etc/portage/package.use/package.use
-				sudo sh -c 'curl -s $gitprefix/binhost_settings/etc/portage/make.conf | grep '^USE=' >> /etc/portage/make.conf
+				sudo sh -c 'curl -s $gitprefix/binhost_settings/etc/portage/make.conf | grep '^USE=' >> /etc/portage/make.conf'
 				sudo sed -i 's/ACCEPT_KEYWORDS="~amd64"/#ACCEPT_KEYWORDS="~amd64"/' /etc/portage/make.conf
 			fi
 		else
