@@ -29,11 +29,14 @@ wget https://gitgud.io/cloveros/cloveros/raw/master/binhost_settings/etc/portage
 wget https://gitgud.io/cloveros/cloveros/raw/master/binhost_settings/var/lib/portage/world -O /var/lib/portage/world
 
 CFLAGS="-Ofast -mssse3 -pipe -flto=8 -funroll-loops" emerge gcc
+binutils-config --linker ld.gold
 emerge openssl openssh
 USE="-vaapi" emerge mesa
 emerge genkernel gentoo-sources
 wget https://liquorix.net/sources/4.9/config.amd64
+binutils-config --linker ld.bfd
 genkernel --kernel-config=config.amd64 all
+binutils-config --linker ld.gold
 
 emerge layman
 layman -S
