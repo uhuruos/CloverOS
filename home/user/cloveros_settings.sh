@@ -79,7 +79,7 @@ case "$choice" in
 			if [[ $binhostyn == "y" || $binhostyn == "Y" ]]; then
 				sudo wget $gitprefix/binhost_settings/etc/portage/package.use -O /etc/portage/package.use/package.use
 				sudo sh -c 'curl -s $gitprefix/binhost_settings/etc/portage/make.conf | grep '^USE=' >> /etc/portage/make.conf'
-				sudo sed -i 's/ACCEPT_KEYWORDS="~amd64"/#ACCEPT_KEYWORDS="~amd64"/' /etc/portage/make.conf
+				sudo sed -i 's/^ACCEPT_KEYWORDS="~amd64"/#ACCEPT_KEYWORDS="~amd64"/' /etc/portage/make.conf
 			fi
 		else
 			sudo sed -i 's/EMERGE_DEFAULT_OPTS="--keep-going=y --autounmask-write=y --jobs=2"/EMERGE_DEFAULT_OPTS="--keep-going=y --autounmask-write=y --jobs=2 -G"/' /etc/portage/make.conf
