@@ -74,10 +74,9 @@ case "$choice" in
 	5)
 		if grep -q 'EMERGE_DEFAULT_OPTS="--keep-going=y --autounmask-write=y --jobs=2 -G"' /etc/portage/make.conf; then
 			sudo sed -i 's/EMERGE_DEFAULT_OPTS="--keep-going=y --autounmask-write=y --jobs=2 -G"/EMERGE_DEFAULT_OPTS="--keep-going=y --autounmask-write=y --jobs=2"/' /etc/portage/make.conf
-			echo -e "\nemerge will now install from source."
-			echo -e "\n"
+			echo -e "\nemerge will now install from source.\n"
 			read -erp "Copy over binhost build settings? (USE flags: /etc/portage/make.conf, /etc/portage/package.use/package.use) [y/n]" -n 1 binhostyn
-			if [[ $binhostyn != "y" ]]; then
+			if [[ $binhostyn == "y" || $binhostyn == "Y" ]]; then
 				sudo wget $gitprefix/binhost_settings/etc/portage/package.use -O /etc/portage/package.use/package.use
 				sudo sh -c 'curl -s $gitprefix/binhost_settings/etc/portage/make.conf | grep '^USE=' >> /etc/portage/make.conf'
 				sudo sed -i 's/ACCEPT_KEYWORDS="~amd64"/#ACCEPT_KEYWORDS="~amd64"/' /etc/portage/make.conf
