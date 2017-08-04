@@ -36,10 +36,10 @@ case "$choice" in
 			echo 'FETCHCOMMAND_HTTPS="/home/'$USER'/curlcache.sh \"\${URI}\" \"\${DISTDIR}/\${FILE}\""' | sudo tee -a /etc/portage/make.conf
 			wget "$gitprefix"/home/user/curlcache.sh -O ~/curlcache.sh
 			chmod +x ~/curlcache.sh
-			echo -e "\nPackage validation enabled."
+			echo -e "\nPackage validation enabled. (/etc/portage/make.conf)"
 		else
 			sudo sed -i '/FETCHCOMMAND_HTTPS/d' /etc/portage/make.conf
-			echo -e "\nPackage validation disabled."
+			echo -e "\nPackage validation disabled. (/etc/portage/make.conf)"
 		fi
 		;;
 
@@ -49,14 +49,14 @@ case "$choice" in
 		done
 		read -erp "Select mirror: " -n 1 choicemirror
 		sudo sed -i "s@PORTAGE_BINHOST=\".*\"@PORTAGE_BINHOST=\"https://${mirrors[$choicemirror-1]}\"@" /etc/portage/make.conf
-		echo -e "\nMirror changed to: ${mirrors[choicemirror-1]}."
+		echo -e "\nMirror changed to: ${mirrors[choicemirror-1]}. (/etc/portage/make.conf)"
 		;;
 
 	3)
 		grep " \[" /proc/asound/cards
 		read -erp "Select the audio device to become default: " -n 1 choiceaudio
 		echo -e "defaults.pcm.card ${choiceaudio}\ndefaults.ctl.card ${choiceaudio}" > ~/.asoundrc
-		echo -e "\nAudio device ${choiceaudio} is now the default for ALSA programs."
+		echo -e "\nAudio device ${choiceaudio} is now the default for ALSA programs. (~/.asoundrc)"
 		;;
 
 	4)
@@ -69,13 +69,13 @@ case "$choice" in
 		sudo grub-mkconfig -o /boot/grub/grub.cfg
 		sudo sed -i "s/set timeout=5/set timeout=0/" /boot/grub/grub.cfg
 		rm kernel.tar.xz kernel.tar.xz.asc modules.tar.xz modules.tar.xz.asc
-		echo -e "\nKernel upgraded."
+		echo -e "\nKernel upgraded. (/boot/)"
 		;;
 
 	5)
 		if grep -q 'EMERGE_DEFAULT_OPTS="--keep-going=y --autounmask-write=y --jobs=2 -G"' /etc/portage/make.conf; then
 			sudo sed -i 's/EMERGE_DEFAULT_OPTS="--keep-going=y --autounmask-write=y --jobs=2 -G"/EMERGE_DEFAULT_OPTS="--keep-going=y --autounmask-write=y --jobs=2"/' /etc/portage/make.conf
-			echo -e "\nemerge will now install from source.\n"
+			echo -e "\nemerge will now install from source. (/etc/portage/make.conf)\n"
 			read -erp "Copy over binhost build settings? (USE flags: /etc/portage/make.conf, /etc/portage/package.use/package.use) [y/n]" -n 1 binhostyn
 			if [[ $binhostyn == "y" || $binhostyn == "Y" ]]; then
 				sudo wget $gitprefix/binhost_settings/etc/portage/package.use -O /etc/portage/package.use/package.use
@@ -85,7 +85,7 @@ case "$choice" in
 		else
 			sudo sed -i 's/EMERGE_DEFAULT_OPTS="--keep-going=y --autounmask-write=y --jobs=2"/EMERGE_DEFAULT_OPTS="--keep-going=y --autounmask-write=y --jobs=2 -G"/' /etc/portage/make.conf
 			sudo sed -i 's/^#ACCEPT_KEYWORDS="~amd64"/ACCEPT_KEYWORDS="~amd64"/' /etc/portage/make.conf
-			echo -e "\nemerge will now install from binary."
+			echo -e "\nemerge will now install from binary. (/etc/portage/make.conf)"
 		fi
 		;;
 
@@ -105,7 +105,7 @@ case "$choice" in
 		sed -i "s@/home/user/@/home/$USER/@" .rtorrent.rc
 		mkdir .mpv
 		wget -q "$gitprefix"/home/user/.mpv/config -P .mpv
-		echo -e "\nConfiguration updated to new CloverOS defaults, old settings are moved to ~/$backupdir/"
+		echo -e "\nConfiguration updated to new CloverOS defaults, old settings are moved to ~/$backupdir/ (~)"
 		;;
 
 	7)
@@ -120,12 +120,12 @@ case "$choice" in
 		echo -e "Available timezones: $(ls -1 /usr/share/zoneinfo/ | tr "\n" " ") \n"
 		read -erp "Select a timezone: " timezone
 		sudo cp /usr/share/zoneinfo/${timezone} /etc/localtime
-		echo -e "\nTimezone set to ${timezone}."
+		echo -e "\nTimezone set to ${timezone}. (/etc/localtime)"
 		;;
 
 	9)
 		sudo rm -Rf /usr/portage/packages/* /tmp/curlcache/* /usr/portage/distfiles/* /var/tmp/portage/*
-		echo -e "\nPackage cache cleared."
+		echo -e "\nPackage cache cleared. (/usr/portage/packages/, /tmp/curlcache/, /usr/portage/distfiles/, /var/tmp/portage/)"
 		;;
 
 	0)
@@ -133,7 +133,7 @@ case "$choice" in
 		rm cloveros_settings.sh
 		wget "$gitprefix"/home/user/cloveros_settings.sh
 		chmod +x cloveros_settings.sh
-		echo -e "\ncloveros_settings.sh is now updated."
+		echo -e "\ncloveros_settings.sh is now updated. (~/cloveros_settings.sh)"
 		;;
 
 	t)
