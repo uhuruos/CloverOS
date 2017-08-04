@@ -19,7 +19,8 @@ echo "1) Enable/disable package signing validation
 7) Sync time
 8) Set timezone
 9) Clean binary cache
-0) Update cloveros_settings.sh"
+0) Update cloveros_settings.sh
+t) Enable tap to click on touchpad"
 
 read -erp "Select option: " -n 1 choice
 echo
@@ -134,6 +135,11 @@ case "$choice" in
 		chmod +x cloveros_settings.sh
 		echo -e "\ncloveros_settings.sh is now updated."
 		;;
+
+	t)
+		deviceid=$(xinput | grep Synaptics | awk '{print $6}' | sed 's/id=//')
+		tappingid=$(xinput list-props $deviceid | grep Tapping\ Enabled\ \( | awk '{print $4}' | sed -r 's/\((.*)\):/\1/')
+		echo -e "\nRun the following to enable Tap to Click: xinput set-prop $deviceid $tappingid 1"
 
 	*)
 		echo "Invalid option: '$choice'" >&2

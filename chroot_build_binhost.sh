@@ -42,11 +42,11 @@ emerge layman
 layman -S
 yes | layman -a 0x4d4c bobwya deadbeef-overlay elementary eroen palemoon steam-overlay torbrowser vapoursynth
 
-emerge -uvDN world
+emerge -uvDN @world
 
 layman -D bobwya elementary
 
-emerge -uvDN world
+emerge -uvDN @world
 
 quickpkg --include-unmodified-config=y "*/*"
 
