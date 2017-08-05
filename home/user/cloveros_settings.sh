@@ -152,7 +152,7 @@ case "$choice" in
 		;;
 
 	n)
-		echo -e "\nRun these commands as root:\n"
+		echo -e "Run these commands as root:\n"
 		echo "emerge nvidia-drivers"
 		echo "eselect opengl set nvidia"
 		echo 'echo " Section "Device"
