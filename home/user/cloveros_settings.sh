@@ -20,7 +20,8 @@ echo "1) Enable/disable package signing validation
 8) Set timezone
 9) Clean binary cache
 0) Update cloveros_settings.sh
-t) Enable tap to click on touchpad"
+t) Enable tap to click on touchpad
+g) Add yourself to the games group"
 
 read -erp "Select option: " -n 1 choice
 echo
@@ -141,6 +142,10 @@ case "$choice" in
 		tappingid=$(xinput list-props $deviceid | grep Tapping\ Enabled\ \( | awk '{print $4}' | sed -r 's/\((.*)\):/\1/')
 		echo -e "\nEnable Tap to Click: xinput set-prop $deviceid $tappingid 1"
 		echo -e "Disable Tap to Click: xinput set-prop $deviceid $tappingid 0"
+		;;
+
+	g)
+		sudo gpasswd -a $USER games
 		;;
 
 	*)
