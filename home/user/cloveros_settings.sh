@@ -21,7 +21,7 @@ echo "1) Enable/disable package signing validation
 9) Clean binary cache
 0) Update cloveros_settings.sh
 t) Enable tap to click on touchpad
-g) Add yourself to the games group
+g) Add yourself to the games group (Needed to run games in /usr/games/bin/)
 n) Install proprietary Nvidia drivers"
 
 read -erp "Select option: " -n 1 choice
