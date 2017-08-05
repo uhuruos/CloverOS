@@ -1,4 +1,6 @@
 #preference
+app-text/calibre -udisks
+x11-libs/libfm udisks
 sys-apps/smartmontools -minimal
 pantheon-base/plank dbus
 xfce-base/thunar dbus

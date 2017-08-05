@@ -1,19 +1,19 @@
 #preference, remove when stable is bumped up
-media-sound/mpd
-net-misc/youtube-dl
-net-irc/weechat
-media-gfx/gimp
-app-emulation/virtualbox
+media-sound/mpd # file support/sacd fixes
+net-misc/youtube-dl # stable literally never works
+net-irc/weechat # stable is ancient
+media-gfx/gimp # 2.9 has much more features
+app-emulation/virtualbox # stable doesn't work
 app-emulation/virtualbox-modules
 app-emulation/virtualbox-guest-additions
 app-emulation/virtualbox-additions
 =dev-util/kbuild-0.1.9998_pre20131130-r1
-=sys-libs/glibc-2.24-r3
+=sys-libs/glibc-2.24-r3 # accidentally upgraded glibc
+dev-qt/qt-creator # stable doesn't build anymore
 
-#qt5, remove when stable is qt5
+#remove when stable is qt5
 media-gfx/librecad
 media-sound/rosegarden
-sci-mathematics/rstudio
 kde-apps/k3b
 media-sound/qjackctl
 
@@ -305,6 +305,7 @@ media-plugins/vapoursynth-bilateral
 media-plugins/vapoursynth-vstaambk
 media-plugins/vapoursynth-cnr2
 
+#yubikey stuff
 # required by pam_yubico (argument)
 =sys-auth/pam_yubico-2.24 ~amd64
 # required by sys-auth/ykpers-1.18.0::gentoo

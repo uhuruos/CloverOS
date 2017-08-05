@@ -10,7 +10,6 @@ app-admin/sudo
 app-admin/testdisk
 app-arch/advancecomp
 app-arch/cabextract
-app-arch/defluff
 app-arch/engrampa
 app-arch/file-roller
 app-arch/makeself
@@ -45,6 +44,7 @@ app-editors/pluma
 app-editors/vim
 app-editors/xemacs
 app-emacs/emms
+app-emacs/slime
 app-emulation/diskimage-builder
 app-emulation/open-vm-tools
 app-emulation/qemu
@@ -57,6 +57,7 @@ app-emulation/winetricks
 app-forensics/aide
 app-i18n/fcitx-anthy
 app-i18n/ibus
+app-laptop/laptop-mode-tools
 app-laptop/thinkfan
 app-misc/ckermit
 app-misc/colordiff
@@ -597,7 +598,6 @@ net-misc/zssh
 net-news/liferea
 net-news/newsbeuter
 net-nntp/pan
-net-p2p/amule
 net-p2p/deluge
 net-p2p/eiskaltdcpp
 net-p2p/freenet
@@ -634,6 +634,7 @@ sys-apps/paludis
 sys-apps/pv
 sys-apps/rng-tools
 sys-apps/smartmontools
+sys-apps/udevil
 sys-apps/usermode-utilities
 sys-auth/pam_yubico
 sys-block/gparted
@@ -645,6 +646,7 @@ sys-devel/crossdev
 sys-devel/distcc
 sys-devel/gcc
 sys-devel/gdb
+sys-fs/bashmount
 sys-fs/cachefilesd
 sys-fs/cryptsetup
 sys-fs/ddrescue
@@ -691,6 +693,7 @@ x11-apps/mesa-progs
 x11-apps/xbacklight
 x11-apps/xev
 x11-apps/xhost
+x11-apps/xinput
 x11-apps/xkill
 x11-apps/xrandr
 x11-apps/xwininfo
@@ -720,6 +723,7 @@ x11-misc/xclip
 x11-misc/xdotool
 x11-misc/xfe
 x11-misc/xkeyboard-config
+x11-misc/xnee
 x11-misc/xscreensaver
 x11-misc/xsnow
 x11-plugins/wmfortune
