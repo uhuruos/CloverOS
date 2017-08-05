@@ -145,6 +145,7 @@ case "$choice" in
 		;;
 
 	g)
+		echo "sudo gpasswd -a $USER games"
 		sudo gpasswd -a $USER games
 		;;
 
