@@ -104,6 +104,8 @@ locale-gen
 eselect locale set en_US.utf8
 gpasswd -a $user audio
 gpasswd -a $user video
+groupadd games
+gpasswd -a $user games
 cd /home/$user/
 rm .bash_profile
 wget https://gitgud.io/cloveros/cloveros/raw/master/home/user/.bash_profile
