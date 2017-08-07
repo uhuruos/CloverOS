@@ -171,7 +171,7 @@ net-libs/stem
 media-libs/stk
 media-plugins/calf
 
-#groups
+#fonts
 media-fonts/lohit-gujarati
 media-fonts/fantasque-sans-mono
 media-fonts/lohit-marathi
@@ -218,6 +218,7 @@ media-fonts/ricty
 media-fonts/sophia-nubian
 media-fonts/viga
 
+#xfce plugins
 xfce-extra/xfce4-gvfs-mount
 xfce-extra/eatmonkey
 xfce-extra/xfce-theme-manager
@@ -226,6 +227,7 @@ xfce-extra/xfce4-indicator-plugin
 xfce-extra/multiload-nandhp
 xfce-extra/xfce4-composite-editor
 
+#vaporsynth plugins
 media-plugins/vapoursynth-vaguedenoiser
 media-plugins/vapoursynth-finesharp
 media-plugins/vapoursynth-bifrost
@@ -346,3 +348,93 @@ media-plugins/vapoursynth-cnr2
 # required by dev-python/django-two-factor-auth-1.3.0::gentoo[yubikey]
 # required by django-two-factor-auth (argument)
 =dev-python/django-otp-yubikey-0.3.3 ~amd64
+# required by pyhoca-gui (argument)
+=net-misc/pyhoca-gui-0.5.0.6 ~amd64
+# required by pyhoca-cli (argument)
+=net-misc/pyhoca-cli-0.5.0.3 ~amd64
+# required by net-misc/pyhoca-cli-0.5.0.3::gentoo
+# required by pyhoca-cli (argument)
+=net-misc/python-x2go-0.5.0.5 ~amd64
+
+#windowmaker plugins
+# required by wmmand (argument)
+=x11-plugins/wmmand-1.3.2-r1 ~amd64
+# required by wmbluecpu (argument)
+=x11-plugins/wmbluecpu-0.6 ~amd64
+# required by wmsystemtray (argument)
+=x11-plugins/wmsystemtray-1.4 ~amd64
+# required by x11-plugins/wmpeople-1.3::gentoo
+# required by wmpeople (argument)
+=net-mail/peephole-1.5 ~amd64
+# required by wmhdplop (argument)
+=x11-plugins/wmhdplop-0.9.10 ~amd64
+# required by wmbio (argument)
+=x11-plugins/wmbio-1.02 ~amd64
+# required by wmdiskmon (argument)
+=x11-plugins/wmdiskmon-0.0.2 ~amd64
+# required by wmmemfree (argument)
+=x11-plugins/wmmemfree-0.7-r2 ~amd64
+# required by wmcalendar (argument)
+=x11-plugins/wmcalendar-0.5.2-r1 ~amd64
+# required by wmmp3 (argument)
+=x11-plugins/wmmp3-0.12 ~amd64
+# required by wmpiki (argument)
+=x11-plugins/wmpiki-0.2.1 **
+# required by wmxkb (argument)
+=x11-plugins/wmxkb-1.2.2 ~amd64
+# required by wmlongrun (argument)
+=x11-plugins/wmlongrun-0.3.1 **
+# required by asapm (argument)
+=x11-plugins/asapm-3.1-r1 ~amd64
+# required by wmlife (argument)
+=x11-plugins/wmlife-1.0.1 ~amd64
+# required by wmrecord (argument)
+=x11-plugins/wmrecord-1.0.5.3-r1 **
+# required by wmgrabimage (argument)
+=x11-plugins/wmgrabimage-0.72-r1 ~amd64
+# required by wmmixer (argument)
+=x11-plugins/wmmixer-1.7 **
+# required by wmsvencd (argument)
+=x11-plugins/wmsvencd-0.5.0 **
+# required by wmwork (argument)
+=x11-plugins/wmwork-0.2.5 ~amd64
+# required by wmtime (argument)
+=x11-plugins/wmtime-1.4 ~amd64
+# required by wmcpu (argument)
+=x11-plugins/wmcpu-1.4 **
+# required by wmlaptop (argument)
+=x11-plugins/wmlaptop-1.4 ~amd64
+# required by wmsound (argument)
+=x11-plugins/wmsound-0.9.5-r1 **
+# required by wmjsql (argument)
+=x11-plugins/wmjsql-0.5 **
+# required by wmXName (argument)
+=x11-plugins/wmXName-0.1 **
+# required by wmgtemp (argument)
+=x11-plugins/wmgtemp-1.2 ~amd64
+# required by wmstickynotes (argument)
+=x11-plugins/wmstickynotes-0.2 ~amd64
+# required by wmcdplay (argument)
+=x11-plugins/wmcdplay-1.1 ~amd64
+# required by wmpeople (argument)
+=x11-plugins/wmpeople-1.3 **
+# required by wmrack (argument)
+=x11-plugins/wmrack-1.4 ~amd64
+# required by wmxres (argument)
+=x11-plugins/wmxres-1.2 ~amd64
+# required by wmmisc (argument)
+=x11-plugins/wmmisc-1.1 ~amd64
+# required by wmwave (argument)
+=x11-plugins/wmwave-0.4 **
+# required by wmacpimon (argument)
+=x11-plugins/wmacpimon-0.2.1 **
+# required by wmforkplop (argument)
+=x11-plugins/wmforkplop-0.9.3-r1 ~amd64
+# required by wmlpq (argument)
+=x11-plugins/wmlpq-0.2.1-r3 ~amd64
+# required by wmacpiload-ac (argument)
+=x11-plugins/wmacpiload-ac-0.2.0-r1 ~amd64
+# required by wmbatteries (argument)
+=x11-plugins/wmbatteries-0.1.3 **
+# required by wmping (argument)
+=x11-plugins/wmping-0.2.1 ~amd64
