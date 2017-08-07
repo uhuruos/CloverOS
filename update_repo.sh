@@ -14,10 +14,9 @@ cd /usr/portage/packages/s/
 EIX_LIMIT=0 eix --installed -F | grep -v "Available versions" | ansi2html > packages.html
 php website.php
 
-rm -Rf signatures
-mkdir signatures
-cd signatures
-ls -1 /usr/portage/packages/ | grep -Ev '(index.html|Packages)' | parallel mkdir
+cd /usr/portage/packages/s/signatures/
+rm -Rf /usr/portage/packages/s/signatures/*
+find /usr/portage/packages/ -type d | sed 's#/usr/portage/packages/##' | parallel mkdir
 find /usr/portage/packages/ -type f | sed 's#/usr/portage/packages/##' | pv -qB 1G | parallel gpg --armor --detach-sign --output {}.asc --sign /usr/portage/packages/{}
 
 chmod -R 755 /usr/portage/packages/
