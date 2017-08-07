@@ -1,15 +1,16 @@
 #preference, remove when stable is bumped up
 media-sound/mpd # file support/sacd fixes
-net-misc/youtube-dl # stable literally never works
+net-misc/youtube-dl # stable never works
 net-irc/weechat # stable is ancient
 media-gfx/gimp # 2.9 has much more features
-app-emulation/virtualbox # stable doesn't work
+=sys-libs/glibc-2.24-r3 # accidentally upgraded glibc
+dev-qt/qt-creator # stable doesn't build anymore
+net-p2p/retroshare # no gnome-keyring
+app-emulation/virtualbox # stable incompatible with current xorg version
 app-emulation/virtualbox-modules
 app-emulation/virtualbox-guest-additions
 app-emulation/virtualbox-additions
 =dev-util/kbuild-0.1.9998_pre20131130-r1
-=sys-libs/glibc-2.24-r3 # accidentally upgraded glibc
-dev-qt/qt-creator # stable doesn't build anymore
 
 #remove when stable is qt5
 media-gfx/librecad

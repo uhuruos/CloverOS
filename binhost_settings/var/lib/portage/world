@@ -610,6 +610,7 @@ net-p2p/mktorrent
 net-p2p/ncdc
 net-p2p/nicotine+
 net-p2p/qbittorrent
+net-p2p/retroshare
 net-p2p/rtorrent
 net-p2p/soulseek-qt
 net-p2p/transmission
