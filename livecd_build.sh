@@ -53,7 +53,7 @@ echo "$user:$userpassword" | chpasswd
 gpasswd -a $user wheel
 
 emerge -1 openssh openssl
-emerge -uvD world xorg-server twm feh aterm sudo xfe wpa_supplicant dash porthole firefox emacs gimp mpv smplayer rxvt-unicode filezilla engrampa p7zip zip rtorrent weechat linux-firmware alsa-utils zsh zsh-completions gentoo-zsh-completions inconsolata vlgothic liberation-fonts nano scrot xbindkeys slock gparted squashfs-tools os-prober
+emerge -uvD world xorg-server twm feh aterm sudo xfe wpa_supplicant dash porthole firefox emacs gimp mpv smplayer rxvt-unicode filezilla engrampa p7zip zip rtorrent weechat linux-firmware alsa-utils zsh zsh-completions gentoo-zsh-completions inconsolata vlgothic liberation-fonts nano scrot xbindkeys slock gparted squashfs-tools os-prober games-envd
 
 sed -i "s/# %wheel ALL=(ALL) NOPASSWD: ALL/%wheel ALL=(ALL) NOPASSWD: ALL/" /etc/sudoers
 sed -Ei "s@c([2-6]):2345:respawn:/sbin/agetty 38400 tty@#\0@" /etc/inittab
@@ -70,7 +70,6 @@ locale-gen
 eselect locale set en_US.utf8
 gpasswd -a $user audio
 gpasswd -a $user video
-groupadd games
 gpasswd -a $user games
 cd /home/$user/
 rm .bash_profile
