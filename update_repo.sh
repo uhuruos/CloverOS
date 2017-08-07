@@ -15,15 +15,10 @@ EIX_LIMIT=0 eix --installed -F | grep -v "Available versions" | ansi2html > pack
 php website.php
 
 rm -Rf signatures
-mkdir -p signatures/usr/portage/packages/
-cd signatures/usr/portage/packages/
-ls -1 /usr/portage/packages/ | parallel mkdir
-cd ../../../
-find /usr/portage/packages/ -type f | pv -qB 1G | parallel gpg --armor --detach-sign --output .{}.asc --sign {}
-mv usr/portage/packages/* .
-rm -Rf usr
-rmdir * */* &> /dev/null
-cd ..
+mkdir signatures
+cd signatures
+ls -1 /usr/portage/packages/ | grep -Ev '(index.html|Packages)' | parallel mkdir
+find /usr/portage/packages/ -type f | sed 's#/usr/portage/packages/##' | pv -qB 1G | parallel gpg --armor --detach-sign --output {}.asc --sign /usr/portage/packages/{}
 
 chmod -R 755 /usr/portage/packages/
 rsync -av --delete-after /usr/portage/packages/ root@useast.cloveros.ga:/var/www/htdocs/useast.cloveros.ga/ &
