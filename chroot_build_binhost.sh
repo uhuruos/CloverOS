@@ -37,14 +37,9 @@ wget https://liquorix.net/sources/4.9/config.amd64
 binutils-config --linker ld.bfd
 genkernel --kernel-config=config.amd64 all
 binutils-config --linker ld.gold
-
 emerge layman
 layman -S
-yes | layman -a 0x4d4c bobwya deadbeef-overlay elementary eroen palemoon steam-overlay torbrowser vapoursynth
-
-emerge -uvDN @world
-
-layman -D bobwya elementary
+yes | layman -a 0x4d4c deadbeef-overlay eroen palemoon steam-overlay torbrowser vapoursynth
 
 emerge -uvDN @world
 
