@@ -1,4 +1,5 @@
 emerge --sync
+layman -S
 emerge -uvDN --with-bdeps=y --buildpkg @world
 emerge @preserved-rebuild
 emerge --depclean
