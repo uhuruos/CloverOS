@@ -132,10 +132,15 @@ case "$choice" in
 
 	0)
 		cd ~
-		rm cloveros_settings.sh
-		wget "$gitprefix"/home/user/cloveros_settings.sh
-		chmod +x cloveros_settings.sh
-		echo -e "\ncloveros_settings.sh is now updated. (~/cloveros_settings.sh)"
+		wget "$gitprefix"/home/user/cloveros_settings.sh -O cloveros_settings.new.sh
+		if [ -f cloveros_settings.new.sh ]; then
+			rm cloveros_settings.sh
+			mv cloveros_settings.new.sh cloveros_settings.sh
+			chmod +x cloveros_settings.sh
+			echo -e "\ncloveros_settings.sh is now updated. (~/cloveros_settings.sh)"
+		else
+			echo -e "\nCould not retrieve file."
+		fi
 		;;
 
 	t)
