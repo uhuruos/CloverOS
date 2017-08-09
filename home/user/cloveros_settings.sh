@@ -28,7 +28,7 @@ read -erp "Select option: " -n 1 choice
 echo
 case "$choice" in
 	1)
-		if ! grep -Fq 'FETCHCOMMAND_HTTPS="/home/'$USER'/curlcache.sh \"\${URI}\" \"\${DISTDIR}/\${FILE}\""' /etc/portage/make.conf; then
+		if ! grep -Fq 'FETCHCOMMAND_HTTPS="/root/curlcache.sh \"\${URI}\" \"\${DISTDIR}/\${FILE}\""' /etc/portage/make.conf; then
 			if ! type /usr/bin/gpg > /dev/null; then
 				sudo emerge gnupg
 			fi
