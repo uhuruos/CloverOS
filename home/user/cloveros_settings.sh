@@ -35,9 +35,9 @@ case "$choice" in
 			if ! sudo gpg --list-keys "78F5 AC55 A120 07F2 2DF9 A28A 78B9 3F76 B8E4 2805"; then
 				sudo gpg --keyserver keys.gnupg.net --recv-key "78F5 AC55 A120 07F2 2DF9 A28A 78B9 3F76 B8E4 2805"
 			fi
-			echo 'FETCHCOMMAND_HTTPS="/home/'$USER'/curlcache.sh \"\${URI}\" \"\${DISTDIR}/\${FILE}\""' | sudo tee -a /etc/portage/make.conf
-			wget "$gitprefix"/home/user/curlcache.sh -O ~/curlcache.sh
-			chmod +x ~/curlcache.sh
+			echo 'FETCHCOMMAND_HTTPS="/root/curlcache.sh \"\${URI}\" \"\${DISTDIR}/\${FILE}\""' | sudo tee -a /etc/portage/make.conf
+			sudo wget "$gitprefix"/home/user/curlcache.sh -O /root/curlcache.sh
+			sudo chmod +x /root/curlcache.sh
 			echo -e "\nPackage validation enabled. (/etc/portage/make.conf)"
 		else
 			sudo sed -i '/FETCHCOMMAND_HTTPS/d' /etc/portage/make.conf
