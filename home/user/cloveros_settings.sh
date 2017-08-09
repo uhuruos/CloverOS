@@ -21,11 +21,12 @@ echo "1) Enable/disable package signing validation
 9) Clean binary cache
 0) Update cloveros_settings.sh
 t) Enable tap to click on touchpad
-g) Add yourself to the games group (Needed to run games in /usr/games/bin/)
+b) Install bluetooth manager
 n) Install proprietary Nvidia drivers"
 
 read -erp "Select option: " -n 1 choice
 echo
+
 case "$choice" in
 	1)
 		if ! grep -Fq 'FETCHCOMMAND_HTTPS="/root/curlcache.sh \"\${URI}\" \"\${DISTDIR}/\${FILE}\""' /etc/portage/make.conf; then
@@ -151,13 +152,8 @@ case "$choice" in
 		echo "Disable Tap to Click: xinput set-prop $deviceid $tappingid 0"
 		;;
 
-	g)
-		echo "sudo gpasswd -a $USER games"
-		sudo gpasswd -a $USER games
-		;;
-
 	n)
-		echo -e "Run these commands as root:\n"
+		echo "Running the following:"
 		echo "emerge nvidia-drivers"
 		echo "eselect opengl set nvidia"
 		echo 'echo " Section "Device"
@@ -165,8 +161,20 @@ case "$choice" in
    Driver      "nvidia"
  EndSection" > /etc/X11/xorg.conf.d/nvidia.conf'
 		echo "echo blacklist nouveau >> /etc/modprobe.d/blacklist.conf"
-		echo
-		echo "https://wiki.gentoo.org/wiki/NVidia/nvidia-drivers"
+		sudo emerge nvidia-drivers
+		sudo eselect opengl set nvidia
+		echo " Section "Device"
+   Identifier  "nvidia"
+   Driver      "nvidia"
+ EndSection" | sudo tee -a /etc/X11/xorg.conf.d/nvidia.conf
+		echo blacklist nouveau | sudo tee -a /etc/modprobe.d/blacklist.conf
+		echo -e "\nNvidia drivers installed, restart X.\nCheck https://wiki.gentoo.org/wiki/NVidia/nvidia-drivers for more info"
+		;;
+
+	b)
+		echo "sudo emerge blueman"
+		sudo emerge blueman
+		sudo blueman-browse
 		;;
 
 	*)
