@@ -48,6 +48,7 @@ app-emacs/emms
 app-emacs/slime
 app-emulation/diskimage-builder
 app-emulation/open-vm-tools
+app-emulation/playonlinux
 app-emulation/qemu
 app-emulation/virt-manager
 app-emulation/virtualbox
@@ -104,6 +105,7 @@ app-text/convmv
 app-text/dos2unix
 app-text/tesseract
 app-text/texlive
+app-text/tree
 app-text/zathura
 app-text/zathura-cb
 app-text/zathura-pdf-mupdf
@@ -178,10 +180,12 @@ games-simulation/openttd
 games-strategy/freeciv
 games-strategy/wesnoth
 games-util/higan-purify
+games-util/lutris
 games-util/steam-launcher
 gnome-extra/gnome-calculator
 kde-apps/dolphin
 kde-apps/dolphin-plugins
+kde-apps/filelight
 kde-apps/gwenview
 kde-apps/k3b
 kde-apps/kdenlive
@@ -492,6 +496,7 @@ media-sound/aqualung
 media-sound/ario
 media-sound/audacious
 media-sound/audacity
+media-sound/bluez-alsa
 media-sound/cmus
 media-sound/darksnow
 media-sound/deadbeef
@@ -624,6 +629,7 @@ net-vpn/i2p
 net-vpn/logmein-hamachi
 net-vpn/openvpn
 net-vpn/tor
+net-wireless/blueman
 net-wireless/rfkill
 net-wireless/wpa_supplicant
 pantheon-base/plank
