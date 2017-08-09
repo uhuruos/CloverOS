@@ -32,6 +32,7 @@ app-cdr/graveman
 app-cdr/isomaster
 app-cdr/kcdemu
 app-cdr/xcdroast
+app-crypt/acme-tiny
 app-crypt/certbot
 app-crypt/gnupg
 app-crypt/gpa
@@ -132,6 +133,7 @@ dev-vcs/git
 dev-vcs/mercurial
 dev-vcs/subversion
 games-arcade/blobby
+games-arcade/tecnoballz
 games-emulation/desmume
 games-emulation/dgen-sdl
 games-emulation/dolphin
@@ -141,6 +143,7 @@ games-emulation/generator
 games-emulation/gfceux
 games-emulation/higan
 games-emulation/mednafen
+games-emulation/mednaffe
 games-emulation/openmsx
 games-emulation/pcsx2
 games-emulation/pcsxr
@@ -167,7 +170,10 @@ games-fps/wolfgl
 games-fps/xonotic
 games-misc/cowsay
 games-misc/fortune-mod-all
+games-puzzle/bastet
 games-roguelike/dwarf-fortress
+games-roguelike/nethack
+games-roguelike/rogue
 games-simulation/openttd
 games-strategy/freeciv
 games-strategy/wesnoth
@@ -638,6 +644,7 @@ sys-apps/lshw
 sys-apps/mlocate
 sys-apps/paludis
 sys-apps/pv
+sys-apps/qdirstat
 sys-apps/rng-tools
 sys-apps/smartmontools
 sys-apps/udevil
@@ -686,10 +693,13 @@ www-client/dillo
 www-client/firefox
 www-client/links
 www-client/lynx
+www-client/midori
 www-client/palemoon-bin
+www-client/qupzilla
 www-client/qutebrowser
 www-client/seamonkey
 www-client/surf
+www-client/torbrowser
 www-client/w3m
 www-misc/fcgiwrap
 www-plugins/adobe-flash

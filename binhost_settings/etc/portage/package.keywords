@@ -6,6 +6,7 @@ media-gfx/gimp # 2.9 has much more features
 =sys-libs/glibc-2.24-r3 # accidentally upgraded glibc
 dev-qt/qt-creator # stable doesn't build anymore
 net-p2p/retroshare # no gnome-keyring
+net-p2p/eiskaltdcpp ** # hasn't had new release in years
 app-emulation/virtualbox # stable incompatible with current xorg version
 app-emulation/virtualbox-modules
 app-emulation/virtualbox-guest-additions
@@ -96,6 +97,11 @@ net-p2p/soulseek-qt
 sys-fs/exfat-nofuse **
 www-servers/onionshare
 app-emacs/emms
+games-roguelike/nethack
+app-crypt/acme-tiny
+www-client/midori
+sys-apps/qdirstat
+www-client/torbrowser
 
 #dependencies
 #tiemu

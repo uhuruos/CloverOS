@@ -130,6 +130,7 @@ sys-fs/zfs-kmod -custom-cflags
 dev-db/sqlite secure-delete
 media-libs/phonon -vlc
 www-client/firefox -wifi pgo hwaccel system-jpeg system-cairo system-harfbuzz system-icu system-libevent system-libvpx system-sqlite system-cairo
+www-client/torbrowser system-cairo system-harfbuzz system-icu system-jpeg system-libevent system-libvpx system-sqlite
 media-sound/sox alsa openmp png encode flac id3tag ladspa mad ogg opus sndfile twolame wavpack
 media-libs/libsamplerate sndfile
 media-libs/gd truetype fontconfig
@@ -162,7 +163,7 @@ sci-mathematics/maxima clisp gcl
 media-sound/mixxx shout aac ffmpeg hid mp3 mp4 wavpack
 www-client/w3m imlib gpm
 app-office/texstudio video
-net-p2p/eiskaltdcpp json -emoticons -minimal -spell gtk dht pcre
+net-p2p/eiskaltdcpp -emoticons -minimal -spell dht json gtk
 www-client/links fbcon gpm
 app-arch/p7zip wxwidgets rar
 media-gfx/imagemagick png
@@ -1144,3 +1145,6 @@ sys-apps/dbus X
 # required by net-p2p/mldonkey-3.1.5-r1::gentoo[gtk]
 # required by net-p2p/mldonkey (argument)
 >=dev-ml/lablgtk-2.18.5 svg
+# required by games-emulation/mednaffe-0.8::gentoo
+# required by mednaffe (argument)
+>=games-emulation/mednafen-0.9.41 debugger
