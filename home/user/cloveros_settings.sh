@@ -173,9 +173,9 @@ case "$choice" in
 
 	b)
 		echo "Running the following:"
-		echo "emerge blueman"
-		echo "/etc/init.d/bluetooth start"
-		echo "blueman-browse"
+		echo "sudo emerge blueman"
+		echo "sudo /etc/init.d/bluetooth start"
+		echo "sudo blueman-browse"
 		sudo emerge blueman
 		sudo /etc/init.d/bluetooth start
 		sudo blueman-browse
