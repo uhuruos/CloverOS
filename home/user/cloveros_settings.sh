@@ -175,10 +175,12 @@ case "$choice" in
 		echo "Running the following:"
 		echo "sudo emerge blueman"
 		echo "sudo /etc/init.d/bluetooth start"
-		echo "sudo blueman-browse"
+		echo "sudo blueman-applet&"
+		echo "sudo blueman-browse&"
 		sudo emerge blueman
 		sudo /etc/init.d/bluetooth start
-		sudo blueman-browse
+		sudo blueman-applet&
+		sudo blueman-browse&
 		;;
 
 	*)
