@@ -30,6 +30,7 @@ wget https://gitgud.io/cloveros/cloveros/raw/master/binhost_settings/var/lib/por
 
 sed -i '/pantheon-base\/plank/d' /var/lib/portage/world
 sed -i '/sys-fs\/exfat-nofuse/d' /var/lib/portage/world
+sed -i '/sys-apps\/flatpak/d' /var/lib/portage/world
 
 CFLAGS="-Ofast -mssse3 -pipe -flto=8 -funroll-loops" emerge gcc
 binutils-config --linker ld.gold
