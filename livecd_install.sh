@@ -16,8 +16,8 @@ while :; do
         read -erp "Enter partition for CloverOS installation: " -i "/dev/sda1" partition
         drive=${partition%"${partition##*[!0-9]}"}
     else
-        echo "Invalid option."
-        exit 1
+        echo -e "Invalid option.\n"
+        continue
     fi
     drive=${drive#*/dev/}
     partition=${partition#*/dev/}
