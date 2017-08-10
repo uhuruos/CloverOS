@@ -5,33 +5,41 @@ if [ "$(id -u)" != "0" ]; then
    exit 1
 fi
 
-read -erp "Automatic partitioning (a) or manual partitioning? (m) [a/m] " -n 1 partitioning
-echo
-if [[ $partitioning = "a" ]]; then
-    read -erp "Enter drive for CloverOS installation: " -i "/dev/sda" drive
-    partition=${drive}1
-elif [[ $partitioning = "m" ]]; then
-    sudo gparted &> /dev/null &
-    read -erp "Enter partition for CloverOS installation: " -i "/dev/sda1" partition
-    drive=${partition%"${partition##*[!0-9]}"}
-else
-    echo "Invalid option."
-    exit 1
-fi
-drive=${drive#*/dev/}
-partition=${partition#*/dev/}
-read -erp "Partitioning: $partitioning
-Drive: /dev/$drive
-Partition: /dev/$partition
-Is this correct? [y/n] " -n 1 yn
-if [[ $yn != "y" ]]; then
-    exit 1
-fi
-echo
+while :; do
+    read -erp "Automatic partitioning (a) or manual partitioning? (m) [a/m] " -n 1 partitioning
+    echo
+    if [[ $partitioning = "a" ]]; then
+        read -erp "Enter drive for CloverOS installation: " -i "/dev/sda" drive
+        partition=${drive}1
+    elif [[ $partitioning = "m" ]]; then
+        sudo gparted &> /dev/null &
+        read -erp "Enter partition for CloverOS installation: " -i "/dev/sda1" partition
+        drive=${partition%"${partition##*[!0-9]}"}
+    else
+        echo "Invalid option."
+        exit 1
+    fi
+    drive=${drive#*/dev/}
+    partition=${partition#*/dev/}
+    read -erp "Partitioning: $partitioning
+    Drive: /dev/$drive
+    Partition: /dev/$partition
+    Is this correct? [y/n] " -n 1 yn
+    if [[ $yn == "y" ]]; then
+        break
+    fi
+done
 
-read -erp "Enter preferred root password " rootpassword
-read -erp "Enter preferred username " user
-read -erp "Enter preferred user password " userpassword
+while :; do
+    echo
+    read -erp "Enter preferred root password " rootpassword
+    read -erp "Enter preferred username " user
+    read -erp "Enter preferred user password " userpassword
+    read -erp "Is this correct? [y/n] " -n 1 yn
+    if [[ $yn == "y" ]]; then
+        break
+    fi
+done
 
 livecduser=livecd
 
