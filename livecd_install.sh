@@ -22,9 +22,9 @@ while :; do
     drive=${drive#*/dev/}
     partition=${partition#*/dev/}
     read -erp "Partitioning: $partitioning
-    Drive: /dev/$drive
-    Partition: /dev/$partition
-    Is this correct? [y/n] " -n 1 yn
+Drive: /dev/$drive
+Partition: /dev/$partition
+Is this correct? [y/n] " -n 1 yn
     if [[ $yn == "y" ]]; then
         break
     fi
