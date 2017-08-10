@@ -52,7 +52,7 @@ useradd -M $user
 echo "$user:$userpassword" | chpasswd
 gpasswd -a $user wheel
 
-grub-install --target=i386-pc /dev/$drive
+grub-install --target=i386-pc /dev/$drive &> /dev/null
 grub-mkconfig -o /boot/grub/grub.cfg
 
 sed -i "s/set timeout=5/set timeout=0/" /boot/grub/grub.cfg
