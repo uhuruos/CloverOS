@@ -186,7 +186,7 @@ case "$choice" in
 
 	v)
 		echo "Running the following:"
-		echo "emerge xf86-video-vmware"
+		echo "emerge xf86-video-vmware virtualbox-guest-additions"
 		sudo emerge xf86-video-vmware virtualbox-guest-additions
 		echo -e "\nRestart X to load driver."
 		;;
