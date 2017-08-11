@@ -83,8 +83,8 @@ wget -O - https://cloveros.ga/s/modules.tar.xz | tar xJ -C /lib/modules/
 
 emerge grub dhcpcd
 
-grub-install --target=i386-pc /dev/$drive
-grub-mkconfig -o /boot/grub/grub.cfg
+grub-install --target=i386-pc /dev/$drive &> /dev/null
+grub-mkconfig -o /boot/grub/grub.cfg &> /dev/null
 
 rc-update add dhcpcd default
 
