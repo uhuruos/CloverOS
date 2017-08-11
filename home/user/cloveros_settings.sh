@@ -22,7 +22,8 @@ echo "1) Enable/disable package signing validation
 0) Update cloveros_settings.sh
 t) Enable tap to click on touchpad
 b) Install bluetooth manager
-n) Install proprietary Nvidia drivers"
+n) Install proprietary Nvidia drivers
+v) Install Virtualbox/VMWare drivers"
 
 read -erp "Select option: " -n 1 choice
 echo
@@ -182,6 +183,12 @@ case "$choice" in
 		sudo blueman-applet&
 		sudo blueman-browse&
 		;;
+
+	v)
+		echo "Running the following:"
+		echo "emerge xf86-video-vmware"
+		sudo emerge xf86-video-vmware virtualbox-guest-additions
+		echo -e "\nRestart X to load driver."
 
 	*)
 		echo "Invalid option: '$choice'" >&2
