@@ -189,6 +189,7 @@ case "$choice" in
 		echo "emerge xf86-video-vmware"
 		sudo emerge xf86-video-vmware virtualbox-guest-additions
 		echo -e "\nRestart X to load driver."
+		;;
 
 	*)
 		echo "Invalid option: '$choice'" >&2
