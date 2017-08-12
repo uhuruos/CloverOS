@@ -35,7 +35,7 @@ if [ -z "$DISPLAY" ]; then
     wmspost[y]="feh --bg-max wallpaper.png & xbindkeys"
     wmspost[Y]="feh --bg-max wallpaper.png & xbindkeys"
     wmspost[i]="feh --bg-max wallpaper.png & xbindkeys"
-    wmspost[a]=""
+    wmspost[a]="feh --bg-max wallpaper.png & xbindkeys"
     wmspost[o]="feh --bg-max wallpaper.png & xbindkeys"
     wmspost[e]=""
     wmspost[k]=""
@@ -43,9 +43,9 @@ if [ -z "$DISPLAY" ]; then
     wmspost[x]=""
     wmspost[l]=""
     wmspost[f]="feh --bg-max wallpaper.png & xbindkeys"
-    wmspost[d]=""
-    wmspost[c]=""
-    wmspost[w]=""
+    wmspost[d]="feh --bg-max wallpaper.png & xbindkeys"
+    wmspost[c]="feh --bg-max wallpaper.png & xbindkeys"
+    wmspost[w]="feh --bg-max wallpaper.png & xbindkeys"
     if [ -n "${wms[$choice] + 1}" ]; then
         if [ ! -f /usr/bin/${wms[$choice]} ]; then
             echo
