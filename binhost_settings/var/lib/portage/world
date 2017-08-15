@@ -38,6 +38,7 @@ app-crypt/gnupg
 app-crypt/gpa
 app-doc/phrack-all
 app-editors/emacs
+app-editors/gedit
 app-editors/mousepad
 app-editors/nano
 app-editors/neovim
@@ -89,6 +90,7 @@ app-portage/eix
 app-portage/genlop
 app-portage/gentoolkit
 app-portage/layman
+app-portage/mirrorselect
 app-portage/pfl
 app-portage/porthole
 app-portage/repoman
@@ -191,6 +193,7 @@ kde-apps/k3b
 kde-apps/kdenlive
 kde-apps/konsole
 kde-misc/kdirstat
+kde-misc/krusader
 kde-plasma/plasma-desktop
 kde-plasma/plasma-meta
 lxde-base/lxappearance
@@ -630,6 +633,7 @@ net-vpn/logmein-hamachi
 net-vpn/openvpn
 net-vpn/tor
 net-wireless/blueman
+net-wireless/iw
 net-wireless/rfkill
 net-wireless/wpa_supplicant
 pantheon-base/plank
@@ -721,6 +725,7 @@ x11-apps/xrandr
 x11-apps/xwininfo
 x11-base/xorg-server
 x11-drivers/nvidia-drivers
+x11-drivers/xf86-video-vmware
 x11-misc/bumblebee
 x11-misc/compton
 x11-misc/dmenu
@@ -730,6 +735,7 @@ x11-misc/i3status
 x11-misc/lsw
 x11-misc/nitrogen
 x11-misc/obmenu
+x11-misc/polybar
 x11-misc/qt5ct
 x11-misc/redshift
 x11-misc/rofi
@@ -738,6 +744,7 @@ x11-misc/sselp
 x11-misc/synergy
 x11-misc/tint2
 x11-misc/virtualgl
+x11-misc/wmctrl
 x11-misc/wmname
 x11-misc/x11vnc
 x11-misc/xbindkeys

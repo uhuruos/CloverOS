@@ -60,8 +60,6 @@ media-sound/sidplayfp
 games-util/steam-launcher
 media-sound/deadbeef
 net-im/discord-bin
-media-fonts/lohit-kannada
-media-fonts/montecarlo
 media-gfx/opentoonz
 media-gfx/freecad
 dev-lang/rust
@@ -179,6 +177,8 @@ media-libs/stk
 media-plugins/calf
 
 #fonts
+media-fonts/lohit-kannada
+media-fonts/montecarlo
 media-fonts/lohit-gujarati
 media-fonts/fantasque-sans-mono
 media-fonts/lohit-marathi

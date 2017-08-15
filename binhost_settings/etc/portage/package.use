@@ -1,4 +1,5 @@
 #preference
+media-libs/libsndfile -minimal
 app-text/calibre -udisks
 x11-libs/libfm udisks
 sys-apps/smartmontools -minimal
@@ -108,14 +109,14 @@ media-video/makemkv qt5
 app-editors/emacs X gtk toolkit-scroll-bars xft sound games alsa jpeg png gif libxml2
 app-emacs/emacs-common-gentoo X games
 app-editors/xemacs X
-games-emulation/snes9x gtk netplay
+games-emulation/snes9x joystick gtk netplay
 x11-misc/redshift gtk
 sys-apps/lshw gtk
 net-im/pidgin spell
 net-irc/hexchat spell
 dev-qt/qtgui gtkstyle
 dev-qt/qtwidgets gtkstyle
-x11-base/xorg-drivers video_cards_vmware
+x11-base/xorg-drivers input_devices_joystick
 media-libs/mesa d3d9 vulkan llvm gallium gles2 wayland video_cards_vmware
 x11-drivers/xf86-video-intel uxa sna dri3
 www-serverrs/nginx http2
@@ -234,6 +235,7 @@ x11-libs/libXtst abi_x86_32
 x11-proto/recordproto abi_x86_32
 
 #required
+dev-games/ogre gl3plus -gles3 -gles2
 dev-libs/glib dbus
 app-crypt/gcr gtk
 dev-libs/boost icu nls
