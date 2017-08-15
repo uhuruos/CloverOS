@@ -37,10 +37,10 @@ sed -i 's/-mssse3/-msse2/' /etc/portage/make.conf
 sed -i 's/CPU_FLAGS_X86="mmx mmxext sse sse2 sse3 ssse3"/CPU_FLAGS_X86="mmx mmxext sse sse2"/' /etc/portage/make.conf
 
 sed -i '/pantheon-base\/plank/d' /var/lib/portage/world
-sed -i '/sys-fs\/exfat-nofuse/d' /var/lib/portage/world
 sed -i '/sys-apps\/flatpak/d' /var/lib/portage/world
+sed -i '/x11-terms\/termite/d' /var/lib/portage/world
 
-CFLAGS="-Ofast -msse2 -pipe -flto=8 -funroll-loops" emerge gcc
+CFLAGS="-Ofast -mmmx -msse2 -pipe -flto=8 -funroll-loops" emerge gcc
 binutils-config --linker ld.gold
 emerge openssl openssh
 USE="-vaapi" emerge mesa
@@ -52,7 +52,7 @@ genkernel --kernel-config=config.i386-pae all
 binutils-config --linker ld.gold
 emerge layman
 layman -S
-yes | layman -a 0x4d4c deadbeef-overlay eroen palemoon steam-overlay torbrowser vapoursynth das-labor
+yes | layman -a 0x4d4c deadbeef-overlay palemoon steam-overlay torbrowser vapoursynth das-labor voyageur
 
 emerge -uvDN @world
 

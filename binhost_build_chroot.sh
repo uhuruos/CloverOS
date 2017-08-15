@@ -34,10 +34,10 @@ wget https://gitgud.io/cloveros/cloveros/raw/master/binhost_settings/etc/portage
 wget https://gitgud.io/cloveros/cloveros/raw/master/binhost_settings/var/lib/portage/world -O /var/lib/portage/world
 
 sed -i '/pantheon-base\/plank/d' /var/lib/portage/world
-sed -i '/sys-fs\/exfat-nofuse/d' /var/lib/portage/world
 sed -i '/sys-apps\/flatpak/d' /var/lib/portage/world
+sed -i '/x11-terms\/termite/d' /var/lib/portage/world
 
-CFLAGS="-Ofast -mssse3 -pipe -flto=8 -funroll-loops" emerge gcc
+CFLAGS="-Ofast -mmmx -mssse3 -pipe -flto=8 -funroll-loops" emerge gcc
 binutils-config --linker ld.gold
 emerge openssl openssh
 USE="-vaapi" emerge mesa
@@ -49,7 +49,7 @@ genkernel --kernel-config=config.amd64 all
 binutils-config --linker ld.gold
 emerge layman
 layman -S
-yes | layman -a 0x4d4c deadbeef-overlay eroen palemoon steam-overlay torbrowser vapoursynth das-labor
+yes | layman -a 0x4d4c deadbeef-overlay palemoon steam-overlay torbrowser vapoursynth das-labor voyageur
 
 emerge -uvDN @world
 

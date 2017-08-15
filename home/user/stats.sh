@@ -82,7 +82,7 @@ done
 meminfo=$(($memused/1024))\ MiB\ \/\ $(($memtotal/1024))\ MiB
 
 mapfile -t netdev < /proc/net/dev
-netdev=${netdev[-1]}
+netdev=${netdev[2]}
 IFS=' ' read -ra netdev <<< ${netdev}
 netin=$((${netdev[1]}/1048576))\ MiB
 netout=$((${netdev[9]}/1048576))\ MiB
