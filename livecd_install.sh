@@ -6,8 +6,8 @@ if [ "$(id -u)" != "0" ]; then
 fi
 
 while :; do
-    read -erp "Automatic partitioning (a) or manual partitioning? (m) [a/m] " -n 1 partitioning
     echo
+    read -erp "Automatic partitioning (a) or manual partitioning? (m) [a/m] " -n 1 partitioning
     if [[ $partitioning = "a" ]]; then
         read -erp "Enter drive for CloverOS installation: " -i "/dev/sda" drive
         partition=${drive}1
@@ -16,7 +16,7 @@ while :; do
         read -erp "Enter partition for CloverOS installation: " -i "/dev/sda1" partition
         drive=${partition%"${partition##*[!0-9]}"}
     else
-        echo -e "Invalid option.\n"
+        echo "Invalid option"
         continue
     fi
     drive=${drive#*/dev/}
