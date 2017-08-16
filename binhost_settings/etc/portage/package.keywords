@@ -456,3 +456,5 @@ media-plugins/vapoursynth-cnr2
 =net-wireless/bluez-tools-0_p20161212 ~amd64
 # required by bluez-alsa (argument)
 =media-sound/bluez-alsa-1.2.0 ~amd64
+# required by i2pd (argument)
+=net-vpn/i2pd-2.14.0 ~amd64

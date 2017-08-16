@@ -1,4 +1,5 @@
 #preference
+net-vpn/i2p -ecdsa
 media-libs/libsndfile -minimal
 app-text/calibre -udisks
 x11-libs/libfm udisks
@@ -6,7 +7,6 @@ sys-apps/smartmontools -minimal
 pantheon-base/plank dbus
 xfce-base/thunar dbus
 app-i18n/fcitx dbus
-dev-java/icedtea:7 -sunec
 net-p2p/mldonkey bittorrent gnutella gtk magic fasttrack
 media-sound/qmmp alsa mad vorbis aac analyzer bs2b cdda cover crossfade cue curl enca ffmpeg flac game ladspa lyrics midi modplug musepack notifier opus projectm scrobbler sid sndfile soxr stereo tray wavpack
 dev-python/django-two-factor-auth yubikey

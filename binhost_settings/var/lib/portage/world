@@ -597,6 +597,7 @@ net-irc/hexchat
 net-irc/irssi
 net-irc/sic
 net-irc/weechat
+net-libs/libotr
 net-libs/nodejs
 net-misc/axel
 net-misc/bridge-utils
@@ -629,6 +630,7 @@ net-p2p/rtorrent
 net-p2p/soulseek-qt
 net-p2p/transmission
 net-vpn/i2p
+net-vpn/i2pd
 net-vpn/logmein-hamachi
 net-vpn/openvpn
 net-vpn/tor
