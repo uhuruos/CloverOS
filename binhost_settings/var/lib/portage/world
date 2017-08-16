@@ -148,6 +148,7 @@ games-emulation/gfceux
 games-emulation/higan
 games-emulation/mednafen
 games-emulation/mednaffe
+games-emulation/mupen64plus
 games-emulation/openmsx
 games-emulation/pcsx2
 games-emulation/pcsxr
