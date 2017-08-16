@@ -747,6 +747,7 @@ x11-misc/slock
 x11-misc/sselp
 x11-misc/synergy
 x11-misc/tint2
+x11-misc/urxvtconfig
 x11-misc/virtualgl
 x11-misc/wmctrl
 x11-misc/wmname
@@ -872,6 +873,8 @@ x11-plugins/wmwork
 x11-plugins/wmxkb
 x11-plugins/wmxres
 x11-terms/aterm
+x11-terms/eterm
+x11-terms/multi-aterm
 x11-terms/rxvt-unicode
 x11-terms/sakura
 x11-terms/st

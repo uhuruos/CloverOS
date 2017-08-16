@@ -106,6 +106,7 @@ net-vpn/i2pd
 net-wireless/blueman
 net-wireless/blueberry
 media-sound/bluez-alsa
+x11-misc/urxvtconfig
 
 #dependencies
 #tiemu
