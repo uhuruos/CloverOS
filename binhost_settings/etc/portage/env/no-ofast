@@ -1,2 +1,2 @@
-CFLAGS="-O3 -pipe -flto=8 -funroll-loops -floop-block -floop-interchange -floop-strip-mine -ftree-loop-distribution"
+CFLAGS="-O3 -mmmx -mssse3 -pipe -flto=8 -funroll-loops -floop-block -floop-interchange -floop-strip-mine -ftree-loop-distribution"
 CXXFLAGS="${CFLAGS}"

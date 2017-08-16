@@ -36,13 +36,13 @@ z To disregard the changes
 It will ask to modify the sudo settings back to default, just hit z there.
 
 ### Controlling twm
-Open Applications menu: rightclick on desktop
+Open Applications menu: right click on desktop
 
-Move windows: alt + leftclick
+Move windows: alt + left click
 
-Resize Windows: alt + rightclick
+Resize Windows: alt + right click
 
-Close windows: ctrl + alt + rightclick
+Close windows: ctrl + alt + right click
 
 The taskbar minimizes and restores windows.
 

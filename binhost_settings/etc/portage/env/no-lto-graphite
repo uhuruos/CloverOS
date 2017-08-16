@@ -1,2 +1,2 @@
-CFLAGS="-Ofast -pipe -funroll-loops"
+CFLAGS="-Ofast -mmmx -mssse3 -pipe -funroll-loops"
 CXXFLAGS="${CFLAGS}"

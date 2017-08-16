@@ -599,6 +599,7 @@ net-irc/sic
 net-irc/weechat
 net-libs/libotr
 net-libs/nodejs
+net-misc/autossh
 net-misc/axel
 net-misc/bridge-utils
 net-misc/dhcp
