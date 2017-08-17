@@ -51,6 +51,10 @@ if [[ $partitioning = "a" ]]; then
 fi
 mount /dev/$partition gentoo
 
+mount -t proc none gentoo/proc
+mount --rbind /dev gentoo/dev
+mount --rbind /sys gentoo/sys
+
 unsquashfs -f -d gentoo /mnt/cdrom/image.squashfs
 
 cat << EOF | chroot gentoo
