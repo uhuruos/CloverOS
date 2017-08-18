@@ -30,16 +30,16 @@ echo
 
 case "$choice" in
 	1)
-		if ! grep -Fq 'FETCHCOMMAND_HTTPS="/home/'$USER'/curlcache.sh \"\${URI}\" \"\${DISTDIR}/\${FILE}\""' /etc/portage/make.conf; then
+		if ! grep -Fq 'FETCHCOMMAND_HTTPS="/home/'$USER'/gpgvalidate.sh \"\${URI}\" \"\${DISTDIR}/\${FILE}\""' /etc/portage/make.conf; then
 			if ! type /usr/bin/gpg > /dev/null; then
 				sudo emerge gnupg
 			fi
 			if ! sudo gpg --list-keys "78F5 AC55 A120 07F2 2DF9 A28A 78B9 3F76 B8E4 2805"; then
 				sudo gpg --keyserver keys.gnupg.net --recv-key "78F5 AC55 A120 07F2 2DF9 A28A 78B9 3F76 B8E4 2805"
 			fi
-			echo 'FETCHCOMMAND_HTTPS="/home/'$USER'/curlcache.sh \"\${URI}\" \"\${DISTDIR}/\${FILE}\""' | sudo tee -a /etc/portage/make.conf
-			sudo wget "$gitprefix"/home/user/curlcache.sh -O /home/$USER/curlcache.sh
-			sudo chmod +x /home/$USER/curlcache.sh
+			echo 'FETCHCOMMAND_HTTPS="/home/'$USER'/gpgvalidate.sh \"\${URI}\" \"\${DISTDIR}/\${FILE}\""' | sudo tee -a /etc/portage/make.conf
+			sudo wget "$gitprefix"/home/user/gpgvalidate.sh -O /home/$USER/gpgvalidate.sh
+			sudo chmod +x /home/$USER/gpgvalidate.sh
 			echo -e "\nPackage validation enabled. (/etc/portage/make.conf)"
 		else
 			sudo sed -i '/FETCHCOMMAND_HTTPS/d' /etc/portage/make.conf
