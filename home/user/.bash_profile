@@ -32,20 +32,21 @@ if [ -z "$DISPLAY" ]; then
     wmspkg[d]=dwm
     wmspkg[c]=icewm
     wmspkg[w]=windowmaker
-    wmspost[y]="feh --bg-max wallpaper.png & xbindkeys"
-    wmspost[Y]="feh --bg-max wallpaper.png & xbindkeys"
-    wmspost[i]="feh --bg-max wallpaper.png & xbindkeys"
-    wmspost[a]="feh --bg-max wallpaper.png & xbindkeys"
-    wmspost[o]="feh --bg-max wallpaper.png & xbindkeys"
+    taptoclick="deviceid=$(xinput | grep Synaptics | awk '{print $6}' | sed 's/id=//') && tappingid=$(xinput list-props $deviceid | grep Tapping\ Enabled\ \( | awk '{print $4}' | sed -r 's/\((.*)\):/\1/') && xinput set-prop $deviceid $tappingid 1"
+    wmspost[y]="feh --bg-max wallpaper.png & xbindkeys & $taptoclick &"
+    wmspost[Y]="feh --bg-max wallpaper.png & xbindkeys & $taptoclick &"
+    wmspost[i]="feh --bg-max wallpaper.png & xbindkeys & $taptoclick &"
+    wmspost[a]="feh --bg-max wallpaper.png & xbindkeys & $taptoclick &"
+    wmspost[o]="feh --bg-max wallpaper.png & xbindkeys & $taptoclick &"
     wmspost[e]=""
     wmspost[k]=""
     wmspost[m]=""
     wmspost[x]=""
     wmspost[l]=""
-    wmspost[f]="feh --bg-max wallpaper.png & xbindkeys"
-    wmspost[d]="feh --bg-max wallpaper.png & xbindkeys"
-    wmspost[c]="feh --bg-max wallpaper.png & xbindkeys"
-    wmspost[w]="feh --bg-max wallpaper.png & xbindkeys"
+    wmspost[f]="feh --bg-max wallpaper.png & xbindkeys & $taptoclick &"
+    wmspost[d]="feh --bg-max wallpaper.png & xbindkeys & $taptoclick &"
+    wmspost[c]="feh --bg-max wallpaper.png & xbindkeys & $taptoclick &"
+    wmspost[w]="feh --bg-max wallpaper.png & xbindkeys & $taptoclick &"
     if [ -n "${wms[$choice] + 1}" ]; then
         if [ ! -f /usr/bin/${wms[$choice]} ]; then
             echo
