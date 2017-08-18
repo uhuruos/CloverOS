@@ -13,7 +13,11 @@ while :; do
         partition=${drive}1
     elif [[ $partitioning = "m" ]]; then
         read -erp "Enter partition for CloverOS installation: " -i "/dev/sda1" partition
-        drive=${partition%"${partition##*[!0-9]}"}
+        if [[ $partition == /dev/map/* ]]; then
+            read -erp "Enter drive that contains install partition: " -i "/dev/sda" drive
+        else
+            drive=${partition%"${partition##*[!0-9]}"}
+        fi
     else
         echo "Invalid option"
     fi
