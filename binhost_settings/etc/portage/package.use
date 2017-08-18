@@ -1,4 +1,5 @@
 #preference
+app-benchmarks/i7z qt5
 net-vpn/i2p -ecdsa
 media-libs/libsndfile -minimal
 app-text/calibre -udisks
@@ -19,7 +20,6 @@ mate-extra/mate-screensaver -pam
 mate-base/mate -extras
 x11-misc/nitrogen nls
 app-admin/conky thinkpad mpd rss curl iostats
-sys-kernel/genkernel cryptsetup
 media-sound/darkice vorbis mp3
 games-fps/urbanterror server
 sys-libs/ncurses -minimal

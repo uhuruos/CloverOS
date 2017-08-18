@@ -1,14 +1,15 @@
 #preference, remove when stable is bumped up
-media-sound/mpd # file support
-net-misc/youtube-dl # stable never works
-net-irc/weechat # stable is ancient
-media-gfx/gimp # 2.9 has much more features
 =sys-libs/glibc-2.24-r3 # accidentally upgraded glibc
 dev-qt/qt-creator # stable doesn't build
 games-emulation/mupen64plus # stable doesn't build
+media-sound/mpd # file support
 net-p2p/retroshare # no gnome-keyring
-net-p2p/eiskaltdcpp ** # hasn't had new release in years
-app-emulation/virtualbox # stable incompatible with current xorg version
+media-gfx/gimp # 2.9 has much more features
+net-misc/youtube-dl # stable never works
+net-irc/weechat # stable is ancient
+net-p2p/eiskaltdcpp ** # stable is vulnerable
+sys-fs/ntfs3g # stable pulls in hwinfo for no reason
+app-emulation/virtualbox # stable is incompatible with current xorg version
 app-emulation/virtualbox-modules
 app-emulation/virtualbox-guest-additions
 app-emulation/virtualbox-additions

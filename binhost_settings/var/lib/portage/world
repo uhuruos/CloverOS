@@ -12,6 +12,7 @@ app-arch/advancecomp
 app-arch/cabextract
 app-arch/engrampa
 app-arch/file-roller
+app-arch/lz4
 app-arch/makeself
 app-arch/p7zip
 app-arch/par
@@ -22,6 +23,7 @@ app-arch/unrar-gpl
 app-arch/zopfli
 app-arch/zpaq
 app-arch/zpaq-extras
+app-benchmarks/i7z
 app-benchmarks/stress
 app-cdr/bashburn
 app-cdr/cdrtools
@@ -981,7 +983,6 @@ x11-themes/wm-icons
 x11-themes/xcursor-themes
 x11-themes/xfce-gant-icon-theme
 x11-themes/xfwm4-themes
-x11-wm/afterstep
 x11-wm/awesome
 x11-wm/compiz-fusion
 x11-wm/dwm
