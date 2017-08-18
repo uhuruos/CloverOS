@@ -2,6 +2,10 @@
 
 # usage: curlcache URL OUTPUT_FILE
 
+if [ "$(id -u)" != "0" ]; then
+        exit 0
+fi
+
 set -euo pipefail
 
 cachedir=/tmp/curlcache
