@@ -146,6 +146,9 @@ case "$choice" in
 		;;
 
 	t)
+		if ! type /usr/bin/xinput > /dev/null; then
+			sudo emerge xinput
+		fi
 		deviceid=$(xinput | grep Synaptics | awk '{print $6}' | sed 's/id=//')
 		tappingid=$(xinput list-props $deviceid | grep Tapping\ Enabled\ \( | awk '{print $4}' | sed -r 's/\((.*)\):/\1/')
 		xinput set-prop $deviceid $tappingid 1
