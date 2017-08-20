@@ -1,3 +1,4 @@
+layman -D elementary eroen
 emerge --sync
 layman -S
 emerge -uvDN --with-bdeps=y --buildpkg @world
