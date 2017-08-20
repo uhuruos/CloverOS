@@ -1,4 +1,5 @@
 #preference, remove when stable is bumped up
+www-client/firefox # stable has no sound
 =sys-libs/glibc-2.24-r3 # accidentally upgraded glibc
 dev-qt/qt-creator # stable doesn't build
 games-emulation/mupen64plus # stable doesn't build
@@ -8,7 +9,6 @@ media-gfx/gimp # 2.9 has much more features
 net-misc/youtube-dl # stable never works
 net-irc/weechat # stable is ancient
 net-p2p/eiskaltdcpp ** # stable is vulnerable
-sys-fs/ntfs3g # stable pulls in hwinfo for no reason
 app-emulation/virtualbox # stable is incompatible with current xorg version
 app-emulation/virtualbox-modules
 app-emulation/virtualbox-guest-additions
@@ -18,7 +18,6 @@ app-emulation/virtualbox-additions
 #remove when stable is qt5
 media-gfx/librecad
 media-sound/rosegarden
-kde-apps/k3b
 media-sound/qjackctl
 
 #keyworded, remove when stable exists
@@ -108,6 +107,9 @@ net-wireless/blueman
 net-wireless/blueberry
 media-sound/bluez-alsa
 x11-misc/urxvtconfig
+net-misc/pyhoca-gui
+net-misc/pyhoca-cli
+app-crypt/veracrypt
 
 #dependencies
 #tiemu
@@ -172,8 +174,6 @@ dev-libs/msgpack
 dev-libs/libtermkey
 dev-libs/libvterm
 media-libs/l-smash
-#k3b
-kde-apps/libkcddb
 #oss
 media-sound/oss-driver
 #waifu2x
@@ -194,6 +194,8 @@ games-emulation/mupen64plus-audio-sdl
 games-emulation/m64py
 games-emulation/mupen64plus-rsp-hle
 games-emulation/mupen64plus-input-sdl
+#pyhoca
+net-misc/python-x2go
 
 #fonts
 media-fonts/lohit-kannada
@@ -333,7 +335,7 @@ media-plugins/vapoursynth-bilateral
 media-plugins/vapoursynth-vstaambk
 media-plugins/vapoursynth-cnr2
 
-#yubikey stuff
+#yubikey applications
 # required by pam_yubico (argument)
 =sys-auth/pam_yubico-2.24 ~amd64
 # required by sys-auth/ykpers-1.18.0::gentoo
@@ -374,13 +376,6 @@ media-plugins/vapoursynth-cnr2
 # required by dev-python/django-two-factor-auth-1.3.0::gentoo[yubikey]
 # required by django-two-factor-auth (argument)
 =dev-python/django-otp-yubikey-0.3.3 ~amd64
-# required by pyhoca-gui (argument)
-=net-misc/pyhoca-gui-0.5.0.6 ~amd64
-# required by pyhoca-cli (argument)
-=net-misc/pyhoca-cli-0.5.0.3 ~amd64
-# required by net-misc/pyhoca-cli-0.5.0.3::gentoo
-# required by pyhoca-cli (argument)
-=net-misc/python-x2go-0.5.0.5 ~amd64
 
 #windowmaker plugins
 # required by wmmand (argument)
@@ -464,3 +459,13 @@ media-plugins/vapoursynth-cnr2
 =x11-plugins/wmbatteries-0.1.3 **
 # required by wmping (argument)
 =x11-plugins/wmping-0.2.1 ~amd64
+# required by www-client/firefox-55.0.1::gentoo
+# required by firefox (argument)
+=virtual/rust-1.19.0 ~amd64
+# required by dev-libs/nss-3.32::gentoo
+# required by www-client/firefox-55.0.1::gentoo
+# required by firefox (argument)
+=dev-libs/nspr-4.16 ~amd64
+# required by www-client/firefox-55.0.1::gentoo
+# required by firefox (argument)
+=dev-libs/nss-3.32 ~amd64

@@ -1,4 +1,5 @@
 #preference
+app-crypt/veracrypt X
 app-benchmarks/i7z qt5
 net-vpn/i2p -ecdsa
 media-libs/libsndfile -minimal
@@ -104,6 +105,7 @@ net-im/qtox X
 dev-util/plan9port X
 net-misc/freerdp X wayland
 media-video/smplayer streaming qt5
+media-video/smtube qt5
 media-video/mkvtoolnix qt5
 media-video/makemkv qt5
 app-editors/emacs X gtk toolkit-scroll-bars xft sound games alsa jpeg png gif libxml2
@@ -130,7 +132,7 @@ sys-fs/zfs -custom-cflags
 sys-fs/zfs-kmod -custom-cflags
 dev-db/sqlite secure-delete
 media-libs/phonon -vlc
-www-client/firefox -wifi pgo hwaccel system-jpeg system-cairo system-harfbuzz system-icu system-libevent system-libvpx system-sqlite system-cairo
+www-client/firefox -wifi -pgo hwaccel system-jpeg system-cairo system-harfbuzz system-icu system-libevent system-libvpx system-sqlite system-cairo
 www-client/torbrowser system-cairo system-harfbuzz system-icu system-jpeg system-libevent system-libvpx system-sqlite
 media-sound/sox alsa openmp png encode flac id3tag ladspa mad ogg opus sndfile twolame wavpack
 media-libs/libsamplerate sndfile

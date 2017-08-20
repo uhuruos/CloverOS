@@ -38,6 +38,7 @@ app-crypt/acme-tiny
 app-crypt/certbot
 app-crypt/gnupg
 app-crypt/gpa
+app-crypt/veracrypt
 app-doc/phrack-all
 app-editors/emacs
 app-editors/gedit
@@ -117,7 +118,6 @@ dev-games/ogre
 dev-haskell/haskell-platform
 dev-lang/php
 dev-lang/python
-dev-lang/rust
 dev-libs/libisoburn
 dev-libs/weston
 dev-python/ansi2html
@@ -140,6 +140,15 @@ dev-vcs/mercurial
 dev-vcs/subversion
 games-arcade/blobby
 games-arcade/tecnoballz
+games-board/crafty
+games-board/eboard
+games-board/gnuchess
+games-board/phalanx
+games-board/pouetchess
+games-board/pychess
+games-board/sjeng
+games-board/stockfish
+games-board/xboard
 games-emulation/desmume
 games-emulation/dgen-sdl
 games-emulation/dolphin
@@ -192,7 +201,6 @@ kde-apps/dolphin
 kde-apps/dolphin-plugins
 kde-apps/filelight
 kde-apps/gwenview
-kde-apps/k3b
 kde-apps/kdenlive
 kde-apps/konsole
 kde-misc/kdirstat
@@ -560,6 +568,7 @@ media-video/mpv
 media-video/obs-studio
 media-video/openshot
 media-video/smplayer
+media-video/smtube
 media-video/subtitleripper
 media-video/vdr
 media-video/vlc
@@ -651,7 +660,6 @@ sci-mathematics/octave
 sci-visualization/gnuplot
 sys-apps/dmidecode
 sys-apps/flatpak
-sys-apps/hwinfo
 sys-apps/idle3-tools
 sys-apps/iproute2
 sys-apps/kexec-tools
@@ -704,7 +712,6 @@ sys-process/iotop
 sys-process/lsof
 sys-process/parallel
 www-client/chromium
-www-client/conkeror
 www-client/dillo
 www-client/firefox
 www-client/links
