@@ -32,7 +32,7 @@ if [ -z "$DISPLAY" ]; then
     wmspkg[d]=dwm
     wmspkg[c]=icewm
     wmspkg[w]=windowmaker
-    taptoclick=$'deviceid=$(xinput | grep Synaptics | awk \'{print $6}\' | grep -o \'[0-9]\\+\') && tappingid=$(xinput list-props $deviceid | grep \'Tapping Enabled (\' | awk \'{print $4}\' | grep -o \'[0-9]\\+\') && xinput set-prop $deviceid $tappingid 1'
+    taptoclick=$'tappingid=$(xinput list-props "SynPS/2 Synaptics TouchPad" | grep \'Tapping Enabled (\' | awk \'{print $4}\' | grep -o \'[0-9]\\+\') && xinput set-prop "SynPS/2 Synaptics TouchPad" $tappingid 1'
     wmspost[y]="feh --bg-max wallpaper.png & xbindkeys & $taptoclick &"
     wmspost[Y]="feh --bg-max wallpaper.png & xbindkeys & $taptoclick &"
     wmspost[i]="feh --bg-max wallpaper.png & xbindkeys & $taptoclick &"
