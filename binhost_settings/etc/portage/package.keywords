@@ -166,6 +166,9 @@ media-libs/avidemux-core
 x11-libs/vte
 #gimp
 media-libs/libmypaint
+media-libs/babl
+media-libs/gexiv2
+media-libs/gegl
 #neovim
 dev-lua/mpack
 dev-libs/unibilium
@@ -469,3 +472,8 @@ media-plugins/vapoursynth-cnr2
 # required by www-client/firefox-55.0.1::gentoo
 # required by firefox (argument)
 =dev-libs/nss-3.32 ~amd64
+# required by app-emulation/fuse (argument)
+=app-emulation/fuse-1.3.8 ~amd64
+# required by app-emulation/fuse-1.3.8::gentoo
+# required by app-emulation/fuse (argument)
+=app-emulation/libspectrum-1.3.6 ~amd64

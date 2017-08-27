@@ -19,7 +19,6 @@ app-arch/par
 app-arch/sharutils
 app-arch/unmakeself
 app-arch/unp
-app-arch/unrar-gpl
 app-arch/zopfli
 app-arch/zpaq
 app-arch/zpaq-extras
@@ -51,6 +50,7 @@ app-editors/xemacs
 app-emacs/emms
 app-emacs/slime
 app-emulation/diskimage-builder
+app-emulation/fuse
 app-emulation/open-vm-tools
 app-emulation/playonlinux
 app-emulation/qemu
@@ -63,6 +63,7 @@ app-emulation/winetricks
 app-forensics/aide
 app-i18n/fcitx-anthy
 app-i18n/ibus
+app-i18n/ibus-anthy
 app-laptop/laptop-mode-tools
 app-laptop/thinkfan
 app-misc/byobu
@@ -116,6 +117,7 @@ app-text/zathura-cb
 app-text/zathura-pdf-mupdf
 dev-games/ogre
 dev-haskell/haskell-platform
+dev-lang/go
 dev-lang/php
 dev-lang/python
 dev-libs/libisoburn
@@ -138,6 +140,8 @@ dev-util/vmtouch
 dev-vcs/git
 dev-vcs/mercurial
 dev-vcs/subversion
+games-action/extreme-tuxracer
+games-action/supertuxkart
 games-arcade/blobby
 games-arcade/tecnoballz
 games-board/crafty
@@ -169,11 +173,13 @@ games-emulation/snes9x
 games-emulation/vbam
 games-emulation/yabause
 games-emulation/zsnes
+games-engines/openxcom
 games-engines/scummvm
 games-fps/alienarena
 games-fps/avp
 games-fps/darkplaces
 games-fps/doomsday
+games-fps/enemy-territory
 games-fps/ezquake-bin
 games-fps/lsdldoom
 games-fps/nexuiz
@@ -190,6 +196,7 @@ games-puzzle/bastet
 games-roguelike/dwarf-fortress
 games-roguelike/nethack
 games-roguelike/rogue
+games-rpg/freedink
 games-simulation/openttd
 games-strategy/freeciv
 games-strategy/wesnoth
@@ -205,6 +212,7 @@ kde-apps/kdenlive
 kde-apps/konsole
 kde-misc/kdirstat
 kde-misc/krusader
+kde-plasma/bluedevil
 kde-plasma/plasma-desktop
 kde-plasma/plasma-meta
 lxde-base/lxappearance
@@ -631,6 +639,7 @@ net-misc/zssh
 net-news/liferea
 net-news/newsbeuter
 net-nntp/pan
+net-p2p/bitcoin-qt
 net-p2p/deluge
 net-p2p/eiskaltdcpp
 net-p2p/freenet
@@ -726,6 +735,7 @@ www-client/torbrowser
 www-client/w3m
 www-misc/fcgiwrap
 www-plugins/adobe-flash
+www-plugins/chrome-binary-plugins
 www-servers/nginx
 www-servers/onionshare
 x11-apps/mesa-progs
@@ -738,7 +748,9 @@ x11-apps/xrandr
 x11-apps/xwininfo
 x11-base/xorg-server
 x11-drivers/nvidia-drivers
+x11-drivers/xf86-input-wacom
 x11-drivers/xf86-video-vmware
+x11-misc/arandr
 x11-misc/bumblebee
 x11-misc/compton
 x11-misc/dmenu
@@ -769,6 +781,7 @@ x11-misc/xkeyboard-config
 x11-misc/xnee
 x11-misc/xscreensaver
 x11-misc/xsnow
+x11-misc/xvkbd
 x11-plugins/asapm
 x11-plugins/asclock
 x11-plugins/asmon
@@ -1035,7 +1048,6 @@ xfce-extra/xfce4-kbdleds-plugin
 xfce-extra/xfce4-linelight-plugin
 xfce-extra/xfce4-mailwatch-plugin
 xfce-extra/xfce4-messenger-plugin
-xfce-extra/xfce4-mixer
 xfce-extra/xfce4-modemlights-plugin
 xfce-extra/xfce4-mount-plugin
 xfce-extra/xfce4-mpc-plugin

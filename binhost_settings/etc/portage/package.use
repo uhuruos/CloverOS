@@ -1,4 +1,6 @@
 #preference
+app-emulation/fuse sdl joystick
+x11-misc/polybar i3wm
 app-crypt/veracrypt X
 app-benchmarks/i7z qt5
 net-vpn/i2p -ecdsa
@@ -17,8 +19,6 @@ app-admin/passwordsafe yubikey -minimal
 media-libs/vapoursynth vapoursynth_plugins_removegrain vapoursynth_plugins_eedi3 -vapoursynth_plugins_imagemagick vapoursynth_plugins_miscfilters vapoursynth_plugins_morpho vapoursynth_plugins_ocr vapoursynth_plugins_removegrain vapoursynth_plugins_subtext vapoursynth_plugins_vinverse vapoursynth_plugins_vivtc
 www-client/seamonkey -minimal -crypt system-harfbuzz system-icu system-jpeg system-libevent system-libvpx system-sqlite
 media-sound/audacity id3tag
-mate-extra/mate-screensaver -pam
-mate-base/mate -extras
 x11-misc/nitrogen nls
 app-admin/conky thinkpad mpd rss curl iostats
 media-sound/darkice vorbis mp3
@@ -32,9 +32,9 @@ app-emulation/wine -custom-cflags
 x11-wm/xmonad -default-term
 sys-block/gparted btrfs dmraid f2fs fat hfs jfs mdadm ntfs reiserfs reiser4 xfs
 kde-plasma/powerdevil -wireless
-app-editors/vim -minimal
+app-editors/vim nls -minimal
+app-editors/vim-core nls -minimal
 dev-util/google-perftools -minimal
-dev-libs/gmp -pgo
 app-editors/nano -minimal
 kde-frameworks/kio -handbook
 dev-lang/ruby -berkdb -gdbm -ncurses -readline
@@ -52,6 +52,8 @@ net-misc/iputils -caps -filecaps
 app-admin/sudo -pam -sendmail
 media-libs/harfbuzz icu
 media-libs/libvpx postproc
+mate-base/mate -extras
+mate-extra/mate-screensaver -pam
 media-video/vlc qt5 xml
 media-libs/opencv qt5
 net-p2p/bitcoin-qt qt5
@@ -64,9 +66,9 @@ net-p2p/transmission qt5
 net-wireless/wpa_supplicant qt5
 app-misc/recoll qt5
 sys-devel/distcc gtk crossdev
-kde-plasma/plasma-meta bluetooth grub gtk
-media-video/handbrake gtk -fdk libav-aac
+kde-plasma/plasma-meta grub gtk
 kde-plasma/plasma-desktop gtk3 gtk2 legacy-systray
+media-video/handbrake gtk -fdk libav-aac
 media-gfx/fontforge X gtk
 media-gfx/graphviz X gtk
 app-emulation/virt-manager gtk
@@ -111,6 +113,7 @@ media-video/makemkv qt5
 app-editors/emacs X gtk toolkit-scroll-bars xft sound games alsa jpeg png gif libxml2
 app-emacs/emacs-common-gentoo X games
 app-editors/xemacs X
+games-emulation/dgen-sdl joystick
 games-emulation/snes9x joystick gtk netplay
 x11-misc/redshift gtk
 sys-apps/lshw gtk
@@ -132,7 +135,7 @@ sys-fs/zfs -custom-cflags
 sys-fs/zfs-kmod -custom-cflags
 dev-db/sqlite secure-delete
 media-libs/phonon -vlc
-www-client/firefox -wifi -pgo hwaccel system-jpeg system-cairo system-harfbuzz system-icu system-libevent system-libvpx system-sqlite system-cairo
+www-client/firefox -pgo -wifi hwaccel system-jpeg system-cairo system-harfbuzz system-icu system-libevent system-libvpx system-sqlite system-cairo
 www-client/torbrowser system-cairo system-harfbuzz system-icu system-jpeg system-libevent system-libvpx system-sqlite
 media-sound/sox alsa openmp png encode flac id3tag ladspa mad ogg opus sndfile twolame wavpack
 media-libs/libsamplerate sndfile
@@ -150,7 +153,7 @@ net-p2p/qbittorrent geoip webui
 media-gfx/gimp exif pdf tiff lcms curl
 net-fs/nfs-utils nfsv41
 net-irc/hexchat plugin-sysinfo
-net-fs/cifs-utils -acl -ads -caps-ng
+net-fs/cifs-utils -acl -ads -caps caps-ng
 media-sound/mpd sqlite alsa bzip2 curl ffmpeg fifo flac glib icu id3tag inotify mad network ogg opus tcpd unicode vorbis adplug ao audiofile cdio expat faad fluidsynth gme lame libsamplerate libsoxr mikmod mms modplug mp4v2 mpg123 musepack pipe recorder sid sndfile soundcloud twolame wavpack wildmidi zip libmpdclient
 media-sound/flacon aac opus vorbis qt5 flac mac mp3 mp4 ogg replaygain tta wavpack
 media-sound/cmus ffmpeg alsa mad unicode aac ao cddb cdio cue discid examples flac mikmod modplug mp4 musepack opus vorbis wavpack wma zsh-completion
@@ -172,7 +175,7 @@ app-arch/p7zip wxwidgets rar
 media-gfx/imagemagick png
 media-libs/x264 -10bit
 media-gfx/feh exif curl
-x11-terms/rxvt-unicode -vanilla alt-font-width xft 256-color
+x11-terms/rxvt-unicode -vanilla alt-font-width xft 256-color blink unicode3
 net-analyzer/vnstat gd
 dev-lang/php curl gd fpm pdo
 app-eselect/eselect-php fpm
@@ -242,7 +245,7 @@ dev-libs/glib dbus
 app-crypt/gcr gtk
 dev-libs/boost icu nls
 dev-libs/libdbusmenu gtk3 abi_x86_64
-media-libs/sdl-mixer vorbis
+media-libs/sdl-mixer vorbis flac mikmod mod midi fluidsynth
 net-nds/openldap sasl
 media-libs/libsdl2 gles
 sci-libs/hdf5 -threads
