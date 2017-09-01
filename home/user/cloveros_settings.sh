@@ -65,11 +65,17 @@ case "$choice" in
 
 	4)
 		cd ~
-		wget https://cloveros.ga/s/{kernel.tar.xz,modules.tar.xz,signatures/s/kernel.tar.xz.asc,signatures/s/modules.tar.xz.asc}
+		kerneldir=kernel$(< /dev/urandom tr -dc 0-9 | head -c 5)
+		mkdir $kerneldir
+		cd $kerneldir
+		wget https://cloveros.ga/s/kernel.tar.xz
+		wget https://cloveros.ga/s/signatures/s/kernel.tar.xz.asc
 		sudo gpg --verify kernel.tar.xz.asc kernel.tar.xz
-		sudo gpg --verify modules.tar.xz.asc modules.tar.xz
-		sudo tar xf kernel.tar.xz -C /boot/
-		sudo tar xf modules.tar.xz -C /lib/modules/
+		tar xf kernel.tar.xz
+		sudo mv */ /lib/modules/
+		sudo mv * /boot/
+		cd ..
+		rm -R $kerneldir
 		sudo grub-mkconfig -o /boot/grub/grub.cfg
 		sudo sed -i "s/set timeout=5/set timeout=0/" /boot/grub/grub.cfg
 		rm kernel.tar.xz kernel.tar.xz.asc modules.tar.xz modules.tar.xz.asc
