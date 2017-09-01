@@ -71,6 +71,7 @@ case "$choice" in
 		tar xf kernel.tar.xz
 		mv initramfs-genkernel-*-gentoo kernel-genkernel-*-gentoo System.map-genkernel-*-gentoo /boot/
 		mv *-gentoo/ /lib/modules/
+		rm kernel.tar.xz
 		sudo grub-mkconfig -o /boot/grub/grub.cfg
 		sudo sed -i "s/set timeout=5/set timeout=0/" /boot/grub/grub.cfg
 		rm kernel.tar.xz kernel.tar.xz.asc modules.tar.xz modules.tar.xz.asc
