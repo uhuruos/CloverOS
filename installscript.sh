@@ -81,9 +81,11 @@ ACCEPT_KEYWORDS="~amd64"' >> /etc/portage/make.conf
 #wget http://liquorix.net/sources/4.9/config.amd64
 #genkernel --kernel-config=config.amd64 all
 
-wget -O - https://cloveros.ga/s/kernel.tar.xz | tar xJ -C /boot/
+wget https://cloveros.ga/s/kernel.tar.xz
+tar xf kernel.tar.xz
+mv initramfs-genkernel-*-gentoo  kernel-genkernel-*-gentoo  System.map-genkernel-*-gentoo /boot/
 mkdir /lib/modules/
-wget -O - https://cloveros.ga/s/modules.tar.xz | tar xJ -C /lib/modules/
+mv *-gentoo/ /lib/modules/
 
 emerge grub dhcpcd
 

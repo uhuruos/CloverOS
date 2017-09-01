@@ -1,8 +1,7 @@
-#emerge gentoo-sources genkernel
+emerge gentoo-sources genkernel
 wget https://liquorix.net/sources/4.12/config.amd64
 genkernel --btrfs --zfs --lvm --mdadm --dmraid --iscsi --luks --kernel-config=Desktop/config.amd64 all
-cd /boot/
-tar -cvf /usr/portage/packages/s/kernel.tar.xz *4.12.5*
-cd /lib/modules/
-tar -cvf /usr/portage/packages/s/modules.tar.xz *4.12.5*
+
+tar -cvf /usr/portage/packages/s/kernel.tar.xz initramfs-genkernel-*-gentoo  kernel-genkernel-*-gentoo System.map-genkernel-*-gentoo /lib/modules/*-gentoo/
+
 emerge -1 --jobs=1 zfs-kmod virtualbox-modules exfat-nofuse
