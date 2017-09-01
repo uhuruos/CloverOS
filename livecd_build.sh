@@ -41,7 +41,7 @@ ACCEPT_KEYWORDS="~amd64"' >> /etc/portage/make.conf
 
 wget https://cloveros.ga/s/kernel.tar.xz
 tar xf kernel.tar.xz
-mv initramfs-genkernel-*-gentoo  kernel-genkernel-*-gentoo  System.map-genkernel-*-gentoo /boot/
+mv initramfs-genkernel-*-gentoo kernel-genkernel-*-gentoo System.map-genkernel-*-gentoo /boot/
 mkdir /lib/modules/
 mv *-gentoo/ /lib/modules/
 
