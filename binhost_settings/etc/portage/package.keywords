@@ -110,6 +110,8 @@ x11-misc/urxvtconfig
 net-misc/pyhoca-gui
 net-misc/pyhoca-cli
 app-crypt/veracrypt
+net-analyzer/ntopng
+app-emulation/fuse
 
 #dependencies
 #tiemu
@@ -199,6 +201,14 @@ games-emulation/mupen64plus-rsp-hle
 games-emulation/mupen64plus-input-sdl
 #pyhoca
 net-misc/python-x2go
+#ntopng
+net-analyzer/ntopng
+#firefox
+virtual/rust
+dev-libs/nspr
+dev-libs/nss
+#fuse
+app-emulation/libspectrum
 
 #fonts
 media-fonts/lohit-kannada
@@ -462,18 +472,3 @@ media-plugins/vapoursynth-cnr2
 =x11-plugins/wmbatteries-0.1.3 **
 # required by wmping (argument)
 =x11-plugins/wmping-0.2.1 ~amd64
-# required by www-client/firefox-55.0.1::gentoo
-# required by firefox (argument)
-=virtual/rust-1.19.0 ~amd64
-# required by dev-libs/nss-3.32::gentoo
-# required by www-client/firefox-55.0.1::gentoo
-# required by firefox (argument)
-=dev-libs/nspr-4.16 ~amd64
-# required by www-client/firefox-55.0.1::gentoo
-# required by firefox (argument)
-=dev-libs/nss-3.32 ~amd64
-# required by app-emulation/fuse (argument)
-=app-emulation/fuse-1.3.8 ~amd64
-# required by app-emulation/fuse-1.3.8::gentoo
-# required by app-emulation/fuse (argument)
-=app-emulation/libspectrum-1.3.6 ~amd64

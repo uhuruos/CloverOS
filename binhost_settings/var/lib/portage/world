@@ -591,7 +591,6 @@ net-analyzer/munin
 net-analyzer/nethogs
 net-analyzer/nload
 net-analyzer/nmap
-net-analyzer/ntop
 net-analyzer/speedtest-cli
 net-analyzer/traceroute
 net-analyzer/vnstat
@@ -708,7 +707,7 @@ sys-fs/squashfs-tools
 sys-fs/zfs
 sys-fs/zfs-kmod
 sys-kernel/dracut
-sys-kernel/genkernel
+sys-kernel/genkernel-next
 sys-kernel/gentoo-sources
 sys-kernel/linux-firmware
 sys-kernel/spl
@@ -722,6 +721,7 @@ sys-process/lsof
 sys-process/parallel
 www-client/chromium
 www-client/dillo
+www-client/elinks
 www-client/firefox
 www-client/links
 www-client/lynx
@@ -789,7 +789,6 @@ x11-plugins/astime
 x11-plugins/fsviewer
 x11-plugins/wmCalClock
 x11-plugins/wmMatrix
-x11-plugins/wmMoonClock
 x11-plugins/wmSMPmon
 x11-plugins/wmSpaceWeather
 x11-plugins/wmSun
@@ -855,6 +854,7 @@ x11-plugins/wmmisc
 x11-plugins/wmmixer
 x11-plugins/wmmon
 x11-plugins/wmmon+smp
+x11-plugins/wmmoonclock
 x11-plugins/wmmp
 x11-plugins/wmmp3
 x11-plugins/wmmsg

@@ -1,6 +1,6 @@
 emerge gentoo-sources genkernel
 wget https://liquorix.net/sources/4.12/config.amd64
-genkernel --btrfs --zfs --lvm --mdadm --dmraid --iscsi --luks --kernel-config=Desktop/config.amd64 all
+genkernel --kernel-config=Desktop/config.amd64 all
 
 cd /boot/
 tar -cvf /usr/portage/packages/s/kernel.tar initramfs-genkernel-*-gentoo kernel-genkernel-*-gentoo System.map-genkernel-*-gentoo
