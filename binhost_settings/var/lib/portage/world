@@ -119,6 +119,8 @@ app-text/zathura-cb
 app-text/zathura-pdf-mupdf
 dev-games/ogre
 dev-haskell/haskell-platform
+dev-java/icedtea
+dev-lang/R
 dev-lang/go
 dev-lang/php
 dev-lang/python
@@ -135,6 +137,7 @@ dev-util/ccache
 dev-util/dialog
 dev-util/eclipse-sdk-bin
 dev-util/geany
+dev-util/netbeans
 dev-util/plan9port
 dev-util/re2c
 dev-util/strace
@@ -572,6 +575,7 @@ media-video/aegisub
 media-video/avidemux
 media-video/cinelerra
 media-video/dvdbackup
+media-video/handbrake
 media-video/kaffeine
 media-video/makemkv
 media-video/mkvtoolnix
@@ -672,6 +676,7 @@ sci-mathematics/octave
 sci-visualization/gnuplot
 sys-apps/dmidecode
 sys-apps/flatpak
+sys-apps/i2c-tools
 sys-apps/idle3-tools
 sys-apps/iproute2
 sys-apps/kexec-tools
