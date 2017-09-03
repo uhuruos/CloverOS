@@ -205,6 +205,7 @@ case "$choice" in
 		echo "sudo emerge -uvD world"
 		sudo emerge --sync
 		sudo emerge -uvD world
+		;;
 
 	*)
 		echo "Invalid option: '$choice'" >&2
