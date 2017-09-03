@@ -23,7 +23,8 @@ echo "1) Enable/disable package signing validation
 t) Enable tap to click on touchpad
 b) Install bluetooth manager
 n) Install proprietary Nvidia drivers
-v) Install Virtualbox/VMWare drivers"
+v) Install Virtualbox/VMWare drivers
+u) Update system"
 
 read -erp "Select option: " -n 1 choice
 echo
@@ -161,7 +162,7 @@ case "$choice" in
 		;;
 
 	n)
-		echo "Running the following:"
+		echo "Running the following (as root):"
 		echo "emerge nvidia-drivers"
 		echo "eselect opengl set nvidia"
 		echo 'echo " Section "Device"
@@ -193,10 +194,17 @@ case "$choice" in
 
 	v)
 		echo "Running the following:"
-		echo "emerge xf86-video-vmware virtualbox-guest-additions"
+		echo "sudo emerge xf86-video-vmware virtualbox-guest-additions"
 		sudo emerge xf86-video-vmware virtualbox-guest-additions
 		echo -e "\nRestart X to load driver."
 		;;
+
+	u)
+		echo "Running the following:"
+		echo "sudo emerge --sync"
+		echo "sudo emerge -uvD world"
+		sudo emerge --sync
+		sudo emerge -uvD world
 
 	*)
 		echo "Invalid option: '$choice'" >&2
