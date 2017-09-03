@@ -66,6 +66,8 @@ app-i18n/ibus
 app-i18n/ibus-anthy
 app-laptop/laptop-mode-tools
 app-laptop/thinkfan
+app-laptop/tlp
+app-laptop/tp_smapi
 app-misc/byobu
 app-misc/ckermit
 app-misc/colordiff
@@ -131,6 +133,7 @@ dev-util/bless
 dev-util/catalyst
 dev-util/ccache
 dev-util/dialog
+dev-util/eclipse-sdk-bin
 dev-util/geany
 dev-util/plan9port
 dev-util/re2c
@@ -712,6 +715,7 @@ sys-kernel/genkernel
 sys-kernel/gentoo-sources
 sys-kernel/linux-firmware
 sys-kernel/spl
+sys-power/acpi_call
 sys-power/acpitool
 sys-power/cpupower
 sys-power/hibernate-script
