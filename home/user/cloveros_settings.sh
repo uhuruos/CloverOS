@@ -203,8 +203,10 @@ case "$choice" in
 		echo "Running the following:"
 		echo "sudo emerge --sync"
 		echo "sudo emerge -uvD world"
+		echo "sudo emerge --depclean"
 		sudo emerge --sync
 		sudo emerge -uvD world
+		sudo emerge --depclean
 		;;
 
 	*)
