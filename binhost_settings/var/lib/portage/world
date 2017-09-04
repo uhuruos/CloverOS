@@ -119,7 +119,7 @@ app-text/zathura-cb
 app-text/zathura-pdf-mupdf
 dev-games/ogre
 dev-haskell/haskell-platform
-dev-java/icedtea
+dev-java/icedtea:8
 dev-lang/R
 dev-lang/go
 dev-lang/php
@@ -608,6 +608,7 @@ net-dns/bind-tools
 net-dns/dnscrypt-proxy
 net-dns/dnsmasq
 net-firewall/iptables
+net-fs/autofs
 net-fs/cifs-utils
 net-fs/curlftpfs
 net-fs/nfs-utils

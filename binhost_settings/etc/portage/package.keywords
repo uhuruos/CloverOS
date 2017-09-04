@@ -74,7 +74,6 @@ www-client/qutebrowser
 sys-power/phc-intel
 x11-terms/termite
 media-video/handbrake
-dev-java/icedtea
 www-client/palemoon-bin
 x11-misc/i3blocks-gaps
 net-im/telegram-desktop-bin
@@ -115,6 +114,7 @@ app-emulation/fuse
 app-laptop/tlp
 sys-power/acpi_call
 dev-util/eclipse-sdk-bin
+dev-java/icedtea:8
 
 #dependencies
 #tlp

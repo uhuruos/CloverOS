@@ -3,7 +3,6 @@ app-laptop/tlp tlp_suggests
 app-emulation/fuse sdl joystick
 x11-misc/polybar i3wm
 app-crypt/veracrypt X
-app-benchmarks/i7z qt5
 net-vpn/i2p -ecdsa
 app-text/calibre -udisks
 x11-libs/libfm udisks
@@ -58,6 +57,7 @@ media-libs/harfbuzz icu
 media-libs/libvpx postproc
 mate-base/mate -extras
 mate-extra/mate-screensaver -pam
+app-benchmarks/i7z qt5
 media-video/vlc qt5 xml
 media-libs/opencv qt5
 net-p2p/bitcoin-qt qt5
@@ -69,6 +69,7 @@ x11-themes/qtcurve qt5
 net-p2p/transmission qt5
 net-wireless/wpa_supplicant qt5
 app-misc/recoll qt5
+games-emulation/vbam gtk link
 sys-devel/distcc gtk crossdev
 kde-plasma/plasma-meta grub gtk
 kde-plasma/plasma-desktop gtk3 gtk2 legacy-systray
