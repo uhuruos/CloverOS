@@ -18,7 +18,7 @@ echo "1) Enable/disable package signing validation
 6) Update dotfiles
 7) Sync time
 8) Set timezone
-9) Clean binary cache
+9) Clean emerge cache
 0) Update cloveros_settings.sh
 t) Enable tap to click on touchpad
 b) Install bluetooth manager
