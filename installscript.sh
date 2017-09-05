@@ -139,6 +139,8 @@ wget https://gitgud.io/cloveros/cloveros/raw/master/home/user/stats.sh
 chmod +x stats.sh
 wget https://gitgud.io/cloveros/cloveros/raw/master/home/user/rotate_screen.sh
 chmod +x rotate_screen.sh
+wget https://gitgud.io/cloveros/cloveros/raw/master/home/user/gpgvalidate.sh
+chmod +x gpgvalidate.sh
 wget https://gitgud.io/cloveros/cloveros/raw/master/home/user/.emacs
 mkdir -p .emacs.d/backups
 mkdir .emacs.d/autosaves
