@@ -74,6 +74,7 @@ eselect locale set en_US.utf8
 gpasswd -a $user audio
 gpasswd -a $user video
 gpasswd -a $user games
+gpg --keyserver keys.gnupg.net --recv-key "78F5 AC55 A120 07F2 2DF9 A28A 78B9 3F76 B8E4 2805"
 cd /home/$user/
 rm .bash_profile
 wget https://gitgud.io/cloveros/cloveros/raw/master/home/user/.bash_profile
