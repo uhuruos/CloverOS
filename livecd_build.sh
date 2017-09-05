@@ -38,7 +38,7 @@ FETCHCOMMAND_HTTPS="/var/tmp/gpgvalidate.sh \"\${URI}\" \"\${DISTDIR}/\${FILE}\"
 ACCEPT_KEYWORDS="~amd64"' >> /etc/portage/make.conf
 
 wget https://gitgud.io/cloveros/cloveros/raw/master/home/user/gpgvalidate.sh -O /var/tmp/gpgvalidate.sh
-chmod +x gpgvalidate.sh
+chmod +x /var/tmp/gpgvalidate.sh
 
 #emerge gentoo-sources genkernel
 #wget http://liquorix.net/sources/4.9/config.amd64
