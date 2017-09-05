@@ -80,6 +80,7 @@ sed -i 's/^#\(.*\)/\1/g' /home/$livecduser/.bash_profile
 gpasswd -a $user video
 gpasswd -a $user audio
 gpasswd -a $user games
+sed -i "s@/home/$livecduser/gpgvalidate.sh@/home/$user/gpgvalidate.sh@" /etc/portage/make.conf
 sed -i "s@/home/$livecduser/@/home/$user/@" /home/$livecduser/.rtorrent.rc
 mv /home/$livecduser/ /home/$user/
 chown -R $user /home/$user/
