@@ -74,13 +74,9 @@ EMERGE_DEFAULT_OPTS="--keep-going=y --autounmask-write=y --jobs=2 -G"
 CFLAGS="-O3 -march=native -pipe -funroll-loops -floop-block -floop-interchange -floop-strip-mine -ftree-loop-distribution"
 CXXFLAGS="\${CFLAGS}"
 CPU_FLAGS_X86="mmx mmxext sse sse2 ssse3 sse3"
-
 PORTAGE_BINHOST="https://cloveros.ga"
 FETCHCOMMAND_HTTPS="/var/tmp/gpgvalidate.sh \"\${URI}\" \"\${DISTDIR}/\${FILE}\""
 ACCEPT_KEYWORDS="~amd64"' >> /etc/portage/make.conf
-
-wget https://gitgud.io/cloveros/cloveros/raw/master/home/user/gpgvalidate.sh -O /var/tmp/gpgvalidate.sh
-chmod +x /var/tmp/gpgvalidate.sh
 
 #emerge gentoo-sources genkernel
 #wget http://liquorix.net/sources/4.9/config.amd64
@@ -125,6 +121,9 @@ gpasswd -a $user audio
 gpasswd -a $user video
 gpasswd -a $user games
 gpg --keyserver keys.gnupg.net --recv-key "78F5 AC55 A120 07F2 2DF9 A28A 78B9 3F76 B8E4 2805"
+echo 'FETCHCOMMAND_HTTPS="/var/tmp/gpgvalidate.sh \"\${URI}\" \"\${DISTDIR}/\${FILE}\""' >> /etc/portage/make.conf
+wget https://gitgud.io/cloveros/cloveros/raw/master/home/user/gpgvalidate.sh -O /var/tmp/gpgvalidate.sh
+chmod +x /var/tmp/gpgvalidate.sh
 cd /home/$user/
 rm .bash_profile
 wget https://gitgud.io/cloveros/cloveros/raw/master/home/user/.bash_profile
