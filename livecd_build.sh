@@ -75,7 +75,7 @@ gpasswd -a $user audio
 gpasswd -a $user video
 gpasswd -a $user games
 gpg --keyserver keys.gnupg.net --recv-key "78F5 AC55 A120 07F2 2DF9 A28A 78B9 3F76 B8E4 2805"
-echo 'FETCHCOMMAND_HTTPS="/var/tmp/gpgvalidate.sh \"\${URI}\" \"\${DISTDIR}/\${FILE}\""' >> /etc/portage/make.conf
+echo 'FETCHCOMMAND_HTTPS="/var/tmp/gpgvalidate.sh \"\\${URI}\" \"\\${DISTDIR}/\\${FILE}\""' >> /etc/portage/make.conf
 wget https://gitgud.io/cloveros/cloveros/raw/master/home/user/gpgvalidate.sh -O /var/tmp/gpgvalidate.sh
 chmod +x /var/tmp/gpgvalidate.sh
 cd /home/$user/

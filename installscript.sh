@@ -75,7 +75,7 @@ CFLAGS="-O3 -march=native -pipe -funroll-loops -floop-block -floop-interchange -
 CXXFLAGS="\${CFLAGS}"
 CPU_FLAGS_X86="mmx mmxext sse sse2 ssse3 sse3"
 PORTAGE_BINHOST="https://cloveros.ga"
-FETCHCOMMAND_HTTPS="/var/tmp/gpgvalidate.sh \"\${URI}\" \"\${DISTDIR}/\${FILE}\""
+FETCHCOMMAND_HTTPS="/var/tmp/gpgvalidate.sh \"\\${URI}\" \"\\${DISTDIR}/\\${FILE}\""
 ACCEPT_KEYWORDS="~amd64"' >> /etc/portage/make.conf
 
 #emerge gentoo-sources genkernel
