@@ -43,8 +43,11 @@ case "$choice" in
 			sudo chmod +x /home/$USER/gpgvalidate.sh
 			echo -e "\nPackage validation enabled. (/etc/portage/make.conf)"
 		else
-			sudo sed -i '/FETCHCOMMAND_HTTPS/d' /etc/portage/make.conf
-			echo -e "\nPackage validation disabled. (/etc/portage/make.conf)"
+			read -erp "Package validation is already enabled. Do you want to disable it? [y/n] " -n 1 validateyn
+			if [[ $validateyn == "y" || $validateyn == "Y" ]]; then
+				sudo sed -i '/FETCHCOMMAND_HTTPS/d' /etc/portage/make.conf
+				echo -e "\nPackage validation disabled. (/etc/portage/make.conf)"
+			fi
 		fi
 		;;
 
