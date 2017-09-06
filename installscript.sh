@@ -150,6 +150,8 @@ wget https://gitgud.io/cloveros/cloveros/raw/master/home/user/.twm/maximize.xbm 
 wget https://gitgud.io/cloveros/cloveros/raw/master/home/user/.twm/close.xbm -P .twm
 mkdir -p .config/xfe/
 wget https://gitgud.io/cloveros/cloveros/raw/master/home/user/.config/xfe/xferc -P .config/xfe
+mkdir .config/nitrogen/
+wget https://gitgud.io/cloveros/cloveros/raw/master/home/user/.config/nitrogen/nitrogen.cfg -P .config/nitrogen
 wget https://gitgud.io/cloveros/cloveros/raw/master/home/user/.rtorrent.rc
 sed -i "s@/home/user/@/home/$user/@" .rtorrent.rc
 mkdir Downloads
