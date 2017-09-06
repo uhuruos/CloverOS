@@ -115,8 +115,12 @@ app-laptop/tlp
 sys-power/acpi_call
 dev-util/eclipse-sdk-bin
 dev-java/icedtea:8
+dev-util/nvidia-cuda-toolkit
+dev-util/staruml-bin
 
 #dependencies
+#staruml-bin
+dev-libs/libgcrypt
 #tlp
 sys-power/linux-x86-power-tools
 #handbrake

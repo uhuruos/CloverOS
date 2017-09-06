@@ -5,3 +5,7 @@ www-plugins/adobe-flash AdobeFlash-11.x
 games-fps/enemy-territory RTCW-ETEULA
 www-plugins/chrome-binary-plugins google-chrome
 dev-java/oracle-jdk-bin Oracle-BCLA-JavaSE
+dev-util/staruml-bin StarUML-EULA
+dev-util/nvidia-cuda-toolkit NVIDIA-CUDA
+# required by amdapp (argument)
+>=dev-util/amdapp-3.0-r2 AMD-APPSDK

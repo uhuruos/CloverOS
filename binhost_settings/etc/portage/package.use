@@ -20,7 +20,7 @@ games-fps/urbanterror server
 x11-wm/compiz-fusion emerald unsupported
 mail-client/thunderbird -crypt system-harfbuzz system-icu system-jpeg system-libevent system-libvpx system-sqlite
 media-gfx/krita color-management
-app-emulation/wine -custom-cflags
+app-emulation/wine -custom-cflags -udisks
 x11-wm/xmonad -default-term
 sys-block/gparted btrfs dmraid f2fs fat hfs jfs mdadm ntfs reiserfs reiser4 xfs
 kde-plasma/powerdevil -wireless
@@ -1087,10 +1087,6 @@ sys-apps/dbus X
 # required by games-fps/urbanterror-4.3.2_p20170426::gentoo[client]
 # required by urbanterror (argument)
 >=media-libs/libsdl2-2.0.4 X
-# required by app-emulation/wine-2.0::gentoo[udisks]
-# required by @selected
-# required by @world (argument)
->=sys-apps/dbus-1.10.18 abi_x86_32
 # required by app-office/calligra-3.0.1::gentoo[calligra_features_karbon]
 # required by calligra (argument)
 >=media-gfx/pstoedit-3.70-r1 plotutils
@@ -1160,3 +1156,29 @@ sys-apps/dbus X
 # required by dev-util/netbeans-8.2::gentoo
 # required by netbeans (argument)
 >=dev-java/oracle-jdk-bin-1.8.0.144 javafx
+# required by dev-util/nvidia-cuda-toolkit-8.0.61::gentoo
+# required by nvidia-cuda-toolkit (argument)
+>=x11-drivers/nvidia-drivers-384.59-r1 uvm
+# required by media-libs/mesa-17.0.6::gentoo[opencl]
+# required by virtual/opencl-0-r4::gentoo
+# required by dev-util/amdapp-3.0-r2::science
+# required by amdapp (argument)
+>=sys-devel/clang-3.9.1-r100 abi_x86_32
+# required by sys-devel/clang-3.9.1-r100::gentoo
+# required by media-libs/mesa-17.0.6::gentoo[opencl]
+# required by virtual/opencl-0-r4::gentoo
+# required by dev-util/amdapp-3.0-r2::science
+# required by amdapp (argument)
+>=sys-devel/llvm-3.9.1-r1 clang
+# required by virtual/opencl-0-r4::gentoo
+# required by dev-util/amdapp-3.0-r2::science
+# required by amdapp (argument)
+>=media-libs/mesa-17.0.6 opencl
+# required by app-text/tesseract-3.04.01::gentoo[opencl]
+# required by @selected
+# required by @world (argument)
+>=media-libs/leptonica-1.74.1 tiff
+# required by app-emulation/wine-2.0::gentoo[opencl]
+# required by @selected
+# required by @world (argument)
+>=virtual/opencl-0-r4 abi_x86_32

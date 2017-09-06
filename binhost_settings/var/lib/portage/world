@@ -124,6 +124,7 @@ dev-lang/R
 dev-lang/go
 dev-lang/php
 dev-lang/python
+dev-libs/beignet
 dev-libs/libisoburn
 dev-libs/weston
 dev-python/ansi2html
@@ -138,8 +139,10 @@ dev-util/dialog
 dev-util/eclipse-sdk-bin
 dev-util/geany
 dev-util/netbeans
+dev-util/nvidia-cuda-toolkit
 dev-util/plan9port
 dev-util/re2c
+dev-util/staruml-bin
 dev-util/strace
 dev-util/valgrind
 dev-util/vmtouch
@@ -148,6 +151,7 @@ dev-vcs/mercurial
 dev-vcs/subversion
 games-action/extreme-tuxracer
 games-action/supertuxkart
+games-action/violetland
 games-arcade/blobby
 games-arcade/tecnoballz
 games-board/crafty
