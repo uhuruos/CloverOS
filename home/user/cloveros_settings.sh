@@ -122,7 +122,7 @@ case "$choice" in
 		;;
 
 	7)
-		date +%s -s @$(curl -s http://www.convert-unix-time.com/ | grep "Seconds since" | sed -r 's/.*t=(.*)" id.*/\1/')
+		sudo date +%s -s @$(curl -s http://www.convert-unix-time.com/ | grep "Seconds since" | sed -r 's/.*t=(.*)" id.*/\1/')
 		echo -e "\nTime set."
 		;;
 
