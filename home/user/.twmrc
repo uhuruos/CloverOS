@@ -68,7 +68,7 @@ menu "Applications" {
 	"wallpaper" !"nitrogen &"
 	"gparted" !"sudo gparted &"
 	"exit X" !"killall X &"
-	"sleep & lock" !"slock & sudo sh -c 'echo -n mem > /sys/power/state' &"
+	"sleep&lock" !"slock & sudo sh -c 'echo -n mem > /sys/power/state' &"
 	"lock" !"slock &"
 	"sleep" !"sudo sudo sh -c 'echo -n mem > /sys/power/state' &"
 	"reboot" !"sudo reboot &"
