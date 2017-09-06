@@ -122,11 +122,8 @@ case "$choice" in
 		;;
 
 	7)
-		if ! type /usr/sbin/ntpdate > /dev/null; then
-			sudo emerge ntp
-		fi
-		sudo ntpdate pool.ntp.org
-		echo -e "\nTime synced."
+		date +%s -s @$(curl -s http://www.convert-unix-time.com/ | grep "Seconds since" | sed -r 's/.*t=(.*)" id.*/\1/')
+		echo -e "\nTime set."
 		;;
 
 	8)
