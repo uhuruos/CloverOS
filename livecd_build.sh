@@ -107,6 +107,7 @@ mkdir -p .config/xfe/
 wget https://gitgud.io/cloveros/cloveros/raw/master/home/user/.config/xfe/xferc -P .config/xfe
 mkdir .config/nitrogen/
 wget https://gitgud.io/cloveros/cloveros/raw/master/home/user/.config/nitrogen/nitrogen.cfg -P .config/nitrogen
+sed -i "s@/home/user/@/home/$user/@" .config/nitrogen/nitrogen.cfg
 wget https://gitgud.io/cloveros/cloveros/raw/master/home/user/.rtorrent.rc
 sed -i "s@/home/user/@/home/$user/@" .rtorrent.rc
 mkdir Downloads
