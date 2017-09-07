@@ -69,6 +69,7 @@ x11-themes/qtcurve qt5
 net-p2p/transmission qt5
 net-wireless/wpa_supplicant qt5
 app-misc/recoll qt5
+x11-apps/xinput_calibrator gtk
 games-emulation/vbam gtk link
 sys-devel/distcc gtk crossdev
 kde-plasma/plasma-meta grub gtk
@@ -171,7 +172,7 @@ media-sound/ncmpcpp iconv unicode clock curl fftw outputs taglib visualizer
 games-emulation/pcsx2 cg egl glew -glsl joystick sdl sound video
 sci-mathematics/maxima clisp gcl
 media-sound/mixxx shout aac ffmpeg hid mp3 mp4 wavpack
-www-client/w3m imlib gpm
+www-client/w3m X imlib gpm
 app-office/texstudio video
 www-client/links fbcon gpm
 app-arch/p7zip wxwidgets rar

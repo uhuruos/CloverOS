@@ -222,6 +222,7 @@ kde-apps/kdenlive
 kde-apps/konsole
 kde-misc/kdirstat
 kde-misc/krusader
+kde-misc/yakuake
 kde-plasma/bluedevil
 kde-plasma/plasma-desktop
 kde-plasma/plasma-meta
@@ -449,6 +450,7 @@ media-gfx/pngcrush
 media-gfx/pngquant
 media-gfx/scrot
 media-gfx/sxiv
+media-gfx/w3mimgfb
 media-libs/alsa-oss
 media-libs/libtxc_dxtn
 media-libs/vapoursynth
@@ -579,6 +581,7 @@ media-video/aegisub
 media-video/avidemux
 media-video/cinelerra
 media-video/dvdbackup
+media-video/ffmpeg
 media-video/handbrake
 media-video/kaffeine
 media-video/makemkv

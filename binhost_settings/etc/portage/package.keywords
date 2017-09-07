@@ -117,6 +117,7 @@ dev-util/eclipse-sdk-bin
 dev-java/icedtea:8
 dev-util/nvidia-cuda-toolkit
 dev-util/staruml-bin
+media-gfx/w3mimgfb
 
 #dependencies
 #staruml-bin
