@@ -117,6 +117,7 @@ case "$choice" in
 		wget -q "$gitprefix"/home/user/.config/xfe/xferc -P .config/xfe
 		mkdir -p .config/nitrogen/
 		wget -q "$gitprefix"/home/user/.config/nitrogen/nitrogen.cfg -P .config/nitrogen
+		sed -i "s@/home/user/@/home/$USER/@" .config/nitrogen/nitrogen.cfg
 		sed -i "s@/home/user/@/home/$USER/@" .rtorrent.rc
 		mkdir .mpv
 		wget -q "$gitprefix"/home/user/.mpv/config -P .mpv
