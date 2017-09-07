@@ -1,7 +1,7 @@
 layman -D elementary eroen
 emerge --sync
 layman -S
-emerge -uvDN --with-bdeps=y --buildpkg @world
+emerge -uvDN --with-bdeps=y --buildpkg @world $(eix -Jc | grep 9999 | cut -d" " -f2 | tr "\n" " ")
 emerge @preserved-rebuild
 emerge --depclean
 
