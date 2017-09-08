@@ -21,6 +21,7 @@ Button1 = m : window : f.move
 Button3 = m : window : f.resize
 
 Button3 = : root : f.menu "Applications"
+Button2 = m : all : f.menu "Applications"
 
 Button1 = : iconmgr : f.iconify
 Button3 = : iconmgr : f.iconify
@@ -33,11 +34,8 @@ RightTitleButton "close.xbm" = f.delete
 Function "raise-lower-move" { f.move f.raiselower }
 Button1 = : title : f.function "raise-lower-move"
 
-Function "winup" { f.circleup }
-"Tab" = m : root|window|frame|title : f.function "winup"
-
-Function "windown" { f.circledown }
-"Tab" = s m : root|window|frame|title : f.function "windown"
+"Tab" = m : all : f.circleup
+"Tab" = s m : all : f.circledown
 
 Color {
 	IconManagerBackground "#056839"
