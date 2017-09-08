@@ -42,6 +42,8 @@ Move windows: alt + left click
 
 Resize Windows: alt + right click
 
+Bring up menu anywhere: alt + middle click
+
 Close windows: ctrl + alt + right click
 
 The taskbar minimizes and restores windows.
