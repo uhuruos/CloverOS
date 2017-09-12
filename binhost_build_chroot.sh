@@ -28,15 +28,11 @@ wget https://gitgud.io/cloveros/cloveros/raw/master/binhost_settings/etc/portage
 wget https://gitgud.io/cloveros/cloveros/raw/master/binhost_settings/etc/portage/package.env -O /etc/portage/package.env
 wget https://gitgud.io/cloveros/cloveros/raw/master/binhost_settings/etc/portage/package.keywords -O /etc/portage/package.keywords
 wget https://gitgud.io/cloveros/cloveros/raw/master/binhost_settings/etc/portage/package.license -O /etc/portage/package.license
+wget https://gitgud.io/cloveros/cloveros/raw/master/binhost_settings/etc/portage/package.mask -O /etc/portage/package.mask
 wget https://gitgud.io/cloveros/cloveros/raw/master/binhost_settings/etc/portage/make.conf -O /etc/portage/make.conf
 mkdir /etc/portage/env
 wget https://gitgud.io/cloveros/cloveros/raw/master/binhost_settings/etc/portage/env/{no-lto,no-lto-graphite,no-lto-o3,no-lto-ofast,no-o3,no-ofast,size} -P /etc/portage/env/
 wget https://gitgud.io/cloveros/cloveros/raw/master/binhost_settings/var/lib/portage/world -O /var/lib/portage/world
-
-sed -i '/pantheon-base\/plank/d' /var/lib/portage/world
-sed -i '/sys-apps\/flatpak/d' /var/lib/portage/world
-sed -i '/x11-terms\/termite/d' /var/lib/portage/world
-sed -i '/dev-util\/netbeans/d' /var/lib/portage/world
 
 CFLAGS="-Ofast -mmmx -mssse3 -pipe -flto=8 -funroll-loops" emerge gcc
 binutils-config --linker ld.gold
@@ -50,7 +46,7 @@ genkernel --kernel-config=config.amd64 all
 binutils-config --linker ld.gold
 emerge layman
 layman -S
-yes | layman -a 0x4d4c deadbeef-overlay palemoon steam-overlay torbrowser vapoursynth das-labor voyageur
+yes | layman -a 0x4d4c bobwya das-labor deadbeef-overlay eclipse elementary eroen flatpak-overlay jorgicio palemoon steam-overlay tlp torbrowser vapoursynth voyageur
 
 emerge -uvDN @world
 

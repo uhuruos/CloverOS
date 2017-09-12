@@ -1,0 +1,10 @@
+www-client/firefox::jorgicio
+gnome-base/gsettings-desktop-schemas::elementary
+net-im/telegram-desktop-bin::jorgicio
+x11-libs/gtk+::elementary
+net-p2p/eiskaltdcpp::bobwya
+dev-libs/libdbusmenu::jorgicio
+games-roguelike/dwarf-fortress::eroen
+media-libs/avidemux-core::bobwya
+media-video/avidemux::bobwya
+media-libs/avidemux-plugins::bobwya
