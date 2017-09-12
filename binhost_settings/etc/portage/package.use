@@ -1,4 +1,6 @@
 #preference
+media-plugins/vapoursynth-tcanny -opencl
+media-libs/waifu2x-converter-cpp models
 app-laptop/tlp tlp_suggests
 app-emulation/fuse sdl joystick
 x11-misc/polybar i3wm
@@ -1160,21 +1162,6 @@ sys-apps/dbus X
 # required by dev-util/nvidia-cuda-toolkit-8.0.61::gentoo
 # required by nvidia-cuda-toolkit (argument)
 >=x11-drivers/nvidia-drivers-384.59-r1 uvm
-# required by media-libs/mesa-17.0.6::gentoo[opencl]
-# required by virtual/opencl-0-r4::gentoo
-# required by dev-util/amdapp-3.0-r2::science
-# required by amdapp (argument)
->=sys-devel/clang-3.9.1-r100 abi_x86_32
-# required by sys-devel/clang-3.9.1-r100::gentoo
-# required by media-libs/mesa-17.0.6::gentoo[opencl]
-# required by virtual/opencl-0-r4::gentoo
-# required by dev-util/amdapp-3.0-r2::science
-# required by amdapp (argument)
->=sys-devel/llvm-3.9.1-r1 clang
-# required by virtual/opencl-0-r4::gentoo
-# required by dev-util/amdapp-3.0-r2::science
-# required by amdapp (argument)
->=media-libs/mesa-17.0.6 opencl
 # required by app-text/tesseract-3.04.01::gentoo[opencl]
 # required by @selected
 # required by @world (argument)
@@ -1183,3 +1170,10 @@ sys-apps/dbus X
 # required by @selected
 # required by @world (argument)
 >=virtual/opencl-0-r4 abi_x86_32
+# required by sys-devel/clang-3.9.1-r100::gentoo
+# required by media-libs/mesa-17.0.6::gentoo[opencl]
+# required by virtual/opencl-0-r4::gentoo
+# required by app-text/tesseract-3.04.01::gentoo
+# required by @selected
+# required by @world (argument)
+>=sys-devel/llvm-3.9.1-r1 clang

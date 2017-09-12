@@ -124,6 +124,7 @@ dev-lang/R
 dev-lang/go
 dev-lang/php
 dev-lang/python
+dev-libs/amdgpu-pro-opencl
 dev-libs/beignet
 dev-libs/libisoburn
 dev-libs/weston
@@ -454,6 +455,7 @@ media-gfx/w3mimgfb
 media-libs/alsa-oss
 media-libs/libtxc_dxtn
 media-libs/vapoursynth
+media-libs/waifu2x-converter-cpp
 media-plugins/vapoursynth-addgrain
 media-plugins/vapoursynth-adjust
 media-plugins/vapoursynth-autocrop

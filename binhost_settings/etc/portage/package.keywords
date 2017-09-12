@@ -77,8 +77,8 @@ media-video/handbrake
 www-client/palemoon-bin
 x11-misc/i3blocks-gaps
 net-im/telegram-desktop-bin
-media-libs/waifu2x-converter-cpp
 media-libs/vapoursynth
+media-libs/waifu2x-converter-cpp
 app-editors/neovim
 sys-fs/ecryptfs-utils
 media-gfx/maim
@@ -118,6 +118,7 @@ dev-java/icedtea:8
 dev-util/nvidia-cuda-toolkit
 dev-util/staruml-bin
 media-gfx/w3mimgfb
+dev-libs/amdgpu-pro-opencl
 
 #dependencies
 #staruml-bin
