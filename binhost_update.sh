@@ -19,7 +19,7 @@ php website.php
 rm -Rf /usr/portage/packages/s/signatures/*
 cd /usr/portage/packages/s/signatures/
 find /usr/portage/packages/ -type d | sed 's#/usr/portage/packages/##' | parallel mkdir
-find /usr/portage/packages/ -type f | sed 's#/usr/portage/packages/##' | pv -qB 1G | parallel gpg --batch --armor --detach-sign --output {}.asc --sign /usr/portage/packages/{}
+find /usr/portage/packages/ -type f | sed 's#/usr/portage/packages/##' | pv -qB 1G | parallel gpg --armor --detach-sign --output {}.asc --sign /usr/portage/packages/{}
 
 chmod -R 755 /usr/portage/packages/
 rmdir /usr/portage/packages/s/signatures/s/signatures/
