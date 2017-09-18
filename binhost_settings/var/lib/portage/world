@@ -696,6 +696,7 @@ sys-apps/mlocate
 sys-apps/paludis
 sys-apps/pv
 sys-apps/qdirstat
+sys-apps/ripgrep
 sys-apps/rng-tools
 sys-apps/smartmontools
 sys-apps/udevil
@@ -726,7 +727,6 @@ sys-fs/squashfs-tools
 sys-fs/zfs
 sys-fs/zfs-kmod
 sys-kernel/dracut
-sys-kernel/genkernel
 sys-kernel/gentoo-sources
 sys-kernel/linux-firmware
 sys-kernel/spl

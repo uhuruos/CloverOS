@@ -120,6 +120,7 @@ dev-util/nvidia-cuda-toolkit
 dev-util/staruml-bin
 media-gfx/w3mimgfb
 dev-libs/amdgpu-pro-opencl
+sys-apps/ripgrep
 
 #dependencies
 #staruml-bin
