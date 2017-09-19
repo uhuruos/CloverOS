@@ -107,6 +107,7 @@ app-shells/gentoo-zsh-completions
 app-shells/mpv-bash-completion
 app-shells/zsh
 app-shells/zsh-completions
+app-text/agrep
 app-text/atril
 app-text/calibre
 app-text/convmv
