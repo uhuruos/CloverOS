@@ -1,4 +1,5 @@
 #preference
+kde-apps/dolphin thumbnail
 media-plugins/vapoursynth-tcanny -opencl
 media-libs/waifu2x-converter-cpp models
 app-laptop/tlp tlp_suggests
@@ -79,7 +80,7 @@ kde-plasma/plasma-desktop gtk3 gtk2 legacy-systray
 media-video/handbrake gtk -fdk libav-aac
 virtual/ffmpeg X sdl x264
 media-video/mpv wayland rubberband lcms archive cdda bluray dvd encode libmpv
-media-video/ffmpeg X gnutls rubberband x265 libass vorbis ogg network vpx rtmp x264 aac wavpack opus mp3 sdl gme v4l webp theora xvid
+media-video/ffmpeg X gnutls rubberband x265 libass vorbis ogg network vpx rtmp x264 aac wavpack opus mp3 sdl gme v4l webp theora xvid xcb
 media-gfx/fontforge X gtk
 media-gfx/graphviz X gtk
 app-emulation/virt-manager gtk
@@ -1177,3 +1178,9 @@ sys-apps/dbus X
 # required by @selected
 # required by @world (argument)
 >=sys-devel/llvm-3.9.1-r1 clang
+# required by media-gfx/pinta-1.6-r2::gentoo
+# required by pinta (argument)
+>=x11-libs/gdk-pixbuf-2.36.9 tiff
+# required by net-misc/electrum-2.7.15::gentoo
+# required by electrum (argument)
+>=dev-libs/protobuf-2.6.1-r3 python

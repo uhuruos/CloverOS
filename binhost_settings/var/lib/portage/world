@@ -140,6 +140,7 @@ dev-util/ccache
 dev-util/dialog
 dev-util/eclipse-sdk-bin
 dev-util/geany
+dev-util/kdevelop
 dev-util/netbeans
 dev-util/nvidia-cuda-toolkit
 dev-util/plan9port
@@ -220,7 +221,9 @@ kde-apps/dolphin
 kde-apps/dolphin-plugins
 kde-apps/filelight
 kde-apps/gwenview
+kde-apps/kcachegrind
 kde-apps/kdenlive
+kde-apps/konqueror
 kde-apps/konsole
 kde-misc/kdirstat
 kde-misc/krusader
@@ -448,6 +451,7 @@ media-gfx/maim
 media-gfx/mcomix
 media-gfx/mirage
 media-gfx/optipng
+media-gfx/pinta
 media-gfx/pngcrush
 media-gfx/pngquant
 media-gfx/scrot
@@ -642,6 +646,7 @@ net-misc/axel
 net-misc/bridge-utils
 net-misc/dhcp
 net-misc/dhcpcd
+net-misc/electrum
 net-misc/freerdp
 net-misc/mosh
 net-misc/ntp
@@ -685,6 +690,7 @@ sci-calculators/tiemu
 sci-electronics/eagle
 sci-mathematics/octave
 sci-visualization/gnuplot
+sys-apps/ack
 sys-apps/dmidecode
 sys-apps/flatpak
 sys-apps/i2c-tools
