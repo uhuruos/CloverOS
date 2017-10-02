@@ -4,7 +4,7 @@ media-video/makemkv MakeMKV-EULA
 www-plugins/adobe-flash AdobeFlash-11.x
 games-fps/enemy-territory RTCW-ETEULA
 www-plugins/chrome-binary-plugins google-chrome
-dev-java/oracle-jdk-bin Oracle-BCLA-JavaSE
 dev-util/staruml-bin StarUML-EULA
 dev-util/nvidia-cuda-toolkit NVIDIA-CUDA
-dev-util/amdapp AMD-APPSDK
+sci-biology/foldingathome FAH-EULA-2014
+sci-mathematics/gimps GIMPS

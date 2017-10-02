@@ -1,11 +1,14 @@
 #preference
+dev-qt/qt-creator -webengine
+dev-util/netbeans -netbeans_modules_javafx
+www-client/uget aria2
+app-misc/anki -recording -sound
 kde-apps/dolphin thumbnail
 media-plugins/vapoursynth-tcanny -opencl
 media-libs/waifu2x-converter-cpp models
 app-laptop/tlp tlp_suggests
 app-emulation/fuse sdl joystick
 x11-misc/polybar i3wm
-app-crypt/veracrypt X
 net-vpn/i2p -ecdsa
 app-text/calibre -udisks
 x11-libs/libfm udisks
@@ -84,6 +87,8 @@ media-video/ffmpeg X gnutls rubberband x265 libass vorbis ogg network vpx rtmp x
 media-gfx/fontforge X gtk
 media-gfx/graphviz X gtk
 app-emulation/virt-manager gtk
+app-crypt/veracrypt X
+sci-chemistry/gromacs X
 mate-extra/mate-utils X
 mate-extra/mate-screensaver X
 games-emulation/retroarch X
@@ -139,11 +144,11 @@ net-libs/webkit-gtk -introspection -gstreamer -geoloc -geolocation -webgl
 net-p2p/retroshare feedreader voip
 games-emulation/pcsxr -sdl
 sys-kernel/spl -custom-cflags
-sys-fs/zfs -custom-cflags
+sys-fs/zfs -custom-cflags -rootfs
 sys-fs/zfs-kmod -custom-cflags
 dev-db/sqlite secure-delete
 media-libs/phonon -vlc
-www-client/firefox -pgo -wifi hwaccel system-jpeg system-cairo system-harfbuzz system-icu system-libevent system-libvpx system-sqlite system-cairo
+www-client/firefox -wifi hwaccel system-jpeg system-cairo system-harfbuzz system-icu system-libevent system-libvpx system-sqlite system-cairo
 www-client/torbrowser system-cairo system-harfbuzz system-icu system-jpeg system-libevent system-libvpx system-sqlite
 media-sound/sox alsa openmp png encode flac id3tag ladspa mad ogg opus sndfile twolame wavpack
 media-libs/libsamplerate sndfile
@@ -1184,3 +1189,6 @@ sys-apps/dbus X
 # required by net-misc/electrum-2.7.15::gentoo
 # required by electrum (argument)
 >=dev-libs/protobuf-2.6.1-r3 python
+# required by media-sound/puddletag-1.2.0::gentoo
+# required by puddletag (argument)
+>=dev-python/PyQt4-4.12 X svg webkit

@@ -1,25 +1,16 @@
 #preference, remove when stable is bumped up
-www-client/firefox # stable has no sound
 =sys-libs/glibc-2.24-r4 # accidentally upgraded glibc
-dev-qt/qt-creator # stable doesn't build
+www-client/firefox # stable has no sound
 media-sound/mpd # file support
-net-p2p/retroshare # no gnome-keyring
 media-gfx/gimp # 2.9 has much more features
-net-misc/youtube-dl # stable never works
-net-irc/weechat # stable is ancient
-net-p2p/eiskaltdcpp ** # stable is vulnerable
-games-emulation/mupen64plus # stable is ancient
-games-emulation/sdlmame # overlay, stable is ancient
-app-emulation/virtualbox # stable is incompatible with current xorg version
-app-emulation/virtualbox-modules
-app-emulation/virtualbox-guest-additions
-app-emulation/virtualbox-additions
-=dev-util/kbuild-0.1.9998_pre20131130-r1
-
-#remove when stable is qt5
-media-gfx/librecad
-media-sound/rosegarden
-media-sound/qjackctl
+net-p2p/retroshare # needs latest version
+net-misc/youtube-dl # needs latest version
+net-irc/weechat # stable is old
+net-p2p/eiskaltdcpp ** # stable is old
+games-emulation/mupen64plus # stable is old
+games-emulation/sdlmame # stable is old, overlay
+media-gfx/librecad # qt5
+media-sound/rosegarden # qt5
 
 #keyworded, remove when stable exists
 sys-fs/zfs-kmod
@@ -121,6 +112,8 @@ dev-util/staruml-bin
 media-gfx/w3mimgfb
 dev-libs/amdgpu-pro-opencl
 sys-apps/ripgrep
+media-sound/puddletag
+sci-biology/foldingathome
 
 #dependencies
 #staruml-bin
@@ -216,8 +209,6 @@ games-emulation/mupen64plus-rsp-hle
 games-emulation/mupen64plus-input-sdl
 #pyhoca
 net-misc/python-x2go
-#ntopng
-net-analyzer/ntopng
 #firefox
 virtual/rust
 dev-libs/nspr
@@ -365,45 +356,23 @@ media-plugins/vapoursynth-cnr2
 
 #yubikey applications
 # required by pam_yubico (argument)
-=sys-auth/pam_yubico-2.24 ~amd64
-# required by sys-auth/ykpers-1.18.0::gentoo
-# required by sys-auth/pam_yubico-2.24::gentoo
-# required by pam_yubico (argument)
-=sys-auth/libyubikey-1.13 ~amd64
-# required by sys-auth/pam_yubico-2.24::gentoo
-# required by pam_yubico (argument)
-=sys-auth/ykpers-1.18.0 ~amd64
-# required by sys-auth/pam_yubico-2.24::gentoo
-# required by pam_yubico (argument)
-=sys-auth/ykclient-2.15 ~amd64
+sys-auth/pam_yubico
+sys-auth/libyubikey
+sys-auth/ykpers
+sys-auth/ykclient
 # required by passwordsafe (argument)
-=app-admin/passwordsafe-1.02.1_beta ~amd64
+app-admin/passwordsafe
 # required by keepassxc (argument)
-=app-admin/keepassxc-2.2.0 ~amd64
-# required by dev-python/django-two-factor-auth-1.3.0::gentoo
+app-admin/keepassxc
 # required by django-two-factor-auth (argument)
-=dev-python/django-phonenumber-field-0.7.2 ~amd64
-# required by dev-python/django-otp-yubikey-0.3.3::gentoo
-# required by dev-python/django-two-factor-auth-1.3.0::gentoo[yubikey]
-# required by django-two-factor-auth (argument)
-=dev-python/yubiotp-0.2.1 ~amd64
-# required by django-two-factor-auth (argument)
-=dev-python/django-two-factor-auth-1.3.0 ~amd64
-# required by dev-python/django-two-factor-auth-1.3.0::gentoo
-# required by django-two-factor-auth (argument)
-=dev-python/twilio-3.6.9 ~amd64
-# required by dev-python/django-two-factor-auth-1.3.0::gentoo
-# required by django-two-factor-auth (argument)
-=dev-python/phonenumbers-8.3.1 ~amd64
-# required by dev-python/django-two-factor-auth-1.3.0::gentoo
-# required by django-two-factor-auth (argument)
-=dev-python/django-otp-0.3.4 ~amd64
-# required by dev-python/django-two-factor-auth-1.3.0::gentoo
-# required by django-two-factor-auth (argument)
-=dev-python/django-formtools-1.0 ~amd64
-# required by dev-python/django-two-factor-auth-1.3.0::gentoo[yubikey]
-# required by django-two-factor-auth (argument)
-=dev-python/django-otp-yubikey-0.3.3 ~amd64
+dev-python/django-phonenumber-field
+dev-python/yubiotp
+dev-python/django-two-factor-auth
+dev-python/twilio
+dev-python/phonenumbers
+dev-python/django-otp
+dev-python/django-formtools
+dev-python/django-otp-yubikey
 
 #windowmaker plugins
 # required by wmmand (argument)
@@ -487,15 +456,3 @@ media-plugins/vapoursynth-cnr2
 =x11-plugins/wmbatteries-0.1.3 **
 # required by wmping (argument)
 =x11-plugins/wmping-0.2.1 ~amd64
-# required by amdgpu-pro (argument)
-=x11-drivers/amdgpu-pro-16.60.379184-r1 ~amd64
-# required by x11-drivers/amdgpu-pro-16.60.379184-r1::vulkan
-# required by amdgpu-pro (argument)
-=x11-libs/libdrm-2.4.70-r1 **
-# required by x11-drivers/amdgpu-pro-16.60.379184-r1::vulkan
-# required by amdgpu-pro (argument)
-=sys-kernel/amdgpu-pro-dkms-16.60.379184 **
-# required by sys-kernel/amdgpu-pro-dkms-16.60.379184::vulkan
-# required by x11-drivers/amdgpu-pro-16.60.379184-r1::vulkan
-# required by amdgpu-pro (argument)
-=sys-firmware/amdgpu-pro-ucode-16.60.379184 ~amd64

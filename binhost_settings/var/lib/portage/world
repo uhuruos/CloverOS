@@ -68,6 +68,7 @@ app-laptop/laptop-mode-tools
 app-laptop/thinkfan
 app-laptop/tlp
 app-laptop/tp_smapi
+app-misc/anki
 app-misc/byobu
 app-misc/ckermit
 app-misc/colordiff
@@ -562,8 +563,11 @@ media-sound/mp3wrap
 media-sound/mpc
 media-sound/mpd
 media-sound/mpdas
+media-sound/mumble
+media-sound/murmur
 media-sound/ncmpcpp
 media-sound/pianobar
+media-sound/puddletag
 media-sound/qjackctl
 media-sound/qmmp
 media-sound/ripperx
@@ -684,10 +688,12 @@ net-wireless/iw
 net-wireless/rfkill
 net-wireless/wpa_supplicant
 pantheon-base/plank
+sci-biology/foldingathome
 sci-calculators/calcoo
 sci-calculators/qalculate-gtk
 sci-calculators/tiemu
 sci-electronics/eagle
+sci-mathematics/gimps
 sci-mathematics/octave
 sci-visualization/gnuplot
 sys-apps/ack
@@ -714,6 +720,7 @@ sys-block/open-iscsi
 sys-boot/grub
 sys-boot/os-prober
 sys-boot/syslinux
+sys-boot/unetbootin
 sys-devel/crossdev
 sys-devel/distcc
 sys-devel/gcc
@@ -734,6 +741,7 @@ sys-fs/squashfs-tools
 sys-fs/zfs
 sys-fs/zfs-kmod
 sys-kernel/dracut
+sys-kernel/genkernel
 sys-kernel/gentoo-sources
 sys-kernel/linux-firmware
 sys-kernel/spl
@@ -759,6 +767,7 @@ www-client/qutebrowser
 www-client/seamonkey
 www-client/surf
 www-client/torbrowser
+www-client/uget
 www-client/w3m
 www-misc/fcgiwrap
 www-plugins/adobe-flash
