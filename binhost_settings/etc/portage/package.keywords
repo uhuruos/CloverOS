@@ -2,6 +2,8 @@
 =sys-libs/glibc-2.24-r4 # accidentally upgraded glibc
 www-client/firefox # stable has no sound
 media-sound/mpd # file support
+media-gfx/librecad # qt5
+media-sound/rosegarden # qt5
 media-gfx/gimp # 2.9 has much more features
 net-p2p/retroshare # needs latest version
 net-misc/youtube-dl # needs latest version
@@ -9,8 +11,6 @@ net-irc/weechat # stable is old
 net-p2p/eiskaltdcpp ** # stable is old
 games-emulation/mupen64plus # stable is old
 games-emulation/sdlmame # stable is old, overlay
-media-gfx/librecad # qt5
-media-sound/rosegarden # qt5
 
 #keyworded, remove when stable exists
 sys-fs/zfs-kmod

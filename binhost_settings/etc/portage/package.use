@@ -2,7 +2,7 @@
 dev-qt/qt-creator -webengine
 dev-util/netbeans -netbeans_modules_javafx
 www-client/uget aria2
-app-misc/anki -recording -sound
+app-misc/anki -sound
 kde-apps/dolphin thumbnail
 media-plugins/vapoursynth-tcanny -opencl
 media-libs/waifu2x-converter-cpp models
@@ -148,7 +148,7 @@ sys-fs/zfs -custom-cflags -rootfs
 sys-fs/zfs-kmod -custom-cflags
 dev-db/sqlite secure-delete
 media-libs/phonon -vlc
-www-client/firefox -wifi hwaccel system-jpeg system-cairo system-harfbuzz system-icu system-libevent system-libvpx system-sqlite system-cairo
+www-client/firefox nsplugin -wifi hwaccel system-jpeg system-cairo system-harfbuzz system-icu system-libevent system-libvpx system-sqlite system-cairo
 www-client/torbrowser system-cairo system-harfbuzz system-icu system-jpeg system-libevent system-libvpx system-sqlite
 media-sound/sox alsa openmp png encode flac id3tag ladspa mad ogg opus sndfile twolame wavpack
 media-libs/libsamplerate sndfile

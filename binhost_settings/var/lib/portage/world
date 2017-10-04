@@ -451,6 +451,7 @@ media-gfx/librecad
 media-gfx/maim
 media-gfx/mcomix
 media-gfx/mirage
+media-gfx/opentoonz
 media-gfx/optipng
 media-gfx/pinta
 media-gfx/pngcrush
@@ -535,6 +536,7 @@ media-sound/alsa-utils
 media-sound/amsynth
 media-sound/apulse
 media-sound/aqualung
+media-sound/ardour
 media-sound/ario
 media-sound/audacious
 media-sound/audacity
@@ -684,6 +686,7 @@ net-vpn/logmein-hamachi
 net-vpn/openvpn
 net-vpn/tor
 net-wireless/blueman
+net-wireless/gnuradio
 net-wireless/iw
 net-wireless/rfkill
 net-wireless/wpa_supplicant
@@ -693,6 +696,7 @@ sci-calculators/calcoo
 sci-calculators/qalculate-gtk
 sci-calculators/tiemu
 sci-electronics/eagle
+sci-electronics/kicad
 sci-mathematics/gimps
 sci-mathematics/octave
 sci-visualization/gnuplot
