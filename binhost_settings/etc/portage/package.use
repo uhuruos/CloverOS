@@ -1,4 +1,6 @@
 #preference
+media-sound/beets convert discogs lastgenre lastimport bpd chroma mpdstats thumbnails web
+media-sound/moc ffmpeg
 dev-qt/qt-creator -webengine
 dev-util/netbeans -netbeans_modules_javafx
 www-client/uget aria2
@@ -148,8 +150,8 @@ sys-fs/zfs -custom-cflags -rootfs
 sys-fs/zfs-kmod -custom-cflags
 dev-db/sqlite secure-delete
 media-libs/phonon -vlc
-www-client/firefox nsplugin -wifi hwaccel system-jpeg system-cairo system-harfbuzz system-icu system-libevent system-libvpx system-sqlite system-cairo
-www-client/torbrowser system-cairo system-harfbuzz system-icu system-jpeg system-libevent system-libvpx system-sqlite
+www-client/firefox -wifi nsplugin system-harfbuzz system-icu system-jpeg system-libevent system-libvpx system-sqlite
+www-client/torbrowser hardened system-cairo system-harfbuzz system-icu system-jpeg system-libevent system-libvpx system-sqlite
 media-sound/sox alsa openmp png encode flac id3tag ladspa mad ogg opus sndfile twolame wavpack
 media-libs/libsamplerate sndfile
 media-libs/gd truetype fontconfig
@@ -282,7 +284,6 @@ media-gfx/exiv2 xmp
 dev-libs/openssl -bindist
 net-misc/openssh -bindist
 dev-qt/qtnetwork -bindist
-dev-libs/botan -bindist
 x11-libs/libva-intel-driver X
 x11-libs/cairo X
 dev-cpp/cairomm X
