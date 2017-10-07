@@ -53,6 +53,8 @@ yes | layman -a 0x4d4c bobwya das-labor deadbeef-overlay eclipse elementary eroe
 
 emerge -uvDN @world
 
+emerge -C hwinfo afterstep && emerge --jobs=1 ntfs3g aterm hwinfo afterstep
+
 quickpkg --include-unmodified-config=y "*/*"
 
 exit
