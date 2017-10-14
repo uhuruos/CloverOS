@@ -144,7 +144,7 @@ rm -Rf image/
 wget http://distfiles.gentoo.org/releases/amd64/autobuilds/$(curl -s http://distfiles.gentoo.org/releases/amd64/autobuilds/latest-iso.txt | grep -o '.*install-amd64-minimal.*.iso')
 7z x -ofiles install-amd64-minimal*.iso
 mv image.squashfs files
-cp /share/syslinux/isohdpfx.bin .
+cp /usr/share/syslinux/isohdpfx.bin .
 xorriso -as mkisofs -r -J \
        	-joliet-long -l -cache-inodes \
        	-isohybrid-mbr isohdpfx.bin \
