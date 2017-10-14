@@ -8,3 +8,4 @@ games-roguelike/dwarf-fortress::eroen
 media-libs/avidemux-core::bobwya
 media-video/avidemux::bobwya
 media-libs/avidemux-plugins::bobwya
+media-libs/opus::rasdark

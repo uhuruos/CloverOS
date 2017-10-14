@@ -474,3 +474,5 @@ dev-python/django-otp-yubikey
 # required by media-sound/beets-1.4.3::gentoo[chroma]
 # required by beets (argument)
 =dev-python/pyacoustid-1.0.0-r1 ~amd64
+# required by waterfox-bin (argument)
+=www-client/waterfox-bin-55.2.2 ~amd64

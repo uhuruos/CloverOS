@@ -141,9 +141,10 @@ cd ..
 umount -l image/*
 mksquashfs image image.squashfs -b 1024k -comp xz -Xbcj x86 -Xdict-size 100%
 rm -Rf image/
-wget https://gitgud.io/cloveros/cloveros/raw/master/livecd_files.tar.xz
-tar xvf livecd_files.tar.xz
+wget http://distfiles.gentoo.org/releases/amd64/autobuilds/$(curl -s http://distfiles.gentoo.org/releases/amd64/autobuilds/latest-iso.txt | grep -o '.*install-amd64-minimal.*.iso')
+7z x -ofiles install-amd64-minimal*.iso
 mv image.squashfs files
+cp /share/syslinux/isohdpfx.bin .
 xorriso -as mkisofs -r -J \
        	-joliet-long -l -cache-inodes \
        	-isohybrid-mbr isohdpfx.bin \
@@ -151,4 +152,4 @@ xorriso -as mkisofs -r -J \
        	-b isolinux/isolinux.bin -c isolinux/boot.cat \
        	-no-emul-boot -boot-load-size 4 -boot-info-table  \
 	-o CloverOS-x86_64-$(date +"%Y%m%d").iso files
-rm -R files isohdpfx.bin livecd_files.tar.xz
+rm -R files isohdpfx.bin install-amd64-minimal*.iso

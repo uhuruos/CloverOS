@@ -774,6 +774,7 @@ www-client/surf
 www-client/torbrowser
 www-client/uget
 www-client/w3m
+www-client/waterfox-bin
 www-misc/fcgiwrap
 www-plugins/adobe-flash
 www-plugins/chrome-binary-plugins
