@@ -140,16 +140,15 @@ EOF
 cd ..
 umount -l image/*
 wget https://gitgud.io/cloveros/cloveros/raw/master/livecd_files.tar.xz
-mv *aufs* image/lib/modules/
-mksquashfs image image.squashfs -b 1024k -comp xz -Xbcj x86 -Xdict-size 100%
-rm -Rf image/
 tar xvf livecd_files.tar.xz
+mv *aufs* image/lib/modules/
+mksquashfs image/ image.squashfs -b 1024k -comp xz -Xbcj x86 -Xdict-size 100%
 mv image.squashfs files
 xorriso -as mkisofs -r -J \
        	-joliet-long -l -cache-inodes \
-       	-isohybrid-mbr /usr/share/syslinux/isohdpfx.bin \
+       	-isohybrid-mbr isohdpfx.bin \
        	-partition_offset 16 -A "Gentoo Live" \
        	-b isolinux/isolinux.bin -c isolinux/boot.cat \
        	-no-emul-boot -boot-load-size 4 -boot-info-table  \
 	-o CloverOS-x86_64-$(date +"%Y%m%d").iso files
-rm -R files isohdpfx.bin livecd_files.tar.xz
+rm -Rf image/ files/ isohdpfx.bin livecd_files.tar.xz
