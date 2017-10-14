@@ -89,6 +89,8 @@ if [[ $user != $livecduser ]]; then
 fi
 rm /home/$user/livecd_install.sh
 
+rm -Rf /lib/modules/*aufs*
+
 EOF
 
 reboot

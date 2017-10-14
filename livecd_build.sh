@@ -140,7 +140,7 @@ EOF
 cd ..
 umount -l image/*
 wget https://gitgud.io/cloveros/cloveros/raw/master/livecd_files.tar.xz
-mv 4.5.2-aufs-r1 image/lib/modules/
+mv *aufs* image/lib/modules/
 mksquashfs image image.squashfs -b 1024k -comp xz -Xbcj x86 -Xdict-size 100%
 rm -Rf image/
 tar xvf livecd_files.tar.xz
