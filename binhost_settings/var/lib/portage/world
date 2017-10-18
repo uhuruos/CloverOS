@@ -9,6 +9,7 @@ app-admin/passwordsafe
 app-admin/sudo
 app-admin/testdisk
 app-arch/advancecomp
+app-arch/brotli
 app-arch/cabextract
 app-arch/engrampa
 app-arch/file-roller

@@ -114,6 +114,7 @@ dev-libs/amdgpu-pro-opencl
 sys-apps/ripgrep
 media-sound/puddletag
 sci-biology/foldingathome
+app-arch/brotli
 
 #dependencies
 #staruml-bin
