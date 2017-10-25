@@ -1,4 +1,5 @@
 #preference
+media-sound/ncmpc help-screen artist-screen chat-screen colors key-screen lirc lyrics-screen mouse search-screen song-screen
 media-sound/beets convert discogs lastgenre lastimport bpd chroma mpdstats thumbnails web
 media-sound/moc ffmpeg
 dev-qt/qt-creator -webengine
@@ -139,7 +140,7 @@ dev-qt/qtwidgets gtkstyle
 x11-base/xorg-drivers input_devices_joystick
 media-libs/mesa d3d9 vulkan llvm gallium gles2 wayland video_cards_vmware
 x11-drivers/xf86-video-intel uxa sna dri3
-www-serverrs/nginx http2
+www-servers/nginx http2 nginx_modules_http_dav nginx_modules_http_realip rtmp
 net-misc/curl http2
 media-libs/freetype infinality
 net-libs/webkit-gtk -introspection -gstreamer -geoloc -geolocation -webgl
@@ -202,7 +203,7 @@ dev-games/ogre gl3plus -gles3 -gles2
 dev-libs/glib dbus
 app-crypt/gcr gtk
 dev-libs/boost icu nls
-dev-libs/libdbusmenu gtk3 abi_x86_64
+dev-libs/libdbusmenu gtk3
 media-libs/sdl-mixer vorbis flac mikmod mod midi fluidsynth
 net-nds/openldap sasl
 media-libs/libsdl2 gles
@@ -212,22 +213,22 @@ dev-lang/luajit lua52compat
 dev-libs/libxml2 python
 dev-lang/python sqlite
 dev-libs/libpcre pcre16
-dev-qt/qtcore icu
 x11-libs/libxcb xkb
 dev-libs/libcdio -minimal
 x11-libs/cairo xcb
-dev-qt/qtscript scripttools
-app-text/poppler qt5 cairo
-dev-qt/qtsingleapplication qt5 X
-dev-qt/qtlockedfile qt5
-dev-qt/qtmultimedia widgets
 app-text/xmlto text
 sys-libs/tevent python
-dev-qt/qtwebkit printsupport
 media-gfx/exiv2 xmp
 dev-libs/openssl -bindist
 net-misc/openssh -bindist
 dev-qt/qtnetwork -bindist
+dev-qt/qtscript scripttools
+dev-qt/qtmultimedia widgets
+dev-qt/qtcore icu
+dev-qt/qtwebkit printsupport
+app-text/poppler qt5 cairo
+dev-qt/qtsingleapplication qt5 X
+dev-qt/qtlockedfile qt5
 x11-libs/libva-intel-driver X
 x11-libs/cairo X
 dev-cpp/cairomm X

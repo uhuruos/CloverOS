@@ -115,6 +115,8 @@ sys-apps/ripgrep
 media-sound/puddletag
 sci-biology/foldingathome
 app-arch/brotli
+net-vpn/zeronet **
+dev-db/rethinkdb
 
 #dependencies
 #staruml-bin
@@ -149,8 +151,6 @@ dev-libs/mathjax
 media-libs/libsidplayfp
 #deadbeef
 media-plugins/deadbeef-plugins-meta
-#virtualbox
-x11-drivers/xf86-video-virtualbox
 #rust
 dev-util/cargo
 #compiz-fusion
@@ -216,6 +216,10 @@ dev-libs/nspr
 dev-libs/nss
 #fuse
 app-emulation/libspectrum
+#vapoursynth
+media-libs/zimg **
+#rethinkdb
+dev-libs/jemalloc
 
 #fonts
 media-fonts/lohit-kannada
@@ -354,6 +358,7 @@ media-plugins/vapoursynth-vcmod
 media-plugins/vapoursynth-bilateral
 media-plugins/vapoursynth-vstaambk
 media-plugins/vapoursynth-cnr2
+media-plugins/vapoursynth-eedi3
 
 #yubikey applications
 # required by pam_yubico (argument)
@@ -477,3 +482,5 @@ dev-python/django-otp-yubikey
 =dev-python/pyacoustid-1.0.0-r1 ~amd64
 # required by waterfox-bin (argument)
 =www-client/waterfox-bin-55.2.2 ~amd64
+# required by go-ipfs-bin (argument)
+=net-p2p/go-ipfs-bin-0.4.11 ~amd64
