@@ -7,6 +7,7 @@ app-admin/logrotate
 app-admin/mcelog
 app-admin/passwordsafe
 app-admin/sudo
+app-admin/syslog-ng
 app-admin/testdisk
 app-arch/advancecomp
 app-arch/brotli
@@ -463,6 +464,7 @@ media-gfx/scrot
 media-gfx/sxiv
 media-gfx/w3mimgfb
 media-libs/alsa-oss
+media-libs/glyr
 media-libs/libtxc_dxtn
 media-libs/vapoursynth
 media-libs/waifu2x-converter-cpp
@@ -653,6 +655,7 @@ net-irc/sic
 net-irc/weechat
 net-libs/libotr
 net-libs/nodejs
+net-mail/dovecot
 net-misc/autossh
 net-misc/axel
 net-misc/bridge-utils
@@ -785,6 +788,8 @@ www-client/waterfox-bin
 www-misc/fcgiwrap
 www-plugins/adobe-flash
 www-plugins/chrome-binary-plugins
+www-servers/apache
+www-servers/lighttpd
 www-servers/nginx
 www-servers/onionshare
 x11-apps/mesa-progs
