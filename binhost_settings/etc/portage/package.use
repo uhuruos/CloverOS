@@ -84,6 +84,7 @@ sys-devel/distcc gtk crossdev
 kde-plasma/plasma-meta grub gtk
 kde-plasma/plasma-desktop gtk3 gtk2 legacy-systray
 media-video/handbrake gtk -fdk libav-aac
+media-libs/x264 10bit
 virtual/ffmpeg X sdl x264
 media-video/mpv wayland rubberband lcms archive cdda bluray dvd encode libmpv
 media-video/ffmpeg X gnutls rubberband x265 libass vorbis ogg network vpx rtmp x264 aac wavpack opus mp3 sdl gme v4l webp theora xvid xcb
@@ -188,7 +189,6 @@ app-office/texstudio video
 www-client/links fbcon gpm
 app-arch/p7zip wxwidgets rar
 media-gfx/imagemagick png
-media-libs/x264 -10bit
 media-gfx/feh exif curl
 x11-terms/rxvt-unicode -vanilla alt-font-width xft 256-color blink unicode3
 net-analyzer/vnstat gd
