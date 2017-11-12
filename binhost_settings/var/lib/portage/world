@@ -543,7 +543,6 @@ media-sound/apulse
 media-sound/aqualung
 media-sound/ardour
 media-sound/ario
-media-sound/audacious
 media-sound/audacity
 media-sound/beets
 media-sound/bluez-alsa
@@ -765,6 +764,7 @@ sys-power/acpitool
 sys-power/cpupower
 sys-power/hibernate-script
 sys-power/pm-utils
+sys-power/powertop
 sys-process/htop
 sys-process/iotop
 sys-process/lsof
@@ -959,7 +959,6 @@ x11-terms/termite
 x11-terms/xfce4-terminal
 x11-themes/adwaita-icon-theme
 x11-themes/arc-icon-theme
-x11-themes/audacious-themes
 x11-themes/blueglass-xcursors
 x11-themes/clearlooks-phenix
 x11-themes/comix-xcursors
@@ -1064,6 +1063,7 @@ x11-wm/enlightenment:0.17
 x11-wm/fluxbox
 x11-wm/fvwm
 x11-wm/i3-gaps
+x11-wm/icewm
 x11-wm/openbox
 x11-wm/ratpoison
 x11-wm/twm

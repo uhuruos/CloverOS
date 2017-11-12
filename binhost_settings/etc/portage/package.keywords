@@ -1,14 +1,13 @@
 #preference, remove when stable is bumped up
-www-client/firefox # stable has no sound
-media-sound/mpd # file support
-media-sound/rosegarden # qt5
-media-gfx/gimp # 2.9 has much more features
+www-client/firefox # major change
+media-gfx/gimp # major change
+media-sound/mpd # bugfixes
 net-p2p/retroshare # needs latest version
 net-misc/youtube-dl # needs latest version
-net-irc/weechat # stable is old
+media-sound/rosegarden # qt5, stable is old
 net-p2p/eiskaltdcpp ** # stable is old
 games-emulation/mupen64plus # stable is old
-games-emulation/sdlmame # stable is old, overlay
+games-emulation/sdlmame # overlay, stable is old
 
 #keyworded, remove when stable exists
 sys-fs/zfs-kmod
@@ -115,6 +114,9 @@ sci-biology/foldingathome
 app-arch/brotli
 net-vpn/zeronet **
 dev-db/rethinkdb
+www-client/waterfox-bin
+net-p2p/go-ipfs-bin
+media-sound/beets
 
 #dependencies
 #staruml-bin
@@ -218,6 +220,12 @@ app-emulation/libspectrum
 media-libs/zimg **
 #rethinkdb
 dev-libs/jemalloc
+#beets
+dev-python/jellyfish
+dev-python/munkres
+dev-python/bluelet
+dev-python/audioread
+dev-python/pyacoustid
 
 #fonts
 media-fonts/lohit-kannada
@@ -358,6 +366,48 @@ media-plugins/vapoursynth-vstaambk
 media-plugins/vapoursynth-cnr2
 media-plugins/vapoursynth-eedi3
 
+#windowmaker plugins
+x11-plugins/wmmand
+x11-plugins/wmbluecpu
+x11-plugins/wmsystemtray
+net-mail/peephole
+x11-plugins/wmhdplop
+x11-plugins/wmbio
+x11-plugins/wmdiskmon
+x11-plugins/wmmemfree
+x11-plugins/wmcalendar
+x11-plugins/wmmp3
+x11-plugins/wmpiki **
+x11-plugins/wmxkb
+x11-plugins/wmlongrun **
+x11-plugins/asapm
+x11-plugins/wmlife
+x11-plugins/wmrecord **
+x11-plugins/wmgrabimage
+x11-plugins/wmmixer **
+x11-plugins/wmsvencd **
+x11-plugins/wmwork
+x11-plugins/wmtime
+x11-plugins/wmcpu **
+x11-plugins/wmlaptop
+x11-plugins/wmsound **
+x11-plugins/wmjsql **
+x11-plugins/wmXName **
+x11-plugins/wmgtemp
+x11-plugins/wmstickynotes
+x11-plugins/wmcdplay
+x11-plugins/wmpeople *
+x11-plugins/wmrack
+x11-plugins/wmxres
+x11-plugins/wmmisc
+x11-plugins/wmwave **
+x11-plugins/wmacpimon **
+x11-plugins/wmforkplop
+x11-plugins/wmlpq
+x11-plugins/wmacpiload-ac
+x11-plugins/wmbatteries **
+x11-plugins/wmping
+
 #yubikey applications
 # required by pam_yubico (argument)
 sys-auth/pam_yubico
@@ -377,108 +427,3 @@ dev-python/phonenumbers
 dev-python/django-otp
 dev-python/django-formtools
 dev-python/django-otp-yubikey
-
-#windowmaker plugins
-# required by wmmand (argument)
-=x11-plugins/wmmand-1.3.2-r1 ~amd64
-# required by wmbluecpu (argument)
-=x11-plugins/wmbluecpu-0.6 ~amd64
-# required by wmsystemtray (argument)
-=x11-plugins/wmsystemtray-1.4 ~amd64
-# required by x11-plugins/wmpeople-1.3::gentoo
-# required by wmpeople (argument)
-=net-mail/peephole-1.5 ~amd64
-# required by wmhdplop (argument)
-=x11-plugins/wmhdplop-0.9.10 ~amd64
-# required by wmbio (argument)
-=x11-plugins/wmbio-1.02 ~amd64
-# required by wmdiskmon (argument)
-=x11-plugins/wmdiskmon-0.0.2 ~amd64
-# required by wmmemfree (argument)
-=x11-plugins/wmmemfree-0.7-r2 ~amd64
-# required by wmcalendar (argument)
-=x11-plugins/wmcalendar-0.5.2-r1 ~amd64
-# required by wmmp3 (argument)
-=x11-plugins/wmmp3-0.12 ~amd64
-# required by wmpiki (argument)
-=x11-plugins/wmpiki-0.2.1 **
-# required by wmxkb (argument)
-=x11-plugins/wmxkb-1.2.2 ~amd64
-# required by wmlongrun (argument)
-=x11-plugins/wmlongrun-0.3.1 **
-# required by asapm (argument)
-=x11-plugins/asapm-3.1-r1 ~amd64
-# required by wmlife (argument)
-=x11-plugins/wmlife-1.0.1 ~amd64
-# required by wmrecord (argument)
-=x11-plugins/wmrecord-1.0.5.3-r1 **
-# required by wmgrabimage (argument)
-=x11-plugins/wmgrabimage-0.72-r1 ~amd64
-# required by wmmixer (argument)
-=x11-plugins/wmmixer-1.7 **
-# required by wmsvencd (argument)
-=x11-plugins/wmsvencd-0.5.0 **
-# required by wmwork (argument)
-=x11-plugins/wmwork-0.2.5 ~amd64
-# required by wmtime (argument)
-=x11-plugins/wmtime-1.4 ~amd64
-# required by wmcpu (argument)
-=x11-plugins/wmcpu-1.4 **
-# required by wmlaptop (argument)
-=x11-plugins/wmlaptop-1.4 ~amd64
-# required by wmsound (argument)
-=x11-plugins/wmsound-0.9.5-r1 **
-# required by wmjsql (argument)
-=x11-plugins/wmjsql-0.5 **
-# required by wmXName (argument)
-=x11-plugins/wmXName-0.1 **
-# required by wmgtemp (argument)
-=x11-plugins/wmgtemp-1.2 ~amd64
-# required by wmstickynotes (argument)
-=x11-plugins/wmstickynotes-0.2 ~amd64
-# required by wmcdplay (argument)
-=x11-plugins/wmcdplay-1.1 ~amd64
-# required by wmpeople (argument)
-=x11-plugins/wmpeople-1.3 **
-# required by wmrack (argument)
-=x11-plugins/wmrack-1.4 ~amd64
-# required by wmxres (argument)
-=x11-plugins/wmxres-1.2 ~amd64
-# required by wmmisc (argument)
-=x11-plugins/wmmisc-1.1 ~amd64
-# required by wmwave (argument)
-=x11-plugins/wmwave-0.4 **
-# required by wmacpimon (argument)
-=x11-plugins/wmacpimon-0.2.1 **
-# required by wmforkplop (argument)
-=x11-plugins/wmforkplop-0.9.3-r1 ~amd64
-# required by wmlpq (argument)
-=x11-plugins/wmlpq-0.2.1-r3 ~amd64
-# required by wmacpiload-ac (argument)
-=x11-plugins/wmacpiload-ac-0.2.0-r1 ~amd64
-# required by wmbatteries (argument)
-=x11-plugins/wmbatteries-0.1.3 **
-# required by wmping (argument)
-=x11-plugins/wmping-0.2.1 ~amd64
-# required by media-sound/beets-1.4.3::gentoo
-# required by beets (argument)
-=dev-python/jellyfish-0.5.6 ~amd64
-# required by media-sound/beets-1.4.3::gentoo
-# required by beets (argument)
-=dev-python/munkres-1.0.8 ~amd64
-# required by beets (argument)
-=media-sound/beets-1.4.3 ~amd64
-# required by media-sound/beets-1.4.3::gentoo[bpd]
-# required by beets (argument)
-=dev-python/bluelet-0.2.0 ~amd64
-# required by dev-python/pyacoustid-1.0.0-r1::gentoo
-# required by media-sound/beets-1.4.3::gentoo[chroma]
-# required by beets (argument)
-=dev-python/audioread-1.0.1-r1 ~amd64
-# required by media-sound/beets-1.4.3::gentoo[chroma]
-# required by beets (argument)
-=dev-python/pyacoustid-1.0.0-r1 ~amd64
-# required by waterfox-bin (argument)
-=www-client/waterfox-bin-55.2.2 ~amd64
-# required by go-ipfs-bin (argument)
-=net-p2p/go-ipfs-bin-0.4.11 ~amd64
