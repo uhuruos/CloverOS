@@ -200,7 +200,6 @@ media-sound/deadbeef aac adplug alac alsa cdda converter cover cover-imlib2 cove
 app-emulation/qemu sdl usb virgl
 
 #required
-www-client/qutebrowser python_targets_python3_5
 dev-games/ogre gl3plus -gles3 -gles2
 dev-libs/glib dbus
 app-crypt/gcr gtk
@@ -1140,3 +1139,11 @@ sys-apps/dbus X
 # required by media-sound/puddletag-1.2.0::gentoo
 # required by puddletag (argument)
 >=dev-python/PyQt4-4.12 X svg webkit
+# required by app-shells/fish-2.6.0::gentoo
+# required by @selected
+# required by @world (argument)
+>=dev-libs/libpcre2-10.30 pcre32
+# required by media-plugins/audacious-plugins-3.9::gentoo
+# required by media-sound/audacious-3.9::gentoo
+# required by audacious (argument)
+>=dev-libs/glib-2.50.3-r1 utils
