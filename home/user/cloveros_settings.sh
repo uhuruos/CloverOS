@@ -4,6 +4,7 @@ mirrors=(
 	"useast.cloveros.ga"
 	"uswest.cloveros.ga"
 	"fr.cloveros.ga"
+	"au.cloveros.ga"
 	"uk.cloveros.ga"
 	"nl.cloveros.ga"
 )
