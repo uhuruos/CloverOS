@@ -32,8 +32,11 @@ These are all the packages that don't build with the full CFLAGS: https://gitgud
 
 ## What if CloverOS dies? Will my install become useless?
 Edit `/etc/portage/make.conf` and change
+
 `EMERGE_DEFAULT_OPTS="--keep-going=y --autounmask-write=y --jobs=2 -G"`
+
 to
+
 `EMERGE_DEFAULT_OPTS="--keep-going=y --autounmask-write=y --jobs=2"`
 
 After emerge determines what it needs to install and checks dependencies, the -G switch tells emerge to check the binhost before it starts building source. Removing -G reverts to regular emerge operation. It's exactly the same as running `PORTAGE_BINHOST="https://cloveros.ga" emerge -G package` on any Gentoo install.
