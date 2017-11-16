@@ -1,6 +1,9 @@
 # FAQ
 Questions and Answers. This has everything not organized enough for README.
 
+## It doesn't boot
+Take out your boot usb/cd.
+
 ## Binary details
 The mirrors have an index page that details this: https://useast.cloveros.ga https://uswest.cloveros.ga https://fr.cloveros.ga https://uk.cloveros.ga https://nl.cloveros.ga https://au.cloveros.ga
 
