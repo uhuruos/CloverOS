@@ -100,6 +100,12 @@ https://uswest.cloveros.ga
 
 https://fr.cloveros.ga
 
+https://au.cloveros.ga
+
+https://uk.cloveros.ga
+
+https://nl.cloveros.ga
+
 ## FAQ
 ### Is this an overlay?
 No, this uses regular Gentoo Portage only. Same versions and USE flag options.
