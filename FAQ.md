@@ -43,5 +43,10 @@ After emerge determines what it needs to install and checks dependencies, the -G
 
 CloverOS is a default Gentoo install with programs and with the above defaulted in `/etc/portage/make.conf`. There's also some configuration files and scripts in the user's home directory for making things easier. With those files removed, CloverOS becomes a default Gentoo install.
 
+You can see exactly what's done here: https://gitgud.io/cloveros/cloveros/blob/master/livecd_build.sh
+
 ## Benefits of Gentoo/CloverOS over other distros
 No systemd, CFLAGS, lower RAM usage, it's Gentoo, package versions are stable, it's as default as possible while still being easy, has infinality, installs in 2 minutes depending on # of cores (unsquashfs). It saved me a lot of time in OS installs because it's exactly how I would configure my OS.
+
+## Firefox and Pulseaudio
+Firefox on CloverOS still works with ALSA. If this changes, it will be built with apulse.
