@@ -30,6 +30,9 @@ wget https://liquorix.net/sources/4.12/config.amd64
 genkernel --kernel-config=config.amd64 all
 ```
 
+## How many users does CloverOS have?
+This is the only data I record: https://cloveros.ga/s/bandwidth.png Each mirror has /s/bandwidth.txt. ie: https://uswest.cloveros.ga/s/bandwidth.txt
+
 ## Gentoo is a distro that's only good for servers
 Gentoo is a meta-distro. You can make any distro you want out of it.
 
