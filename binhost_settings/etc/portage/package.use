@@ -1147,3 +1147,7 @@ sys-apps/dbus X
 # required by media-sound/audacious-3.9::gentoo
 # required by audacious (argument)
 >=dev-libs/glib-2.50.3-r1 utils
+# required by app-office/libreoffice-5.4.2.2::gentoo
+# required by @selected
+# required by @world (argument)
+>=dev-libs/xmlsec-1.2.24-r1 nss

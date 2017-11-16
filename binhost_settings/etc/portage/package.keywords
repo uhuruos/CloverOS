@@ -10,6 +10,8 @@ media-sound/rosegarden # qt5, stable is old
 net-p2p/eiskaltdcpp ** # stable is old
 games-emulation/mupen64plus # stable is old
 games-emulation/sdlmame # overlay, stable is old
+net-p2p/rtorrent-ps ** # rtorrent may be abandoned
+net-libs/libtorrent ** # rtorrent may be abandoned
 
 #keyworded, remove when stable exists
 sys-fs/zfs-kmod

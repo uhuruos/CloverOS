@@ -129,7 +129,6 @@ dev-java/icedtea:8
 dev-lang/R
 dev-lang/go
 dev-lang/php
-dev-lang/python
 dev-libs/amdgpu-pro-opencl
 dev-libs/beignet
 dev-libs/libisoburn
@@ -687,7 +686,7 @@ net-p2p/ncdc
 net-p2p/nicotine+
 net-p2p/qbittorrent
 net-p2p/retroshare
-net-p2p/rtorrent
+net-p2p/rtorrent-ps
 net-p2p/soulseek-qt
 net-p2p/transmission
 net-vpn/i2p
@@ -734,6 +733,7 @@ sys-block/gparted
 sys-block/open-iscsi
 sys-boot/grub
 sys-boot/os-prober
+sys-boot/plymouth
 sys-boot/syslinux
 sys-boot/unetbootin
 sys-devel/crossdev
@@ -812,6 +812,7 @@ x11-misc/dmenu
 x11-misc/i3blocks-gaps
 x11-misc/i3lock
 x11-misc/i3status
+x11-misc/lightdm
 x11-misc/lsw
 x11-misc/nitrogen
 x11-misc/obmenu

@@ -49,7 +49,7 @@ genkernel --kernel-config=config.i386-pae all
 binutils-config --linker ld.gold
 emerge layman
 layman -S
-yes | layman -a 0x4d4c bobwya das-labor deadbeef-overlay eclipse elementary eroen flatpak-overlay jorgicio palemoon steam-overlay tlp torbrowser vapoursynth voyageur
+yes | layman -a 0x4d4c das-labor deadbeef-overlay elementary eroen fkmclane flatpak-overlay jorgicio palemoon pg_overlay raiagent rasdark steam-overlay tlp torbrowser vapoursynth voyageur
 
 emerge -uvDN @world
 
