@@ -87,7 +87,6 @@ kde-plasma/plasma-desktop gtk3 gtk2 legacy-systray
 media-video/handbrake gtk -fdk libav-aac
 media-libs/x264 10bit
 virtual/ffmpeg X sdl x264
-media-video/mpv wayland rubberband lcms archive cdda bluray dvd encode libmpv
 media-video/ffmpeg X gnutls rubberband x265 libass vorbis ogg network vpx rtmp x264 aac wavpack opus mp3 sdl gme v4l webp theora xvid xcb
 media-gfx/fontforge X gtk
 media-gfx/graphviz X gtk
@@ -108,6 +107,8 @@ x11-libs/gdk-pixbuf X
 sci-mathematics/octave X gui fftw curl gnuplot postscript jit
 media-video/handbrake x265
 app-text/texlive X cjk context detex dvi2tty dvipdfm epspdf extra games graphics humanities jadetex luatex metapost music omega png pstricks publishers science tex4ht texi2html truetype xetex xindy xml
+media-video/mpv wayland rubberband lcms archive cdda bluray dvd encode libmpv
+media-libs/mesa d3d9 vulkan llvm gallium -bindist osmesa gles1 gles2 wayland openmax video_cards_vmware
 dev-cpp/gtkmm wayland X
 media-libs/clutter -wayland X
 dev-libs/weston xwayland
@@ -140,7 +141,6 @@ net-irc/hexchat spell
 dev-qt/qtgui gtkstyle
 dev-qt/qtwidgets gtkstyle
 x11-base/xorg-drivers input_devices_joystick
-media-libs/mesa d3d9 vulkan llvm gallium gles2 wayland video_cards_vmware
 x11-drivers/xf86-video-intel uxa sna dri3
 www-servers/nginx http2 nginx_modules_http_dav nginx_modules_http_realip rtmp
 net-misc/curl http2
@@ -1151,3 +1151,6 @@ sys-apps/dbus X
 # required by @selected
 # required by @world (argument)
 >=dev-libs/xmlsec-1.2.24-r1 nss
+# required by media-libs/mesa-17.0.6::gentoo[openmax]
+# required by mesa (argument)
+>=media-libs/libomxil-bellagio-0.9.3 abi_x86_32
