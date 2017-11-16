@@ -49,6 +49,10 @@ No systemd, CFLAGS, lower RAM usage, it's Gentoo, package versions are stable, i
 ## The default shell is bash but twm launches urxvt -e zsh?
 This is done to keep it as default as possible.
 
+## What programs does the binhost have?
+List of programs without dependencies: https://gitgud.io/cloveros/cloveros/blob/master/binhost_settings/var/lib/portage/world
+List of all packages: https://cloveros.ga/s/packages.html
+
 ## Which DE does this come with?
 None, it comes with twm and a `~/.bash_profile` that can select/install a DE for you:
 
