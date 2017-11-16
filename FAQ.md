@@ -7,6 +7,9 @@ Take out your boot usb/cd.
 ## Binary details
 The mirrors have an index page that details this: https://useast.cloveros.ga https://uswest.cloveros.ga https://fr.cloveros.ga https://uk.cloveros.ga https://nl.cloveros.ga https://au.cloveros.ga
 
+## Firefox and Pulseaudio
+Firefox on CloverOS still works with ALSA. If this changes, it will be built with apulse.
+
 ## What is CloverOS Libre?
 CloverOS Libre doesn't have the `sys-kernel/linux-firmware` package.
 
@@ -30,6 +33,9 @@ Gentoo is a meta-distro. You can make any distro you want out of it.
 ## Does everything build with CFLAGS="-Ofast -mmmx -mssse3 -pipe -funroll-loops -flto=8 -floop-block -floop-interchange -floop-strip-mine -ftree-loop-distribution" ?
 These are all the packages that don't build with the full CFLAGS: https://gitgud.io/cloveros/cloveros/blob/master/binhost_settings/etc/portage/package.env
 
+## Benefits of Gentoo/CloverOS over other distros
+No systemd, CFLAGS, lower RAM usage, it's Gentoo, package versions are stable, it's as default as possible while still being easy, has infinality, installs in 2 minutes depending on # of cores (unsquashfs), saves time by doing all the little things you would've done anyway, while still being default enough for you to change.
+
 ## What if CloverOS dies? Will my install become useless?
 Edit `/etc/portage/make.conf` and change
 
@@ -44,9 +50,3 @@ After emerge determines what it needs to install and checks dependencies, the -G
 CloverOS is a default Gentoo install with programs and with the above defaulted in `/etc/portage/make.conf`. There's also some configuration files and scripts in the user's home directory for making things easier. With those files removed, CloverOS becomes a default Gentoo install.
 
 You can see exactly what's done here: https://gitgud.io/cloveros/cloveros/blob/master/livecd_build.sh
-
-## Benefits of Gentoo/CloverOS over other distros
-No systemd, CFLAGS, lower RAM usage, it's Gentoo, package versions are stable, it's as default as possible while still being easy, has infinality, installs in 2 minutes depending on # of cores (unsquashfs). It saved me a lot of time in OS installs because it's exactly how I would configure my OS.
-
-## Firefox and Pulseaudio
-Firefox on CloverOS still works with ALSA. If this changes, it will be built with apulse.
