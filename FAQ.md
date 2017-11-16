@@ -46,6 +46,14 @@ These are all the packages that don't build with the full CFLAGS: https://gitgud
 ## Benefits of Gentoo/CloverOS over other distros
 No systemd, CFLAGS, lower RAM usage, it's Gentoo, package versions are stable, it's as default as possible while still being easy, has infinality, installs in 2 minutes depending on # of cores (unsquashfs), saves time by doing all the little things you would've done anyway, while still being default enough for you to change.
 
+## The default shell is bash but twm launches urxvt -e zsh?
+This is done to keep it as default as possible.
+
+## Which DE does this come with?
+None, it comes with twm and a `~/.bash_profile` that can select/install a DE for you:
+
+![bash profile](https://i.imgur.com/6Suzf3k.png)
+
 ## What if CloverOS dies? Will my install become useless?
 Edit `/etc/portage/make.conf` and change
 
