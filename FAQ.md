@@ -32,7 +32,9 @@ genkernel --kernel-config=config.amd64 all
 
 ## How many users does CloverOS have?
 This is the only data I record:
+
 <img src="https://cloveros.ga/s/bandwidth.png" />
+
 Each mirror has /s/bandwidth.txt. ie: https://uswest.cloveros.ga/s/bandwidth.txt
 
 ## Gentoo is a distro that's only good for servers
