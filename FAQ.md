@@ -56,7 +56,7 @@ List of all packages: https://cloveros.ga/s/packages.html
 ## Which DE does this come with?
 None, it comes with twm and a `~/.bash_profile` that can select/install a DE for you:
 
-![bash profile](https://i.imgur.com/6Suzf3k.png)
+![bash profile](https://i.imgur.com/YD4IPRf.png)
 
 ## What if CloverOS dies? Will my install become useless?
 Edit `/etc/portage/make.conf` and change
