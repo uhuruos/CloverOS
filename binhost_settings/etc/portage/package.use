@@ -109,7 +109,7 @@ sci-mathematics/octave X gui fftw curl gnuplot postscript jit
 media-video/handbrake x265
 app-text/texlive X cjk context detex dvi2tty dvipdfm epspdf extra games graphics humanities jadetex luatex metapost music omega png pstricks publishers science tex4ht texi2html truetype xetex xindy xml
 media-video/mpv wayland rubberband lcms archive cdda bluray dvd encode libmpv
-media-libs/mesa -opencl d3d9 vulkan llvm gallium -bindist osmesa gles1 gles2 wayland openmax video_cards_vmware
+media-libs/mesa opencl d3d9 vulkan llvm gallium -bindist osmesa gles1 gles2 wayland openmax video_cards_vmware
 dev-cpp/gtkmm wayland X
 media-libs/clutter -wayland X
 dev-libs/weston xwayland
