@@ -86,7 +86,6 @@ sys-devel/distcc gtk crossdev
 kde-plasma/plasma-meta grub gtk
 kde-plasma/plasma-desktop gtk3 gtk2 legacy-systray
 media-video/handbrake gtk -fdk libav-aac
-media-libs/x264 10bit
 virtual/ffmpeg X sdl x264
 media-video/ffmpeg X gnutls rubberband x265 libass vorbis ogg network vpx rtmp x264 aac wavpack opus mp3 sdl gme v4l webp theora xvid xcb
 media-gfx/fontforge X gtk

@@ -142,3 +142,7 @@ IRC client - weechat
 
 ### How do I install systemd/avahi/pulseaudio?
 I am proud to announce that CloverOS is 100% Poettering-free.
+
+## Additional FAQ
+
+https://gitgud.io/cloveros/cloveros/blob/master/FAQ.md
