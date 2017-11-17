@@ -10,7 +10,8 @@ media-libs/opus::rasdark
 dev-python/twilio::fkmclane
 media-gfx/maim::fkmclane
 media-plugins/calf::fkmclane
-media-plugins/slop::fkmclane
+x11-misc/slop::fkmclane
+net-im/discord-bin::fkmclane
 media-sound/mpd::pg_overlay
 x11-libs/wxGTK::pg_overlay
 mail-client/thunderbird::pg_overlay
@@ -21,3 +22,4 @@ dev-libs/xmlrpc-c::pg_overlay
 app-crypt/gpgme::pg_overlay
 media-sound/spek::pg_overlay
 www-client/firefox::pg_overlay
+app-arch/p7zip::pg_overlay

@@ -121,6 +121,8 @@ dev-db/rethinkdb
 www-client/waterfox-bin
 net-p2p/go-ipfs-bin
 media-sound/beets
+app-misc/neofetch
+www-client/torbrowser-launcher
 
 #dependencies
 #staruml-bin
@@ -230,6 +232,8 @@ dev-python/munkres
 dev-python/bluelet
 dev-python/audioread
 dev-python/pyacoustid
+#torbrowser-launcher
+dev-python/pyliblzma
 
 #fonts
 media-fonts/lohit-kannada

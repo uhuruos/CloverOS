@@ -145,7 +145,6 @@ dev-util/dialog
 dev-util/eclipse-sdk-bin
 dev-util/geany
 dev-util/kdevelop
-dev-util/netbeans
 dev-util/nvidia-cuda-toolkit
 dev-util/plan9port
 dev-util/re2c
@@ -451,7 +450,6 @@ media-gfx/inkscape
 media-gfx/jpegoptim
 media-gfx/krita
 media-gfx/librecad
-media-gfx/maim
 media-gfx/mcomix
 media-gfx/mirage
 media-gfx/opentoonz
@@ -774,15 +772,16 @@ www-client/chromium
 www-client/dillo
 www-client/elinks
 www-client/firefox
+www-client/google-chrome
 www-client/links
 www-client/lynx
 www-client/midori
 www-client/palemoon-bin
 www-client/qupzilla
-www-client/qutebrowser
 www-client/seamonkey
 www-client/surf
 www-client/torbrowser
+www-client/torbrowser-launcher
 www-client/uget
 www-client/w3m
 www-client/waterfox-bin
