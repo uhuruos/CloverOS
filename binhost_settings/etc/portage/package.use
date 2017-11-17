@@ -201,6 +201,7 @@ media-sound/deadbeef aac adplug alac alsa cdda converter cover cover-imlib2 cove
 app-emulation/qemu sdl usb virgl
 
 #required
+dev-python/PyQt5 gui widgets svg webkit network printsupport
 dev-games/ogre gl3plus -gles3 -gles2
 dev-libs/glib dbus
 app-crypt/gcr gtk
@@ -261,7 +262,6 @@ dev-libs/libpcre2 pcre32
 sci-libs/cholmod -minimal
 dev-libs/libcdio -minimal
 kde-plasma/libksysguard -minimal
-dev-python/PyQt5 opengl gui svg webkit widgets network printsupport
 x11-libs/gdk-pixbuf tiff abi_x86_32
 dev-libs/libxml2 icu abi_x86_32
 dev-libs/libxslt python abi_x86_32
@@ -367,6 +367,4 @@ media-libs/libsoundtouch abi_x86_32
 virtual/opencl abi_x86_32
 x11-libs/gtk+:2 abi_x86_32
 sys-libs/ncurses:0 abi_x86_32
-#sys-apps/dbus abi_x86_32
-#x11-libs/libxkbcommon abi_x86_32
 sys-devel/clang abi_x86_32
