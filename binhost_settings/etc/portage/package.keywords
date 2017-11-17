@@ -180,7 +180,7 @@ net-libs/NativeThread
 media-libs/avidemux-plugins
 media-libs/avidemux-core
 #termite
-x11-libs/vte
+x11-libs/vte::eroen
 #gimp
 media-libs/libmypaint
 media-libs/babl

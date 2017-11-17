@@ -1,5 +1,5 @@
 #preference
-dev-python/PyQt5 -opengl
+x11-libs/vte termite-patch
 net-p2p/rtorrent-ps -daemon
 x11-wm/icewm -minimal
 media-sound/ncmpc help-screen artist-screen chat-screen colors key-screen lirc lyrics-screen mouse search-screen song-screen
@@ -109,7 +109,7 @@ sci-mathematics/octave X gui fftw curl gnuplot postscript jit
 media-video/handbrake x265
 app-text/texlive X cjk context detex dvi2tty dvipdfm epspdf extra games graphics humanities jadetex luatex metapost music omega png pstricks publishers science tex4ht texi2html truetype xetex xindy xml
 media-video/mpv wayland rubberband lcms archive cdda bluray dvd encode libmpv
-media-libs/mesa opencl d3d9 vulkan llvm gallium -bindist osmesa gles1 gles2 wayland openmax video_cards_vmware
+media-libs/mesa opencl d3d9 vulkan llvm gallium -bindist osmesa gles1 gles2 wayland openmax video_cards_vmware xa
 dev-cpp/gtkmm wayland X
 media-libs/clutter -wayland X
 dev-libs/weston xwayland
@@ -216,7 +216,6 @@ dev-libs/libxml2 python
 dev-lang/python sqlite
 dev-libs/libpcre pcre16
 x11-libs/libxcb xkb
-dev-libs/libcdio -minimal
 x11-libs/cairo xcb
 app-text/xmlto text
 sys-libs/tevent python
@@ -240,36 +239,134 @@ x11-libs/pango X
 kde-frameworks/kwindowsystem X
 sys-apps/dbus X
 media-libs/libsdl2 X
-# required by games-emulation/mednaffe-0.8::gentoo
-# required by @selected
-# required by @world (argument)
->=games-emulation/mednafen-0.9.41 debugger
-# required by net-p2p/deluge-1.3.15::pg_overlay
-# required by @selected
-# required by @world (argument)
->=net-libs/libtorrent-rasterbar-1.1.5-r1 python
-# required by dev-util/nvidia-cuda-toolkit-9.0.176::gentoo
-# required by @selected
-# required by @world (argument)
->=x11-drivers/nvidia-drivers-384.90 uvm
-# required by dev-libs/elfutils-0.169-r1::gentoo[bzip2]
-# required by virtual/libelf-1::gentoo
-# required by media-libs/mesa-17.0.6::gentoo[video_cards_radeonsi,opencl,llvm,video_cards_radeon,-video_cards_r600]
-# required by x11-drivers/xf86-video-vmware-13.2.1::gentoo
-# required by @selected
-# required by @world (argument)
->=app-arch/bzip2-1.0.6-r8 abi_x86_32
-# required by media-sound/tomahawk-0.9.0_pre20161029-r1::gentoo
-# required by @selected
-# required by @world (argument)
->=media-video/vlc-2.2.6 flac mp3
-# required by games-emulation/pcsx2-1.4.0::gentoo
-# required by @selected
-# required by @world (argument)
->=app-arch/xz-utils-5.2.3 abi_x86_32
-# required by x11-libs/libSM-1.2.2-r1::gentoo[uuid]
-# required by x11-libs/wxGTK-3.0.2.0-r2::gentoo[X]
-# required by games-emulation/pcsx2-1.4.0::gentoo
-# required by @selected
-# required by @world (argument)
->=sys-apps/util-linux-2.30.2 abi_x86_32
+kde-frameworks/kdelibs4support X
+games-emulation/mednafen debugger
+net-libs/libtorrent-rasterbar python
+x11-drivers/nvidia-drivers uvm
+media-video/vlc flac mp3
+gnome-base/gvfs udisks
+media-libs/libvpx svc
+app-text/ghostscript-gpl cups
+media-gfx/pstoedit plotutils
+app-text/texlive-core xetex cjk
+dev-libs/libdbusmenu gtk
+mate-base/mate-menus python
+dev-qt/qtgui dbus
+dev-qt/qtgui:5 egl
+dev-qt/qtwebchannel qml
+dev-libs/boost python
+dev-python/numpy lapack
+xfce-base/thunar udisks
+dev-libs/libpcre2 pcre32
+sci-libs/cholmod -minimal
+dev-libs/libcdio -minimal
+kde-plasma/libksysguard -minimal
+dev-python/PyQt5 opengl gui svg webkit widgets network printsupport
+x11-libs/gdk-pixbuf tiff abi_x86_32
+dev-libs/libxml2 icu abi_x86_32
+dev-libs/libxslt python abi_x86_32
+x11-libs/wxGTK tiff abi_x86_32
+sys-apps/util-linux abi_x86_32
+net-libs/gnutls abi_x86_32
+app-arch/xz-utils abi_x86_32
+app-arch/bzip2 abi_x86_32
+x11-proto/renderproto abi_x86_32
+dev-libs/libtasn1 abi_x86_32
+x11-libs/libX11 abi_x86_32
+sys-libs/binutils-libs abi_x86_32
+virtual/libiconv abi_x86_32
+x11-libs/libva-intel-driver abi_x86_32
+dev-libs/libaio abi_x86_32
+x11-libs/libva abi_x86_32
+x11-proto/compositeproto abi_x86_32
+x11-proto/fixesproto abi_x86_32
+x11-proto/glproto abi_x86_32
+media-libs/lcms abi_x86_32
+virtual/jpeg abi_x86_32
+x11-proto/videoproto abi_x86_32
+x11-proto/kbproto abi_x86_32
+x11-libs/libva-vdpau-driver abi_x86_32
+dev-libs/libunistring abi_x86_32
+dev-libs/glib abi_x86_32
+x11-libs/libXcomposite abi_x86_32
+media-libs/fontconfig abi_x86_32
+x11-libs/libXi abi_x86_32
+x11-libs/libICE abi_x86_32
+media-libs/alsa-lib abi_x86_32
+dev-libs/libgpg-error abi_x86_32
+x11-libs/pango abi_x86_32
+dev-util/pkgconfig abi_x86_32
+x11-proto/xproto abi_x86_32
+x11-proto/presentproto abi_x86_32
+x11-proto/xineramaproto abi_x86_32
+x11-libs/libXcursor abi_x86_32
+dev-libs/elfutils abi_x86_32
+x11-libs/libXau abi_x86_32
+dev-libs/atk abi_x86_32
+sys-libs/zlib abi_x86_32
+virtual/libintl abi_x86_32
+sys-apps/attr abi_x86_32
+x11-proto/damageproto abi_x86_32
+media-libs/libpng abi_x86_32
+x11-proto/dri3proto abi_x86_32
+virtual/jpeg abi_x86_32
+x11-proto/xextproto abi_x86_32
+virtual/pkgconfig abi_x86_32
+x11-libs/libXft abi_x86_32
+x11-proto/xf86vidmodeproto abi_x86_32
+x11-proto/xf86bigfontproto abi_x86_32
+net-dns/libidn2 abi_x86_32
+virtual/glu abi_x86_32
+gnome-base/librsvg abi_x86_32
+x11-proto/dri2proto abi_x86_32
+x11-libs/libXfixes abi_x86_32
+dev-libs/expat abi_x86_32
+x11-libs/libXdamage abi_x86_32
+x11-libs/libXv abi_x86_32
+x11-libs/cairo abi_x86_32
+media-libs/libsdl abi_x86_32
+x11-libs/libxcb abi_x86_32
+media-libs/freetype abi_x86_32
+media-libs/tiff abi_x86_32
+sys-devel/gettext abi_x86_32
+x11-libs/libxshmfence abi_x86_32
+media-libs/libomxil-bellagio abi_x86_32
+dev-libs/libpthread-stub abi_x86_32
+dev-libs/libffi abi_x86_32
+media-libs/libjpeg-turbo abi_x86_32
+media-libs/audiofile abi_x86_32
+x11-libs/libXrender abi_x86_32
+x11-libs/libXvMC abi_x86_32
+dev-libs/icu abi_x86_32
+x11-libs/pixman abi_x86_32
+x11-proto/xf86driproto abi_x86_32
+media-libs/portaudio abi_x86_32
+x11-libs/libvdpau abi_x86_32
+x11-libs/libXdmcp abi_x86_32
+dev-libs/gmp abi_x86_32
+x11-proto/xcb-proto abi_x86_32
+media-libs/mesa abi_x86_32
+dev-libs/lzo abi_x86_32
+virtual/opengl abi_x86_32
+media-libs/harfbuzz abi_x86_32
+x11-proto/randrproto abi_x86_32
+media-gfx/graphite2 abi_x86_32
+media-libs/glu abi_x86_32
+dev-libs/wayland abi_x86_32
+x11-libs/libXinerama abi_x86_32
+dev-libs/nettle abi_x86_32
+x11-libs/libXext abi_x86_32
+x11-libs/libSM abi_x86_32
+x11-libs/libXxf86vm abi_x86_32
+virtual/libffi abi_x86_32
+dev-libs/libcroco abi_x86_32
+x11-proto/inputproto abi_x86_32
+dev-libs/libpcre abi_x86_32
+x11-libs/libXrandr abi_x86_32
+media-libs/libsoundtouch abi_x86_32
+virtual/opencl abi_x86_32
+x11-libs/gtk+:2 abi_x86_32
+sys-libs/ncurses:0 abi_x86_32
+#sys-apps/dbus abi_x86_32
+#x11-libs/libxkbcommon abi_x86_32
+sys-devel/clang abi_x86_32
