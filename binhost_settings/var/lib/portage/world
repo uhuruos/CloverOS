@@ -114,6 +114,7 @@ app-text/atril
 app-text/calibre
 app-text/convmv
 app-text/dos2unix
+app-text/evince
 app-text/tesseract
 app-text/texlive
 app-text/tree
@@ -130,7 +131,6 @@ dev-lang/R
 dev-lang/go
 dev-lang/php
 dev-libs/amdgpu-pro-opencl
-dev-libs/beignet
 dev-libs/libisoburn
 dev-libs/weston
 dev-python/ansi2html

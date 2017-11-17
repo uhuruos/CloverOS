@@ -1,9 +1,9 @@
 #preference, remove when stable is bumped up
 media-sound/audacious # pending stable
 media-plugins/audacious-plugins # pending stable
+media-sound/mpd # pending stable
 www-client/firefox # major change
 media-gfx/gimp # major change
-media-sound/mpd # bugfixes
 net-p2p/retroshare # needs latest version
 net-misc/youtube-dl # needs latest version
 media-sound/rosegarden # qt5, stable is old
