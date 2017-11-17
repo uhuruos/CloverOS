@@ -1,3 +1,4 @@
 session = /home/user/.rtorrent/
 directory = /home/user/Downloads/
-dht = on
+dht.mode.set = on
+protocol.pex.set = yes
