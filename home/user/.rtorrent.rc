@@ -1,6 +1,3 @@
 session = /home/user/.rtorrent/
 directory = /home/user/Downloads/
-port_range = 53165-62153
 dht = on
-peer_exchange = yes
-use_udp_trackers = yes
