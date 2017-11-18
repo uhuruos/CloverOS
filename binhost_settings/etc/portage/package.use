@@ -1,4 +1,6 @@
 #preference
+media-video/obs-studio jack
+media-plugins/alsa-plugins jack
 x11-libs/vte termite-patch
 net-p2p/rtorrent-ps -daemon
 x11-wm/icewm -minimal

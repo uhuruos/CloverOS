@@ -465,6 +465,7 @@ media-libs/glyr
 media-libs/libtxc_dxtn
 media-libs/vapoursynth
 media-libs/waifu2x-converter-cpp
+media-plugins/alsa-plugins
 media-plugins/vapoursynth-addgrain
 media-plugins/vapoursynth-adjust
 media-plugins/vapoursynth-autocrop
@@ -593,6 +594,7 @@ media-sound/tomahawk
 media-sound/ttaenc
 media-sound/umurmur
 media-sound/xmms2
+media-sound/xwax
 media-sound/yoshimi
 media-tv/plex-media-server
 media-video/aegisub
