@@ -28,6 +28,7 @@ chmod +x deblob-4.12
 PYTHON="python2.7" ./deblob-4.12
 wget https://liquorix.net/sources/4.12/config.amd64
 genkernel --kernel-config=config.amd64 all
+grub-mkconfig -o /boot/grub/grub.cfg
 ```
 
 ## How many users does CloverOS have?
@@ -51,6 +52,7 @@ This is done to keep it as default as possible.
 
 ## What programs does the binhost have?
 List of programs without dependencies: https://gitgud.io/cloveros/cloveros/blob/master/binhost_settings/var/lib/portage/world
+
 List of all packages: https://cloveros.ga/s/packages.html
 
 ## Which DE does this come with?
