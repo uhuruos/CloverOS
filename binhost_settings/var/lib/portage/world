@@ -643,6 +643,8 @@ net-fs/samba
 net-fs/sshfs
 net-ftp/filezilla
 net-ftp/lftp
+net-ftp/proftpd
+net-ftp/pure-ftpd
 net-ftp/vsftpd
 net-im/discord-bin
 net-im/pidgin

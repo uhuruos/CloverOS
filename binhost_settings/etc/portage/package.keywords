@@ -123,6 +123,9 @@ net-p2p/go-ipfs-bin
 media-sound/beets
 app-misc/neofetch
 www-client/torbrowser-launcher
+games-action/extreme-tuxracer
+games-emulation/dolphin
+games-emulation/vbam
 
 #dependencies
 #staruml-bin

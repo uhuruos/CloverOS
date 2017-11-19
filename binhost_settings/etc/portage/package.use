@@ -263,6 +263,7 @@ dev-libs/libpcre2 pcre32
 sci-libs/cholmod -minimal
 dev-libs/libcdio -minimal
 kde-plasma/libksysguard -minimal
+x11-libs/libdrm libkms video_cards_vmware
 x11-libs/gdk-pixbuf tiff abi_x86_32
 dev-libs/libxml2 icu abi_x86_32
 dev-libs/libxslt python abi_x86_32
