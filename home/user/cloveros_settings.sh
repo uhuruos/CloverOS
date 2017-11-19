@@ -166,21 +166,13 @@ case "$choice" in
 		;;
 
 	n)
-		echo "Running the following (as root):"
-		echo "emerge nvidia-drivers"
-		echo "eselect opengl set nvidia"
-		echo 'echo " Section "Device"
-   Identifier  "nvidia"
-   Driver      "nvidia"
- EndSection" > /etc/X11/xorg.conf.d/nvidia.conf'
-		echo "echo blacklist nouveau >> /etc/modprobe.d/blacklist.conf"
+		echo "Running the following:"
+		echo "sudo emerge nvidia-drivers"
+		echo "sudo nvidia-xconfig"
+		echo "sudo eselect opengl set nvidia"
 		sudo emerge nvidia-drivers
+		sudo nvidia-xconfig
 		sudo eselect opengl set nvidia
-		echo " Section "Device"
-   Identifier  "nvidia"
-   Driver      "nvidia"
- EndSection" | sudo tee -a /etc/X11/xorg.conf.d/nvidia.conf
-		echo blacklist nouveau | sudo tee -a /etc/modprobe.d/blacklist.conf
 		echo -e "\nNvidia drivers installed, restart X.\nCheck https://wiki.gentoo.org/wiki/NVidia/nvidia-drivers for more info"
 		;;
 

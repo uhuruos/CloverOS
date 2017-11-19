@@ -4,6 +4,9 @@ Questions and Answers. This has everything not organized enough for README.
 ## It doesn't boot
 Take out your boot usb/cd.
 
+## Does it have binaries?
+It's a pre setup Gentoo image with `PORTAGE_BINHOST="https://cloveors.ga" emerge -G package` preset in /etc/portage/make.conf. It uses Gentoo for everything (versions, ebuilds, etc.) and gets it from cloveros.ga instead of building
+
 ## Binary details
 The mirrors have an index page that details this: https://useast.cloveros.ga https://uswest.cloveros.ga https://fr.cloveros.ga https://uk.cloveros.ga https://nl.cloveros.ga https://au.cloveros.ga
 
