@@ -4,6 +4,9 @@ Questions and Answers. This has everything not organized enough for README.
 ## It doesn't boot
 Take out your boot usb/cd.
 
+## How do I open a terminal
+Right click.
+
 ## Does it have binaries?
 It's a pre setup Gentoo image with `PORTAGE_BINHOST="https://cloveors.ga" emerge -G package` preset in /etc/portage/make.conf. It uses Gentoo for everything (versions, ebuilds, etc.) and gets it from cloveros.ga instead of building
 
