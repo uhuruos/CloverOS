@@ -208,6 +208,7 @@ games-fps/wolfgl
 games-fps/xonotic
 games-misc/cowsay
 games-misc/fortune-mod-all
+games-misc/xcowsay
 games-puzzle/bastet
 games-roguelike/dwarf-fortress
 games-roguelike/nethack
@@ -775,7 +776,6 @@ sys-process/parallel
 www-client/chromium
 www-client/dillo
 www-client/elinks
-www-client/firefox
 www-client/google-chrome
 www-client/links
 www-client/lynx

@@ -6,10 +6,7 @@ www-client/firefox # major change
 media-gfx/gimp # major change
 net-p2p/retroshare # needs latest version
 net-misc/youtube-dl # needs latest version
-media-sound/rosegarden # qt5, stable is old
-net-p2p/eiskaltdcpp ** # stable is old
-games-emulation/mupen64plus # stable is old
-games-emulation/sdlmame # overlay, stable is old
+media-sound/rosegarden # stable is old
 net-p2p/rtorrent-ps ** # rtorrent may be abandoned
 net-libs/libtorrent ** # rtorrent may be abandoned
 
@@ -126,6 +123,56 @@ www-client/torbrowser-launcher
 games-action/extreme-tuxracer
 games-emulation/dolphin
 games-emulation/vbam
+games-util/lutris
+games-fps/quake3
+games-emulation/fakenes
+games-puzzle/bastet
+games-engines/scummvm
+games-arcade/tecnoballz
+games-emulation/snes9x
+games-emulation/generator
+games-fps/doomsday
+games-board/pychess
+games-board/sjeng
+games-board/phalanx
+games-simulation/openttd
+games-arcade/blobby
+games-action/supertuxkart
+games-roguelike/rogue
+games-board/xboard
+games-emulation/gfceux
+games-strategy/freeciv
+games-fps/avp
+games-fps/xonotic
+games-board/eboard
+games-fps/alienarena
+games-emulation/higan
+games-board/crafty
+games-fps/nexuiz
+games-action/violetland
+games-strategy/wesnoth
+games-fps/sauerbraten
+games-board/pouetchess
+games-emulation/openmsx
+games-misc/fortune-mod-all
+games-emulation/yabause
+games-emulation/desmume
+games-emulation/zsnes
+games-engines/openxcom
+games-fps/darkplaces
+games-fps/quake3-cpma
+games-emulation/dgen-sdl
+games-misc/cowsay
+games-fps/enemy-territory
+games-rpg/freedink
+games-fps/openarena
+games-fps/urbanterror
+games-emulation/mednaffe
+games-util/higan-purify
+games-emulation/mednafen
+games-emulation/mupen64plus
+games-emulation/sdlmame
+net-p2p/eiskaltdcpp **
 
 #dependencies
 #staruml-bin
@@ -237,6 +284,8 @@ dev-python/audioread
 dev-python/pyacoustid
 #torbrowser-launcher
 dev-python/pyliblzma
+#lutris
+dev-python/python-evdev
 
 #fonts
 media-fonts/lohit-kannada
@@ -438,3 +487,17 @@ dev-python/phonenumbers
 dev-python/django-otp
 dev-python/django-formtools
 dev-python/django-otp-yubikey
+
+# required by games-fps/xonotic-0.8.2::gentoo
+# required by @selected
+# required by @world (argument)
+=dev-libs/d0_blind_id-1.0 ~amd64
+# required by games-emulation/mednafen-0.9.46::gentoo
+# required by @selected
+# required by @world (argument)
+=dev-libs/lzo-2.10 ~amd64
+# required by media-libs/vapoursynth-40::vapoursynth
+# required by @selected
+# required by @world (argument)
+=dev-lang/nasm-2.13.01 ~amd64
+

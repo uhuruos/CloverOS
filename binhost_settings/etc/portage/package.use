@@ -1,4 +1,5 @@
 #preference
+media-libs/sdl2-mixer flac mikmod vorbis mod
 media-video/obs-studio jack
 media-plugins/alsa-plugins jack
 x11-libs/vte termite-patch
@@ -370,3 +371,4 @@ virtual/opencl abi_x86_32
 x11-libs/gtk+:2 abi_x86_32
 sys-libs/ncurses:0 abi_x86_32
 sys-devel/clang abi_x86_32
+sys-devel/llvm abi_x86_32
