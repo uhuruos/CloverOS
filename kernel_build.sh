@@ -26,4 +26,8 @@ cd /lib/modules
 tar -rvf /usr/portage/packages/s/kernel-libre.tar *$kernelversion-gentoo-gnu/
 xz -9e --lzma2=dict=256MB /usr/portage/packages/s/kernel-libre.tar
 
+cd /usr/src/linux/
+make prepare
+make modules_prepare
+
 emerge -1 --buildpkg zfs-kmod virtualbox-modules exfat-nofuse
