@@ -23,7 +23,7 @@ It's a pre setup Gentoo image with `PORTAGE_BINHOST="https://cloveors.ga" emerge
 The mirrors have an index page that details this: https://useast.cloveros.ga https://uswest.cloveros.ga https://fr.cloveros.ga https://uk.cloveros.ga https://nl.cloveros.ga https://au.cloveros.ga
 
 ## Firefox and Pulseaudio
-Firefox on CloverOS still works with ALSA. If this changes, it will be built with apulse.
+Firefox 57 on CloverOS works with ALSA. If this changes, it will be built with apulse.
 
 ## How often is this updated?
 It's stable rolling release, I update the binhost about once a week. (If emerging doesn't work, then I'm probably rsyncing, so wait a few minutes.)
