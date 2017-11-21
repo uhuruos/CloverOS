@@ -203,6 +203,7 @@ media-sound/deadbeef aac adplug alac alsa cdda converter cover cover-imlib2 cove
 app-emulation/qemu sdl usb virgl
 
 #required
+sys-devel/llvm clang
 dev-python/PyQt5 gui widgets svg webkit network printsupport
 dev-games/ogre gl3plus -gles3 -gles2
 dev-libs/glib dbus
@@ -261,6 +262,7 @@ dev-libs/boost python
 dev-python/numpy lapack
 xfce-base/thunar udisks
 dev-libs/libpcre2 pcre32
+x11-libs/qscintilla qt5
 sci-libs/cholmod -minimal
 dev-libs/libcdio -minimal
 kde-plasma/libksysguard -minimal
@@ -372,3 +374,4 @@ x11-libs/gtk+:2 abi_x86_32
 sys-libs/ncurses:0 abi_x86_32
 sys-devel/clang abi_x86_32
 sys-devel/llvm abi_x86_32
+x11-libs/libdrm abi_x86_32

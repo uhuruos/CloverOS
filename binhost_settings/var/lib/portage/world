@@ -716,6 +716,7 @@ sci-visualization/gnuplot
 sys-apps/ack
 sys-apps/dmidecode
 sys-apps/flatpak
+sys-apps/hwinfo
 sys-apps/i2c-tools
 sys-apps/idle3-tools
 sys-apps/iproute2
@@ -776,6 +777,7 @@ sys-process/parallel
 www-client/chromium
 www-client/dillo
 www-client/elinks
+www-client/firefox
 www-client/google-chrome
 www-client/links
 www-client/lynx
