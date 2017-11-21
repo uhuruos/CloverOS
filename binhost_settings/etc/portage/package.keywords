@@ -175,6 +175,8 @@ games-emulation/mednafen
 games-emulation/mupen64plus
 games-emulation/sdlmame
 net-p2p/eiskaltdcpp **
+sys-block/sas3flash
+app-crypt/kencfs-plasma
 
 #dependencies
 #staruml-bin

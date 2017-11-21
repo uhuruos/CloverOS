@@ -39,6 +39,7 @@ app-crypt/acme-tiny
 app-crypt/certbot
 app-crypt/gnupg
 app-crypt/gpa
+app-crypt/kencfs-plasma
 app-crypt/veracrypt
 app-doc/phrack-all
 app-editors/emacs
