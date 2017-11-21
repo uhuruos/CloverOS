@@ -1,6 +1,7 @@
 #preference, remove when stable is bumped up
 media-sound/audacious # pending stable
 media-plugins/audacious-plugins # pending stable
+=sys-kernel/gentoo-sources-4.14.1 # fixes things
 media-sound/mpd # pending stable
 www-client/firefox # major change
 media-gfx/gimp # major change

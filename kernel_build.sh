@@ -1,5 +1,5 @@
 emerge gentoo-sources genkernel
-wget https://liquorix.net/sources/4.12/config.amd64
+wget https://liquorix.net/sources/4.13/config.amd64
 genkernel --kernel-config=config.amd64 all
 
 rm /usr/portage/packages/s/kernel.tar.xz
