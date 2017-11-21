@@ -22,6 +22,7 @@ echo "1) Enable/disable package signing validation
 9) Clean emerge cache
 0) Update cloveros_settings.sh
 t) Enable tap to click on touchpad
+l) Upgrade/Install Libre kernel
 b) Install bluetooth manager
 n) Install proprietary Nvidia drivers
 v) Install Virtualbox/VMWare drivers
@@ -153,6 +154,24 @@ case "$choice" in
 		else
 			echo -e "\nCould not retrieve file."
 		fi
+		;;
+
+	l)
+		cd ~
+		tempdir=kernel$(< /dev/urandom tr -dc 0-9 | head -c 5)
+		mkdir $tempdir
+		cd $tempdir
+		wget https://cloveros.ga/s/kernel-libre.tar.xz
+		wget https://cloveros.ga/s/signatures/s/kernel-libre.tar.xz.asc
+		sudo gpg --verify kernel-libre.tar.xz.asc kernel-libre.tar.xz
+		tar xf kernel.tar.xz
+		sudo mv initramfs-genkernel-*-gentoo-gnu kernel-genkernel-*-gentoo-gnu System.map-genkernel-*-gentoo-gnu /boot/
+		sudo cp -R *-gentoo-gnu/ /lib/modules/
+		cd ..
+		rm -R $tempdir
+		sudo grub-mkconfig -o /boot/grub/grub.cfg
+		sudo sed -i "s/set timeout=5/set timeout=0/" /boot/grub/grub.cfg
+		echo -e "\nKernel upgraded. (/boot/, /lib/modules/)"
 		;;
 
 	t)
