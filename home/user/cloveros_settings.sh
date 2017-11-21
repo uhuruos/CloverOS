@@ -83,7 +83,6 @@ case "$choice" in
 		cd ..
 		rm -R $tempdir
 		sudo grub-mkconfig -o /boot/grub/grub.cfg
-		sudo sed -i "s/set timeout=5/set timeout=0/" /boot/grub/grub.cfg
 		echo -e "\nKernel upgraded. (/boot/, /lib/modules/)"
 		;;
 
@@ -170,7 +169,6 @@ case "$choice" in
 		cd ..
 		rm -R $tempdir
 		sudo grub-mkconfig -o /boot/grub/grub.cfg
-		sudo sed -i "s/set timeout=5/set timeout=0/" /boot/grub/grub.cfg
 		echo -e "\nKernel upgraded. (/boot/, /lib/modules/)"
 		;;
 
