@@ -8,13 +8,11 @@ Take out your boot usb/cd.
 Right click.
 
 ## Known issues
-- Initramfs doesn't boot btrfs, you should emerge and run dracut after install if you're using btrfs or zfs
-
-- Kernel doesn't play nice with some Nvidia cards for some reason
-
-- twm messes with Firefox, move to fvwm planned
+- Initramfs (genkernel) doesn't boot btrfs
 
 - I can't figure out how to change the port in rtorrent-ps
+
+- Firefox and twm aren't 100% compatible, switch to fvwm needed
 
 ## Does it have binaries?
 It's a pre setup Gentoo image with `PORTAGE_BINHOST="https://cloveors.ga" emerge -G package` preset in /etc/portage/make.conf. It uses Gentoo for everything (versions, ebuilds, etc.) and gets it from cloveros.ga instead of building
