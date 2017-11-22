@@ -21,7 +21,7 @@ It's a pre-setup Gentoo image with `PORTAGE_BINHOST="https://cloveors.ga" emerge
 The mirrors have an index page that details this: https://useast.cloveros.ga https://uswest.cloveros.ga https://fr.cloveros.ga https://uk.cloveros.ga https://nl.cloveros.ga https://au.cloveros.ga
 
 ## I want to host a mirror
-Run `rsync -av --delete rsync://fr.cloveros.ga/cloveros /your/webserver/location/` and tell me the IP so I can give you a subdomain
+Run `rsync -av --delete rsync://fr.cloveros.ga/cloveros /your/webserver/location/` and tell me the domain (or IP) so I can give you a subdomain
 
 ## Firefox and Pulseaudio
 Firefox 57 on CloverOS works with ALSA. If this changes, it will be built with apulse.
