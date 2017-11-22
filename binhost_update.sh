@@ -24,8 +24,8 @@ find /usr/portage/packages/ -type f | sed 's#/usr/portage/packages/##' | pv -qB 
 chmod -R 755 /usr/portage/packages/
 rmdir /usr/portage/packages/s/signatures/s/signatures/
 
-rsync -a --delete /usr/portage/packages/ root@useast.cloveros.ga:/var/www/htdocs/cloveros.ga/ &
-rsync -a --delete /usr/portage/packages/ root@uswest.cloveros.ga:/var/www/htdocs/cloveros.ga/ &
-rsync -a --delete /usr/portage/packages/ root@au.cloveros.ga:/var/www/htdocs/cloveros.ga/ &
-rsync -a --delete /usr/portage/packages/ root@fr.cloveros.ga:/var/www/html/ &
+rsync -a --delete-before /usr/portage/packages/ root@useast.cloveros.ga:/var/www/htdocs/cloveros.ga/ &
+rsync -a --delete-before /usr/portage/packages/ root@uswest.cloveros.ga:/var/www/htdocs/cloveros.ga/ &
+rsync -a --delete-before /usr/portage/packages/ root@au.cloveros.ga:/var/www/htdocs/cloveros.ga/ &
+rsync -a --delete-before /usr/portage/packages/ root@fr.cloveros.ga:/var/www/html/ &
 wait

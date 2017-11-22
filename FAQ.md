@@ -5,7 +5,7 @@ Questions and Answers. This has everything not organized enough for README.
 Take out your boot usb/cd.
 
 ## How do I open a terminal
-Right click.
+Right click desktop.
 
 ## Known issues
 - Initramfs (genkernel) doesn't boot btrfs
@@ -15,7 +15,7 @@ Right click.
 - Firefox and twm aren't 100% compatible, switch to fvwm needed
 
 ## Does it have binaries?
-It's a pre setup Gentoo image with `PORTAGE_BINHOST="https://cloveors.ga" emerge -G package` preset in /etc/portage/make.conf. It uses Gentoo for everything (versions, ebuilds, etc.) and gets it from cloveros.ga instead of building
+It's a pre-setup Gentoo image with `PORTAGE_BINHOST="https://cloveors.ga" emerge -G package` preset in /etc/portage/make.conf. It uses Gentoo for everything (versions, ebuilds, etc.) and gets it from cloveros.ga instead of building
 
 ## Binary details
 The mirrors have an index page that details this: https://useast.cloveros.ga https://uswest.cloveros.ga https://fr.cloveros.ga https://uk.cloveros.ga https://nl.cloveros.ga https://au.cloveros.ga
@@ -36,10 +36,10 @@ You can turn CloverOS into Libre by doing `emerge -C linux-firmware` and using t
 ```
 emerge gentoo-sources genkernel
 cd /usr/src/linux/
-wget https://linux-libre.fsfla.org/pub/linux-libre/releases/4.12.12-gnu/deblob-4.12
-chmod +x deblob-4.12
-PYTHON="python2.7" ./deblob-4.12
-wget https://liquorix.net/sources/4.12/config.amd64
+wget https://linux-libre.fsfla.org/pub/linux-libre/releases/4.14.1-gnu/deblob-4.14
+chmod +x deblob-4.14
+PYTHON="python2.7" ./deblob-4.14
+wget https://liquorix.net/sources/4.13/config.amd64
 genkernel --kernel-config=config.amd64 all
 grub-mkconfig -o /boot/grub/grub.cfg
 ```
