@@ -57,6 +57,14 @@ Gentoo is a meta-distro. You can make any distro you want out of it.
 ## Does everything build with CFLAGS="-Ofast -mmmx -mssse3 -pipe -funroll-loops -flto=8 -floop-block -floop-interchange -floop-strip-mine -ftree-loop-distribution" ?
 These are all the packages that don't build with the full CFLAGS: https://gitgud.io/cloveros/cloveros/blob/master/binhost_settings/etc/portage/package.env
 
+## Turning CloverOS Libre into CloverOS
+emerge linux-firmware
+
+./cloveros_settings.sh 4) Update kernel
+
+Reboot; Advanced options, select non gnu
+
+
 ## Benefits of Gentoo/CloverOS over other distros
 No systemd, CFLAGS, lower RAM usage, it's Gentoo, package versions are stable, it's as default as possible while still being easy, has infinality, installs in 2 minutes depending on # of cores (unsquashfs), saves time by doing all the little things you would've done anyway, while still being default enough for you to change.
 
