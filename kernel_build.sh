@@ -1,9 +1,11 @@
+kernelversion=4.14.1
+
+kernelmajversion=4.14
+
 emerge gentoo-sources genkernel
 cd /usr/src/linux/
 wget https://liquorix.net/sources/4.13/config.amd64
 genkernel --kernel-config=config.amd64 all
-
-kernelversion=4.14.1
 
 rm /usr/portage/packages/s/kernel.tar.xz
 cd /boot/
@@ -13,10 +15,10 @@ tar -rvf /usr/portage/packages/s/kernel.tar *$kernelversion-gentoo/
 xz -9e --lzma2=dict=256MB /usr/portage/packages/s/kernel.tar
 
 cd /usr/src/linux/
-wget https://linux-libre.fsfla.org/pub/linux-libre/releases/4.14.1-gnu/deblob-4.14
-wget https://linux-libre.fsfla.org/pub/linux-libre/releases/4.14.1-gnu/deblob-check
+wget https://linux-libre.fsfla.org/pub/linux-libre/releases/$kernelversion-gnu/deblob-$kernelmajversion
+wget https://linux-libre.fsfla.org/pub/linux-libre/releases/$kernelversion-gnu/deblob-check
 chmod +x deblob-4.14
-PYTHON="python2.7" ./deblob-4.14
+PYTHON="python2.7" ./deblob-$kernelmajversion
 genkernel --kernel-config=config.amd64 all
 
 rm /usr/portage/packages/s/kernel-libre.tar.xz
