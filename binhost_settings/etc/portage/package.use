@@ -34,7 +34,7 @@ games-fps/urbanterror server
 x11-wm/compiz-fusion emerald unsupported
 mail-client/thunderbird -crypt system-harfbuzz system-icu system-jpeg system-libevent system-libvpx system-sqlite
 media-gfx/krita color-management
-app-emulation/wine -custom-cflags -udisks
+app-emulation/wine -custom-cflags -udisks d3d9 staging
 x11-wm/xmonad -default-term
 sys-block/gparted btrfs dmraid f2fs fat hfs jfs mdadm ntfs reiserfs reiser4 xfs
 kde-plasma/powerdevil -wireless
@@ -73,7 +73,6 @@ mate-base/mate -extras
 mate-extra/mate-screensaver -pam
 app-benchmarks/i7z qt5
 media-video/vlc qt5 xml
-media-libs/opencv qt5
 net-p2p/bitcoin-qt qt5
 media-video/avidemux qt5
 media-libs/avidemux-plugins qt5

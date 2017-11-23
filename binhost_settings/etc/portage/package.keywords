@@ -1,7 +1,7 @@
 #preference, remove when stable is bumped up
 media-sound/audacious # pending stable
 media-plugins/audacious-plugins # pending stable
-=sys-kernel/gentoo-sources-4.14.1 # fixes things
+=sys-kernel/gentoo-sources-4.14.1 # next longterm release
 media-sound/mpd # pending stable
 www-client/firefox # major change
 media-gfx/gimp # major change
@@ -10,8 +10,24 @@ net-misc/youtube-dl # needs latest version
 media-sound/rosegarden # stable is old
 net-p2p/rtorrent-ps ** # rtorrent may be abandoned
 net-libs/libtorrent ** # rtorrent may be abandoned
-=dev-libs/lzo-2.10 # mednafen
-=dev-lang/nasm-2.13.01 # vapoursynth
+=app-emulation/wine-2.3 # directx 11
+#mednafen
+=dev-libs/lzo-2.10
+#vapoursynth
+=dev-lang/nasm-2.13.01
+#firefox 57
+=sys-libs/compiler-rt-sanitizers-5.0.0 ~amd64
+=media-libs/mesa-17.2.5
+=dev-db/sqlite-3.21.0 ~amd64
+=sys-libs/libomp-5.0.0 ~amd64
+=sys-devel/llvm-5.0.0 ~amd64
+=sys-devel/clang-runtime-5.0.0 ~amd64
+=sys-devel/llvm-common-5.0.0 ~amd64
+=sys-devel/clang-5.0.0 ~amd64
+=sys-libs/compiler-rt-5.0.0 ~amd64
+=media-libs/libpng-1.6.34 ~amd64
+=x11-libs/libdrm-2.4.88 ~amd64
+=dev-libs/wayland-protocols-1.11 ~amd64
 
 #keyworded, remove when stable exists
 sys-fs/zfs-kmod
@@ -494,53 +510,3 @@ dev-python/phonenumbers
 dev-python/django-otp
 dev-python/django-formtools
 dev-python/django-otp-yubikey
-
-# required by sys-devel/clang-runtime-5.0.0::gentoo[sanitize,compiler-rt]
-# required by sys-devel/clang-5.0.0::gentoo
-# required by www-client/firefox-57.0::gentoo
-# required by firefox (argument)
-=sys-libs/compiler-rt-sanitizers-5.0.0 ~amd64
-=media-libs/mesa-17.2.5
-# required by dev-qt/qtsql-4.8.7-r1::gentoo[sqlite]
-# required by media-sound/mumble-1.2.17::gentoo
-# required by @selected
-# required by @world (argument)
-=dev-db/sqlite-3.21.0 ~amd64
-# required by sys-devel/clang-runtime-5.0.0::gentoo[openmp]
-# required by sys-devel/clang-5.0.0::gentoo
-# required by www-client/firefox-57.0::gentoo
-# required by firefox (argument)
-=sys-libs/libomp-5.0.0 ~amd64
-# required by sys-devel/clang-5.0.0::gentoo
-# required by www-client/firefox-57.0::gentoo
-# required by firefox (argument)
-=sys-devel/llvm-5.0.0 ~amd64
-# required by sys-devel/clang-5.0.0::gentoo
-# required by www-client/firefox-57.0::gentoo
-# required by firefox (argument)
-=sys-devel/clang-runtime-5.0.0 ~amd64
-# required by sys-devel/llvm-5.0.0::gentoo
-# required by sys-devel/clang-5.0.0::gentoo
-# required by www-client/firefox-57.0::gentoo
-# required by firefox (argument)
-=sys-devel/llvm-common-5.0.0 ~amd64
-# required by www-client/firefox-57.0::gentoo
-# required by firefox (argument)
-=sys-devel/clang-5.0.0 ~amd64
-# required by sys-devel/clang-runtime-5.0.0::gentoo[compiler-rt]
-# required by sys-devel/clang-5.0.0::gentoo
-# required by www-client/firefox-57.0::gentoo
-# required by firefox (argument)
-=sys-libs/compiler-rt-5.0.0 ~amd64
-# required by www-client/firefox-57.0::gentoo
-# required by firefox (argument)
-=media-libs/libpng-1.6.34 ~amd64
-# required by media-libs/cogl-1.22.2::gentoo[kms]
-# required by media-libs/clutter-1.26.2::gentoo
-# required by xfce-extra/xfdashboard-0.4.0::gentoo
-# required by @selected
-# required by @world (argument)
-=x11-libs/libdrm-2.4.88 ~amd64
-# required by media-libs/mesa-17.2.5::gentoo[wayland]
-# required by mesa (argument)
-=dev-libs/wayland-protocols-1.11 ~amd64
