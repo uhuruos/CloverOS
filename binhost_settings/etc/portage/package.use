@@ -1,4 +1,5 @@
 #preference
+media-libs/opencv -opengl
 media-libs/sdl2-mixer flac mikmod vorbis mod
 media-video/obs-studio jack
 media-plugins/alsa-plugins jack
@@ -34,7 +35,7 @@ games-fps/urbanterror server
 x11-wm/compiz-fusion emerald unsupported
 mail-client/thunderbird -crypt system-harfbuzz system-icu system-jpeg system-libevent system-libvpx system-sqlite
 media-gfx/krita color-management
-app-emulation/wine -custom-cflags -udisks d3d9 staging
+app-emulation/wine-any -custom-cflags -udisks staging d3d9
 x11-wm/xmonad -default-term
 sys-block/gparted btrfs dmraid f2fs fat hfs jfs mdadm ntfs reiserfs reiser4 xfs
 kde-plasma/powerdevil -wireless
@@ -374,3 +375,5 @@ sys-libs/ncurses:0 abi_x86_32
 sys-devel/clang abi_x86_32
 sys-devel/llvm abi_x86_32
 x11-libs/libdrm abi_x86_32
+app-emulation/wine-gecko abi_x86_32
+sys-apps/dbus abi_x86_32

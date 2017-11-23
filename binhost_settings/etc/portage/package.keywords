@@ -1,3 +1,10 @@
+=dev-libs/boost-1.65.1 ~amd64
+# required by dev-libs/boost-1.65.1::pg_overlay
+# required by net-vpn/i2pd-2.16.0::gentoo[libressl,-static]
+# required by @selected
+# required by @world (argument)
+=dev-util/boost-build-1.65.1 ~amd64
+
 #preference, remove when stable is bumped up
 media-sound/audacious # pending stable
 media-plugins/audacious-plugins # pending stable
@@ -10,7 +17,7 @@ net-misc/youtube-dl # needs latest version
 media-sound/rosegarden # stable is old
 net-p2p/rtorrent-ps ** # rtorrent may be abandoned
 net-libs/libtorrent ** # rtorrent may be abandoned
-=app-emulation/wine-2.3 # directx 11
+app-emulation/wine-any # stable is old
 #mednafen
 =dev-libs/lzo-2.10
 #vapoursynth
@@ -309,6 +316,8 @@ dev-python/pyliblzma
 dev-python/python-evdev
 #xonotic
 dev-libs/d0_blind_id
+#wine
+app-emulation/wine-mono
 
 #fonts
 media-fonts/lohit-kannada
