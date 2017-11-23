@@ -8,7 +8,15 @@ Take out your boot usb/cd.
 Right click desktop.
 
 ## Nvidia card crashes on boot with a green screen
-`echo "blacklist nouveau" >> /etc/modprobe.d/blacklist.conf`
+/etc/mnodprobe.d/blacklist.conf:
+
+```
+blacklist vga16fb
+blacklist nouveau
+blacklist rivafb
+blacklist nvidiafb
+blacklist rivatv
+```
 
 /boot/grub/grub.cfg: ` linux   /boot/kernel-genkernel-x86_64-4.12.12-gentoo root=UUID=[id_here] ro nomodeset nouveau.modeset=0`
 
