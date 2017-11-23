@@ -8,7 +8,7 @@ Take out your boot usb/cd.
 Right click desktop.
 
 ## Nvidia card crashes on boot with a green screen
-/etc/mnodprobe.d/blacklist.conf:
+/etc/modprobe.d/blacklist.conf:
 
 ```
 blacklist vga16fb
