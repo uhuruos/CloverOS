@@ -162,7 +162,7 @@ wget https://gitgud.io/cloveros/cloveros/raw/master/home/user/.mpv/config -P .mp
 chown -R $user /home/$user/
 
 emerge --depclean
-rm -Rf /usr/portage/packages/*
+rm -Rf /usr/portage/packages/* /tmp/*
 
 exit
 
