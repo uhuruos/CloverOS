@@ -20,7 +20,9 @@ blacklist rivatv
 
 /boot/grub/grub.cfg:
 
-` linux   /boot/kernel-genkernel-x86_64-4.12.12-gentoo root=UUID=[id_here] ro nomodeset nouveau.modeset=0`
+```
+ linux   /boot/kernel-genkernel-x86_64-4.12.12-gentoo root=UUID=[id_here] ro nomodeset nouveau.modeset=0
+```
 
 ## Known issues
 - Initramfs (genkernel) doesn't boot btrfs
