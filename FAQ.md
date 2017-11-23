@@ -7,6 +7,11 @@ Take out your boot usb/cd.
 ## How do I open a terminal
 Right click desktop.
 
+## Nvidia card crashes on boot with a green screen
+`echo "blacklist nouveau" >> /etc/modprobe.d/blacklist.conf`
+
+/boot/grub/grub.cfg: ` linux   /boot/kernel-genkernel-x86_64-4.12.12-gentoo root=UUID=[id_here] ro nomodeset nouveau.modeset=0`
+
 ## Known issues
 - Initramfs (genkernel) doesn't boot btrfs
 
