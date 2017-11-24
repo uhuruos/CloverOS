@@ -100,8 +100,9 @@ case "$choice" in
 				sudo wget $gitprefix/binhost_settings/etc/portage/package.env -P /etc/portage/
 				sudo wget $gitprefix/binhost_settings/etc/portage/package.mask -P /etc/portage/
 				sudo wget $gitprefix/binhost_settings/etc/portage/package.license -P /etc/portage/
-				sudo sh -c 'echo -e "\n" >> /etc/portage/make.conf'
-				sudo sh -c "curl -s $gitprefix/binhost_settings/etc/portage/make.conf | grep -E '^USE=|^CFLAGS=|^CXXFLAGS=' >> /etc/portage/make.conf"
+				sudo mkdir /etc/portage/env/
+				sudo wget $gitprefix/binhost_settings/etc/portage/env/no-lto $gitprefix/binhost_settings/etc/portage/env/no-lto-graphite $gitprefix/binhost_settings/etc/portage/env/no-lto-graphite-ofast $gitprefix/binhost_settings/etc/portage/env/no-lto-o3 $gitprefix/binhost_settings/etc/portage/env/no-lto-ofast $gitprefix/binhost_settings/etc/portage/env/no-o3 $gitprefix/binhost_settings/etc/portage/env/no-ofast $gitprefix/binhost_settings/etc/portage/env/size -P /etc/portage/env/
+				sudo sh -c "curl -s $gitprefix/binhost_settings/etc/portage/make.conf | grep '^USE=' >> /etc/portage/make.conf"
 				echo -e "\nPortage configuration now mirrors binhost Portage configuration."
 			fi
 		else
@@ -210,8 +211,9 @@ case "$choice" in
 		sudo wget $gitprefix/binhost_settings/etc/portage/package.env -P /etc/portage/
 		sudo wget $gitprefix/binhost_settings/etc/portage/package.mask -P /etc/portage/
 		sudo wget $gitprefix/binhost_settings/etc/portage/package.license -P /etc/portage/
-		sudo sh -c 'echo -e "\n" >> /etc/portage/make.conf'
-		sudo sh -c "curl -s $gitprefix/binhost_settings/etc/portage/make.conf | grep -E '^USE=|^CFLAGS=|^CXXFLAGS=' >> /etc/portage/make.conf"
+		sudo mkdir /etc/portage/env/
+		sudo wget $gitprefix/binhost_settings/etc/portage/env/no-lto $gitprefix/binhost_settings/etc/portage/env/no-lto-graphite $gitprefix/binhost_settings/etc/portage/env/no-lto-graphite-ofast $gitprefix/binhost_settings/etc/portage/env/no-lto-o3 $gitprefix/binhost_settings/etc/portage/env/no-lto-ofast $gitprefix/binhost_settings/etc/portage/env/no-o3 $gitprefix/binhost_settings/etc/portage/env/no-ofast $gitprefix/binhost_settings/etc/portage/env/size -P /etc/portage/env/
+		sudo sh -c "curl -s $gitprefix/binhost_settings/etc/portage/make.conf | grep '^USE=' >> /etc/portage/make.conf"
 		echo -e "\nPortage configuration now mirrors binhost Portage configuration."
 		;;
 
