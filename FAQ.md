@@ -68,7 +68,7 @@ CloverOS Libre doesn't have the `sys-kernel/linux-firmware` package.
 
 The kernel is the same gentoo-sources with Liquorix config but with https://linux-libre.fsfla.org/pub/linux-libre/releases/4.12.12-gnu/deblob-4.12 ran on it.
 
-You can turn CloverOS into Libre by doing `emerge -C linux-firmware` and using this kernel https://cloveros.ga/s/kernel-libre.tar.xz or building it yourself;
+You can turn CloverOS into Libre by doing `emerge -C linux-firmware` and running the relevant option in `~/cloveros_settings.sh` or building it yourself;
 
 ```
 emerge gentoo-sources genkernel
