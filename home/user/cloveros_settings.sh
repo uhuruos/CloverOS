@@ -90,7 +90,7 @@ case "$choice" in
 	5)
 		if grep -q 'EMERGE_DEFAULT_OPTS="--keep-going=y --autounmask-write=y --jobs=2 -G"' /etc/portage/make.conf; then
 			sudo sed -i 's/EMERGE_DEFAULT_OPTS="--keep-going=y --autounmask-write=y --jobs=2 -G"/EMERGE_DEFAULT_OPTS="--keep-going=y --autounmask-write=y --jobs=2"/' /etc/portage/make.conf
-			sudo sed -i 's/^ACCEPT_KEYWORDS="**"/#ACCEPT_KEYWORDS="**"/' /etc/portage/make.conf
+			sudo sed -i 's/^ACCEPT_KEYWORDS="\*\*"/#ACCEPT_KEYWORDS="\*\*"/' /etc/portage/make.conf
 			echo -e "\nemerge will now install from source. (/etc/portage/make.conf)\n"
 			read -erp "Copy over binhost Portage config? (/etc/portage/package.use, /etc/portage/package.env, /etc/portage/package.keywords, /etc/portage/package.license, /etc/portage/package.mask) [y/n] " -n 1 binhostyn
 			if [[ $binhostyn == "y" || $binhostyn == "Y" ]]; then
@@ -105,7 +105,7 @@ case "$choice" in
 			fi
 		else
 			sudo sed -i 's/EMERGE_DEFAULT_OPTS="--keep-going=y --autounmask-write=y --jobs=2"/EMERGE_DEFAULT_OPTS="--keep-going=y --autounmask-write=y --jobs=2 -G"/' /etc/portage/make.conf
-			sudo sed -i 's/^#ACCEPT_KEYWORDS="**"/ACCEPT_KEYWORDS="**"/' /etc/portage/make.conf
+			sudo sed -i 's/^#ACCEPT_KEYWORDS="\*\*"/ACCEPT_KEYWORDS="\*\*"/' /etc/portage/make.conf
 			echo -e "\nemerge will now install from binary. (/etc/portage/make.conf)"
 		fi
 		;;
