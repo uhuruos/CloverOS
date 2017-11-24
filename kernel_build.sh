@@ -1,5 +1,4 @@
-kernelversion=4.14.1
-
+kernelversion=4.14.2
 kernelmajversion=4.14
 
 emerge gentoo-sources genkernel
@@ -17,7 +16,7 @@ xz -9e --lzma2=dict=256MB /usr/portage/packages/s/kernel.tar
 cd /usr/src/linux/
 wget https://linux-libre.fsfla.org/pub/linux-libre/releases/$kernelversion-gnu/deblob-$kernelmajversion
 wget https://linux-libre.fsfla.org/pub/linux-libre/releases/$kernelversion-gnu/deblob-check
-chmod +x deblob-4.14
+chmod +x deblob-$kernelmajversion
 PYTHON="python2.7" ./deblob-$kernelmajversion
 genkernel --kernel-config=config.amd64 all
 
@@ -32,4 +31,4 @@ cd /usr/src/linux/
 make prepare
 make modules_prepare
 
-emerge -1 --buildpkg zfs-kmod virtualbox-modules exfat-nofuse
+emerge -1 --buildpkg zfs-kmod virtualbox-modules exfat-nofuse nvidia-drivers
