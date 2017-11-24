@@ -73,6 +73,7 @@ app-laptop/tlp
 app-laptop/tp_smapi
 app-misc/byobu
 app-misc/ckermit
+app-misc/cmatrix
 app-misc/colordiff
 app-misc/dtach
 app-misc/fdupes
@@ -956,7 +957,6 @@ x11-plugins/wmwork
 x11-plugins/wmxkb
 x11-plugins/wmxres
 x11-terms/aterm
-x11-terms/eterm
 x11-terms/multi-aterm
 x11-terms/rxvt-unicode
 x11-terms/sakura
