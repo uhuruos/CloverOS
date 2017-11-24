@@ -210,6 +210,7 @@ case "$choice" in
 		sudo wget $gitprefix/binhost_settings/etc/portage/package.mask -P /etc/portage/
 		sudo wget $gitprefix/binhost_settings/etc/portage/package.license -P /etc/portage/
 		sudo sh -c "curl -s $gitprefix/binhost_settings/etc/portage/make.conf | grep -E '^USE=|^CFLAGS=|^CXXFLAGS=' >> /etc/portage/make.conf"
+		echo -e "\nPortage configuration now mirrors binhost Portage configuration."
 		;;
 
 	b)
