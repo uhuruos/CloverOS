@@ -137,7 +137,7 @@ case "$choice" in
 		;;
 
 	8)
-		echo -e "Available timezones: $(find -type f | sort | cut -c3- | tr "\n" " ") \n"
+		echo -e "Available timezones: $(find -type f | sort | cut -c3- | tr '\n' ' ') \n"
 		read -erp "Select a timezone: " timezone
 		sudo cp /usr/share/zoneinfo/${timezone} /etc/localtime
 		echo -e "\nTimezone set to ${timezone}. (/etc/localtime)"
