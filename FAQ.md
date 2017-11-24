@@ -88,6 +88,8 @@ This is the only data I record:
 
 Each mirror has /s/bandwidth.txt. ie: https://uswest.cloveros.ga/s/bandwidth.txt
 
+`while :; do netstat -i | grep -m1 eth0 | awk '{print $7}' > /var/www/html/s/bandwidth.txt; sleep 60; done &`
+
 ## Gentoo is a distro that's only good for servers
 Gentoo is a meta-distro. You can make any distro you want out of it.
 
