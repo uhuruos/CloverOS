@@ -23,7 +23,7 @@ echo "1) Enable/disable package signing validation
 0) Update cloveros_settings.sh
 t) Enable tap to click on touchpad
 l) Upgrade/Install Libre kernel
-c) Update USE flags from binhost
+c) Update Portage config from binhost
 b) Install bluetooth manager
 n) Install proprietary Nvidia drivers
 v) Install Virtualbox/VMWare drivers
