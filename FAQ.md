@@ -31,6 +31,9 @@ linux   /boot/kernel-genkernel-x86_64-[ver]-gentoo root=UUID=[id] ro nomodeset n
 
 - Firefox and twm aren't 100% compatible, switch to fvwm needed
 
+## Steam doesn't work anymore
+Run `rm -Rf ~/.steam*` before every time you run `steam`.
+
 ## Does it have binaries?
 It's a pre-setup Gentoo image with `PORTAGE_BINHOST="https://cloveors.ga" emerge -G package` preset in /etc/portage/make.conf. It uses Gentoo for everything (versions, ebuilds, etc.) and gets it from cloveros.ga instead of building
 
