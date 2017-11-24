@@ -74,6 +74,9 @@ EMERGE_DEFAULT_OPTS="--keep-going=y --autounmask-write=y --jobs=2 -G"
 CFLAGS="-O3 -march=native -pipe -funroll-loops -floop-block -floop-interchange -floop-strip-mine -ftree-loop-distribution"
 CXXFLAGS="\${CFLAGS}"
 CPU_FLAGS_X86="mmx mmxext sse sse2 ssse3 sse3"
+AR="gcc-ar"
+NM="gcc-nm"
+RANLIB="gcc-ranlib"
 PORTAGE_BINHOST="https://cloveros.ga"
 ACCEPT_KEYWORDS="**"' >> /etc/portage/make.conf
 

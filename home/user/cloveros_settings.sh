@@ -23,6 +23,7 @@ echo "1) Enable/disable package signing validation
 0) Update cloveros_settings.sh
 t) Enable tap to click on touchpad
 l) Upgrade/Install Libre kernel
+c) Update USE flags from binhost
 b) Install bluetooth manager
 n) Install proprietary Nvidia drivers
 v) Install Virtualbox/VMWare drivers
@@ -89,12 +90,17 @@ case "$choice" in
 	5)
 		if grep -q 'EMERGE_DEFAULT_OPTS="--keep-going=y --autounmask-write=y --jobs=2 -G"' /etc/portage/make.conf; then
 			sudo sed -i 's/EMERGE_DEFAULT_OPTS="--keep-going=y --autounmask-write=y --jobs=2 -G"/EMERGE_DEFAULT_OPTS="--keep-going=y --autounmask-write=y --jobs=2"/' /etc/portage/make.conf
+			sudo sed -i 's/^ACCEPT_KEYWORDS="**"/#ACCEPT_KEYWORDS="**"/' /etc/portage/make.conf
 			echo -e "\nemerge will now install from source. (/etc/portage/make.conf)\n"
-			read -erp "Copy over binhost build settings? (USE flags: /etc/portage/make.conf, /etc/portage/package.use/package.use) [y/n] " -n 1 binhostyn
+			read -erp "Copy over binhost Portage config? (/etc/portage/make.conf, /etc/portage/package.use, /etc/portage/package.env, /etc/portage/package.keywords, /etc/portage/package.license, /etc/portage/package.mask) [y/n] " -n 1 binhostyn
 			if [[ $binhostyn == "y" || $binhostyn == "Y" ]]; then
-				sudo wget $gitprefix/binhost_settings/etc/portage/package.use -O /etc/portage/package.use/package.use
+				sudo wget $gitprefix/binhost_settings/etc/portage/package.use -P /etc/portage/
+				sudo wget $gitprefix/binhost_settings/etc/portage/package.keywords -P /etc/portage/
+				sudo wget $gitprefix/binhost_settings/etc/portage/package.env -P /etc/portage/
+				sudo wget $gitprefix/binhost_settings/etc/portage/package.mask -P /etc/portage/
+				sudo wget $gitprefix/binhost_settings/etc/portage/package.license -P /etc/portage/
 				sudo sh -c "curl -s $gitprefix/binhost_settings/etc/portage/make.conf | grep '^USE=' >> /etc/portage/make.conf"
-				sudo sed -i 's/^ACCEPT_KEYWORDS="**"/#ACCEPT_KEYWORDS="**"/' /etc/portage/make.conf
+				echo -e "\nPortage configuration now mirrors binhost Portage configuration."
 			fi
 		else
 			sudo sed -i 's/EMERGE_DEFAULT_OPTS="--keep-going=y --autounmask-write=y --jobs=2"/EMERGE_DEFAULT_OPTS="--keep-going=y --autounmask-write=y --jobs=2 -G"/' /etc/portage/make.conf
@@ -193,6 +199,10 @@ case "$choice" in
 		sudo eselect opengl set nvidia
 		sudo sh -c 'echo "blacklist nouveau" >> /etc/modprobe.d/blacklist.conf'
 		echo -e "\nNvidia drivers installed, restart X.\nCheck https://wiki.gentoo.org/wiki/NVidia/nvidia-drivers for more info"
+		;;
+
+	c)
+		
 		;;
 
 	b)
