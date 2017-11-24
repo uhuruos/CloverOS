@@ -34,6 +34,17 @@ linux   /boot/kernel-genkernel-x86_64-[ver]-gentoo root=UUID=[id] ro nomodeset n
 ## Steam doesn't work anymore
 Run `rm -Rf ~/.steam*` before every time you run `steam`.
 
+## Starting X automatically after login
+Edit `~/.bash_profile`
+
+Comment out
+
+`read -erp "Start X? [y/n] " -n 1 choice`
+
+And add in
+
+`choice=y`
+
 ## Does it have binaries?
 It's a pre-setup Gentoo image with `PORTAGE_BINHOST="https://cloveors.ga" emerge -G package` preset in /etc/portage/make.conf. It uses Gentoo for everything (versions, ebuilds, etc.) and gets it from cloveros.ga instead of building
 
