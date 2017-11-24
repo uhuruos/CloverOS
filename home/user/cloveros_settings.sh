@@ -92,14 +92,15 @@ case "$choice" in
 			sudo sed -i 's/EMERGE_DEFAULT_OPTS="--keep-going=y --autounmask-write=y --jobs=2 -G"/EMERGE_DEFAULT_OPTS="--keep-going=y --autounmask-write=y --jobs=2"/' /etc/portage/make.conf
 			sudo sed -i 's/^ACCEPT_KEYWORDS="**"/#ACCEPT_KEYWORDS="**"/' /etc/portage/make.conf
 			echo -e "\nemerge will now install from source. (/etc/portage/make.conf)\n"
-			read -erp "Copy over binhost Portage config? (/etc/portage/make.conf, /etc/portage/package.use, /etc/portage/package.env, /etc/portage/package.keywords, /etc/portage/package.license, /etc/portage/package.mask) [y/n] " -n 1 binhostyn
+			read -erp "Copy over binhost Portage config? (/etc/portage/package.use, /etc/portage/package.env, /etc/portage/package.keywords, /etc/portage/package.license, /etc/portage/package.mask) [y/n] " -n 1 binhostyn
 			if [[ $binhostyn == "y" || $binhostyn == "Y" ]]; then
+				sudo rm -R /etc/portage/package.use /etc/portage/package.mask /etc/portage/package.keywords /etc/portage/package.env /etc/portage/package.mask /etc/portage/package.license
 				sudo wget $gitprefix/binhost_settings/etc/portage/package.use -P /etc/portage/
 				sudo wget $gitprefix/binhost_settings/etc/portage/package.keywords -P /etc/portage/
 				sudo wget $gitprefix/binhost_settings/etc/portage/package.env -P /etc/portage/
 				sudo wget $gitprefix/binhost_settings/etc/portage/package.mask -P /etc/portage/
 				sudo wget $gitprefix/binhost_settings/etc/portage/package.license -P /etc/portage/
-				sudo sh -c "curl -s $gitprefix/binhost_settings/etc/portage/make.conf | grep '^USE=' >> /etc/portage/make.conf"
+				sudo sh -c "curl -s $gitprefix/binhost_settings/etc/portage/make.conf | grep -E '^USE=|^CFLAGS=|^CXXFLAGS=' >> /etc/portage/make.conf"
 				echo -e "\nPortage configuration now mirrors binhost Portage configuration."
 			fi
 		else
@@ -151,7 +152,7 @@ case "$choice" in
 	0)
 		cd ~
 		wget "$gitprefix"/home/user/cloveros_settings.sh -O cloveros_settings.new.sh
-		if [ -f cloveros_settings.new.sh ]; then
+		if [[ -f cloveros_settings.new.sh ]]; then
 			rm cloveros_settings.sh
 			mv cloveros_settings.new.sh cloveros_settings.sh
 			chmod +x cloveros_settings.sh
@@ -202,7 +203,13 @@ case "$choice" in
 		;;
 
 	c)
-		
+		sudo rm -R /etc/portage/package.use /etc/portage/package.mask /etc/portage/package.keywords /etc/portage/package.env /etc/portage/package.mask /etc/portage/package.license
+		sudo wget $gitprefix/binhost_settings/etc/portage/package.use -P /etc/portage/
+		sudo wget $gitprefix/binhost_settings/etc/portage/package.keywords -P /etc/portage/
+		sudo wget $gitprefix/binhost_settings/etc/portage/package.env -P /etc/portage/
+		sudo wget $gitprefix/binhost_settings/etc/portage/package.mask -P /etc/portage/
+		sudo wget $gitprefix/binhost_settings/etc/portage/package.license -P /etc/portage/
+		sudo sh -c "curl -s $gitprefix/binhost_settings/etc/portage/make.conf | grep -E '^USE=|^CFLAGS=|^CXXFLAGS=' >> /etc/portage/make.conf"
 		;;
 
 	b)
