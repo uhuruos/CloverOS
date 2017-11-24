@@ -45,6 +45,9 @@ And add in
 
 `choice=y`
 
+## is there anyone here using this as a daily? seriously and unironically considering to install this on my laptop
+Yes
+
 ## Does it have binaries?
 It's a pre-setup Gentoo image with `PORTAGE_BINHOST="https://cloveors.ga" emerge -G package` preset in /etc/portage/make.conf. It uses Gentoo for everything (versions, ebuilds, etc.) and gets it from cloveros.ga instead of building
 
