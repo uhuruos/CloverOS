@@ -31,4 +31,4 @@ cd /usr/src/linux/
 make prepare
 make modules_prepare
 
-emerge -1 --buildpkg zfs-kmod virtualbox-modules exfat-nofuse nvidia-drivers
+emerge -1q --jobs=1 --buildpkg spl zfs zfs-kmod virtualbox-modules exfat-nofuse nvidia-drivers

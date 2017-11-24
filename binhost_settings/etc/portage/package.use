@@ -377,3 +377,4 @@ sys-devel/llvm abi_x86_32
 x11-libs/libdrm abi_x86_32
 app-emulation/wine-gecko abi_x86_32
 sys-apps/dbus abi_x86_32
+media-libs/libtxc_dxtn abi_x86_32
