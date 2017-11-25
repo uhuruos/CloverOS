@@ -85,12 +85,14 @@ grub-mkconfig -o /boot/grub/grub.cfg
 
 `./cloveros_settings.sh` l) Update/Install Libre kernel
 
+Reboot; Advanced options, select -gnu kernel
+
 ## Turning CloverOS Libre into CloverOS
 `emerge linux-firmware`
 
 `./cloveros_settings.sh` 4) Update kernel
 
-Reboot; Advanced options, select non gnu
+Reboot; Advanced options, select non -gnu kernel
 
 ## Things preventing CloverOS Libre from being 100% free software:
 - LiveCD kernel is taken from Gentoo, it needs to be made from scratch
