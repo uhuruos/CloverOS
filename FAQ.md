@@ -45,6 +45,9 @@ And add in
 
 `choice=y`
 
+## Wine isn't available
+`emerge wine-any`
+
 ## is there anyone here using this as a daily? seriously and unironically considering to install this on my laptop
 Yes
 
