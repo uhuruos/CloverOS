@@ -49,7 +49,6 @@ Color {
 menu "Applications" {
 	"Applications" f.title
 	"urxvt" !"if pgrep urxvtd; then urxvtc -e zsh; else urxvtd -o -f && urxvtc -e zsh; fi"
-	"aterm" !"aterm +sb -tr -sh 10 -e dash &"
 	"xfe" !"xfe &"
 	"wifi" !"sudo rc-service wpa_supplicant start & wpa_gui &"
 	"porthole" !"porthole &"
@@ -61,7 +60,7 @@ menu "Applications" {
 	"filezilla" !"filezilla &"
 	"engrampa" !"engrampa &"
 	"rtorrent-ps" !"if pgrep urxvtd; then urxvtc -e rtorrent; else urxvtd -o -f && urxvtc -e rtorrent; fi"
-	"weechat" !"aterm +sb -tr -sh 10 -e weechat &"
+	"weechat" !"if pgrep urxvtd; then urxvtc -e weechat; else urxvtd -o -f && urxvtc -e weechat; fi"
 	"stats.sh" !"aterm +sb -tr -sh 10 -geometry 400x1+0+0 -e ~/stats.sh &"
 	"wallpaper" !"nitrogen &"
 	"resolution" !"arandr &"
