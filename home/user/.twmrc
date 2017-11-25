@@ -61,7 +61,7 @@ menu "Applications" {
 	"engrampa" !"engrampa &"
 	"rtorrent-ps" !"if pgrep urxvtd; then urxvtc -e rtorrent; else urxvtd -o -f && urxvtc -e rtorrent; fi"
 	"weechat" !"if pgrep urxvtd; then urxvtc -e weechat; else urxvtd -o -f && urxvtc -e weechat; fi"
-	"stats.sh" !"if pgrep urxvtd; then urxvtc -geometry 400x1+0+0 -e ~/stats.sh &; else urxvtd -o -f && urxvtc -geometry 400x1+0+0 -e ~/stats.sh &; fi"
+	"stats.sh" !"if pgrep urxvtd; then urxvtc -geometry 400x1+0+0 -e ~/stats.sh; else urxvtd -o -f && urxvtc -geometry 400x1+0+0 -e ~/stats.sh; fi"
 	"wallpaper" !"nitrogen &"
 	"resolution" !"arandr &"
 	"gparted" !"sudo gparted &"
