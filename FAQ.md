@@ -68,9 +68,8 @@ CloverOS Libre doesn't have the `sys-kernel/linux-firmware` package.
 
 The kernel is the same gentoo-sources with Liquorix config but with https://linux-libre.fsfla.org/pub/linux-libre/releases/4.12.12-gnu/deblob-4.12 ran on it.
 
-You can turn CloverOS into Libre by doing `emerge -C linux-firmware` and running the l) option in `~/cloveros_settings.sh`, or by building it yourself;
-
 ```
+emerge -C linux-firmware
 emerge gentoo-sources genkernel
 cd /usr/src/linux/
 wget https://linux-libre.fsfla.org/pub/linux-libre/releases/4.14.1-gnu/deblob-4.14
@@ -80,6 +79,25 @@ wget https://liquorix.net/sources/4.13/config.amd64
 genkernel --kernel-config=config.amd64 all
 grub-mkconfig -o /boot/grub/grub.cfg
 ```
+
+## Turning CloverOS into CloverOS Libre
+`emerge -C linux-firmware`
+
+`./cloveros_settings.sh` l) Update/Install Libre kernel
+
+## Turning CloverOS Libre into CloverOS
+`emerge linux-firmware`
+
+`./cloveros_settings.sh` 4) Update kernel
+
+Reboot; Advanced options, select non gnu
+
+## Things preventing CloverOS Libre from being 100% free software:
+- LiveCD kernel is taken from Gentoo, it needs to be made from scratch
+
+- /usr/portage/ needs to be filtered to not include the .ebuilds of proprietary software, also requiring a separate Portage mirror
+
+- It needs a cloveros.ga mirror that doesn't host the non-free software packages
 
 ## How many users does CloverOS have?
 This is the only data I record:
@@ -95,14 +113,6 @@ Gentoo is a meta-distro. You can make any distro you want out of it.
 
 ## Does everything build with CFLAGS="-Ofast -mmmx -mssse3 -pipe -funroll-loops -flto=8 -floop-block -floop-interchange -floop-strip-mine -ftree-loop-distribution" ?
 These are all the packages that don't build with the full CFLAGS: https://gitgud.io/cloveros/cloveros/blob/master/binhost_settings/etc/portage/package.env
-
-## Turning CloverOS Libre into CloverOS
-`emerge linux-firmware`
-
-`./cloveros_settings.sh` 4) Update kernel
-
-Reboot; Advanced options, select non gnu
-
 
 ## Benefits of Gentoo/CloverOS over other distros
 No systemd, CFLAGS, lower RAM usage, it's Gentoo, package versions are stable, it's as default as possible while still being easy, has infinality, installs in 2 minutes depending on # of cores (unsquashfs), saves time by doing all the little things you would've done anyway, while still being default enough for you to change.
