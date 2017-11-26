@@ -3,7 +3,7 @@
 
 <img src="https://gitgud.io/cloveros/cloveros/raw/master/artwork/desktop.png" alt="CloverOS GNU/Linux Desktop" width="250" />
 
-CloverOS GNU/Linux is scripts that creates a Gentoo image and a packages repo (Binhost) that contains unique USE flags and CFLAGS. It aims to be a fast, poetterfrei, lightweight out of the box desktop.
+CloverOS GNU/Linux is scripts that creates a minimal (middleware-free), performance-optimized and out of the box Gentoo image and a packages repo (Binhost)
 
 Mirrors and binary details: https://useast.cloveros.ga https://uswest.cloveros.ga https://fr.cloveros.ga https://au.cloveros.ga https://uk.cloveros.ga https://nl.cloveros.ga
 
