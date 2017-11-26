@@ -146,6 +146,20 @@ Masked (Red) is just another step forward of keywording and the file is at /etc/
 
 You can unmask or unkeyword a specific version by doing =media-gfx/gimp-2.9.6
 
+## GPU passthrough example
+```
+./vfio-bind.sh 0000:01:00.0 0000:01:00.1 0000:00:12.0 0000:00:12.2
+
+qemu-system-x86_64 -enable-kvm -m 4G -cpu host -smp cores=8,threads=1 -vga none -display none \
+-drive if=pflash,format=raw,readonly,file=OVMF_CODE-pure-efi.fd \
+-drive if=pflash,format=raw,file=OVMF_VARS-pure-efi.fd \
+-drive file=windows,format=raw \
+-device vfio-pci,host=01:00.0,romfile=XFX.R9390.8192.150603.rom \
+-device vfio-pci,host=01:00.1 \
+-device vfio-pci,host=00:12.0 \
+-device vfio-pci,host=00:12.2
+```
+
 ## What if CloverOS dies? Will my install become useless?
 Edit `/etc/portage/make.conf` and change
 
