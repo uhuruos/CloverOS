@@ -10,7 +10,6 @@ net-misc/youtube-dl # needs latest version
 media-sound/rosegarden # stable is old
 net-p2p/rtorrent-ps ** # rtorrent may be abandoned
 net-libs/libtorrent ** # rtorrent may be abandoned
-app-emulation/wine-any # stable is old
 #mednafen
 =dev-libs/lzo-2.10
 #vapoursynth
@@ -194,6 +193,7 @@ games-emulation/sdlmame
 net-p2p/eiskaltdcpp **
 sys-block/sas3flash
 app-crypt/kencfs-plasma
+app-emulation/wine-any
 
 #dependencies
 #staruml-bin
@@ -309,7 +309,7 @@ dev-python/pyliblzma
 dev-python/python-evdev
 #xonotic
 dev-libs/d0_blind_id
-#wine
+#wine-any
 app-emulation/wine-mono
 
 #fonts
