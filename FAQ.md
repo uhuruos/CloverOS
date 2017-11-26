@@ -45,9 +45,6 @@ And add in
 
 `choice=y`
 
-## Wine isn't available
-`emerge wine-any`
-
 ## is there anyone here using this as a daily? seriously and unironically considering to install this on my laptop
 Yes
 
@@ -65,6 +62,28 @@ Firefox 57 on CloverOS works with ALSA. If this changes, it will be built with a
 
 ## How often is this updated?
 It's stable rolling release, I update the binhost about once a week. (If emerging doesn't work, then I'm probably rsyncing, so wait a few minutes.)
+
+## Gentoo is a distro that's only good for servers
+Gentoo is a meta-distro. You can make any distro you want out of it.
+
+## Does everything build with CFLAGS="-Ofast -mmmx -mssse3 -pipe -funroll-loops -flto=8 -floop-block -floop-interchange -floop-strip-mine -ftree-loop-distribution" ?
+These are all the packages that don't build with the full CFLAGS: https://gitgud.io/cloveros/cloveros/blob/master/binhost_settings/etc/portage/package.env
+
+## Benefits of Gentoo/CloverOS over other distros
+No systemd, CFLAGS, lower RAM usage, it's Gentoo, package versions are stable, it's as default as possible while still being easy, has infinality, installs in 2 minutes depending on # of cores (unsquashfs), saves time by doing all the little things you would've done anyway, while still being default enough for you to change.
+
+## The default shell is bash but twm launches urxvt -e zsh?
+This is done to keep it as default as possible.
+
+## What programs does the binhost have?
+List of programs without dependencies: https://gitgud.io/cloveros/cloveros/blob/master/binhost_settings/var/lib/portage/world
+
+List of all packages: https://cloveros.ga/s/packages.html
+
+## Which DE does this come with?
+None, it comes with twm and a `~/.bash_profile` that can select/install a DE for you:
+
+![bash profile](https://i.imgur.com/YD4IPRf.png)
 
 ## What is CloverOS Libre?
 CloverOS Libre doesn't have the `sys-kernel/linux-firmware` package.
@@ -112,28 +131,6 @@ This is the only data I record:
 Each mirror has /s/bandwidth.txt. ie: https://uswest.cloveros.ga/s/bandwidth.txt
 
 `while :; do netstat -i | grep -m1 eth0 | awk '{print $7}' > /var/www/html/s/bandwidth.txt; sleep 60; done &`
-
-## Gentoo is a distro that's only good for servers
-Gentoo is a meta-distro. You can make any distro you want out of it.
-
-## Does everything build with CFLAGS="-Ofast -mmmx -mssse3 -pipe -funroll-loops -flto=8 -floop-block -floop-interchange -floop-strip-mine -ftree-loop-distribution" ?
-These are all the packages that don't build with the full CFLAGS: https://gitgud.io/cloveros/cloveros/blob/master/binhost_settings/etc/portage/package.env
-
-## Benefits of Gentoo/CloverOS over other distros
-No systemd, CFLAGS, lower RAM usage, it's Gentoo, package versions are stable, it's as default as possible while still being easy, has infinality, installs in 2 minutes depending on # of cores (unsquashfs), saves time by doing all the little things you would've done anyway, while still being default enough for you to change.
-
-## The default shell is bash but twm launches urxvt -e zsh?
-This is done to keep it as default as possible.
-
-## What programs does the binhost have?
-List of programs without dependencies: https://gitgud.io/cloveros/cloveros/blob/master/binhost_settings/var/lib/portage/world
-
-List of all packages: https://cloveros.ga/s/packages.html
-
-## Which DE does this come with?
-None, it comes with twm and a `~/.bash_profile` that can select/install a DE for you:
-
-![bash profile](https://i.imgur.com/YD4IPRf.png)
 
 ## What if CloverOS dies? Will my install become useless?
 Edit `/etc/portage/make.conf` and change
