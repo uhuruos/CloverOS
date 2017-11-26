@@ -132,6 +132,20 @@ Each mirror has /s/bandwidth.txt. ie: https://uswest.cloveros.ga/s/bandwidth.txt
 
 `while :; do netstat -i | grep -m1 eth0 | awk '{print $7}' > /var/www/html/s/bandwidth.txt; sleep 60; done &`
 
+## What are keywording and unmasking?
+
+https://packages.gentoo.org/packages/media-gfx/gimp
+
+See the green and the yellow? Green means you can just `emerge gimp` and get that version. But what if you want 2.9? It's keyworded, which means it isn't stable.
+
+Gentoo Stable is using packages that aren't keyworded, as in they're tested and guaranteed to work.
+
+Just add media-gfx/gimp to /etc/portage/package.keywords and you'll get the latest keyworded (Yellow) version.
+
+Masked (Red) is just another step forward of keywording and the file is at /etc/portage/package.unmask
+
+You can unmask or unkeyword a specific version by doing =media-gfx/gimp-2.9.6
+
 ## What if CloverOS dies? Will my install become useless?
 Edit `/etc/portage/make.conf` and change
 
