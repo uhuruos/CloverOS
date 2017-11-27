@@ -24,6 +24,17 @@ blacklist rivatv
 linux   /boot/kernel-genkernel-x86_64-[ver]-gentoo root=UUID=[id] ro nomodeset nouveau.modeset=0
 ```
 
+## Installing proprietary Nvidia drivers
+Make sure your kernel is up to date.
+```
+sudo emerge nvidia-drivers
+sudo depmod -a
+sudo nvidia-xconfig
+sudo eselect opengl set nvidia
+sudo eselect opencl set nvidia
+sudo sh -c 'echo \"blacklist nouveau\" >> /etc/modprobe.d/blacklist.conf'
+```
+
 ## Known issues
 - Initramfs (genkernel) doesn't boot btrfs
 
@@ -47,6 +58,11 @@ And add in
 
 ## is there anyone here using this as a daily? seriously and unironically considering to install this on my laptop
 Yes
+
+## Is Gentoo a meme?
+Gentoo is a meta-distro. You can make any distro you want out of it. You can have a package.use/package.keywords that makes a binary-compatible Debian or Fedora or Arch or whatever. If 
+there's something you don't like about Gentoo, you can just edit /etc/portage/package.use. Using Gentoo is like distro-hopping around the same distro. Also, by building everything 
+yourself, that's one less botnet.
 
 ## Does it have binaries?
 It's a pre-setup Gentoo image with `PORTAGE_BINHOST="https://cloveors.ga" emerge -G package` preset in /etc/portage/make.conf. It uses Gentoo for everything (versions, ebuilds, etc.) and gets it from cloveros.ga instead of building
