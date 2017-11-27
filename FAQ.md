@@ -1,5 +1,5 @@
 # FAQ
-Questions and Answers. This has everything not organized enough for README.
+Questions and Answers. This has everything not organized enough for [README](https://gitgud.io/cloveros/cloveros/blob/master/README.md).
 
 ## It doesn't boot
 Take out your boot usb/cd.

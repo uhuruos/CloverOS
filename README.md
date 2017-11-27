@@ -145,4 +145,4 @@ I am proud to announce that CloverOS is 100% Poettering-free.
 
 ## Additional FAQ
 
-https://gitgud.io/cloveros/cloveros/blob/master/FAQ.md
+[FAQ.md](https://gitgud.io/cloveros/cloveros/blob/master/FAQ.md)
