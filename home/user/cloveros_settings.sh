@@ -189,6 +189,7 @@ case "$choice" in
 		;;
 
 	n)
+		echo "Make sure your kernel is updated."
 		echo "Running the following:"
 		echo "sudo emerge nvidia-drivers"
 		echo "sudo depmod -a"
