@@ -10,6 +10,8 @@ net-misc/youtube-dl # needs latest version
 media-sound/rosegarden # stable is old
 net-p2p/rtorrent-ps ** # rtorrent may be abandoned
 net-libs/libtorrent ** # rtorrent may be abandoned
+#rpcs3
+=sys-devel/llvm-4.0.1 ~amd64
 #mednafen
 =dev-libs/lzo-2.10
 #vapoursynth
@@ -194,6 +196,7 @@ net-p2p/eiskaltdcpp **
 sys-block/sas3flash
 app-crypt/kencfs-plasma
 app-emulation/wine-any
+games-emulation/rpcs3 **
 
 #dependencies
 #staruml-bin

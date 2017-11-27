@@ -1,4 +1,5 @@
 #preference
+games-emulation/rpcs3 -llvm
 media-libs/opencv -opengl
 media-libs/sdl2-mixer flac mikmod vorbis mod
 media-video/obs-studio jack

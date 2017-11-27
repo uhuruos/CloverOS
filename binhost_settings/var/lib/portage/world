@@ -186,6 +186,7 @@ games-emulation/openmsx
 games-emulation/pcsx2
 games-emulation/pcsxr
 games-emulation/ppsspp
+games-emulation/rpcs3
 games-emulation/sdlmame
 games-emulation/snes9x
 games-emulation/vbam

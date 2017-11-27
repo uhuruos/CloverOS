@@ -76,7 +76,7 @@ No systemd, CFLAGS, lower RAM usage, it's Gentoo, package versions are stable, i
 This is done to keep it as default as possible.
 
 ## What programs does the binhost have?
-List of programs without dependencies: https://gitgud.io/cloveros/cloveros/blob/master/binhost_settings/var/lib/portage/world
+List of programs (no dependencies): https://gitgud.io/cloveros/cloveros/blob/master/binhost_settings/var/lib/portage/world
 
 List of all packages: https://cloveros.ga/s/packages.html
 
