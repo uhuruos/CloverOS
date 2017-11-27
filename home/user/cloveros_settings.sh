@@ -195,11 +195,13 @@ case "$choice" in
 		echo "sudo depmod -a"
 		echo "sudo nvidia-xconfig"
 		echo "sudo eselect opengl set nvidia"
+		echo "sudo eselect opencl set nvidia"
 		echo "sudo sh -c 'echo \"blacklist nouveau\" >> /etc/modprobe.d/blacklist.conf'"
 		sudo emerge nvidia-drivers
 		sudo depmod -a
 		sudo nvidia-xconfig
 		sudo eselect opengl set nvidia
+		sudo eselect opencl set nvidia
 		sudo sh -c 'echo "blacklist nouveau" >> /etc/modprobe.d/blacklist.conf'
 		echo -e "\nNvidia drivers installed, restart X.\nCheck https://wiki.gentoo.org/wiki/NVidia/nvidia-drivers for more info"
 		;;
