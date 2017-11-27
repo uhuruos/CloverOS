@@ -191,10 +191,12 @@ case "$choice" in
 	n)
 		echo "Running the following:"
 		echo "sudo emerge nvidia-drivers"
+		echo "sudo depmod -a"
 		echo "sudo nvidia-xconfig"
 		echo "sudo eselect opengl set nvidia"
 		echo "sudo sh -c 'echo \"blacklist nouveau\" >> /etc/modprobe.d/blacklist.conf'"
 		sudo emerge nvidia-drivers
+		sudo depmod -a
 		sudo nvidia-xconfig
 		sudo eselect opengl set nvidia
 		sudo sh -c 'echo "blacklist nouveau" >> /etc/modprobe.d/blacklist.conf'
