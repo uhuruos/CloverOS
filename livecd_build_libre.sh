@@ -33,7 +33,8 @@ CFLAGS="-O3 -march=native -pipe -funroll-loops -floop-block -floop-interchange -
 CXXFLAGS="\${CFLAGS}"
 CPU_FLAGS_X86="mmx mmxext sse sse2 ssse3 sse3"
 PORTAGE_BINHOST="https://cloveros.ga"
-ACCEPT_KEYWORDS="**"' >> /etc/portage/make.conf
+ACCEPT_KEYWORDS="**"
+ACCEPT_LICENSE="-* @FREE"' >> /etc/portage/make.conf
 
 #emerge gentoo-sources genkernel
 #wget http://liquorix.net/sources/4.9/config.amd64
