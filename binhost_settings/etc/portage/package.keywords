@@ -197,6 +197,7 @@ sys-block/sas3flash
 app-crypt/kencfs-plasma
 app-emulation/wine-any
 games-emulation/rpcs3 **
+games-emulation/citra **
 
 #dependencies
 #staruml-bin

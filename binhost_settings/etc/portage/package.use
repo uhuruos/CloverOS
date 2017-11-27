@@ -37,7 +37,7 @@ media-sound/darkice vorbis mp3
 games-fps/urbanterror server
 x11-wm/compiz-fusion emerald unsupported
 media-gfx/krita color-management
-app-emulation/wine-any -custom-cflags -udisks staging d3d9
+app-emulation/wine-any -udisks staging d3d9
 x11-wm/xmonad -default-term
 sys-block/gparted btrfs dmraid f2fs fat hfs jfs mdadm ntfs reiserfs reiser4 xfs
 kde-plasma/powerdevil -wireless
@@ -152,11 +152,9 @@ media-libs/freetype infinality
 net-libs/webkit-gtk -introspection -gstreamer -geoloc -geolocation -webgl
 net-p2p/retroshare feedreader voip
 games-emulation/pcsxr -sdl
-sys-kernel/spl -custom-cflags
-sys-fs/zfs -custom-cflags -rootfs
-sys-fs/zfs-kmod -custom-cflags
 dev-db/sqlite secure-delete
 media-libs/phonon -vlc
+media-libs/libsdl custom-cflags
 www-client/chromium custom-cflags
 www-client/firefox custom-cflags custom-optimization -wifi nsplugin system-harfbuzz system-icu system-jpeg system-libevent system-libvpx system-sqlite
 www-client/torbrowser custom-cflags custom-optimization hardened system-cairo system-harfbuzz system-icu system-jpeg system-libevent system-libvpx system-sqlite
