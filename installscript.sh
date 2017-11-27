@@ -81,7 +81,7 @@ PORTAGE_BINHOST="https://cloveros.ga"
 ACCEPT_KEYWORDS="**"' >> /etc/portage/make.conf
 
 #emerge gentoo-sources genkernel
-#wget http://liquorix.net/sources/4.9/config.amd64
+#wget http://liquorix.net/sources/4.12/config.amd64
 #genkernel --kernel-config=config.amd64 all
 
 wget https://cloveros.ga/s/kernel.tar.xz
