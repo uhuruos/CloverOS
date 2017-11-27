@@ -1,4 +1,6 @@
 #preference
+games-emulation/citra sdl2 qt5 system-boost
+games-emulation/libretro-meta 2048 4do beetle-psx bsnes desmume fbalpha gambatte genplus handy mame2003 mednafen-ngp mednafen-pce-fast mednafen-saturn mednafen-supergrafx mednafen-vb mednafen-wswan mgba mupen64plus nestopia nxengine prboom prosystem psp1 reicast scummvm stella tyrquake bnes bsnes-cpp98 citra craft dolphin easyrpg fbalpha2012 fceumm mame mame2000 mame2016 mednafen-gba mednafen-snes melonds meowpc98 meteor mrboom openlara parallel-n64 pcsx-rearmed picodrive ppsspp px68k quicknes redream sameboy snes9x snes9x2002 snes9x2010 tgbdual vba-next vbam yabause
 games-emulation/rpcs3 -llvm
 media-libs/opencv -opengl
 media-libs/sdl2-mixer flac mikmod vorbis mod
@@ -34,7 +36,6 @@ app-admin/conky thinkpad mpd rss curl iostats
 media-sound/darkice vorbis mp3
 games-fps/urbanterror server
 x11-wm/compiz-fusion emerald unsupported
-mail-client/thunderbird -crypt system-harfbuzz system-icu system-jpeg system-libevent system-libvpx system-sqlite
 media-gfx/krita color-management
 app-emulation/wine-any -custom-cflags -udisks staging d3d9
 x11-wm/xmonad -default-term
@@ -52,7 +53,6 @@ app-editors/vim nls -minimal
 app-editors/vim-core nls -minimal
 dev-util/google-perftools -minimal
 app-editors/nano -minimal
-www-client/seamonkey -minimal -crypt system-harfbuzz system-icu system-jpeg system-libevent system-libvpx system-sqlite
 x11-base/xorg-server -minimal glamor wayland xvfb
 net-p2p/eiskaltdcpp -minimal -emoticons -spell dht json gtk
 kde-frameworks/kio -handbook
@@ -157,8 +157,11 @@ sys-fs/zfs -custom-cflags -rootfs
 sys-fs/zfs-kmod -custom-cflags
 dev-db/sqlite secure-delete
 media-libs/phonon -vlc
-www-client/firefox -wifi nsplugin system-harfbuzz system-icu system-jpeg system-libevent system-libvpx system-sqlite
-www-client/torbrowser hardened system-cairo system-harfbuzz system-icu system-jpeg system-libevent system-libvpx system-sqlite
+www-client/chromium custom-cflags
+www-client/firefox custom-cflags custom-optimization -wifi nsplugin system-harfbuzz system-icu system-jpeg system-libevent system-libvpx system-sqlite
+www-client/torbrowser custom-cflags custom-optimization hardened system-cairo system-harfbuzz system-icu system-jpeg system-libevent system-libvpx system-sqlite
+mail-client/thunderbird custom-cflags custom-optimization -crypt system-harfbuzz system-icu system-jpeg system-libevent system-libvpx system-sqlite
+www-client/seamonkey custom-cflags custom-optimization -minimal -crypt system-harfbuzz system-icu system-jpeg system-libevent system-libvpx system-sqlite
 media-sound/sox alsa openmp png encode flac id3tag ladspa mad ogg opus sndfile twolame wavpack
 media-libs/libsamplerate sndfile
 media-libs/gd truetype fontconfig

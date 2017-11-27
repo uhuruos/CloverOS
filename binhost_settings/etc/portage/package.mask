@@ -23,3 +23,4 @@ app-crypt/gpgme::pg_overlay
 media-sound/spek::pg_overlay
 www-client/firefox::pg_overlay
 app-arch/p7zip::pg_overlay
+dev-util/google-perftools::farmboy0
