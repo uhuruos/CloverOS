@@ -268,6 +268,46 @@ Each mirror has /s/bandwidth.txt. ie: https://uswest.cloveros.ga/s/bandwidth.txt
 
 `while :; do netstat -i | grep -m1 eth0 | awk '{print $7}' > /var/www/html/s/bandwidth.txt; sleep 60; done &`
 
+## Is this an overlay?
+No, this uses regular Gentoo Portage only. Same versions and USE flag options.
+
+## What makes CloverOS different?
+CloverOS GNU/Linux is a pre-riced, out-of-the-box Gentoo that's by /g/, for /g/. It focuses on speed and low ram usage, doesn't have systemd or other service bloat, and includes commonly 
+used software.
+
+It's as close to default Gentoo as possible, with all of the configuration made in `/etc/portage/make.conf`, unlike other Gentoo-based distros. The scripts can be used to install it to 
+hard drive, generate a LiveCD and create the CloverOS repo. It's very easy to modify the bash script to make your own Gentoo livecd. In short: CloverOS is Gentoo.
+
+The CloverOS repo is built with custom CFLAGS for optimum performance, and the USE flags are configured for desktop use. There's some dotfiles in the home directory by default to save 
+time. Packages are built with the newest GCC features such as Ofast, Graphite and LTO. I don't see any other distro putting in the effort of utilizing them, so I took it upon myself to 
+ensure the latest breakthroughs in compiler tech doesn't go unused.
+
+If you use Gentoo, you'll probably come to a similar conclusion as CloverOS (package.use, installed packages). The original goal was to be similar to CrunchBang, but with Gentoo.
+
+## What programs does this come with?
+Terminal - urxvt
+
+File manager - xfe
+
+Wifi configuration - wpa_gui
+
+Browser - firefox
+
+Text editor - emacs
+
+Graphic editor - gimp
+
+Video player - smplayer / mpv
+
+FTP client - filezilla
+
+Torrent client - rtorrent
+
+IRC client - weechat
+
+## How do I install systemd/avahi/pulseaudio?
+CloverOS doesn't have binaries of these.
+
 ## What if CloverOS dies? Will my install become useless?
 Edit `/etc/portage/make.conf` and change
 
