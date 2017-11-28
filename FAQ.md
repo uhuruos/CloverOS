@@ -1,10 +1,10 @@
 # FAQ
 Full Questions and Answers.
 
-### Installing program
+## Installing program
 `emerge filezilla`
 
-### Upgrading system
+## Upgrading system
 ```
 emerge --sync
 emerge -uavD world
@@ -153,6 +153,38 @@ Reboot; Advanced options, select -gnu kernel
 
 Reboot; Advanced options, select non -gnu kernel
 
+## Controlling twm
+Open Applications menu: right click on desktop
+
+Move windows: alt + left click
+
+Resize Windows: alt + right click
+
+Bring up menu anywhere: alt + middle click
+
+Close windows: ctrl + alt + right click
+
+The taskbar minimizes and restores windows.
+
+twm's settings are in `~/.twmrc`
+
+## Taking screenshots
+
+Type `scrot` or hit Print Screen.
+
+Key bindings are in `~/.xbindkeysrc`
+
+## Package isn't available
+Make an issue so I can add the package. In the meantime, edit `/etc/portage/make.conf` and edit the following line:
+
+`EMERGE_DEFAULT_OPTS="--keep-going=y --autounmask-write=y --jobs=2 -G"`
+
+to
+
+`EMERGE_DEFAULT_OPTS="--keep-going=y --autounmask-write=y --jobs=2"`
+
+This disables the binhost and uses Portage's ebuilds for packages.
+
 ## Things preventing CloverOS Libre from being 100% free software:
 - LiveCD kernel is taken from Gentoo, it needs to be made from scratch
 
@@ -166,12 +198,36 @@ It's a pre-setup Gentoo image with `PORTAGE_BINHOST="https://cloveors.ga" emerge
 ## How do I open a terminal
 Right click desktop.
 
+## Listing available packages
+https://packages.gentoo.org
+
+or run Porthole
+
 ## Known issues
 - Initramfs (genkernel) doesn't boot btrfs
 
 - I can't figure out how to change the port in rtorrent-ps
 
 - Firefox and twm aren't 100% compatible, switch to fvwm needed
+
+## Changing mirrors
+Edit `/etc/portage/make.conf`
+
+The mirror used: `PORTAGE_BINHOST="https://cloveros.ga"`
+
+Available mirrors:
+
+https://useast.cloveros.ga
+
+https://uswest.cloveros.ga
+
+https://fr.cloveros.ga
+
+https://au.cloveros.ga
+
+https://uk.cloveros.ga
+
+https://nl.cloveros.ga
 
 ## Binary details
 The mirrors have an index page that details this: https://useast.cloveros.ga https://uswest.cloveros.ga https://fr.cloveros.ga https://uk.cloveros.ga https://nl.cloveros.ga https://au.cloveros.ga
@@ -197,6 +253,11 @@ List of all packages: https://cloveros.ga/s/packages.html
 None, it comes with twm and a `~/.bash_profile` that can select/install a DE for you:
 
 ![bash profile](https://i.imgur.com/YD4IPRf.png)
+
+## Installing a DE
+First, connect to wifi using wpa_gui ('wifi' in twm)
+
+Kill X and relog. After you log in and the "Start X?" dialog pops up, instead of y/n, type one of the WM options and hit y when it asks to install.
 
 ## How many users does CloverOS have?
 This is the only data I record:
