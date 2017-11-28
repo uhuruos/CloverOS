@@ -68,19 +68,8 @@ sudo eselect opencl set nvidia
 sudo sh -c 'echo \"blacklist nouveau\" >> /etc/modprobe.d/blacklist.conf'
 ```
 
-## Starting X automatically after login
-Edit `~/.bash_profile`
-
-Comment out
-
-`read -erp "Start X? [y/n] " -n 1 choice`
-
-And add in
-
-`choice=y`
-
 ## Firefox and Pulseaudio
-Firefox 57 on CloverOS works with ALSA. If this changes, it will be built with apulse.
+Firefox 57 still works with ALSA. If this changes, it will be built with apulse.
 
 ## Gentoo is a distro that's only good for servers
 Gentoo is a meta-distro. You can make any distro you want out of it.
@@ -168,13 +157,24 @@ The taskbar minimizes and restores windows.
 
 twm's settings are in `~/.twmrc`
 
+## Starting X automatically after login
+Edit `~/.bash_profile`
+
+Comment out
+
+`read -erp "Start X? [y/n] " -n 1 choice`
+
+And add in
+
+`choice=y`
+
 ## Taking screenshots
 
 Type `scrot` or hit Print Screen.
 
 Key bindings are in `~/.xbindkeysrc`
 
-## Package isn't available
+## Binary package isn't available
 Make an issue so I can add the package. In the meantime, edit `/etc/portage/make.conf` and edit the following line:
 
 `EMERGE_DEFAULT_OPTS="--keep-going=y --autounmask-write=y --jobs=2 -G"`
