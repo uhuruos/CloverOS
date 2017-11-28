@@ -455,7 +455,7 @@ media-plugins/vapoursynth-vstaambk
 media-plugins/vapoursynth-cnr2
 media-plugins/vapoursynth-eedi3
 
-#windowmaker plugins
+#window maker plugins
 x11-plugins/wmmand
 x11-plugins/wmbluecpu
 x11-plugins/wmsystemtray
@@ -496,6 +496,7 @@ x11-plugins/wmlpq
 x11-plugins/wmacpiload-ac
 x11-plugins/wmbatteries **
 x11-plugins/wmping
+x11-plugins/wmamixer
 
 #yubikey applications
 # required by pam_yubico (argument)

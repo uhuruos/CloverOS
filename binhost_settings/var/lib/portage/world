@@ -547,11 +547,11 @@ media-sound/ardour
 media-sound/ario
 media-sound/audacious
 media-sound/audacity
-media-sound/beets
 media-sound/bluez-alsa
 media-sound/cmus
 media-sound/darksnow
 media-sound/deadbeef
+media-sound/easytag
 media-sound/flacon
 media-sound/gmpc
 media-sound/gmusicbrowser
@@ -590,6 +590,7 @@ media-sound/sidplayfp
 media-sound/solfege
 media-sound/sox
 media-sound/spek
+media-sound/split2flac
 media-sound/streamripper
 media-sound/supercollider
 media-sound/synaesthesia
@@ -861,6 +862,7 @@ x11-plugins/wmXName
 x11-plugins/wmacpi
 x11-plugins/wmacpiload-ac
 x11-plugins/wmacpimon
+x11-plugins/wmamixer
 x11-plugins/wmapm
 x11-plugins/wmapmload
 x11-plugins/wmappl

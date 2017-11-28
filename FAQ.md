@@ -1,5 +1,38 @@
 # FAQ
-Questions and Answers. This has everything not organized enough for [README](https://gitgud.io/cloveros/cloveros/blob/master/README.md).
+Full Questions and Answers.
+
+### Installing program
+`emerge filezilla`
+
+### Upgrading system
+```
+emerge --sync
+emerge -uavD world
+emerge --depclean
+```
+
+## Updating config files after upgrading system
+`dispatch-conf`
+
+After you run it, it will show you the changes it's going to make:
+
+q To exit without making changes
+
+u To update and make the changes
+
+z To disregard the changes
+
+It will ask to modify the sudo settings back to default, just hit z there.
+
+## Sound doesn't work
+Run `alsamixer` and hit F6 to see your audio devices.
+
+To make 1 the default device, edit `~/.asoundrc` and add this:
+
+```
+defaults.pcm.card 1
+defaults.ctl.card 1
+```
 
 ## It doesn't boot
 Take out your boot usb/cd.
