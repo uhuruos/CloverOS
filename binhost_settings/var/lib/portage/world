@@ -26,6 +26,7 @@ app-arch/zpaq
 app-arch/zpaq-extras
 app-benchmarks/i7z
 app-benchmarks/stress
+app-benchmarks/sysbench
 app-cdr/bashburn
 app-cdr/cdrtools
 app-cdr/cdw
@@ -186,6 +187,7 @@ games-emulation/openmsx
 games-emulation/pcsx2
 games-emulation/pcsxr
 games-emulation/ppsspp
+games-emulation/retroarch
 games-emulation/rpcs3
 games-emulation/sdlmame
 games-emulation/snes9x
