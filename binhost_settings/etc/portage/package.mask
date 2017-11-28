@@ -5,6 +5,7 @@ dev-libs/libdbusmenu::elementary
 x11-libs/gtk+::elementary
 net-im/telegram-desktop-bin::jorgicio
 dev-libs/libdbusmenu::jorgicio
+games-engines/openxcom::eroen
 games-roguelike/dwarf-fortress::eroen
 media-libs/opus::rasdark
 dev-python/twilio::fkmclane

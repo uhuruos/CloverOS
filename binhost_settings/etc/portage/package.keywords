@@ -10,25 +10,16 @@ net-misc/youtube-dl # needs latest version
 media-sound/rosegarden # stable is old
 net-p2p/rtorrent-ps ** # rtorrent may be abandoned
 net-libs/libtorrent ** # rtorrent may be abandoned
-#rpcs3
-=sys-devel/llvm-4.0.1 ~amd64
 #mednafen
 =dev-libs/lzo-2.10
 #vapoursynth
 =dev-lang/nasm-2.13.01
 #firefox 57
-=sys-libs/compiler-rt-sanitizers-5.0.0 ~amd64
-=media-libs/mesa-17.2.5
-=dev-db/sqlite-3.21.0 ~amd64
-=sys-libs/libomp-5.0.0 ~amd64
-=sys-devel/llvm-5.0.0 ~amd64
-=sys-devel/clang-runtime-5.0.0 ~amd64
-=sys-devel/llvm-common-5.0.0 ~amd64
-=sys-devel/clang-5.0.0 ~amd64
-=sys-libs/compiler-rt-5.0.0 ~amd64
-=media-libs/libpng-1.6.34 ~amd64
-=x11-libs/libdrm-2.4.88 ~amd64
-=dev-libs/wayland-protocols-1.11 ~amd64
+=sys-devel/clang-4.0.1
+=sys-devel/llvm-4.0.1
+=sys-devel/clang-runtime-4.0.1
+=sys-libs/compiler-rt-sanitizers-4.0.1
+=sys-libs/compiler-rt-4.0.1
 
 #keyworded, remove when stable exists
 sys-fs/zfs-kmod
