@@ -144,8 +144,8 @@ case "$choice" in
 		;;
 
 	9)
-		sudo rm -Rf /usr/portage/packages/* /tmp/curlcache/* /usr/portage/distfiles/* /var/tmp/portage/*
-		echo -e "\nPackage cache cleared. (/usr/portage/packages/, /tmp/curlcache/, /usr/portage/distfiles/, /var/tmp/portage/)"
+		sudo rm -Rf /usr/portage/packages/* /usr/portage/distfiles/* /var/tmp/portage/*
+		echo -e "\nPackage cache cleared. (/usr/portage/packages/, /usr/portage/distfiles/, /var/tmp/portage/)"
 		;;
 
 	0)
