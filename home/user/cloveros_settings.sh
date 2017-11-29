@@ -34,6 +34,7 @@ echo
 
 case "$choice" in
 	1)
+		sudo gpg --keyserver keys.gnupg.net --recv-key "78F5 AC55 A120 07F2 2DF9 A28A 78B9 3F76 B8E4 2805"
 		echo 'FETCHCOMMAND_HTTPS="sh -c \"wget -t 3 -T 60 --passive-ftp -O \"\${DISTDIR}/\${FILE}\" \"\${URI}\" && sed \"s#cloveros.ga/#cloveros.ga/s/signatures/#\" <<< \"\${URI}.asc\" | wget -i - -O \"\${DISTDIR}/\${FILE}.asc\" && gpg --verify \"\${DISTDIR}/\${FILE}.asc\" \"\${DISTDIR}/\${FILE}\"\""' | sudo tee -a /etc/portage/make.conf &> /dev/null
 		echo -e "Package signing validation is now enabled. (/etc/portage/make.conf)"
 		;;
