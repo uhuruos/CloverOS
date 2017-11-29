@@ -11,7 +11,7 @@ mirrors=(
 
 gitprefix="https://gitgud.io/cloveros/cloveros/raw/master"
 
-echo "1) Enable/disable package signing validation
+echo "1) Enable package signing validation
 2) Change mirrors
 3) Change default alsa device
 4) Upgrade kernel
@@ -34,24 +34,7 @@ echo
 
 case "$choice" in
 	1)
-		if ! grep -Fq 'FETCHCOMMAND_HTTPS="/var/tmp/gpgvalidate.sh \"\${URI}\" \"\${DISTDIR}/\${FILE}\""' /etc/portage/make.conf; then
-			if ! type /usr/bin/gpg > /dev/null; then
-				sudo emerge gnupg
-			fi
-			if ! sudo gpg --list-keys "78F5 AC55 A120 07F2 2DF9 A28A 78B9 3F76 B8E4 2805"; then
-				sudo gpg --keyserver keys.gnupg.net --recv-key "78F5 AC55 A120 07F2 2DF9 A28A 78B9 3F76 B8E4 2805"
-			fi
-			echo 'FETCHCOMMAND_HTTPS="/var/tmp/gpgvalidate.sh \"\${URI}\" \"\${DISTDIR}/\${FILE}\""' | sudo tee -a /etc/portage/make.conf
-			sudo wget "$gitprefix"/home/user/gpgvalidate.sh -O /var/tmp/gpgvalidate.sh
-			sudo chmod +x /var/tmp/gpgvalidate.sh
-			echo -e "\nPackage validation enabled. (/etc/portage/make.conf)"
-		else
-			read -erp "Package validation is already enabled. Do you want to disable it? [y/n] " -n 1 validateyn
-			if [[ $validateyn == "y" || $validateyn == "Y" ]]; then
-				sudo sed -i '/FETCHCOMMAND_HTTPS/d' /etc/portage/make.conf
-				echo -e "\nPackage validation disabled. (/etc/portage/make.conf)"
-			fi
-		fi
+		echo 'FETCHCOMMAND_HTTPS="sh -c \"wget -t 3 -T 60 --passive-ftp -O \"\${DISTDIR}/\${FILE}\" \"\${URI}\" && sed \"s#cloveros.ga/#cloveros.ga/s/signatures/#\" <<< \"\${URI}.asc\" | wget -i - -O \"\${DISTDIR}/\${FILE}.asc\" && gpg --verify \"\${DISTDIR}/\${FILE}.asc\" \"\${DISTDIR}/\${FILE}\"\""' >> /etc/portage/make.conf
 		;;
 
 	2)
