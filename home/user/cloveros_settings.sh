@@ -34,7 +34,7 @@ echo
 
 case "$choice" in
 	1)
-		echo 'FETCHCOMMAND_HTTPS="sh -c \"wget -t 3 -T 60 --passive-ftp -O \"\${DISTDIR}/\${FILE}\" \"\${URI}\" && sed \"s#cloveros.ga/#cloveros.ga/s/signatures/#\" <<< \"\${URI}.asc\" | wget -i - -O \"\${DISTDIR}/\${FILE}.asc\" && gpg --verify \"\${DISTDIR}/\${FILE}.asc\" \"\${DISTDIR}/\${FILE}\"\""' | sudo tee >> /etc/portage/make.conf
+		echo 'FETCHCOMMAND_HTTPS="sh -c \"wget -t 3 -T 60 --passive-ftp -O \"\${DISTDIR}/\${FILE}\" \"\${URI}\" && sed \"s#cloveros.ga/#cloveros.ga/s/signatures/#\" <<< \"\${URI}.asc\" | wget -i - -O \"\${DISTDIR}/\${FILE}.asc\" && gpg --verify \"\${DISTDIR}/\${FILE}.asc\" \"\${DISTDIR}/\${FILE}\"\""' | sudo tee -a /etc/portage/make.conf
 		echo -e "Package signing validation is now enabled. (/etc/portage/make.conf)"
 		;;
 
