@@ -20,6 +20,8 @@ net-libs/libtorrent ** # rtorrent may be abandoned
 =sys-devel/clang-runtime-4.0.1
 =sys-libs/compiler-rt-sanitizers-4.0.1
 =sys-libs/compiler-rt-4.0.1
+#sway
+=dev-libs/json-c-0.12.1
 
 #keyworded, remove when stable exists
 sys-fs/zfs-kmod
@@ -189,6 +191,7 @@ app-crypt/kencfs-plasma
 app-emulation/wine-any
 games-emulation/rpcs3 **
 games-emulation/citra **
+dev-libs/sway
 
 #dependencies
 #staruml-bin
@@ -306,6 +309,8 @@ dev-python/python-evdev
 dev-libs/d0_blind_id
 #wine-any
 app-emulation/wine-mono
+#sway
+dev-libs/wlc
 
 #fonts
 media-fonts/lohit-kannada
@@ -355,6 +360,7 @@ media-fonts/nuosu-sil
 media-fonts/ricty
 media-fonts/sophia-nubian
 media-fonts/viga
+media-fonts/tewi-font
 
 #xfce plugins
 xfce-extra/xfce4-gvfs-mount

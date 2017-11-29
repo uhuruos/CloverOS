@@ -25,3 +25,11 @@ media-sound/spek::pg_overlay
 www-client/firefox::pg_overlay
 app-arch/p7zip::pg_overlay
 dev-util/google-perftools::farmboy0
+media-sound/ardour::4nykey
+media-fonts/monoid::4nykey
+www-client/torbrowser::4nykey
+media-fonts/heuristica::4nykey
+media-fonts/ricty::4nykey
+media-sound/deadbeef::4nykey
+app-arch/brotli::4nykey
+media-fonts/alegreya-sans::4nykey

@@ -135,6 +135,7 @@ dev-lang/go
 dev-lang/php
 dev-libs/amdgpu-pro-opencl
 dev-libs/libisoburn
+dev-libs/sway
 dev-libs/weston
 dev-python/ansi2html
 dev-python/django-two-factor-auth
@@ -417,6 +418,7 @@ media-fonts/takao-fonts
 media-fonts/tengwar-fonts
 media-fonts/terminus-font
 media-fonts/termsyn
+media-fonts/tewi-font
 media-fonts/tex-gyre
 media-fonts/texcm-ttf
 media-fonts/thaifonts-scalable
@@ -608,6 +610,7 @@ media-video/avidemux
 media-video/cinelerra
 media-video/dvdbackup
 media-video/ffmpeg
+media-video/ffmpegthumbnailer
 media-video/handbrake
 media-video/kaffeine
 media-video/makemkv
