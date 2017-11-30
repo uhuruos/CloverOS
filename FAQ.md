@@ -116,6 +116,8 @@ net-misc/openssh -bindist
 media-libs/mesa -bindist
 ```
 
+Mesa needs `-bindist` or OpenGL 3/4 won't work.
+
 ## What are USE flags?
 `/etc/portage/package.use` generally determines what your Gentoo install will look like. The first thing new Gentoo users should do is read the USE flags for their packages.
 
