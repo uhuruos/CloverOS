@@ -77,7 +77,7 @@ Gentoo is a meta-distro. You can make any distro you want out of it.
 ## What are USE flags?
 `/etc/portage/package.use` generally determines what your Gentoo install will look like. The first thing new Gentoo users should do is read the USE flags for their packages.
 
-https://packages.gentoo.org
+https://packages.gentoo.org/packages/media-gfx/gimp
 
 There's two types of USE flags that are treated equally: global and local.
 
