@@ -1,5 +1,5 @@
 #preference
-media-video/ffmpegthumbnailer gtk
+games-emulation/dolphin qt5 sdl egl ao
 sys-fs/zfs -rootfs
 games-emulation/citra sdl2 qt5 system-boost
 games-emulation/libretro-meta 2048 4do beetle-psx bsnes desmume fbalpha gambatte genplus handy -mame2003 mednafen-ngp mednafen-pce-fast mednafen-saturn mednafen-supergrafx mednafen-vb mednafen-wswan mgba mupen64plus nestopia nxengine prboom prosystem psp1 reicast scummvm stella tyrquake bnes -bsnes-cpp98 -citra craft dolphin easyrpg fbalpha2012 fceumm mame -mame2000 mame2016 mednafen-gba mednafen-snes -melonds meowpc98 meteor mrboom openlara parallel-n64 pcsx-rearmed picodrive ppsspp px68k quicknes redream sameboy snes9x snes9x2002 snes9x2010 tgbdual vba-next vbam yabause
@@ -214,7 +214,6 @@ dev-libs/boost icu nls
 dev-libs/libdbusmenu gtk3
 media-libs/sdl-mixer vorbis flac mikmod mod midi fluidsynth
 net-nds/openldap sasl
-media-libs/libsdl2 gles
 sci-libs/hdf5 -threads
 dev-games/mygui -opengl
 dev-lang/luajit lua52compat
@@ -244,7 +243,7 @@ x11-libs/libxkbcommon X
 x11-libs/pango X
 kde-frameworks/kwindowsystem X
 sys-apps/dbus X
-media-libs/libsdl2 X
+media-libs/libsdl2 X gles haptic
 kde-frameworks/kdelibs4support X
 games-emulation/mednafen debugger
 net-libs/libtorrent-rasterbar python

@@ -24,7 +24,10 @@ app-arch/unp
 app-arch/zopfli
 app-arch/zpaq
 app-arch/zpaq-extras
+app-benchmarks/bonnie
+app-benchmarks/bonnie++
 app-benchmarks/i7z
+app-benchmarks/iozone
 app-benchmarks/stress
 app-benchmarks/sysbench
 app-cdr/bashburn
@@ -52,6 +55,7 @@ app-editors/pluma
 app-editors/vim
 app-editors/xemacs
 app-emacs/emms
+app-emacs/org-mode
 app-emacs/slime
 app-emulation/diskimage-builder
 app-emulation/fuse
@@ -175,7 +179,6 @@ games-board/stockfish
 games-board/xboard
 games-emulation/desmume
 games-emulation/dgen-sdl
-games-emulation/dolphin
 games-emulation/dosbox
 games-emulation/fakenes
 games-emulation/generator
