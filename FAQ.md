@@ -107,6 +107,21 @@ Masked (Red) is just another step forward of keywording and the file is at /etc/
 
 You can unmask or unkeyword a specific version by doing =media-gfx/gimp-2.9.6
 
+## Emerge error relating to openssl
+Add this to `/etc/portage/package.use`:
+```
+dev-libs/openssl -bindist
+net-misc/openssh -bindist
+media-libs/mesa -bindist
+```
+
+Mesa needs `-bindist` or OpenGL 3/4 won't work.
+
+## Listing available packages
+https://packages.gentoo.org
+
+or run Porthole
+
 ## GPU passthrough example
 ```
 ./vfio-bind.sh 0000:01:00.0 0000:01:00.1 0000:00:12.0 0000:00:12.2
@@ -126,16 +141,6 @@ Yes
 
 ## Is Gentoo a meme?
 Gentoo is a meta-distro. You can make any distro you want out of it. You can have a package.use/package.keywords that makes a binary-compatible Debian or Fedora or Arch or whatever. If there's something you don't like about Gentoo, you can just edit /etc/portage/package.use. Using Gentoo is like distro-hopping around the same distro. Also, by building everything yourself, that's one less botnet. If you have a problem with a package or the package doesn't exist, just write an ebuild and put it in your local portage directory and emerge. There are overlays for more ebuilds if you don't want to write one.
-
-## Emerge error relating to openssl
-Add this to `/etc/portage/package.use`:
-```
-dev-libs/openssl -bindist
-net-misc/openssh -bindist
-media-libs/mesa -bindist
-```
-
-Mesa needs `-bindist` or OpenGL 3/4 won't work.
 
 ## What is CloverOS Libre?
 CloverOS Libre doesn't have the `sys-kernel/linux-firmware` package.
@@ -227,11 +232,6 @@ It's a pre-setup Gentoo image with `PORTAGE_BINHOST="https://cloveors.ga" emerge
 ## How do I open a terminal
 Right click desktop.
 
-## Listing available packages
-https://packages.gentoo.org
-
-or run Porthole
-
 ## Known issues
 - Initramfs (genkernel) doesn't boot btrfs
 
@@ -248,9 +248,11 @@ Available mirrors:
 
 https://useast.cloveros.ga
 
-https://uswest.cloveros.ga
-
 https://fr.cloveros.ga
+
+https://ca.cloveros.ga
+
+https://uswest.cloveros.ga
 
 https://au.cloveros.ga
 
