@@ -36,7 +36,8 @@ AR="gcc-ar"
 NM="gcc-nm"
 RANLIB="gcc-ranlib"
 PORTAGE_BINHOST="https://cloveros.ga"
-ACCEPT_KEYWORDS="**"' >> /etc/portage/make.conf
+ACCEPT_KEYWORDS="**"
+ACCEPT_LICENSE="*"' >> /etc/portage/make.conf
 
 #emerge gentoo-sources genkernel
 #wget http://liquorix.net/sources/4.12/config.amd64
