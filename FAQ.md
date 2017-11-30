@@ -74,6 +74,25 @@ Firefox 57 still works with ALSA. If this changes, it will be built with apulse.
 ## Gentoo is a distro that's only good for servers
 Gentoo is a meta-distro. You can make any distro you want out of it.
 
+## What are USE flags?
+`/etc/portage/package.use` generally determines what your Gentoo install will look like. The first thing new Gentoo users should do is read the USE flags for their packages.
+
+https://packages.gentoo.org
+
+There's two types of USE flags that are treated equally: global and local.
+
+Global USE flags are the ones that are in many packages, they generally do the same thing no matter what package uses them.
+
+Local USE flags are the ones that are in a few packages and require you to read https://packages.gentoo.org to read what they do. You can also read the .ebuild to get an even better idea of what it does.
+
+USE flags are basically ./configure parameters made easy.
+
+Examples here:
+
+https://gitgud.io/cloveros/cloveros/blob/master/binhost_settings/etc/portage/make.conf
+
+https://gitgud.io/cloveros/cloveros/blob/master/binhost_settings/etc/portage/package.use
+
 ## What are keywording and unmasking?
 
 https://packages.gentoo.org/packages/media-gfx/gimp
@@ -117,25 +136,6 @@ media-libs/mesa -bindist
 ```
 
 Mesa needs `-bindist` or OpenGL 3/4 won't work.
-
-## What are USE flags?
-`/etc/portage/package.use` generally determines what your Gentoo install will look like. The first thing new Gentoo users should do is read the USE flags for their packages.
-
-https://packages.gentoo.org
-
-There's two types of USE flags that are treated equally: global and local.
-
-Global USE flags are the ones that are in many packages, they generally do the same thing no matter what package uses them.
-
-Local USE flags are the ones that are in a few packages and require you to read https://packages.gentoo.org to read what they do. You can also read the .ebuild to get an even better idea of what it does.
-
-USE flags are basically ./configure parameters made easy.
-
-Examples here:
-
-https://gitgud.io/cloveros/cloveros/blob/master/binhost_settings/etc/portage/make.conf
-
-https://gitgud.io/cloveros/cloveros/blob/master/binhost_settings/etc/portage/package.use
 
 ## What is CloverOS Libre?
 CloverOS Libre doesn't have the `sys-kernel/linux-firmware` package.
