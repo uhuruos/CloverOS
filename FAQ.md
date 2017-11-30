@@ -106,7 +106,7 @@ qemu-system-x86_64 -enable-kvm -m 4G -cpu host -smp cores=8,threads=1 -vga none 
 Yes
 
 ## Is Gentoo a meme?
-Gentoo is a meta-distro. You can make any distro you want out of it. You can have a package.use/package.keywords that makes a binary-compatible Debian or Fedora or Arch or whatever. If there's something you don't like about Gentoo, you can just edit /etc/portage/package.use. Using Gentoo is like distro-hopping around the same distro. Also, by building everything yourself, that's one less botnet.
+Gentoo is a meta-distro. You can make any distro you want out of it. You can have a package.use/package.keywords that makes a binary-compatible Debian or Fedora or Arch or whatever. If there's something you don't like about Gentoo, you can just edit /etc/portage/package.use. Using Gentoo is like distro-hopping around the same distro. Also, by building everything yourself, that's one less botnet. If you have a problem with a package or the package doesn't exist, just write an ebuild and put it in your local portage directory and emerge. There are overlays for more ebuilds if you don't want to write one.
 
 ## Emerge error relating to openssl
 Add this to `/etc/portage/package.use`:
@@ -115,6 +115,25 @@ dev-libs/openssl -bindist
 net-misc/openssh -bindist
 media-libs/mesa -bindist
 ```
+
+## What are USE flags?
+`/etc/portage/package.use` generally determines what your Gentoo install will look like. The first thing new Gentoo users should do is read the USE flags for their packages.
+
+https://packages.gentoo.org
+
+There's two types of USE flags that are treated equally: global and local.
+
+Global USE flags are the ones that are in many packages, they generally do the same thing no matter what package uses them.
+
+Local USE flags are the ones that are in a few packages and require you to read https://packages.gentoo.org to read what they do. You can also read the .ebuild to get an even better idea of what it does.
+
+USE flags are basically ./configure parameters made easy.
+
+Examples here:
+
+https://gitgud.io/cloveros/cloveros/blob/master/binhost_settings/etc/portage/make.conf
+
+https://gitgud.io/cloveros/cloveros/blob/master/binhost_settings/etc/portage/package.use
 
 ## What is CloverOS Libre?
 CloverOS Libre doesn't have the `sys-kernel/linux-firmware` package.

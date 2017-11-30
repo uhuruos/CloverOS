@@ -134,7 +134,7 @@ media-sound/beets
 app-misc/neofetch
 www-client/torbrowser-launcher
 games-action/extreme-tuxracer
-games-emulation/dolphin **
+games-emulation/dolphin
 games-emulation/vbam
 games-util/lutris
 games-fps/quake3
