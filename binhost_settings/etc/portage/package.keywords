@@ -318,6 +318,8 @@ app-emulation/wine-mono
 dev-libs/wlc
 #pngquant
 media-gfx/libimagequant
+#retroarch
+games-emulation/citra-libretro **
 
 #fonts
 media-fonts/lohit-kannada
@@ -521,5 +523,3 @@ dev-python/phonenumbers
 dev-python/django-otp
 dev-python/django-formtools
 dev-python/django-otp-yubikey
-# required by =citra-libretro-9999-r2 (argument)
-=games-emulation/citra-libretro-9999-r2 **
