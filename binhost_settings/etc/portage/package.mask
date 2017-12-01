@@ -8,6 +8,7 @@ dev-libs/libdbusmenu::jorgicio
 games-engines/openxcom::eroen
 games-roguelike/dwarf-fortress::eroen
 media-libs/opus::rasdark
+media-gfx/blender::rasdark
 dev-python/twilio::fkmclane
 media-gfx/maim::fkmclane
 media-plugins/calf::fkmclane
@@ -16,6 +17,7 @@ net-im/discord-bin::fkmclane
 media-sound/mpd::pg_overlay
 x11-libs/wxGTK::pg_overlay
 mail-client/thunderbird::pg_overlay
+media-sound/shntool::pg_overlay
 dev-lang/rust::pg_overlay
 virtual/rust::pg_overlay
 dev-util/cargo::pg_overlay

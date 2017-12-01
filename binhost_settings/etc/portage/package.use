@@ -1,4 +1,6 @@
 #preference
+games-simulation/openttd -openmedia
+media-gfx/digikam -panorama
 games-emulation/dolphin qt5 sdl egl ao
 sys-fs/zfs -rootfs
 games-emulation/citra sdl2 qt5 system-boost
@@ -205,6 +207,8 @@ media-sound/deadbeef aac adplug alac alsa cdda converter cover cover-imlib2 cove
 app-emulation/qemu sdl usb virgl
 
 #required
+dev-libs/libpcre2 pcre16
+dev-qt/qtwebengine widgets
 sys-devel/llvm clang
 dev-python/PyQt5 gui widgets svg webkit network printsupport
 dev-games/ogre gl3plus -gles3 -gles2

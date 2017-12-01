@@ -585,7 +585,6 @@ media-sound/murmur
 media-sound/ncmpc
 media-sound/ncmpcpp
 media-sound/pianobar
-media-sound/puddletag
 media-sound/qmmp
 media-sound/ripperx
 media-sound/rosegarden
@@ -669,6 +668,8 @@ net-irc/weechat
 net-libs/libotr
 net-libs/nodejs
 net-mail/dovecot
+net-mail/mailman
+net-mail/mlmmj
 net-misc/autossh
 net-misc/axel
 net-misc/bridge-utils

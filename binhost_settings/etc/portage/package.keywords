@@ -10,11 +10,16 @@ net-misc/youtube-dl # needs latest version
 media-sound/rosegarden # stable is old
 net-p2p/rtorrent-ps ** # rtorrent may be abandoned
 net-libs/libtorrent ** # rtorrent may be abandoned
+media-gfx/blender # python 3.5
+#blender
+=media-libs/openexr-2.2.0-r2 ~amd64
+=media-libs/ilmbase-2.2.0-r1 ~amd64
 #mednafen
 =dev-libs/lzo-2.10
 #vapoursynth
 =dev-lang/nasm-2.13.01
 #firefox 57
+=dev-libs/icu-60.1
 =sys-devel/clang-4.0.1
 =sys-devel/llvm-4.0.1
 =sys-devel/clang-runtime-4.0.1
