@@ -208,12 +208,14 @@ media-sound/deadbeef aac adplug alac alsa cdda converter cover cover-imlib2 cove
 app-emulation/qemu sdl usb virgl
 
 #required
+dev-games/openscenegraph sdl svg ffmpeg truetype qt5
+dev-ml/lablgtk svg
 dev-python/PyQt4 svg
 media-libs/vigra openexr
 dev-libs/libpcre2 pcre16
 dev-qt/qtwebengine widgets
 sys-devel/llvm clang
-dev-python/PyQt5 gui widgets svg webkit network printsupport webengine webchannel
+dev-python/PyQt5 gui widgets svg webkit network printsupport webengine webchannel sql declarative
 dev-games/ogre gl3plus -gles3 -gles2
 dev-libs/glib dbus
 app-crypt/gcr gtk

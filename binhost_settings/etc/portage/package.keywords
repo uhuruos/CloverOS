@@ -320,6 +320,8 @@ dev-libs/wlc
 media-gfx/libimagequant
 #retroarch
 games-emulation/citra-libretro **
+#openmw
+sci-physics/bullet
 
 #fonts
 media-fonts/lohit-kannada
