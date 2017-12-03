@@ -20,7 +20,7 @@ if [ -z "$DISPLAY" ]; then
     wms[w]=wmaker
     wmpkgs[y]=twm
     wmspkg[Y]=twm
-    wmspkg[i]=i3-gaps
+    wmspkg[i]="i3-gaps i3status"
     wmspkg[a]=awesome
     wmspkg[o]=openbox
     wmspkg[e]="enlightenment:0.17 terminology"
