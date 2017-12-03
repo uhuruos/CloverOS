@@ -146,6 +146,7 @@ dev-python/django-two-factor-auth
 dev-python/pip
 dev-python/potr
 dev-python/virtualenv
+dev-qt/qt-creator
 dev-util/bless
 dev-util/catalyst
 dev-util/ccache

@@ -19,7 +19,6 @@ media-gfx/blender # python 3.5
 #vapoursynth
 =dev-lang/nasm-2.13.01
 #firefox 57
-=dev-libs/icu-60.1
 =sys-devel/clang-4.0.1
 =sys-devel/llvm-4.0.1
 =sys-devel/clang-runtime-4.0.1
