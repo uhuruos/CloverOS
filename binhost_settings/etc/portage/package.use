@@ -2,9 +2,7 @@
 media-libs/opencv -opengl
 games-emulation/rpcs3 -vulkan
 dev-python/networkx -doc
-net-wireless/gnuradio -utils
 games-simulation/openttd -openmedia
-media-gfx/digikam -panorama
 sys-fs/zfs -rootfs
 games-emulation/citra sdl2 qt5 system-boost
 games-emulation/libretro-meta 2048 4do beetle-psx bsnes desmume fbalpha gambatte genplus handy -mame2003 mednafen-ngp mednafen-pce-fast mednafen-saturn mednafen-supergrafx mednafen-vb mednafen-wswan mgba mupen64plus nestopia nxengine prboom prosystem psp1 reicast scummvm stella tyrquake bnes -bsnes-cpp98 -citra craft dolphin easyrpg fbalpha2012 fceumm mame -mame2000 mame2016 mednafen-gba mednafen-snes -melonds meowpc98 meteor mrboom openlara parallel-n64 pcsx-rearmed picodrive ppsspp px68k quicknes redream sameboy snes9x snes9x2002 snes9x2010 tgbdual vba-next vbam yabause
@@ -215,7 +213,7 @@ media-libs/vigra openexr
 dev-libs/libpcre2 pcre16
 dev-qt/qtwebengine widgets
 sys-devel/llvm clang
-dev-python/PyQt5 gui widgets svg webkit network printsupport webengine webchannel sql declarative
+dev-python/PyQt5 gui widgets svg webkit network printsupport -webengine webchannel sql declarative
 dev-games/ogre gl3plus -gles3 -gles2
 dev-libs/glib dbus
 app-crypt/gcr gtk
