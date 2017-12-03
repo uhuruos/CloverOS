@@ -236,7 +236,6 @@ kde-apps/filelight
 kde-apps/gwenview
 kde-apps/kcachegrind
 kde-apps/kdenlive
-kde-apps/konqueror
 kde-apps/konsole
 kde-misc/kdirstat
 kde-misc/krusader
@@ -711,7 +710,6 @@ net-vpn/openvpn
 net-vpn/tor
 net-vpn/zeronet
 net-wireless/blueman
-net-wireless/gnuradio
 net-wireless/iw
 net-wireless/rfkill
 net-wireless/wpa_supplicant
@@ -740,12 +738,14 @@ sys-apps/pv
 sys-apps/qdirstat
 sys-apps/ripgrep
 sys-apps/rng-tools
+sys-apps/sg3_utils
 sys-apps/smartmontools
 sys-apps/udevil
 sys-apps/usermode-utilities
 sys-auth/pam_yubico
 sys-block/gparted
 sys-block/open-iscsi
+sys-block/sas3flash
 sys-boot/grub
 sys-boot/os-prober
 sys-boot/plymouth
@@ -764,6 +764,7 @@ sys-fs/ecryptfs-utils
 sys-fs/exfat-nofuse
 sys-fs/exfat-utils
 sys-fs/extundelete
+sys-fs/multipath-tools
 sys-fs/ncdu
 sys-fs/ntfs3g
 sys-fs/safecopy
@@ -795,7 +796,6 @@ www-client/links
 www-client/lynx
 www-client/midori
 www-client/palemoon-bin
-www-client/qupzilla
 www-client/seamonkey
 www-client/surf
 www-client/torbrowser

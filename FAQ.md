@@ -1,6 +1,12 @@
 # FAQ
 Full Questions and Answers.
 
+## Upgrade your profile
+```
+emerge --sync
+eselect profile set "default/linux/amd64/17.0"
+```
+
 ## Installing program
 `emerge filezilla`
 
