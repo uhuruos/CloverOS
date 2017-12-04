@@ -11,6 +11,10 @@ media-sound/rosegarden # stable is old
 net-p2p/rtorrent-ps ** # rtorrent may be abandoned
 net-libs/libtorrent ** # rtorrent may be abandoned
 media-gfx/blender # python 3.5
+#zfs, until 0.7.4
+sys-fs/zfs-kmod **
+sys-kernel/spl **
+sys-fs/zfs **
 #blender
 =media-libs/openexr-2.2.0-r2 ~amd64
 =media-libs/ilmbase-2.2.0-r1 ~amd64
@@ -197,6 +201,7 @@ app-emulation/wine-any
 games-emulation/rpcs3 **
 games-emulation/citra **
 dev-libs/sway
+x11-wm/bspwm
 
 #dependencies
 #staruml-bin
@@ -322,6 +327,8 @@ media-gfx/libimagequant
 games-emulation/citra-libretro **
 #openmw
 sci-physics/bullet
+#bspwm
+x11-misc/sxhkd
 
 #fonts
 media-fonts/lohit-kannada
