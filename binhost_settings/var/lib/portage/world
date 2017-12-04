@@ -1082,6 +1082,7 @@ x11-themes/xcursor-themes
 x11-themes/xfce-gant-icon-theme
 x11-themes/xfwm4-themes
 x11-wm/awesome
+x11-wm/blackbox
 x11-wm/compiz-fusion
 x11-wm/dwm
 x11-wm/enlightenment:0.17
