@@ -366,15 +366,6 @@ First, connect to wifi using wpa_gui ('wifi' in twm)
 
 Kill X and relog. After you log in and the "Start X?" dialog pops up, instead of y/n, type one of the WM options and hit y when it asks to install.
 
-## How many users does CloverOS have?
-This is the only data I record:
-
-![CloverOS bandwidth](https://cloveros.ga/s/bandwidth.png)
-
-Each mirror has /s/bandwidth.txt. ie: https://uswest.cloveros.ga/s/bandwidth.txt
-
-`while :; do netstat -i | grep -m1 eth0 | awk '{print $7}' > /var/www/html/s/bandwidth.txt; sleep 60; done &`
-
 ## Is this an overlay?
 No, this uses regular Gentoo Portage only. Same versions and USE flag options.
 
