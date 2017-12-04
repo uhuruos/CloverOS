@@ -142,6 +142,76 @@ qemu-system-x86_64 -enable-kvm -m 4G -cpu host -smp cores=8,threads=1 -vga none 
 -device vfio-pci,host=00:12.2
 ```
 
+## Sound in OBS (Open Broadcaster Software) using ALSA
+Run `sudo modprobe snd_aloop` and edit the following file, replacing `device 0` and `hw:0,0` with your sound device:
+
+`~/.asoundrc`
+
+```
+    pcm.!default {
+      type asym
+      playback.pcm "LoopAndReal"
+      capture.pcm "looprec"
+    }
+
+    pcm.looprec {
+        type hw
+        card "Loopback"
+        device 0
+        subdevice 0
+    }
+
+    pcm.LoopAndReal {
+      type plug
+      slave.pcm mdev
+      route_policy "duplicate"
+    }
+
+    pcm.mdev {
+      type multi
+      slaves.a.pcm pcm.MixReale
+      slaves.a.channels 2
+      slaves.b.pcm pcm.MixLoopback
+      slaves.b.channels 2
+      bindings.0.slave a
+      bindings.0.channel 0
+      bindings.1.slave a
+      bindings.1.channel 1
+      bindings.2.slave b
+      bindings.2.channel 0
+      bindings.3.slave b
+      bindings.3.channel 1
+    }
+
+    pcm.MixReale {
+      type dmix
+      ipc_key 1024
+      slave {
+        pcm "hw:0,0"
+        rate 48000
+        periods 128
+        period_time 0
+        period_size 1024
+        buffer_size 8192
+      }
+    }
+
+    pcm.MixLoopback {
+      type dmix
+      ipc_key 1025
+      slave {
+        pcm "hw:Loopback,0,0"
+        rate 48000
+        periods 128
+        period_time 0
+        period_size 1024
+        buffer_size 8192
+      }
+    }
+```
+
+Start playing something, then run `obs`, then add Audio Capture Device (ALSA) to your Sources.
+
 ## is there anyone here using this as a daily? seriously and unironically considering to install this on my laptop
 Yes
 
