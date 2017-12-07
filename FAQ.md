@@ -230,7 +230,7 @@ cd /usr/src/linux/
 wget https://linux-libre.fsfla.org/pub/linux-libre/releases/4.14.1-gnu/deblob-4.14
 chmod +x deblob-4.14
 PYTHON="python2.7" ./deblob-4.14
-wget https://liquorix.net/sources/4.13/config.amd64
+wget https://liquorix.net/sources/4.14/config.amd64
 genkernel --kernel-config=config.amd64 all
 grub-mkconfig -o /boot/grub/grub.cfg
 ```

@@ -11,6 +11,7 @@ media-sound/rosegarden # stable is old
 net-p2p/rtorrent-ps ** # rtorrent may be abandoned
 net-libs/libtorrent ** # rtorrent may be abandoned
 media-gfx/blender # python 3.5
+media-sound/clementine ** # qt5
 #zfs, until 0.7.4
 sys-fs/zfs-kmod **
 sys-kernel/spl **
@@ -202,6 +203,7 @@ games-emulation/rpcs3 **
 games-emulation/citra **
 dev-libs/sway
 x11-wm/bspwm
+x11-terms/lilyterm
 
 #dependencies
 #staruml-bin

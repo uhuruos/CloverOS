@@ -557,14 +557,17 @@ media-sound/audacious
 media-sound/audacity
 media-sound/beets
 media-sound/bluez-alsa
+media-sound/clementine
 media-sound/cmus
 media-sound/darksnow
 media-sound/deadbeef
 media-sound/easytag
+media-sound/exaile
 media-sound/flacon
 media-sound/gmpc
 media-sound/gmusicbrowser
 media-sound/gstreamripper
+media-sound/guayadeque
 media-sound/herrie
 media-sound/jack-rack
 media-sound/jamin
@@ -589,6 +592,7 @@ media-sound/ncmpcpp
 media-sound/pianobar
 media-sound/puddletag
 media-sound/qmmp
+media-sound/rhythmbox
 media-sound/ripperx
 media-sound/rosegarden
 media-sound/sexypsf
@@ -778,7 +782,7 @@ sys-fs/zfs
 sys-kernel/dkms
 sys-kernel/dracut
 sys-kernel/genkernel
-sys-kernel/gentoo-sources:4.14.2
+sys-kernel/gentoo-sources
 sys-kernel/linux-firmware
 sys-power/acpi_call
 sys-power/acpitool
@@ -819,6 +823,7 @@ x11-apps/xev
 x11-apps/xhost
 x11-apps/xinput
 x11-apps/xkill
+x11-apps/xlsfonts
 x11-apps/xrandr
 x11-apps/xwininfo
 x11-base/xorg-server
@@ -829,6 +834,7 @@ x11-misc/arandr
 x11-misc/bumblebee
 x11-misc/compton
 x11-misc/dmenu
+x11-misc/fbpanel
 x11-misc/i3blocks-gaps
 x11-misc/i3lock
 x11-misc/i3status
@@ -847,6 +853,7 @@ x11-misc/tint2
 x11-misc/unclutter
 x11-misc/urxvtconfig
 x11-misc/virtualgl
+x11-misc/wbar
 x11-misc/wmctrl
 x11-misc/wmname
 x11-misc/x11vnc
@@ -973,6 +980,7 @@ x11-plugins/wmwork
 x11-plugins/wmxkb
 x11-plugins/wmxres
 x11-terms/aterm
+x11-terms/lilyterm
 x11-terms/multi-aterm
 x11-terms/rxvt-unicode
 x11-terms/sakura

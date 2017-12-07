@@ -3,6 +3,7 @@ kernelmajversion=4.14
 
 emerge gentoo-sources genkernel
 cd /usr/src/linux/
+eselect kernel set 1
 wget https://liquorix.net/sources/4.14/config.amd64
 genkernel --kernel-config=config.amd64 all
 
@@ -21,7 +22,7 @@ wget https://linux-libre.fsfla.org/pub/linux-libre/releases/$kernelversion-gnu/d
 chmod +x deblob-$kernelmajversion
 PYTHON="python2.7" ./deblob-$kernelmajversion
 wget https://liquorix.net/sources/4.14/config.amd64
-genkernel --kernel-config=config.amd64 all
+genkernel --kernel-config=config.amd64 --kerneldir=/usr/src/linux-$kernelversion-gentoo-gnu all
 
 rm /usr/portage/packages/s/kernel-libre.tar.xz
 cd /boot/
