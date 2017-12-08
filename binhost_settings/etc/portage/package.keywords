@@ -17,13 +17,18 @@ sys-fs/zfs-kmod **
 sys-kernel/spl **
 sys-fs/zfs **
 #blender
-=media-libs/openexr-2.2.0-r2 ~amd64
-=media-libs/ilmbase-2.2.0-r1 ~amd64
+=media-libs/openexr-2.2.0-r2
+=media-libs/ilmbase-2.2.0-r1
 #mednafen
 =dev-libs/lzo-2.10
 #vapoursynth
 =dev-lang/nasm-2.13.01
 #firefox 57
+=media-libs/mesa-17.2.6
+=dev-libs/libclc-0.2.0_pre20170118
+=sys-libs/libcxx-4.0.1
+=sys-libs/libcxxabi-4.0.1
+=dev-libs/wayland-protocols-1.11
 =dev-libs/icu-60.1
 =sys-devel/clang-4.0.1
 =sys-devel/llvm-4.0.1
