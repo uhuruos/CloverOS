@@ -25,6 +25,7 @@ mount --rbind /sys sys
 cat << EOF | chroot .
 
 emerge-webrsync
+eselect profile set "default/linux/amd64/17.0"
 
 echo '
 MAKEOPTS="-j8"
@@ -38,7 +39,6 @@ RANLIB="gcc-ranlib"
 PORTAGE_BINHOST="https://cloveros.ga"
 ACCEPT_KEYWORDS="**"
 ACCEPT_LICENSE="*"' >> /etc/portage/make.conf
-eselect profile set "default/linux/amd64/17.0"
 
 #emerge gentoo-sources genkernel
 #wget http://liquorix.net/sources/4.12/config.amd64

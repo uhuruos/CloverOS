@@ -21,6 +21,7 @@ mount --rbind /sys sys
 cat << EOF | chroot .
 
 emerge-webrsync
+eselect profile set "default/linux/amd64/17.0"
 
 rm /var/lib/portage/world
 rm -R /etc/portage/package.use
