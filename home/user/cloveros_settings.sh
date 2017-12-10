@@ -4,10 +4,9 @@ mirrors=(
 	"useast.cloveros.ga"
 	"fr.cloveros.ga"
 	"au.cloveros.ga"
-	"uk.cloveros.ga"
 	"ca.cloveros.ga"
 	"uswest.cloveros.ga"
-	"nl.cloveros.ga"
+	"uk.cloveros.ga"
 )
 
 gitprefix="https://gitgud.io/cloveros/cloveros/raw/master"

@@ -683,6 +683,7 @@ net-misc/dhcp
 net-misc/dhcpcd
 net-misc/electrum
 net-misc/freerdp
+net-misc/megatools
 net-misc/mosh
 net-misc/ntp
 net-misc/proxychains
@@ -839,6 +840,7 @@ x11-misc/i3lock
 x11-misc/i3status
 x11-misc/lightdm
 x11-misc/lsw
+x11-misc/menumaker
 x11-misc/nitrogen
 x11-misc/obmenu
 x11-misc/polybar
