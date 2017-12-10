@@ -326,18 +326,16 @@ https://useast.cloveros.ga
 
 https://fr.cloveros.ga
 
-https://ca.cloveros.ga
-
-https://uswest.cloveros.ga
-
 https://au.cloveros.ga
 
 https://uk.cloveros.ga
 
-https://nl.cloveros.ga
+https://uswest.cloveros.ga
+
+https://ca.cloveros.ga
 
 ## Binary details
-The mirrors have an index page that details this: https://useast.cloveros.ga https://uswest.cloveros.ga https://fr.cloveros.ga https://uk.cloveros.ga https://nl.cloveros.ga https://au.cloveros.ga
+The mirrors have an index page that details this: https://useast.cloveros.ga
 
 ## I want to host a mirror
 Run `rsync -av --delete rsync://fr.cloveros.ga/cloveros /your/webserver/location/` and tell me the domain (or IP) so I can give you a cloveros.ga subdomain
