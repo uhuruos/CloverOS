@@ -51,7 +51,7 @@ yes | layman -a 0x4d4c audio-overlay das-labor deadbeef-overlay eclipse elementa
 
 emerge -uvDN @world
 
-emerge -C hwinfo ntfs3g && emerge -1O --jobs=1 ntfs3g hwinfo
+emerge -C hwinfo ntfs3g && emerge --jobs=1 ntfs3g hwinfo
 
 quickpkg --include-unmodified-config=y "*/*"
 

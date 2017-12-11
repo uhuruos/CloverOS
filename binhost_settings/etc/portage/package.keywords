@@ -540,3 +540,41 @@ dev-python/phonenumbers
 dev-python/django-otp
 dev-python/django-formtools
 dev-python/django-otp-yubikey
+# required by vgba (argument)
+=games-emulation/vgba-4.8 **
+# required by lxdream (argument)
+=games-emulation/lxdream-0.9.1-r2 ~amd64
+# required by raine (argument)
+=games-emulation/raine-0.51.9 **
+# required by zinc (argument)
+=games-emulation/zinc-1.1 ~amd64
+# required by nestopia (argument)
+=games-emulation/nestopia-1.47_p20170105 ~amd64
+# required by gngb (argument)
+=games-emulation/gngb-20060309 **
+# required by xe (argument)
+=games-emulation/xe-2.16.2 ~amd64
+# required by hatari (argument)
+=games-emulation/hatari-1.8.0 ~amd64
+# required by kigb (argument)
+=games-emulation/kigb-2.02 **
+# required by mekanix (argument)
+=games-emulation/mekanix-070-r1 **
+# required by gens (argument)
+=games-emulation/gens-2.15.5 **
+# required by stella (argument)
+=games-emulation/stella-4.7.2 ~amd64
+# required by gambatte (argument)
+=games-emulation/gambatte-0.5.0_p20131102 ~amd64
+# required by hugo (argument)
+=games-emulation/hugo-2.12 **
+# required by nestra (argument)
+=games-emulation/nestra-0.66-r2 ~amd64
+# required by daphne (argument)
+=games-emulation/daphne-1.0 ~amd64
+# required by emutos (argument)
+=games-emulation/emutos-0.9.4 ~amd64
+# required by gngeo (argument)
+=games-emulation/gngeo-0.8 ~amd64
+# required by fceux (argument)
+=games-emulation/fceux-2.2.2-r1 ~amd64

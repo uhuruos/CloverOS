@@ -2,7 +2,7 @@ emerge --sync
 layman -S
 emerge -uvDN --with-bdeps=y --buildpkg @world
 emerge -1 --buildpkg $(eix -Jc | grep 9999 | cut -d" " -f2 | tr "\n" " ")
-emerge -C hwinfo ntfs3g && emerge -1O --jobs=1 --buildpkg ntfs3g hwinfo
+emerge -C hwinfo ntfs3g && emerge --jobs=1 --buildpkg ntfs3g hwinfo
 emerge --buildpkg @preserved-rebuild
 emerge --depclean
 
@@ -20,9 +20,8 @@ rm -Rf /usr/portage/packages/s/signatures/*
 cd /usr/portage/packages/s/signatures/
 find /usr/portage/packages/ -type d | sed 's#/usr/portage/packages/##' | parallel mkdir
 find /usr/portage/packages/ -type f | sed 's#/usr/portage/packages/##' | pv -qB 1G | parallel gpg --armor --detach-sign --output {}.asc --sign /usr/portage/packages/{}
-
-chmod -R 755 /usr/portage/packages/
 rmdir /usr/portage/packages/s/signatures/s/signatures/
 
+chmod -R 755 /usr/portage/packages/
 rsync -a --delete-before /usr/portage/packages/ root@fr.cloveros.ga:/var/www/html/ &
 wait
