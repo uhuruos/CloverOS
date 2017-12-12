@@ -1,6 +1,6 @@
 #preference
+games-emulation/mgba qt5
 media-sound/supercollider qt5
-games-emulation/dolphin llvm qt5 ao portaudio -lto -pch sdl
 media-sound/clementine dbus udisks
 media-libs/opencv -opengl
 games-emulation/rpcs3 joystick -vulkan
