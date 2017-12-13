@@ -210,6 +210,7 @@ media-sound/deadbeef aac adplug alac alsa cdda converter cover cover-imlib2 cove
 app-emulation/qemu sdl usb virgl
 
 #required
+media-fonts/font-misc-misc nls
 dev-lua/lpeg luajit
 sys-libs/tdb python
 media-libs/libmygpo-qt qt5

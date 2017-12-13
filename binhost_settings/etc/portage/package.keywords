@@ -148,7 +148,6 @@ media-sound/beets
 app-misc/neofetch
 www-client/torbrowser-launcher
 games-action/extreme-tuxracer
-games-emulation/dolphin **
 games-emulation/vbam
 games-util/lutris
 games-fps/quake3
@@ -229,6 +228,7 @@ games-emulation/daphne
 games-emulation/emutos
 games-emulation/gngeo
 games-emulation/fceux
+net-misc/nxplayer
 
 #dependencies
 #staruml-bin

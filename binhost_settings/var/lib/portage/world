@@ -702,13 +702,16 @@ net-misc/freerdp
 net-misc/megatools
 net-misc/mosh
 net-misc/ntp
+net-misc/nxplayer
 net-misc/proxychains
 net-misc/putty
 net-misc/pyhoca-cli
+net-misc/python-x2go
 net-misc/sshpass
 net-misc/telnet-bsd
 net-misc/throttle
 net-misc/whois
+net-misc/x2goclient
 net-misc/youtube-dl
 net-misc/zssh
 net-news/liferea
