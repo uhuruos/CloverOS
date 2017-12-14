@@ -43,8 +43,11 @@ defaults.ctl.card 1
 ## It doesn't boot
 Take out your boot usb/cd.
 
+## Steam doesn't install
+Run `STEAM_PLATFORM=0 steam` for the first run.
+
 ## Steam doesn't work anymore
-Run `rm -Rf ~/.steam*` before every time you run `steam`.
+Run `rm -R ~/.steam*` before every time you run `steam`.
 
 ## Nvidia card crashes on boot with a green screen
 /etc/modprobe.d/blacklist.conf:
