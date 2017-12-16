@@ -123,8 +123,7 @@ dev-cpp/gtkmm wayland X
 media-libs/clutter -wayland X
 dev-libs/weston xwayland
 dev-libs/efl X -wayland opengl
-x11-wm/enlightenment X -wayland
-media-libs/elementary X -wayland
+x11-wm/enlightenment X
 x11-libs/gtk+ X wayland
 x11-libs/libva X wayland
 x11-libs/libXfont X freetype

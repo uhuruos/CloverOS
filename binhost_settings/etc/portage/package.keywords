@@ -11,6 +11,9 @@ net-p2p/rtorrent-ps ** # rtorrent may be abandoned
 net-libs/libtorrent ** # rtorrent may be abandoned
 media-gfx/blender # python 3.5
 media-sound/clementine ** # qt5
+x11-terms/terminology # stable is old
+x11-wm/enlightenment # stable is old
+dev-libs/efl # stable is old
 #zfs, until 0.7.4
 sys-fs/zfs-kmod **
 sys-kernel/spl **
