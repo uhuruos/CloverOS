@@ -783,7 +783,6 @@ sys-boot/syslinux
 sys-boot/unetbootin
 sys-devel/crossdev
 sys-devel/distcc
-sys-devel/gcc
 sys-devel/gdb
 sys-fs/bashmount
 sys-fs/cachefilesd

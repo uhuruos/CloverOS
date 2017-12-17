@@ -29,7 +29,7 @@ app-emulation/fuse sdl joystick
 x11-misc/polybar i3wm
 net-vpn/i2p -ecdsa
 app-text/calibre -udisks
-x11-libs/libfm udisks
+x11-libs/libfm gtk udisks
 pantheon-base/plank dbus
 xfce-base/thunar dbus
 app-i18n/fcitx dbus
@@ -97,7 +97,7 @@ kde-plasma/plasma-meta grub gtk
 kde-plasma/plasma-desktop gtk3 gtk2 legacy-systray
 media-video/handbrake gtk -fdk libav-aac
 virtual/ffmpeg X sdl x264
-media-video/ffmpeg X gnutls rubberband x265 libass vorbis ogg network vpx rtmp x264 aac wavpack opus mp3 sdl gme v4l webp theora xvid xcb
+media-video/ffmpeg X gnutls rubberband x265 libass vorbis ogg network vpx rtmp x264 aac wavpack opus mp3 sdl gme v4l webp theora xvid xcb -opengl
 media-gfx/fontforge X gtk
 media-gfx/graphviz X gtk
 app-emulation/virt-manager gtk
@@ -395,3 +395,5 @@ x11-libs/libdrm abi_x86_32
 app-emulation/wine-gecko abi_x86_32
 sys-apps/dbus abi_x86_32
 media-libs/libtxc_dxtn abi_x86_32
+dev-libs/libgcrypt abi_x86_32
+
