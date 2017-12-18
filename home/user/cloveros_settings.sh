@@ -11,16 +11,15 @@ mirrors=(
 
 gitprefix="https://gitgud.io/cloveros/cloveros/raw/master"
 
-echo "1) Enable package signing validation
+echo "1) Update cloveros_settings.sh
 2) Change mirrors
 3) Change default alsa device
 4) Upgrade kernel
 5) Change binary/source
-6) Update dotfiles
+6) Update dot files
 7) Sync time
 8) Set timezone
 9) Clean emerge cache
-0) Update cloveros_settings.sh
 t) Enable tap to click on touchpad
 l) Upgrade/Install Libre kernel
 c) Update Portage config from binhost
@@ -34,9 +33,16 @@ echo
 
 case "$choice" in
 	1)
-		sudo gpg --keyserver keys.gnupg.net --recv-key "78F5 AC55 A120 07F2 2DF9 A28A 78B9 3F76 B8E4 2805"
-		echo 'FETCHCOMMAND_HTTPS="sh -c \"wget -t 3 -T 60 --passive-ftp -O \"\${DISTDIR}/\${FILE}\" \"\${URI}\" && sed \"s#cloveros.ga/#cloveros.ga/s/signatures/#\" <<< \"\${URI}.asc\" | wget -i - -O \"\${DISTDIR}/\${FILE}.asc\" && gpg --verify \"\${DISTDIR}/\${FILE}.asc\" \"\${DISTDIR}/\${FILE}\"\""' | sudo tee -a /etc/portage/make.conf &> /dev/null
-		echo -e "Package signing validation is now enabled. (/etc/portage/make.conf)"
+		cd ~
+		wget "$gitprefix"/home/user/cloveros_settings.sh -O cloveros_settings.new.sh
+		if [[ -f cloveros_settings.new.sh ]]; then
+			rm cloveros_settings.sh
+			mv cloveros_settings.new.sh cloveros_settings.sh
+			chmod +x cloveros_settings.sh
+			echo -e "\ncloveros_settings.sh is now updated. (~/cloveros_settings.sh)"
+		else
+			echo -e "\nCould not retrieve file. Please connect to the Internet or try again."
+		fi
 		;;
 
 	2)
@@ -133,19 +139,6 @@ case "$choice" in
 	9)
 		sudo rm -Rf /usr/portage/packages/* /usr/portage/distfiles/* /var/tmp/portage/*
 		echo -e "\nPackage cache cleared. (/usr/portage/packages/, /usr/portage/distfiles/, /var/tmp/portage/)"
-		;;
-
-	0)
-		cd ~
-		wget "$gitprefix"/home/user/cloveros_settings.sh -O cloveros_settings.new.sh
-		if [[ -f cloveros_settings.new.sh ]]; then
-			rm cloveros_settings.sh
-			mv cloveros_settings.new.sh cloveros_settings.sh
-			chmod +x cloveros_settings.sh
-			echo -e "\ncloveros_settings.sh is now updated. (~/cloveros_settings.sh)"
-		else
-			echo -e "\nCould not retrieve file."
-		fi
 		;;
 
 	l)
