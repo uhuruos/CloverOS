@@ -1,5 +1,5 @@
 if [ -z "$DISPLAY" ]; then
-    echo "WM Options: (y) Default (i) i3 (a) Awesome (o) Openbox (e) Enlightenment (k) KDE (m) MATE (x) XFCE (l) LXDE (f) Fluxbox (d) dwm (c) icewm (w) windowmaker"
+    echo "WM Options: (y) Default (i) i3 (a) Awesome (o) Openbox (e) Enlightenment (k) KDE (m) MATE (x) XFCE (l) LXDE (q) LXQT (f) Fluxbox (d) dwm (c) icewm (w) windowmaker"
     read -erp "Start X? [y/n] " -n 1 choice
     declare -A wms
     declare -A wmspkg
@@ -14,6 +14,7 @@ if [ -z "$DISPLAY" ]; then
     wms[m]=mate-session
     wms[x]=startxfce4
     wms[l]=startlxde
+    wms[q]=startlxqt
     wms[f]=fluxbox
     wms[d]=dwm
     wms[c]=icewm
@@ -28,6 +29,7 @@ if [ -z "$DISPLAY" ]; then
     wmspkg[m]="mate engrampa pluma atril gnome-calculator caja-extensions mate-netbook mate-power-manager mate-screensaver mate-system-monitor mate-utils eom mate-netspeed"
     wmspkg[x]=xfce4-meta
     wmspkg[l]=lxde-meta
+    wmspkg[q]=lxqt-meta
     wmspkg[f]=fluxbox
     wmspkg[d]=dwm
     wmspkg[c]=icewm
@@ -43,6 +45,7 @@ if [ -z "$DISPLAY" ]; then
     wmspost[m]=""
     wmspost[x]=""
     wmspost[l]=""
+    wmspost[q]=""
     wmspost[f]="feh --bg-max wallpaper.png & xbindkeys & $taptoclick &"
     wmspost[d]="feh --bg-max wallpaper.png & xbindkeys & $taptoclick &"
     wmspost[c]="feh --bg-max wallpaper.png & xbindkeys & $taptoclick &"
