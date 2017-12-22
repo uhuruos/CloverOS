@@ -263,6 +263,7 @@ kde-plasma/plasma-meta
 lxde-base/lxappearance
 lxde-base/lxde-meta
 lxde-base/lxtask
+lxqt-base/lxqt-meta
 mail-client/alpine
 mail-client/mutt
 mail-client/thunderbird
