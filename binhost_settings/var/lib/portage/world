@@ -796,13 +796,13 @@ sys-fs/exfat-utils
 sys-fs/extundelete
 sys-fs/multipath-tools
 sys-fs/ncdu
+sys-fs/ntfs3g
 sys-fs/safecopy
 sys-fs/squashfs-tools
 sys-fs/zfs
 sys-kernel/dkms
 sys-kernel/dracut
 sys-kernel/genkernel
-sys-kernel/gentoo-sources
 sys-kernel/linux-firmware
 sys-power/acpi_call
 sys-power/acpitool
