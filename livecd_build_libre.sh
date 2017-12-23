@@ -48,9 +48,9 @@ FETCHCOMMAND_HTTPS="sh -c \"wget -t 3 -T 60 --passive-ftp -O \"\\\${DISTDIR}/\\\
 
 wget https://cloveros.ga/s/kernel-libre.tar.xz
 tar xf kernel-libre.tar.xz
-mv initramfs-genkernel-*-gentoo-gnu kernel-genkernel-*-gentoo-gnu System.map-genkernel-*-gentoo-gnu /boot/
+mv initramfs-genkernel-*-gentoo-gnu* kernel-genkernel-*-gentoo-gnu* System.map-genkernel-*-gentoo-gnu* /boot/
 mkdir /lib/modules/
-mv *-gentoo-gnu/ /lib/modules/
+mv *-gentoo-gnu*/ /lib/modules/
 rm kernel-libre.tar.xz
 
 emerge grub dhcpcd
