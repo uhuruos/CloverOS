@@ -77,6 +77,9 @@ sudo eselect opencl set nvidia
 sudo sh -c 'echo \"blacklist nouveau\" >> /etc/modprobe.d/blacklist.conf'
 ```
 
+## Installing package that has kernel module
+`depmod -a`
+
 ## Firefox and Pulseaudio
 Firefox 57 still works with ALSA. If this changes, it will be built with apulse.
 
