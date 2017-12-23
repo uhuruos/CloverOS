@@ -36,8 +36,7 @@ PORTAGE_NICENESS=15
 EMERGE_DEFAULT_OPTS="--keep-going=y --autounmask-write=y --jobs=2 -G"
 PORTAGE_BINHOST="https://cloveros.ga"
 ACCEPT_LICENSE="-* @FREE"
-ACCEPT_KEYWORDS="**"
-FETCHCOMMAND_HTTPS="sh -c \"wget -t 3 -T 60 --passive-ftp -O \"\\\${DISTDIR}/\\\${FILE}\" \"\\\${URI}\" && sed \"s#cloveros.ga/#cloveros.ga/s/signatures/#\" <<< \"\\\${URI}.asc\" | wget -i - -O \"\\\${DISTDIR}/\\\${FILE}.asc\" && gpg --verify \"\\\${DISTDIR}/\\\${FILE}.asc\" \"\\\${DISTDIR}/\\\${FILE}\"\""' >> /etc/portage/make.conf
+ACCEPT_KEYWORDS="**"' >> /etc/portage/make.conf
 
 emerge gnupg
 gpg --keyserver keys.gnupg.net --recv-key "78F5 AC55 A120 07F2 2DF9 A28A 78B9 3F76 B8E4 2805"
@@ -49,9 +48,9 @@ echo 'FETCHCOMMAND_HTTPS="sh -c \"wget -t 3 -T 60 --passive-ftp -O \"\\\${DISTDI
 
 wget https://cloveros.ga/s/kernel-libre.tar.xz
 tar xf kernel-libre.tar.xz
-mv initramfs-genkernel-*-gentoo-gnu* kernel-genkernel-*-gentoo-gnu* System.map-genkernel-*-gentoo-gnu* /boot/
+mv initramfs-genkernel-*-gentoo*-gnu kernel-genkernel-*-gentoo*-gnu System.map-genkernel-*-gentoo*-gnu /boot/
 mkdir /lib/modules/
-mv *-gentoo-gnu*/ /lib/modules/
+mv *-gentoo*-gnu/ /lib/modules/
 rm kernel-libre.tar.xz
 
 emerge grub dhcpcd
