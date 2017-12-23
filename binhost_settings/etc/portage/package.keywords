@@ -6,18 +6,19 @@ www-client/firefox # major change
 media-gfx/gimp # major change
 net-p2p/retroshare # needs latest version
 net-misc/youtube-dl # needs latest version
-media-sound/rosegarden # stable is old
 net-p2p/rtorrent-ps ** # rtorrent may be abandoned
 net-libs/libtorrent ** # rtorrent may be abandoned
 media-gfx/blender # python 3.5
 media-sound/clementine ** # qt5
-x11-terms/terminology # stable is old
 x11-wm/enlightenment # stable is old
 dev-libs/efl # stable is old
+x11-terms/terminology # stable is old
 #zfs, until 0.7.4
 sys-fs/zfs-kmod **
 sys-kernel/spl **
 sys-fs/zfs **
+#firefox
+=dev-libs/icu-60.2
 #blender
 =media-libs/openexr-2.2.0-r2
 =media-libs/ilmbase-2.2.0-r1
@@ -25,20 +26,10 @@ sys-fs/zfs **
 =dev-libs/lzo-2.10
 #vapoursynth
 =dev-lang/nasm-2.13.01
-#firefox 57
-=media-libs/mesa-17.2.6
-=dev-libs/libclc-0.2.0_pre20170118
-=sys-libs/libcxx-4.0.1
-=sys-libs/libcxxabi-4.0.1
-=dev-libs/wayland-protocols-1.11
-=dev-libs/icu-60.1
-=sys-devel/clang-4.0.1
-=sys-devel/llvm-4.0.1
-=sys-devel/clang-runtime-4.0.1
-=sys-libs/compiler-rt-sanitizers-4.0.1
-=sys-libs/compiler-rt-4.0.1
 #sway
 =dev-libs/json-c-0.12.1
+#qutebrowser
+=dev-python/pygments-2.2.0
 
 #keyworded, remove when stable exists
 sys-fs/zfs-kmod
