@@ -37,6 +37,10 @@ PORTAGE_BINHOST="https://cloveros.ga"
 ACCEPT_KEYWORDS="**"
 ACCEPT_LICENSE="*"' >> /etc/portage/make.conf
 
+emerge gnupg
+gpg --keyserver keys.gnupg.net --recv-key "78F5 AC55 A120 07F2 2DF9 A28A 78B9 3F76 B8E4 2805"
+echo 'FETCHCOMMAND_HTTPS="sh -c \"wget -t 3 -T 60 --passive-ftp -O \"\\\${DISTDIR}/\\\${FILE}\" \"\\\${URI}\" && sed \"s#cloveros.ga/#cloveros.ga/s/signatures/#\" <<< \"\\\${URI}.asc\" | wget -i - -O \"\\\${DISTDIR}/\\\${FILE}.asc\" && gpg --verify \"\\\${DISTDIR}/\\\${FILE}.asc\" \"\\\${DISTDIR}/\\\${FILE}\"\""' >> /etc/portage/make.conf
+
 #emerge gentoo-sources genkernel
 #wget http://liquorix.net/sources/4.14/config.amd64
 #genkernel --kernel-config=config.amd64 all
@@ -75,8 +79,6 @@ eselect locale set en_US.utf8
 gpasswd -a $user audio
 gpasswd -a $user video
 gpasswd -a $user games
-gpg --keyserver keys.gnupg.net --recv-key "78F5 AC55 A120 07F2 2DF9 A28A 78B9 3F76 B8E4 2805"
-echo 'FETCHCOMMAND_HTTPS="sh -c \"wget -t 3 -T 60 --passive-ftp -O \"\\\${DISTDIR}/\\\${FILE}\" \"\\\${URI}\" && sed \"s#cloveros.ga/#cloveros.ga/s/signatures/#\" <<< \"\\\${URI}.asc\" | wget -i - -O \"\\\${DISTDIR}/\\\${FILE}.asc\" && gpg --verify \"\\\${DISTDIR}/\\\${FILE}.asc\" \"\\\${DISTDIR}/\\\${FILE}\"\""' >> /etc/portage/make.conf
 cd /home/$user/
 rm .bash_profile
 wget https://gitgud.io/cloveros/cloveros/raw/master/home/user/.bash_profile
