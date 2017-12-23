@@ -755,7 +755,6 @@ sci-visualization/gnuplot
 sys-apps/ack
 sys-apps/dmidecode
 sys-apps/flatpak
-sys-apps/hwinfo
 sys-apps/hwloc
 sys-apps/i2c-tools
 sys-apps/idle3-tools
