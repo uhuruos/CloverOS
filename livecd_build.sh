@@ -37,8 +37,8 @@ CFLAGS="-O3 -march=native -pipe -funroll-loops -floop-block -floop-interchange -
 CXXFLAGS="\${CFLAGS}"
 CPU_FLAGS_X86="mmx mmxext sse sse2 ssse3 sse3"
 PORTAGE_BINHOST="https://cloveros.ga"
-ACCEPT_KEYWORDS="**"
 ACCEPT_LICENSE="*"
+ACCEPT_KEYWORDS="**"
 FETCHCOMMAND_HTTPS="sh -c \"wget -t 3 -T 60 --passive-ftp -O \"\\\${DISTDIR}/\\\${FILE}\" \"\\\${URI}\" && sed \"s#cloveros.ga/#cloveros.ga/s/signatures/#\" <<< \"\\\${URI}.asc\" | wget -i - -O \"\\\${DISTDIR}/\\\${FILE}.asc\" && gpg --verify \"\\\${DISTDIR}/\\\${FILE}.asc\" \"\\\${DISTDIR}/\\\${FILE}\"\""' >> /etc/portage/make.conf
 
 #emerge gentoo-sources genkernel
