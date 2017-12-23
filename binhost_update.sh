@@ -2,7 +2,7 @@ emerge --sync
 layman -S
 emerge -uvDN --with-bdeps=y --buildpkg @world
 emerge -1 --buildpkg $(eix -Jc | grep 9999 | cut -d" " -f2 | tr "\n" " ")
-emerge -C hwinfo ntfs3g && emerge --jobs=1 --buildpkg ntfs3g hwinfo
+emerge -C hwinfo ntfs3g && emerge --buildpkg ntfs3g && emerge --buildpkg hwinfo
 emerge --buildpkg @preserved-rebuild
 emerge --depclean
 
