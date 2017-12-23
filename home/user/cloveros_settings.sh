@@ -150,8 +150,8 @@ case "$choice" in
 		wget https://cloveros.ga/s/signatures/s/kernel-libre.tar.xz.asc
 		sudo gpg --verify kernel-libre.tar.xz.asc kernel-libre.tar.xz
 		tar xf kernel-libre.tar.xz
-		sudo mv initramfs-genkernel-*-gentoo-gnu kernel-genkernel-*-gentoo-gnu System.map-genkernel-*-gentoo-gnu /boot/
-		sudo cp -R *-gentoo-gnu/ /lib/modules/
+		sudo mv initramfs-genkernel-*-gentoo-gnu* kernel-genkernel-*-gentoo-gnu* System.map-genkernel-*-gentoo-gnu* /boot/
+		sudo mv *-gentoo-gnu*/ /lib/modules/
 		cd ..
 		rm -R $tempdir
 		sudo grub-mkconfig -o /boot/grub/grub.cfg
