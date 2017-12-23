@@ -31,11 +31,12 @@ PORTAGE_BINHOST="https://cloveros.ga" emerge -G gnupg
 gpg --keyserver keys.gnupg.net --recv-key "78F5 AC55 A120 07F2 2DF9 A28A 78B9 3F76 B8E4 2805"
 
 echo '
-MAKEOPTS="-j8"
-EMERGE_DEFAULT_OPTS="--keep-going=y --autounmask-write=y --jobs=2 -G"
 CFLAGS="-O3 -march=native -pipe -funroll-loops -floop-block -floop-interchange -floop-strip-mine -ftree-loop-distribution"
 CXXFLAGS="\${CFLAGS}"
 CPU_FLAGS_X86="mmx mmxext sse sse2 ssse3 sse3"
+MAKEOPTS="-j8"
+PORTAGE_NICENESS=15
+EMERGE_DEFAULT_OPTS="--keep-going=y --autounmask-write=y --jobs=2 -G"
 PORTAGE_BINHOST="https://cloveros.ga"
 ACCEPT_LICENSE="-* @FREE"
 ACCEPT_KEYWORDS="**"
