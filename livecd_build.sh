@@ -134,7 +134,7 @@ wget https://gitgud.io/cloveros/cloveros/raw/master/livecd_install.sh -O /home/$
 chmod +x /home/$user/livecd_install.sh
 
 emerge --depclean
-rm -Rf /usr/portage/packages/* /tmp/*
+rm -Rf /usr/portage/packages/*
 
 exit
 
