@@ -27,9 +27,6 @@ cat << EOF | chroot .
 emerge-webrsync
 eselect profile set "default/linux/amd64/17.0"
 
-PORTAGE_BINHOST="https://cloveros.ga" emerge -G gnupg
-gpg --keyserver keys.gnupg.net --recv-key "78F5 AC55 A120 07F2 2DF9 A28A 78B9 3F76 B8E4 2805"
-
 echo '
 CFLAGS="-O3 -march=native -pipe -funroll-loops -floop-block -floop-interchange -floop-strip-mine -ftree-loop-distribution"
 CXXFLAGS="\${CFLAGS}"
@@ -41,6 +38,10 @@ PORTAGE_BINHOST="https://cloveros.ga"
 ACCEPT_LICENSE="-* @FREE"
 ACCEPT_KEYWORDS="**"
 FETCHCOMMAND_HTTPS="sh -c \"wget -t 3 -T 60 --passive-ftp -O \"\\\${DISTDIR}/\\\${FILE}\" \"\\\${URI}\" && sed \"s#cloveros.ga/#cloveros.ga/s/signatures/#\" <<< \"\\\${URI}.asc\" | wget -i - -O \"\\\${DISTDIR}/\\\${FILE}.asc\" && gpg --verify \"\\\${DISTDIR}/\\\${FILE}.asc\" \"\\\${DISTDIR}/\\\${FILE}\"\""' >> /etc/portage/make.conf
+
+emerge gnupg
+gpg --keyserver keys.gnupg.net --recv-key "78F5 AC55 A120 07F2 2DF9 A28A 78B9 3F76 B8E4 2805"
+echo 'FETCHCOMMAND_HTTPS="sh -c \"wget -t 3 -T 60 --passive-ftp -O \"\\\${DISTDIR}/\\\${FILE}\" \"\\\${URI}\" && sed \"s#cloveros.ga/#cloveros.ga/s/signatures/#\" <<< \"\\\${URI}.asc\" | wget -i - -O \"\\\${DISTDIR}/\\\${FILE}.asc\" && gpg --verify \"\\\${DISTDIR}/\\\${FILE}.asc\" \"\\\${DISTDIR}/\\\${FILE}\"\""' >> /etc/portage/make.conf
 
 #emerge gentoo-sources genkernel
 #wget http://liquorix.net/sources/4.14/config.amd64
