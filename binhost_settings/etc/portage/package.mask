@@ -37,3 +37,4 @@ app-arch/brotli::4nykey
 media-fonts/alegreya-sans::4nykey
 net-misc/megatools::jm-overlay
 net-misc/megatools::4nykey
+net-p2p/rtorrent::pinkpieea
