@@ -67,30 +67,32 @@ mount --rbind /sys sys
 cat << EOF | chroot .
 
 emerge-webrsync
+eselect profile set "default/linux/amd64/17.0"
 
 echo '
-MAKEOPTS="-j8"
-EMERGE_DEFAULT_OPTS="--keep-going=y --autounmask-write=y --jobs=2 -G"
 CFLAGS="-O3 -march=native -pipe -funroll-loops -floop-block -floop-interchange -floop-strip-mine -ftree-loop-distribution"
 CXXFLAGS="\${CFLAGS}"
 CPU_FLAGS_X86="mmx mmxext sse sse2 ssse3 sse3"
-AR="gcc-ar"
-NM="gcc-nm"
-RANLIB="gcc-ranlib"
+MAKEOPTS="-j8"
+PORTAGE_NICENESS=15
+EMERGE_DEFAULT_OPTS="--keep-going=y --autounmask-write=y --jobs=2 -G"
 PORTAGE_BINHOST="https://cloveros.ga"
-ACCEPT_KEYWORDS="**"
-ACCEPT_LICENSE="*"' >> /etc/portage/make.conf
-eselect profile set "default/linux/amd64/17.0"
+ACCEPT_LICENSE="*"
+ACCEPT_KEYWORDS="**"' >> /etc/portage/make.conf
+
+emerge gnupg
+gpg --keyserver keys.gnupg.net --recv-key "78F5 AC55 A120 07F2 2DF9 A28A 78B9 3F76 B8E4 2805"
+echo 'FETCHCOMMAND_HTTPS="sh -c \"wget -t 3 -T 60 --passive-ftp -O \"\\\${DISTDIR}/\\\${FILE}\" \"\\\${URI}\" && sed \"s#cloveros.ga/#cloveros.ga/s/signatures/#\" <<< \"\\\${URI}.asc\" | wget -i - -O \"\\\${DISTDIR}/\\\${FILE}.asc\" && gpg --verify \"\\\${DISTDIR}/\\\${FILE}.asc\" \"\\\${DISTDIR}/\\\${FILE}\"\""' >> /etc/portage/make.conf
 
 #emerge gentoo-sources genkernel
-#wget http://liquorix.net/sources/4.12/config.amd64
+#wget http://liquorix.net/sources/4.14/config.amd64
 #genkernel --kernel-config=config.amd64 all
 
 wget https://cloveros.ga/s/kernel.tar.xz
 tar xf kernel.tar.xz
-mv initramfs-genkernel-*-gentoo kernel-genkernel-*-gentoo System.map-genkernel-*-gentoo /boot/
+mv initramfs-genkernel-*-gentoo* kernel-genkernel-*-gentoo* System.map-genkernel-*-gentoo* /boot/
 mkdir /lib/modules/
-mv *-gentoo/ /lib/modules/
+mv *-gentoo*/ /lib/modules/
 rm kernel.tar.xz
 
 emerge grub dhcpcd
@@ -106,7 +108,7 @@ echo "$user:$userpassword" | chpasswd
 gpasswd -a $user wheel
 
 emerge -1 openssh openssl
-emerge -uvD world xorg-server twm feh sudo xfe wpa_supplicant porthole firefox emacs gimp mpv smplayer rxvt-unicode filezilla engrampa p7zip zip gnupg rtorrent-ps weechat linux-firmware alsa-utils zsh zsh-completions gentoo-zsh-completions vlgothic hack liberation-fonts nano scrot xbindkeys xinput nitrogen arandr slock gparted squashfs-tools os-prober games-envd
+emerge -uvD world xorg-server twm feh sudo xfe wpa_supplicant porthole firefox emacs gimp mpv smplayer rxvt-unicode filezilla engrampa p7zip zip rtorrent-ps weechat linux-firmware alsa-utils zsh zsh-completions gentoo-zsh-completions vlgothic hack liberation-fonts nano scrot xbindkeys xinput nitrogen arandr slock gparted squashfs-tools os-prober games-envd
 
 sed -i "s/# %wheel ALL=(ALL) NOPASSWD: ALL/%wheel ALL=(ALL) NOPASSWD: ALL/" /etc/sudoers
 sed -Ei "s@c([2-6]):2345:respawn:/sbin/agetty 38400 tty@#\0@" /etc/inittab
@@ -124,8 +126,6 @@ eselect locale set en_US.utf8
 gpasswd -a $user audio
 gpasswd -a $user video
 gpasswd -a $user games
-gpg --keyserver keys.gnupg.net --recv-key "78F5 AC55 A120 07F2 2DF9 A28A 78B9 3F76 B8E4 2805"
-echo 'FETCHCOMMAND_HTTPS="sh -c \"wget -t 3 -T 60 --passive-ftp -O \"\\\${DISTDIR}/\\\${FILE}\" \"\\\${URI}\" && sed \"s#cloveros.ga/#cloveros.ga/s/signatures/#\" <<< \"\\\${URI}.asc\" | wget -i - -O \"\\\${DISTDIR}/\\\${FILE}.asc\" && gpg --verify \"\\\${DISTDIR}/\\\${FILE}.asc\" \"\\\${DISTDIR}/\\\${FILE}\"\""' >> /etc/portage/make.conf
 cd /home/$user/
 rm .bash_profile
 wget https://gitgud.io/cloveros/cloveros/raw/master/home/user/.bash_profile
@@ -166,7 +166,7 @@ wget https://gitgud.io/cloveros/cloveros/raw/master/home/user/.mpv/config -P .mp
 chown -R $user /home/$user/
 
 emerge --depclean
-rm -Rf /usr/portage/packages/* /tmp/*
+rm -Rf /usr/portage/packages/*
 
 exit
 
