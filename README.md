@@ -319,7 +319,7 @@ Start playing something, then run `obs`, then add Audio Capture Device (ALSA) to
 Yes
 
 ### Is Gentoo a meme?
-Gentoo is a meta-distro. You can make any distro you want out of it. You can have a package.use/package.keywords that makes a binary-compatible Debian or Fedora or Arch or whatever. If there's something you don't like about Gentoo, you can just edit /etc/portage/package.use. Using Gentoo is like distro-hopping around the same distro. Also, by building everything yourself, that's one less botnet. If you have a problem with a package or the package doesn't exist, just write an ebuild and put it in your local portage directory and emerge. There are overlays for more ebuilds if you don't want to write one.
+Gentoo is a meta-distro. You can make any distro you want out of it. You can have a package.use/package.keywords that makes a binary-compatible Debian or Fedora or Arch or whatever. If there's something you don't like about Gentoo, you can just edit /etc/portage/package.use. Using Gentoo is like distro-hopping around the same distro. Also, by building everything yourself, that's one less botnet. If you have a problem with a package or the package doesn't exist, just add an overlay or write an ebuild and put it in your local portage directory and emerge.
 
 ### What is CloverOS Libre?
 CloverOS Libre doesn't have the `sys-kernel/linux-firmware` package.
@@ -353,7 +353,7 @@ Reboot; Advanced options, select -gnu kernel
 Reboot; Advanced options, select non -gnu kernel
 
 ### Benefits of Gentoo/CloverOS over other distros
-No systemd, CFLAGS, lower RAM usage, it's Gentoo, package versions are stable, it's as default as possible while still being easy, has infinality, installs in 2 minutes depending on # of cores (unsquashfs), saves time by doing all the little things you would've done anyway, while still being default enough for you to change.
+No systemd, maximized CFLAGS, lower RAM usage, it's Gentoo, package versions are stable, it's as default as possible while still being easy, has Infinality, UTF-8 and user groups configured, installs in 2 minutes, saves time by doing all the little things you would've done anyway.
 
 ### Controlling twm
 Open Applications menu: right click on desktop
@@ -422,7 +422,7 @@ Right click desktop.
 Run `rsync -av --delete rsync://fr.cloveros.ga/cloveros /your/webserver/location/` and tell me the domain (or IP) so I can give you a cloveros.ga subdomain
 
 ### How often is this updated?
-It's stable rolling release, I update the binhost about once a week. (If emerging doesn't work, then I'm probably rsyncing, so wait a few minutes.)
+It's stable rolling release, I update the binhost about once a week.
 
 ### Does everything build with CFLAGS="-Ofast -mmmx -mssse3 -pipe -funroll-loops -flto=8 -floop-block -floop-interchange -floop-strip-mine -ftree-loop-distribution" ?
 These are all the packages that don't build with the full CFLAGS: https://gitgud.io/cloveros/cloveros/blob/master/binhost_settings/etc/portage/package.env
