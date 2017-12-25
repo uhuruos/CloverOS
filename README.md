@@ -107,9 +107,6 @@ https://au.cloveros.ga
 https://uk.cloveros.ga
 
 ## FAQ
-### Is this an overlay?
-No, this uses regular Gentoo Portage only. Same versions and USE flag options.
-
 ### What is CloverOS?
 It's a default Gentoo install with a binary packages repo. I made it to make my life easier.
 
@@ -321,6 +318,9 @@ Yes
 ### Is Gentoo a meme?
 Gentoo is a meta-distro. You can make any distro you want out of it. You can have a package.use/package.keywords that makes a binary-compatible Debian or Fedora or Arch or whatever. If there's something you don't like about Gentoo, you can just edit /etc/portage/package.use. Using Gentoo is like distro-hopping around the same distro. Also, by building everything yourself, that's one less botnet. If you have a problem with a package or the package doesn't exist, just add an overlay or write an ebuild and put it in your local portage directory and emerge.
 
+### Is this an overlay?
+No, this uses regular Gentoo Portage only. Same versions and USE flag options.
+
 ### What is CloverOS Libre?
 CloverOS Libre doesn't have the `sys-kernel/linux-firmware` package.
 
@@ -355,21 +355,6 @@ Reboot; Advanced options, select non -gnu kernel
 ### Benefits of Gentoo/CloverOS over other distros
 No systemd, maximized CFLAGS, lower RAM usage, it's Gentoo, package versions are stable, it's as default as possible while still being easy, has Infinality, UTF-8 and user groups configured, installs in 2 minutes, saves time by doing all the little things you would've done anyway.
 
-### Controlling twm
-Open Applications menu: right click on desktop
-
-Move windows: alt + left click
-
-Resize Windows: alt + right click
-
-Bring up menu anywhere: alt + middle click
-
-Close windows: ctrl + alt + right click
-
-The taskbar minimizes and restores windows.
-
-twm's settings are in `~/.twmrc`
-
 ### Starting X automatically after login
 Edit `~/.bash_profile`
 
@@ -380,23 +365,6 @@ Comment out
 And add in
 
 `choice=y`
-
-### Taking screenshots
-
-Type `scrot` or hit Print Screen.
-
-Key bindings are in `~/.xbindkeysrc`
-
-### Binary package isn't available
-Make an issue so I can add the package. In the meantime, edit `/etc/portage/make.conf` and edit the following line:
-
-`EMERGE_DEFAULT_OPTS="--keep-going=y --autounmask-write=y --jobs=2 -G"`
-
-to
-
-`EMERGE_DEFAULT_OPTS="--keep-going=y --autounmask-write=y --jobs=2"`
-
-This disables the binhost and uses Portage's ebuilds for packages.
 
 ### Things preventing CloverOS Libre from being 100% free software:
 - LiveCD kernel is taken from Gentoo, it needs to be made from scratch
@@ -417,9 +385,6 @@ Right click desktop.
 - I can't figure out how to change the port in rtorrent-ps
 
 - Firefox and twm aren't 100% compatible, switch to fvwm needed
-
-### I want to host a mirror
-Run `rsync -av --delete rsync://fr.cloveros.ga/cloveros /your/webserver/location/` and tell me the domain (or IP) so I can give you a cloveros.ga subdomain
 
 ### How often is this updated?
 It's stable rolling release, I update the binhost about once a week.
@@ -445,32 +410,8 @@ First, connect to wifi using wpa_gui ('wifi' in twm)
 
 Kill X and relog. After you log in and the "Start X?" dialog pops up, instead of y/n, type one of the WM options and hit y when it asks to install.
 
-### Is this an overlay?
-No, this uses regular Gentoo Portage only. Same versions and USE flag options.
-
-### What programs does this come with?
-Terminal - urxvt
-
-File manager - xfe
-
-Wifi configuration - wpa_gui
-
-Browser - firefox
-
-Text editor - emacs
-
-Graphic editor - gimp
-
-Video player - smplayer / mpv
-
-FTP client - filezilla
-
-Torrent client - rtorrent
-
-IRC client - weechat
-
-### How do I install systemd/avahi/pulseaudio?
-CloverOS doesn't have binaries of these.
+### I want to host a mirror
+Run `rsync -av --delete rsync://fr.cloveros.ga/cloveros /your/webserver/location/` and tell me the domain (or IP) so I can give you a cloveros.ga subdomain
 
 ### What if CloverOS dies? Will my install become useless?
 Edit `/etc/portage/make.conf` and change
