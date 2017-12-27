@@ -5,10 +5,9 @@ media-sound/mpd # pending stable
 www-client/firefox # major change
 media-gfx/gimp # major change
 net-p2p/retroshare # needs latest version
-net-misc/youtube-dl # needs latest version
 net-p2p/rtorrent-ps ** # rtorrent may be abandoned
 net-libs/libtorrent ** # rtorrent may be abandoned
-media-gfx/blender # python 3.5
+media-gfx/blender # python
 media-sound/clementine ** # qt5
 x11-wm/enlightenment # stable is old
 dev-libs/efl # stable is old
@@ -223,6 +222,7 @@ games-emulation/emutos
 games-emulation/gngeo
 games-emulation/fceux
 net-misc/nxplayer
+x11-misc/lemonbar
 
 #dependencies
 #staruml-bin

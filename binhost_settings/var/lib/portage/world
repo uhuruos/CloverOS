@@ -857,6 +857,7 @@ x11-misc/fbpanel
 x11-misc/i3blocks-gaps
 x11-misc/i3lock
 x11-misc/i3status
+x11-misc/lemonbar
 x11-misc/lightdm
 x11-misc/lsw
 x11-misc/menumaker
