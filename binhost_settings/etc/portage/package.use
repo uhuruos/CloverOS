@@ -101,7 +101,7 @@ kde-plasma/plasma-desktop gtk3 gtk2 legacy-systray
 media-video/handbrake gtk -fdk libav-aac
 media-sound/jack-audio-connection-kit cpudetection
 virtual/ffmpeg X sdl x264
-media-video/ffmpeg X gnutls rubberband x265 libass vorbis ogg network vpx rtmp x264 aac wavpack opus mp3 sdl gme v4l webp theora xvid xcb cpudetection -opengl
+media-video/ffmpeg X rubberband x265 libass vorbis ogg network vpx rtmp x264 aac wavpack opus mp3 sdl gme v4l webp theora xvid xcb cpudetection -opengl
 media-gfx/fontforge X gtk
 media-gfx/graphviz X gtk
 app-emulation/virt-manager gtk
@@ -213,6 +213,7 @@ media-sound/deadbeef aac adplug alac alsa cdda converter cover cover-imlib2 cove
 app-emulation/qemu sdl usb virgl
 
 #required
+net-libs/nodejs bundled-ssl
 media-libs/gegl cairo
 media-fonts/font-misc-misc nls
 dev-lua/lpeg luajit
@@ -400,4 +401,3 @@ app-emulation/wine-gecko abi_x86_32
 sys-apps/dbus abi_x86_32
 media-libs/libtxc_dxtn abi_x86_32
 dev-libs/libgcrypt abi_x86_32
-
