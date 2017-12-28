@@ -99,6 +99,7 @@ sys-devel/distcc gtk crossdev
 kde-plasma/plasma-meta grub gtk
 kde-plasma/plasma-desktop gtk3 gtk2 legacy-systray
 media-video/handbrake gtk -fdk libav-aac
+media-sound/jack-audio-connection-kit cpudetection
 virtual/ffmpeg X sdl x264
 media-video/ffmpeg X gnutls rubberband x265 libass vorbis ogg network vpx rtmp x264 aac wavpack opus mp3 sdl gme v4l webp theora xvid xcb cpudetection -opengl
 media-gfx/fontforge X gtk
@@ -182,7 +183,7 @@ media-sound/lmms alsa fluidsynth ogg portaudio sdl stk qt5
 app-admin/testdisk ntfs
 www-client/netsurf fbcon fbcon_frontend_linux
 net-p2p/qbittorrent geoip webui
-media-gfx/gimp pdf
+media-gfx/gimp smp pdf
 net-fs/nfs-utils nfsv41
 net-irc/hexchat plugin-sysinfo
 net-fs/cifs-utils -acl -ads -caps caps-ng
