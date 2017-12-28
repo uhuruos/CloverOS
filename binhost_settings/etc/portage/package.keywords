@@ -12,12 +12,6 @@ media-sound/clementine ** # qt5
 x11-wm/enlightenment # stable is old
 dev-libs/efl # stable is old
 x11-terms/terminology # stable is old
-#zfs, until 0.7.4
-sys-fs/zfs-kmod **
-sys-kernel/spl **
-sys-fs/zfs **
-#firefox
-=dev-libs/icu-60.2
 #blender
 =media-libs/openexr-2.2.0-r2
 =media-libs/ilmbase-2.2.0-r1
@@ -223,6 +217,7 @@ games-emulation/gngeo
 games-emulation/fceux
 net-misc/nxplayer
 x11-misc/lemonbar
+sys-firmware/nvidia-firmware
 
 #dependencies
 #staruml-bin

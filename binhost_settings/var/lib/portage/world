@@ -16,6 +16,7 @@ app-arch/engrampa
 app-arch/file-roller
 app-arch/lz4
 app-arch/makeself
+app-arch/mt-st
 app-arch/p7zip
 app-arch/par
 app-arch/sharutils
@@ -145,6 +146,7 @@ dev-python/ansi2html
 dev-python/django-two-factor-auth
 dev-python/pip
 dev-python/potr
+dev-python/sphinx
 dev-python/virtualenv
 dev-qt/qt-creator
 dev-util/bless
@@ -784,6 +786,7 @@ sys-boot/unetbootin
 sys-devel/crossdev
 sys-devel/distcc
 sys-devel/gdb
+sys-firmware/nvidia-firmware
 sys-fs/bashmount
 sys-fs/cachefilesd
 sys-fs/cryptsetup

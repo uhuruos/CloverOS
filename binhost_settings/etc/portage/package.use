@@ -100,7 +100,7 @@ kde-plasma/plasma-meta grub gtk
 kde-plasma/plasma-desktop gtk3 gtk2 legacy-systray
 media-video/handbrake gtk -fdk libav-aac
 virtual/ffmpeg X sdl x264
-media-video/ffmpeg X gnutls rubberband x265 libass vorbis ogg network vpx rtmp x264 aac wavpack opus mp3 sdl gme v4l webp theora xvid xcb -opengl
+media-video/ffmpeg X gnutls rubberband x265 libass vorbis ogg network vpx rtmp x264 aac wavpack opus mp3 sdl gme v4l webp theora xvid xcb cpudetection -opengl
 media-gfx/fontforge X gtk
 media-gfx/graphviz X gtk
 app-emulation/virt-manager gtk
@@ -121,7 +121,7 @@ sci-mathematics/octave X gui fftw curl gnuplot postscript jit
 media-video/handbrake x265
 app-text/texlive X cjk context detex dvi2tty dvipdfm epspdf extra games graphics humanities jadetex luatex metapost music omega png pstricks publishers science tex4ht texi2html truetype xetex xindy xml
 media-video/mpv wayland rubberband lcms archive cdda bluray dvd encode libmpv
-media-libs/mesa opencl d3d9 vulkan llvm gallium -bindist osmesa gles1 gles2 wayland openmax video_cards_vmware xa
+media-libs/mesa -bindist opencl d3d9 llvm gallium osmesa gles1 gles2 wayland openmax xa video_cards_vmware
 dev-cpp/gtkmm wayland X
 media-libs/clutter X
 dev-libs/weston xwayland
@@ -165,10 +165,10 @@ dev-db/sqlite secure-delete
 media-libs/phonon -vlc
 media-libs/libsdl custom-cflags
 www-client/chromium custom-cflags
-www-client/firefox custom-cflags custom-optimization -wifi nsplugin system-harfbuzz system-icu system-jpeg system-libevent system-libvpx system-sqlite
+www-client/firefox custom-cflags custom-optimization -wifi nsplugin system-harfbuzz -system-icu system-jpeg system-libevent system-libvpx system-sqlite
 www-client/torbrowser custom-cflags custom-optimization hardened system-cairo system-harfbuzz -system-icu system-jpeg system-libevent system-libvpx system-sqlite
 mail-client/thunderbird custom-cflags custom-optimization -crypt system-harfbuzz system-icu system-jpeg system-libevent system-libvpx system-sqlite
-www-client/seamonkey custom-cflags custom-optimization -minimal -crypt system-harfbuzz system-icu system-jpeg system-libevent system-libvpx system-sqlite
+www-client/seamonkey custom-cflags custom-optimization -crypt -minimal system-harfbuzz system-icu system-jpeg system-libevent system-libvpx system-sqlite
 media-sound/sox alsa openmp png encode flac id3tag ladspa mad ogg opus sndfile twolame wavpack
 media-libs/libsamplerate sndfile
 media-libs/gd truetype fontconfig
