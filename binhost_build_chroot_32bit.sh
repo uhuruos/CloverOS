@@ -8,8 +8,8 @@ fi
 mkdir gentoo
 
 cd gentoo
-builddate=$(curl -s http://distfiles.gentoo.org/releases/x86/autobuilds/current-stage3-i686/ | sed -nr 's/.*href="stage3-i686-([0-9].*).tar.bz2">.*/\1/p')
-wget http://distfiles.gentoo.org/releases/x86/autobuilds/current-stage3-i686/stage3-i686-$builddate.tar.bz2
+builddate=$(curl -s http://distfiles.gentoo.org/releases/x86/autobuilds/current-stage3-i686/ | sed -nr 's/.*href="stage3-i686-([0-9].*).tar.xz">.*/\1/p')
+wget http://distfiles.gentoo.org/releases/x86/autobuilds/current-stage3-i686/stage3-i686-$builddate.tar.xz
 tar pxf stage3*
 rm stage3*
 
