@@ -41,3 +41,4 @@ net-p2p/rtorrent::pinkpieea
 dev-libs/mpc::pg_overlay
 dev-python/munkres::4nykey
 media-sound/mpdas::pinkpieea
+media-video/flowblade::4nykey

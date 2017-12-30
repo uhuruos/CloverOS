@@ -218,6 +218,7 @@ games-emulation/fceux
 net-misc/nxplayer
 x11-misc/lemonbar
 sys-firmware/nvidia-firmware
+media-video/flowblade
 
 #dependencies
 #staruml-bin
@@ -344,6 +345,8 @@ games-emulation/citra-libretro **
 sci-physics/bullet
 #bspwm
 x11-misc/sxhkd
+#flowblade
+media-gfx/gmic
 
 #fonts
 media-fonts/lohit-kannada
