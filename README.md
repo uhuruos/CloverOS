@@ -366,6 +366,18 @@ And add in
 
 `choice=y`
 
+### I want to bypass the mixer to play >48KHz audio / DSD
+Edit ~/.asoundrc:
+
+```
+pcm.!default {
+  type hw
+  card 0
+}
+```
+
+Replace card 0 with your device number
+
 ### Things preventing CloverOS Libre from being 100% free software:
 - LiveCD kernel is taken from Gentoo, it needs to be made from scratch
 
