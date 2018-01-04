@@ -615,7 +615,6 @@ media-sound/ripperx
 media-sound/rosegarden
 media-sound/sexypsf
 media-sound/sfc
-media-sound/sidplay
 media-sound/sidplayfp
 media-sound/solfege
 media-sound/sox
@@ -758,6 +757,7 @@ sci-visualization/gnuplot
 sys-apps/ack
 sys-apps/dmidecode
 sys-apps/flatpak
+sys-apps/hwinfo
 sys-apps/hwloc
 sys-apps/i2c-tools
 sys-apps/idle3-tools

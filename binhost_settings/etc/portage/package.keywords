@@ -12,6 +12,7 @@ media-sound/clementine ** # qt5
 x11-wm/enlightenment # stable is old
 dev-libs/efl # stable is old
 x11-terms/terminology # stable is old
+sys-kernel/gentoo-sources
 #blender
 =media-libs/openexr-2.2.0-r2
 =media-libs/ilmbase-2.2.0-r1
@@ -61,7 +62,6 @@ games-engines/openmw
 media-sound/denemo
 sci-calculators/tiemu
 media-sound/supercollider
-media-sound/sidplayfp
 games-util/steam-launcher
 media-sound/deadbeef
 net-im/discord-bin
@@ -219,6 +219,7 @@ net-misc/nxplayer
 x11-misc/lemonbar
 sys-firmware/nvidia-firmware
 media-video/flowblade
+media-sound/sidplayfp
 
 #dependencies
 #staruml-bin
@@ -249,8 +250,6 @@ media-libs/suil
 dev-cpp/websocketpp
 #rstudio
 dev-libs/mathjax
-#sidplayfp
-media-libs/libsidplayfp
 #deadbeef
 media-plugins/deadbeef-plugins-meta
 #rust
@@ -307,6 +306,7 @@ games-emulation/mupen64plus-audio-sdl
 games-emulation/m64py
 games-emulation/mupen64plus-rsp-hle
 games-emulation/mupen64plus-input-sdl
+dev-python/PySDL2
 #pyhoca
 net-misc/python-x2go
 #firefox
@@ -347,6 +347,8 @@ sci-physics/bullet
 x11-misc/sxhkd
 #flowblade
 media-gfx/gmic
+#sidplayfp
+media-libs/libsidplayfp
 
 #fonts
 media-fonts/lohit-kannada
