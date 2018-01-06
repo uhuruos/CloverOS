@@ -1,6 +1,6 @@
-kernelversion=4.14.11
+kernelversion=4.14.12
 kernelmajversion=4.14
-revision=r2
+revision=
 
 #emerge gentoo-sources genkernel
 #eselect kernel set 1
