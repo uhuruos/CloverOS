@@ -19,7 +19,7 @@ if [ -z "$DISPLAY" ]; then
     wms[d]=dwm
     wms[c]=icewm
     wms[w]=wmaker
-    wms[z]="compiz-manager & ccsm &"
+    wms[z]=compiz-manager
     wmpkgs[y]=twm
     wmspkg[Y]=twm
     wmspkg[i]="i3-gaps i3status"
@@ -52,6 +52,7 @@ if [ -z "$DISPLAY" ]; then
     wmspost[d]="feh --bg-max wallpaper.png & xbindkeys & $taptoclick &"
     wmspost[c]="feh --bg-max wallpaper.png & xbindkeys & $taptoclick &"
     wmspost[w]="feh --bg-max wallpaper.png & xbindkeys & $taptoclick &"
+    wmspost[z]="ccsm &"
     if [ -v wms[$choice] ]; then
         if [ ! -f /usr/bin/${wms[$choice]} ]; then
             echo
