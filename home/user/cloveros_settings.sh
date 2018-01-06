@@ -71,7 +71,7 @@ case "$choice" in
 		sudo gpg --verify kernel.tar.xz.asc kernel.tar.xz
 		tar xf kernel.tar.xz
 		sudo mv initramfs-genkernel-*-gentoo* kernel-genkernel-*-gentoo* System.map-genkernel-*-gentoo* /boot/
-		sudo mv *-gentoo*/ /lib/modules/
+		sudo cp -R *-gentoo*/ /lib/modules/
 		cd ..
 		rm -R $tempdir
 		sudo grub-mkconfig -o /boot/grub/grub.cfg
