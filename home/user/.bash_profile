@@ -52,7 +52,7 @@ if [ -z "$DISPLAY" ]; then
     wmspost[d]="feh --bg-max wallpaper.png & xbindkeys & $taptoclick &"
     wmspost[c]="feh --bg-max wallpaper.png & xbindkeys & $taptoclick &"
     wmspost[w]="feh --bg-max wallpaper.png & xbindkeys & $taptoclick &"
-    if [ -n "${wms[$choice]}" ]; then
+    if [ -v wms[$choice] ]; then
         if [ ! -f /usr/bin/${wms[$choice]} ]; then
             echo
             echo ${wms[$choice]} is not installed. Install it by running:
