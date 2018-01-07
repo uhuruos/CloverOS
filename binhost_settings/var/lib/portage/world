@@ -474,6 +474,7 @@ media-gfx/feh
 media-gfx/fontforge
 media-gfx/gifsicle
 media-gfx/gimp
+media-gfx/graphicsmagick
 media-gfx/gthumb
 media-gfx/imagemagick
 media-gfx/inkscape
@@ -1059,7 +1060,6 @@ x11-themes/laughlin-backgrounds
 x11-themes/leonidas-backgrounds
 x11-themes/light-themes
 x11-themes/lovelock-backgrounds
-x11-themes/lush
 x11-themes/mate-backgrounds
 x11-themes/mate-icon-theme
 x11-themes/mate-icon-theme-faenza
