@@ -171,6 +171,9 @@ sudo eselect opencl set nvidia
 sudo sh -c 'echo \"blacklist nouveau\" >> /etc/modprobe.d/blacklist.conf'
 ```
 
+### Virtualbox doesn't work
+Run `depmod -a` before `for m in vbox{drv,netadp,netflt}; do modprobe $m; done`. If this doesn't work, upgrade world and your kernel.
+
 ### Installing package that has kernel module
 `depmod -a`
 
