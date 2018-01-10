@@ -177,6 +177,23 @@ Run `depmod -a` before `for m in vbox{drv,netadp,netflt}; do modprobe $m; done`.
 ### Installing package that has kernel module
 `depmod -a`
 
+### Installing another kernel
+Example:
+
+```
+wget "https://git.kernel.org/torvalds/t/linux-4.15-rc7.tar.gz"
+
+tar xvf linux-4.15-rc7.tar.gz
+
+wget https://liquorix.net/sources/4.14/config.amd64
+
+genkernel --kerneldir=linux-4.15-rc7/ --kernel-config=config.amd64 all
+
+grub-mkconfig -o /boot/grub/grub.cfg
+```
+
+Don't forget to `emerge genkernel`
+
 ### Firefox and Pulseaudio
 Firefox 57 still works with ALSA. If this changes, it will be built with apulse.
 
