@@ -5,7 +5,7 @@ games-emulation/nestopia gui
 games-emulation/stella joystick
 games-emulation/mgba qt5
 media-sound/supercollider qt5
-media-sound/clementine dbus udisks
+media-sound/clementine dbus udisks cdda lastfm moodbar projectm
 media-libs/opencv -opengl
 games-emulation/rpcs3 joystick -vulkan
 dev-python/networkx -doc
@@ -188,7 +188,7 @@ media-gfx/gimp smp pdf
 net-fs/nfs-utils nfsv41
 net-irc/hexchat plugin-sysinfo
 net-fs/cifs-utils -acl -ads -caps caps-ng
-media-sound/mpd -sid sqlite alsa bzip2 curl ffmpeg fifo flac glib icu id3tag inotify mad network ogg opus tcpd unicode vorbis adplug ao audiofile cdio expat faad fluidsynth gme lame libsamplerate libsoxr mikmod mms modplug mp4v2 mpg123 musepack pipe recorder sndfile soundcloud twolame wavpack wildmidi zip libmpdclient
+media-sound/mpd sid sqlite alsa bzip2 curl ffmpeg fifo flac glib icu id3tag inotify mad network ogg opus tcpd unicode vorbis adplug ao audiofile cdio expat faad fluidsynth gme lame libsamplerate libsoxr mikmod mms modplug mp4v2 mpg123 musepack pipe recorder sndfile soundcloud twolame wavpack wildmidi zip libmpdclient
 media-sound/flacon aac opus vorbis qt5 flac mac mp3 mp4 ogg replaygain tta wavpack
 media-sound/cmus ffmpeg alsa mad unicode aac ao cddb cdio cue discid examples flac mikmod modplug mp4 musepack opus vorbis wavpack wma zsh-completion
 media-sound/puddletag cover acoustid musicbrainz -quodlibet
@@ -290,6 +290,9 @@ sci-libs/cholmod -minimal
 dev-libs/libcdio -minimal
 kde-plasma/libksysguard -minimal
 x11-libs/libdrm libkms video_cards_vmware
+media-libs/gst-plugins-bad gtk
+media-gfx/gmic X ffmpeg
+media-libs/mlt python gtk ffmpeg
 x11-libs/gdk-pixbuf tiff abi_x86_32
 dev-libs/libxml2 icu abi_x86_32
 dev-libs/libxslt python abi_x86_32
@@ -402,12 +405,3 @@ app-emulation/wine-gecko abi_x86_32
 sys-apps/dbus abi_x86_32
 media-libs/libtxc_dxtn abi_x86_32
 dev-libs/libgcrypt abi_x86_32
-# required by media-video/pitivi-0.97.1::gentoo
-# required by pitivi (argument)
->=media-libs/gst-plugins-bad-1.12.3 gtk
-# required by media-video/flowblade-1.12.2::jorgicio
-# required by flowblade::jorgicio (argument)
->=media-gfx/gmic-2.0.0 X ffmpeg
-# required by media-video/flowblade-1.12.2::jorgicio
-# required by flowblade::jorgicio (argument)
->=media-libs/mlt-6.4.1-r2 python gtk ffmpeg

@@ -220,6 +220,7 @@ x11-misc/lemonbar
 sys-firmware/nvidia-firmware
 media-video/flowblade
 media-sound/sidplayfp
+media-sound/libvisual-projectm-alsa
 
 #dependencies
 #staruml-bin
