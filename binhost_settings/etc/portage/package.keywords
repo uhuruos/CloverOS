@@ -7,7 +7,8 @@ media-sound/clementine ** # qt5
 x11-wm/enlightenment # stable is old
 dev-libs/efl # stable is old
 x11-terms/terminology # stable is old
-sys-kernel/gentoo-sources
+dev-lisp/clisp # stable no longer builds
+sys-kernel/gentoo-sources # security
 #blender
 =media-libs/openexr-2.2.0-r2
 =media-libs/ilmbase-2.2.0-r1
