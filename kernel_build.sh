@@ -26,7 +26,6 @@ wget https://linux-libre.fsfla.org/pub/linux-libre/releases/$kernelversion-gnu/d
 wget https://linux-libre.fsfla.org/pub/linux-libre/releases/$kernelversion-gnu/deblob-check
 chmod +x deblob-$kernelmajversion
 PYTHON="python2.7" ./deblob-$kernelmajversion
-wget https://liquorix.net/sources/4.14/config.amd64
 genkernel --kernel-config=config.amd64 --kerneldir=/usr/src/linux-$kernelversion-gentoo-gnu$revision all
 make clean
 

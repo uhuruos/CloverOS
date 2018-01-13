@@ -1,12 +1,7 @@
 #preference, remove when stable is bumped up
-media-sound/audacious # pending stable
-media-plugins/audacious-plugins # pending stable
-media-sound/mpd # pending stable
 www-client/firefox # major change
 media-gfx/gimp # major change
 net-p2p/retroshare # needs latest version
-net-p2p/rtorrent-ps ** # rtorrent may be abandoned
-net-libs/libtorrent ** # rtorrent may be abandoned
 media-gfx/blender # python
 media-sound/clementine ** # qt5
 x11-wm/enlightenment # stable is old
@@ -221,6 +216,9 @@ sys-firmware/nvidia-firmware
 media-video/flowblade
 media-sound/sidplayfp
 media-sound/libvisual-projectm-alsa
+media-sound/audacious
+media-plugins/audacious-plugins
+net-p2p/rtorrent-ps **
 
 #dependencies
 #staruml-bin
@@ -350,6 +348,8 @@ x11-misc/sxhkd
 media-gfx/gmic
 #sidplayfp
 media-libs/libsidplayfp
+#rtorrent-ps
+net-libs/libtorrent **
 
 #fonts
 media-fonts/lohit-kannada

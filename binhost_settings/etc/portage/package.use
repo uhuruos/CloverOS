@@ -22,7 +22,6 @@ x11-wm/icewm -minimal
 media-sound/ncmpc help-screen artist-screen chat-screen colors key-screen lirc lyrics-screen mouse search-screen song-screen
 media-sound/beets convert discogs lastgenre lastimport bpd chroma mpdstats thumbnails web
 media-sound/moc ffmpeg
-dev-qt/qt-creator -webengine
 www-client/uget aria2
 app-misc/anki -sound
 kde-apps/dolphin thumbnail
@@ -405,3 +404,4 @@ app-emulation/wine-gecko abi_x86_32
 sys-apps/dbus abi_x86_32
 media-libs/libtxc_dxtn abi_x86_32
 dev-libs/libgcrypt abi_x86_32
+virtual/libelf abi_x86_32
