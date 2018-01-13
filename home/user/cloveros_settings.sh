@@ -14,7 +14,7 @@ gitprefix="https://gitgud.io/cloveros/cloveros/raw/master"
 echo "1) Update cloveros_settings.sh (Current version: 2018-01-13)
 2) Change mirrors
 3) Change default alsa device
-4) Upgrade kernel (Latest version: 4.14.13)
+4) Upgrade kernel (Current version: 4.14.13)
 5) Change binary/source
 6) Update dot files
 7) Sync time
