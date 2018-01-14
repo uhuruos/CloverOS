@@ -74,7 +74,7 @@
    Launcher Porthole /usr/share/fvwm/images/48x48-infox/item.xpm "porthole" "-g +0+200"
    Launcher Gimp /usr/share/fvwm/images/48x48-infox/gimp.xpm "gimp" "-g +0+300"
    Launcher Disks /usr/share/fvwm/images/48x48-infox/disk.xpm "sudo gparted" "-g +0+400"
-   Launcher InstallCD /usr/share/fvwm/images/48x48-infox/disk-cd.xpm "urxvt -e sudo ~/livecd_install.sh" "-g +0+500"
+   Launcher InstallCD /usr/share/fvwm/images/48x48-infox/disk-cd.xpm "urxvt -e sudo ~/installscript.sh" "-g +0+500"
    
 
 #--------------------------------------------------------------------------
