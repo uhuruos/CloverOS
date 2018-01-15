@@ -11,15 +11,16 @@ mirrors=(
 
 gitprefix="https://gitgud.io/cloveros/cloveros/raw/master"
 
-echo "1) Update cloveros_settings.sh (Current version: 2018-01-13)
+echo "1) Update cloveros_settings.sh (Current version: 2018-01-14)
 2) Change mirrors
-3) Change default alsa device
+3) Change default ALSA (sound) device
 4) Upgrade kernel (Current version: 4.14.13)
 5) Change binary/source
 6) Update dot files
 7) Sync time
 8) Set timezone
 9) Clean emerge cache
+a) ALSA settings
 t) Enable tap to click on touchpad
 l) Upgrade/Install Libre kernel
 c) Update Portage config from binhost
@@ -139,6 +140,15 @@ case "$choice" in
 	9)
 		sudo rm -Rf /usr/portage/packages/* /usr/portage/distfiles/* /var/tmp/portage/*
 		echo -e "\nPackage cache cleared. (/usr/portage/packages/, /usr/portage/distfiles/, /var/tmp/portage/)"
+		;;
+
+	a)
+		echo "1) Change default ALSA device
+2) Configure ALSA for OBS
+3) GUI volume control
+4) CLI volume control"
+		read -erp "Select option: " -n 1 choice
+		echo "Choice: $choice"
 		;;
 
 	l)
