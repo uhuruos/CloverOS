@@ -11,7 +11,8 @@ mirrors=(
 
 gitprefix="https://gitgud.io/cloveros/cloveros/raw/master"
 
-echo "1) Update cloveros_settings.sh (Current version: 2018-01-14)
+echo "Settings Utility (Version 2018-01-14)
+1) Update cloveros_settings.sh
 2) Change mirrors
 3) Change default ALSA (sound) device
 4) Upgrade kernel (Current version: 4.14.13)
