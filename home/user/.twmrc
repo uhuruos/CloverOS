@@ -64,6 +64,7 @@ menu "Applications" {
 	"stats.sh" !"if pgrep urxvtd; then urxvtc -geometry 400x1+0+0 -fn '6x13' -e ~/stats.sh; else urxvtd -o -f && urxvtc -geometry 400x1+0+0 -fn '6x13' -e ~/stats.sh; fi"
 	"wallpaper" !"nitrogen &"
 	"resolution" !"arandr &"
+	"volume" !"qasmixer &"
 	"gparted" !"sudo gparted &"
 	"restart twm" !"killall twm && twm &"
 	"exit X" !"killall X &"
