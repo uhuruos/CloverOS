@@ -62,7 +62,7 @@ menu "Applications" {
 	"rtorrent-ps" !"if pgrep urxvtd; then urxvtc -e rtorrent; else urxvtd -o -f && urxvtc -e rtorrent; fi"
 	"weechat" !"if pgrep urxvtd; then urxvtc -e weechat; else urxvtd -o -f && urxvtc -e weechat; fi"
 	"stats.sh" !"if pgrep urxvtd; then urxvtc -geometry 400x1+0+0 -fn '6x13' -e ~/stats.sh; else urxvtd -o -f && urxvtc -geometry 400x1+0+0 -fn '6x13' -e ~/stats.sh; fi"
-	"settings.sh" !"if pgrep urxvtd; then urxvtc -e sh -c '~/cloveros_settings.sh && read'; else urxvtd -o -f && urxvtc -e sh -c '~/cloveros_settings.sh && read'; fi"
+	"settings.sh" !"if pgrep urxvtd; then urxvtc -e ~/cloveros_settings.sh; else urxvtd -o -f && urxvtc -e ~/cloveros_settings.sh; fi"
 	"wallpaper" !"nitrogen &"
 	"resolution" !"arandr &"
 	"volume" !"qasmixer &"

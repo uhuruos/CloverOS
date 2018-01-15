@@ -27,7 +27,8 @@ c) Update Portage config from binhost
 b) Install bluetooth manager
 n) Install proprietary Nvidia drivers
 v) Install Virtualbox/VMWare drivers
-u) Update system"
+u) Update system
+q) Exit"
 
 read -erp "Select option: " -n 1 choice
 echo
@@ -246,6 +247,9 @@ case "$choice" in
 		sudo emerge --sync
 		sudo emerge -uvD world
 		sudo emerge --depclean
+		;;
+
+	q)
 		;;
 
 	*)
