@@ -20,6 +20,7 @@ echo "1) Update cloveros_settings.sh (Current version: 2018-01-14)
 7) Sync time
 8) Set timezone
 9) Clean emerge cache
+u) Update system
 a) ALSA settings
 t) Enable tap to click on touchpad
 l) Upgrade/Install Libre kernel
@@ -27,7 +28,6 @@ c) Update Portage config from binhost
 b) Install bluetooth manager
 n) Install proprietary Nvidia drivers
 v) Install Virtualbox/VMWare drivers
-u) Update system
 q) Exit"
 
 read -erp "Select option: " -n 1 choice
@@ -143,6 +143,16 @@ case "$choice" in
 		echo -e "\nPackage cache cleared. (/usr/portage/packages/, /usr/portage/distfiles/, /var/tmp/portage/)"
 		;;
 
+	u)
+		echo "Running the following:"
+		echo "sudo emerge --sync"
+		echo "sudo emerge -uvD world"
+		echo "sudo emerge --depclean"
+		sudo emerge --sync
+		sudo emerge -uvD world
+		sudo emerge --depclean
+		;;
+
 	a)
 		echo "1) Change default ALSA device
 2) Configure ALSA for OBS
@@ -237,16 +247,6 @@ case "$choice" in
 		echo "sudo emerge xf86-video-vmware virtualbox-guest-additions"
 		sudo emerge xf86-video-vmware virtualbox-guest-additions
 		echo -e "\nRestart X to load driver."
-		;;
-
-	u)
-		echo "Running the following:"
-		echo "sudo emerge --sync"
-		echo "sudo emerge -uvD world"
-		echo "sudo emerge --depclean"
-		sudo emerge --sync
-		sudo emerge -uvD world
-		sudo emerge --depclean
 		;;
 
 	q)
