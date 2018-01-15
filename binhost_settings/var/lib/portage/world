@@ -566,6 +566,7 @@ media-plugins/vapoursynth-waifu2x-w2xc
 media-plugins/vapoursynth-wwxd
 media-plugins/vapoursynth-yadifmod
 media-sound/alsa-utils
+media-sound/alsamixergui
 media-sound/amsynth
 media-sound/apulse
 media-sound/aqualung
