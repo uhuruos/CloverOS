@@ -14,6 +14,8 @@ gitprefix="https://gitgud.io/cloveros/cloveros/raw/master"
 if [[ -n "$1" ]]; then
 	if [[ -z "$2" ]]; then
 		choice=$1
+	else
+		exit
 	fi
 else
 	echo "1) Update cloveros_settings.sh
