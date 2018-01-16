@@ -10,6 +10,9 @@ OpaqueMoveSize 1000
 
 Style "*" BorderWidth 1, HandleWidth 1
 
+BorderStyle active Solid #000000
+BorderStyle inactive Solid #000000
+
 TitleStyle active Solid #056839
 TitleStyle inactive Solid #056839
 
