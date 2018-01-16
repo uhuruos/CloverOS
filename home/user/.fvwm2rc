@@ -27,7 +27,7 @@ Style "FvwmTaskBar" NoTitle, !Handles, !Borders, Sticky, WindowListSkip, \
 *FvwmTaskBar: Geometry +0-0
 *FvwmTaskBar: Rows 1
 *FvwmTaskBar: Fore #056839
-*FvwmTaskBar: Back #056839
+*FvwmTaskBar: Back #000000
 *FvwmTaskBar: Colorset 9
 *FvwmTaskBar: IconColorset 9
 *FvwmTaskBar: FocusColorset 9
