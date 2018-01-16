@@ -10,3 +10,5 @@ AddToFunc "Resize-or-Raise" "M" Resize
 + "C" Raise
 + "D" RaiseLower
 Mouse 3 W M Resize-or-Raise
+
+OpaqueMoveSize 1000
