@@ -12,7 +12,9 @@ mirrors=(
 gitprefix="https://gitgud.io/cloveros/cloveros/raw/master"
 
 if [[ -n "$1" ]]; then
-	choice=$1
+	if [[ -z "$2" ]]; then
+		choice=$1
+	fi
 else
 	echo "1) Update cloveros_settings.sh
 2) Change mirrors
