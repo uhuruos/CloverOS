@@ -6,11 +6,13 @@ AddToFunc "WindowResize" "M" Raise
 + "M" Resize
 Mouse 3 W M WindowResize
 
-OpaqueMoveSize 1000
+OpaqueMoveSize unlimited
 
 Style "*" BorderWidth 1, HandleWidth 1
 
-Style "*" ResizeHintOverride
+Style "*" ResizeOpaque
+
+EdgeScroll 0 0
 
 BorderStyle active Solid #000000
 BorderStyle inactive Solid #000000
