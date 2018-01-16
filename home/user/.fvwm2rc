@@ -14,3 +14,45 @@ Mouse 3 W M Resize-or-Raise
 OpaqueMoveSize 1000
 
 Style "*" BorderWidth 1, HandleWidth 1
+#####
+# FvwmTaskBar
+
+# Start Taskbar
+AddToFunc "StartFunction" "I" Module FvwmTaskBar
+# For window raising
+AddToFunc DeiconifyRaiseAndFocus
++ I Iconify off
++ I Raise
++ I Focus
+
+Style "FvwmTaskBar" NoTitle, !Handles, !Borders, Sticky, WindowListSkip, \
+  CirculateSkip, StaysOnBottom, FixedPosition, FixedSize, !Iconifiable
+  DestroyModuleConfig FvwmTaskBar: *
+*FvwmTaskBar: Geometry +0-0
+*FvwmTaskBar: Rows 1
+*FvwmTaskBar: Font "xft:Hack:Bold:pixelsize=12:minispace=True:antialias=True"
+*FvwmTaskBar: SelFont "xft:Hack:Bold:pixelsize=12:minispace=True:antialias=True"
+*FvwmTaskBar: StatusFont "xft:Hack:Bold:pixelsize=12:minispace=True:antialias=True"
+*FvwmTaskBar: Fore green #edit this
+*FvwmTaskBar: Back black #edit this
+*FvwmTaskBar: Colorset 9
+*FvwmTaskBar: IconColorset 9
+*FvwmTaskBar: FocusColorset 9
+*FvwmTaskBar: TipsColorset 9
+*FvwmTaskBar: UseSkipList
+*FvwmTaskBar: UseIconNames
+*FvwmTaskBar: ShowTips
+*FvwmTaskBar: Action Click1 DeiconifyRaiseAndFocus
+*FvwmTaskBar: Action Click2 Iconify On
+*FvwmTaskBar: Action Click3 Lower
+*FvwmTaskBar: ButtonWidth 180
+*FvwmTaskBar: BellVolume 20
+*FvwmTaskBar: AutoStick
+*FvwmTaskBar: NoIconAction SendToModule FvwmAnimate animate
+*FvwmTaskBar: Action Click3 Menu FvwmWindowOpsMenu
+*FvwmTaskBar: StartIcon mini/fvwm.png
+*FvwmTaskBar: StartName Start
+*FvwmTaskBar: StartMenu StartMenu
+*FvwmTaskBar: StartIcon mini-exp.xpm
+
+##########################################
