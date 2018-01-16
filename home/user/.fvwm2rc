@@ -9,4 +9,4 @@ AddToFunc "Resize-or-Raise" "M" Resize
 + "M" Raise
 + "C" Raise
 + "D" RaiseLower
-Mouse 2 W M Resize-or-Raise
+Mouse 3 W M Resize-or-Raise
