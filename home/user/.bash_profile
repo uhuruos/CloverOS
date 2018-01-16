@@ -37,8 +37,8 @@ if [ -z "$DISPLAY" ]; then
     wmspkg[w]=windowmaker
     wmspkg[z]="compiz-fusion emerald"
     taptoclick=$'tappingid=$(xinput list-props "SynPS/2 Synaptics TouchPad" | grep \'Tapping Enabled (\' | awk \'{print $4}\' | grep -o \'[0-9]\\+\') && xinput set-prop "SynPS/2 Synaptics TouchPad" $tappingid 1'
-    wmspost[y]="feh --bg-max wallpaper.png & xbindkeys & $taptoclick &"
-    wmspost[Y]="feh --bg-max wallpaper.png & xbindkeys & $taptoclick &"
+    wmspost[y]="feh --bg-max wallpaper.png & xbindkeys & $taptoclick & urxvt -geometry $(xrandr | awk 'NR==1{print $8$9$10+0}')+0+0 -e null &"
+    wmspost[Y]="feh --bg-max wallpaper.png & xbindkeys & $taptoclick & urxvt -geometry $(xrandr | awk 'NR==1{print $8$9$10+0}')+0+0 -e null &"
     wmspost[i]="feh --bg-max wallpaper.png & xbindkeys & $taptoclick &"
     wmspost[a]="feh --bg-max wallpaper.png & xbindkeys & $taptoclick &"
     wmspost[o]="feh --bg-max wallpaper.png & xbindkeys & $taptoclick &"

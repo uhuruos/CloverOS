@@ -54,7 +54,7 @@ yes | layman -a 0x4d4c abendbrot audio-overlay causelay cg das-labor deadbeef-ov
 
 emerge -uvDN @world
 
-emerge -C hwinfo ntfs3g && emerge --jobs=1 ntfs3g hwinfo
+emerge -C hwinfo ntfs3g && emerge ntfs3g && emerge hwinfo
 
 quickpkg --include-unmodified-config=y "*/*"
 
