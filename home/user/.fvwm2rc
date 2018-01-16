@@ -1,22 +1,15 @@
-AddToFunc "Move-or-Raise" "M" Raise
+AddToFunc "Move" "I" Raise
 + "M" Move
-+ "C" Raise
-+						"C" WindowShade 2
-+ "D" Maximize 100 100
-Mouse 1 W M Move-or-Raise
+Mouse 1 W M Move         
 
-AddToFunc "Resize-or-Raise" "M" Raise
+AddToFunc "Resize" "I" Raise
 + "M" Resize
-+ "C" Raise
-+ "D" RaiseLower
-Mouse 3 W M Resize-or-Raise
+Mouse 3 W M Resize         
 
 OpaqueMoveSize 1000
 
 Style "*" BorderWidth 1, HandleWidth 1
 
-BorderStyle active Solid black
-BorderStyle inactive Solid black
 TitleStyle active Solid #056839
 TitleStyle inactive Solid #056839
 
