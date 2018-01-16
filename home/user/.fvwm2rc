@@ -1,12 +1,10 @@
-AddToFunc "Move" "M" Raise
+AddToFunc "WindowMove" "M" Raise
 + "M" Move
-+ "C" Raise
-Mouse 1 W M Move
+Mouse 1 W M WindowMove
 
-AddToFunc "Resize" "M" Raise
+AddToFunc "WindowResize" "M" Raise
 + "M" Resize
-+ "C" Raise
-Mouse 3 W M Resize
+Mouse 3 W M WindowResize
 
 OpaqueMoveSize 1000
 
