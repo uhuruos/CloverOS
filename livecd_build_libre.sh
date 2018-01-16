@@ -128,7 +128,7 @@ sleep 1
 twm&
 feh --bg-max wallpaper.png
 xbindkeys
-urxvt -e sudo ./livecd_install.sh
+urxvt -geometry \$(xrandr | awk "NR==1{print \"80x24+\"\$8/2-283\"+\"\$10/2-191}") -e sudo ./livecd_install.sh
 fi' >> /home/$user/.bash_profile
 wget https://gitgud.io/cloveros/cloveros/raw/master/livecd_install.sh -O /home/$user/livecd_install.sh
 chmod +x /home/$user/livecd_install.sh
@@ -143,7 +143,7 @@ EOF
 cd ..
 umount -l image/*
 wget https://gitgud.io/cloveros/cloveros/raw/master/livecd_files.tar.xz
-tar xvf livecd_files.tar.xz
+tar xf livecd_files.tar.xz
 mv *aufs* image/lib/modules/
 mksquashfs image/ image.squashfs -b 1024k -comp xz -Xbcj x86 -Xdict-size 100%
 mv image.squashfs files
