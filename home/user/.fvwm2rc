@@ -26,11 +26,8 @@ Style "FvwmTaskBar" NoTitle, !Handles, !Borders, Sticky, WindowListSkip, \
   DestroyModuleConfig FvwmTaskBar: *
 *FvwmTaskBar: Geometry +0-0
 *FvwmTaskBar: Rows 1
-*FvwmTaskBar: Font "xft:Hack:Bold:pixelsize=12:minispace=True:antialias=True"
-*FvwmTaskBar: SelFont "xft:Hack:Bold:pixelsize=12:minispace=True:antialias=True"
-*FvwmTaskBar: StatusFont "xft:Hack:Bold:pixelsize=12:minispace=True:antialias=True"
-*FvwmTaskBar: Fore green #edit this
-*FvwmTaskBar: Back black #edit this
+*FvwmTaskBar: Fore #056839
+*FvwmTaskBar: Back #056839
 *FvwmTaskBar: Colorset 9
 *FvwmTaskBar: IconColorset 9
 *FvwmTaskBar: FocusColorset 9
