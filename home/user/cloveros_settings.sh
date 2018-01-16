@@ -27,6 +27,7 @@ l) Upgrade/Install Libre kernel
 c) Update Portage config from binhost
 g) Fix Nvidia doesn't boot problem
 b) Install bluetooth manager
+m) Install VirtualBox
 n) Install proprietary Nvidia drivers
 v) Install Virtualbox/VMWare drivers
 q) Exit"
@@ -246,6 +247,10 @@ case "$choice" in
 		sudo /etc/init.d/bluetooth start
 		sudo blueman-applet&
 		sudo blueman-browse&
+		;;
+
+	m)
+		echo "In progress"
 		;;
 
 	v)
