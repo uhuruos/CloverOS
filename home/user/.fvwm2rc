@@ -1,12 +1,12 @@
-AddToFunc "Move-or-Raise" "M" Move
-+ "M" Raise
+AddToFunc "Move-or-Raise" "M" Raise
++ "M" Move
 + "C" Raise
 +						"C" WindowShade 2
 + "D" Maximize 100 100
 Mouse 1 W M Move-or-Raise
 
-AddToFunc "Resize-or-Raise" "M" Resize
-+ "M" Raise
+AddToFunc "Resize-or-Raise" "M" Raise
++ "M" Resize
 + "C" Raise
 + "D" RaiseLower
 Mouse 3 W M Resize-or-Raise
