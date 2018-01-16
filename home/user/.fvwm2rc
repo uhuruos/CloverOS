@@ -14,11 +14,11 @@ Style "*" ResizeOpaque
 
 EdgeScroll 0 0
 
-BorderStyle active Solid #000000
-BorderStyle inactive Solid #000000
+BorderStyle Active Solid #000000
+BorderStyle Inactive Solid #000000
 
-TitleStyle active Solid #056839
-TitleStyle inactive Solid #056839
+TitleStyle Active Solid #056839
+TitleStyle Inactive Solid #056839
 
 AddToFunc "StartFunction" "I" Module FvwmTaskBar
 AddToFunc DeiconifyRaiseAndFocus
@@ -45,9 +45,8 @@ Style "FvwmTaskBar" NoTitle, !Handles, !Borders, Sticky, WindowListSkip, \
 *FvwmTaskBar: ButtonWidth 180
 *FvwmTaskBar: BellVolume 20
 *FvwmTaskBar: AutoStick
+*FvwmTaskBar: StartName Start
+*FvwmTaskBar: StartMenu FvwmRootMenu
+*FvwmTaskBar: StartIcon mini-exp.xpm
 *FvwmTaskBar: NoIconAction SendToModule FvwmAnimate animate
 *FvwmTaskBar: Action Click3 Menu FvwmWindowOpsMenu
-*FvwmTaskBar: StartIcon mini/fvwm.png
-*FvwmTaskBar: StartName Start
-*FvwmTaskBar: StartMenu StartMenu
-*FvwmTaskBar: StartIcon mini-exp.xpm
