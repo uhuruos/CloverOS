@@ -165,13 +165,12 @@ case "$choice" in
 		;;
 
 	a)
-		echo "In Progress.
-1) Change default ALSA device
+		echo "1) Change default ALSA device
 2) Configure ALSA for OBS
 3) GUI volume control
 4) CLI volume control"
 		read -erp "Select option: " -n 1 choice
-		echo "Choice: $choice"
+		echo "In Progress."
 		;;
 
 	l)
@@ -201,6 +200,41 @@ case "$choice" in
 		echo "Disable Tap to Click: xinput set-prop \"SynPS/2 Synaptics TouchPad\" $tappingid 0"
 		;;
 
+	c)
+		backupportagedir=backupportage$(< /dev/urandom tr -dc 0-9 | head -c 5)
+		sudo mkdir ~/$backupportagedir
+		sudo mv /etc/portage/package.use /etc/portage/package.mask /etc/portage/package.keywords /etc/portage/package.env /etc/portage/package.mask /etc/portage/package.license ~/$backupportagedir
+		sudo wget $gitprefix/binhost_settings/etc/portage/package.use $gitprefix/binhost_settings/etc/portage/package.keywords $gitprefix/binhost_settings/etc/portage/package.env $gitprefix/binhost_settings/etc/portage/package.mask $gitprefix/binhost_settings/etc/portage/package.license -P /etc/portage/
+		sudo rm -R /etc/portage/env/
+		sudo mkdir /etc/portage/env/
+		sudo wget $gitprefix/binhost_settings/etc/portage/env/no-lto $gitprefix/binhost_settings/etc/portage/env/no-lto-graphite $gitprefix/binhost_settings/etc/portage/env/no-lto-graphite-ofast $gitprefix/binhost_settings/etc/portage/env/no-lto-o3 $gitprefix/binhost_settings/etc/portage/env/no-lto-ofast $gitprefix/binhost_settings/etc/portage/env/no-o3 $gitprefix/binhost_settings/etc/portage/env/no-ofast $gitprefix/binhost_settings/etc/portage/env/size -P /etc/portage/env/
+		sudo sh -c "curl -s $gitprefix/binhost_settings/etc/portage/make.conf | grep '^USE=' >> /etc/portage/make.conf"
+		echo -e "\nPortage configuration now mirrors binhost Portage configuration. Previous Portage config stored in ~/$backupportagedir"
+		;;
+
+	g)
+		echo "In progress."
+		;;
+
+	b)
+		echo "Running the following:"
+		echo "sudo emerge blueman"
+		echo "sudo /etc/init.d/bluetooth start"
+		echo "sudo blueman-applet&"
+		echo "sudo blueman-browse&"
+		sudo emerge blueman
+		sudo /etc/init.d/bluetooth start
+		sudo blueman-applet&
+		sudo blueman-browse&
+		;;
+
+	i)
+		echo "Running the following:"
+		echo "sudo emerge virtualbox"
+		echo "depclean -a"
+		echo "In progress."
+		;;
+
 	n)
 		echo "Updating kernel..."
 		echo "Running the following:"
@@ -221,40 +255,6 @@ case "$choice" in
 		sudo eselect opencl set nvidia
 		sudo sh -c 'echo "blacklist nouveau" >> /etc/modprobe.d/blacklist.conf'
 		echo -e "\nNvidia drivers installed, restart X.\nCheck https://wiki.gentoo.org/wiki/NVidia/nvidia-drivers for more info"
-		;;
-
-	c)
-		backupportagedir=backupportage$(< /dev/urandom tr -dc 0-9 | head -c 5)
-		sudo mkdir ~/$backupportagedir
-		sudo mv /etc/portage/package.use /etc/portage/package.mask /etc/portage/package.keywords /etc/portage/package.env /etc/portage/package.mask /etc/portage/package.license ~/$backupportagedir
-		sudo wget $gitprefix/binhost_settings/etc/portage/package.use $gitprefix/binhost_settings/etc/portage/package.keywords $gitprefix/binhost_settings/etc/portage/package.env $gitprefix/binhost_settings/etc/portage/package.mask $gitprefix/binhost_settings/etc/portage/package.license -P /etc/portage/
-		sudo rm -R /etc/portage/env/
-		sudo mkdir /etc/portage/env/
-		sudo wget $gitprefix/binhost_settings/etc/portage/env/no-lto $gitprefix/binhost_settings/etc/portage/env/no-lto-graphite $gitprefix/binhost_settings/etc/portage/env/no-lto-graphite-ofast $gitprefix/binhost_settings/etc/portage/env/no-lto-o3 $gitprefix/binhost_settings/etc/portage/env/no-lto-ofast $gitprefix/binhost_settings/etc/portage/env/no-o3 $gitprefix/binhost_settings/etc/portage/env/no-ofast $gitprefix/binhost_settings/etc/portage/env/size -P /etc/portage/env/
-		sudo sh -c "curl -s $gitprefix/binhost_settings/etc/portage/make.conf | grep '^USE=' >> /etc/portage/make.conf"
-		echo -e "\nPortage configuration now mirrors binhost Portage configuration. Previous Portage config stored in ~/$backupportagedir"
-		;;
-
-	g)
-		echo "In progress, check README."
-		;;
-
-	b)
-		echo "Running the following:"
-		echo "sudo emerge blueman"
-		echo "sudo /etc/init.d/bluetooth start"
-		echo "sudo blueman-applet&"
-		echo "sudo blueman-browse&"
-		sudo emerge blueman
-		sudo /etc/init.d/bluetooth start
-		sudo blueman-applet&
-		sudo blueman-browse&
-		;;
-
-	i)
-		echo "Running the following:"
-		echo "sudo emerge virtualbox"
-		echo "depclean -a"
 		;;
 
 	v)
