@@ -35,9 +35,8 @@ n) Install proprietary Nvidia drivers
 v) Install Virtualbox/VMWare drivers
 q) Exit"
 	read -erp "Select option: " -n 1 choice
+	echo
 fi
-
-echo
 
 case "$choice" in
 	1)
