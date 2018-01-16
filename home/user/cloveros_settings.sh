@@ -27,12 +27,17 @@ l) Upgrade/Install Libre kernel
 c) Update Portage config from binhost
 g) Fix Nvidia doesn't boot problem
 b) Install bluetooth manager
-m) Install VirtualBox
+i) Install VirtualBox
 n) Install proprietary Nvidia drivers
 v) Install Virtualbox/VMWare drivers
 q) Exit"
 
-read -erp "Select option: " -n 1 choice
+if [[ -n "$1" ]]; then
+	choice=$1
+else
+	read -erp "Select option: " -n 1 choice
+fi
+
 echo
 
 case "$choice" in
@@ -90,13 +95,15 @@ case "$choice" in
 			echo -e "\nemerge will now install from source. (/etc/portage/make.conf)\n"
 			read -erp "Copy over binhost Portage config? (/etc/portage/package.use, /etc/portage/package.env, /etc/portage/package.keywords, /etc/portage/package.license, /etc/portage/package.mask) [y/n] " -n 1 binhostyn
 			if [[ $binhostyn == "y" || $binhostyn == "Y" ]]; then
-				sudo rm -R /etc/portage/package.use /etc/portage/package.mask /etc/portage/package.keywords /etc/portage/package.env /etc/portage/package.mask /etc/portage/package.license
+				backupportagedir=backupportage$(< /dev/urandom tr -dc 0-9 | head -c 5)
+				sudo mkdir ~/$backupportagedir
+				sudo mv /etc/portage/package.use /etc/portage/package.mask /etc/portage/package.keywords /etc/portage/package.env /etc/portage/package.mask /etc/portage/package.license ~/$backupportagedir
 				sudo wget $gitprefix/binhost_settings/etc/portage/package.use $gitprefix/binhost_settings/etc/portage/package.keywords $gitprefix/binhost_settings/etc/portage/package.env $gitprefix/binhost_settings/etc/portage/package.mask $gitprefix/binhost_settings/etc/portage/package.license -P /etc/portage/
 				sudo rm -R /etc/portage/env/
 				sudo mkdir /etc/portage/env/
 				sudo wget $gitprefix/binhost_settings/etc/portage/env/no-lto $gitprefix/binhost_settings/etc/portage/env/no-lto-graphite $gitprefix/binhost_settings/etc/portage/env/no-lto-graphite-ofast $gitprefix/binhost_settings/etc/portage/env/no-lto-o3 $gitprefix/binhost_settings/etc/portage/env/no-lto-ofast $gitprefix/binhost_settings/etc/portage/env/no-o3 $gitprefix/binhost_settings/etc/portage/env/no-ofast $gitprefix/binhost_settings/etc/portage/env/size -P /etc/portage/env/
 				sudo sh -c "curl -s $gitprefix/binhost_settings/etc/portage/make.conf | grep '^USE=' >> /etc/portage/make.conf"
-				echo -e "\nPortage configuration now mirrors binhost Portage configuration."
+				echo -e "\nPortage configuration now mirrors binhost Portage configuration. Previous Portage config stored in ~/$backupportagedir"
 			fi
 		else
 			sudo sed -i 's/EMERGE_DEFAULT_OPTS="--keep-going=y --autounmask-write=y --jobs=2"/EMERGE_DEFAULT_OPTS="--keep-going=y --autounmask-write=y --jobs=2 -G"/' /etc/portage/make.conf
@@ -194,19 +201,10 @@ case "$choice" in
 
 	n)
 		echo "Updating kernel..."
-		cd ~
-		tempdir=kernel$(< /dev/urandom tr -dc 0-9 | head -c 5)
-		mkdir $tempdir
-		cd $tempdir
-		wget https://cloveros.ga/s/kernel.tar.xz
-		wget https://cloveros.ga/s/signatures/s/kernel.tar.xz.asc
-		sudo gpg --verify kernel.tar.xz.asc kernel.tar.xz
-		tar xf kernel.tar.xz
-		sudo mv initramfs-genkernel-*-gentoo* kernel-genkernel-*-gentoo* System.map-genkernel-*-gentoo* /boot/
-		sudo cp -R *-gentoo*/ /lib/modules/
-		cd ..
-		rm -R $tempdir
-		sudo grub-mkconfig -o /boot/grub/grub.cfg
+		echo "Running the following:"
+		echo "./cloveros_settings.sh 4"
+		./cloveros_settings.sh 4
+		echo "Installling Nvidia drivers..."
 		echo "Running the following:"
 		echo "sudo emerge nvidia-drivers"
 		echo "sudo depmod -a"
@@ -224,13 +222,15 @@ case "$choice" in
 		;;
 
 	c)
-		sudo rm -R /etc/portage/package.use /etc/portage/package.mask /etc/portage/package.keywords /etc/portage/package.env /etc/portage/package.mask /etc/portage/package.license
+		backupportagedir=backupportage$(< /dev/urandom tr -dc 0-9 | head -c 5)
+		sudo mkdir ~/$backupportagedir
+		sudo mv /etc/portage/package.use /etc/portage/package.mask /etc/portage/package.keywords /etc/portage/package.env /etc/portage/package.mask /etc/portage/package.license ~/$backupportagedir
 		sudo wget $gitprefix/binhost_settings/etc/portage/package.use $gitprefix/binhost_settings/etc/portage/package.keywords $gitprefix/binhost_settings/etc/portage/package.env $gitprefix/binhost_settings/etc/portage/package.mask $gitprefix/binhost_settings/etc/portage/package.license -P /etc/portage/
 		sudo rm -R /etc/portage/env/
 		sudo mkdir /etc/portage/env/
 		sudo wget $gitprefix/binhost_settings/etc/portage/env/no-lto $gitprefix/binhost_settings/etc/portage/env/no-lto-graphite $gitprefix/binhost_settings/etc/portage/env/no-lto-graphite-ofast $gitprefix/binhost_settings/etc/portage/env/no-lto-o3 $gitprefix/binhost_settings/etc/portage/env/no-lto-ofast $gitprefix/binhost_settings/etc/portage/env/no-o3 $gitprefix/binhost_settings/etc/portage/env/no-ofast $gitprefix/binhost_settings/etc/portage/env/size -P /etc/portage/env/
 		sudo sh -c "curl -s $gitprefix/binhost_settings/etc/portage/make.conf | grep '^USE=' >> /etc/portage/make.conf"
-		echo -e "\nPortage configuration now mirrors binhost Portage configuration."
+		echo -e "\nPortage configuration now mirrors binhost Portage configuration. Previous Portage config stored in ~/$backupportagedir"
 		;;
 
 	g)
@@ -249,8 +249,10 @@ case "$choice" in
 		sudo blueman-browse&
 		;;
 
-	m)
-		echo "In progress"
+	i)
+		echo "Running the following:"
+		echo "sudo emerge virtualbox"
+		echo "depclean -a"
 		;;
 
 	v)
