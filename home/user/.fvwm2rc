@@ -14,17 +14,12 @@ Mouse 3 W M Resize-or-Raise
 OpaqueMoveSize 1000
 
 Style "*" BorderWidth 1, HandleWidth 1
-#####
-# FvwmTaskBar
 
-# Start Taskbar
 AddToFunc "StartFunction" "I" Module FvwmTaskBar
-# For window raising
 AddToFunc DeiconifyRaiseAndFocus
 + I Iconify off
 + I Raise
 + I Focus
-
 Style "FvwmTaskBar" NoTitle, !Handles, !Borders, Sticky, WindowListSkip, \
   CirculateSkip, StaysOnBottom, FixedPosition, FixedSize, !Iconifiable
   DestroyModuleConfig FvwmTaskBar: *
@@ -54,5 +49,3 @@ Style "FvwmTaskBar" NoTitle, !Handles, !Borders, Sticky, WindowListSkip, \
 *FvwmTaskBar: StartName Start
 *FvwmTaskBar: StartMenu StartMenu
 *FvwmTaskBar: StartIcon mini-exp.xpm
-
-##########################################
