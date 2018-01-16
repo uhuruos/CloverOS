@@ -15,6 +15,11 @@ OpaqueMoveSize 1000
 
 Style "*" BorderWidth 1, HandleWidth 1
 
+BorderStyle active Solid black
+BorderStyle inactive Solid black
+TitleStyle active Solid #056839
+TitleStyle inactive Solid #056839
+
 AddToFunc "StartFunction" "I" Module FvwmTaskBar
 AddToFunc DeiconifyRaiseAndFocus
 + I Iconify off
