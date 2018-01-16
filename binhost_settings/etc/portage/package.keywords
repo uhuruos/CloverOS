@@ -220,6 +220,11 @@ media-sound/libvisual-projectm-alsa
 media-sound/audacious
 media-plugins/audacious-plugins
 net-p2p/rtorrent-ps **
+media-sound/coquillo
+media-gfx/phototonic
+media-sound/bempc
+media-sound/qtractor
+media-sound/protux
 
 #dependencies
 #staruml-bin

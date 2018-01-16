@@ -250,7 +250,7 @@ net-misc/openssh -bindist
 dev-qt/qtnetwork -bindist
 dev-libs/botan -bindist
 dev-qt/qtscript scripttools
-dev-qt/qtmultimedia widgets
+dev-qt/qtmultimedia widgets qml
 dev-qt/qtcore icu
 dev-qt/qtwebkit printsupport
 app-text/poppler qt5 cairo

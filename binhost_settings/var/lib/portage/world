@@ -254,6 +254,7 @@ kde-apps/filelight
 kde-apps/gwenview
 kde-apps/kcachegrind
 kde-apps/kdenlive
+kde-apps/konqueror
 kde-apps/konsole
 kde-misc/kdirstat
 kde-misc/krusader
@@ -480,10 +481,14 @@ media-gfx/inkscape
 media-gfx/jpegoptim
 media-gfx/krita
 media-gfx/librecad
+media-gfx/maim
 media-gfx/mcomix
 media-gfx/mirage
+media-gfx/nomacs
 media-gfx/opentoonz
 media-gfx/optipng
+media-gfx/photoqt
+media-gfx/phototonic
 media-gfx/pinta
 media-gfx/pngcrush
 media-gfx/pngquant
@@ -566,7 +571,6 @@ media-plugins/vapoursynth-waifu2x-w2xc
 media-plugins/vapoursynth-wwxd
 media-plugins/vapoursynth-yadifmod
 media-sound/alsa-utils
-media-sound/alsamixergui
 media-sound/amsynth
 media-sound/apulse
 media-sound/aqualung
@@ -576,8 +580,10 @@ media-sound/audacious
 media-sound/audacity
 media-sound/beets
 media-sound/bluez-alsa
+media-sound/cantata
 media-sound/clementine
 media-sound/cmus
+media-sound/coquillo
 media-sound/darksnow
 media-sound/deadbeef
 media-sound/easytag
@@ -609,8 +615,12 @@ media-sound/murmur
 media-sound/ncmpc
 media-sound/ncmpcpp
 media-sound/pianobar
+media-sound/protux
 media-sound/puddletag
+media-sound/qastools
 media-sound/qmmp
+media-sound/qmpdclient
+media-sound/qtractor
 media-sound/rhythmbox
 media-sound/ripperx
 media-sound/rosegarden
@@ -634,6 +644,7 @@ media-sound/yoshimi
 media-tv/plex-media-server
 media-video/aegisub
 media-video/avidemux
+media-video/baka-mplayer
 media-video/cinelerra
 media-video/dvdbackup
 media-video/ffmpeg
@@ -646,6 +657,7 @@ media-video/mkvtoolnix
 media-video/mpv
 media-video/obs-studio
 media-video/openshot
+media-video/pitivi
 media-video/smplayer
 media-video/smtube
 media-video/subtitleripper
@@ -828,8 +840,11 @@ www-client/links
 www-client/lynx
 www-client/midori
 www-client/palemoon-bin
+www-client/qupzilla
+www-client/qutebrowser
 www-client/seamonkey
 www-client/surf
+www-client/torbrowser
 www-client/torbrowser-launcher
 www-client/uget
 www-client/w3m

@@ -134,7 +134,7 @@ IRC client - weechat
 ### How do I install systemd/avahi/pulseaudio?
 I am proud to announce that CloverOS is 100% Poettering-free.
 
-### It doesn't boot
+### It doesn't boot after installation
 Take out your boot usb/cd.
 
 ### Steam doesn't install
@@ -407,9 +407,6 @@ Replace card 0 with your device number
 
 ### Does CloverOS have binaries?
 It's a pre-setup Gentoo image with `PORTAGE_BINHOST="https://cloveors.ga" emerge -G package` preset in /etc/portage/make.conf. It uses Gentoo for everything (versions, ebuilds, etc.) and gets it from cloveros.ga instead of building
-
-### How do I open a terminal
-Right click desktop.
 
 ### Known issues
 - Initramfs (genkernel) doesn't boot btrfs

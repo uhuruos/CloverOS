@@ -25,6 +25,7 @@ a) ALSA settings
 t) Enable tap to click on touchpad
 l) Upgrade/Install Libre kernel
 c) Update Portage config from binhost
+g) Fix Nvidia doesn't boot problem
 b) Install bluetooth manager
 n) Install proprietary Nvidia drivers
 v) Install Virtualbox/VMWare drivers
@@ -154,7 +155,8 @@ case "$choice" in
 		;;
 
 	a)
-		echo "1) Change default ALSA device
+		echo "In Progress.
+1) Change default ALSA device
 2) Configure ALSA for OBS
 3) GUI volume control
 4) CLI volume control"
@@ -228,6 +230,10 @@ case "$choice" in
 		sudo wget $gitprefix/binhost_settings/etc/portage/env/no-lto $gitprefix/binhost_settings/etc/portage/env/no-lto-graphite $gitprefix/binhost_settings/etc/portage/env/no-lto-graphite-ofast $gitprefix/binhost_settings/etc/portage/env/no-lto-o3 $gitprefix/binhost_settings/etc/portage/env/no-lto-ofast $gitprefix/binhost_settings/etc/portage/env/no-o3 $gitprefix/binhost_settings/etc/portage/env/no-ofast $gitprefix/binhost_settings/etc/portage/env/size -P /etc/portage/env/
 		sudo sh -c "curl -s $gitprefix/binhost_settings/etc/portage/make.conf | grep '^USE=' >> /etc/portage/make.conf"
 		echo -e "\nPortage configuration now mirrors binhost Portage configuration."
+		;;
+
+	g)
+		echo "In progress, check README."
 		;;
 
 	b)
