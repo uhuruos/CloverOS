@@ -1,9 +1,11 @@
 AddToFunc "Move" "M" Raise
 + "M" Move
++ "C" Raise
 Mouse 1 W M Move
 
 AddToFunc "Resize" "M" Raise
 + "M" Resize
++ "C" Raise
 Mouse 3 W M Resize
 
 OpaqueMoveSize 1000
