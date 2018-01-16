@@ -121,15 +121,15 @@ chown -R $user /home/$user/
 
 sed -i "s@c1:12345:respawn:/sbin/agetty --noclear 38400 tty1 linux@c1:12345:respawn:/sbin/agetty -a $user --noclear 38400 tty1 linux@" /etc/inittab
 sed -i 's/^/#/' /home/$user/.bash_profile
-echo -e 'if [ -z "\$DISPLAY" ]; then
+echo -e "if [ -z \"\$DISPLAY\" ]; then
 export DISPLAY=:0
 X&
 sleep 1
 twm&
 feh --bg-max wallpaper.png
 xbindkeys
-urxvt -e sudo ./livecd_install.sh
-fi' >> /home/$user/.bash_profile
+urxvt -geometry \$(xrandr | awk 'NR==1{print \"80x24+\"\$8/2-283\"+\"\$10/2-191}') -e sudo ./livecd_install.sh
+fi" >> /home/$user/.bash_profile
 wget https://gitgud.io/cloveros/cloveros/raw/master/livecd_install.sh -O /home/$user/livecd_install.sh
 chmod +x /home/$user/livecd_install.sh
 
