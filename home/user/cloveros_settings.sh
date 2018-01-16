@@ -11,7 +11,10 @@ mirrors=(
 
 gitprefix="https://gitgud.io/cloveros/cloveros/raw/master"
 
-echo "1) Update cloveros_settings.sh
+if [[ -n "$1" ]]; then
+	choice=$1
+else
+	echo "1) Update cloveros_settings.sh
 2) Change mirrors
 3) Change default ALSA (sound) device
 4) Upgrade kernel (Current version: 4.14.13)
@@ -31,10 +34,6 @@ i) Install VirtualBox
 n) Install proprietary Nvidia drivers
 v) Install Virtualbox/VMWare drivers
 q) Exit"
-
-if [[ -n "$1" ]]; then
-	choice=$1
-else
 	read -erp "Select option: " -n 1 choice
 fi
 
@@ -136,7 +135,7 @@ case "$choice" in
 		;;
 
 	7)
-		sudo date +%s -s @$(curl -s http://www.convert-unix-time.com/ | grep "Seconds since" | sed -r 's/.*t=(.*)" id.*/\1/')
+		sudo date +%s -s @$(curl -s http://www.convert-unix-time.com/ | grep "Seconds since" | sed -r 's/.*t=(.*)" id.*/\1/') > /dev/null
 		echo -e "\nTime set."
 		;;
 
