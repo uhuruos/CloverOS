@@ -50,7 +50,7 @@ Colorset 3 fg #000000, bg #ffffff, hi #056839, sh #056839
 MenuStyle * MenuColorset 3
 MenuStyle * BorderWidth 1
 MenuStyle * TitleUnderlines0 0
-MenuStyle * ItemFormat "  %l"
+MenuStyle * ItemFormat " %l "
 
 DestroyMenu MenuFvwmRoot
 AddToMenu MenuFvwmRoot "Applications" Title
