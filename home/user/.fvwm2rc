@@ -13,7 +13,7 @@ OpaqueMoveSize unlimited
 Style "*" BorderWidth 1, HandleWidth 1
 
 Style "*" ResizeOpaque
-DeskTopSize 1x1
+
 EdgeScroll 0 0
 
 Key Tab A SM SwitchWindow
@@ -42,6 +42,7 @@ Style "*" ForeColor #ffffff, BackColor #ffffff, HilightBack #ffffff, HilightFore
 
 Colorset 2 fg #000000, bg #ffffff, hi #056839
 MenuStyle * MenuColorset 2
+MenuStyle * BorderWidth 1
 
 DestroyMenu MenuFvwmRoot
 AddToMenu MenuFvwmRoot "Applications" Title
