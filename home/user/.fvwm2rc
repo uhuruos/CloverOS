@@ -6,7 +6,7 @@ AddToFunc "WindowResize" "M" Raise
 + "M" Resize
 Mouse 3 W M WindowResize
 
-Mouse 2 W M Menu MenuFvwmRoot
+Mouse 2 R M Menu MenuFvwmRoot
 
 OpaqueMoveSize unlimited
 
