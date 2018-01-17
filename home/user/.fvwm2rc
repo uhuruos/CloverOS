@@ -21,6 +21,9 @@ BorderStyle Inactive Colorset 50
 TitleStyle Active Solid #056839
 TitleStyle Inactive Solid #056839
 
+Style "*" SmartPlacement
+Style "*" RandomPlacement
+
 AddToFunc "StartFunction" "I" Module FvwmTaskBar
 AddToFunc DeiconifyRaiseAndFocus
 + I Iconify off
