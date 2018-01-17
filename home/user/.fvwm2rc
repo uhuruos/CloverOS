@@ -42,13 +42,14 @@ ButtonStyle All -- UseTitleStyle
 Style "*" SmartPlacement
 Style "*" RandomPlacement
 
-Style "*" ForeColor #ffffff, BackColor #ffffff, HilightBack #ffffff, HilightFore #ffffff
+Colorset 2 fg #ffffff, bg #ffffff, hi #ffffff, sh #ffffff
+Style "*" Colorset 2
 
-Colorset 2 fg #000000, bg #ffffff, hi #056839, sh #056839
-MenuStyle * MenuColorset 2
+Colorset 3 fg #000000, bg #ffffff, hi #056839, sh #056839
+MenuStyle * MenuColorset 3
 MenuStyle * BorderWidth 1
-Colorset 3 bg #000000, fg #ffffff, hi #056839, sh #056839
-MenuStyle * ActiveColorset 3
+Colorset 4 bg #000000, fg #000000, hi #000000, sh #000000
+MenuStyle * ActiveColorset 4
 MenuStyle * TitleUnderlines0 0
 
 DestroyMenu MenuFvwmRoot
