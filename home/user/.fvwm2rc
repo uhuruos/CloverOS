@@ -11,7 +11,7 @@ OpaqueMoveSize unlimited
 Style "*" BorderWidth 1, HandleWidth 1
 
 Style "*" ResizeOpaque
-
+DeskTopSize 1x1
 EdgeScroll 0 0
 
 Colorset 1 bg #000000
