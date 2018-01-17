@@ -22,7 +22,7 @@ TitleStyle AllActive Solid #056839 -- Flat
 TitleStyle AllInactive Solid #056839 -- Flat
 
 Mouse 1 6 A Iconify
-Mouse 1 2 4 Maximize 
+Mouse 1 4 A Maximize 
 Mouse 1 2 A Close
 
 Style "*" SmartPlacement
