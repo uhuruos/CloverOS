@@ -24,12 +24,10 @@ Style * ResizeOpaque
 
 EdgeScroll 0 0
 
-Colorset 0 bg #000000
-BorderStyle Active Colorset 0
-BorderStyle Inactive Colorset 0
+Colorset 0 bg #000000, sh #056839, hi #ffffff
+BorderStyle All Colorset 0
 
-Colorset 1 bg #056839
-TitleStyle Colorset 1 -- Flat
+TitleStyle Solid #056839 -- Flat
 
 Mouse 1 6 A Iconify
 Mouse 1 4 A Maximize 
@@ -38,7 +36,7 @@ Mouse 1 2 A Close
 ButtonStyle 6 Vector 3 0+4px50+1p@0 100-5px50+1p@0 100-5px50-2p@0
 ButtonStyle 4 Vector 5 25x25@0 25x75@0 75x75@1 75x25@1 25x25@0
 ButtonStyle 2 Vector 17 20x20@1 30x20@1 50x40@1 70x20@1 80x20@1 80x30@0 60x50@0 80x70@1 80x80@0 70x80@0 50x60@0 30x80@0 20x80@0 20x70@0 40x50@1 20x30@0 20x20@1
-ButtonStyle All -- UseTitleStyle Flat
+ButtonStyle All -- UseBorderStyle Flat
 
 Style * SmartPlacement
 Style * RandomPlacement
