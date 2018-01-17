@@ -14,8 +14,9 @@ Style "*" ResizeOpaque
 
 EdgeScroll 0 0
 
-BorderStyle Active Solid #000000
-BorderStyle Inactive Solid #000000
+Colorset 50 fg black, bg black
+BorderStyle Active ColorSet 50
+BorderStyle Inactive ColorSet 50
 
 TitleStyle Active Solid #056839
 TitleStyle Inactive Solid #056839
