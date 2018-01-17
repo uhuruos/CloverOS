@@ -155,7 +155,7 @@ case "$choice" in
 
 	f)
 		echo "Running the following:"
-		if ! type /usr/bin/fvwm; then
+		if [ ! -f /usr/bin/fvwm ]; then
 			echo "sudo emerge fvwm"
 			sudo emerge fvwm
 		fi
@@ -201,7 +201,7 @@ case "$choice" in
 		;;
 
 	t)
-		if ! type /usr/bin/xinput; then
+		if [ ! -f /usr/bin/xinput ]; then
 			sudo emerge xinput
 		fi
 		tappingid=$(xinput list-props "SynPS/2 Synaptics TouchPad" | grep 'Tapping Enabled (' | awk '{print $4}' | grep -o "[0-9]\+")
