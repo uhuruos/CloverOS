@@ -75,9 +75,10 @@ AddToMenu MenuFvwmRoot Applications Title
 + "reboot" Exec sudo reboot
 + "shutdown" Exec sudo poweroff
 
-Colorset 3 fg #000000, bg #ffffff, hi #056839, sh #056839
+Colorset 3 fg #000000, bg #ffffff, hi #000000, sh #000000
 MenuStyle Applications MenuColorset 3
 MenuStyle Applications HilightBack #000000
+MenuStyle HilightTitleBack #056839
 MenuStyle Applications ActiveFore #ffffff
 MenuStyle Applications BorderWidth 1
 MenuStyle Applications TitleUnderlines0 0
