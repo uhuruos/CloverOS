@@ -54,7 +54,7 @@ Style "FvwmTaskBar" NoTitle, !Handles, !Borders, Sticky, WindowListSkip, \
 *FvwmTaskBar: BellVolume 20
 *FvwmTaskBar: AutoStick
 *FvwmTaskBar: StartName Start
-*FvwmTaskBar: StartMenu FvwmRootMenu
+*FvwmTaskBar: StartMenu MenuFvwmRoot
 *FvwmTaskBar: StartIcon mini-exp.xpm
 *FvwmTaskBar: NoIconAction SendToModule FvwmAnimate animate
 *FvwmTaskBar: Action Click3 Menu FvwmWindowOpsMenu
