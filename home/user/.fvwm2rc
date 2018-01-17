@@ -34,7 +34,7 @@ Style "*" RandomPlacement
 
 Style "*" ForeColor #ffffff, BackColor #ffffff, HilightBack #ffffff, HilightFore #ffffff
 
-Colorset 2 bg #056839, fg #ffffff
+Colorset 2 bg #ffffff, fg #000000
 Colorset 3 bg #ffffff, fg #000000
 AddToFunc "StartFunction" "I" Module FvwmTaskBar
 AddToFunc DeiconifyRaiseAndFocus
