@@ -47,12 +47,13 @@ Style * Colorset 2
 Style * HilightColorset 2
 
 Colorset 3 fg #000000, bg #ffffff, hi #056839, sh #056839
-MenuStyle MenuFvwmRoot MenuColorset 3
-MenuStyle MenuFvwmRoot HilightBack #000000
-MenuStyle MenuFvwmRoot ActiveFore #ffffff
-MenuStyle MenuFvwmRoot BorderWidth 1
-MenuStyle MenuFvwmRoot TitleUnderlines0 0
-MenuStyle MenuFvwmRoot ItemFormat  %l 
+MenuStyle Appstyle MenuColorset 3
+MenuStyle Appstyle HilightBack #000000
+MenuStyle Appstyle ActiveFore #ffffff
+MenuStyle Appstyle BorderWidth 1
+MenuStyle Appstyle TitleUnderlines0 0
+MenuStyle Appstyle ItemFormat  %l 
+ChangeMenuStyle Appstyle MenuFvwmRoot
 
 DestroyMenu MenuFvwmRoot
 AddToMenu MenuFvwmRoot Applications Title
