@@ -44,6 +44,7 @@ Style "*" RandomPlacement
 
 Colorset 2 fg #ffffff, bg #ffffff, hi #ffffff, sh #ffffff
 Style "*" Colorset 2
+Style "*" HilightColorset 2
 
 Colorset 3 fg #000000, bg #ffffff, hi #056839, sh #056839
 MenuStyle * MenuColorset 3
