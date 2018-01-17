@@ -15,9 +15,6 @@ Style "*" ResizeOpaque
 EdgeScroll 0 0
 
 Colorset 1 bg #000000
-Colorset 2 bg #056839, fg #ffffff
-Colorset 3 bg #ffffff, fg #000000
-
 BorderStyle Active Colorset 1
 BorderStyle Inactive Colorset 1
 
@@ -37,6 +34,8 @@ Style "*" RandomPlacement
 
 Style "*" ForeColor #ffffff, BackColor #ffffff, HilightBack #ffffff, HilightFore #ffffff
 
+Colorset 2 bg #056839, fg #ffffff
+Colorset 3 bg #ffffff, fg #000000
 AddToFunc "StartFunction" "I" Module FvwmTaskBar
 AddToFunc DeiconifyRaiseAndFocus
 + I Iconify off
