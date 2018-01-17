@@ -128,7 +128,7 @@ sleep 1
 twm&
 feh --bg-max wallpaper.png
 xbindkeys
-urxvt -geometry \$(xrandr | grep "Screen 0" | awk "NR==1{print \"80x24+\"\$8/2-283\"+\"\$10/2-191}") -e sudo ./livecd_install.sh
+urxvt -geometry \$(xrandr | awk "NR==1{print \"80x24+\"\\\$8/2-283\"+\"\\\$10/2-191}") -e sudo ./livecd_install.sh
 fi' >> /home/$user/.bash_profile
 wget https://gitgud.io/cloveros/cloveros/raw/master/livecd_install.sh -O /home/$user/livecd_install.sh
 chmod +x /home/$user/livecd_install.sh
