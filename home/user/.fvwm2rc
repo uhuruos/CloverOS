@@ -28,9 +28,8 @@ Colorset 0 bg #000000
 BorderStyle Active Colorset 0
 BorderStyle Inactive Colorset 0
 
-Colorset 1 bg #056839, fg #ffffff
-TitleStyle AllActive Colorset 1 -- Flat
-TitleStyle AllInactive Colorset 1 -- Flat
+TitleStyle AllActive Solid #056839 -- Flat
+TitleStyle AllInactive Solid #056839 -- Flat
 
 Mouse 1 6 A Iconify
 Mouse 1 4 A Maximize 
@@ -44,9 +43,8 @@ ButtonStyle All -- UseTitleStyle
 Style * SmartPlacement
 Style * RandomPlacement
 
-Colorset 2 fg #ffffff, bg #ffffff, hi #ffffff, sh #ffffff
-Style * Colorset 2
-Style * HilightColorset 2
+Style * ForeColor #ffffff
+Style * HilightFore #ffffff
 
 DestroyMenu MenuFvwmRoot
 AddToMenu MenuFvwmRoot Applications Title
@@ -77,10 +75,10 @@ AddToMenu MenuFvwmRoot Applications Title
 + "reboot" Exec sudo reboot
 + "shutdown" Exec sudo poweroff
 
-Colorset 3 fg #000000, bg #ffffff, hi #000000, sh #000000
-MenuStyle Applications MenuColorset 3
-Colorset 4 fg #ffffff, bg #056839, hi #056839, sh #056839
-MenuStyle Applications TitleColorset 4
+Colorset 1 fg #000000, bg #ffffff, hi #000000, sh #000000
+MenuStyle Applications MenuColorset 1
+Colorset 2 fg #ffffff, bg #056839, hi #056839, sh #056839
+MenuStyle Applications TitleColorset 2
 MenuStyle Applications HilightTitleBack #056839
 MenuStyle Applications HilightBack #000000
 MenuStyle Applications ActiveFore #ffffff
