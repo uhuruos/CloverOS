@@ -28,6 +28,8 @@ Mouse 1 2 A Close
 Style "*" SmartPlacement
 Style "*" RandomPlacement
 
+Colorset 0 fg #ffffff
+
 AddToFunc "StartFunction" "I" Module FvwmTaskBar
 AddToFunc DeiconifyRaiseAndFocus
 + I Iconify off
