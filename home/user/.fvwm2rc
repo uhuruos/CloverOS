@@ -8,6 +8,8 @@ Mouse 3 W M WindowResize
 
 Mouse 2 R M Menu MenuFvwmRoot
 
+Key Tab A SM WindowList
+
 OpaqueMoveSize unlimited
 
 Style "*" BorderWidth 1, HandleWidth 1
@@ -15,8 +17,6 @@ Style "*" BorderWidth 1, HandleWidth 1
 Style "*" ResizeOpaque
 
 EdgeScroll 0 0
-
-Key Tab A SM SwitchWindow
 
 Colorset 0 bg #000000
 BorderStyle Active Colorset 0
