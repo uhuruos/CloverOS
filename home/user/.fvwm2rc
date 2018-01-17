@@ -28,7 +28,7 @@ Mouse 1 2 A Close
 
 ButtonStyle 6 Vector 3 0+4px50+1p@2 100-5px50+1p@2 100-5px50-2p@2 -- Flat
 ButtonStyle 4 Vector 5 25x25@2 25x75@2 75x75@3 75x25@3 25x25@2 -- Flat
-ButtonStyle 2 Vector 7 70-1px15-1p@2 30x55@3 50x55@2 40x85@3 80x45@2 60x45@3 70x15@2 -- Flat
+ButtonStyle 2 Vector 17 20x20@3 30x20@3 50x40@3 70x20@3 80x20@3 80x30@2 60x50@2 80x70@3 80x80@2 70x80@2 50x60@2 30x80@2 20x80@2 20x70@2 40x50@3 20x30@2 20x20@3 -- Flat
 ButtonStyle All -- UseTitleStyle
 
 Style "*" SmartPlacement
