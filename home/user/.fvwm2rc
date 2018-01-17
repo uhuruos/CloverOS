@@ -25,7 +25,7 @@ Style * ResizeOpaque
 EdgeScroll 0 0
 
 Colorset 0 bg #000000, sh #056839, hi #ffffff
-BorderStyle All Colorset 0
+BorderStyle Colorset 0
 
 TitleStyle Solid #056839 -- Flat
 
