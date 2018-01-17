@@ -54,7 +54,7 @@ if [ -z "$DISPLAY" ]; then
     wmspost[w]="feh --bg-max wallpaper.png & xbindkeys & $taptoclick &"
     wmspost[z]="ccsm &"
 
-    if [[ "$choice" == "y" || "$choice" == "Y"]]; then
+    if [[ "$choice" == "y" || "$choice" == "Y" ]]; then
         if [ ! -f /usr/bin/fvwm ]; then
             wms[y]=twm
             wms[Y]=twm
