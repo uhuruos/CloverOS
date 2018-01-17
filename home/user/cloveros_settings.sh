@@ -161,7 +161,7 @@ case "$choice" in
 		fi
 		echo "rm .fvwm2rc && wget $gitprefix/home/user/.fvwm2rc"
 		rm .fvwm2rc
-		wget $gitprefix"/home/user/.fvwm2rc
+		wget $gitprefix/home/user/.fvwm2rc
 		;;
 
 	u)
