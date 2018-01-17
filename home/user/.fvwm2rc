@@ -53,10 +53,10 @@ MenuStyle Appstyle ActiveFore #ffffff
 MenuStyle Appstyle BorderWidth 1
 MenuStyle Appstyle TitleUnderlines0 0
 MenuStyle Appstyle ItemFormat  %l 
-ChangeMenuStyle Appstyle MenuFvwmRoot
 
 DestroyMenu MenuFvwmRoot
 AddToMenu MenuFvwmRoot Applications Title
++ ChangeMenuStyle Appstyle MenuFvwmRoot
 + "urxvt" Exec if pgrep urxvtd; then urxvtc -e zsh; else urxvtd -o -f && urxvtc -e zsh; fi
 + "xfe" Exec xfe
 + "wifi" Exec sudo rc-service wpa_supplicant start & wpa_gui
