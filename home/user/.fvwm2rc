@@ -14,6 +14,8 @@ Style "*" ResizeOpaque
 
 EdgeScroll 0 0
 
+Key Tab A SM FuncSwitchWindow
+
 Colorset 1 bg #000000
 BorderStyle Active Colorset 1
 BorderStyle Inactive Colorset 1
@@ -64,69 +66,3 @@ AddToMenu MenuFvwmRoot "Applications" Title
 + "sleep" Exec sudo sudo sh -c 'echo -n mem > /sys/power/state'
 + "reboot" Exec sudo reboot
 + "shutdown" Exec sudo poweroff
-
-Colorset 2 bg #ffffff, fg #000000
-Colorset 3 bg #056839, fg #ffffff
-AddToFunc "StartFunction" "I" Module FvwmTaskBar
-AddToFunc DeiconifyRaiseAndFocus
-+ I Iconify off
-+ I Raise
-+ I Focus
-Style "FvwmTaskBar" NoTitle, !Handles, !Borders, Sticky, WindowListSkip, \
-  CirculateSkip, StaysOnBottom, FixedPosition, FixedSize, !Iconifiable
-  DestroyModuleConfig FvwmTaskBar: *
-*FvwmTaskBar: Geometry +0-0
-*FvwmTaskBar: Rows 1
-*FvwmTaskBar: Fore #056839
-*FvwmTaskBar: Back #000000
-*FvwmTaskBar: Colorset 3
-*FvwmTaskBar: FocusColorset 3
-*FvwmTaskBar: IconColorset 2
-*FvwmTaskBar: TipsColorset 2
-*FvwmTaskBar: UseSkipList
-*FvwmTaskBar: UseIconNames
-*FvwmTaskBar: ShowTips
-*FvwmTaskBar: Action Click1 DeiconifyRaiseAndFocus
-*FvwmTaskBar: Action Click2 Iconify On
-*FvwmTaskBar: Action Click3 Lower
-*FvwmTaskBar: ButtonWidth 180
-*FvwmTaskBar: BellVolume 20
-*FvwmTaskBar: AutoStick
-*FvwmTaskBar: StartName Start
-*FvwmTaskBar: StartMenu MenuFvwmRoot
-*FvwmTaskBar: StartIcon mini-exp.xpm
-*FvwmTaskBar: NoIconAction SendToModule FvwmAnimate animate
-*FvwmTaskBar: Action Click3 Menu FvwmWindowOpsMenu
-
-MenuStyle * PopupDelayed, PopupDelay 300, PopdownImmediately
-MenuStyle * PopupOffset -5 100, TitleWarpOff
-MenuStyle * TitleUnderlines2, SeparatorsLong, TrianglesSolid
-MenuStyle * AnimationOff, AutomaticHotkeysOff
-MenuStyle * BorderWidth 1
-MenuStyle * PopupAsSubmenu, HoldSubmenus, SubmenusRight
-MenuStyle * ItemFormat "%|%5.5i%1.3l%2.3>%|"
-MenuStyle * VerticalItemSpacing 1 1, VerticalTitleSpacing 2 2
-MenuStyle * MenuColorset 2
-MenuStyle * ActiveFore 2
-MenuStyle * ActiveColorset 2
-
-DestroyMenu FvwmWindowOpsMenu
-AddToMenu   FvwmWindowOpsMenu "Window Operations" Title
-+ "Move"  Move
-+ "Resize"  Resize
-+ "(De)Iconify"  Iconify
-+ "(Un)Maximize"  Maximize
-+ "(Un)Shade"  WindowShade
-+ "(Un)Stick"  Stick
-+ "" Nop
-+ "Close"  Close
-+ "Destroy"  Destroy
-+ "" Nop
-+ "StaysOnTop"  Pick (CirculateHit) Layer 0 6
-+ "Layer +1"  Pick (CirculateHit) Layer +1
-+ "StaysPut"  Pick (CirculateHit) Layer 0 4
-+ "Layer -1"  Pick (CirculateHit) Layer -1
-+ "StaysOnBottom"  Pick (CirculateHit) Layer 0 2
-+ "" Nop
-+ "Window Screenshot"  Pick (CirculateHit) FvwmWindowScreenshot
-+ "Screenshot" FvwmDesktopScreenshot 5
