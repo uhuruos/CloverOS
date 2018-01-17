@@ -152,4 +152,4 @@ AddToMenu   FvwmProgramsMenu "Programs" Title
 + "Filezilla%menu/xroach.png%"  Exec filezilla
 + "Wallpapers%menu/xroach.png%"  Exec nitrogen
 + "Resolution%menu/xroach.png%"  Exec arandr
-+ "Dick Management%menu/xroach.png%"  Exec sudo gparted
++ "Disk Management%menu/xroach.png%"  Exec sudo gparted
