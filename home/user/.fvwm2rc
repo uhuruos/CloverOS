@@ -40,7 +40,7 @@ Style "*" RandomPlacement
 
 Style "*" ForeColor #ffffff, BackColor #ffffff, HilightBack #ffffff, HilightFore #ffffff
 
-Colorset 2 fg #000000, bg #ffffff, hi #056839
+Colorset 2 fg #000000, bg #ffffff, hi #056839, sh #056839
 MenuStyle * MenuColorset 2
 MenuStyle * BorderWidth 1
 
