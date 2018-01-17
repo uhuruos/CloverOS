@@ -49,10 +49,10 @@ Style * HilightColorset 2
 Colorset 3 fg #000000, bg #ffffff, hi #056839, sh #056839
 MenuStyle * MenuColorset 3
 MenuStyle * HilightBack #000000
+MenuStyle * ActiveFore #ffffff
 MenuStyle * BorderWidth 1
 MenuStyle * TitleUnderlines0 0
 MenuStyle * ItemFormat " %l "
-MenuStyle * Greyed #000000, ActiveFore #000000
 
 DestroyMenu MenuFvwmRoot
 AddToMenu MenuFvwmRoot "Applications" Title
