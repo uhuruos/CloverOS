@@ -53,7 +53,7 @@ MenuStyle * ActiveColorset 4
 MenuStyle * BorderWidth 1
 MenuStyle * TitleUnderlines0 0
 MenuStyle * ItemFormat " %l "
-MenuStyle * Hilight3DOff
+MenuStyle * !HilightBack, Hilight3DOff
 
 DestroyMenu MenuFvwmRoot
 AddToMenu MenuFvwmRoot "Applications" Title
