@@ -10,6 +10,8 @@ Mouse 2 A M Menu MenuFvwmRoot
 
 Mouse 3 R A Menu MenuFvwmRoot
 
+Mouse 1 R A -
+
 Key Tab A SM WindowList Root c c NoDeskSort
 
 OpaqueMoveSize unlimited
