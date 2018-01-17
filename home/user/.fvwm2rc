@@ -50,7 +50,6 @@ Style "FvwmTaskBar" NoTitle, !Handles, !Borders, Sticky, WindowListSkip, \
 *FvwmTaskBar: Back #000000
 *FvwmTaskBar: Colorset 3
 *FvwmTaskBar: IconColorset 2
-*FvwmTaskBar: FocusColorset 2
 *FvwmTaskBar: TipsColorset 2
 *FvwmTaskBar: UseSkipList
 *FvwmTaskBar: UseIconNames
