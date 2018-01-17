@@ -14,7 +14,7 @@ Style "*" ResizeOpaque
 
 EdgeScroll 0 0
 
-Colorset 50 fg #000000
+Colorset 50 bg #000000
 BorderStyle Active ColorSet 50
 BorderStyle Inactive ColorSet 50
 
