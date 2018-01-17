@@ -18,8 +18,9 @@ Colorset 1 bg #000000
 BorderStyle Active Colorset 1
 BorderStyle Inactive Colorset 1
 
-TitleStyle Active Solid #056839
-TitleStyle Inactive Solid #056839
+Colorset 1 bg #FFFFFF, fg #FFFFFF, hi #FFFFFF
+TitleStyle AllActive Colorset 2 -- Flat
+TitleStyle AllInactive Colorset 2 -- Flat
 
 Mouse 1 6 A Iconify
 Mouse 1 2 4 Maximize 
@@ -28,7 +29,7 @@ Mouse 1 2 A Close
 Style "*" SmartPlacement
 Style "*" RandomPlacement
 
-Colorset 0 fg #ffffff, bg #ffffff
+Colorset 0 fg white, bg white
 
 AddToFunc "StartFunction" "I" Module FvwmTaskBar
 AddToFunc DeiconifyRaiseAndFocus
