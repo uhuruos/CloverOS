@@ -18,13 +18,13 @@ EdgeScroll 0 0
 
 Key Tab A SM SwitchWindow
 
-Colorset 1 bg #000000
-BorderStyle Active Colorset 1
-BorderStyle Inactive Colorset 1
+Colorset 0 bg #000000
+BorderStyle Active Colorset 0
+BorderStyle Inactive Colorset 0
 
-Colorset 0 bg #056839, fg #ffffff
-TitleStyle AllActive Colorset 0 -- Flat
-TitleStyle AllInactive Colorset 0 -- Flat
+Colorset 1 bg #056839, fg #ffffff
+TitleStyle AllActive Colorset 1 -- Flat
+TitleStyle AllInactive Colorset 1 -- Flat
 
 Mouse 1 6 A Iconify
 Mouse 1 4 A Maximize 
@@ -40,7 +40,8 @@ Style "*" RandomPlacement
 
 Style "*" ForeColor #ffffff, BackColor #ffffff, HilightBack #ffffff, HilightFore #ffffff
 
-MenuStyle * MenuColorset 0
+Colorset 2 fg #056839, bg #ffffff
+MenuStyle * MenuColorset 2
 
 DestroyMenu MenuFvwmRoot
 AddToMenu MenuFvwmRoot "Applications" Title
