@@ -27,6 +27,7 @@ else
 7) Sync time
 8) Set timezone
 9) Clean emerge cache
+f) Install FVWM and CloverOS .fvwm2rc
 u) Update system
 a) ALSA settings
 t) Enable tap to click on touchpad
@@ -150,6 +151,16 @@ case "$choice" in
 	9)
 		sudo rm -Rf /usr/portage/packages/* /usr/portage/distfiles/* /var/tmp/portage/*
 		echo -e "\nPackage cache cleared. (/usr/portage/packages/, /usr/portage/distfiles/, /var/tmp/portage/)"
+		;;
+
+	f)
+		echo "Running the following:"
+		if ! type /usr/bin/fvwm > /dev/null; then
+			echo "sudo emerge fvwm"
+			sudo emerge fvwm
+		fi
+		echo "rm .fvwm2rc && wget $gitprefix"/home/user/.fvwm2rc"
+		rm .fvwm2rc && wget $gitprefix"/home/user/.fvwm2rc
 		;;
 
 	u)
