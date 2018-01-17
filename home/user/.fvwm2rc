@@ -29,8 +29,7 @@ BorderStyle Active Colorset 0
 BorderStyle Inactive Colorset 0
 
 Colorset 1 bg #056839, fg #ffffff
-TitleStyle AllActive Colorset 1 -- Flat
-TitleStyle AllInactive Colorset 1 -- Flat
+TitleStyle Colorset 1 -- Flat
 
 Mouse 1 6 A Iconify
 Mouse 1 4 A Maximize 
