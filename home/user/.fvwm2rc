@@ -46,14 +46,6 @@ Colorset 2 fg #ffffff, bg #ffffff, hi #ffffff, sh #ffffff
 Style * Colorset 2
 Style * HilightColorset 2
 
-Colorset 3 fg #000000, bg #ffffff, hi #056839, sh #056839
-MenuStyle MenuFvwmRoot MenuColorset 3
-MenuStyle MenuFvwmRoot HilightBack #000000
-MenuStyle MenuFvwmRoot ActiveFore #ffffff
-MenuStyle MenuFvwmRoot BorderWidth 1
-MenuStyle MenuFvwmRoot TitleUnderlines0 0
-MenuStyle MenuFvwmRoot ItemFormat " %l "
-
 DestroyMenu MenuFvwmRoot
 AddToMenu MenuFvwmRoot "Applications" Title
 + "urxvt" Exec if pgrep urxvtd; then urxvtc -e zsh; else urxvtd -o -f && urxvtc -e zsh; fi
@@ -82,3 +74,11 @@ AddToMenu MenuFvwmRoot "Applications" Title
 + "sleep" Exec sudo sudo sh -c 'echo -n mem > /sys/power/state'
 + "reboot" Exec sudo reboot
 + "shutdown" Exec sudo poweroff
+
+Colorset 3 fg #000000, bg #ffffff, hi #056839, sh #056839
+MenuStyle MenuFvwmRoot MenuColorset 3
+MenuStyle MenuFvwmRoot HilightBack #000000
+MenuStyle MenuFvwmRoot ActiveFore #ffffff
+MenuStyle MenuFvwmRoot BorderWidth 1
+MenuStyle MenuFvwmRoot TitleUnderlines0 0
+MenuStyle MenuFvwmRoot ItemFormat " %l "
