@@ -40,6 +40,8 @@ Style "*" RandomPlacement
 
 Style "*" ForeColor #ffffff, BackColor #ffffff, HilightBack #ffffff, HilightFore #ffffff
 
+MenuStyle * MenuColorset 0
+
 DestroyMenu MenuFvwmRoot
 AddToMenu MenuFvwmRoot "Applications" Title
 + "urxvt" Exec if pgrep urxvtd; then urxvtc -e zsh; else urxvtd -o -f && urxvtc -e zsh; fi
