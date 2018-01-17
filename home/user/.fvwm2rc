@@ -8,7 +8,7 @@ Mouse 3 W M WindowResize
 
 Mouse 2 A M Menu MenuFvwmRoot
 
-Key Tab A SM WindowList
+Key Tab A SM WindowList Root c c NoDeskSort
 
 OpaqueMoveSize unlimited
 
