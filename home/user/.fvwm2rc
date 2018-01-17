@@ -72,7 +72,7 @@ AddToMenu MenuFvwmRoot Applications Title
 + "gparted" Exec sudo gparted
 + "restart fvwm" Restart
 + "exit X" Exec killall X
-+ "sleep\&lock" Exec slock & sudo sh -c 'echo -n mem > /sys/power/state'
++ "sleep+lock" Exec slock & sudo sh -c 'echo -n mem > /sys/power/state'
 + "lock" Exec slock
 + "sleep" Exec sudo sudo sh -c 'echo -n mem > /sys/power/state'
 + "reboot" Exec sudo reboot
