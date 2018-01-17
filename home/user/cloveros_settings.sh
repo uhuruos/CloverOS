@@ -159,7 +159,7 @@ case "$choice" in
 			echo "sudo emerge fvwm"
 			sudo emerge fvwm
 		fi
-		echo "rm .fvwm2rc && wget $gitprefix"/home/user/.fvwm2rc"
+		echo "rm .fvwm2rc && wget $gitprefix/home/user/.fvwm2rc"
 		rm .fvwm2rc
 		wget $gitprefix"/home/user/.fvwm2rc
 		;;
