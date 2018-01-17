@@ -11,10 +11,13 @@ OpaqueMoveSize unlimited
 Style "*" BorderWidth 1, HandleWidth 1
 
 Style "*" ResizeOpaque
-
+DesktopSize 1x1
 EdgeScroll 0 0
 
 Colorset 1 bg #000000
+Colorset 2 bg #056839, fg #ffffff
+Colorset 3 bg #ffffff, fg #000000
+
 BorderStyle Active Colorset 1
 BorderStyle Inactive Colorset 1
 
@@ -25,13 +28,15 @@ Mouse 1 6 A Iconify
 Mouse 1 4 A Maximize 
 Mouse 1 2 A Close
 
-ButtonStyle 6 Vector 5 40x40@1 60x40@1 60x60@0 40x60@0 40x40@1 -- Flat
-ButtonStyle 4 Vector 5 25x25@1 25x75@1 75x75@0 75x25@0 25x25@1 -- Flat
-ButtonStyle 2 Vector 17 20x20@1 30x20@1 50x40@1 70x20@1 80x20@1 80x30@0 60x50@0 80x70@1 80x80@0 70x80@0 50x60@0 30x80@0 20x80@0 20x70@0 40x50@1 20x30@0 20x20@1 -- Flat
+ButtonStyle All Colorset 2
+ButtonStyle 6 Vector 3 60x20@0 60x40@0 80x40@1 80x60@0 60x60@0 60x80@0 40x80@0 40x60@1 20x60@0 20x40@1 40x40@1 40x20@1 60x20@1
+ButtonStyle 3 Vector 5 40x40@1 60x40@1 60x60@0 40x60@0 40x40@1
+ButtonStyle 4 Vector 5 25x25@1 25x75@1 75x75@0 75x25@0 25x25@1
+ButtonStyle 2 Vector 17 20x20@1 30x20@1 50x40@1 70x20@1 80x20@1 80x30@0 60x50@0 80x70@1 80x80@0 70x80@0 50x60@0 30x80@0 20x80@0 20x70@0 40x50@1 20x30@0 20x20@1
 
 Style "*" SmartPlacement
 Style "*" RandomPlacement
-
+h
 Style "*" ForeColor #ffffff, BackColor #ffffff, HilightBack #ffffff, HilightFore #ffffff
 
 AddToFunc "StartFunction" "I" Module FvwmTaskBar
@@ -46,10 +51,10 @@ Style "FvwmTaskBar" NoTitle, !Handles, !Borders, Sticky, WindowListSkip, \
 *FvwmTaskBar: Rows 1
 *FvwmTaskBar: Fore #056839
 *FvwmTaskBar: Back #000000
-*FvwmTaskBar: Colorset 9
-*FvwmTaskBar: IconColorset 9
-*FvwmTaskBar: FocusColorset 9
-*FvwmTaskBar: TipsColorset 9
+*FvwmTaskBar: Colorset 3
+*FvwmTaskBar: IconColorset 2
+*FvwmTaskBar: FocusColorset 2
+*FvwmTaskBar: TipsColorset 2
 *FvwmTaskBar: UseSkipList
 *FvwmTaskBar: UseIconNames
 *FvwmTaskBar: ShowTips
@@ -73,9 +78,9 @@ MenuStyle * BorderWidth 1
 MenuStyle * PopupAsSubmenu, HoldSubmenus, SubmenusRight
 MenuStyle * ItemFormat "%|%5.5i%1.3l%2.3>%|"
 MenuStyle * VerticalItemSpacing 1 1, VerticalTitleSpacing 2 2
-MenuStyle * MenuColorset 7
-MenuStyle * ActiveFore, Hilight3DOff
-MenuStyle * ActiveColorset 8
+MenuStyle * MenuColorset 2
+MenuStyle * ActiveFore 2
+MenuStyle * ActiveColorset 2
 
 DestroyMenu MenuFvwmRoot
 AddToMenu MenuFvwmRoot "Applications" Title
