@@ -65,6 +65,7 @@ AddToMenu MenuFvwmRoot Applications Title
 + "settings.sh" Exec if pgrep urxvtd; then urxvtc -e sh -c '~/cloveros_settings.sh && read'; else urxvtd -o -f && urxvtc -e sh -c '~/cloveros_settings.sh && read'; fi
 + "wallpaper" Exec nitrogen
 + "resolution" Exec arandr
++ "Screenshot" Exec scrot
 + "volume" Exec qasmixer
 + "gparted" Exec sudo gparted
 + "restart fvwm" Restart
