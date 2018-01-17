@@ -45,7 +45,7 @@ MenuStyle * MenuColorset 2
 MenuStyle * BorderWidth 1
 Colorset 3 bg #056839, fg #ffffff, hi #056839, sh #056839
 MenuStyle * TitleColorset 3
-Colorset 4 bg #056839, fg #ffffff
+Colorset 4 bg #056839, fg #ffffff, hi #056839, sh #056839
 MenuStyle * ActiveColorset 4
 
 DestroyMenu MenuFvwmRoot
