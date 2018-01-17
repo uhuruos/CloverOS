@@ -18,7 +18,7 @@ Colorset 1 bg #000000
 BorderStyle Active Colorset 1
 BorderStyle Inactive Colorset 1
 
-Colorset 0 bg #056839 fg #ffffff
+Colorset 0 bg #056839, fg #ffffff
 TitleStyle AllActive Colorset 0 -- Flat
 TitleStyle AllInactive Colorset 0 -- Flat
 
