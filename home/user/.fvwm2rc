@@ -80,7 +80,7 @@ AddToMenu MenuFvwmRoot "Applications" Title
 + "resolution" Exec arandr
 + "volume" Exec qasmixer
 + "gparted" Exec sudo gparted
-+ "restart twm" Exec killall fvwm && fvwm
++ "restart fvwm" Exec killall fvwm && fvwm
 + "exit X" Exec killall X
 + "sleep&lock" Exec slock & sudo sh -c 'echo -n mem > /sys/power/state'
 + "lock" Exec slock
