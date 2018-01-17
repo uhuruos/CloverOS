@@ -119,8 +119,7 @@ case "$choice" in
 		cd ~
 		backupdir=backup$(< /dev/urandom tr -dc 0-9 | head -c 5)
 		mkdir $backupdir
-		rm .fvwm2rc
-		mv .bash_profile .zprofile .zshrc .Xdefaults wallpaper.png .xbindkeysrc screenfetch-dev bl.sh cloveros_settings.sh stats.sh rotate_screen.sh .emacs .emacs.d .rtorrent.rc .mpv .config/xfe/ .config/nitrogen/ $backupdir/
+		mv .bash_profile .zprofile .zshrc .fvwm2rc .Xdefaults wallpaper.png .xbindkeysrc screenfetch-dev bl.sh cloveros_settings.sh stats.sh rotate_screen.sh .emacs .emacs.d .rtorrent.rc .mpv .config/xfe/ .config/nitrogen/ $backupdir/
 		wget -q "$gitprefix"/home/user/{.bash_profile,.zprofile,.zshrc,.fvwm2rc,.Xdefaults,wallpaper.png,.xbindkeysrc,screenfetch-dev,bl.sh,cloveros_settings.sh,stats.sh,rotate_screen.sh,.emacs,.rtorrent.rc}
 		chmod +x screenfetch-dev bl.sh cloveros_settings.sh stats.sh rotate_screen.sh
 		mkdir -p .emacs.d/backups
