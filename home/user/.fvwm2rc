@@ -75,3 +75,46 @@ AddToMenu   FvwmWindowOpsMenu "Window Operations" Title
 + "" Nop
 + "%menu/window.xpm%Window Screenshot"  Pick (CirculateHit) FvwmWindowScreenshot
 + "%menu/display.xpm%Screenshot" FvwmDesktopScreenshot 5
+
+MenuStyle * PopupDelayed, PopupDelay 300, PopdownImmediately
+MenuStyle * PopupOffset -5 100, TitleWarpOff
+MenuStyle * TitleUnderlines2, SeparatorsLong, TrianglesSolid
+MenuStyle * AnimationOff, AutomaticHotkeysOff
+MenuStyle * BorderWidth 1
+MenuStyle * PopupAsSubmenu, HoldSubmenus, SubmenusRight
+MenuStyle * ItemFormat "%|%5.5i%1.3l%2.3>%|"
+MenuStyle * VerticalItemSpacing 1 1, VerticalTitleSpacing 2 2
+MenuStyle * MenuColorset 7
+MenuStyle * ActiveFore, Hilight3DOff
+MenuStyle * ActiveColorset 8
+
+DestroyMenu FvwmRootMenu
+AddToMenu   FvwmRootMenu "Home Menu" Title
++ "Programs%menu/programs.png%"  Popup FvwmProgramsMenu
++ "Terminal%menu/terminal.png%"  Exec urxvt -e zsh
++ "FVWM Console%menu/terminal.png%"  Module FvwmConsole
++ "" Nop
++ "Restart FVWM%menu/restart.png%"  Restart
++ "Quit FVWM%menu/quit.png%"  Exec killall X
++ "" Nop
++ "Lock%menu/restart.png%"  Exec slock
++ "Sleep%menu/restart.png%"  Exec sudo sh -c 'echo -n mem > /sys/power/state' &
++ "Suspend%menu/restart.png%"  Exec slock & sudo sh -c 'echo -n mem > /sys/power/state' &
++ "Restart%menu/restart.png%"  Exec sudo reboot
++ "Shutdown%menu/quit.png%"  Exec sudo poweroff
+
+DestroyMenu FvwmProgramsMenu
+AddToMenu   FvwmProgramsMenu "Programs" Title
++ "Wifi%menu/xroach.png%" Exec sudo /etc/init.d/wpa_supplicant start & wpa_gui
++ "Volume%menu/xroach.png%"  Exec qasmixer
++ "Emacs%menu/emacs.png%"  Exec emacs
++ "Gimp%menu/gimp.png%"  Exec gimp
++ "FireFox%menu/firefox.png%"  Exec firefox
++ "File Browser%menu/xroach.png%"  Exec xfe
++ "Weechat%menu/irc.png%"  Exec urxvt -e weechat
++ "Smplayer%menu/xmms.png%"  Exec smplayer
++ "Rtorrent%menu/xroach.png%"  Exec urxvt -e rtorrent
++ "Filezilla%menu/xroach.png%"  Exec filezilla
++ "Wallpapers%menu/xroach.png%"  Exec nitrogen
++ "Resolution%menu/xroach.png%"  Exec arandr
++ "Dick Management%menu/xroach.png%"  Exec sudo gparted
