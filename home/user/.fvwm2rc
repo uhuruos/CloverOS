@@ -25,10 +25,9 @@ Mouse 1 6 A Iconify
 Mouse 1 4 A Maximize 
 Mouse 1 2 A Close
 
-Colorset 2 fg #ffffff, bg #056839
-ButtonStyle 6 Colorset 2
-ButtonStyle 4 Colorset 2
-ButtonStyle 2 Colorset 2
+ButtonStyle 6 Solid #ffffff
+ButtonStyle 4 Solid #ffffff
+ButtonStyle 2 Solid #ffffff
 
 Style "*" SmartPlacement
 Style "*" RandomPlacement
