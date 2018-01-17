@@ -120,4 +120,3 @@ AddToMenu   FvwmWindowOpsMenu "Window Operations" Title
 + "" Nop
 + "%menu/window.xpm%Window Screenshot"  Pick (CirculateHit) FvwmWindowScreenshot
 + "%menu/display.xpm%Screenshot" FvwmDesktopScreenshot 5
-
