@@ -1,8 +1,10 @@
-AddToFunc "WindowMove" "M" Raise
+AddToFunc "WindowMove" "I" Raise
++ "H" Move
 + "M" Move
 Mouse 1 W M WindowMove
 
-AddToFunc "WindowResize" "M" Raise
+AddToFunc "WindowResize" "I" Raise
++ "H" Resize
 + "M" Resize
 Mouse 3 W M WindowResize
 
