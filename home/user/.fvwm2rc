@@ -25,8 +25,6 @@ Mouse 1 6 A Iconify
 Mouse 1 4 A Maximize 
 Mouse 1 2 A Close
 
-Colorset 2 bg #056839, fg #ffffff
-ButtonStyle All Colorset 2
 ButtonStyle 6 Vector 5 40x40@1 60x40@1 60x60@0 40x60@0 40x40@1 -- Flat
 ButtonStyle 4 Vector 5 25x25@1 25x75@1 75x75@0 75x25@0 25x25@1 -- Flat
 ButtonStyle 2 Vector 17 20x20@1 30x20@1 50x40@1 70x20@1 80x20@1 80x30@0 60x50@0 80x70@1 80x80@0 70x80@0 50x60@0 30x80@0 20x80@0 20x70@0 40x50@1 20x30@0 20x20@1 -- Flat
