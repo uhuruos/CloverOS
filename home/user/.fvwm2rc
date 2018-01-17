@@ -47,15 +47,14 @@ Style * Colorset 2
 Style * HilightColorset 2
 
 Colorset 3 fg #000000, bg #ffffff, hi #056839, sh #056839
-MenuStyle Appstyle MenuColorset 3
-MenuStyle Appstyle HilightBack #000000
-MenuStyle Appstyle ActiveFore #ffffff
-MenuStyle Appstyle BorderWidth 1
-MenuStyle Appstyle TitleUnderlines0 0
-MenuStyle Appstyle ItemFormat  %l 
+MenuStyle * MenuColorset 3
+MenuStyle * HilightBack #000000
+MenuStyle * ActiveFore #ffffff
+MenuStyle * BorderWidth 1
+MenuStyle * TitleUnderlines0 0
+MenuStyle * ItemFormat  %l 
 
 DestroyMenu MenuFvwmRoot
-ChangeMenuStyle Appstyle MenuFvwmRoot
 AddToMenu MenuFvwmRoot Applications Title
 + "urxvt" Exec if pgrep urxvtd; then urxvtc -e zsh; else urxvtd -o -f && urxvtc -e zsh; fi
 + "xfe" Exec xfe
