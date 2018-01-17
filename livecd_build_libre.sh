@@ -63,7 +63,7 @@ echo "$user:$userpassword" | chpasswd
 gpasswd -a $user wheel
 
 emerge -1 openssh openssl
-emerge -uvD world xorg-server twm feh sudo xfe wpa_supplicant porthole firefox emacs gimp mpv smplayer rxvt-unicode filezilla engrampa p7zip zip rtorrent-ps weechat alsa-utils zsh zsh-completions gentoo-zsh-completions vlgothic hack liberation-fonts nano scrot xbindkeys xinput nitrogen arandr qastools slock gparted squashfs-tools os-prober games-envd
+emerge -uvD world xorg-server fvwm feh sudo xfe wpa_supplicant porthole firefox emacs gimp mpv smplayer rxvt-unicode filezilla engrampa p7zip zip rtorrent-ps weechat alsa-utils zsh zsh-completions gentoo-zsh-completions vlgothic hack liberation-fonts nano scrot xbindkeys xinput nitrogen arandr qastools slock gparted squashfs-tools os-prober games-envd
 
 sed -i "s/# %wheel ALL=(ALL) NOPASSWD: ALL/%wheel ALL=(ALL) NOPASSWD: ALL/" /etc/sudoers
 sed -Ei "s@c([2-6]):2345:respawn:/sbin/agetty 38400 tty@#\0@" /etc/inittab
@@ -85,7 +85,7 @@ rm .bash_profile
 wget https://gitgud.io/cloveros/cloveros/raw/master/home/user/.bash_profile
 wget https://gitgud.io/cloveros/cloveros/raw/master/home/user/.zprofile
 wget https://gitgud.io/cloveros/cloveros/raw/master/home/user/.zshrc
-wget https://gitgud.io/cloveros/cloveros/raw/master/home/user/.twmrc
+wget https://gitgud.io/cloveros/cloveros/raw/master/home/user/.fvwm2rc
 wget https://gitgud.io/cloveros/cloveros/raw/master/home/user/.Xdefaults
 wget https://gitgud.io/cloveros/cloveros/raw/master/home/user/wallpaper.png
 wget https://gitgud.io/cloveros/cloveros/raw/master/home/user/.xbindkeysrc
@@ -102,10 +102,6 @@ chmod +x rotate_screen.sh
 wget https://gitgud.io/cloveros/cloveros/raw/master/home/user/.emacs
 mkdir -p .emacs.d/backups
 mkdir .emacs.d/autosaves
-mkdir .twm
-wget https://gitgud.io/cloveros/cloveros/raw/master/home/user/.twm/minimize.xbm -P .twm
-wget https://gitgud.io/cloveros/cloveros/raw/master/home/user/.twm/maximize.xbm -P .twm
-wget https://gitgud.io/cloveros/cloveros/raw/master/home/user/.twm/close.xbm -P .twm
 mkdir -p .config/xfe/
 wget https://gitgud.io/cloveros/cloveros/raw/master/home/user/.config/xfe/xferc -P .config/xfe
 mkdir .config/nitrogen/
@@ -125,7 +121,7 @@ echo -e 'if [ -z "\$DISPLAY" ]; then
 export DISPLAY=:0
 X&
 sleep 1
-twm&
+fvwm&
 feh --bg-max wallpaper.png
 xbindkeys
 urxvt -geometry \$(xrandr | awk "NR==1{print \"80x24+\"\\\$8/2-283\"+\"\\\$10/2-191}") -e sudo ./livecd_install.sh

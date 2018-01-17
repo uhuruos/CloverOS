@@ -4,8 +4,8 @@ if [ -z "$DISPLAY" ]; then
     declare -A wms
     declare -A wmspkg
     declare -A wmspost
-    wms[y]=twm
-    wms[Y]=twm
+    wms[y]=fvwm
+    wms[Y]=fvwm
     wms[i]=i3
     wms[a]=awesome
     wms[o]=openbox
@@ -20,8 +20,8 @@ if [ -z "$DISPLAY" ]; then
     wms[c]=icewm
     wms[w]=wmaker
     wms[z]=compiz-manager
-    wmpkgs[y]=twm
-    wmspkg[Y]=twm
+    wmpkgs[y]=fvwm
+    wmspkg[Y]=fvwm
     wmspkg[i]="i3-gaps i3status"
     wmspkg[a]=awesome
     wmspkg[o]=openbox
@@ -53,6 +53,16 @@ if [ -z "$DISPLAY" ]; then
     wmspost[c]="feh --bg-max wallpaper.png & xbindkeys & $taptoclick &"
     wmspost[w]="feh --bg-max wallpaper.png & xbindkeys & $taptoclick &"
     wmspost[z]="ccsm &"
+
+    if [[ "$choice" == "y" || "$choice" == "Y"]]; then
+        if [ ! -f /usr/bin/fvwm ]; then
+            wms[y]=twm
+            wms[Y]=twm
+            wmpkgs[y]=twm
+            wmspkg[Y]=twm
+        fi
+    fi
+
     if [ -v wms[$choice] ]; then
         if [ ! -f /usr/bin/${wms[$choice]} ]; then
             echo

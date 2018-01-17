@@ -119,13 +119,11 @@ case "$choice" in
 		cd ~
 		backupdir=backup$(< /dev/urandom tr -dc 0-9 | head -c 5)
 		mkdir $backupdir
-		mv .bash_profile .zprofile .zshrc .twmrc .Xdefaults wallpaper.png .xbindkeysrc screenfetch-dev bl.sh cloveros_settings.sh stats.sh rotate_screen.sh .emacs .emacs.d .twm .rtorrent.rc .mpv .config/xfe/ .config/nitrogen/ $backupdir/
-		wget -q "$gitprefix"/home/user/{.bash_profile,.zprofile,.zshrc,.twmrc,.Xdefaults,wallpaper.png,.xbindkeysrc,screenfetch-dev,bl.sh,cloveros_settings.sh,stats.sh,rotate_screen.sh,.emacs,.rtorrent.rc}
+		mv .bash_profile .zprofile .zshrc .fvwm2rc .Xdefaults wallpaper.png .xbindkeysrc screenfetch-dev bl.sh cloveros_settings.sh stats.sh rotate_screen.sh .emacs .emacs.d .rtorrent.rc .mpv .config/xfe/ .config/nitrogen/ $backupdir/
+		wget -q "$gitprefix"/home/user/{.bash_profile,.zprofile,.zshrc,.fvwm2rc,.Xdefaults,wallpaper.png,.xbindkeysrc,screenfetch-dev,bl.sh,cloveros_settings.sh,stats.sh,rotate_screen.sh,.emacs,.rtorrent.rc}
 		chmod +x screenfetch-dev bl.sh cloveros_settings.sh stats.sh rotate_screen.sh
 		mkdir -p .emacs.d/backups
 		mkdir .emacs.d/autosaves
-		mkdir .twm
-		wget -q "$gitprefix"/home/user/.twm/{minimize.xbm,maximize.xbm,close.xbm} -P .twm
 		mkdir -p .config/xfe/
 		wget -q "$gitprefix"/home/user/.config/xfe/xferc -P .config/xfe
 		mkdir -p .config/nitrogen/
