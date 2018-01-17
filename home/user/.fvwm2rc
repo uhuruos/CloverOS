@@ -14,7 +14,7 @@ Style "*" ResizeOpaque
 DeskTopSize 1x1
 EdgeScroll 0 0
 
-Key Tab A SM FuncSwitchWindow
+Key Tab A SM SwitchWindow
 
 Colorset 1 bg #000000
 BorderStyle Active Colorset 1
