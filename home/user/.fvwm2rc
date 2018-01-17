@@ -36,6 +36,64 @@ Style "*" RandomPlacement
 
 Style "*" ForeColor #ffffff, BackColor #ffffff, HilightBack #ffffff, HilightFore #ffffff
 
+DestroyMenu MenuFvwmRoot
+AddToMenu MenuFvwmRoot "Applications" Title
++ "urxvt" Exec if pgrep urxvtd; then urxvtc -e zsh; else urxvtd -o -f && urxvtc -e zsh; fi
++ "xfe" Exec xfe
++ "wifi" Exec sudo rc-service wpa_supplicant start & wpa_gui
++ "porthole" Exec porthole
++ "firefox" Exec firefox
++ "emacs" Exec emacs
++ "gimp" Exec gimp
++ "xfi" Exec xfi
++ "smplayer" Exec smplayer
++ "filezilla" Exec filezilla
++ "engrampa" Exec engrampa
++ "rtorrent-ps" Exec if pgrep urxvtd; then urxvtc -e rtorrent; else urxvtd -o -f && urxvtc -e rtorrent; fi
++ "weechat" Exec if pgrep urxvtd; then urxvtc -e weechat; else urxvtd -o -f && urxvtc -e weechat; fi
++ "stats.sh" Exec if pgrep urxvtd; then urxvtc -geometry 400x1+0+0 -fn '6x13' -e ~/stats.sh; else urxvtd -o -f && urxvtc -geometry 400x1+0+0 -fn '6x13' -e ~/stats.sh; fi
++ "settings.sh" Exec if pgrep urxvtd; then urxvtc -e sh -c '~/cloveros_settings.sh && read'; else urxvtd -o -f && urxvtc -e sh -c '~/cloveros_settings.sh && read'; fi
++ "wallpaper" Exec nitrogen
++ "resolution" Exec arandr
++ "volume" Exec qasmixer
++ "gparted" Exec sudo gparted
++ "restart fvwm" Restart
++ "exit X" Exec killall X
++ "sleep&lock" Exec slock & sudo sh -c 'echo -n mem > /sys/power/state'
++ "lock" Exec slock
++ "sleep" Exec sudo sudo sh -c 'echo -n mem > /sys/power/state'
++ "reboot" Exec sudo reboot
++ "shutdown" Exec sudo poweroff
+
+DestroyMenu MenuFvwmRoot
+AddToMenu MenuFvwmRoot "Applications" Title
++ "urxvt" Exec if pgrep urxvtd; then urxvtc -e zsh; else urxvtd -o -f && urxvtc -e zsh; fi
++ "xfe" Exec xfe
++ "wifi" Exec sudo rc-service wpa_supplicant start & wpa_gui
++ "porthole" Exec porthole
++ "firefox" Exec firefox
++ "emacs" Exec emacs
++ "gimp" Exec gimp
++ "xfi" Exec xfi
++ "smplayer" Exec smplayer
++ "filezilla" Exec filezilla
++ "engrampa" Exec engrampa
++ "rtorrent-ps" Exec if pgrep urxvtd; then urxvtc -e rtorrent; else urxvtd -o -f && urxvtc -e rtorrent; fi
++ "weechat" Exec if pgrep urxvtd; then urxvtc -e weechat; else urxvtd -o -f && urxvtc -e weechat; fi
++ "stats.sh" Exec if pgrep urxvtd; then urxvtc -geometry 400x1+0+0 -fn '6x13' -e ~/stats.sh; else urxvtd -o -f && urxvtc -geometry 400x1+0+0 -fn '6x13' -e ~/stats.sh; fi
++ "settings.sh" Exec if pgrep urxvtd; then urxvtc -e sh -c '~/cloveros_settings.sh && read'; else urxvtd -o -f && urxvtc -e sh -c '~/cloveros_settings.sh && read'; fi
++ "wallpaper" Exec nitrogen
++ "resolution" Exec arandr
++ "volume" Exec qasmixer
++ "gparted" Exec sudo gparted
++ "restart fvwm" Restart
++ "exit X" Exec killall X
++ "sleep&lock" Exec slock & sudo sh -c 'echo -n mem > /sys/power/state'
++ "lock" Exec slock
++ "sleep" Exec sudo sudo sh -c 'echo -n mem > /sys/power/state'
++ "reboot" Exec sudo reboot
++ "shutdown" Exec sudo poweroff
+
 Colorset 2 bg #ffffff, fg #000000
 Colorset 3 bg #056839, fg #ffffff
 AddToFunc "StartFunction" "I" Module FvwmTaskBar
@@ -80,35 +138,6 @@ MenuStyle * VerticalItemSpacing 1 1, VerticalTitleSpacing 2 2
 MenuStyle * MenuColorset 2
 MenuStyle * ActiveFore 2
 MenuStyle * ActiveColorset 2
-
-DestroyMenu MenuFvwmRoot
-AddToMenu MenuFvwmRoot "Applications" Title
-+ "urxvt" Exec if pgrep urxvtd; then urxvtc -e zsh; else urxvtd -o -f && urxvtc -e zsh; fi
-+ "xfe" Exec xfe
-+ "wifi" Exec sudo rc-service wpa_supplicant start & wpa_gui
-+ "porthole" Exec porthole
-+ "firefox" Exec firefox
-+ "emacs" Exec emacs
-+ "gimp" Exec gimp
-+ "xfi" Exec xfi
-+ "smplayer" Exec smplayer
-+ "filezilla" Exec filezilla
-+ "engrampa" Exec engrampa
-+ "rtorrent-ps" Exec if pgrep urxvtd; then urxvtc -e rtorrent; else urxvtd -o -f && urxvtc -e rtorrent; fi
-+ "weechat" Exec if pgrep urxvtd; then urxvtc -e weechat; else urxvtd -o -f && urxvtc -e weechat; fi
-+ "stats.sh" Exec if pgrep urxvtd; then urxvtc -geometry 400x1+0+0 -fn '6x13' -e ~/stats.sh; else urxvtd -o -f && urxvtc -geometry 400x1+0+0 -fn '6x13' -e ~/stats.sh; fi
-+ "settings.sh" Exec if pgrep urxvtd; then urxvtc -e sh -c '~/cloveros_settings.sh && read'; else urxvtd -o -f && urxvtc -e sh -c '~/cloveros_settings.sh && read'; fi
-+ "wallpaper" Exec nitrogen
-+ "resolution" Exec arandr
-+ "volume" Exec qasmixer
-+ "gparted" Exec sudo gparted
-+ "restart fvwm" Restart
-+ "exit X" Exec killall X
-+ "sleep&lock" Exec slock & sudo sh -c 'echo -n mem > /sys/power/state'
-+ "lock" Exec slock
-+ "sleep" Exec sudo sudo sh -c 'echo -n mem > /sys/power/state'
-+ "reboot" Exec sudo reboot
-+ "shutdown" Exec sudo poweroff
 
 DestroyMenu FvwmWindowOpsMenu
 AddToMenu   FvwmWindowOpsMenu "Window Operations" Title
