@@ -16,9 +16,9 @@ Key Tab A SM WindowList Root c c NoDeskSort
 
 OpaqueMoveSize unlimited
 
-Style "*" BorderWidth 1, HandleWidth 1
+Style * BorderWidth 1, HandleWidth 1
 
-Style "*" ResizeOpaque
+Style * ResizeOpaque
 
 EdgeScroll 0 0
 
@@ -39,18 +39,19 @@ ButtonStyle 4 Vector 5 25x25@2 25x75@2 75x75@3 75x25@3 25x25@2 -- Flat
 ButtonStyle 2 Vector 17 20x20@3 30x20@3 50x40@3 70x20@3 80x20@3 80x30@2 60x50@2 80x70@3 80x80@2 70x80@2 50x60@2 30x80@2 20x80@2 20x70@2 40x50@3 20x30@2 20x20@3 -- Flat
 ButtonStyle All -- UseTitleStyle
 
-Style "*" SmartPlacement
-Style "*" RandomPlacement
+Style * SmartPlacement
+Style * RandomPlacement
 
 Colorset 2 fg #ffffff, bg #ffffff, hi #ffffff, sh #ffffff
-Style "*" Colorset 2
-Style "*" HilightColorset 2
+Style * Colorset 2
+Style * HilightColorset 2
 
 Colorset 3 fg #000000, bg #ffffff, hi #056839, sh #056839
 MenuStyle * MenuColorset 3
 MenuStyle * BorderWidth 1
 MenuStyle * TitleUnderlines0 0
 MenuStyle * ItemFormat " %l "
+MenuStyle * Hilight3DOff
 
 DestroyMenu MenuFvwmRoot
 AddToMenu MenuFvwmRoot "Applications" Title
