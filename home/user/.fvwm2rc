@@ -46,12 +46,6 @@ ButtonStyle All -- UseTitleStyle Flat
 Style * SmartPlacement
 Style * RandomPlacement
 
-Style * ForeColor #ffffff
-Style * HilightFore #ffffff
-
-Style * ForeColor #ffffff
-Style * BackColor #ffffff
-
 DestroyMenu MenuFvwmRoot
 AddToMenu MenuFvwmRoot Applications Title
 + "urxvt" Exec if pgrep urxvtd; then urxvtc -e zsh; else urxvtd -o -f && urxvtc -e zsh; fi
