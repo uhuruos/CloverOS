@@ -31,6 +31,7 @@ ButtonStyle 4 Vector 5 25x25@2 25x75@2 75x75@3 75x25@3 25x25@2 -- Flat
 ButtonStyle 2 Vector 17 20x20@2 30x20@2 50x40@2 70x20@2 80x20@2 80x30@3 60x50@3 80x70@2 80x80@3 70x80@3 50x60@3 30x80@3 20x80@3 20x70@3 40x50@2 20x30@3 20x20@2 -- Flat
 ButtonStyle All -- UseTitleStyle
 
+
 Style "*" SmartPlacement
 Style "*" RandomPlacement
 
