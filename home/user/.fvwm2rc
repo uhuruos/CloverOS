@@ -6,6 +6,8 @@ AddToFunc "WindowResize" "M" Raise
 + "M" Resize
 Mouse 3 W M WindowResize
 
+Mouse 2 W M Menu MenuFvwmRoot
+
 OpaqueMoveSize unlimited
 
 Style "*" BorderWidth 1, HandleWidth 1
@@ -66,5 +68,3 @@ AddToMenu MenuFvwmRoot "Applications" Title
 + "sleep" Exec sudo sudo sh -c 'echo -n mem > /sys/power/state'
 + "reboot" Exec sudo reboot
 + "shutdown" Exec sudo poweroff
-
-Mouse 2 W M MenuFvwmRoot
