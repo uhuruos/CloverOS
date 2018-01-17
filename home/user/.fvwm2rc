@@ -46,7 +46,8 @@ ButtonStyle All -- UseTitleStyle Flat
 Style * SmartPlacement
 Style * RandomPlacement
 
-Style "*" IconBox +0 +800 -100 -0, IconBox -200 +0 -0 -120, IconBox
+Style "*" IconBox +0 +800 -100 -0, IconBox -200 +0 -0 -120
+Style "*" IconFill left bottom
 
 DestroyMenu MenuFvwmRoot
 AddToMenu MenuFvwmRoot Applications Title
