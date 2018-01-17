@@ -66,3 +66,5 @@ AddToMenu MenuFvwmRoot "Applications" Title
 + "sleep" Exec sudo sudo sh -c 'echo -n mem > /sys/power/state'
 + "reboot" Exec sudo reboot
 + "shutdown" Exec sudo poweroff
+
+Mouse 2 W M MenuFvwmRoot
