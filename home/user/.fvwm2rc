@@ -28,7 +28,7 @@ Mouse 1 2 A Close
 Style "*" SmartPlacement
 Style "*" RandomPlacement
 
-Color 0 white/white
+Style "*" Color #ffffff/#ffffff, HilightBack #ffffff, HilightFore #ffffff
 
 AddToFunc "StartFunction" "I" Module FvwmTaskBar
 AddToFunc DeiconifyRaiseAndFocus
