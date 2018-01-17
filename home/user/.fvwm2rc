@@ -52,7 +52,7 @@ MenuStyle * HilightBack #000000
 MenuStyle * ActiveFore #ffffff
 MenuStyle * BorderWidth 1
 MenuStyle * TitleUnderlines0 0
-MenuStyle * ItemFormat  %l 
+MenuStyle * ItemFormat " %l "
 
 DestroyMenu MenuFvwmRoot
 AddToMenu MenuFvwmRoot Applications Title
