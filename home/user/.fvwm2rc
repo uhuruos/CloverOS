@@ -16,7 +16,7 @@ Mouse 1 R A -
 
 Mouse 1 I A WindowListFunc
 
-Mouse 3 I A FvwmWindowOpsMenu
+Mouse 3 I A FuncFvwmWindowOpsMenu
 
 Key Tab A SM WindowList Root c c NoDeskSort
 
