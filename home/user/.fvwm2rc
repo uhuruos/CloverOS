@@ -16,6 +16,10 @@ Mouse 1 R A -
 
 Mouse 1 I A WindowListFunc
 
+Mouse 3 I A FuncFvwmWindowCommon
+
+Mouse 2 R A Menu MenuFvwmConfig
+
 Key Tab A SM WindowList Root c c NoDeskSort
 
 OpaqueMoveSize unlimited
@@ -50,6 +54,37 @@ Style * RandomPlacement
 
 Style "*" IconBox +0 -0 -0 -0, IconFill left bottom
 Style "*" IconSize 0 0
+
+DestroyFunc FuncFvwmWindowCommon
+AddToFunc FuncFvwmWindowCommon
++ I AddToMenu $0 "$[gt.&Move]"              Move
++ I AddToMenu $0 "$[gt.&Resize]"            Resize
++ I AddToMenu $0 "$[gt.R&aise]"             Raise
++ I AddToMenu $0 "$[gt.&Lower]"             Lower
++ I AddToMenu $0 "$[gt.(De)&Iconify]"       Iconify
++ I AddToMenu $0 "$[gt.(Un)&Stick]"         Stick
++ I AddToMenu $0 "$[gt.(Un)Ma&ximize]"      Maximize
++ I AddToMenu $0 ""                 Nop
++ I AddToMenu $0 "$[gt.&Delete]"            Delete
++ I AddToMenu $0 "$[gt.&Close]"             Close
++ I AddToMenu $0 "$[gt.Destroy]"            Destroy
++ I AddToMenu $0 ""                 Nop
+
+DestroyMenu MenuFvwmConfig
+AddToMenu MenuFvwmConfig "$[gt.Fvwm Config Ops]" Title
++ "&S. $[gt.Sloppy Focus]"        FuncFvwmFocusPolicyChange SloppyFocus
++ "&C. $[gt.Click To Focus]"      FuncFvwmFocusPolicyChange ClickToFocus
++ "&F. $[gt.Focus Follows Mouse]" FuncFvwmFocusPolicyChange FocusFollowsMouse
++ "" Nop
++ "&1. $[gt.Colormap Follows Mouse]" ColormapFocus FollowsMouse
++ "&2. $[gt.Colormap Follows Focus]" ColormapFocus FollowsFocus
++ "" Nop
++ "&3. $[gt.Full Paging ON]"           EdgeScroll 100 100
++ "&4. $[gt.All Paging OFF]"           EdgeScroll 0 0
++ "&5. $[gt.Horizontal Paging Only]"   EdgeScroll 100 0
++ "&6. $[gt.Vertical Paging Only]"     EdgeScroll 0 100
++ "&7. $[gt.Partial Paging]"           EdgeScroll 50 50
++ "&8. $[gt.Full Paging && Edge Wrap]" EdgeScroll 100000 100000
 
 DestroyMenu MenuFvwmRoot
 AddToMenu MenuFvwmRoot Applications Title
