@@ -1,25 +1,15 @@
-screenshot-format=png
-screenshot-png-compression=9
-screenshot-tag-colorspace=yes
-screenshot-template="%F_%P"
-
 profile=opengl-hq
 video-sync=display-resample
-
-[high]
 hwdec=no
-scale=haasnsoft
-scale-antiring=0.7
+scale=ewa_lanczossharp
 cscale=ewa_lanczossoft
-cscale-antiring=0.7
 sigmoid-slope=10.0
 deband-grain=24
 deband-iterations=2
 deband-range=12
 deband-threshold=48
-hdr-tone-mapping=reinhard
-tone-mapping-param=0.4
 
-[ultra]
-profile=high
-# add mega rice here
+screenshot-format=png
+screenshot-png-compression=9
+screenshot-tag-colorspace=yes
+screenshot-template="%F_%P"
