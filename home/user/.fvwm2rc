@@ -63,7 +63,7 @@ AddToMenu MenuFvwmRoot Applications Title
 + "engrampa" Exec engrampa
 + "rtorrent-ps" Exec if pgrep urxvtd; then urxvtc -e rtorrent; else urxvtd -o -f && urxvtc -e rtorrent; fi
 + "weechat" Exec if pgrep urxvtd; then urxvtc -e weechat; else urxvtd -o -f && urxvtc -e weechat; fi
-+ "stats.sh" Exec if pgrep urxvtd; then urxvtc -geometry 400x1+0+0 -fn '6x13' -e ~/stats.sh; else urxvtd -o -f && urxvtc -geometry 400x1+0+0 -fn '6x13' -e ~/stats.sh; fi
++ "stats.sh" Exec if pgrep urxvtd; then urxvtc -geometry 400x1+0+-17 -fn '6x13' -e ~/stats.sh; else urxvtd -o -f && urxvtc -geometry 400x1+0+-17 -fn '6x13' -e ~/stats.sh; fi
 + "settings.sh" Exec if pgrep urxvtd; then urxvtc -e sh -c '~/cloveros_settings.sh && read'; else urxvtd -o -f && urxvtc -e sh -c '~/cloveros_settings.sh && read'; fi
 + "wallpaper" Exec nitrogen
 + "resolution" Exec arandr

@@ -1,4 +1,4 @@
-kernelversion=4.14.13
+kernelversion=4.14.14
 kernelmajversion=4.14
 revision=
 
@@ -9,7 +9,7 @@ binutils-config --linker ld.bfd
 
 cd /usr/src/linux/
 wget https://liquorix.net/sources/4.14/config.amd64
-genkernel --kernel-config=config.amd64 all
+genkernel --kernel-config=config.amd64 --luks --lvm all
 make clean
 
 rm /usr/portage/packages/s/kernel.tar.xz
@@ -26,7 +26,7 @@ wget https://linux-libre.fsfla.org/pub/linux-libre/releases/$kernelversion-gnu/d
 wget https://linux-libre.fsfla.org/pub/linux-libre/releases/$kernelversion-gnu/deblob-check
 chmod +x deblob-$kernelmajversion
 PYTHON="python2.7" ./deblob-$kernelmajversion
-genkernel --kernel-config=config.amd64 --kerneldir=/usr/src/linux-$kernelversion-gentoo-gnu$revision all
+genkernel --kernel-config=config.amd64 --kerneldir=/usr/src/linux-$kernelversion-gentoo-gnu$revision --luks --lvm all
 make clean
 
 rm /usr/portage/packages/s/kernel-libre.tar.xz
