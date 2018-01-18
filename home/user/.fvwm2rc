@@ -48,6 +48,8 @@ Style * RandomPlacement
 
 Style "*" IconBox +0 +800 -100 -0, IconBox -200 +0 -0 -120, IconFill left bottom
 
+Style * NoIcon
+
 DestroyMenu MenuFvwmRoot
 AddToMenu MenuFvwmRoot Applications Title
 + "urxvt" Exec if pgrep urxvtd; then urxvtc -e zsh; else urxvtd -o -f && urxvtc -e zsh; fi
