@@ -16,7 +16,7 @@ Mouse 1 R A -
 
 Mouse 1 I A WindowListFunc
 
-Mouse 3 I A FuncFvwmWindowCommon
+Mouse 3 I A FvwmWindowOpsMenu
 
 Key Tab A SM WindowList Root c c NoDeskSort
 
@@ -52,6 +52,27 @@ Style * RandomPlacement
 
 Style "*" IconBox +0 -0 -0 -0, IconFill left bottom
 Style "*" IconSize 0 0
+
+DestroyMenu FvwmWindowOpsMenu
+AddToMenu   FvwmWindowOpsMenu "Window Operations" Title
++ "Move"  Move
++ "Resize"  Resize
++ "(De)Iconify"  Iconify
++ "(Un)Maximize"  Maximize
++ "(Un)Shade"  WindowShade
++ "(Un)Stick"  Stick
++ "" Nop
++ "Close"  Close
++ "Destroy"  Destroy
++ "" Nop
++ "StaysOnTop"  Pick (CirculateHit) Layer 0 6
++ "Layer +1"  Pick (CirculateHit) Layer +1
++ "StaysPut"  Pick (CirculateHit) Layer 0 4
++ "Layer -1"  Pick (CirculateHit) Layer -1
++ "StaysOnBottom"  Pick (CirculateHit) Layer 0 2
++ "" Nop
++ "Window Screenshot"  Pick (CirculateHit) FvwmWindowScreenshot
++ "Screenshot" FvwmDesktopScreenshot 5
 
 DestroyFunc FuncFvwmWindowCommon
 AddToFunc FuncFvwmWindowCommon
