@@ -48,7 +48,7 @@ Style * RandomPlacement
 
 Style "*" IconBox +0 +800 -100 -0, IconBox -200 +0 -0 -120, IconFill left bottom
 
-Style "*" IconSize 0
+Style "*" IconSize 0x0
 
 DestroyMenu MenuFvwmRoot
 AddToMenu MenuFvwmRoot Applications Title
