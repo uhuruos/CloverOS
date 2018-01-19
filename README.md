@@ -340,14 +340,14 @@ Run `sudo modprobe snd_aloop` and edit the following file, replacing `device 0` 
 
 Start playing something, then run `obs`, then add Audio Capture Device (ALSA) to your Sources.
 
-### is there anyone here using this as a daily? seriously and unironically considering to install this on my laptop
-Yes
-
-### Is Gentoo a meme?
+### What is Gentoo?
 Gentoo is a meta-distro. You can make any distro you want out of it. You can have a package.use/package.keywords that makes a binary-compatible Debian or Fedora or Arch or whatever. If there's something you don't like about Gentoo, you can just edit /etc/portage/package.use. Using Gentoo is like distro-hopping around the same distro. Also, by building everything yourself, that's one less botnet. If you have a problem with a package or the package doesn't exist, just add an overlay or write an ebuild and put it in your local portage directory and emerge.
 
 ### Is this an overlay?
 No, this uses regular Gentoo Portage only. Same versions and USE flag options.
+
+### Benefits of Gentoo/CloverOS over other distros
+No systemd, maximized CFLAGS, lower RAM usage, it's Gentoo, package versions are stable, it's as default as possible while still being easy, has Infinality, UTF-8 and user groups configured, installs in 2 minutes, saves time by doing all the little things you would've done anyway.
 
 ### What is CloverOS Libre?
 CloverOS Libre doesn't have the `sys-kernel/linux-firmware` package.
@@ -379,9 +379,6 @@ Reboot; Advanced options, select -gnu kernel
 `./cloveros_settings.sh` 4) Update kernel
 
 Reboot; Advanced options, select non -gnu kernel
-
-### Benefits of Gentoo/CloverOS over other distros
-No systemd, maximized CFLAGS, lower RAM usage, it's Gentoo, package versions are stable, it's as default as possible while still being easy, has Infinality, UTF-8 and user groups configured, installs in 2 minutes, saves time by doing all the little things you would've done anyway.
 
 ### Starting X automatically after login
 Edit `~/.bash_profile`
@@ -422,7 +419,7 @@ It's a pre-setup Gentoo image with `PORTAGE_BINHOST="https://cloveors.ga" emerge
 - I can't figure out how to change the port in rtorrent-ps
 
 ### How often is this updated?
-It's stable rolling release, I update the binhost about once a week.
+It's stable rolling release (Gentoo Stable). It's updated about once a week: http://twitter.com/cloveros_ga
 
 ### Does everything build with CFLAGS="-Ofast -mmmx -mssse3 -pipe -funroll-loops -flto=8 -floop-block -floop-interchange -floop-strip-mine -ftree-loop-distribution" ?
 These are all the packages that don't build with the full CFLAGS: https://gitgud.io/cloveros/cloveros/blob/master/binhost_settings/etc/portage/package.env
