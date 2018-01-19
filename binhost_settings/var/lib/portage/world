@@ -66,6 +66,7 @@ app-emulation/qemu
 app-emulation/virt-manager
 app-emulation/virtualbox
 app-emulation/virtualbox-additions
+app-emulation/virtualbox-guest-additions
 app-emulation/wine-any
 app-emulation/winetricks
 app-forensics/aide
@@ -870,6 +871,7 @@ x11-drivers/nvidia-drivers
 x11-drivers/xf86-input-wacom
 x11-drivers/xf86-video-vmware
 x11-misc/arandr
+x11-misc/autocutsel
 x11-misc/bumblebee
 x11-misc/compton
 x11-misc/dmenu
@@ -883,6 +885,7 @@ x11-misc/lsw
 x11-misc/menumaker
 x11-misc/nitrogen
 x11-misc/obmenu
+x11-misc/parcellite
 x11-misc/polybar
 x11-misc/qt5ct
 x11-misc/redshift

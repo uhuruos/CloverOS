@@ -28,6 +28,7 @@ app-crypt/gpgme::pg_overlay
 media-sound/spek::pg_overlay
 www-client/firefox::pg_overlay
 app-arch/p7zip::pg_overlay
+dev-libs/libsigc++::pg_overlay
 dev-libs/mpc::pg_overlay
 media-sound/ardour::4nykey
 media-fonts/monoid::4nykey

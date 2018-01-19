@@ -356,6 +356,8 @@ media-gfx/gmic
 media-libs/libsidplayfp
 #rtorrent-ps
 net-libs/libtorrent **
+#certbot
+dev-python/josepy
 
 #fonts
 media-fonts/lohit-kannada
