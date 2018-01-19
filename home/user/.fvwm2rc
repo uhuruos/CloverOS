@@ -16,7 +16,7 @@ Mouse 1 R A -
 
 Mouse 1 I A WindowListFunc
 
-Mouse 3 I A FuncFvwmWindowOpsMenu
+Mouse 3 I A Menu FvwmWindowOpsMenu
 
 Key Tab A SM WindowList Root c c NoDeskSort
 
@@ -73,21 +73,6 @@ AddToMenu   FvwmWindowOpsMenu "Window Operations" Title
 + "" Nop
 + "Window Screenshot"  Pick (CirculateHit) FvwmWindowScreenshot
 + "Screenshot" FvwmDesktopScreenshot 5
-
-DestroyFunc FuncFvwmWindowCommon
-AddToFunc FuncFvwmWindowCommon
-+ I AddToMenu $0 "$[gt.&Move]"              Move
-+ I AddToMenu $0 "$[gt.&Resize]"            Resize
-+ I AddToMenu $0 "$[gt.R&aise]"             Raise
-+ I AddToMenu $0 "$[gt.&Lower]"             Lower
-+ I AddToMenu $0 "$[gt.(De)&Iconify]"       Iconify
-+ I AddToMenu $0 "$[gt.(Un)&Stick]"         Stick
-+ I AddToMenu $0 "$[gt.(Un)Ma&ximize]"      Maximize
-+ I AddToMenu $0 ""                 Nop
-+ I AddToMenu $0 "$[gt.&Delete]"            Delete
-+ I AddToMenu $0 "$[gt.&Close]"             Close
-+ I AddToMenu $0 "$[gt.Destroy]"            Destroy
-+ I AddToMenu $0 ""                 Nop
 
 DestroyMenu MenuFvwmRoot
 AddToMenu MenuFvwmRoot Applications Title
