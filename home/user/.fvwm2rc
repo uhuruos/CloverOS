@@ -64,10 +64,9 @@ Style *
 Style * IconTitleRelief 1
 Colorset 1 bg #056839, fg #ffffff, hi #ffffff, sh #ffffff
 Style * IconTitleColorset 1
-Colorset 2 bg #056839, fg #ffffff, hi #056839, sh #056839
-Style * HilightIconTitleColorset 2
-Colorset 3 bg green, fg blue, hi purple, sh red
-Style * IconBackgroundColorset 3
+Style * HilightIconTitleColorset 1
+Colorset 2 bg green, fg blue, hi purple, sh red
+Style * IconBackgroundColorset 2
 
 DestroyMenu FvwmWindowOpsMenu
 AddToMenu   FvwmWindowOpsMenu "Window Operations" Title
@@ -117,10 +116,10 @@ AddToMenu MenuFvwmRoot Applications Title
 + "reboot" Exec sudo reboot
 + "shutdown" Exec sudo poweroff
 
-Colorset 4 fg #000000, bg #ffffff, hi #000000, sh #000000
-MenuStyle Applications MenuColorset 4
-Colorset 5 fg #ffffff, bg #056839, hi #056839, sh #056839
-MenuStyle Applications TitleColorset 5
+Colorset 3 fg #000000, bg #ffffff, hi #000000, sh #000000
+MenuStyle Applications MenuColorset 3
+Colorset 4 fg #ffffff, bg #056839, hi #056839, sh #056839
+MenuStyle Applications TitleColorset 4
 MenuStyle Applications HilightTitleBack #056839
 MenuStyle Applications HilightBack #000000
 MenuStyle Applications ActiveFore #ffffff
