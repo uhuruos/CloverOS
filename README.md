@@ -48,9 +48,13 @@ Open Applications menu anywhere: alt + middle click
 
 fvwm's settings are in `~/.fvwm2rc`
 
-### Taking screenshots
+### Keyboard bindings
 
-Type `scrot` or hit Print Screen.
+Take screenshot: Print Screen
+
+Brightness controls: Laptop (software) Brightness up/down keys
+
+Volume control: Laptop (software) Volume up/down keys
 
 Key bindings are in `~/.xbindkeysrc`
 
