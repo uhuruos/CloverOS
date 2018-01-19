@@ -205,9 +205,6 @@ Don't forget to `emerge genkernel`
 ### Firefox and Pulseaudio
 Firefox 57 still works with ALSA. If this changes, it will be built with apulse.
 
-### Gentoo is a distro that's only good for servers
-Gentoo is a meta-distro. You can make any distro you want out of it.
-
 ### What are USE flags?
 `/etc/portage/package.use` generally determines what your Gentoo install will look like. The first thing new Gentoo users should do is read the USE flags for their packages.
 
