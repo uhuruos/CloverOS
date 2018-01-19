@@ -37,20 +37,16 @@ z To disregard the changes
 
 It will ask to modify the sudo settings back to default, just hit z there.
 
-### Controlling twm
+### Controlling fvwm
 Open Applications menu: right click on desktop
 
 Move windows: alt + left click
 
 Resize Windows: alt + right click
 
-Bring up menu anywhere: alt + middle click
+Open Applications menu anywhere: alt + middle click
 
-Close windows: ctrl + alt + right click
-
-The taskbar minimizes and restores windows.
-
-twm's settings are in `~/.twmrc`
+fvwm's settings are in `~/.fvwm2rc`
 
 ### Taking screenshots
 
@@ -75,7 +71,7 @@ https://packages.gentoo.org
 or run Porthole
 
 ### Installing a DE
-First, connect to wifi using wpa_gui ('wifi' in twm)
+First, connect to wifi using wpa_gui ('wifi' in fvwm)
 
 Kill X and relog. After you log in and the "Start X?" dialog pops up, instead of y/n, type one of the WM options and hit y when it asks to install.
 
@@ -421,15 +417,13 @@ It's a pre-setup Gentoo image with `PORTAGE_BINHOST="https://cloveors.ga" emerge
 
 - I can't figure out how to change the port in rtorrent-ps
 
-- Firefox and twm aren't 100% compatible, switch to fvwm needed
-
 ### How often is this updated?
 It's stable rolling release, I update the binhost about once a week.
 
 ### Does everything build with CFLAGS="-Ofast -mmmx -mssse3 -pipe -funroll-loops -flto=8 -floop-block -floop-interchange -floop-strip-mine -ftree-loop-distribution" ?
 These are all the packages that don't build with the full CFLAGS: https://gitgud.io/cloveros/cloveros/blob/master/binhost_settings/etc/portage/package.env
 
-### The default shell is bash but twm launches urxvt -e zsh?
+### The default shell is bash but fvwm launches urxvt -e zsh?
 This is done to keep it as default as possible.
 
 ### What programs does the binhost have?
@@ -438,12 +432,12 @@ List of programs (no dependencies): https://gitgud.io/cloveros/cloveros/blob/mas
 List of all packages: https://cloveros.ga/s/packages.html
 
 ### Which DE does this come with?
-None, it comes with twm and a `~/.bash_profile` that can select/install a DE for you:
+None, it comes with fvwm and a `~/.bash_profile` that can select/install a DE for you:
 
 ![bash profile](https://i.imgur.com/YD4IPRf.png)
 
 ### Installing a DE
-First, connect to wifi using wpa_gui ('wifi' in twm)
+First, connect to wifi using wpa_gui ('wifi' in fvwm)
 
 Kill X and relog. After you log in and the "Start X?" dialog pops up, instead of y/n, type one of the WM options and hit y when it asks to install.
 
