@@ -55,7 +55,7 @@ Type `scrot` or hit Print Screen.
 Key bindings are in `~/.xbindkeysrc`
 
 ### Package isn't available
-Make an issue so I can add the package. In the meantime, edit `/etc/portage/make.conf` and edit the following line:
+Make an issue so I can add the package to binhost. In the meantime, edit `/etc/portage/make.conf` and edit the following line:
 
 `EMERGE_DEFAULT_OPTS="--keep-going=y --autounmask-write=y --jobs=2 -G"`
 
@@ -63,7 +63,7 @@ to
 
 `EMERGE_DEFAULT_OPTS="--keep-going=y --autounmask-write=y --jobs=2"`
 
-This disables the binhost and uses Portage's ebuilds for packages.
+This disables the binhost and uses Portage's ebuilds for packages. Now you can emerge from source.
 
 ### Listing available packages
 https://packages.gentoo.org
@@ -74,6 +74,11 @@ or run Porthole
 First, connect to wifi using wpa_gui ('wifi' in fvwm)
 
 Kill X and relog. After you log in and the "Start X?" dialog pops up, instead of y/n, type one of the WM options and hit y when it asks to install.
+
+### What programs does the binhost have?
+List of programs (no dependencies): https://gitgud.io/cloveros/cloveros/blob/master/binhost_settings/var/lib/portage/world
+
+List of all packages: https://cloveros.ga/s/packages.html
 
 ### Sound doesn't work
 Run `alsamixer` and hit F6 to see your audio devices.
@@ -425,11 +430,6 @@ These are all the packages that don't build with the full CFLAGS: https://gitgud
 
 ### The default shell is bash but fvwm launches urxvt -e zsh?
 This is done to keep it as default as possible.
-
-### What programs does the binhost have?
-List of programs (no dependencies): https://gitgud.io/cloveros/cloveros/blob/master/binhost_settings/var/lib/portage/world
-
-List of all packages: https://cloveros.ga/s/packages.html
 
 ### Which DE does this come with?
 None, it comes with fvwm and a `~/.bash_profile` that can select/install a DE for you:
