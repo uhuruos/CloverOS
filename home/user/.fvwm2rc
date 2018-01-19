@@ -50,9 +50,9 @@ Mouse 1 6 A Iconify
 Mouse 1 4 A Maximize 
 Mouse 1 2 A Close
 
-ButtonStyle 6 Vector 2 5x50@3 95x50@3
+ButtonStyle 6 Vector 2 25x50@3 75x50@3
 ButtonStyle 4 Vector 5 25x25@3 25x75@3 75x75@3 75x25@3 25x25@3
-ButtonStyle 2 Vector 5 90x90@3 10x10@3 90x10@4 90x10@3 10x90@3
+ButtonStyle 2 Vector 5 75x75@3 25x25@3 75x25@4 75x25@3 25x75@3
 ButtonStyle All -- UseTitleStyle Flat
 
 Style * SmartPlacement
