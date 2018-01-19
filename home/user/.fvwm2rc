@@ -20,11 +20,11 @@ AddToFunc WindowListFunc
 + I FlipFocus
 + I Raise
 
-Mouse 1 I A WindowListFunc
+Mouse 1 I N WindowListFunc
 
-Mouse 3 I A Menu FvwmWindowOpsMenu
+Mouse 3 I N Menu FvwmWindowOpsMenu
 
-Mouse 3 T A Menu FvwmWindowOpsMenu
+Mouse 3 T N Menu FvwmWindowOpsMenu
 
 Key Tab A SM WindowList Root c c NoDeskSort
 
