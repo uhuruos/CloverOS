@@ -24,7 +24,7 @@ cp -R linux-$kernelversion-gentoo$revision linux-$kernelversion-gentoo-gnu$revis
 cd linux-$kernelversion-gentoo-gnu$revision
 wget https://linux-libre.fsfla.org/pub/linux-libre/releases/$kernelversion-gnu/deblob-$kernelmajversion
 wget https://linux-libre.fsfla.org/pub/linux-libre/releases/$kernelversion-gnu/deblob-check
-chmod +x deblob-$kernelmajversion
+chmod +x deblob-$kernelmajversion deblob-check
 PYTHON="python2.7" ./deblob-$kernelmajversion
 genkernel --kernel-config=config.amd64 --kerneldir=/usr/src/linux-$kernelversion-gentoo-gnu$revision --luks --lvm all
 make clean
