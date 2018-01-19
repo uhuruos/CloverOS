@@ -47,6 +47,9 @@ echo 'FETCHCOMMAND_HTTPS="sh -c \"wget -t 3 -T 60 --passive-ftp -O \"\\\${DISTDI
 #genkernel --kernel-config=config.amd64 all
 
 wget https://cloveros.ga/s/kernel.tar.xz
+wget https://cloveros.ga/s/signatures/s/kernel.tar.xz.asc
+gpg --verify kernel.tar.xz.asc kernel.tar.xz
+rm kernel.tar.xz.asc
 tar xf kernel.tar.xz
 mv initramfs-genkernel-*-gentoo* kernel-genkernel-*-gentoo* System.map-genkernel-*-gentoo* /boot/
 mkdir /lib/modules/
