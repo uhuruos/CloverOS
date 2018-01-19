@@ -18,6 +18,8 @@ Mouse 1 I A WindowListFunc
 
 Mouse 3 I A Menu FvwmWindowOpsMenu
 
+Mouse 3 T A Menu FvwmWindowOpsMenu
+
 Key Tab A SM WindowList Root c c NoDeskSort
 
 OpaqueMoveSize unlimited
@@ -53,6 +55,7 @@ Style * RandomPlacement
 Style "*" IconBox +0 -0 -0 -0, IconFill left bottom
 Style "*" IconSize 0 0
 
+
 DestroyMenu FvwmWindowOpsMenu
 AddToMenu   FvwmWindowOpsMenu "Window Operations" Title
 + "Move"  Move
@@ -70,9 +73,6 @@ AddToMenu   FvwmWindowOpsMenu "Window Operations" Title
 + "StaysPut"  Pick (CirculateHit) Layer 0 4
 + "Layer -1"  Pick (CirculateHit) Layer -1
 + "StaysOnBottom"  Pick (CirculateHit) Layer 0 2
-+ "" Nop
-+ "Window Screenshot"  Pick (CirculateHit) FvwmWindowScreenshot
-+ "Screenshot" FvwmDesktopScreenshot 5
 
 DestroyMenu MenuFvwmRoot
 AddToMenu MenuFvwmRoot Applications Title
