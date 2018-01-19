@@ -14,6 +14,12 @@ Mouse 3 R A Menu MenuFvwmRoot
 
 Mouse 1 R A -
 
+DestroyFunc WindowListFunc
+AddToFunc WindowListFunc
++ I Iconify off
++ I FlipFocus
++ I Raise
+
 Mouse 1 I A WindowListFunc
 
 Mouse 3 I A Menu FvwmWindowOpsMenu
