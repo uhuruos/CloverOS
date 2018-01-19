@@ -54,7 +54,6 @@ Style * RandomPlacement
 
 Style "*" IconBox +0 -0 -0 -0, IconFill left bottom
 Style "*" IconSize 0 0
-Style "*" StickyIcon
 
 DestroyMenu FvwmWindowOpsMenu
 AddToMenu   FvwmWindowOpsMenu "Window Operations" Title
