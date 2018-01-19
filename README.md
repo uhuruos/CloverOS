@@ -70,11 +70,6 @@ https://packages.gentoo.org
 
 or run Porthole
 
-### Installing a DE
-First, connect to wifi using wpa_gui ('wifi' in fvwm)
-
-Kill X and relog. After you log in and the "Start X?" dialog pops up, instead of y/n, type one of the WM options and hit y when it asks to install.
-
 ### What programs does the binhost have?
 List of programs (no dependencies): https://gitgud.io/cloveros/cloveros/blob/master/binhost_settings/var/lib/portage/world
 
