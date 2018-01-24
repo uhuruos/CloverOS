@@ -146,6 +146,7 @@ app-editors/emacs X gtk toolkit-scroll-bars xft sound games alsa jpeg png gif li
 app-emacs/emacs-common-gentoo X games
 app-editors/xemacs X
 media-libs/gst-plugins-bad X
+app-admin/gkrellm X hddtemp lm_sensors
 games-emulation/dgen-sdl joystick
 games-emulation/snes9x joystick gtk netplay
 x11-misc/redshift gtk

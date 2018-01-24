@@ -2,13 +2,13 @@
 www-client/firefox # major change
 media-gfx/gimp # major change
 net-p2p/retroshare # needs latest version
-media-gfx/blender # python
 media-sound/clementine ** # qt5
 x11-wm/enlightenment # stable is old
 dev-libs/efl # stable is old
 x11-terms/terminology # stable is old
 dev-lisp/clisp # stable no longer builds
 sys-kernel/gentoo-sources # security
+media-gfx/blender # python
 #blender
 =media-libs/openexr-2.2.0-r2
 =media-libs/ilmbase-2.2.0-r1
@@ -18,8 +18,6 @@ sys-kernel/gentoo-sources # security
 =dev-lang/nasm-2.13.01
 #sway
 =dev-libs/json-c-0.12.1
-#qutebrowser
-=dev-python/pygments-2.2.0
 
 #keyworded, remove when stable exists
 sys-fs/zfs-kmod
@@ -227,6 +225,9 @@ media-sound/qtractor
 media-sound/protux
 net-misc/clipgrab
 net-wireless/broadcom-sta
+x11-wm/treewm **
+x11-wm/amiwm
+x11-plugins/gkrellm-plugins **
 
 #dependencies
 #staruml-bin
@@ -360,6 +361,8 @@ media-libs/libsidplayfp
 net-libs/libtorrent **
 #certbot
 dev-python/josepy
+#gkrellm-plugins
+x11-plugins/gkrellm-countdown
 
 #fonts
 media-fonts/lohit-kannada
