@@ -921,6 +921,7 @@ x11-plugins/asclock
 x11-plugins/asmon
 x11-plugins/astime
 x11-plugins/fsviewer
+x11-plugins/gkrellm-plugins
 x11-plugins/wmCalClock
 x11-plugins/wmMatrix
 x11-plugins/wmSMPmon
