@@ -505,6 +505,7 @@ media-libs/libtxc_dxtn
 media-libs/vapoursynth
 media-libs/waifu2x-converter-cpp
 media-plugins/alsa-plugins
+media-plugins/gkrellmpc
 media-plugins/vapoursynth-addgrain
 media-plugins/vapoursynth-adjust
 media-plugins/vapoursynth-autocrop
