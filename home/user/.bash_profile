@@ -1,5 +1,5 @@
 if [ -z "$DISPLAY" ]; then
-    echo "WM Options: (y) Default (i) i3 (a) Awesome (o) Openbox (e) Enlightenment (k) KDE (m) MATE (x) XFCE (l) LXDE (q) LXQT (f) Fluxbox (d) dwm (c) icewm (w) windowmaker (z) Compiz"
+    echo "WM Options: (y) Default (i) i3 (a) Awesome (o) Openbox (e) Enlightenment (k) KDE (m) MATE (x) XFCE (l) LXDE (q) LXQT (f) Fluxbox (d) dwm (c) icewm (w) windowmaker (t) FVWM Themes"
     read -erp "Start X? [y/n] " -n 1 choice
     declare -A wms
     declare -A wmspkg
@@ -19,7 +19,7 @@ if [ -z "$DISPLAY" ]; then
     wms[d]=dwm
     wms[c]=icewm
     wms[w]=wmaker
-    wms[z]=compiz-manager
+    wms[t]=fvwm-themes-start
     wmpkgs[y]=fvwm
     wmspkg[Y]=fvwm
     wmspkg[i]="i3-gaps i3status"
@@ -35,13 +35,14 @@ if [ -z "$DISPLAY" ]; then
     wmspkg[d]=dwm
     wmspkg[c]=icewm
     wmspkg[w]=windowmaker
-    wmspkg[z]="compiz-fusion emerald"
+    wmspkg[t]=fvwm-themes
     taptoclick=$'tappingid=$(xinput list-props "SynPS/2 Synaptics TouchPad" | grep \'Tapping Enabled (\' | awk \'{print $4}\' | grep -o \'[0-9]\\+\') && xinput set-prop "SynPS/2 Synaptics TouchPad" $tappingid 1'
     wmspost[y]="feh --bg-max wallpaper.png & xbindkeys & $taptoclick &"
     wmspost[Y]="feh --bg-max wallpaper.png & xbindkeys & $taptoclick &"
     wmspost[i]="feh --bg-max wallpaper.png & xbindkeys & $taptoclick &"
     wmspost[a]="feh --bg-max wallpaper.png & xbindkeys & $taptoclick &"
     wmspost[o]="feh --bg-max wallpaper.png & xbindkeys & $taptoclick &"
+    wmspost[t]="feh --bg-max wallpaper.png & xbindkeys & $taptoclick &"
     wmspost[e]=""
     wmspost[k]=""
     wmspost[m]=""
@@ -52,7 +53,6 @@ if [ -z "$DISPLAY" ]; then
     wmspost[d]="feh --bg-max wallpaper.png & xbindkeys & $taptoclick &"
     wmspost[c]="feh --bg-max wallpaper.png & xbindkeys & $taptoclick &"
     wmspost[w]="feh --bg-max wallpaper.png & xbindkeys & $taptoclick &"
-    wmspost[z]="ccsm &"
 
     if [[ "$choice" == "y" || "$choice" == "Y" ]]; then
         if [ ! -f /usr/bin/fvwm ]; then

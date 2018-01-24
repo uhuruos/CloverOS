@@ -91,6 +91,7 @@ app-misc/mc
 app-misc/neofetch
 app-misc/ranger
 app-misc/recoll
+app-misc/rox-filer
 app-misc/screen
 app-misc/screenfetch
 app-misc/srm
@@ -756,6 +757,7 @@ net-vpn/openvpn
 net-vpn/tor
 net-vpn/zeronet
 net-wireless/blueman
+net-wireless/broadcom-sta
 net-wireless/iw
 net-wireless/rfkill
 net-wireless/wpa_supplicant
@@ -821,6 +823,7 @@ sys-fs/zfs
 sys-kernel/dkms
 sys-kernel/dracut
 sys-kernel/genkernel
+sys-kernel/gentoo-sources
 sys-kernel/linux-firmware
 sys-power/acpi_call
 sys-power/acpitool
@@ -875,10 +878,12 @@ x11-misc/autocutsel
 x11-misc/bumblebee
 x11-misc/compton
 x11-misc/dmenu
+x11-misc/fbdesk
 x11-misc/fbpanel
 x11-misc/i3blocks-gaps
 x11-misc/i3lock
 x11-misc/i3status
+x11-misc/idesk
 x11-misc/lemonbar
 x11-misc/lightdm
 x11-misc/lsw
@@ -1124,6 +1129,7 @@ x11-wm/fluxbox
 x11-wm/fvwm
 x11-wm/i3-gaps
 x11-wm/icewm
+x11-wm/jwm
 x11-wm/openbox
 x11-wm/ratpoison
 x11-wm/twm

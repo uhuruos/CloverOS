@@ -225,6 +225,8 @@ media-gfx/phototonic
 media-sound/bempc
 media-sound/qtractor
 media-sound/protux
+net-misc/clipgrab
+net-wireless/broadcom-sta
 
 #dependencies
 #staruml-bin

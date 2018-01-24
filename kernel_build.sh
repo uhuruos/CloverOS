@@ -1,4 +1,4 @@
-kernelversion=4.14.14
+kernelversion=4.14.15
 kernelmajversion=4.14
 revision=
 

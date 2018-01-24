@@ -21,7 +21,7 @@ else
 	echo "1) Update cloveros_settings.sh
 2) Change mirrors
 3) Change default ALSA (sound) device
-4) Upgrade kernel (Current version: 4.14.14)
+4) Upgrade kernel (Current version: 4.14.15)
 5) Change binary/source
 6) Update dot files
 7) Sync time
