@@ -67,6 +67,8 @@ Style * IconTitleColorset 1
 Style * HilightIconTitleColorset 1
 Colorset 2 bg green, fg blue, hi purple, sh red
 Style * IconBackgroundColorset 2
+Style Plank NoTitle, StaysOnTop, Sticky, WindowListSkip, BorderWidth 0, HandleWidth 0
+Style Stats.sh NoTitle, StaysOnTop, Sticky, WindowListSkip, BorderWidth 0, HandleWidth 0
 
 DestroyMenu FvwmWindowOpsMenu
 AddToMenu   FvwmWindowOpsMenu "Window Operations" Title
