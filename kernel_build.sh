@@ -39,6 +39,6 @@ xz -9e --lzma2=dict=256MB /usr/portage/packages/s/kernel-libre.tar
 cd /usr/src/linux/
 make prepare
 make modules_prepare
-emerge --buildpkg @module-rebuild @x11-module-rebuild
+emerge --buildpkg @module-rebuild
 
 binutils-config --linker ld.gold
