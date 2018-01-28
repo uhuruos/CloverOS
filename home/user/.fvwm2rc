@@ -60,13 +60,13 @@ Style * RandomPlacement
 
 Style * IconBox +0 -0 -0 -0, IconFill left bottom
 Style * IconSize 0 0
-Style *
 Style * IconTitleRelief 1
 Colorset 1 bg #056839, fg #ffffff, hi #ffffff, sh #ffffff
 Style * IconTitleColorset 1
 Style * HilightIconTitleColorset 1
 Colorset 2 bg green, fg blue, hi purple, sh red
 Style * IconBackgroundColorset 2
+
 Style Plank NoTitle, StaysOnTop, Sticky, WindowListSkip, BorderWidth 0, HandleWidth 0
 Style Stats.sh NoTitle, StaysOnTop, Sticky, WindowListSkip, BorderWidth 0, HandleWidth 0
 
@@ -103,7 +103,7 @@ AddToMenu MenuFvwmRoot Applications Title
 + "engrampa" Exec engrampa
 + "rtorrent-ps" Exec if pgrep urxvtd; then urxvtc -e rtorrent; else urxvtd -o -f && urxvtc -e rtorrent; fi
 + "weechat" Exec if pgrep urxvtd; then urxvtc -e weechat; else urxvtd -o -f && urxvtc -e weechat; fi
-+ "stats.sh" Exec if pgrep urxvtd; then urxvtc -geometry 400x1+0+-18 -fn '6x13' -e ~/stats.sh; else urxvtd -o -f && urxvtc -geometry 400x1+0+-18 -fn '6x13' -e ~/stats.sh; fi
++ "stats.sh" Exec if pgrep urxvtd; then urxvtc -geometry 400x1+0+0 -fn '6x13' -e ~/stats.sh; else urxvtd -o -f && urxvtc -geometry 400x1+0+0 -fn '6x13' -e ~/stats.sh; fi
 + "settings.sh" Exec if pgrep urxvtd; then urxvtc -e sh -c '~/cloveros_settings.sh && read'; else urxvtd -o -f && urxvtc -e sh -c '~/cloveros_settings.sh && read'; fi
 + "wallpaper" Exec nitrogen
 + "resolution" Exec arandr

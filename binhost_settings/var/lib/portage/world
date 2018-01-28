@@ -6,7 +6,6 @@ app-admin/hddtemp
 app-admin/keepassxc
 app-admin/logrotate
 app-admin/mcelog
-app-admin/passwordsafe
 app-admin/sudo
 app-admin/syslog-ng
 app-admin/testdisk
@@ -805,6 +804,7 @@ sys-boot/syslinux
 sys-boot/unetbootin
 sys-devel/crossdev
 sys-devel/distcc
+sys-devel/gcc
 sys-devel/gdb
 sys-firmware/nvidia-firmware
 sys-fs/bashmount
@@ -922,7 +922,6 @@ x11-plugins/asclock
 x11-plugins/asmon
 x11-plugins/astime
 x11-plugins/fsviewer
-x11-plugins/gkrellm-plugins
 x11-plugins/wmCalClock
 x11-plugins/wmMatrix
 x11-plugins/wmSMPmon
@@ -1032,7 +1031,6 @@ x11-themes/comix-xcursors
 x11-themes/commonbox-styles
 x11-themes/commonbox-styles-extra
 x11-themes/constantine-backgrounds
-x11-themes/emerald-themes
 x11-themes/ethemes
 x11-themes/experience
 x11-themes/faenza-icon-theme
@@ -1128,7 +1126,6 @@ x11-wm/amiwm
 x11-wm/awesome
 x11-wm/blackbox
 x11-wm/bspwm
-x11-wm/compiz-fusion
 x11-wm/cwm
 x11-wm/dwm
 x11-wm/enlightenment:0.17
