@@ -127,7 +127,7 @@ Video player - smplayer / mpv
 
 FTP client - filezilla
 
-Torrent client - rtorrent
+Torrent client - rtorrent-ps
 
 IRC client - weechat
 
@@ -409,11 +409,6 @@ Replace card 0 with your device number
 
 ### Does CloverOS have binaries?
 It's a pre-setup Gentoo image with `PORTAGE_BINHOST="https://cloveors.ga" emerge -G package` preset in /etc/portage/make.conf. It uses Gentoo for everything (versions, ebuilds, etc.) and gets it from cloveros.ga instead of building
-
-### Known issues
-- Initramfs (genkernel) doesn't boot btrfs
-
-- I can't figure out how to change the port in rtorrent-ps
 
 ### How often is this updated?
 It's stable rolling release (Gentoo Stable). It's updated about once a week: http://twitter.com/cloveros_ga
