@@ -7,12 +7,9 @@ x11-wm/enlightenment # stable is old
 dev-libs/efl # stable is old
 x11-terms/terminology # stable is old
 dev-lisp/clisp # stable no longer builds
-sys-kernel/gentoo-sources # security
 media-gfx/blender # python
-=sys-devel/gcc-7.3.0 **
-#blender
-=media-libs/openexr-2.2.0-r2
-=media-libs/ilmbase-2.2.0-r1
+sys-kernel/gentoo-sources
+sys-devel/gcc
 #mednafen
 =dev-libs/lzo-2.10
 #vapoursynth
@@ -24,7 +21,6 @@ media-gfx/blender # python
 sys-fs/zfs-kmod
 sys-fs/zfs
 sys-kernel/spl
-app-text/zathura
 net-vpn/logmein-hamachi
 app-arch/zpaq-extras
 app-crypt/certbot
@@ -33,7 +29,6 @@ media-gfx/apngdis
 net-dns/dnscrypt-proxy
 dev-python/potr
 sys-apps/idle3-tools
-app-text/zathura-pdf-mupdf
 dev-util/plan9port
 net-vpn/i2p
 dev-util/vmtouch
@@ -62,7 +57,6 @@ media-sound/deadbeef
 net-im/discord-bin
 media-gfx/opentoonz
 media-gfx/freecad
-dev-lang/rust
 media-sound/mp3splt
 net-analyzer/metasploit **
 games-roguelike/dwarf-fortress
@@ -113,7 +107,6 @@ app-laptop/tlp
 sys-power/acpi_call
 dev-util/eclipse-sdk-bin
 dev-java/icedtea:8
-dev-util/nvidia-cuda-toolkit
 dev-util/staruml-bin
 media-gfx/w3mimgfb
 dev-libs/amdgpu-pro-opencl
@@ -228,6 +221,7 @@ net-wireless/broadcom-sta
 x11-wm/treewm **
 x11-wm/amiwm
 x11-plugins/gkrellm-plugins **
+dev-util/nvidia-cuda-toolkit
 
 #dependencies
 #staruml-bin
@@ -260,8 +254,6 @@ dev-cpp/websocketpp
 dev-libs/mathjax
 #deadbeef
 media-plugins/deadbeef-plugins-meta
-#rust
-dev-util/cargo
 #freenet
 dev-java/bcprov
 net-libs/NativeThread
@@ -307,6 +299,8 @@ dev-python/PySDL2
 #pyhoca
 net-misc/python-x2go
 #firefox
+dev-lang/rust
+dev-util/cargo
 virtual/rust
 dev-libs/nspr
 dev-libs/nss

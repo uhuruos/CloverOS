@@ -74,8 +74,7 @@ CFLAGS="-O3 -march=native -pipe -funroll-loops -floop-block -floop-interchange -
 CXXFLAGS="\${CFLAGS}"
 CPU_FLAGS_X86="mmx mmxext sse sse2 ssse3 sse3"
 MAKEOPTS="-j8"
-PORTAGE_NICENESS=15
-EMERGE_DEFAULT_OPTS="--keep-going=y --autounmask-write=y --jobs=2 -G"
+EMERGE_DEFAULT_OPTS="--keep-going=y --autounmask-write=y --jobs=4 -G"
 PORTAGE_BINHOST="https://cloveros.ga"
 ACCEPT_LICENSE="*"
 ACCEPT_KEYWORDS="**"' >> /etc/portage/make.conf

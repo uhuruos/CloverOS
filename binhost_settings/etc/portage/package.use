@@ -141,7 +141,7 @@ media-video/smplayer streaming qt5
 media-video/smtube qt5
 media-video/mkvtoolnix qt5
 media-video/makemkv qt5
-app-editors/emacs X gtk toolkit-scroll-bars xft sound games alsa jpeg png gif libxml2 svg dynamic-loading
+app-editors/emacs X gtk toolkit-scroll-bars xft sound games alsa jpeg png gif libxml2 dynamic-loading gsettings
 app-emacs/emacs-common-gentoo X games
 app-editors/xemacs X
 media-libs/gst-plugins-bad X

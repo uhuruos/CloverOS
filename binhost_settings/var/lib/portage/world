@@ -129,8 +129,7 @@ app-text/tesseract
 app-text/texlive
 app-text/tree
 app-text/zathura
-app-text/zathura-cb
-app-text/zathura-pdf-mupdf
+app-text/zathura-meta
 dev-db/postgresql
 dev-db/redis
 dev-db/rethinkdb
@@ -140,6 +139,7 @@ dev-java/icedtea:8
 dev-lang/R
 dev-lang/go
 dev-lang/php
+dev-lang/rust
 dev-libs/amdgpu-pro-opencl
 dev-libs/libisoburn
 dev-libs/sway
@@ -158,7 +158,6 @@ dev-util/dialog
 dev-util/eclipse-sdk-bin
 dev-util/geany
 dev-util/kdevelop
-dev-util/nvidia-cuda-toolkit
 dev-util/plan9port
 dev-util/re2c
 dev-util/staruml-bin
@@ -759,6 +758,7 @@ net-vpn/tor
 net-vpn/zeronet
 net-wireless/blueman
 net-wireless/broadcom-sta
+net-wireless/gnuradio
 net-wireless/iw
 net-wireless/rfkill
 net-wireless/wpa_supplicant
