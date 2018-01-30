@@ -125,6 +125,7 @@ app-text/calibre
 app-text/convmv
 app-text/dos2unix
 app-text/evince
+app-text/mupdf
 app-text/tesseract
 app-text/texlive
 app-text/tree
@@ -479,7 +480,6 @@ media-gfx/gimp
 media-gfx/graphicsmagick
 media-gfx/gthumb
 media-gfx/imagemagick
-media-gfx/inkscape
 media-gfx/jpegoptim
 media-gfx/krita
 media-gfx/librecad
@@ -659,7 +659,6 @@ media-video/makemkv
 media-video/mkvtoolnix
 media-video/mpv
 media-video/obs-studio
-media-video/openshot
 media-video/pitivi
 media-video/smplayer
 media-video/smtube
@@ -822,6 +821,7 @@ sys-fs/ntfs3g
 sys-fs/safecopy
 sys-fs/squashfs-tools
 sys-fs/zfs
+sys-kernel/bliss-initramfs
 sys-kernel/dkms
 sys-kernel/dracut
 sys-kernel/genkernel

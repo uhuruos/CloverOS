@@ -1,15 +1,17 @@
 #preference
+media-plugins/vapoursynth-tcanny -opencl
+media-gfx/digikam -panorama
+media-gfx/blender tiff -opencl -cycles -openimageio
+games-simulation/openttd -openmedia
+games-emulation/rpcs3 joystick -vulkan
+media-libs/opencv -opengl
 media-fonts/tewi-font bdf pcf
-media-gfx/blender tiff -cycles -openimageio -opencl
 games-emulation/nestopia gui
 games-emulation/stella joystick
 games-emulation/mgba qt5
 media-sound/supercollider qt5
 media-sound/clementine dbus udisks cdda lastfm moodbar projectm
-media-libs/opencv -opengl
-games-emulation/rpcs3 joystick -vulkan
 dev-python/networkx -doc
-games-simulation/openttd -openmedia
 sys-fs/zfs -rootfs
 games-emulation/citra sdl2 qt5 system-boost
 games-emulation/libretro-meta 2048 4do beetle-psx bsnes desmume fbalpha gambatte genplus handy -mame2003 mednafen-ngp mednafen-pce-fast mednafen-saturn mednafen-supergrafx mednafen-vb mednafen-wswan mgba mupen64plus nestopia nxengine prboom prosystem psp1 reicast scummvm stella tyrquake bnes -bsnes-cpp98 -citra craft dolphin easyrpg fbalpha2012 fceumm mame -mame2000 mame2016 mednafen-gba mednafen-snes -melonds meowpc98 meteor mrboom openlara parallel-n64 pcsx-rearmed picodrive ppsspp px68k quicknes redream sameboy snes9x snes9x2002 snes9x2010 tgbdual vba-next vbam yabause
@@ -23,9 +25,7 @@ media-sound/ncmpc help-screen artist-screen chat-screen colors key-screen lirc l
 media-sound/beets convert discogs lastgenre lastimport bpd chroma mpdstats thumbnails web
 media-sound/moc ffmpeg
 www-client/uget aria2
-app-misc/anki -sound
 kde-apps/dolphin thumbnail
-media-plugins/vapoursynth-tcanny -opencl
 media-libs/waifu2x-converter-cpp models
 app-laptop/tlp tlp_suggests
 app-emulation/fuse sdl joystick
@@ -166,7 +166,7 @@ dev-db/sqlite secure-delete
 media-libs/phonon -vlc
 media-libs/libsdl custom-cflags
 www-client/chromium custom-cflags
-www-client/firefox custom-cflags custom-optimization -wifi nsplugin system-harfbuzz -system-icu system-jpeg system-libevent system-libvpx system-sqlite
+www-client/firefox custom-cflags custom-optimization -wifi system-harfbuzz -system-icu system-jpeg system-libevent system-libvpx system-sqlite
 www-client/torbrowser custom-cflags custom-optimization hardened system-cairo system-harfbuzz -system-icu system-jpeg system-libevent system-libvpx system-sqlite
 mail-client/thunderbird custom-cflags custom-optimization -crypt system-harfbuzz system-icu system-jpeg system-libevent system-libvpx system-sqlite
 www-client/seamonkey custom-cflags custom-optimization -crypt -minimal system-harfbuzz system-icu system-jpeg system-libevent system-libvpx system-sqlite

@@ -30,6 +30,9 @@ www-client/firefox::pg_overlay
 app-arch/p7zip::pg_overlay
 dev-libs/libsigc++::pg_overlay
 dev-libs/mpc::pg_overlay
+dev-libs/atk::pg_overlay
+app-accessibility/at-spi2-core::pg_overlay
+net-p2p/deluge::pg_overlay
 media-sound/ardour::4nykey
 media-fonts/monoid::4nykey
 www-client/torbrowser::4nykey
@@ -42,7 +45,9 @@ dev-python/munkres::4nykey
 media-video/flowblade::4nykey
 net-misc/megatools::4nykey
 net-misc/megatools::jm-overlay
+virtual/linux-sources::jm-overlay
 net-p2p/rtorrent::pinkpieea
 media-sound/mpdas::pinkpieea
 games-emulation/dolphin::fkmclane
+dev-dotnet/gtk-sharp::fkmclane
 gnome-base/gnome-desktop::elementary
