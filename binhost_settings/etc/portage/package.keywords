@@ -306,8 +306,6 @@ dev-libs/nspr
 dev-libs/nss
 #fuse
 app-emulation/libspectrum
-#vapoursynth
-media-libs/zimg **
 #rethinkdb
 dev-libs/jemalloc
 #qutebrowser
@@ -486,6 +484,15 @@ media-plugins/vapoursynth-bilateral
 media-plugins/vapoursynth-vstaambk
 media-plugins/vapoursynth-cnr2
 media-plugins/vapoursynth-eedi3
+media-plugins/vapoursynth-muvsfunc
+media-plugins/vapoursynth-beziercurve
+media-plugins/vapoursynth-nnedi3cl
+media-plugins/vapoursynth-vfrtocrf
+media-plugins/vapoursynth-tonemap
+media-plugins/vapoursynth-dotkill
+media-plugins/vapoursynth-znedi3
+media-plugins/vapoursynth-remapframes
+media-plugins/vapoursynth-hqdn3d
 
 #window maker plugins
 x11-plugins/wmmand
@@ -531,16 +538,16 @@ x11-plugins/wmping
 x11-plugins/wmamixer
 
 #yubikey applications
-# required by pam_yubico (argument)
+#pam_yubico
 sys-auth/pam_yubico
 sys-auth/libyubikey
 sys-auth/ykpers
 sys-auth/ykclient
-# required by passwordsafe (argument)
+#passwordsafe
 app-admin/passwordsafe
-# required by keepassxc (argument)
+#keepassxc
 app-admin/keepassxc
-# required by django-two-factor-auth (argument)
+#django-two-factor-auth
 dev-python/django-phonenumber-field
 dev-python/yubiotp
 dev-python/django-two-factor-auth
