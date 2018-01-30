@@ -480,6 +480,7 @@ media-gfx/gimp
 media-gfx/graphicsmagick
 media-gfx/gthumb
 media-gfx/imagemagick
+media-gfx/inkscape
 media-gfx/jpegoptim
 media-gfx/krita
 media-gfx/librecad
@@ -659,6 +660,7 @@ media-video/makemkv
 media-video/mkvtoolnix
 media-video/mpv
 media-video/obs-studio
+media-video/openshot
 media-video/pitivi
 media-video/smplayer
 media-video/smtube

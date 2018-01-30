@@ -23,5 +23,4 @@ find /usr/portage/packages/ -type f | sed 's#/usr/portage/packages/##' | pv -qB 
 rmdir /usr/portage/packages/s/signatures/s/signatures/
 
 chmod -R 755 /usr/portage/packages/
-rsync -a --delete-before /usr/portage/packages/ root@fr.cloveros.ga:/var/www/html/ &
-wait
+rsync -a --delete-before /usr/portage/packages/ root@fr.cloveros.ga:/var/www/html/
