@@ -478,6 +478,7 @@ media-gfx/fontforge
 media-gfx/gifsicle
 media-gfx/gimp
 media-gfx/graphicsmagick
+media-gfx/graphviz
 media-gfx/gthumb
 media-gfx/imagemagick
 media-gfx/inkscape

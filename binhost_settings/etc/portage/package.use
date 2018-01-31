@@ -108,7 +108,7 @@ media-sound/jack-audio-connection-kit cpudetection
 virtual/ffmpeg X sdl x264
 media-video/ffmpeg X openssl rubberband x265 libass vorbis ogg network vpx rtmp x264 aac wavpack opus mp3 sdl gme v4l webp theora xvid xcb cpudetection -opengl
 media-gfx/fontforge X gtk
-media-gfx/graphviz X gtk
+media-gfx/graphviz X gtk pdf svg python perl
 app-emulation/virt-manager gtk
 app-crypt/veracrypt X
 sci-chemistry/gromacs X
