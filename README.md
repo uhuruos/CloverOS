@@ -400,6 +400,16 @@ pcm.!default {
 
 Replace card 0 with your device number
 
+### Wayland howto
+```
+emerge weston
+useradd weston-launch
+gpasswd -a youruser weston-launch
+echo '[core]
+modules=xwayland.so' >> ~/.config/weston.ini
+XDG_RUNTIME_DIR=. weston-launch
+```
+
 ### Things preventing CloverOS Libre from being 100% free software:
 - LiveCD kernel is taken from Gentoo, it needs to be made from scratch
 
