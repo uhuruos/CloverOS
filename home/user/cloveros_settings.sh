@@ -21,14 +21,14 @@ else
 	echo "1) Update cloveros_settings.sh
 2) Change mirrors
 3) Change default ALSA (sound) device
-4) Upgrade kernel (Current version: 4.15)
+4) Upgrade kernel (4.15.0)
 5) Change binary/source
 6) Update dot files
 7) Sync time
 8) Set timezone
 9) Clean emerge cache
-f) Install FVWM and CloverOS .fvwm2rc
 u) Update system
+f) Install FVWM and CloverOS .fvwm2rc
 a) ALSA settings
 t) Enable tap to click on touchpad
 l) Upgrade/Install Libre kernel
