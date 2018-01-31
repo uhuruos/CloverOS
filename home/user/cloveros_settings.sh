@@ -20,7 +20,7 @@ if [[ -n "$1" ]]; then
 else
 	echo "1) Update cloveros_settings.sh
 2) Change mirrors
-3) Change default ALSA (sound) device
+3) Change default sound device
 4) Upgrade kernel (4.15.0)
 5) Change binary/source
 6) Update dot files
