@@ -70,14 +70,7 @@ app-editors/nano -minimal
 x11-base/xorg-server -minimal glamor xvfb
 net-p2p/eiskaltdcpp -minimal -emoticons -spell dht json gtk
 kde-frameworks/kio -handbook
-dev-lang/ruby -berkdb -gdbm -ncurses -readline
-dev-vcs/subversion -berkdb
-net-nds/openldap -berkdb
-dev-libs/cyrus-sasl -berkdb
-sys-libs/pam -berkdb
-dev-python/rdflib -berkdb
-sys-apps/iproute2 -berkdb
-sys-apps/man-db -berkdb
+dev-lang/ruby -ncurses -readline
 net-libs/glib-networking -libproxy
 net-misc/dhcpcd -udev
 sys-apps/openrc -ncurses -netifrc -pam -unicode
@@ -124,9 +117,12 @@ app-admin/conky X
 dev-lang/R X cairo
 x11-libs/gdk-pixbuf X
 sci-mathematics/octave X gui fftw curl gnuplot postscript jit
+www-servers/varnish jit jemalloc
+media-video/mpv rubberband lcms archive cdda bluray dvd encode libmpv
+dev-lang/php curl gd fpm pdo nls recode fpm curl intl sqlite xmlwriter
+net-p2p/retroshare feedreader voip
 media-video/handbrake x265
 app-text/texlive X cjk context detex dvi2tty dvipdfm epspdf extra games graphics humanities jadetex luatex metapost music omega png pstricks publishers science tex4ht texi2html truetype xetex xindy xml
-media-video/mpv rubberband lcms archive cdda bluray dvd encode libmpv
 media-libs/mesa -bindist opencl d3d9 llvm gallium osmesa gles1 gles2 openmax xa video_cards_vmware
 dev-cpp/gtkmm X
 media-libs/clutter X
@@ -166,7 +162,6 @@ www-servers/nginx http2 nginx_modules_http_dav nginx_modules_http_realip rtmp
 net-misc/curl http2
 media-libs/freetype infinality
 net-libs/webkit-gtk -introspection -gstreamer -geoloc -geolocation -webgl
-net-p2p/retroshare feedreader voip
 games-emulation/pcsxr -sdl
 dev-db/sqlite secure-delete
 media-libs/phonon -vlc
@@ -182,7 +177,6 @@ media-libs/gd truetype fontconfig
 sys-libs/zlib minizip
 media-libs/libpng apng
 media-libs/flac ogg
-www-servers/varnish jit jemalloc
 app-portage/layman subversion
 net-analyzer/rrdtool perl graph
 media-sound/lmms alsa fluidsynth ogg portaudio sdl stk qt5
@@ -212,13 +206,14 @@ media-gfx/imagemagick png
 media-gfx/feh exif curl
 x11-terms/rxvt-unicode -vanilla alt-font-width xft 256-color blink unicode3
 net-analyzer/vnstat gd
-dev-lang/php curl gd fpm pdo nls recode fpm curl intl sqlite xmlwriter
 app-eselect/eselect-php fpm
 net-p2p/rtorrent xmlrpc
 media-sound/deadbeef aac adplug alac alsa cdda converter cover cover-imlib2 cover-network curl dts dumb equalizer ffmpeg flac hotkeys lastfm libnotify libsamplerate m3u mad midi mms mono2stereo mp3 musepack nullout oss psf shn sid sndfile tta vorbis vtx wavpack wma zip cdparanoia -gme gtk3 -libav mac mpg123 -nls playlist-browser -pulseaudio sc68 -shell-exec -unity
 app-emulation/qemu sdl usb virgl
 
 #required
+dev-lang/perl berkdb
+sys-devel/gcc fortran
 media-libs/cogl gles2
 media-libs/mlt qt5 kdenlive xml sdl melt
 media-libs/gegl cairo
@@ -297,118 +292,11 @@ dev-libs/libcdio -minimal
 kde-plasma/libksysguard -minimal
 x11-libs/libdrm libkms video_cards_vmware
 media-libs/gst-plugins-bad gtk
-media-gfx/gmic X ffmpeg
+media-gfx/gmic X ffmpeg cli
 media-libs/mlt python gtk ffmpeg
-x11-libs/gdk-pixbuf tiff abi_x86_32
-dev-libs/libxml2 icu abi_x86_32
-dev-libs/libxslt python abi_x86_32
-x11-libs/wxGTK tiff abi_x86_32
-sys-apps/util-linux abi_x86_32
-net-libs/gnutls abi_x86_32
-app-arch/xz-utils abi_x86_32
-app-arch/bzip2 abi_x86_32
-x11-proto/renderproto abi_x86_32
-dev-libs/libtasn1 abi_x86_32
-x11-libs/libX11 abi_x86_32
-sys-libs/binutils-libs abi_x86_32
-virtual/libiconv abi_x86_32
-x11-libs/libva-intel-driver abi_x86_32
-dev-libs/libaio abi_x86_32
-x11-libs/libva abi_x86_32
-x11-proto/compositeproto abi_x86_32
-x11-proto/fixesproto abi_x86_32
-x11-proto/glproto abi_x86_32
-media-libs/lcms abi_x86_32
-virtual/jpeg abi_x86_32
-x11-proto/videoproto abi_x86_32
-x11-proto/kbproto abi_x86_32
-x11-libs/libva-vdpau-driver abi_x86_32
-dev-libs/libunistring abi_x86_32
-dev-libs/glib abi_x86_32
-x11-libs/libXcomposite abi_x86_32
-media-libs/fontconfig abi_x86_32
-x11-libs/libXi abi_x86_32
-x11-libs/libICE abi_x86_32
-media-libs/alsa-lib abi_x86_32
-dev-libs/libgpg-error abi_x86_32
-x11-libs/pango abi_x86_32
-dev-util/pkgconfig abi_x86_32
-x11-proto/xproto abi_x86_32
-x11-proto/presentproto abi_x86_32
-x11-proto/xineramaproto abi_x86_32
-x11-libs/libXcursor abi_x86_32
-dev-libs/elfutils abi_x86_32
-x11-libs/libXau abi_x86_32
-dev-libs/atk abi_x86_32
-sys-libs/zlib abi_x86_32
-virtual/libintl abi_x86_32
-sys-apps/attr abi_x86_32
-x11-proto/damageproto abi_x86_32
-media-libs/libpng abi_x86_32
-x11-proto/dri3proto abi_x86_32
-virtual/jpeg abi_x86_32
-x11-proto/xextproto abi_x86_32
-virtual/pkgconfig abi_x86_32
-x11-libs/libXft abi_x86_32
-x11-proto/xf86vidmodeproto abi_x86_32
-x11-proto/xf86bigfontproto abi_x86_32
-net-dns/libidn2 abi_x86_32
-virtual/glu abi_x86_32
-gnome-base/librsvg abi_x86_32
-x11-proto/dri2proto abi_x86_32
-x11-libs/libXfixes abi_x86_32
-dev-libs/expat abi_x86_32
-x11-libs/libXdamage abi_x86_32
-x11-libs/libXv abi_x86_32
-x11-libs/cairo abi_x86_32
-media-libs/libsdl abi_x86_32
-x11-libs/libxcb abi_x86_32
-media-libs/freetype abi_x86_32
-media-libs/tiff abi_x86_32
-sys-devel/gettext abi_x86_32
-x11-libs/libxshmfence abi_x86_32
-media-libs/libomxil-bellagio abi_x86_32
-dev-libs/libpthread-stub abi_x86_32
-dev-libs/libffi abi_x86_32
-media-libs/libjpeg-turbo abi_x86_32
-media-libs/audiofile abi_x86_32
-x11-libs/libXrender abi_x86_32
-x11-libs/libXvMC abi_x86_32
-dev-libs/icu abi_x86_32
-x11-libs/pixman abi_x86_32
-x11-proto/xf86driproto abi_x86_32
-media-libs/portaudio abi_x86_32
-x11-libs/libvdpau abi_x86_32
-x11-libs/libXdmcp abi_x86_32
-dev-libs/gmp abi_x86_32
-x11-proto/xcb-proto abi_x86_32
-media-libs/mesa abi_x86_32
-dev-libs/lzo abi_x86_32
-virtual/opengl abi_x86_32
-media-libs/harfbuzz abi_x86_32
-x11-proto/randrproto abi_x86_32
-media-gfx/graphite2 abi_x86_32
-media-libs/glu abi_x86_32
-dev-libs/wayland abi_x86_32
-x11-libs/libXinerama abi_x86_32
-dev-libs/nettle abi_x86_32
-x11-libs/libXext abi_x86_32
-x11-libs/libSM abi_x86_32
-x11-libs/libXxf86vm abi_x86_32
-virtual/libffi abi_x86_32
-dev-libs/libcroco abi_x86_32
-x11-proto/inputproto abi_x86_32
-dev-libs/libpcre abi_x86_32
-x11-libs/libXrandr abi_x86_32
-media-libs/libsoundtouch abi_x86_32
-virtual/opencl abi_x86_32
-x11-libs/gtk+:2 abi_x86_32
-sys-libs/ncurses:0 abi_x86_32
-sys-devel/clang abi_x86_32
-sys-devel/llvm abi_x86_32
-x11-libs/libdrm abi_x86_32
-app-emulation/wine-gecko abi_x86_32
-sys-apps/dbus abi_x86_32
-media-libs/libtxc_dxtn abi_x86_32
-dev-libs/libgcrypt abi_x86_32
-virtual/libelf abi_x86_32
+x11-libs/gdk-pixbuf tiff
+dev-libs/libxml2 icu
+dev-libs/libxslt python
+x11-libs/wxGTK tiff
+x11-libs/gtk+:2
+sys-libs/ncurses:0
