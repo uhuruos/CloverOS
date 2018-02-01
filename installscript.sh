@@ -67,7 +67,7 @@ mount --rbind /sys sys
 cat << EOF | chroot .
 
 emerge-webrsync
-eselect profile set "default/linux/amd64/17.0"
+eselect profile set "default/linux/amd64/17.0/hardened"
 
 echo '
 CFLAGS="-O3 -march=native -pipe -funroll-loops -floop-block -floop-interchange -floop-strip-mine -ftree-loop-distribution"
@@ -108,7 +108,7 @@ echo "$user:$userpassword" | chpasswd
 gpasswd -a $user wheel
 
 emerge -1 openssh openssl
-emerge -uvD world xorg-server twm feh sudo xfe wpa_supplicant porthole firefox emacs gimp mpv smplayer rxvt-unicode filezilla engrampa p7zip zip rtorrent-ps weechat linux-firmware alsa-utils zsh zsh-completions gentoo-zsh-completions vlgothic hack liberation-fonts nano scrot xbindkeys xinput nitrogen arandr qastools slock gparted squashfs-tools os-prober games-envd
+emerge -uvD world xorg-server fvwm feh sudo xfe wpa_supplicant porthole firefox emacs gimp mpv smplayer rxvt-unicode filezilla engrampa p7zip zip rtorrent-ps weechat linux-firmware alsa-utils zsh zsh-completions gentoo-zsh-completions vlgothic hack liberation-fonts nano scrot xbindkeys xinput nitrogen arandr qastools slock gparted squashfs-tools os-prober games-envd
 
 sed -i "s/# %wheel ALL=(ALL) NOPASSWD: ALL/%wheel ALL=(ALL) NOPASSWD: ALL/" /etc/sudoers
 sed -Ei "s@c([2-6]):2345:respawn:/sbin/agetty 38400 tty@#\0@" /etc/inittab
@@ -131,7 +131,7 @@ rm .bash_profile
 wget https://gitgud.io/cloveros/cloveros/raw/master/home/user/.bash_profile
 wget https://gitgud.io/cloveros/cloveros/raw/master/home/user/.zprofile
 wget https://gitgud.io/cloveros/cloveros/raw/master/home/user/.zshrc
-wget https://gitgud.io/cloveros/cloveros/raw/master/home/user/.twmrc
+wget https://gitgud.io/cloveros/cloveros/raw/master/home/user/.fvwm2rc
 wget https://gitgud.io/cloveros/cloveros/raw/master/home/user/.Xdefaults
 wget https://gitgud.io/cloveros/cloveros/raw/master/home/user/wallpaper.png
 wget https://gitgud.io/cloveros/cloveros/raw/master/home/user/.xbindkeysrc
@@ -148,10 +148,6 @@ chmod +x rotate_screen.sh
 wget https://gitgud.io/cloveros/cloveros/raw/master/home/user/.emacs
 mkdir -p .emacs.d/backups
 mkdir .emacs.d/autosaves
-mkdir .twm
-wget https://gitgud.io/cloveros/cloveros/raw/master/home/user/.twm/minimize.xbm -P .twm
-wget https://gitgud.io/cloveros/cloveros/raw/master/home/user/.twm/maximize.xbm -P .twm
-wget https://gitgud.io/cloveros/cloveros/raw/master/home/user/.twm/close.xbm -P .twm
 mkdir -p .config/xfe/
 wget https://gitgud.io/cloveros/cloveros/raw/master/home/user/.config/xfe/xferc -P .config/xfe
 mkdir .config/nitrogen/
