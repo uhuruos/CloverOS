@@ -28,7 +28,6 @@ else
 8) Set timezone
 9) Clean emerge cache
 u) Update system, profile and kernel
-f) Install FVWM and CloverOS .fvwm2rc
 a) ALSA settings
 t) Enable tap to click on touchpad
 l) Upgrade/Install Libre kernel
@@ -153,19 +152,14 @@ case "$choice" in
 		echo -e "\nPackage cache cleared. (/usr/portage/packages/, /usr/portage/distfiles/, /var/tmp/portage/)"
 		;;
 
-	f)
-		echo "Running the following:"
+	u)
 		if [ ! -f /usr/bin/fvwm ]; then
-			echo "sudo emerge fvwm"
 			sudo emerge fvwm
 		fi
-		echo "rm .fvwm2rc && wget $gitprefix/home/user/.fvwm2rc"
-		rm .fvwm2rc
-		wget $gitprefix/home/user/.fvwm2rc
-		;;
-
-	u)
-		sudo eselect profile set "default/linux/amd64/17.0/hardened"
+		if [ ! -f ~/.fvwm2rc ]; then
+			cd ~
+			wget $gitprefix/home/user/.fvwm2rc
+		fi
 		echo "Running the following:"
 		echo 'sudo eselect profile set "default/linux/amd64/17.0/hardened"'
 		echo "./cloveros_settings.sh 4"
