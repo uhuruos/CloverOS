@@ -9,6 +9,10 @@ media-gfx/blender tiff -opencl -cycles -openimageio
 games-simulation/openttd -openmedia
 games-emulation/rpcs3 joystick -vulkan
 #preference
+kde-plasma/plasma-meta grub gtk
+kde-plasma/plasma-desktop gtk3 gtk2 legacy-systray
+kde-apps/kde-apps-meta accessibility sdk pim
+kde-plasma/powerdevil -wireless
 games-fps/redeclipse dedicated
 games-fps/sauerbraten dedicated
 games-fps/xonotic dedicated
@@ -44,7 +48,6 @@ media-sound/ncmpc help-screen artist-screen chat-screen colors key-screen lirc l
 media-sound/beets convert discogs lastgenre lastimport bpd chroma mpdstats thumbnails web
 media-sound/moc ffmpeg
 www-client/uget aria2
-kde-apps/dolphin thumbnail
 media-libs/waifu2x-converter-cpp models
 app-laptop/tlp tlp_suggests
 app-emulation/fuse sdl joystick
@@ -68,7 +71,6 @@ media-gfx/krita color-management
 app-emulation/wine-any -udisks staging d3d9 s3tc
 x11-wm/xmonad -default-term
 sys-block/gparted btrfs dmraid f2fs fat hfs jfs mdadm ntfs reiserfs reiser4 xfs
-kde-plasma/powerdevil -wireless
 dev-python/django-two-factor-auth yubikey
 app-admin/keepassxc yubikey
 app-admin/passwordsafe -minimal yubikey
@@ -83,7 +85,6 @@ dev-util/google-perftools -minimal
 app-editors/nano -minimal
 x11-base/xorg-server -minimal glamor xvfb
 net-p2p/eiskaltdcpp -minimal -emoticons -spell dht json gtk
-kde-frameworks/kio -handbook
 dev-lang/ruby -ncurses -readline
 net-libs/glib-networking -libproxy
 net-misc/dhcpcd -udev
@@ -103,13 +104,11 @@ media-sound/audacious qt5
 media-plugins/audacious-plugins qt5
 x11-themes/qtcurve qt5
 net-p2p/transmission qt5
-net-wireless/wpa_supplicant qt5
+net-wireless/wpa_supplicant qt5 dbus
 app-misc/recoll qt5
 x11-apps/xinput_calibrator gtk
 games-emulation/vbam gtk link
 sys-devel/distcc gtk crossdev
-kde-plasma/plasma-meta grub gtk
-kde-plasma/plasma-desktop gtk3 gtk2 legacy-systray
 media-video/handbrake gtk -fdk libav-aac
 media-sound/jack-audio-connection-kit cpudetection
 virtual/ffmpeg X sdl x264
@@ -226,6 +225,7 @@ media-sound/deadbeef aac adplug alac alsa cdda converter cover cover-imlib2 cove
 app-emulation/qemu sdl usb virgl
 
 #required
+app-crypt/gpgme qt5
 sys-devel/gcc fortran
 media-libs/cogl gles2
 media-libs/mlt qt5 kdenlive xml sdl melt
@@ -311,6 +311,9 @@ x11-libs/gdk-pixbuf tiff
 dev-libs/libxml2 icu
 dev-libs/libxslt python
 x11-libs/wxGTK tiff
+dev-qt/qtsql mysql
+kde-apps/ktp-common-internals otr
+kde-apps/artikulate qtmedia
 
 x11-libs/gdk-pixbuf abi_x86_32
 dev-libs/libxml2 abi_x86_32
