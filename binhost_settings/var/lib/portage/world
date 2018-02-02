@@ -67,6 +67,8 @@ app-emulation/virt-manager
 app-emulation/virtualbox
 app-emulation/virtualbox-additions
 app-emulation/virtualbox-guest-additions
+app-emulation/wine-any
+app-emulation/winetricks
 app-forensics/aide
 app-i18n/fcitx-anthy
 app-i18n/ibus
@@ -203,6 +205,7 @@ games-emulation/mupen64plus
 games-emulation/nestopia
 games-emulation/nestra
 games-emulation/openmsx
+games-emulation/pcsx2
 games-emulation/pcsxr
 games-emulation/ppsspp
 games-emulation/retroarch
@@ -224,6 +227,7 @@ games-fps/doomsday
 games-fps/doomsday-resources
 games-fps/enemy-territory
 games-fps/ezquake-bin
+games-fps/gzdoom
 games-fps/lsdldoom
 games-fps/nexuiz
 games-fps/openarena
