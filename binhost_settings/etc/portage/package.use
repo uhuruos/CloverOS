@@ -8,7 +8,21 @@ media-gfx/digikam -panorama
 media-gfx/blender tiff -opencl -cycles -openimageio
 games-simulation/openttd -openmedia
 games-emulation/rpcs3 joystick -vulkan
+games-fps/redeclipse -dedicated
 #preference
+games-fps/sauerbraten dedicated
+games-fps/xonotic dedicated
+games-fps/enemy-territory dedicated
+games-simulation/openttd dedicated
+games-fps/alienarena dedicated
+games-strategy/freeciv dedicated
+games-fps/nexuiz dedicated
+games-fps/darkplaces dedicated
+games-fps/quake3 dedicated
+games-fps/urbanterror dedicated
+games-fps/quake3-cpma dedicated
+games-strategy/wesnoth dedicated
+games-fps/doomsday dedicated
 media-libs/opencv -opengl
 media-fonts/tewi-font bdf pcf
 games-emulation/nestopia gui
@@ -20,7 +34,7 @@ dev-python/networkx -doc
 sys-fs/zfs -rootfs
 games-emulation/citra sdl2 qt5 system-boost
 games-emulation/libretro-meta 2048 4do beetle-psx bsnes desmume fbalpha gambatte genplus handy -mame2003 mednafen-ngp mednafen-pce-fast mednafen-saturn mednafen-supergrafx mednafen-vb mednafen-wswan mgba mupen64plus nestopia nxengine prboom prosystem psp1 reicast scummvm stella tyrquake bnes -bsnes-cpp98 -citra craft dolphin easyrpg fbalpha2012 fceumm mame -mame2000 mame2016 mednafen-gba mednafen-snes -melonds meowpc98 meteor mrboom openlara parallel-n64 pcsx-rearmed picodrive ppsspp px68k quicknes redream sameboy snes9x snes9x2002 snes9x2010 tgbdual vba-next vbam yabause
-media-libs/sdl2-mixer flac mikmod vorbis mod
+media-libs/sdl2-mixer flac mikmod vorbis mod mp3 mad
 media-video/obs-studio jack
 media-plugins/alsa-plugins jack
 x11-libs/vte termite-patch
