@@ -25,7 +25,7 @@ mount --rbind /sys sys
 cat << EOF | chroot .
 
 emerge-webrsync
-eselect profile set "hardened/linux/amd64"
+eselect profile set "default/linux/amd64/17.0/hardened"
 
 echo '
 CFLAGS="-O3 -march=native -pipe -funroll-loops -floop-block -floop-interchange -floop-strip-mine -ftree-loop-distribution"

@@ -164,12 +164,12 @@ case "$choice" in
 			wget $gitprefix/home/user/.fvwm2rc
 		fi
 		echo "Running the following:"
-		echo 'sudo eselect profile set "hardened/linux/amd64"'
+		echo 'sudo eselect profile set "default/linux/amd64/17.0/hardened"'
 		echo "./cloveros_settings.sh 4"
 		echo "sudo emerge --sync"
 		echo "sudo emerge -uvD world"
 		echo "sudo emerge --depclean"
-		sudo eselect profile set "hardened/linux/amd64"
+		sudo eselect profile set "default/linux/amd64/17.0/hardened"
 		./cloveros_settings.sh 4
 		sudo emerge --sync
 		sudo emerge -uvD world

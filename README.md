@@ -11,7 +11,7 @@ Mirrors and binary details: https://useast.cloveros.ga https://uswest.cloveros.g
 ### Upgrade your profile
 ```
 emerge --sync
-eselect profile set "hardened/linux/amd64"
+eselect profile set "default/linux/amd64/17.0/hardened"
 ```
 
 ### Installing program
