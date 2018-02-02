@@ -9,7 +9,6 @@ media-gfx/blender tiff -opencl -cycles -openimageio
 games-simulation/openttd -openmedia
 games-emulation/rpcs3 joystick -vulkan
 #preference
-games-fps/gzdoom
 media-libs/opencv -opengl
 media-fonts/tewi-font bdf pcf
 games-emulation/nestopia gui
