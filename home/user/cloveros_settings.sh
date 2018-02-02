@@ -90,8 +90,8 @@ case "$choice" in
 		;;
 
 	5)
-		if grep -q 'EMERGE_DEFAULT_OPTS="--keep-going=y --autounmask-write=y --jobs=2 -G"' /etc/portage/make.conf; then
-			sudo sed -i 's/EMERGE_DEFAULT_OPTS="--keep-going=y --autounmask-write=y --jobs=2 -G"/EMERGE_DEFAULT_OPTS="--keep-going=y --autounmask-write=y --jobs=2"/' /etc/portage/make.conf
+		if grep -q 'EMERGE_DEFAULT_OPTS="--keep-going=y --autounmask-write=y --jobs=4 -G"' /etc/portage/make.conf; then
+			sudo sed -i 's/EMERGE_DEFAULT_OPTS="--keep-going=y --autounmask-write=y --jobs=4 -G"/EMERGE_DEFAULT_OPTS="--keep-going=y --autounmask-write=y --jobs=4"/' /etc/portage/make.conf
 			sudo sed -i 's/^ACCEPT_KEYWORDS="\*\*"/#ACCEPT_KEYWORDS="\*\*"/' /etc/portage/make.conf
 			sudo sed -i 's/^FETCHCOMMAND_HTTPS=/#FETCHCOMMAND_HTTPS=/' /etc/portage/make.conf
 			echo -e "\nemerge will now install from source. (/etc/portage/make.conf)\n"
@@ -108,7 +108,7 @@ case "$choice" in
 				echo -e "\nPortage configuration now mirrors binhost Portage configuration. Previous Portage config stored in ~/$backupportagedir"
 			fi
 		else
-			sudo sed -i 's/EMERGE_DEFAULT_OPTS="--keep-going=y --autounmask-write=y --jobs=2"/EMERGE_DEFAULT_OPTS="--keep-going=y --autounmask-write=y --jobs=2 -G"/' /etc/portage/make.conf
+			sudo sed -i 's/EMERGE_DEFAULT_OPTS="--keep-going=y --autounmask-write=y --jobs=4"/EMERGE_DEFAULT_OPTS="--keep-going=y --autounmask-write=y --jobs=4 -G"/' /etc/portage/make.conf
 			sudo sed -i 's/^#ACCEPT_KEYWORDS="\*\*"/ACCEPT_KEYWORDS="\*\*"/' /etc/portage/make.conf
 			sudo sed -i 's/^#FETCHCOMMAND_HTTPS=/FETCHCOMMAND_HTTPS=/' /etc/portage/make.conf
 			echo -e "\nemerge will now install from binary. (/etc/portage/make.conf)"
