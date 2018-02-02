@@ -22,7 +22,7 @@ else
 2) Change mirrors
 3) Change default sound device
 4) Update kernel (4.15.0)
-5) Change binary/source
+5) Change emerge to source or binary
 6) Update dot files
 7) Sync time
 8) Set timezone
