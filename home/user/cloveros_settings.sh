@@ -156,6 +156,10 @@ case "$choice" in
 		;;
 
 	u)
+		if ! grep -q 'EMERGE_DEFAULT_OPTS=".* -G"' /etc/portage/make.conf; then
+			echo "Please enable binaries."
+			exit 1
+		fi
 		if [ ! -f /usr/bin/fvwm ]; then
 			sudo emerge fvwm
 		fi
