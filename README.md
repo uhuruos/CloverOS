@@ -439,6 +439,24 @@ First, connect to wifi using wpa_gui ('wifi' in fvwm)
 
 Kill X and relog. After you log in and the "Start X?" dialog pops up, instead of y/n, type one of the WM options and hit y when it asks to install.
 
+### Recovering /etc/portage/make.conf
+```
+PORTDIR="/usr/portage"
+DISTDIR="/usr/portage/distfiles"
+PKGDIR="/usr/portage/packages"
+LC_MESSAGES=C
+CFLAGS="-O3 -march=native -pipe -funroll-loops -floop-block -floop-interchange -floop-strip-mine -ftree-loop-distribution"
+CXXFLAGS="${CFLAGS}"
+CPU_FLAGS_X86="mmx mmxext sse sse2 ssse3 sse3"
+MAKEOPTS="-j8"
+EMERGE_DEFAULT_OPTS="--keep-going=y --autounmask-write=y --jobs=4 -G"
+PORTAGE_NICENESS=19
+PORTAGE_BINHOST="https://cloveros.ga"
+ACCEPT_LICENSE="*"
+ACCEPT_KEYWORDS="**"
+FETCHCOMMAND_HTTPS="sh -c \"wget -t 3 -T 60 --passive-ftp -O \"\${DISTDIR}/\${FILE}\" \"\${URI}\" && sed \"s#cloveros.ga/#cloveros.ga/s/signatures/#\" <<< \"\${URI}.asc\" | wget -i - -O \"\${DISTDIR}/\${FILE}.asc\" && gpg --verify \"\${DISTDIR}/\${FILE}.asc\" \"\${DISTDIR}/\${FILE}\"\""
+```
+
 ### I want to host a mirror
 Run `rsync -av --delete rsync://fr.cloveros.ga/cloveros /your/webserver/location/` and tell me the domain (or IP) so I can give you a cloveros.ga subdomain
 
