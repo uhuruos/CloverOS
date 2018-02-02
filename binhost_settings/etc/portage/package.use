@@ -8,8 +8,8 @@ media-gfx/digikam -panorama
 media-gfx/blender tiff -opencl -cycles -openimageio
 games-simulation/openttd -openmedia
 games-emulation/rpcs3 joystick -vulkan
-games-fps/redeclipse -dedicated
 #preference
+games-fps/redeclipse dedicated
 games-fps/sauerbraten dedicated
 games-fps/xonotic dedicated
 games-fps/enemy-territory dedicated
@@ -226,7 +226,6 @@ media-sound/deadbeef aac adplug alac alsa cdda converter cover cover-imlib2 cove
 app-emulation/qemu sdl usb virgl
 
 #required
-dev-lang/perl berkdb
 sys-devel/gcc fortran
 media-libs/cogl gles2
 media-libs/mlt qt5 kdenlive xml sdl melt
