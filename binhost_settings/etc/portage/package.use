@@ -13,6 +13,8 @@ kde-plasma/plasma-meta grub gtk
 kde-plasma/plasma-desktop gtk3 gtk2 legacy-systray
 kde-apps/kde-apps-meta accessibility sdk pim
 kde-plasma/powerdevil -wireless
+app-emulation/open-vm-tools modules
+media-gfx/graphicsmagick modules
 games-fps/redeclipse dedicated
 games-fps/sauerbraten dedicated
 games-fps/xonotic dedicated
@@ -225,6 +227,7 @@ media-sound/deadbeef aac adplug alac alsa cdda converter cover cover-imlib2 cove
 app-emulation/qemu sdl usb virgl
 
 #required
+dev-lang/perl berkdb
 app-crypt/gpgme qt5
 sys-devel/gcc fortran
 media-libs/cogl gles2
