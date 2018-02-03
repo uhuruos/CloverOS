@@ -1,6 +1,5 @@
 kernelversion=4.15.0
 kernelmajversion=4.15
-revision=
 
 #emerge gentoo-sources genkernel
 #eselect kernel set 1
@@ -14,26 +13,26 @@ make clean
 
 rm /usr/portage/packages/s/kernel.tar.xz
 cd /boot/
-tar -cvf /usr/portage/packages/s/kernel.tar *$kernelversion-gentoo$revision
+tar -cvf /usr/portage/packages/s/kernel.tar *$kernelversion-gentoo
 cd /lib/modules
-tar -rvf /usr/portage/packages/s/kernel.tar *$kernelversion-gentoo$revision/
+tar -rvf /usr/portage/packages/s/kernel.tar *$kernelversion-gentoo/
 xz -9e --lzma2=dict=256MB /usr/portage/packages/s/kernel.tar
 
 cd /usr/src/
-cp -R linux-$kernelversion-gentoo$revision linux-$kernelversion-gentoo-gnu$revision
-cd linux-$kernelversion-gentoo-gnu$revision
+cp -R linux-$kernelversion-gentoo linux-$kernelversion-gentoo-gnu
+cd linux-$kernelversion-gentoo-gnu
 wget https://linux-libre.fsfla.org/pub/linux-libre/releases/$kernelversion-gnu/deblob-$kernelmajversion
 wget https://linux-libre.fsfla.org/pub/linux-libre/releases/$kernelversion-gnu/deblob-check
 chmod +x deblob-$kernelmajversion deblob-check
 PYTHON="python2.7" ./deblob-$kernelmajversion
-genkernel --kernel-config=config.amd64 --kerneldir=/usr/src/linux-$kernelversion-gentoo-gnu$revision --luks --lvm all
+genkernel --kernel-config=config.amd64 --kerneldir=/usr/src/linux-$kernelversion-gentoo-gnu --luks --lvm all
 make clean
 
 rm /usr/portage/packages/s/kernel-libre.tar.xz
 cd /boot/
-tar -cvf /usr/portage/packages/s/kernel-libre.tar *$kernelversion-gentoo$revision-gnu
+tar -cvf /usr/portage/packages/s/kernel-libre.tar *$kernelversion-gentoo-gnu
 cd /lib/modules
-tar -rvf /usr/portage/packages/s/kernel-libre.tar *$kernelversion-gentoo$revision-gnu/
+tar -rvf /usr/portage/packages/s/kernel-libre.tar *$kernelversion-gentoo-gnu/
 xz -9e --lzma2=dict=256MB /usr/portage/packages/s/kernel-libre.tar
 
 cd /usr/src/linux/
