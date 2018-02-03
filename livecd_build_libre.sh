@@ -51,9 +51,9 @@ wget https://cloveros.ga/s/signatures/s/kernel-libre.tar.xz.asc
 gpg --verify kernel-libre.tar.xz.asc kernel-libre.tar.xz
 rm kernel-libre.tar.xz.asc
 tar xf kernel-libre.tar.xz
-mv initramfs-genkernel-*-gentoo*-gnu kernel-genkernel-*-gentoo*-gnu System.map-genkernel-*-gentoo*-gnu /boot/
+mv initramfs-genkernel-*-gentoo-gnu kernel-genkernel-*-gentoo-gnu System.map-genkernel-*-gentoo-gnu /boot/
 mkdir /lib/modules/
-mv *-gentoo*-gnu/ /lib/modules/
+mv *-gentoo-gnu/ /lib/modules/
 rm kernel-libre.tar.xz
 
 emerge grub dhcpcd
