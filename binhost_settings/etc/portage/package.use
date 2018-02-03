@@ -236,15 +236,12 @@ media-libs/gegl cairo
 media-fonts/font-misc-misc nls
 dev-lua/lpeg luajit
 sys-libs/tdb python
-media-libs/libmygpo-qt qt5
 dev-games/openscenegraph sdl svg ffmpeg truetype qt5
 dev-ml/lablgtk svg
 dev-python/PyQt4 svg
 media-libs/vigra openexr
 dev-libs/libpcre2 pcre16
-dev-qt/qtwebengine widgets
 sys-devel/llvm clang
-dev-python/PyQt5 gui widgets svg webkit network printsupport webengine webchannel sql declarative
 dev-games/ogre gl3plus -gles3 -gles2
 dev-libs/glib dbus
 app-crypt/gcr gtk
@@ -265,25 +262,34 @@ sys-libs/tevent python
 media-gfx/exiv2 xmp
 dev-libs/openssl -bindist
 net-misc/openssh -bindist
-dev-qt/qtnetwork -bindist
 dev-libs/botan -bindist
+dev-qt/qtnetwork -bindist
+media-libs/libmygpo-qt qt5
+dev-qt/qtwebengine widgets
+dev-python/PyQt5 gui widgets svg webkit network printsupport webengine webchannel sql declarative
 dev-qt/qtscript scripttools
 dev-qt/qtmultimedia widgets qml
 dev-qt/qtcore icu
 dev-qt/qtwebkit printsupport
-app-text/poppler qt5 cairo
-dev-qt/qtsingleapplication qt5 X
 dev-qt/qtlockedfile qt5
+dev-qt/qtsingleapplication qt5 X
+kde-frameworks/kwindowsystem X
+kde-frameworks/kdelibs4support X
+dev-qt/qtgui dbus
+dev-qt/qtwebchannel qml
+kde-plasma/libksysguard -minimal
+kde-apps/akonadi -mysql sqlite
+kde-apps/ktp-common-internals otr
+kde-apps/artikulate qtmedia
+app-text/poppler qt5 cairo
 x11-libs/libva-intel-driver X
 x11-libs/cairo X
 dev-cpp/cairomm X
 media-libs/libsdl X
 x11-libs/libxkbcommon X
 x11-libs/pango X
-kde-frameworks/kwindowsystem X
 sys-apps/dbus X
 media-libs/libsdl2 X gles haptic
-kde-frameworks/kdelibs4support X
 games-emulation/mednafen debugger
 net-libs/libtorrent-rasterbar python
 x11-drivers/nvidia-drivers uvm
@@ -295,9 +301,6 @@ media-gfx/pstoedit plotutils
 app-text/texlive-core xetex cjk
 dev-libs/libdbusmenu gtk
 mate-base/mate-menus python
-dev-qt/qtgui dbus
-dev-qt/qtgui:5 egl
-dev-qt/qtwebchannel qml
 dev-libs/boost python
 dev-python/numpy lapack
 xfce-base/thunar udisks
@@ -305,7 +308,6 @@ dev-libs/libpcre2 pcre32
 x11-libs/qscintilla qt5
 sci-libs/cholmod -minimal
 dev-libs/libcdio -minimal
-kde-plasma/libksysguard -minimal
 x11-libs/libdrm libkms video_cards_vmware
 media-libs/gst-plugins-bad gtk
 media-gfx/gmic X ffmpeg cli
@@ -314,9 +316,6 @@ x11-libs/gdk-pixbuf tiff
 dev-libs/libxml2 icu
 dev-libs/libxslt python
 x11-libs/wxGTK tiff
-dev-qt/qtsql mysql
-kde-apps/ktp-common-internals otr
-kde-apps/artikulate qtmedia
 
 x11-libs/gdk-pixbuf abi_x86_32
 dev-libs/libxml2 abi_x86_32

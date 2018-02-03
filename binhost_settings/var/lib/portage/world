@@ -252,6 +252,7 @@ games-util/higan-purify
 games-util/lutris
 games-util/steam-launcher
 gnome-extra/gnome-calculator
+kde-apps/akonadi
 kde-apps/kde-meta
 kde-apps/kdenlive
 kde-apps/konqueror
