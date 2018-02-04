@@ -9,6 +9,8 @@ mirrors=(
 	"uk.cloveros.ga"
 )
 
+kernelversion="4.15.0"
+
 gitprefix="https://gitgud.io/cloveros/cloveros/raw/master"
 
 if [[ -n "$1" ]]; then
@@ -21,7 +23,7 @@ else
 	echo "1) Update cloveros_settings.sh
 2) Change mirrors
 3) Change default sound device
-4) Update kernel (4.15.0)
+4) Update kernel ($kernelversion)
 5) Change emerge to source or binary
 6) Update dot files
 7) Sync time
@@ -73,6 +75,10 @@ case "$choice" in
 		;;
 
 	4)
+		if [[ $(find /boot/ -iname \*$kernelversion\* | wc -l) -gt 0 ]]; then
+			echo "Kernel up to date."
+			exit 1;
+		fi
 		cd ~
 		wget https://cloveros.ga/s/kernel.tar.xz
 		if [[ -f kernel.tar.xz ]]; then
