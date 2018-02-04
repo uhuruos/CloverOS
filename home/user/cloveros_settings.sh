@@ -74,23 +74,24 @@ case "$choice" in
 
 	4)
 		cd ~
-		tempdir=kernel$(< /dev/urandom tr -dc 0-9 | head -c 5)
-		mkdir $tempdir
-		cd $tempdir
 		wget https://cloveros.ga/s/kernel.tar.xz
 		if [[ -f kernel.tar.xz ]]; then
+			tempdir=kernel$(< /dev/urandom tr -dc 0-9 | head -c 5)
+			mkdir $tempdir
+			mv kernel.tar.xz $tempdir
+			cd $tempdir
 			wget https://cloveros.ga/s/signatures/s/kernel.tar.xz.asc
 			sudo gpg --verify kernel.tar.xz.asc kernel.tar.xz
 			tar xf kernel.tar.xz
 			sudo mv initramfs-genkernel-*-gentoo* kernel-genkernel-*-gentoo* System.map-genkernel-*-gentoo* /boot/
 			sudo cp -R *-gentoo*/ /lib/modules/
 			sudo grub-mkconfig -o /boot/grub/grub.cfg
+			cd ..
+			rm -R $tempdir
 			echo -e "\nKernel upgraded. (/boot/, /lib/modules/)"
 		else
 			echo -e "\nCould not retrieve file. Please connect to the Internet or try again."
 		fi
-		cd ..
-		rm -R $tempdir
 		;;
 
 	5)
