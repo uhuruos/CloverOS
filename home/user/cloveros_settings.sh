@@ -27,7 +27,7 @@ else
 7) Sync time
 8) Set timezone
 9) Clean emerge cache
-u) Update system, profile, kernel and cloveros_settings.sh
+u) Update system, profile, kernel, cloveros_settings.sh, clean emerge cache
 a) ALSA settings
 t) Enable tap to click on touchpad
 l) Upgrade/Install Libre kernel
@@ -178,12 +178,14 @@ case "$choice" in
 		echo "sudo emerge --sync"
 		echo "sudo emerge -uvD world"
 		echo "sudo emerge --depclean"
+		echo "./cloveros_settings.sh 9"
 		echo "./cloveros_settings.sh 1"
 		sudo eselect profile set "default/linux/amd64/17.0/hardened"
 		./cloveros_settings.sh 4
 		sudo emerge --sync
 		sudo emerge -uvD world
 		sudo emerge --depclean
+		./cloveros_settings.sh 9
 		./cloveros_settings.sh 1
 		;;
 
