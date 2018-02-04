@@ -1,7 +1,7 @@
 #!/bin/bash
 
 mirrors=(
-"https://useast.cloveros.ga" "https://fr.cloveros.ga" "https://au.cloveros.ga" "https://ca.cloveros.ga" "https://uswest.cloveros.ga" "https://uk.cloveros.ga" 
+https://useast.cloveros.ga https://fr.cloveros.ga https://au.cloveros.ga https://ca.cloveros.ga https://uswest.cloveros.ga https://uk.cloveros.ga 
 )
 
 kernelversion="4.15.0"
