@@ -16,19 +16,12 @@ kde-plasma/powerdevil -wireless
 app-emulation/open-vm-tools modules
 media-gfx/graphicsmagick modules
 games-fps/redeclipse dedicated
-games-fps/sauerbraten dedicated
-games-fps/xonotic dedicated
 games-fps/enemy-territory dedicated
 games-simulation/openttd dedicated
-games-fps/alienarena dedicated
-games-strategy/freeciv dedicated
 games-fps/nexuiz dedicated
 games-fps/darkplaces dedicated
 games-fps/quake3 dedicated
-games-fps/urbanterror dedicated
 games-fps/quake3-cpma dedicated
-games-strategy/wesnoth dedicated
-games-fps/doomsday dedicated
 media-libs/opencv -opengl
 media-fonts/tewi-font bdf pcf
 games-emulation/nestopia gui
