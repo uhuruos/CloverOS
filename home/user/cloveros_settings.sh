@@ -1,12 +1,7 @@
 #!/bin/bash
 
 mirrors=(
-	"useast.cloveros.ga"
-	"fr.cloveros.ga"
-	"au.cloveros.ga"
-	"ca.cloveros.ga"
-	"uswest.cloveros.ga"
-	"uk.cloveros.ga"
+"https://useast.cloveros.ga" "https://fr.cloveros.ga" "https://au.cloveros.ga" "https://ca.cloveros.ga" "https://uswest.cloveros.ga" "https://uk.cloveros.ga"
 )
 
 kernelversion="4.15.0"
@@ -63,7 +58,7 @@ case "$choice" in
 			echo "$((i+1))) ${mirrors[i]}"
 		done
 		read -erp "Select mirror: " -n 1 choicemirror
-		sudo sed -i "s@PORTAGE_BINHOST=\".*\"@PORTAGE_BINHOST=\"https://${mirrors[$choicemirror-1]}\"@" /etc/portage/make.conf
+		sudo sed -i "s@PORTAGE_BINHOST=\".*\"@PORTAGE_BINHOST=\"${mirrors[$choicemirror-1]}\"@" /etc/portage/make.conf
 		echo -e "\nMirror changed to: ${mirrors[choicemirror-1]}. (/etc/portage/make.conf)"
 		;;
 
