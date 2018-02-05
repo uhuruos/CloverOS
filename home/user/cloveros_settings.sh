@@ -3,6 +3,7 @@
 mirrors=(
 	"https://useast.cloveros.ga"
 	"https://fr.cloveros.ga"
+	"https://fr2.cloveros.ga"
 	"https://au.cloveros.ga"
 	"https://ca.cloveros.ga"
 	"https://uswest.cloveros.ga"

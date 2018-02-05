@@ -15,6 +15,7 @@ app-arch/cabextract
 app-arch/engrampa
 app-arch/file-roller
 app-arch/lz4
+app-arch/lzop
 app-arch/makeself
 app-arch/mt-st
 app-arch/p7zip
@@ -635,6 +636,7 @@ net-irc/hexchat
 net-irc/irssi
 net-irc/sic
 net-irc/weechat
+net-libs/gtk-vnc
 net-libs/libotr
 net-libs/nodejs
 net-mail/dovecot
@@ -659,6 +661,7 @@ net-misc/python-x2go
 net-misc/sshpass
 net-misc/telnet-bsd
 net-misc/throttle
+net-misc/tigervnc
 net-misc/whois
 net-misc/x2goclient
 net-misc/youtube-dl
