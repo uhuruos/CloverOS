@@ -38,9 +38,10 @@ PORTAGE_BINHOST="https://cloveros.ga"
 ACCEPT_LICENSE="-* @FREE"
 ACCEPT_KEYWORDS="**"' >> /etc/portage/make.conf
 
-emerge gnupg
+emerge gnupg aria2
 gpg --keyserver keys.gnupg.net --recv-key "78F5 AC55 A120 07F2 2DF9 A28A 78B9 3F76 B8E4 2805"
-echo 'FETCHCOMMAND_HTTPS="sh -c \"wget -t 3 -T 60 --passive-ftp -O \"\\\${DISTDIR}/\\\${FILE}\" \"\\\${URI}\" && sed \"s#cloveros.ga/#cloveros.ga/s/signatures/#\" <<< \"\\\${URI}.asc\" | wget -i - -O \"\\\${DISTDIR}/\\\${FILE}.asc\" && gpg --verify \"\\\${DISTDIR}/\\\${FILE}.asc\" \"\\\${DISTDIR}/\\\${FILE}\"\""' >> /etc/portage/make.conf
+echo 'binhost_mirrors=$PORTAGE_BINHOST",https://useast.cloveros.ga,https://fr.cloveros.ga,https://au.cloveros.ga,https://ca.cloveros.ga,https://uswest.cloveros.ga,https://uk.cloveros.ga,https://fr2.cloveros.ga,"
+FETCHCOMMAND_HTTPS="sh -c \"aria2c -x4 -j99 -k1M --dir \"\\\${DISTDIR}\" -o \"\\\${FILE}\" \\\\\$(sed -e \"s#,#\"\\\${DISTDIR}/\\\${FILE}\"\"\ \"#g\" -e \"s#/usr/portage/packages##g\" -e \"s#.partial##g\" <<< "$binhost_mirrors") && aria2c --dir \"\\\${DISTDIR}\" -o \"\\\${FILE}.asc\" \\\\\$(sed \"s#cloveros.ga/#cloveros.ga/s/signatures/#\" <<< \"\\\${URI}.asc\") && gpg --verify \"\\\${DISTDIR}/\\\${FILE}.asc\" \"\\\${DISTDIR}/\\\${FILE}\"\""' >> /etc/portage/make.conf
 
 #emerge gentoo-sources genkernel
 #wget http://liquorix.net/sources/4.14/config.amd64
