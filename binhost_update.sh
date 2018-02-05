@@ -3,9 +3,9 @@ layman -S
 emerge -uvDN --with-bdeps=y --buildpkg @world
 emerge --buildpkg @preserved-rebuild
 emerge --depclean
-emerge -1 --buildpkg $(eix -Jc | grep 9999 | cut -d" " -f2 | tr "\n" " ")
-emerge -C hwinfo ntfs3g && emerge --buildpkg ntfs3g && emerge --buildpkg hwinfo
 
+#emerge -1 --buildpkg $(eix -Jc | grep 9999 | cut -d" " -f2 | tr "\n" " ")
+#emerge -C hwinfo ntfs3g && emerge --buildpkg ntfs3g && emerge --buildpkg hwinfo
 #mv /usr/portage/packages/s/ .
 #rm -Rf /usr/portage/packages/*
 #quickpkg --include-unmodified-config=y "*/*" 2>&1 | ansi2html | tail -n +1081 | head -n -7 > s/quickpkg.txt
