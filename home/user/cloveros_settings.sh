@@ -201,6 +201,9 @@ case "$choice" in
 		if [ ! -f /usr/bin/aria2c ]; then
 			sudo emerge aria2
 		fi
+		if [ ! -f /usr/bin/gpg ]; then
+			sudo emerge gnupg
+		fi
 		sudo rm /etc/portage/make.conf
 		sudo wget -q "$gitprefix"/home/user/make.conf -P /etc/portage/
 		echo "/etc/portage/make.conf is now default"
