@@ -199,7 +199,7 @@ case "$choice" in
 
 	m)
 		sudo rm /etc/portage/make.conf
-		wget -q "$gitprefix"/home/user/make.conf -P /etc/portage/
+		sudo wget -q "$gitprefix"/home/user/make.conf -P /etc/portage/
 		echo "/etc/portage/make.conf is now default"
 		;;
 
