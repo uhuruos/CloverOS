@@ -31,6 +31,7 @@ else
 8) Set timezone
 9) Clean emerge cache
 u) Update system, profile, kernel, cloveros_settings.sh, clean emerge cache
+m) Update to latest default /etc/portage/make.conf
 a) ALSA settings
 t) Enable tap to click on touchpad
 l) Upgrade/Install Libre kernel
@@ -194,6 +195,12 @@ case "$choice" in
 		sudo emerge --depclean
 		./cloveros_settings.sh 9
 		./cloveros_settings.sh 1
+		;;
+
+	m)
+		sudo rm /etc/portage/make.conf
+		wget -q "$gitprefix"/home/user/make.conf -P /etc/portage/
+		echo "/etc/portage/make.conf is now default"
 		;;
 
 	a)
