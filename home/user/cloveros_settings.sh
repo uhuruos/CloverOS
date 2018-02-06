@@ -203,6 +203,7 @@ case "$choice" in
 		fi
 		if [ ! -f /usr/bin/gpg ]; then
 			sudo emerge gnupg
+			sudo gpg --keyserver keys.gnupg.net --recv-key "78F5 AC55 A120 07F2 2DF9 A28A 78B9 3F76 B8E4 2805"
 		fi
 		sudo rm /etc/portage/make.conf
 		sudo wget -q "$gitprefix"/home/user/make.conf -P /etc/portage/
