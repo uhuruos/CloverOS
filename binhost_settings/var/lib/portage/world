@@ -221,7 +221,6 @@ games-emulation/zinc
 games-engines/openmw
 games-engines/openxcom
 games-engines/scummvm
-games-fps/alienarena
 games-fps/avp
 games-fps/darkplaces
 games-fps/doomsday
@@ -485,7 +484,6 @@ media-gfx/maim
 media-gfx/mcomix
 media-gfx/mirage
 media-gfx/nomacs
-media-gfx/opentoonz
 media-gfx/optipng
 media-gfx/photoqt
 media-gfx/phototonic
@@ -667,7 +665,7 @@ net-misc/x2goclient
 net-misc/youtube-dl
 net-misc/zssh
 net-news/liferea
-net-news/newsbeuter
+net-news/newsboat
 net-nntp/pan
 net-p2p/amule
 net-p2p/bitcoin-qt
@@ -691,7 +689,6 @@ net-vpn/tor
 net-vpn/zeronet
 net-wireless/blueman
 net-wireless/broadcom-sta
-net-wireless/gnuradio
 net-wireless/iw
 net-wireless/rfkill
 net-wireless/wpa_supplicant
