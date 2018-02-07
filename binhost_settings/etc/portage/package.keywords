@@ -10,6 +10,8 @@ dev-lisp/clisp # stable no longer builds
 media-gfx/blender # python
 sys-kernel/gentoo-sources
 sys-devel/gcc
+x11-drivers/nvidia-drivers #4.15
+#firefox
 =media-libs/libpng-1.6.34
 #mednafen
 =dev-libs/lzo-2.10

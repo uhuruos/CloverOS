@@ -206,6 +206,7 @@ games-emulation/mupen64plus
 games-emulation/nestopia
 games-emulation/nestra
 games-emulation/openmsx
+games-emulation/pcsx2
 games-emulation/pcsxr
 games-emulation/ppsspp
 games-emulation/retroarch
@@ -802,6 +803,7 @@ x11-apps/xlsfonts
 x11-apps/xrandr
 x11-apps/xwininfo
 x11-base/xorg-server
+x11-drivers/nvidia-drivers
 x11-drivers/xf86-input-wacom
 x11-drivers/xf86-video-vmware
 x11-misc/arandr
