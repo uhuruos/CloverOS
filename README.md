@@ -447,11 +447,11 @@ Run `rsync -av --delete rsync://fr.cloveros.ga/cloveros /your/webserver/location
 ### What if CloverOS dies? Will my install become useless?
 Edit `/etc/portage/make.conf` and change
 
-`EMERGE_DEFAULT_OPTS="--keep-going=y --autounmask-write=y --jobs=2 -G"`
+`EMERGE_DEFAULT_OPTS="--keep-going=y --autounmask-write=y --jobs=4 -G"`
 
 to
 
-`EMERGE_DEFAULT_OPTS="--keep-going=y --autounmask-write=y --jobs=2"`
+`EMERGE_DEFAULT_OPTS="--keep-going=y --autounmask-write=y --jobs=4"`
 
 Your system is now Gentoo Linux.
 
