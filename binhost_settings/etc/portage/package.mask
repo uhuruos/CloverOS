@@ -51,3 +51,4 @@ media-sound/mpdas::pinkpieea
 games-emulation/dolphin::fkmclane
 dev-dotnet/gtk-sharp::fkmclane
 gnome-base/gnome-desktop::elementary
+app-emulation/wine::eroen
