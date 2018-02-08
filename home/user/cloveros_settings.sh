@@ -186,7 +186,7 @@ case "$choice" in
 		echo "sudo emerge --depclean"
 		echo 'sudo depmod "$kernelversion-gentoo'
 		echo "./cloveros_settings.sh 9"
-		sleep 2
+		sleep 1
 		sudo eselect profile set "default/linux/amd64/17.0/hardened"
 		./cloveros_settings.sh 4
 		sudo emerge --sync
@@ -265,7 +265,7 @@ case "$choice" in
 		echo "sudo /etc/init.d/bluetooth start"
 		echo "sudo blueman-applet&"
 		echo "sudo blueman-browse&"
-		sleep 2
+		sleep 1
 		sudo emerge blueman
 		sudo /etc/init.d/bluetooth start
 		sudo blueman-applet&
@@ -276,7 +276,7 @@ case "$choice" in
 		echo "Running the following:"
 		echo "./cloveros_settings.sh u"
 		echo "sudo emerge virtualbox"
-		sleep 2
+		sleep 1
 		./cloveros_settings.sh u
 		sudo emerge virtualbox
 		echo "Virtualbox installed, please reboot to update kernel."
@@ -285,7 +285,7 @@ case "$choice" in
 	v)
 		echo "Running the following:"
 		echo "sudo emerge xf86-video-vmware virtualbox-guest-additions"
-		sleep 2
+		sleep 1
 		sudo emerge xf86-video-vmware virtualbox-guest-additions
 		echo -e "\nRestart X to load driver. (For VirtualBox, run 'VBoxClient --display' after restarting)"
 		;;
@@ -299,7 +299,7 @@ case "$choice" in
 		echo "sudo eselect opengl set nvidia"
 		echo "sudo eselect opencl set nvidia"
 		echo "sudo sh -c 'echo \"blacklist nouveau\" >> /etc/modprobe.d/blacklist.conf'"
-		sleep 2
+		sleep 1
 		./cloveros_settings.sh 4
 		sudo emerge nvidia-drivers
 		sudo depmod "$kernelversion-gentoo"
