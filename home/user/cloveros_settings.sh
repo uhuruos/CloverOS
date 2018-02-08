@@ -52,9 +52,9 @@ case "$choice" in
 	1)
 		wget "$gitprefix"/home/user/cloveros_settings.sh -O cloveros_settings.new.sh
 		if [[ -s cloveros_settings.new.sh ]]; then
+			chmod +x cloveros_settings.new.sh
 			rm cloveros_settings.sh
 			mv cloveros_settings.new.sh cloveros_settings.sh
-			chmod +x cloveros_settings.sh
 			echo -e "\ncloveros_settings.sh is now updated. (~/cloveros_settings.sh)"
 		else
 			echo -e "\nCould not retrieve file. Please connect to the Internet or try again."
