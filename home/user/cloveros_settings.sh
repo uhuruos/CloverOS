@@ -53,9 +53,9 @@ case "$choice" in
 		wget "$gitprefix"/home/user/cloveros_settings.sh -O cloveros_settings.new.sh
 		if [[ -s cloveros_settings.new.sh ]]; then
 			chmod +x cloveros_settings.new.sh
-			rm cloveros_settings.sh
 			mv cloveros_settings.new.sh cloveros_settings.sh
 			echo -e "\ncloveros_settings.sh is now updated. (~/cloveros_settings.sh)"
+			exit
 		else
 			echo -e "\nCould not retrieve file. Please connect to the Internet or try again."
 		fi
@@ -80,7 +80,6 @@ case "$choice" in
 	4)
 		if [[ $(find /boot/ -iname \*$kernelversion\* | wc -l) -gt 0 ]]; then
 			echo "Kernel up to date."
-			exit 1;
 		fi
 		wget https://cloveros.ga/s/kernel.tar.xz
 		if [[ -s kernel.tar.xz ]]; then
@@ -168,6 +167,20 @@ case "$choice" in
 		;;
 
 	u)
+		echo "Running the following:"
+		echo 'sudo eselect profile set "default/linux/amd64/17.0/hardened"'
+		echo "./cloveros_settings.sh 4"
+		echo "sudo emerge --sync"
+		echo "sudo emerge -uvD world"
+		echo "sudo emerge --depclean"
+		echo 'sudo depmod "$kernelversion-gentoo"'
+		echo "./cloveros_settings.sh 9"
+		sleep 1
+		./cloveros_settings.sh 1
+		./cloveros_settings.sh zz
+		;;
+
+	zz)
 		if ! grep -q 'EMERGE_DEFAULT_OPTS=".* -G"' /etc/portage/make.conf; then
 			echo "Please enable binaries."
 			exit 1
@@ -178,15 +191,6 @@ case "$choice" in
 		if [ ! -s ~/.fvwm2rc ]; then
 			wget $gitprefix/home/user/.fvwm2rc
 		fi
-		echo "Running the following:"
-		echo 'sudo eselect profile set "default/linux/amd64/17.0/hardened"'
-		echo "./cloveros_settings.sh 4"
-		echo "sudo emerge --sync"
-		echo "sudo emerge -uvD world"
-		echo "sudo emerge --depclean"
-		echo 'sudo depmod "$kernelversion-gentoo"'
-		echo "./cloveros_settings.sh 9"
-		sleep 1
 		sudo eselect profile set "default/linux/amd64/17.0/hardened"
 		./cloveros_settings.sh 4
 		sudo emerge --sync
