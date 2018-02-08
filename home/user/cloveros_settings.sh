@@ -32,7 +32,7 @@ else
 7) Sync time
 8) Set timezone
 9) Clean emerge cache
-u) Update system, profile, kernel, clean emerge cache
+u) Update system, profile, kernel, cloveros_settings.sh, clean emerge cache
 m) Update default /etc/portage/make.conf
 c) Update Portage config from binhost
 l) Update or install Libre kernel
