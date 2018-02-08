@@ -14,6 +14,8 @@ kernelversion="4.15.2"
 
 gitprefix="https://gitgud.io/cloveros/cloveros/raw/master"
 
+cd $( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )
+
 if [[ -n "$1" ]]; then
 	if [[ -z "$2" ]]; then
 		choice=$1
@@ -24,14 +26,14 @@ else
 	echo "1) Update cloveros_settings.sh
 2) Change mirrors
 3) Change default sound device
-4) Update kernel ($kernelversion)
+4) Update to kernel $kernelversion
 5) Change emerge to source or binary
-6) Update dot files
+6) Update to default dot files
 7) Sync time
 8) Set timezone
 9) Clean emerge cache
-u) Update system, profile, kernel, cloveros_settings.sh, clean emerge cache
-m) Update to latest default /etc/portage/make.conf
+u) Update system, profile, kernel, clean emerge cache
+m) Update to default /etc/portage/make.conf
 a) ALSA settings
 t) Enable tap to click on touchpad
 l) Upgrade/Install Libre kernel
@@ -48,7 +50,6 @@ fi
 
 case "$choice" in
 	1)
-		cd ~
 		wget "$gitprefix"/home/user/cloveros_settings.sh -O cloveros_settings.new.sh
 		if [[ -f cloveros_settings.new.sh ]]; then
 			rm cloveros_settings.sh
@@ -81,7 +82,6 @@ case "$choice" in
 			echo "Kernel up to date."
 			exit 1;
 		fi
-		cd ~
 		wget https://cloveros.ga/s/kernel.tar.xz
 		if [[ -f kernel.tar.xz ]]; then
 			tempdir=kernel$(< /dev/urandom tr -dc 0-9 | head -c 5)
@@ -132,7 +132,6 @@ case "$choice" in
 		;;
 
 	6)
-		cd ~
 		backupdir=backup$(< /dev/urandom tr -dc 0-9 | head -c 5)
 		mkdir $backupdir
 		mv .bash_profile .zprofile .zshrc .fvwm2rc .Xdefaults wallpaper.png .xbindkeysrc screenfetch-dev bl.sh cloveros_settings.sh stats.sh rotate_screen.sh .emacs .emacs.d .rtorrent.rc .mpv .config/xfe/ .config/nitrogen/ $backupdir/
@@ -177,7 +176,6 @@ case "$choice" in
 			sudo emerge fvwm
 		fi
 		if [ ! -f ~/.fvwm2rc ]; then
-			cd ~
 			wget $gitprefix/home/user/.fvwm2rc
 		fi
 		echo "Running the following:"
@@ -186,15 +184,16 @@ case "$choice" in
 		echo "sudo emerge --sync"
 		echo "sudo emerge -uvD world"
 		echo "sudo emerge --depclean"
+		echo 'sudo depmod "$kernelversion-gentoo'
 		echo "./cloveros_settings.sh 9"
-		echo "./cloveros_settings.sh 1"
+		sleep 2
 		sudo eselect profile set "default/linux/amd64/17.0/hardened"
 		./cloveros_settings.sh 4
 		sudo emerge --sync
 		sudo emerge -uvD world
 		sudo emerge --depclean
+		sudo depmod "$kernelversion-gentoo"
 		./cloveros_settings.sh 9
-		./cloveros_settings.sh 1
 		;;
 
 	m)
@@ -220,7 +219,6 @@ case "$choice" in
 		;;
 
 	l)
-		cd ~
 		tempdir=kernel$(< /dev/urandom tr -dc 0-9 | head -c 5)
 		mkdir $tempdir
 		cd $tempdir
@@ -262,7 +260,7 @@ case "$choice" in
 		;;
 
 	g)
-		echo "In progress."
+		echo "In progress. See https://gitgud.io/cloveros/cloveros/#nvidia-card-crashes-on-boot-with-a-green-screen"
 		;;
 
 	b)
@@ -271,6 +269,7 @@ case "$choice" in
 		echo "sudo /etc/init.d/bluetooth start"
 		echo "sudo blueman-applet&"
 		echo "sudo blueman-browse&"
+		sleep 2
 		sudo emerge blueman
 		sudo /etc/init.d/bluetooth start
 		sudo blueman-applet&
@@ -279,38 +278,40 @@ case "$choice" in
 
 	i)
 		echo "Running the following:"
+		echo "./cloveros_settings.sh u"
 		echo "sudo emerge virtualbox"
-		echo "depclean -a"
-		echo "In progress."
+		sleep 2
+		./cloveros_settings.sh u
+		sudo emerge virtualbox
+		echo "Virtualbox installed, please reboot to update kernel."
 		;;
 
 	n)
-		echo "Updating kernel..."
 		echo "Running the following:"
 		echo "./cloveros_settings.sh 4"
-		./cloveros_settings.sh 4
-		echo "Installling Nvidia drivers..."
-		echo "Running the following:"
 		echo "sudo emerge nvidia-drivers"
-		echo "sudo depmod -a"
+		echo 'sudo "depmod $kernelversion-gentoo"'
 		echo "sudo nvidia-xconfig"
 		echo "sudo eselect opengl set nvidia"
 		echo "sudo eselect opencl set nvidia"
 		echo "sudo sh -c 'echo \"blacklist nouveau\" >> /etc/modprobe.d/blacklist.conf'"
+		sleep 2
+		./cloveros_settings.sh 4
 		sudo emerge nvidia-drivers
-		sudo depmod -a
+		sudo depmod "$kernelversion-gentoo"
 		sudo nvidia-xconfig
 		sudo eselect opengl set nvidia
 		sudo eselect opencl set nvidia
 		sudo sh -c 'echo "blacklist nouveau" >> /etc/modprobe.d/blacklist.conf'
-		echo -e "\nNvidia drivers installed, restart X.\nCheck https://wiki.gentoo.org/wiki/NVidia/nvidia-drivers for more info"
+		echo -e "\nNvidia drivers installed, please reboot.\nCheck https://wiki.gentoo.org/wiki/NVidia/nvidia-drivers for more info"
 		;;
 
 	v)
 		echo "Running the following:"
 		echo "sudo emerge xf86-video-vmware virtualbox-guest-additions"
+		sleep 2
 		sudo emerge xf86-video-vmware virtualbox-guest-additions
-		echo -e "\nRestart X to load driver."
+		echo -e "\nRestart X to load driver. (For VirtualBox, run 'VBoxClient --display' after restarting)"
 		;;
 
 	q)
