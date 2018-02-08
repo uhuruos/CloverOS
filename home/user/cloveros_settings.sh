@@ -51,7 +51,7 @@ fi
 case "$choice" in
 	1)
 		wget "$gitprefix"/home/user/cloveros_settings.sh -O cloveros_settings.new.sh
-		if [[ -f cloveros_settings.new.sh ]]; then
+		if [[ -s cloveros_settings.new.sh ]]; then
 			rm cloveros_settings.sh
 			mv cloveros_settings.new.sh cloveros_settings.sh
 			chmod +x cloveros_settings.sh
@@ -83,7 +83,7 @@ case "$choice" in
 			exit 1;
 		fi
 		wget https://cloveros.ga/s/kernel.tar.xz
-		if [[ -f kernel.tar.xz ]]; then
+		if [[ -s kernel.tar.xz ]]; then
 			tempdir=kernel$(< /dev/urandom tr -dc 0-9 | head -c 5)
 			mkdir $tempdir
 			mv kernel.tar.xz $tempdir
@@ -172,10 +172,10 @@ case "$choice" in
 			echo "Please enable binaries."
 			exit 1
 		fi
-		if [ ! -f /usr/bin/fvwm ]; then
+		if [ ! -s /usr/bin/fvwm ]; then
 			sudo emerge fvwm
 		fi
-		if [ ! -f ~/.fvwm2rc ]; then
+		if [ ! -s ~/.fvwm2rc ]; then
 			wget $gitprefix/home/user/.fvwm2rc
 		fi
 		echo "Running the following:"
@@ -197,10 +197,10 @@ case "$choice" in
 		;;
 
 	m)
-		if [ ! -f /usr/bin/aria2c ]; then
+		if [ ! -s /usr/bin/aria2c ]; then
 			sudo emerge aria2
 		fi
-		if [ ! -f /usr/bin/gpg ]; then
+		if [ ! -s /usr/bin/gpg ]; then
 			sudo emerge gnupg
 			sudo gpg --keyserver keys.gnupg.net --recv-key "78F5 AC55 A120 07F2 2DF9 A28A 78B9 3F76 B8E4 2805"
 		fi
@@ -250,7 +250,7 @@ case "$choice" in
 		;;
 
 	t)
-		if [ ! -f /usr/bin/xinput ]; then
+		if [ ! -s /usr/bin/xinput ]; then
 			sudo emerge xinput
 		fi
 		tappingid=$(xinput list-props "SynPS/2 Synaptics TouchPad" | grep 'Tapping Enabled (' | awk '{print $4}' | grep -o "[0-9]\+")
