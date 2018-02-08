@@ -28,21 +28,21 @@ else
 3) Change default sound device
 4) Update to kernel $kernelversion
 5) Change emerge to source or binary
-6) Update to default dot files
+6) Update default dot files
 7) Sync time
 8) Set timezone
 9) Clean emerge cache
 u) Update system, profile, kernel, clean emerge cache
-m) Update to default /etc/portage/make.conf
+m) Update default /etc/portage/make.conf
+c) Update Portage config from binhost
+l) Update or install Libre kernel
 a) ALSA settings
 t) Enable tap to click on touchpad
-l) Upgrade/Install Libre kernel
-c) Update Portage config from binhost
-g) Fix Nvidia doesn't boot problem
 b) Install bluetooth manager
 i) Install VirtualBox
-n) Install proprietary Nvidia drivers
 v) Install Virtualbox/VMWare drivers
+n) Install proprietary Nvidia drivers
+g) Fix Nvidia doesn't boot problem
 q) Exit"
 	read -erp "Select option: " -n 1 choice
 	echo
@@ -209,13 +209,19 @@ case "$choice" in
 		echo "/etc/portage/make.conf is now default"
 		;;
 
-	a)
-		echo "1) Change default ALSA device
-2) Configure ALSA for OBS
-3) GUI volume control
-4) CLI volume control"
-		read -erp "Select option: " -n 1 choice
-		echo "In Progress."
+	c)
+		backupportagedir=backupportage$(< /dev/urandom tr -dc 0-9 | head -c 5)
+		sudo mkdir ~/$backupportagedir
+		sudo mv /etc/portage/package.use /etc/portage/package.mask /etc/portage/package.keywords /etc/portage/package.env /etc/portage/package.mask /etc/portage/package.license ~/$backupportagedir
+		sudo wget $gitprefix/binhost_settings/etc/portage/package.use $gitprefix/binhost_settings/etc/portage/package.keywords $gitprefix/binhost_settings/etc/portage/package.env $gitprefix/binhost_settings/etc/portage/package.mask $gitprefix/binhost_settings/etc/portage/package.license -P /etc/portage/
+		sudo rm -R /etc/portage/env/
+		sudo mkdir /etc/portage/env/
+		sudo wget $gitprefix/binhost_settings/etc/portage/env/no-lto $gitprefix/binhost_settings/etc/portage/env/no-lto-graphite $gitprefix/binhost_settings/etc/portage/env/no-lto-graphite-ofast $gitprefix/binhost_settings/etc/portage/env/no-lto-o3 $gitprefix/binhost_settings/etc/portage/env/no-lto-ofast $gitprefix/binhost_settings/etc/portage/env/no-o3 $gitprefix/binhost_settings/etc/portage/env/no-ofast $gitprefix/binhost_settings/etc/portage/env/size -P /etc/portage/env/
+		useflags=$(curl -s $gitprefix/binhost_settings/etc/portage/make.conf | grep '^USE=')
+		if ! grep -q "$useflags" /etc/portage/make.conf; then
+			echo $useflags >> /etc/portage/make.conf
+		fi
+		echo -e "\nPortage configuration now mirrors binhost Portage configuration. Previous Portage config stored in ~/$backupportagedir"
 		;;
 
 	l)
@@ -234,6 +240,15 @@ case "$choice" in
 		echo -e "\nKernel upgraded. (/boot/, /lib/modules/)"
 		;;
 
+	a)
+		echo "1) Change default ALSA device
+2) Configure ALSA for OBS
+3) GUI volume control
+4) CLI volume control"
+		read -erp "Select option: " -n 1 choice
+		echo "In Progress."
+		;;
+
 	t)
 		if [ ! -f /usr/bin/xinput ]; then
 			sudo emerge xinput
@@ -242,25 +257,6 @@ case "$choice" in
 		xinput set-prop "SynPS/2 Synaptics TouchPad" $tappingid 1
 		echo -e "\nEnable Tap to Click: xinput set-prop \"SynPS/2 Synaptics TouchPad\" $tappingid 1"
 		echo "Disable Tap to Click: xinput set-prop \"SynPS/2 Synaptics TouchPad\" $tappingid 0"
-		;;
-
-	c)
-		backupportagedir=backupportage$(< /dev/urandom tr -dc 0-9 | head -c 5)
-		sudo mkdir ~/$backupportagedir
-		sudo mv /etc/portage/package.use /etc/portage/package.mask /etc/portage/package.keywords /etc/portage/package.env /etc/portage/package.mask /etc/portage/package.license ~/$backupportagedir
-		sudo wget $gitprefix/binhost_settings/etc/portage/package.use $gitprefix/binhost_settings/etc/portage/package.keywords $gitprefix/binhost_settings/etc/portage/package.env $gitprefix/binhost_settings/etc/portage/package.mask $gitprefix/binhost_settings/etc/portage/package.license -P /etc/portage/
-		sudo rm -R /etc/portage/env/
-		sudo mkdir /etc/portage/env/
-		sudo wget $gitprefix/binhost_settings/etc/portage/env/no-lto $gitprefix/binhost_settings/etc/portage/env/no-lto-graphite $gitprefix/binhost_settings/etc/portage/env/no-lto-graphite-ofast $gitprefix/binhost_settings/etc/portage/env/no-lto-o3 $gitprefix/binhost_settings/etc/portage/env/no-lto-ofast $gitprefix/binhost_settings/etc/portage/env/no-o3 $gitprefix/binhost_settings/etc/portage/env/no-ofast $gitprefix/binhost_settings/etc/portage/env/size -P /etc/portage/env/
-		useflags=$(curl -s $gitprefix/binhost_settings/etc/portage/make.conf | grep '^USE=')
-		if ! grep -q "$useflags" /etc/portage/make.conf; then
-			echo $useflags >> /etc/portage/make.conf
-		fi
-		echo -e "\nPortage configuration now mirrors binhost Portage configuration. Previous Portage config stored in ~/$backupportagedir"
-		;;
-
-	g)
-		echo "In progress. See https://gitgud.io/cloveros/cloveros/#nvidia-card-crashes-on-boot-with-a-green-screen"
 		;;
 
 	b)
@@ -286,6 +282,14 @@ case "$choice" in
 		echo "Virtualbox installed, please reboot to update kernel."
 		;;
 
+	v)
+		echo "Running the following:"
+		echo "sudo emerge xf86-video-vmware virtualbox-guest-additions"
+		sleep 2
+		sudo emerge xf86-video-vmware virtualbox-guest-additions
+		echo -e "\nRestart X to load driver. (For VirtualBox, run 'VBoxClient --display' after restarting)"
+		;;
+
 	n)
 		echo "Running the following:"
 		echo "./cloveros_settings.sh 4"
@@ -306,12 +310,8 @@ case "$choice" in
 		echo -e "\nNvidia drivers installed, please reboot.\nCheck https://wiki.gentoo.org/wiki/NVidia/nvidia-drivers for more info"
 		;;
 
-	v)
-		echo "Running the following:"
-		echo "sudo emerge xf86-video-vmware virtualbox-guest-additions"
-		sleep 2
-		sudo emerge xf86-video-vmware virtualbox-guest-additions
-		echo -e "\nRestart X to load driver. (For VirtualBox, run 'VBoxClient --display' after restarting)"
+	g)
+		echo "In progress. See https://gitgud.io/cloveros/cloveros/#nvidia-card-crashes-on-boot-with-a-green-screen"
 		;;
 
 	q)
