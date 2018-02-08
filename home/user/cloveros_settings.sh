@@ -184,7 +184,7 @@ case "$choice" in
 		echo "sudo emerge --sync"
 		echo "sudo emerge -uvD world"
 		echo "sudo emerge --depclean"
-		echo 'sudo depmod "$kernelversion-gentoo'
+		echo 'sudo depmod "$kernelversion-gentoo"'
 		echo "./cloveros_settings.sh 9"
 		sleep 1
 		sudo eselect profile set "default/linux/amd64/17.0/hardened"
@@ -294,7 +294,7 @@ case "$choice" in
 		echo "Running the following:"
 		echo "./cloveros_settings.sh 4"
 		echo "sudo emerge nvidia-drivers"
-		echo 'sudo "depmod $kernelversion-gentoo"'
+		echo 'sudo depmod "$kernelversion-gentoo"'
 		echo "sudo nvidia-xconfig"
 		echo "sudo eselect opengl set nvidia"
 		echo "sudo eselect opencl set nvidia"
