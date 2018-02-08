@@ -20,7 +20,7 @@ if [[ -n "$1" ]]; then
 	if [[ -z "$2" ]]; then
 		choice=$1
 	else
-		exit
+		exit 1
 	fi
 else
 	echo "1) Update cloveros_settings.sh
@@ -80,6 +80,7 @@ case "$choice" in
 	4)
 		if [[ $(find /boot/ -iname \*$kernelversion\* | wc -l) -gt 0 ]]; then
 			echo "Kernel up to date."
+			exit
 		fi
 		wget https://cloveros.ga/s/kernel.tar.xz
 		if [[ -s kernel.tar.xz ]]; then
