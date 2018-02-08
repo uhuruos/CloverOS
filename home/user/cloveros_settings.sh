@@ -10,7 +10,7 @@ mirrors=(
 	"https://uk.cloveros.ga"
 )
 
-kernelversion="4.15.1"
+kernelversion="4.15.2"
 
 gitprefix="https://gitgud.io/cloveros/cloveros/raw/master"
 

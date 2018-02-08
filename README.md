@@ -173,19 +173,12 @@ sudo eselect opencl set nvidia
 sudo sh -c 'echo \"blacklist nouveau\" >> /etc/modprobe.d/blacklist.conf'
 ```
 
-### Virtualbox doesn't work
-Run
+### Virtualbox doesn't work or any package that has a kernel module
+Be sure to upgrade your kernel and world. This can be done using `./cloveros_settings.sh u` and rebooting
 
-```
-depmod -a
+Then run `depmod -a`
 
-for m in vbox{drv,netadp,netflt}; do modprobe $m; done
-```
-
-If this doesn't work, upgrade your kernel and world.
-
-### Installing package that has kernel module
-`depmod -a`
+To load virtualbox modules: `sudo modprobe -a vboxdrv vboxnetadp vboxnetflt`
 
 ### Installing another kernel
 Example:
