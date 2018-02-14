@@ -188,7 +188,7 @@ case "$choice" in
 		if [ ! -s /usr/bin/fvwm ]; then
 			sudo emerge fvwm
 		fi
-		if [ ! -s ~/.fvwm2rc ]; then
+		if [ ! -s .fvwm2rc ]; then
 			wget $gitprefix/home/user/.fvwm2rc
 		fi
 		sudo eselect profile set "default/linux/amd64/17.0/hardened"

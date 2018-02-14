@@ -220,7 +220,6 @@ https://gitgud.io/cloveros/cloveros/blob/master/binhost_settings/etc/portage/mak
 https://gitgud.io/cloveros/cloveros/blob/master/binhost_settings/etc/portage/package.use
 
 ### What are keywording and unmasking?
-
 https://packages.gentoo.org/packages/media-gfx/gimp
 
 See the green and the yellow? Green means you can just `emerge gimp` and get that version. But what if you want 2.9? It's keyworded, which means it isn't stable.
@@ -232,6 +231,78 @@ Just add media-gfx/gimp to /etc/portage/package.keywords and you'll get the late
 Masked (Red) is just another step forward of keywording and the file is at /etc/portage/package.unmask
 
 You can unmask or unkeyword a specific version by doing =media-gfx/gimp-2.9.6
+
+### Suspend when laptop lid is closed
+First run `emerge acpid && /etc/init.d/acpid start`
+Edit `/etc/acpi/default.sh`:
+
+```
+#!/bin/sh
+# /etc/acpi/default.sh
+# Default acpi script that takes an entry for all actions
+
+set $*
+
+group=${1%%/*}
+action=${1#*/}
+device=$2
+id=$3
+value=$4
+
+log_unhandled() {
+	logger "ACPI event unhandled: $*"
+}
+
+case "$group" in
+	button)
+		case "$action" in
+			lid)
+				case "$id" in
+					close) echo -n mem > /sys/power/state;;
+				esac
+				;;
+
+			power)
+				/etc/acpi/actions/powerbtn.sh
+				;;
+
+			# if your laptop doesnt turn on/off the display via hardware
+			# switch and instead just generates an acpi event, you can force
+			# X to turn off the display via dpms.  note you will have to run
+			# 'xhost +local:0' so root can access the X DISPLAY.
+			#lid)
+			#	xset dpms force off
+			#	;;
+
+			*)	log_unhandled $* ;;
+		esac
+		;;
+
+	ac_adapter)
+		case "$value" in
+			# Add code here to handle when the system is unplugged
+			# (maybe change cpu scaling to powersave mode).  For
+			# multicore systems, make sure you set powersave mode
+			# for each core!
+			#*0)
+			#	cpufreq-set -g powersave
+			#	;;
+
+			# Add code here to handle when the system is plugged in
+			# (maybe change cpu scaling to performance mode).  For
+			# multicore systems, make sure you set performance mode
+			# for each core!
+			#*1)
+			#	cpufreq-set -g performance
+			#	;;
+
+			*)	log_unhandled $* ;;
+		esac
+		;;
+
+	*)	log_unhandled $* ;;
+esac
+```
 
 ### Emerge error relating to openssl
 Add this to `/etc/portage/package.use`:
