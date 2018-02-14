@@ -234,6 +234,7 @@ You can unmask or unkeyword a specific version by doing =media-gfx/gimp-2.9.6
 
 ### Suspend when laptop lid is closed
 First run `emerge acpid && /etc/init.d/acpid start`
+
 Edit `/etc/acpi/default.sh`:
 
 ```
