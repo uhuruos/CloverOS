@@ -208,9 +208,10 @@ case "$choice" in
 			sudo emerge gnupg
 			sudo gpg --keyserver hkp://pool.sks-keyservers.net --recv-key "78F5 AC55 A120 07F2 2DF9 A28A 78B9 3F76 B8E4 2805"
 		fi
-		sudo rm /etc/portage/make.conf
+		backupmakeconf="make.conf.bak"$(< /dev/urandom tr -dc 0-9 | head -c 5)
+		sudo mv /etc/portage/make.conf $backupmakeconf
 		sudo wget -q "$gitprefix"/home/user/make.conf -P /etc/portage/
-		echo "/etc/portage/make.conf is now default"
+		echo "/etc/portage/make.conf is now default Previous make.conf saved to $backupmakeconf"
 		;;
 
 	c)
