@@ -60,6 +60,7 @@ app-emacs/emms
 app-emacs/org-mode
 app-emacs/slime
 app-emulation/diskimage-builder
+app-emulation/docker
 app-emulation/fuse
 app-emulation/open-vm-tools
 app-emulation/playonlinux
@@ -681,6 +682,7 @@ net-p2p/retroshare
 net-p2p/rtorrent-ps
 net-p2p/soulseek-qt
 net-p2p/transmission
+net-p2p/transmission-remote-gtk
 net-vpn/i2p
 net-vpn/i2pd
 net-vpn/logmein-hamachi
