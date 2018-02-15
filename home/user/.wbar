@@ -47,20 +47,20 @@ c: engrampa
 t: Engrampa
 
 i: /usr/share/icons/Adwaita/512x512/apps/utilities-terminal.png
-c: urxvt
+c: if pgrep urxvtd; then urxvtc -e rtorrent; else urxvtd -o -f && urxvtc -e rtorrent; fi
 t: rtorrent-ps
 
 i: /usr/share/icons/hicolor/32x32/apps/weechat.png
-c: urxvt
+c: if pgrep urxvtd; then urxvtc -e weechat; else urxvtd -o -f && urxvtc -e weechat; fi
 t: weechat
 
 i: /usr/share/icons/Adwaita/512x512/apps/utilities-terminal.png
-c: urxvt
+c: if pgrep urxvtd; then urxvtc -geometry 400x1+0+-18 -fn '6x13' -sl 0 -e ~/stats.sh; else urxvtd -o -f && urxvtc -geometry 400x1+0+-18 -fn '6x13' -sl 0 -e ~/stats.sh; fi
 t: stats.sh
 
 i: /usr/share/icons/Adwaita/512x512/apps/utilities-terminal.png
-c: urxvt
-t: ./cloveros_settings.sh
+c: if pgrep urxvtd; then urxvtc -e sh -c '~/cloveros_settings.sh && read'; else urxvtd -o -f && urxvtc -e sh -c '~/cloveros_settings.sh && read'; fi
+t: cloveros_settings.sh
 
 i: /usr/share/icons/hicolor/128x128/apps/nitrogen.png
 c: nitrogen
