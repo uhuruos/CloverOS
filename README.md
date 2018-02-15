@@ -232,6 +232,35 @@ Masked (Red) is just another step forward of keywording and the file is at /etc/
 
 You can unmask or unkeyword a specific version by doing =media-gfx/gimp-2.9.6
 
+### Emerge error relating to openssl
+Add this to `/etc/portage/package.use`:
+```
+dev-libs/openssl -bindist
+net-misc/openssh -bindist
+media-libs/mesa -bindist
+```
+
+Mesa needs `-bindist` or OpenGL 3/4 won't work.
+
+### Listing available packages
+https://packages.gentoo.org
+
+or run Porthole
+
+### GPU passthrough example
+```
+./vfio-bind.sh 0000:01:00.0 0000:01:00.1 0000:00:12.0 0000:00:12.2
+
+qemu-system-x86_64 -enable-kvm -m 4G -cpu host -smp cores=8,threads=1 -vga none -display none \
+-drive if=pflash,format=raw,readonly,file=OVMF_CODE-pure-efi.fd \
+-drive if=pflash,format=raw,file=OVMF_VARS-pure-efi.fd \
+-drive file=windows,format=raw \
+-device vfio-pci,host=01:00.0,romfile=XFX.R9390.8192.150603.rom \
+-device vfio-pci,host=01:00.1 \
+-device vfio-pci,host=00:12.0 \
+-device vfio-pci,host=00:12.2
+```
+
 ### Suspend when laptop lid is closed
 First run `emerge acpid && /etc/init.d/acpid start`
 
@@ -305,34 +334,8 @@ case "$group" in
 esac
 ```
 
-### Emerge error relating to openssl
-Add this to `/etc/portage/package.use`:
-```
-dev-libs/openssl -bindist
-net-misc/openssh -bindist
-media-libs/mesa -bindist
-```
-
-Mesa needs `-bindist` or OpenGL 3/4 won't work.
-
-### Listing available packages
-https://packages.gentoo.org
-
-or run Porthole
-
-### GPU passthrough example
-```
-./vfio-bind.sh 0000:01:00.0 0000:01:00.1 0000:00:12.0 0000:00:12.2
-
-qemu-system-x86_64 -enable-kvm -m 4G -cpu host -smp cores=8,threads=1 -vga none -display none \
--drive if=pflash,format=raw,readonly,file=OVMF_CODE-pure-efi.fd \
--drive if=pflash,format=raw,file=OVMF_VARS-pure-efi.fd \
--drive file=windows,format=raw \
--device vfio-pci,host=01:00.0,romfile=XFX.R9390.8192.150603.rom \
--device vfio-pci,host=01:00.1 \
--device vfio-pci,host=00:12.0 \
--device vfio-pci,host=00:12.2
-```
+### Dnscrypt-proxy howto
+`sudo sh -c "emerge dnscrypt-proxy && rc-service dnscrypt-proxy start && echo nameserver 127.0.0.1 > /etc/resolv.conf"`
 
 ### Sound in OBS (Open Broadcaster Software) using ALSA
 Run `sudo modprobe snd_aloop` and edit the following file, replacing `device 0` and `hw:0,0` with your sound device:
