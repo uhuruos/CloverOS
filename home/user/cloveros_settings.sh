@@ -140,6 +140,7 @@ case "$choice" in
 		mkdir .emacs.d/autosaves
 		mkdir -p .config/xfe/
 		wget -q "$gitprefix"/home/user/.config/xfe/xferc -P .config/xfe
+		wget -q "$gitprefix"/home/user/.config/xfe/xfirc -P .config/xfe
 		mkdir -p .config/nitrogen/
 		wget -q "$gitprefix"/home/user/.config/nitrogen/nitrogen.cfg -P .config/nitrogen
 		sed -i "s@/home/user/@/home/$USER/@" .config/nitrogen/nitrogen.cfg
