@@ -24,7 +24,7 @@ t: Firefox
 
 i: /usr/share/icons/hicolor/128x128/apps/emacs.png
 c: emacs
-t: GNU/Emacs
+t: GNU Emacs
 
 i: /usr/share/icons/hicolor/256x256/apps/gimp.png
 c: gimp
