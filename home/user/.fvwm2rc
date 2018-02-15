@@ -101,6 +101,7 @@ AddToMenu MenuFvwmRoot Applications Title
 + "smplayer" Exec smplayer
 + "filezilla" Exec filezilla
 + "engrampa" Exec engrampa
++ "wbar" Exec wbar
 + "rtorrent-ps" Exec if pgrep urxvtd; then urxvtc -e rtorrent; else urxvtd -o -f && urxvtc -e rtorrent; fi
 + "weechat" Exec if pgrep urxvtd; then urxvtc -e weechat; else urxvtd -o -f && urxvtc -e weechat; fi
 + "stats.sh" Exec if pgrep urxvtd; then urxvtc -geometry 400x1+0+-18 -fn '6x13' -sl 0 -e ~/stats.sh; else urxvtd -o -f && urxvtc -geometry 400x1+0+-18 -fn '6x13' -sl 0 -e ~/stats.sh; fi

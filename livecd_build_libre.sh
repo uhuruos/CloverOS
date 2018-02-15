@@ -67,7 +67,7 @@ echo "$user:$userpassword" | chpasswd
 gpasswd -a $user wheel
 
 emerge -1 openssh openssl
-emerge -uvD world xorg-server fvwm feh sudo xfe wpa_supplicant porthole firefox emacs gimp mpv smplayer rxvt-unicode filezilla engrampa p7zip zip rtorrent-ps weechat alsa-utils zsh zsh-completions gentoo-zsh-completions vlgothic hack liberation-fonts nano scrot xbindkeys xinput nitrogen arandr qastools slock gparted squashfs-tools cryptsetup os-prober games-envd
+emerge -uvD world xorg-server fvwm feh sudo xfe wpa_supplicant porthole firefox emacs gimp mpv smplayer rxvt-unicode filezilla engrampa p7zip zip rtorrent-ps weechat alsa-utils zsh zsh-completions gentoo-zsh-completions vlgothic hack liberation-fonts nano scrot xbindkeys xinput nitrogen arandr qastools wbar wbarconf slock gparted squashfs-tools cryptsetup os-prober games-envd
 
 sed -i "s/# %wheel ALL=(ALL) NOPASSWD: ALL/%wheel ALL=(ALL) NOPASSWD: ALL/" /etc/sudoers
 sed -Ei "s@c([2-6]):2345:respawn:/sbin/agetty 38400 tty@#\0@" /etc/inittab
@@ -90,6 +90,7 @@ wget https://gitgud.io/cloveros/cloveros/raw/master/home/user/.bash_profile
 wget https://gitgud.io/cloveros/cloveros/raw/master/home/user/.zprofile
 wget https://gitgud.io/cloveros/cloveros/raw/master/home/user/.zshrc
 wget https://gitgud.io/cloveros/cloveros/raw/master/home/user/.fvwm2rc
+wget https://gitgud.io/cloveros/cloveros/raw/master/home/user/.wbar
 wget https://gitgud.io/cloveros/cloveros/raw/master/home/user/.Xdefaults
 wget https://gitgud.io/cloveros/cloveros/raw/master/home/user/wallpaper.png
 wget https://gitgud.io/cloveros/cloveros/raw/master/home/user/.xbindkeysrc
