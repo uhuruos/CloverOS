@@ -154,6 +154,7 @@ mkdir -p .emacs.d/backups
 mkdir .emacs.d/autosaves
 mkdir -p .config/xfe/
 wget https://gitgud.io/cloveros/cloveros/raw/master/home/user/.config/xfe/xferc -P .config/xfe
+wget https://gitgud.io/cloveros/cloveros/raw/master/home/user/.config/xfe/xfirc -P .config/xfe
 mkdir .config/nitrogen/
 wget https://gitgud.io/cloveros/cloveros/raw/master/home/user/.config/nitrogen/nitrogen.cfg -P .config/nitrogen
 sed -i "s@/home/user/@/home/$user/@" .config/nitrogen/nitrogen.cfg
