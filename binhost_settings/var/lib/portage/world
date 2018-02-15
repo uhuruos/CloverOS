@@ -838,6 +838,7 @@ x11-misc/unclutter
 x11-misc/urxvtconfig
 x11-misc/virtualgl
 x11-misc/wbar
+x11-misc/wbarconf
 x11-misc/wmctrl
 x11-misc/wmname
 x11-misc/x11vnc
