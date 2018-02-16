@@ -34,7 +34,7 @@ i: /usr/share/pixmaps/xfi.xpm
 c: xfi
 t: xfi
 
-i: /usr/share/icons/hicolor/scalable/apps/smplayer.svg
+i: /usr/share/icons/hicolor/512x512/apps/smplayer.png
 c: smplayer
 t: SMPlayer
 
