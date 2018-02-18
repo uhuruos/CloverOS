@@ -1,4 +1,4 @@
-kernelversion=4.15.3
+kernelversion=4.15.4
 kernelmajversion=4.15
 
 #emerge gentoo-sources genkernel
@@ -13,9 +13,9 @@ make clean
 
 rm /usr/portage/packages/s/kernel.tar.xz
 cd /boot/
-tar -cvf /usr/portage/packages/s/kernel.tar *$kernelversion-gentoo
+tar -cf /usr/portage/packages/s/kernel.tar *$kernelversion-gentoo
 cd /lib/modules
-tar -rvf /usr/portage/packages/s/kernel.tar *$kernelversion-gentoo/
+tar -rf /usr/portage/packages/s/kernel.tar *$kernelversion-gentoo/
 xz -9e --lzma2=dict=256MB /usr/portage/packages/s/kernel.tar
 
 cd /usr/src/
@@ -30,9 +30,9 @@ make clean
 
 rm /usr/portage/packages/s/kernel-libre.tar.xz
 cd /boot/
-tar -cvf /usr/portage/packages/s/kernel-libre.tar *$kernelversion-gentoo-gnu
+tar -cf /usr/portage/packages/s/kernel-libre.tar *$kernelversion-gentoo-gnu
 cd /lib/modules
-tar -rvf /usr/portage/packages/s/kernel-libre.tar *$kernelversion-gentoo-gnu/
+tar -rf /usr/portage/packages/s/kernel-libre.tar *$kernelversion-gentoo-gnu/
 xz -9e --lzma2=dict=256MB /usr/portage/packages/s/kernel-libre.tar
 
 cd /usr/src/linux/
