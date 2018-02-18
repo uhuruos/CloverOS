@@ -67,7 +67,7 @@ echo "$user:$userpassword" | chpasswd
 gpasswd -a $user wheel
 
 emerge -1 openssh openssl games-envd
-emerge -e world xorg-server fvwm feh sudo xfe wpa_supplicant porthole firefox emacs gimp mpv smplayer rxvt-unicode filezilla engrampa p7zip zip rtorrent-ps weechat alsa-utils zsh zsh-completions gentoo-zsh-completions vlgothic hack liberation-fonts nano scrot xbindkeys xinput nitrogen arandr qastools wbar slock gparted squashfs-tools cryptsetup os-prober
+emerge -e world xorg-server fvwm feh sudo xfe wpa_supplicant porthole firefox emacs gimp mpv smplayer rxvt-unicode filezilla p7zip rtorrent-ps weechat alsa-utils zsh zsh-completions gentoo-zsh-completions vlgothic hack liberation-fonts nano scrot xbindkeys xinput nitrogen arandr qastools wbar slock gparted squashfs-tools cryptsetup os-prober
 
 sed -i "s/# %wheel ALL=(ALL) NOPASSWD: ALL/%wheel ALL=(ALL) NOPASSWD: ALL/" /etc/sudoers
 sed -Ei "s@c([2-6]):2345:respawn:/sbin/agetty 38400 tty@#\0@" /etc/inittab
@@ -146,7 +146,7 @@ cd ..
 umount -l image/*
 wget https://gitgud.io/cloveros/cloveros/raw/master/livecd_files.tar.xz
 tar xf livecd_files.tar.xz
-mv *aufs* image/lib/modules/
+rm -R *aufs*
 mksquashfs image/ image.squashfs -b 1024k -comp xz -Xbcj x86 -Xdict-size 100%
 mv image.squashfs files
 xorriso -as mkisofs -r -J \

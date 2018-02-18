@@ -18,7 +18,6 @@ app-arch/lz4
 app-arch/lzop
 app-arch/makeself
 app-arch/mt-st
-app-arch/p7zip
 app-arch/par
 app-arch/sharutils
 app-arch/unmakeself

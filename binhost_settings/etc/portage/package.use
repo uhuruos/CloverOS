@@ -9,6 +9,7 @@ media-gfx/blender tiff -opencl -cycles -openimageio
 games-simulation/openttd -openmedia
 games-emulation/rpcs3 joystick -vulkan
 #preference
+app-arch/p7zip wxwidgets
 x11-misc/wbar gtk
 kde-plasma/plasma-meta grub gtk
 kde-plasma/plasma-desktop gtk3 gtk2 legacy-systray
@@ -148,10 +149,7 @@ games-emulation/sdlmame X
 net-im/qtox X
 dev-util/plan9port X
 net-misc/freerdp X
-media-video/smplayer streaming qt5
-media-video/smtube qt5
 media-video/mkvtoolnix qt5
-media-video/makemkv qt5
 app-editors/emacs X gtk toolkit-scroll-bars xft sound games alsa jpeg png gif libxml2 dynamic-loading gsettings
 app-emacs/emacs-common-gentoo X games
 app-editors/xemacs X

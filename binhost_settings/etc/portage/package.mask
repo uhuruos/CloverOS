@@ -27,7 +27,6 @@ dev-libs/xmlrpc-c::pg_overlay
 app-crypt/gpgme::pg_overlay
 media-sound/spek::pg_overlay
 www-client/firefox::pg_overlay
-app-arch/p7zip::pg_overlay
 dev-libs/libsigc++::pg_overlay
 dev-libs/mpc::pg_overlay
 dev-libs/atk::pg_overlay
