@@ -294,7 +294,7 @@ case "$choice" in
 		echo "sudo emerge xf86-video-vmware virtualbox-guest-additions"
 		sleep 1
 		sudo emerge xf86-video-vmware virtualbox-guest-additions
-		echo -e "\nRestart X to load driver. (For VirtualBox, run 'VBoxClient --display' after restarting)"
+		echo -e "\nRestart X to load driver."
 		;;
 
 	n)
