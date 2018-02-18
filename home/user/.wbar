@@ -42,9 +42,9 @@ i: /usr/share/icons/hicolor/480x480/apps/filezilla.png
 c: filezilla
 t: Filezilla
 
-i: /usr/share/icons/hicolor/32x32/apps/engrampa.png
-c: engrampa
-t: Engrampa
+i: /usr/share/icons/hicolor/48x48/apps/xarchiver.png
+c: xarchiver
+t: xarchiver
 
 i: /usr/share/icons/Adwaita/512x512/apps/utilities-terminal.png
 c: if pgrep urxvtd; then urxvtc -e rtorrent; else urxvtd -o -f && urxvtc -e rtorrent; fi
