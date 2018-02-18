@@ -777,6 +777,7 @@ www-client/chromium
 www-client/dillo
 www-client/elinks
 www-client/firefox
+www-client/firefox-bin
 www-client/google-chrome
 www-client/links
 www-client/lynx
