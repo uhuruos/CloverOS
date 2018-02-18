@@ -67,7 +67,7 @@ echo "$user:$userpassword" | chpasswd
 gpasswd -a $user wheel
 
 emerge -1 openssh openssl games-envd
-emerge -e world xorg-server fvwm feh sudo xfe wpa_supplicant porthole firefox emacs gimp mpv smplayer rxvt-unicode filezilla p7zip rtorrent-ps weechat linux-firmware alsa-utils zsh zsh-completions gentoo-zsh-completions vlgothic hack liberation-fonts nano scrot xbindkeys xinput nitrogen arandr qastools wbar slock gparted squashfs-tools cryptsetup os-prober
+emerge -e world xorg-server fvwm sudo xfe wpa_supplicant porthole firefox emacs gimp mpv smplayer rxvt-unicode filezilla p7zip rtorrent-ps weechat linux-firmware alsa-utils zsh zsh-completions gentoo-zsh-completions vlgothic hack liberation-fonts nano scrot xbindkeys xinput nitrogen arandr qastools wbar slock gparted squashfs-tools cryptsetup os-prober
 
 sed -i "s/# %wheel ALL=(ALL) NOPASSWD: ALL/%wheel ALL=(ALL) NOPASSWD: ALL/" /etc/sudoers
 sed -Ei "s@c([2-6]):2345:respawn:/sbin/agetty 38400 tty@#\0@" /etc/inittab
@@ -128,7 +128,7 @@ export DISPLAY=:0
 X&
 sleep 1
 fvwm&
-feh --bg-max wallpaper.png
+nitrogen --set-zoom wallpaper.png
 xbindkeys
 urxvt -geometry \$(xrandr | awk "NR==1{print \"80x24+\"\\\$8/2-283\"+\"\\\$10/2-191}") -e sudo ./livecd_install.sh
 fi' >> /home/$user/.bash_profile
