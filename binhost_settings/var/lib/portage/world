@@ -33,6 +33,7 @@ app-benchmarks/iozone
 app-benchmarks/stress
 app-benchmarks/sysbench
 app-cdr/bashburn
+app-cdr/brasero
 app-cdr/cdrtools
 app-cdr/cdw
 app-cdr/dvd+rw-tools
@@ -41,6 +42,7 @@ app-cdr/graveman
 app-cdr/isomaster
 app-cdr/kcdemu
 app-cdr/xcdroast
+app-cdr/xfburn
 app-crypt/acme-tiny
 app-crypt/certbot
 app-crypt/gnupg
@@ -596,6 +598,7 @@ media-video/subtitleripper
 media-video/vdr
 media-video/vlc
 media-video/xine-ui
+net-analyzer/bwbar
 net-analyzer/bwm-ng
 net-analyzer/cutter
 net-analyzer/iftop

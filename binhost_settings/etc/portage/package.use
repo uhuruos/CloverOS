@@ -9,6 +9,7 @@ media-gfx/blender tiff -opencl -cycles -openimageio
 games-simulation/openttd -openmedia
 games-emulation/rpcs3 joystick -vulkan
 #preference
+x11-misc/wbar gtk
 kde-plasma/plasma-meta grub gtk
 kde-plasma/plasma-desktop gtk3 gtk2 legacy-systray
 kde-apps/kde-apps-meta accessibility sdk pim
