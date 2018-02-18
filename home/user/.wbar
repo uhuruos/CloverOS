@@ -1,4 +1,4 @@
-i: /usr/share/wbarconf/wbarbacks/wbarback2.png
+i: /usr/share/pixmaps/wbar/dock.png
 c: wbar --pos bottom --isize 40 --idist 10 --zoomf 1 --nanim 1 --bpress --noreload
 t: /usr/share/fonts/liberation-fonts/LiberationSans-Regular.ttf/12
 
