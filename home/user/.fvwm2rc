@@ -26,6 +26,8 @@ Mouse 3 I N Menu FvwmWindowOpsMenu
 
 Mouse 3 T N Menu FvwmWindowOpsMenu
 
+Key Tab A SM WindowList Root c c NoDeskSort
+
 OpaqueMoveSize unlimited
 
 Style * BorderWidth 1, HandleWidth 1
