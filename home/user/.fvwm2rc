@@ -26,8 +26,6 @@ Mouse 3 I N Menu FvwmWindowOpsMenu
 
 Mouse 3 T N Menu FvwmWindowOpsMenu
 
-Key Tab A SM WindowList Root c c NoDeskSort
-
 OpaqueMoveSize unlimited
 
 Style * BorderWidth 1, HandleWidth 1
@@ -67,8 +65,9 @@ Style * HilightIconTitleColorset 1
 Colorset 2 bg green, fg blue, hi purple, sh red
 Style * IconBackgroundColorset 2
 
-Style Plank NoTitle, StaysOnTop, Sticky, WindowListSkip, BorderWidth 0, HandleWidth 0
-Style wbar NoTitle, StaysOnTop, Sticky, WindowListSkip, BorderWidth 0, HandleWidth 0
+Style Plank !Title, StaysOnTop, Sticky, WindowListSkip, BorderWidth 0, HandleWidth 0
+Style wbar !Title, Sticky, WindowListSkip, BorderWidth 0, HandleWidth 0
+Style stats.sh !Title, Sticky, WindowListSkip, BorderWidth 0, HandleWidth 0
 
 DestroyMenu FvwmWindowOpsMenu
 AddToMenu   FvwmWindowOpsMenu "Window Operations" Title
@@ -104,7 +103,7 @@ AddToMenu MenuFvwmRoot Applications Title
 + "wbar" Exec wbar
 + "rtorrent-ps" Exec if pgrep urxvtd; then urxvtc -e rtorrent; else urxvtd -o -f && urxvtc -e rtorrent; fi
 + "weechat" Exec if pgrep urxvtd; then urxvtc -e weechat; else urxvtd -o -f && urxvtc -e weechat; fi
-+ "stats.sh" Exec if pgrep urxvtd; then urxvtc -geometry 400x1+0+-18 -fn '6x13' -sl 0 -e ~/stats.sh; else urxvtd -o -f && urxvtc -geometry 400x1+0+-18 -fn '6x13' -sl 0 -e ~/stats.sh; fi
++ "stats.sh" Exec if pgrep urxvtd; then urxvtc -geometry 400x1+0+0 -fn '6x13' -sl 0 -e ~/stats.sh; else urxvtd -o -f && urxvtc -geometry 400x1+0+0 -fn '6x13' -sl 0 -e ~/stats.sh; fi
 + "settings.sh" Exec if pgrep urxvtd; then urxvtc -e sh -c '~/cloveros_settings.sh && read'; else urxvtd -o -f && urxvtc -e sh -c '~/cloveros_settings.sh && read'; fi
 + "wallpaper" Exec nitrogen
 + "resolution" Exec arandr
