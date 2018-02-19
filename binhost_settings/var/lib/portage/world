@@ -22,6 +22,7 @@ app-arch/par
 app-arch/sharutils
 app-arch/unmakeself
 app-arch/unp
+app-arch/xarchiver
 app-arch/zopfli
 app-arch/zpaq
 app-arch/zpaq-extras

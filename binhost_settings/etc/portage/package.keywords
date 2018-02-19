@@ -227,7 +227,6 @@ x11-plugins/gkrellm-plugins **
 dev-util/nvidia-cuda-toolkit
 games-fps/gzdoom
 games-fps/redeclipse
-app-arch/p7zip::pg_overlay
 
 #dependencies
 #tlp

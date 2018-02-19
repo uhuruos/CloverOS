@@ -16,6 +16,7 @@ media-gfx/maim::fkmclane
 media-plugins/calf::fkmclane
 x11-misc/slop::fkmclane
 net-im/discord-bin::fkmclane
+app-arch/p7zip::pg_overlay
 media-sound/mpd::pg_overlay
 x11-libs/wxGTK::pg_overlay
 mail-client/thunderbird::pg_overlay
