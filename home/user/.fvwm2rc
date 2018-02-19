@@ -28,6 +28,11 @@ Mouse 3 T N Menu FvwmWindowOpsMenu
 
 Key Tab A SM WindowList Root c c NoDeskSort
 
+Key Right A CS GotoPage +0p +1p
+Key Left A CS GotoPage +0p -1p
+Key Down A CS GotoPage +1p +0p
+Key Up A CS GotoPage -1p +0p
+
 OpaqueMoveSize unlimited
 
 Style * BorderWidth 1, HandleWidth 1

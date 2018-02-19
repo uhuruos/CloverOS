@@ -46,6 +46,10 @@ Resize Windows: alt + right click
 
 Open Applications menu anywhere: alt + middle click
 
+Switch windows: alt + tab and shift + alt + tab
+
+Switch desktops: ctrl + shift + up/down/left/right (desktops are in a 3x3 grid)
+
 fvwm's settings are in `~/.fvwm2rc`
 
 ### Keyboard bindings
