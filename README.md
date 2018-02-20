@@ -5,7 +5,7 @@
 
 CloverOS GNU/Linux is scripts that creates a minimal (middleware-free), performance-optimized and out of the box Gentoo image and a packages repo (Binhost)
 
-Mirrors and binary details: https://useast.cloveros.ga https://uswest.cloveros.ga https://fr.cloveros.ga https://fr2.cloveros.ga https://au.cloveros.ga https://uk.cloveros.ga
+Mirrors and binary details: https://useast.cloveros.ga https://uswest.cloveros.ga https://fr.cloveros.ga https://fr2.cloveros.ga https://ca.cloveros.ga https://ca2.cloveros.ga https://au.cloveros.ga https://uk.cloveros.ga
 
 ## Cheat sheet
 ### Upgrade your profile
@@ -104,6 +104,10 @@ https://useast.cloveros.ga
 
 https://uswest.cloveros.ga
 
+https://ca.cloveros.ga
+
+https://ca2.cloveros.ga
+
 https://fr.cloveros.ga
 
 https://fr2.cloveros.ga
@@ -136,6 +140,8 @@ FTP client - filezilla
 Torrent client - rtorrent-ps
 
 IRC client - weechat
+
+Application launcher - wbar
 
 ### How do I install systemd/avahi/pulseaudio?
 I am proud to announce that CloverOS is 100% Poettering-free.
@@ -263,6 +269,13 @@ qemu-system-x86_64 -enable-kvm -m 4G -cpu host -smp cores=8,threads=1 -vga none 
 -device vfio-pci,host=01:00.1 \
 -device vfio-pci,host=00:12.0 \
 -device vfio-pci,host=00:12.2
+```
+
+### Generate Wbar config from installed programs
+First: `emerge imagemagick && mkdir ~/.wbaricons`
+
+```
+grep -E '^Name=|^Icon=|^Exec=' -hr /usr/share/applications | sed 's/Name=/t: /; s/Exec=/c: /; s/Icon=/i: /; s#\(i: \)\(.*\)#i: .wbaricons/\2.xpm#; 0~3 a\\' >> .wbar && ls -v1 /usr/share/pixmaps/*.{png,ico} /usr/share/icons/hicolor/*/apps/*.* /usr/share/pixmaps/*.{xpm,svg} | sed -r 's#(.*/)(.*)(\..*)#convert \1\2\3 ~/.wbaricons/\2.xpm#' | xargs -I{} sh -c {}
 ```
 
 ### Suspend when laptop lid is closed
