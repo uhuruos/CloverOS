@@ -9,6 +9,8 @@ media-gfx/blender tiff -opencl -cycles -openimageio
 games-simulation/openttd -openmedia
 games-emulation/rpcs3 joystick -vulkan
 #preference
+x11-misc/polybar github mpd i3wm
+x11-misc/rofi windowmode
 app-arch/peazip gtk
 x11-misc/wbar gtk
 kde-plasma/plasma-meta grub gtk
@@ -48,7 +50,6 @@ www-client/uget aria2
 media-libs/waifu2x-converter-cpp models
 app-laptop/tlp tlp_suggests
 app-emulation/fuse sdl joystick
-x11-misc/polybar i3wm
 net-vpn/i2p -ecdsa
 app-text/calibre -udisks
 x11-libs/libfm gtk udisks
@@ -219,6 +220,7 @@ media-sound/deadbeef aac adplug alac alsa cdda converter cover cover-imlib2 cove
 app-emulation/qemu sdl usb virgl
 
 #required
+net-wireless/lorcon python
 net-libs/gtk-vnc python
 dev-lang/perl berkdb
 app-crypt/gpgme qt5

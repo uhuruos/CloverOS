@@ -692,6 +692,7 @@ net-vpn/logmein-hamachi
 net-vpn/openvpn
 net-vpn/tor
 net-vpn/zeronet
+net-wireless/aircrack-ng
 net-wireless/blueman
 net-wireless/broadcom-sta
 net-wireless/iw
@@ -809,6 +810,7 @@ x11-apps/xlsfonts
 x11-apps/xrandr
 x11-apps/xwininfo
 x11-base/xorg-server
+x11-base/xorg-x11
 x11-drivers/nvidia-drivers
 x11-drivers/xf86-input-wacom
 x11-drivers/xf86-video-vmware
