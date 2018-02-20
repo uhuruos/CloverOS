@@ -272,7 +272,7 @@ qemu-system-x86_64 -enable-kvm -m 4G -cpu host -smp cores=8,threads=1 -vga none 
 ```
 
 ### Generate Wbar config from installed programs
-First: `emerge imagemagick && mkdir ~/.wbaricons`
+First: `sudo emerge imagemagick && mkdir ~/.wbaricons`
 
 ```
 grep -E '^Name=|^Icon=|^Exec=' -hr /usr/share/applications | sed 's/Name=/t: /; s/Exec=/c: /; s/Icon=/i: /; s#\(i: \)\(.*\)#i: .wbaricons/\2.xpm#; 0~3 a\\' >> .wbar && ls -v1 /usr/share/pixmaps/*.{png,ico} /usr/share/icons/hicolor/*/apps/*.* /usr/share/pixmaps/*.{xpm,svg} | sed -r 's#(.*/)(.*)(\..*)#convert \1\2\3 ~/.wbaricons/\2.xpm#' | xargs -I{} sh -c {}
