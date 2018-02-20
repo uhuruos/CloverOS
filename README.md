@@ -278,6 +278,18 @@ First: `sudo emerge imagemagick && mkdir ~/.wbaricons`
 grep -hE '^Name=|^Icon=|^Exec=' $(grep -rl "^Icon=" --exclude={compton,brasero,steam,gcr-viewer}.desktop /usr/share/applications/) | sed 's/Name=/t: /; s/Exec=/c: /; s/Icon=/i: /; s#\(i: \)\(.*\)#i: .wbaricons/\2.xpm#; 0~3 a\\' >> .wbar && ls -v1 /usr/share/pixmaps/*.{png,ico} /usr/share/icons/hicolor/*/apps/*.* /usr/share/pixmaps/*.{xpm,svg} | sed -r 's#(.*/)(.*)(\..*)#convert \1\2\3 ~/.wbaricons/\2.xpm#' | xargs -I{} sh -c {}
 ```
 
+### KDE theme in qt5 programs without KDE
+
+```
+sudo emerge -av qt5ct breeze
+QT_QPA_PLATFORMTHEME="qt5ct" qt5ct
+QT_QPA_PLATFORMTHEME="qt5ct" your_program
+```
+
+Open qt5ct and switch the style and the icon theme to Breeze.
+
+![Breeze theme](https://i.imgur.com/WZLQTV0.png)
+
 ### Suspend when laptop lid is closed
 First run `emerge acpid && /etc/init.d/acpid start`
 
