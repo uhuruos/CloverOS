@@ -281,7 +281,7 @@ grep -hE '^Name=|^Icon=|^Exec=' $(grep -rl "^Icon=" --exclude={compton,brasero,s
 ### KDE theme in qt5 programs without KDE
 
 ```
-sudo emerge -av qt5ct breeze
+sudo emerge qt5ct breeze
 QT_QPA_PLATFORMTHEME="qt5ct" qt5ct
 QT_QPA_PLATFORMTHEME="qt5ct" your_program
 ```
