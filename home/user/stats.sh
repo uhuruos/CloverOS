@@ -112,20 +112,7 @@ date=$(printf '%(%c)T')
 clr1="\e[37m"
 clr2="\e[32m"
 
-echo -e "\e[?25l
-$clr1 $system
-$clr1 Up:$clr2 $uptime
-$clr1 Proc:$clr2 $processes
-$clr1 Active:$clr2 $activeprocesses
-$clr1 Cpu:$clr2 $cpuusage
-$clr1 Mem:$clr2 $meminfo
-$clr1 Net in:$clr2 $netin
-$clr1 Net out:$clr2 $netout
-$clr1 Battery:$clr2 $battery
-$clr1 Brightness:$clr2 $brightness
-$clr1 Volume:$clr2 $volume
-$clr1 Wifi:$clr2 $signal
-$clr1 $date
-       	\r" | tr -d '\n'
+echo -ne "\e[?25l$clr1$system Up: $clr2$uptime$clr1 Proc: $clr2$processes$clr1 Active: $clr2$activeprocesses$clr1 Cpu: $clr2$cpuusage$clr1 Mem: $clr2$meminfo$clr1 Net in: $clr2$netin$clr1 Net out: $clr2$netout$clr1 Battery: $clr2$battery$clr1 Brightness: $clr2$brightness$clr1 Volume: $clr2$volume$clr1 Wifi: $clr2$signal$clr1 $date        \r"
+
 sleep 2
 done
