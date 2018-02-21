@@ -24,8 +24,8 @@ emerge -uavD world
 emerge --depclean
 ```
 
-### Updating config files after upgrading system
-`dispatch-conf`
+### Updating config files after upgrading system (Mostly optional)
+`sudo dispatch-conf`
 
 After you run it, it will show you the changes it's going to make:
 
@@ -62,65 +62,7 @@ Volume control: Laptop (software) Volume up/down keys
 
 Key bindings are in `~/.xbindkeysrc`
 
-### Package isn't available
-Make an issue so I can add the package to binhost. In the meantime, edit `/etc/portage/make.conf` and edit the following line:
-
-`EMERGE_DEFAULT_OPTS="--keep-going=y --autounmask-write=y --jobs=2 -G"`
-
-to
-
-`EMERGE_DEFAULT_OPTS="--keep-going=y --autounmask-write=y --jobs=2"`
-
-This disables the binhost and uses Portage's ebuilds for packages. Now you can emerge from source.
-
-### Listing available packages
-https://packages.gentoo.org
-
-or run Porthole
-
-### What programs does the binhost have?
-List of programs (no dependencies): https://gitgud.io/cloveros/cloveros/blob/master/binhost_settings/var/lib/portage/world
-
-List of all packages: https://cloveros.ga/s/packages.html
-
-### Sound doesn't work
-Run `alsamixer` and hit F6 to see your audio devices.
-
-To make 1 the default device, edit `~/.asoundrc` and add this:
-
-```
-defaults.pcm.card 1
-defaults.ctl.card 1
-```
-
-### Changing mirrors
-Edit `/etc/portage/make.conf`
-
-The mirror used: `PORTAGE_BINHOST="https://cloveros.ga"`
-
-Available mirrors:
-
-https://useast.cloveros.ga
-
-https://uswest.cloveros.ga
-
-https://ca.cloveros.ga
-
-https://ca2.cloveros.ga
-
-https://fr.cloveros.ga
-
-https://fr2.cloveros.ga
-
-https://au.cloveros.ga
-
-https://uk.cloveros.ga
-
-## FAQ
-### What is CloverOS?
-It's a default Gentoo install with a binary packages repo. I made it to make my life easier.
-
-### What programs does this come with?
+### Included software
 Terminal - urxvt
 
 File manager - xfe
@@ -142,6 +84,82 @@ Torrent client - rtorrent-ps
 IRC client - weechat
 
 Application launcher - wbar
+
+### Setting default sound device
+Run `alsamixer` and hit F6 to see your audio devices.
+
+To make 1 the default device, edit `~/.asoundrc` and add this:
+
+```
+defaults.pcm.card 1
+defaults.ctl.card 1
+```
+
+### Listing available packages
+Use `porthole` or `eix`
+
+Web interface: https://packages.gentoo.org
+
+List of binaries (no dependencies): https://gitgud.io/cloveros/cloveros/blob/master/binhost_settings/var/lib/portage/world
+
+List of all binaries: https://cloveros.ga/s/packages.html
+
+### Package isn't available
+Make an issue so I can add the package to binhost. In the meantime, edit `/etc/portage/make.conf` and edit the following line:
+
+`EMERGE_DEFAULT_OPTS="--keep-going=y --autounmask-write=y --jobs=2 -G"`
+
+to
+
+`EMERGE_DEFAULT_OPTS="--keep-going=y --autounmask-write=y --jobs=2"`
+
+This disables the binhost and uses Portage's ebuilds for packages. Now you can emerge from source.
+
+## FAQ
+
+## Table of contents
+* [What is CloverOS?](#what-is-cloveros)
+* [How do I install systemd/avahi/pulseaudio?](#how-do-i-install-systemdavahipulseaudio)
+* [It doesn't boot after installation](#it-doesnt-boot-after-installation)
+* [Steam doesn't install](#steam-doesnt-install)
+* [Steam doesn't work anymore]
+* [Nvidia card crashes on boot with a green screen]
+* [Installing proprietary Nvidia drivers]
+* [Virtualbox doesn't work or any package that has a kernel module]
+* [Installing another kernel]
+* [Firefox and Pulseaudio]
+* [What are USE flags?]
+* [What are keywording and unmasking?]
+* [Emerge error relating to openssl]
+* [Listing available packages]
+* [GPU passthrough example]
+* [Generate Wbar config from installed programs]
+* [KDE theme in qt5 programs without KDE]
+* [Vertical tabs in Firefox 57+]
+* [Suspend when laptop lid is closed]
+* [Dnscrypt-proxy howto]
+* [Sound in OBS (Open Broadcaster Software) using ALSA]
+* [What is Gentoo?]
+* [Is this an overlay?]
+* [Benefits of Gentoo/CloverOS over other distros]
+* [What is CloverOS Libre?]
+* [Turning CloverOS into CloverOS Libre]
+* [Turning CloverOS Libre into CloverOS]
+* [Starting X automatically after login]
+* [I want to bypass the mixer to play >48KHz audio / DSD]
+* [Wayland howto]
+* [Things preventing CloverOS Libre from being 100% free software:]
+* [Does CloverOS have binaries?]
+* [How often is this updated?]
+* [Does everything build with CFLAGS="-Ofast -mmmx -mssse3 -pipe -funroll-loops -flto=8 -floop-block -floop-interchange -floop-strip-mine -ftree-loop-distribution" ?]
+* [The default shell is bash but fvwm launches urxvt -e zsh?]
+* [Which DE does this come with?]
+* [Installing a DE]
+* [I want to host a mirror]
+* [What if CloverOS dies? Will my install become useless?]
+
+### What is CloverOS?
+It's a default Gentoo install with a binary packages repo. I made it to make my life easier.
 
 ### How do I install systemd/avahi/pulseaudio?
 I am proud to announce that CloverOS is 100% Poettering-free.
