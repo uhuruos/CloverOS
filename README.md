@@ -135,27 +135,27 @@ This disables the binhost and uses Portage's ebuilds for packages. Now you can e
 * [Generate Wbar config from installed programs](#generate-wbar-config-from-installed-programs)
 * [KDE theme in qt5 programs without KDE](#kde-theme-in-qt5-programs-without-kde)
 * [Vertical tabs in Firefox 57+](#vertical-tabs-in-firefox-57)
-* [Suspend when laptop lid is closed]
-* [Dnscrypt-proxy howto]
-* [Sound in OBS (Open Broadcaster Software) using ALSA]
-* [What is Gentoo?]
-* [Is this an overlay?]
-* [Benefits of Gentoo/CloverOS over other distros]
-* [What is CloverOS Libre?]
-* [Turning CloverOS into CloverOS Libre]
-* [Turning CloverOS Libre into CloverOS]
-* [Starting X automatically after login]
-* [I want to bypass the mixer to play >48KHz audio / DSD]
-* [Wayland howto]
-* [Things preventing CloverOS Libre from being 100% free software:]
-* [Does CloverOS have binaries?]
-* [How often is this updated?]
-* [Does everything build with CFLAGS="-Ofast -mmmx -mssse3 -pipe -funroll-loops -flto=8 -floop-block -floop-interchange -floop-strip-mine -ftree-loop-distribution" ?]
-* [The default shell is bash but fvwm launches urxvt -e zsh?]
-* [Which DE does this come with?]
-* [Installing a DE]
-* [I want to host a mirror]
-* [What if CloverOS dies? Will my install become useless?]
+* [Suspend when laptop lid is closed](#suspend-when-laptop-lid-is-closed)
+* [Dnscrypt-proxy howto](#dnscrypt-proxy-howto)
+* [Sound in OBS (Open Broadcaster Software) using ALSA](#sound-in-obs-open-broadcaster-software-using-alsa)
+* [What is Gentoo?](#what-is-gentoo)
+* [Is this an overlay?](#is-this-an-overlay)
+* [Benefits of Gentoo/CloverOS over other distros](#benefits-of-gentoocloveros-over-other-distros)
+* [What is CloverOS Libre?](#what-is-cloveros-libre)
+* [Turning CloverOS into CloverOS Libre](#turning-cloveros-into-cloveros-libre)
+* [Turning CloverOS Libre into CloverOS](#turning-cloveros-libre-into-cloveros)
+* [Starting X automatically after login](#starting-x-automatically-after-login)
+* [I want to bypass the mixer to play >48KHz audio / DSD](#i-want-to-bypass-the-mixer-to-play-48khz-audio-dsd)
+* [Wayland howto](#wayland-howto)
+* [Things preventing CloverOS Libre from being 100% free software:](#things-preventing-cloveros-libre-from-being-100-free-software)
+* [Does CloverOS have binaries?](#does-cloveros-have-binaries)
+* [How often is this updated?](#how-often-is-this-updated)
+* [Does everything build with CFLAGS="-Ofast -mmmx -mssse3 -pipe -funroll-loops -flto=8 -floop-block -floop-interchange -floop-strip-mine -ftree-loop-distribution" ?](#does-everything-build-with-cflags-ofast-mmmx-mssse3-pipe-funroll-loops-flto8-floop-block-floop-interchange-floop-strip-mine-ftree-loop-distribution-)
+* [The default shell is bash but fvwm launches urxvt -e zsh?](#the-default-shell-is-bash-but-fvwm-launches-urxvt-e-zsh)
+* [Which DE does this come with?](#which-de-does-this-come-with)
+* [Installing a DE](#installing-a-de)
+* [I want to host a mirror](#i-want-to-host-a-mirror)
+* [What if CloverOS dies? Will my install become useless?](#what-if-cloveros-dies-will-my-install-become-useless)
 
 ### What is CloverOS?
 It's a default Gentoo install with a binary packages repo. I made it to make my life easier.
@@ -398,7 +398,7 @@ esac
 ### Dnscrypt-proxy howto
 `sudo sh -c "emerge dnscrypt-proxy && rc-service dnscrypt-proxy start && echo nameserver 127.0.0.1 > /etc/resolv.conf"`
 
-### Sound in OBS (Open Broadcaster Software) using ALSA
+### Sound in OBS / Open Broadcaster Software using ALSA
 Run `sudo modprobe snd_aloop` and edit the following file, replacing `device 0` and `hw:0,0` with your sound device:
 
 `~/.asoundrc`
@@ -467,6 +467,8 @@ Run `sudo modprobe snd_aloop` and edit the following file, replacing `device 0` 
 ```
 
 Start playing something, then run `obs`, then add Audio Capture Device (ALSA) to your Sources.
+
+![OBS with ALSA](https://i.imgur.com/tc1pMRX.png)
 
 ### What is Gentoo?
 Gentoo is a meta-distro. You can make any distro you want out of it. You can have a package.use/package.keywords that makes a binary-compatible Debian or Fedora or Arch or whatever. If there's something you don't like about Gentoo, you can just edit /etc/portage/package.use. Using Gentoo is like distro-hopping around the same distro. Also, by building everything yourself, that's one less botnet. If you have a problem with a package or the package doesn't exist, just add an overlay or write an ebuild and put it in your local portage directory and emerge.
@@ -574,7 +576,7 @@ Kill X and relog. After you log in and the "Start X?" dialog pops up, instead of
 Run `rsync -av --delete rsync://fr.cloveros.ga/cloveros /your/webserver/location/` and tell me the domain (or IP) so I can give you a cloveros.ga subdomain
 
 ### What if CloverOS dies? Will my install become useless?
-Edit `/etc/portage/make.conf` and change
+No. Edit `/etc/portage/make.conf` and change
 
 `EMERGE_DEFAULT_OPTS="--keep-going=y --autounmask-write=y --jobs=4 -G"`
 
