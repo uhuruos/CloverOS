@@ -208,7 +208,7 @@ grub-mkconfig -o /boot/grub/grub.cfg
 Don't forget to `emerge genkernel`
 
 ### Firefox and Pulseaudio
-Firefox 57 still works with ALSA. If this changes, it will be built with apulse.
+Firefox 57+ still works with ALSA. If this changes, it will be built with apulse.
 
 ### What are USE flags?
 `/etc/portage/package.use` generally determines what your Gentoo install will look like. The first thing new Gentoo users should do is read the USE flags for their packages.
@@ -279,7 +279,6 @@ grep -hE '^Name=|^Icon=|^Exec=' $(grep -rl "^Icon=" --exclude={compton,brasero,s
 ```
 
 ### KDE theme in qt5 programs without KDE
-
 ```
 sudo emerge qt5ct breeze
 QT_QPA_PLATFORMTHEME="qt5ct" qt5ct
@@ -289,6 +288,27 @@ QT_QPA_PLATFORMTHEME="qt5ct" your_program
 Open qt5ct and switch the style and the icon theme to Breeze.
 
 ![Breeze theme](https://i.imgur.com/WZLQTV0.png)
+
+### Vertical tabs in Firefox 57+
+https://addons.mozilla.org/en-US/firefox/addon/vertical-tabs-reloaded/
+
+`mkdir ~/.mozilla/firefox/*.default/chrome/`
+
+`nano ~/.mozilla/firefox/*.default/chrome/userChrome.css`
+
+```
+@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"); /* set default namespace to XUL */
+/* Hide Horizontal TAB Bar */
+#TabsToolbar {
+ visibility: collapse !important;
+}
+/* Hide White Header Tab Tree */
+#sidebar-header {
+ display: none;
+}
+```
+
+![Firefox](https://i.imgur.com/z6NaM5a.png)
 
 ### Suspend when laptop lid is closed
 First run `emerge acpid && /etc/init.d/acpid start`
