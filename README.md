@@ -122,20 +122,19 @@ This disables the binhost and uses Portage's ebuilds for packages. Now you can e
 * [How do I install systemd/avahi/pulseaudio?](#how-do-i-install-systemdavahipulseaudio)
 * [It doesn't boot after installation](#it-doesnt-boot-after-installation)
 * [Steam doesn't install](#steam-doesnt-install)
-* [Steam doesn't work anymore]
-* [Nvidia card crashes on boot with a green screen]
-* [Installing proprietary Nvidia drivers]
-* [Virtualbox doesn't work or any package that has a kernel module]
-* [Installing another kernel]
-* [Firefox and Pulseaudio]
-* [What are USE flags?]
-* [What are keywording and unmasking?]
-* [Emerge error relating to openssl]
-* [Listing available packages]
-* [GPU passthrough example]
-* [Generate Wbar config from installed programs]
-* [KDE theme in qt5 programs without KDE]
-* [Vertical tabs in Firefox 57+]
+* [Steam doesn't work anymore](#steam-doesnt-work-anymore)
+* [Nvidia card crashes on boot with a green screen](#nvidia-card-crashes-on-boot-with-a-green-screen)
+* [Installing proprietary Nvidia drivers](#installing-proprietary-nvidia-drivers)
+* [Virtualbox doesn't work or any package that has a kernel module](#virtualbox-doesnt-work-or-any-package-that-has-a-kernel-module)
+* [Installing another kernel](#installing-another-kernel)
+* [Firefox and Pulseaudio](#firefox-and-pulseaudio)
+* [What are USE flags?](#what-are-use-flags)
+* [What are keywording and unmasking?](#what-are-keywording-and-unmasking)
+* [Emerge error relating to openssl](#emerge-error-relating-to-openssl)
+* [GPU passthrough example](#gpu-passthrough-example)
+* [Generate Wbar config from installed programs](#generate-wbar-config-from-installed-programs)
+* [KDE theme in qt5 programs without KDE](#kde-theme-in-qt5-programs-without-kde)
+* [Vertical tabs in Firefox 57+](#vertical-tabs-in-firefox-57)
 * [Suspend when laptop lid is closed]
 * [Dnscrypt-proxy howto]
 * [Sound in OBS (Open Broadcaster Software) using ALSA]
@@ -269,11 +268,6 @@ media-libs/mesa -bindist
 ```
 
 Mesa needs `-bindist` or OpenGL 3/4 won't work.
-
-### Listing available packages
-https://packages.gentoo.org
-
-or run Porthole
 
 ### GPU passthrough example
 ```
