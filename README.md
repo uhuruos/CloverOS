@@ -117,7 +117,7 @@ This disables the binhost and uses Portage's ebuilds for packages. Now you can e
 
 ## FAQ
 
-## Table of contents
+### Table of contents
 * [What is CloverOS?](#what-is-cloveros)
 * [How do I install systemd/avahi/pulseaudio?](#how-do-i-install-systemdavahipulseaudio)
 * [It doesn't boot after installation](#it-doesnt-boot-after-installation)
