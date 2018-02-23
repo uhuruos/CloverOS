@@ -1,3 +1,6 @@
+cp /etc/portage/package.* /etc/portage/make.conf binhost_settings/etc/portage
+cp /var/lib/portage/world binhost_settings/var/lib/portage
+
 emerge --sync
 layman -S
 emerge -uvDN --with-bdeps=y --buildpkg @world
