@@ -67,6 +67,7 @@ app-emulation/fuse
 app-emulation/open-vm-tools
 app-emulation/playonlinux
 app-emulation/qemu
+app-emulation/qt-virt-manager
 app-emulation/virt-manager
 app-emulation/virtualbox
 app-emulation/virtualbox-additions
@@ -256,6 +257,7 @@ games-util/lutris
 games-util/steam-launcher
 gnome-extra/gnome-calculator
 kde-apps/akonadi
+kde-apps/dolphin
 kde-apps/kde-meta
 kde-apps/kdenlive
 kde-apps/konqueror
@@ -682,7 +684,7 @@ net-p2p/ncdc
 net-p2p/nicotine+
 net-p2p/qbittorrent
 net-p2p/retroshare
-net-p2p/rtorrent-ps
+net-p2p/rtorrent
 net-p2p/soulseek-qt
 net-p2p/transmission
 net-p2p/transmission-remote-gtk

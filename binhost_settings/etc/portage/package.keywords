@@ -227,6 +227,7 @@ x11-plugins/gkrellm-plugins **
 dev-util/nvidia-cuda-toolkit
 games-fps/gzdoom
 games-fps/redeclipse
+app-emulation/qt-virt-manager **
 
 #dependencies
 #tlp

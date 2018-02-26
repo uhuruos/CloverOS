@@ -52,3 +52,4 @@ games-emulation/dolphin::fkmclane
 dev-dotnet/gtk-sharp::fkmclane
 gnome-base/gnome-desktop::elementary
 app-emulation/wine::eroen
+net-libs/libtorrent::pinkpieea

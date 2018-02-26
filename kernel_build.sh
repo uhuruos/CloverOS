@@ -1,4 +1,4 @@
-kernelversion=4.15.4
+kernelversion=4.15.6
 kernelmajversion=4.15
 
 #emerge gentoo-sources genkernel
@@ -7,7 +7,7 @@ kernelmajversion=4.15
 binutils-config --linker ld.bfd
 
 cd /usr/src/linux/
-wget https://liquorix.net/sources/4.14/config.amd64
+wget https://liquorix.net/sources/4.15/config.amd64
 genkernel --kernel-config=config.amd64 --luks --lvm all
 make clean
 

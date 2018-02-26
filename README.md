@@ -161,7 +161,7 @@ This disables the binhost and uses Portage's ebuilds for packages. Now you can e
 It's a default Gentoo install with a binary packages repo. I made it to make my life easier.
 
 ### How do I install systemd/avahi/pulseaudio?
-I am proud to announce that CloverOS is 100% Poettering-free.
+Switch to source and then emerge
 
 ### It doesn't boot after installation
 Take out your boot usb/cd.
