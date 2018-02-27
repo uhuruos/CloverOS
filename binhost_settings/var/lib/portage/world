@@ -100,6 +100,7 @@ app-misc/rox-filer
 app-misc/screen
 app-misc/screenfetch
 app-misc/srm
+app-misc/task
 app-misc/tmux
 app-misc/toilet
 app-misc/wipe
@@ -263,6 +264,7 @@ kde-apps/kdenlive
 kde-apps/konqueror
 kde-misc/kdirstat
 kde-misc/krusader
+kde-misc/plasma-browser-integration
 kde-misc/yakuake
 kde-plasma/bluedevil
 lxde-base/lxappearance

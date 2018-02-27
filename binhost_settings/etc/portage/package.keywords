@@ -1,16 +1,15 @@
 #preference, remove when stable is bumped up
 www-client/firefox # major change
-media-gfx/gimp # major change
-net-p2p/retroshare # needs latest version
+media-gfx/gimp # 2.9
 media-sound/clementine ** # qt5
+media-gfx/blender # python
+sys-devel/gcc
+sys-kernel/gentoo-sources
+x11-drivers/nvidia-drivers # 4.15
+net-p2p/retroshare # needs latest version
 x11-wm/enlightenment # stable is old
 dev-libs/efl # stable is old
 x11-terms/terminology # stable is old
-dev-lisp/clisp # stable no longer builds
-media-gfx/blender # python
-sys-kernel/gentoo-sources
-sys-devel/gcc
-x11-drivers/nvidia-drivers #4.15
 #firefox
 =media-libs/libpng-1.6.34
 #mednafen
@@ -558,3 +557,5 @@ dev-python/phonenumbers
 dev-python/django-otp
 dev-python/django-formtools
 dev-python/django-otp-yubikey
+# required by plasma-browser-integration (argument)
+=kde-misc/plasma-browser-integration-9999 **

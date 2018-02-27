@@ -32,6 +32,7 @@ dev-libs/libsigc++::pg_overlay
 dev-libs/mpc::pg_overlay
 dev-libs/atk::pg_overlay
 app-accessibility/at-spi2-core::pg_overlay
+app-accessibility/at-spi2-atk::pg_overlay
 net-p2p/deluge::pg_overlay
 media-sound/ardour::4nykey
 media-fonts/monoid::4nykey
