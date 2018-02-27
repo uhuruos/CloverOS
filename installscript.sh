@@ -80,6 +80,8 @@ PORTAGE_BINHOST="https://cloveros.ga"
 ACCEPT_LICENSE="*"
 ACCEPT_KEYWORDS="**"' >> /etc/portage/make.conf
 
+emerge -1 openssh openssl games-envd
+
 emerge gnupg aria2
 gpg --keyserver keys.gnupg.net --recv-key "78F5 AC55 A120 07F2 2DF9 A28A 78B9 3F76 B8E4 2805"
 echo 'binhost_mirrors=\$PORTAGE_BINHOST",https://useast.cloveros.ga,https://uswest.cloveros.ga,https://ca.cloveros.ga,https://ca2.cloveros.ga,https://fr.cloveros.ga,https://fr2.cloveros.ga,https://uk.cloveros.ga,https://au.cloveros.ga,"
@@ -111,7 +113,6 @@ useradd -M $user
 echo "$user:$userpassword" | chpasswd
 gpasswd -a $user wheel
 
-emerge -1 openssh openssl games-envd
 emerge -e world xorg-server fvwm sudo xfe wpa_supplicant porthole firefox emacs gimp mpv smplayer rxvt-unicode filezilla rtorrent-ps weechat linux-firmware alsa-utils zsh zsh-completions gentoo-zsh-completions vlgothic hack liberation-fonts nano scrot xbindkeys xinput nitrogen arandr qastools wbar slock xarchiver p7zip gparted squashfs-tools cryptsetup os-prober
 
 sed -i "s/# %wheel ALL=(ALL) NOPASSWD: ALL/%wheel ALL=(ALL) NOPASSWD: ALL/" /etc/sudoers
