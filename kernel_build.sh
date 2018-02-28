@@ -5,6 +5,7 @@ kernelmajversion=4.15
 #eselect kernel set 1
 
 binutils-config --linker ld.bfd
+mkdir -p /usr/portage/packages/s/
 
 cd /usr/src/linux/
 wget https://liquorix.net/sources/4.15/config.amd64

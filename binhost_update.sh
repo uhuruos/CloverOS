@@ -18,12 +18,10 @@ emerge --depclean
 cd /usr/portage/packages/s/
 EIX_LIMIT=0 eix --installed -F | grep -v "Available versions" | ansi2html > packages.html
 php website.php
-
-rm -Rf /usr/portage/packages/s/signatures/*
+rm -Rf /usr/portage/packages/s/signatures/
+mkdir -p /usr/portage/packages/s/signatures/
 cd /usr/portage/packages/s/signatures/
-find /usr/portage/packages/ -type d | sed 's#/usr/portage/packages/##' | parallel mkdir
+find /usr/portage/packages/ -type d | sed 's#/usr/portage/packages/##' | grep -v "^s/signatures/s$" | parallel mkdir
 find /usr/portage/packages/ -type f | sed 's#/usr/portage/packages/##' | pv -qB 1G | parallel gpg --armor --detach-sign --output {}.asc --sign /usr/portage/packages/{}
-rmdir /usr/portage/packages/s/signatures/s/signatures/
-
 chmod -R 755 /usr/portage/packages/
 rsync -a --delete-before /usr/portage/packages/ root@fr.cloveros.ga:/var/www/html/
