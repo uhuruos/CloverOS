@@ -1,15 +1,16 @@
 #preference, remove when stable is bumped up
-www-client/firefox # major change
-media-gfx/gimp # 2.9
-media-sound/clementine ** # qt5
-media-gfx/blender # python
-sys-devel/gcc
-sys-kernel/gentoo-sources
 x11-drivers/nvidia-drivers # 4.15
-net-p2p/retroshare # needs latest version
-x11-wm/enlightenment # stable is old
-dev-libs/efl # stable is old
-x11-terms/terminology # stable is old
+=dev-lisp/clisp-2.49.90 # stable doesn't build
+media-gfx/blender # python
+net-p2p/retroshare # needs latest
+x11-wm/enlightenment # old
+dev-libs/efl # old
+x11-terms/terminology # old
+www-client/firefox # quantum
+media-sound/clementine ** # qt5
+media-gfx/gimp # 2.9
+sys-kernel/gentoo-sources
+sys-devel/gcc
 #firefox
 =media-libs/libpng-1.6.34
 #mednafen
@@ -559,3 +560,10 @@ dev-python/django-formtools
 dev-python/django-otp-yubikey
 # required by plasma-browser-integration (argument)
 =kde-misc/plasma-browser-integration-9999 **
+# required by dev-lang/open-cobol (argument)
+=dev-lang/open-cobol-1.1 ~amd64
+# required by dev-lang/tinycobol (argument)
+=dev-lang/tinycobol-0.65.9 **
+# required by dev-lang/tinycobol-0.65.9::gentoo
+# required by dev-lang/tinycobol (argument)
+=dev-db/vbisam-2.0 **
