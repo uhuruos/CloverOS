@@ -8,7 +8,7 @@ deband-grain=24
 deband-iterations=2
 deband-range=12
 deband-threshold=48
-hdr-tone-mapping=hable
+tone-mapping=hable
 
 screenshot-format=png
 screenshot-png-compression=9
