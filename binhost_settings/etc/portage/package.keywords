@@ -228,6 +228,10 @@ dev-util/nvidia-cuda-toolkit
 games-fps/gzdoom
 games-fps/redeclipse
 app-emulation/qt-virt-manager **
+net-misc/streamlink
+dev-lang/open-cobol
+kde-misc/plasma-browser-integration **
+www-client/firefox-kde-opensuse
 
 #dependencies
 #tlp
@@ -346,6 +350,8 @@ net-libs/libtorrent **
 dev-python/josepy
 #gkrellm-plugins
 x11-plugins/gkrellm-countdown
+#streamlink
+dev-python/backports-shutil_which
 
 #fonts
 media-fonts/lohit-kannada
@@ -559,12 +565,3 @@ dev-python/phonenumbers
 dev-python/django-otp
 dev-python/django-formtools
 dev-python/django-otp-yubikey
-# required by plasma-browser-integration (argument)
-=kde-misc/plasma-browser-integration-9999 **
-# required by dev-lang/open-cobol (argument)
-=dev-lang/open-cobol-1.1 ~amd64
-# required by dev-lang/tinycobol (argument)
-=dev-lang/tinycobol-0.65.9 **
-# required by dev-lang/tinycobol-0.65.9::gentoo
-# required by dev-lang/tinycobol (argument)
-=dev-db/vbisam-2.0 **

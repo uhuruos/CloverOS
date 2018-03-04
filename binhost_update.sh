@@ -4,9 +4,9 @@ cp /var/lib/portage/world binhost_settings/var/lib/portage
 emerge --sync
 layman -S
 emerge -uvDN --with-bdeps=y --buildpkg @world
-emerge -1 --buildpkg $(eix -Jc | grep 9999 | cut -d" " -f2 | tr "\n" " ")
 emerge --buildpkg @preserved-rebuild
 emerge --depclean
+emerge -1 --buildpkg $(eix -Jc | grep 9999 | cut -d" " -f2 | tr "\n" " ")
 
 #mv /usr/portage/packages/s/ .
 #rm -Rf /usr/portage/packages/*
