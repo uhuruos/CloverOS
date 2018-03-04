@@ -1,17 +1,17 @@
-kernelversion=4.15.6
+kernelversion=4.15.8
 kernelmajversion=4.15
 
 #emerge gentoo-sources genkernel
 #eselect kernel set 1
 
 binutils-config --linker ld.bfd
-mkdir -p /usr/portage/packages/s/
 
 cd /usr/src/linux/
 wget https://liquorix.net/sources/4.15/config.amd64
 genkernel --kernel-config=config.amd64 --luks --lvm all
 make clean
 
+mkdir -p /usr/portage/packages/s/
 rm /usr/portage/packages/s/kernel.tar.xz
 cd /boot/
 tar -cf /usr/portage/packages/s/kernel.tar *$kernelversion-gentoo

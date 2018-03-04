@@ -767,7 +767,6 @@ sys-kernel/bliss-initramfs
 sys-kernel/dkms
 sys-kernel/dracut
 sys-kernel/genkernel
-sys-kernel/gentoo-sources
 sys-kernel/linux-firmware
 sys-power/acpi_call
 sys-power/acpitool

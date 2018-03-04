@@ -4,15 +4,15 @@ cp /var/lib/portage/world binhost_settings/var/lib/portage
 emerge --sync
 layman -S
 emerge -uvDN --with-bdeps=y --buildpkg @world
+emerge -1 --buildpkg $(eix -Jc | grep 9999 | cut -d" " -f2 | tr "\n" " ")
 emerge --buildpkg @preserved-rebuild
 emerge --depclean
 
-#emerge -1 --buildpkg $(eix -Jc | grep 9999 | cut -d" " -f2 | tr "\n" " ")
-#emerge -C hwinfo ntfs3g && emerge --buildpkg ntfs3g && emerge --buildpkg hwinfo
 #mv /usr/portage/packages/s/ .
 #rm -Rf /usr/portage/packages/*
 #quickpkg --include-unmodified-config=y "*/*" 2>&1 | ansi2html | tail -n +1081 | head -n -7 > s/quickpkg.txt
 #emerge --buildpkgonly vnstat sudo openssh
+#emerge -C hwinfo ntfs3g && emerge --buildpkg ntfs3g && emerge --buildpkg hwinfo
 #mv s/ /usr/portage/packages/
 
 cd /usr/portage/packages/s/

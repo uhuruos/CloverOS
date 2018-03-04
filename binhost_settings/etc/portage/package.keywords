@@ -180,7 +180,7 @@ net-p2p/eiskaltdcpp **
 sys-block/sas3flash
 app-crypt/kencfs-plasma
 app-emulation/wine-any
-games-emulation/rpcs3 **
+games-emulation/rpcs3
 games-emulation/citra **
 dev-libs/sway
 x11-wm/bspwm
@@ -549,6 +549,7 @@ sys-auth/ykclient
 app-admin/passwordsafe
 #keepassxc
 app-admin/keepassxc
+app-crypt/argon2
 #django-two-factor-auth
 dev-python/django-phonenumber-field
 dev-python/yubiotp
