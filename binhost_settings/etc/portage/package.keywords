@@ -17,6 +17,7 @@ sys-devel/gcc
 =dev-libs/lzo-2.10
 #vapoursynth
 =dev-lang/nasm-2.13.01
+=media-libs/zimg-2.7.4
 #sway
 =dev-libs/json-c-0.12.1
 

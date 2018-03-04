@@ -586,7 +586,6 @@ media-video/avidemux
 media-video/baka-mplayer
 media-video/cinelerra
 media-video/dvdbackup
-media-video/ffmpeg
 media-video/ffmpegthumbnailer
 media-video/flowblade
 media-video/handbrake
@@ -778,6 +777,7 @@ sys-process/htop
 sys-process/iotop
 sys-process/lsof
 sys-process/parallel
+virtual/ffmpeg
 www-client/chromium
 www-client/dillo
 www-client/elinks
