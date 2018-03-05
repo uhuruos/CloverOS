@@ -297,7 +297,7 @@ sudo emerge firefox-kde-opensuse
 QT_QPA_PLATFORMTHEME="KDE" firefox
 ```
 
-![Firefox with file picker](https://i.imgur.com/brf4TxR.png)
+![Firefox with file picker](https://i.imgur.com/RVebdVX.png)
 
 ### KDE theme in qt5 programs without KDE
 ```
