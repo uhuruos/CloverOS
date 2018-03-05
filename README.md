@@ -133,6 +133,7 @@ This disables the binhost and uses Portage's ebuilds for packages. Now you can e
 * [Emerge error relating to openssl](#emerge-error-relating-to-openssl)
 * [GPU passthrough example](#gpu-passthrough-example)
 * [Generate Wbar config from installed programs](#generate-wbar-config-from-installed-programs)
+* [Thumbnail file picker with Firefox](#thumbnail-file-picker-with-firefox)
 * [KDE theme in qt5 programs without KDE](#kde-theme-in-qt5-programs-without-kde)
 * [Vertical tabs in Firefox 57+](#vertical-tabs-in-firefox-57)
 * [Suspend when laptop lid is closed](#suspend-when-laptop-lid-is-closed)
@@ -289,6 +290,14 @@ First: `sudo emerge imagemagick && mkdir ~/.wbaricons`
 ```
 grep -hE '^Name=|^Icon=|^Exec=' $(grep -rl "^Icon=" --exclude={compton,brasero,steam,qmmp,gcr-viewer}.desktop /usr/share/applications/) | sed 's/Name=/t: /; s/Exec=/c: /; s/Icon=/i: /; s#\(i: \)\(.*\)#i: .wbaricons/\2.xpm#; 0~3 a\\' >> .wbar && ls -v1 /usr/share/pixmaps/*.{png,ico} /usr/share/icons/hicolor/*/apps/*.* /usr/share/pixmaps/*.{xpm,svg} | sed -r 's#(.*/)(.*)(\..*)#convert \1\2\3 ~/.wbaricons/\2.xpm#' | xargs -I{} sh -c {}
 ```
+
+### Thumbnail file picker with Firefox
+```
+sudo emerge firefox-kde-opensuse
+QT_QPA_PLATFORMTHEME="KDE" firefox
+```
+
+![Firefox with file picker](https://i.imgur.com/brf4TxR.png)
 
 ### KDE theme in qt5 programs without KDE
 ```
