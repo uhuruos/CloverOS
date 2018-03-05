@@ -258,12 +258,12 @@ games-util/higan-purify
 games-util/lutris
 games-util/steam-launcher
 gnome-extra/gnome-calculator
-kde-apps/akonadi
-kde-apps/dolphin
 kde-apps/kde-meta
+kde-apps/kdebase-meta
 kde-apps/kdenlive
 kde-apps/konqueror
 kde-misc/kdirstat
+kde-misc/kmozillahelper
 kde-misc/krusader
 kde-misc/plasma-browser-integration
 kde-misc/yakuake
@@ -367,6 +367,7 @@ media-fonts/freefont
 media-fonts/freefonts
 media-fonts/fs-fonts
 media-fonts/gidole
+media-fonts/gohufont
 media-fonts/hack
 media-fonts/hermit
 media-fonts/heuristica
@@ -655,6 +656,7 @@ net-misc/dhcp
 net-misc/dhcpcd
 net-misc/electrum
 net-misc/freerdp
+net-misc/gofish
 net-misc/megatools
 net-misc/mosh
 net-misc/networkmanager
@@ -664,6 +666,8 @@ net-misc/proxychains
 net-misc/putty
 net-misc/pyhoca-cli
 net-misc/python-x2go
+net-misc/sgopherd
+net-misc/snarf
 net-misc/sshpass
 net-misc/telnet-bsd
 net-misc/throttle

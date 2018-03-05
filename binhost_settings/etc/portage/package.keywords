@@ -233,6 +233,7 @@ net-misc/streamlink
 dev-lang/open-cobol
 kde-misc/plasma-browser-integration **
 www-client/firefox-kde-opensuse
+net-misc/sgopherd
 
 #dependencies
 #tlp
@@ -353,6 +354,8 @@ dev-python/josepy
 x11-plugins/gkrellm-countdown
 #streamlink
 dev-python/backports-shutil_which
+#firefox-kde-opensuse
+kde-misc/kmozillahelper
 
 #fonts
 media-fonts/lohit-kannada
@@ -403,6 +406,7 @@ media-fonts/ricty
 media-fonts/sophia-nubian
 media-fonts/viga
 media-fonts/tewi-font
+media-fonts/gohufont
 
 #xfce plugins
 xfce-extra/xfce4-gvfs-mount
