@@ -139,7 +139,7 @@ This disables the binhost and uses Portage's ebuilds for packages. Now you can e
 * [Suspend when laptop lid is closed](#suspend-when-laptop-lid-is-closed)
 * [Dnscrypt-proxy howto](#dnscrypt-proxy-howto)
 * [Sound in OBS (Open Broadcaster Software) using ALSA](#sound-in-obs-open-broadcaster-software-using-alsa)
-* [Install Quake 3](#install-quake3)
+* [Install Quake 3](#install-quake-3)
 * [What is Gentoo?](#what-is-gentoo)
 * [Is this an overlay?](#is-this-an-overlay)
 * [Benefits of Gentoo/CloverOS over other distros](#benefits-of-gentoocloveros-over-other-distros)
