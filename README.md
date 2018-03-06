@@ -481,7 +481,7 @@ Start playing something, then run `obs`, then add Audio Capture Device (ALSA) to
 ![OBS with ALSA](https://i.imgur.com/tc1pMRX.png)
 
 ### Install Quake 3
-`sudo sh -c 'emerge quake3 && wget https://github.com/nrempel/q3-server/blob/master/baseq3/pak0.pk3?raw=true -O /usr/share/games/quake3/baseq3'`
+`sudo sh -c 'emerge quake3 && wget "https://github.com/nrempel/q3-server/blob/master/baseq3/pak0.pk3?raw=true" -P /usr/share/games/quake3/baseq3'`
 
 ### What is Gentoo?
 Gentoo is a meta-distro. You can make any distro you want out of it. You can have a package.use/package.keywords that makes a binary-compatible Debian or Fedora or Arch or whatever. If there's something you don't like about Gentoo, you can just edit /etc/portage/package.use. Using Gentoo is like distro-hopping around the same distro. Also, by building everything yourself, that's one less botnet. If you have a problem with a package or the package doesn't exist, just add an overlay or write an ebuild and put it in your local portage directory and emerge.
