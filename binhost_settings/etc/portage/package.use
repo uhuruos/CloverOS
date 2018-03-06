@@ -9,6 +9,9 @@ media-gfx/blender tiff -opencl -cycles -openimageio
 games-simulation/openttd -openmedia
 games-emulation/rpcs3 joystick -vulkan
 #preference
+www-apache/mod_perl ithreads
+dev-lang/perl ithreads
+sys-apps/iproute2 -minimal
 net-p2p/rtorrent-ps daemon
 kde-apps/dolphin thumbnail
 x11-misc/polybar github mpd i3wm

@@ -231,9 +231,18 @@ games-fps/redeclipse
 app-emulation/qt-virt-manager **
 net-misc/streamlink
 dev-lang/open-cobol
-kde-misc/plasma-browser-integration **
 www-client/firefox-kde-opensuse
 net-misc/sgopherd
+app-emulation/vagrant
+#vagrant
+dev-ruby/net-ssh
+dev-ruby/net-scp
+dev-ruby/hashicorp-checkpoint
+dev-ruby/rake
+dev-ruby/i18n
+#otrs
+www-apps/otrs
+dev-perl/LWP-UserAgent-Determined
 
 #dependencies
 #tlp

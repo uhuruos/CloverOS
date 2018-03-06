@@ -68,6 +68,7 @@ app-emulation/open-vm-tools
 app-emulation/playonlinux
 app-emulation/qemu
 app-emulation/qt-virt-manager
+app-emulation/vagrant
 app-emulation/virt-manager
 app-emulation/virtualbox
 app-emulation/virtualbox-additions
@@ -132,6 +133,7 @@ app-text/convmv
 app-text/dos2unix
 app-text/evince
 app-text/mupdf
+app-text/pandoc
 app-text/tesseract
 app-text/texlive
 app-text/tree
@@ -159,6 +161,7 @@ dev-python/potr
 dev-python/sphinx
 dev-python/virtualenv
 dev-qt/qt-creator
+dev-ruby/nokogiri
 dev-util/bless
 dev-util/catalyst
 dev-util/ccache
@@ -263,9 +266,7 @@ kde-apps/kdebase-meta
 kde-apps/kdenlive
 kde-apps/konqueror
 kde-misc/kdirstat
-kde-misc/kmozillahelper
 kde-misc/krusader
-kde-misc/plasma-browser-integration
 kde-misc/yakuake
 kde-plasma/bluedevil
 lxde-base/lxappearance
@@ -782,6 +783,8 @@ sys-process/iotop
 sys-process/lsof
 sys-process/parallel
 virtual/ffmpeg
+www-apps/otrs
+www-apps/trac
 www-client/chromium
 www-client/dillo
 www-client/elinks
