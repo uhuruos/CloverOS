@@ -31,8 +31,8 @@ if [[ ! -f /sys/class/power_supply/BAT0/capacity ]]; then
 fi
 
 if compgen -G /sys/class/backlight/* > /dev/null; then
-    brightness=(/sys/class/backlight/*)
-    brightness=${brightness[-1]}
+    backlightdevice=(/sys/class/backlight/*)
+    backlightdevice=${brightness[-1]}
 else
     brightness='N/A'
 fi
@@ -108,7 +108,7 @@ if [[ $battery != 'N/A' ]]; then
 fi
 
 if [[ $brightness != 'N/A' ]]; then
-    brightness=$(($(<$brightness/actual_brightness)*100/$(<$brightness/max_brightness)))%
+    brightness=$(($(<$backlightdevice/actual_brightness)*100/$(<$backlightdevice/max_brightness)))%
 fi
 
 mapfile -t signal -ra signal < /proc/net/wireless
