@@ -32,7 +32,7 @@ fi
 
 if compgen -G /sys/class/backlight/* > /dev/null; then
     backlightdevice=(/sys/class/backlight/*)
-    backlightdevice=${brightness[-1]}
+    backlightdevice=${backlightdevice[-1]}
 else
     brightness='N/A'
 fi
