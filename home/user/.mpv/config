@@ -3,6 +3,7 @@ video-sync=display-resample
 hwdec=no
 scale=ewa_lanczossharp
 cscale=ewa_lanczossoft
+dscale=ewa_lanczos
 sigmoid-slope=10.0
 deband-grain=24
 deband-iterations=2
