@@ -5,7 +5,7 @@ cpulastidle=0
 if [[ -f ~/.asoundrc ]]; then
     read -r alsadevice < ~/.asoundrc
     alsadevice=${alsadevice/defaults.pcm.card /}
-    if [ $alsadevice -eq $alsadevice ] 2>/dev/null; then
+    if [ $alsadevice -eq $alsadevice ] 2> /dev/null; then
         :
     else
         alsadevice=0
@@ -14,19 +14,28 @@ else
     alsadevice=0
 fi
 i=0
-while read line; do
-    if [[ $line == "Amp-Out vals:  "* ]]; then
-        alsaline=$i
-        break
-    fi
-((i++))
-done < /proc/asound/card$alsadevice/codec#0
+if [[ -f /proc/asound/card$alsadevice/codec#0 ]]; then
+    while read line; do
+        if [[ $line == 'Amp-Out vals:  '* ]]; then
+            alsaline=$i
+            break
+        fi
+        ((i++))
+    done < /proc/asound/card$alsadevice/codec#0
+else
+    volume='N/A'
+fi
 
-backlightdevice=()
-for line in /sys/class/backlight/*; do
-    backlightdevice+=($line)
-done
-backlightdevice=${backlightdevice[$((${#processes[@]}-1))]}
+if [[ ! -f /sys/class/power_supply/BAT0/capacity ]]; then
+    battery='N/A'
+fi
+
+if compgen -G /sys/class/backlight/* > /dev/null; then
+    brightness=(/sys/class/backlight/*)
+    brightness=${brightness[-1]}
+else
+    brightness='N/A'
+fi
 
 while :
 do
@@ -87,14 +96,20 @@ IFS=' ' read -ra netdev <<< ${netdev}
 netin=$((${netdev[1]}/1048576))\ MiB
 netout=$((${netdev[9]}/1048576))\ MiB
 
-mapfile -t asound < /proc/asound/card$alsadevice/codec#0
-volume=${asound[$alsaline]}
-volume=${volume:20:2}
-volume=$((16#$volume))%
+if [[ $volume != 'N/A' ]]; then
+    mapfile -t asound < /proc/asound/card$alsadevice/codec#0
+    volume=${asound[$alsaline]}
+    volume=${volume:20:2}
+    volume=$((16#$volume))%
+fi
 
-battery=$(</sys/class/power_supply/BAT0/capacity)%
+if [[ $battery != 'N/A' ]]; then
+    battery=$(</sys/class/power_supply/BAT0/capacity)%
+fi
 
-brightness=$(($(<$backlightdevice/actual_brightness)*100/$(<$backlightdevice/max_brightness)))%
+if [[ $brightness != 'N/A' ]]; then
+    brightness=$(($(<$brightness/actual_brightness)*100/$(<$brightness/max_brightness)))%
+fi
 
 mapfile -t signal -ra signal < /proc/net/wireless
 if [[ ${#signal[@]} -gt 2 ]]; then
@@ -104,13 +119,13 @@ if [[ ${#signal[@]} -gt 2 ]]; then
     signal=${signal:0:-1}
     signal=$((signal*100/70))%
 else
-    signal=
+    signal='N/A'
 fi
 
 date=$(printf '%(%c)T')
 
-clr1="\e[37m"
-clr2="\e[32m"
+clr1='\e[37m'
+clr2='\e[32m'
 
 echo -ne "\e[?25l$clr1$system Up: $clr2$uptime$clr1 Proc: $clr2$processes$clr1 Active: $clr2$activeprocesses$clr1 Cpu: $clr2$cpuusage$clr1 Mem: $clr2$meminfo$clr1 Net in: $clr2$netin$clr1 Net out: $clr2$netout$clr1 Battery: $clr2$battery$clr1 Brightness: $clr2$brightness$clr1 Volume: $clr2$volume$clr1 Wifi: $clr2$signal$clr1 $date        \r"
 
