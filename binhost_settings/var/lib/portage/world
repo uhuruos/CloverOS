@@ -6,6 +6,7 @@ app-admin/hddtemp
 app-admin/keepassxc
 app-admin/logrotate
 app-admin/mcelog
+app-admin/passwordsafe
 app-admin/sudo
 app-admin/syslog-ng
 app-admin/testdisk
@@ -150,6 +151,7 @@ dev-lang/go
 dev-lang/open-cobol
 dev-lang/php
 dev-lang/rust
+dev-lang/scala
 dev-libs/amdgpu-pro-opencl
 dev-libs/libisoburn
 dev-libs/sway
@@ -192,6 +194,7 @@ games-board/pychess
 games-board/sjeng
 games-board/stockfish
 games-board/xboard
+games-emulation/citra
 games-emulation/daphne
 games-emulation/desmume
 games-emulation/dgen-sdl
@@ -703,6 +706,7 @@ net-vpn/zeronet
 net-wireless/aircrack-ng
 net-wireless/blueman
 net-wireless/broadcom-sta
+net-wireless/gnuradio
 net-wireless/iw
 net-wireless/rfkill
 net-wireless/wpa_supplicant

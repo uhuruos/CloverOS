@@ -1,8 +1,10 @@
 #preference, remove when stable is bumped up
 x11-drivers/nvidia-drivers # 4.15
 =dev-lisp/clisp-2.49.90 # stable doesn't build
+=net-p2p/mldonkey-3.1.6-r1 # stable doesn't build
 media-gfx/blender # python
 net-p2p/retroshare # needs latest
+net-misc/youtube-dl # needs latest
 x11-wm/enlightenment # old
 dev-libs/efl # old
 x11-terms/terminology # old
@@ -11,6 +13,7 @@ media-sound/clementine ** # qt5
 media-gfx/gimp # 2.9
 sys-kernel/gentoo-sources
 sys-devel/gcc
+media-video/ffmpeg # mpv compatibility
 #firefox
 =media-libs/libpng-1.6.34
 #mednafen
@@ -234,15 +237,9 @@ dev-lang/open-cobol
 www-client/firefox-kde-opensuse
 net-misc/sgopherd
 app-emulation/vagrant
-#vagrant
-dev-ruby/net-ssh
-dev-ruby/net-scp
-dev-ruby/hashicorp-checkpoint
-dev-ruby/rake
-dev-ruby/i18n
-#otrs
 www-apps/otrs
-dev-perl/LWP-UserAgent-Determined
+dev-libs/log4cplus
+media-gfx/openvdb
 
 #dependencies
 #tlp
@@ -365,6 +362,14 @@ x11-plugins/gkrellm-countdown
 dev-python/backports-shutil_which
 #firefox-kde-opensuse
 kde-misc/kmozillahelper
+#vagrant
+dev-ruby/net-ssh
+dev-ruby/net-scp
+dev-ruby/hashicorp-checkpoint
+dev-ruby/rake
+dev-ruby/i18n
+#otrs
+dev-perl/LWP-UserAgent-Determined
 
 #fonts
 media-fonts/lohit-kannada
