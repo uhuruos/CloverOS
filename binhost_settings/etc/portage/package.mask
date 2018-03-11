@@ -57,3 +57,4 @@ app-emulation/wine::eroen
 net-libs/libtorrent::pinkpieea
 app-emulation/wine-desktop-common::bobwya
 media-video/mpv::vapoursynth
+app-emulation/wine-any::pinkpieea

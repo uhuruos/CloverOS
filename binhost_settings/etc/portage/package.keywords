@@ -13,7 +13,6 @@ media-sound/clementine ** # qt5
 media-gfx/gimp # 2.9
 sys-kernel/gentoo-sources
 sys-devel/gcc
-media-video/ffmpeg # mpv compatibility
 #firefox
 =media-libs/libpng-1.6.34
 #mednafen
@@ -240,6 +239,10 @@ app-emulation/vagrant
 www-apps/otrs
 dev-libs/log4cplus
 media-gfx/openvdb
+sys-devel/lld
+x11-drivers/amdgpu-pro
+games-emulation/kega-fusion
+media-sound/ezstream
 
 #dependencies
 #tlp
@@ -370,6 +373,8 @@ dev-ruby/rake
 dev-ruby/i18n
 #otrs
 dev-perl/LWP-UserAgent-Determined
+#amdgpu-pro
+sys-devel/lld
 
 #fonts
 media-fonts/lohit-kannada
