@@ -707,7 +707,6 @@ net-vpn/tor
 net-vpn/zeronet
 net-wireless/aircrack-ng
 net-wireless/blueman
-net-wireless/broadcom-sta
 net-wireless/gnuradio
 net-wireless/iw
 net-wireless/rfkill

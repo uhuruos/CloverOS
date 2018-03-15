@@ -10,6 +10,7 @@ games-simulation/openttd -openmedia
 games-emulation/rpcs3 joystick -vulkan
 x11-drivers/amdgpu-pro -vulkan
 #preference
+media-libs/libbluray aacs bdplus
 www-apache/mod_perl ithreads
 dev-lang/perl ithreads
 sys-apps/iproute2 -minimal
