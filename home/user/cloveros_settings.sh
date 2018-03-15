@@ -9,9 +9,10 @@ mirrors=(
 	"https://fr2.cloveros.ga"
 	"https://uk.cloveros.ga"
 	"https://au.cloveros.ga"
+	"https://sea.cloveros.ga"
 )
 
-kernelversion="4.15.8"
+kernelversion="4.15.9"
 
 gitprefix="https://gitgud.io/cloveros/cloveros/raw/master"
 
