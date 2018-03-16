@@ -4,15 +4,14 @@ mirrors=(
 	"https://useast.cloveros.ga"
 	"https://uswest.cloveros.ga"
 	"https://ca.cloveros.ga"
-	"https://ca2.cloveros.ga"
 	"https://fr.cloveros.ga"
-	"https://fr2.cloveros.ga"
+	"https://nl.cloveros.ga"
 	"https://uk.cloveros.ga"
 	"https://au.cloveros.ga"
 	"https://sea.cloveros.ga"
 )
 
-kernelversion="4.15.9"
+kernelversion="4.15.10"
 
 gitprefix="https://gitgud.io/cloveros/cloveros/raw/master"
 
