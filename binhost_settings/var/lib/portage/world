@@ -981,6 +981,7 @@ x11-terms/termite
 x11-terms/xfce4-terminal
 x11-themes/adwaita-icon-theme
 x11-themes/arc-icon-theme
+x11-themes/arc-theme
 x11-themes/blueglass-xcursors
 x11-themes/clearlooks-phenix
 x11-themes/comix-xcursors
@@ -1108,6 +1109,7 @@ xfce-extra/thunar-shares-plugin
 xfce-extra/thunar-vcs-plugin
 xfce-extra/thunar-volman
 xfce-extra/transd
+xfce-extra/tumbler
 xfce-extra/xfce-theme-manager
 xfce-extra/xfce4-alsa-plugin
 xfce-extra/xfce4-battery-plugin

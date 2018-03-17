@@ -243,6 +243,7 @@ sys-devel/lld
 x11-drivers/amdgpu-pro
 games-emulation/kega-fusion
 media-sound/ezstream
+x11-themes/arc-theme
 
 #dependencies
 #tlp
@@ -375,6 +376,8 @@ dev-ruby/i18n
 dev-perl/LWP-UserAgent-Determined
 #amdgpu-pro
 sys-devel/lld
+#urbanterror
+games-fps/urbanterror-data
 
 #fonts
 media-fonts/lohit-kannada
