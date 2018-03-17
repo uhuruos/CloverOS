@@ -2,3 +2,4 @@ session = /home/user/.rtorrent/
 directory = /home/user/Downloads/
 dht.mode.set = on
 protocol.pex.set = yes
+port_range = 50000-50000
