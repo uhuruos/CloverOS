@@ -10,6 +10,7 @@ games-simulation/openttd -openmedia
 games-emulation/rpcs3 joystick -vulkan
 x11-drivers/amdgpu-pro -vulkan
 #preference
+net-p2p/rtorrent-ps daemon
 xfce-extra/tumbler ffmpeg
 media-plugins/gst-plugins-meta ffmpeg
 media-libs/libbluray aacs bdplus
