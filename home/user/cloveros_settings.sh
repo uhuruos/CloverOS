@@ -174,6 +174,7 @@ case "$choice" in
 		echo "./cloveros_settings.sh 4"
 		echo "sudo emerge --sync"
 		echo "sudo emerge -uvD world"
+		echo "sudo emerge @preserved-rebuild"
 		echo "sudo emerge --depclean"
 		echo 'sudo depmod "$kernelversion-gentoo"'
 		echo "./cloveros_settings.sh 9"
@@ -197,6 +198,7 @@ case "$choice" in
 		./cloveros_settings.sh 4
 		sudo emerge --sync
 		sudo emerge -uvD world
+		sudo emerge @preserved-rebuild
 		sudo emerge --depclean
 		sudo depmod "$kernelversion-gentoo"
 		./cloveros_settings.sh 9
