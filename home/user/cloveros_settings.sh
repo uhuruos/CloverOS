@@ -195,7 +195,7 @@ case "$choice" in
 		binhostmirrors+="$i,"
 		done
 		binhostmirrors+='"'
-		if ! grep -q "$binhostmirrors" /etc/portage/make.conf; then
+		if ! grep -q "^$binhostmirrors$" /etc/portage/make.conf; then
 			sudo sed -i "s@^binhost_mirrors=.*@$binhostmirrors@" /etc/portage/make.conf
 		fi
 
