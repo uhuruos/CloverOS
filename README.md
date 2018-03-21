@@ -8,12 +8,6 @@ CloverOS GNU/Linux is scripts that creates a minimal (middleware-free), performa
 Mirrors and binary details: https://useast.cloveros.ga https://uswest.cloveros.ga https://ca.cloveros.ga https://fr.cloveros.ga https://nl.cloveros.ga https://au.cloveros.ga https://uk.cloveros.ga https://sea.cloveros.ga
 
 ## Cheat sheet
-### Upgrade your profile
-```
-emerge --sync
-eselect profile set "default/linux/amd64/17.0/hardened"
-```
-
 ### Installing program
 `emerge filezilla`
 

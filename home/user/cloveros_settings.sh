@@ -25,7 +25,7 @@ if [[ -n "$1" ]]; then
 	fi
 else
 	echo "1) Update cloveros_settings.sh
-2) Change mirrors
+2) Change mirror
 3) Change default sound device
 4) Update to kernel $kernelversion
 5) Change emerge to source or binary

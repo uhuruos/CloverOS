@@ -57,13 +57,6 @@ if [ -z "$DISPLAY" ] && ! pgrep X > /dev/null; then
 	wmspost[c]="nitrogen --set-zoom wallpaper.png & xbindkeys & $taptoclick &"
 	wmspost[w]="nitrogen --set-zoom wallpaper.png & xbindkeys & $taptoclick &"
 
-	if [ ! -f /usr/bin/fvwm ]; then
-		wms[y]=twm
-		wms[Y]=twm
-		wmpkgs[y]=twm
-		wmspkg[Y]=twm
-	fi
-
 	if [ -v wms[$choice] ]; then
 		if [ ! -f /usr/bin/${wms[$choice]} ]; then
 			echo

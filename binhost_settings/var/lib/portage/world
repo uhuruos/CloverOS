@@ -40,6 +40,7 @@ app-cdr/cdw
 app-cdr/dvd+rw-tools
 app-cdr/gcdemu
 app-cdr/graveman
+app-cdr/iat
 app-cdr/isomaster
 app-cdr/kcdemu
 app-cdr/xcdroast
@@ -1008,7 +1009,6 @@ x11-themes/gkrellm-themes
 x11-themes/gnome-backgrounds
 x11-themes/gnome-colors-common
 x11-themes/gnome-colors-themes
-x11-themes/gnome-icon-theme
 x11-themes/gnome-icon-theme-extras
 x11-themes/gnome-icon-theme-symbolic
 x11-themes/gnome-themes-standard
@@ -1033,7 +1033,6 @@ x11-themes/gtk-theme-switch
 x11-themes/haematite-xcursors
 x11-themes/hicolor-icon-theme
 x11-themes/iceicons
-x11-themes/icewm-themes
 x11-themes/kfaenza
 x11-themes/korilla
 x11-themes/larry-backgrounds
@@ -1094,6 +1093,7 @@ x11-wm/icewm
 x11-wm/jwm
 x11-wm/openbox
 x11-wm/ratpoison
+x11-wm/sawfish
 x11-wm/spectrwm
 x11-wm/treewm
 x11-wm/twm
