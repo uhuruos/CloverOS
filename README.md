@@ -57,6 +57,8 @@ Volume control: Laptop (software) Volume up/down keys
 Key bindings are in `~/.xbindkeysrc`
 
 ### Included software
+Window manager - fvwm
+
 Terminal - urxvt
 
 File manager - xfe
