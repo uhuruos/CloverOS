@@ -33,15 +33,15 @@ else
 7) Sync time
 8) Set timezone
 9) Clean emerge cache
-u) Update system, profile, kernel, cloveros_settings.sh, clean emerge cache
-m) Update default /etc/portage/make.conf
-c) Update Portage config from binhost
+u) Update system, kernel, cloveros_settings.sh, clean emerge cache
 l) Update or install Libre kernel
 a) ALSA settings
 t) Enable tap to click on touchpad
 b) Install bluetooth manager
 i) Install VirtualBox
 v) Install Virtualbox/VMWare drivers
+c) Update Portage config from binhost
+m) Revert to default /etc/portage/make.conf
 n) Install proprietary Nvidia drivers
 g) Fix Nvidia doesn't boot problem
 q) Exit"
@@ -170,7 +170,6 @@ case "$choice" in
 
 	u)
 		echo "Running the following:"
-		echo 'sudo eselect profile set "default/linux/amd64/17.0/hardened"'
 		echo "./cloveros_settings.sh 4"
 		echo "sudo emerge --sync"
 		echo "sudo emerge -uvD world"
@@ -189,6 +188,23 @@ case "$choice" in
 			exit 1
 		fi
 
+		sudo eselect profile set "default/linux/amd64/17.0/hardened"
+
+		if [ ! -s /usr/bin/aria2c ]; then
+			sudo emerge aria2
+		fi
+		if [ ! -s /usr/bin/gpg ]; then
+			sudo emerge gnupg
+			sudo gpg --keyserver hkp://pool.sks-keyservers.net --recv-key "78F5 AC55 A120 07F2 2DF9 A28A 78B9 3F76 B8E4 2805"
+		fi
+
+		if [ ! -s /usr/bin/fvwm ]; then
+			sudo emerge fvwm
+		fi
+		if [ ! -s .fvwm2rc ]; then
+			wget $gitprefix/home/user/.fvwm2rc
+		fi
+
 		binhostmirrors='binhost_mirrors="$PORTAGE_BINHOST,'
 		for i in "${mirrors[@]}"
 		do
@@ -199,14 +215,6 @@ case "$choice" in
 			sudo sed -i "s@^binhost_mirrors=.*@$binhostmirrors@" /etc/portage/make.conf
 		fi
 
-		if [ ! -s /usr/bin/fvwm ]; then
-			sudo emerge fvwm
-		fi
-		if [ ! -s .fvwm2rc ]; then
-			wget $gitprefix/home/user/.fvwm2rc
-		fi
-
-		sudo eselect profile set "default/linux/amd64/17.0/hardened"
 		./cloveros_settings.sh 4
 		sudo emerge --sync
 		sudo emerge -uvD world
@@ -214,35 +222,6 @@ case "$choice" in
 		sudo emerge --depclean
 		sudo depmod "$kernelversion-gentoo"
 		./cloveros_settings.sh 9
-		;;
-
-	m)
-		if [ ! -s /usr/bin/aria2c ]; then
-			sudo emerge aria2
-		fi
-		if [ ! -s /usr/bin/gpg ]; then
-			sudo emerge gnupg
-			sudo gpg --keyserver hkp://pool.sks-keyservers.net --recv-key "78F5 AC55 A120 07F2 2DF9 A28A 78B9 3F76 B8E4 2805"
-		fi
-		backupmakeconf="make.conf.bak"$(< /dev/urandom tr -dc 0-9 | head -c 5)
-		sudo mv /etc/portage/make.conf $backupmakeconf
-		sudo wget -q "$gitprefix"/home/user/make.conf -P /etc/portage/
-		echo "/etc/portage/make.conf is now default Previous make.conf saved to $backupmakeconf"
-		;;
-
-	c)
-		backupportagedir=backupportage$(< /dev/urandom tr -dc 0-9 | head -c 5)
-		sudo mkdir ~/$backupportagedir
-		sudo mv /etc/portage/package.use /etc/portage/package.mask /etc/portage/package.keywords /etc/portage/package.env /etc/portage/package.mask /etc/portage/package.license ~/$backupportagedir
-		sudo wget $gitprefix/binhost_settings/etc/portage/package.use $gitprefix/binhost_settings/etc/portage/package.keywords $gitprefix/binhost_settings/etc/portage/package.env $gitprefix/binhost_settings/etc/portage/package.mask $gitprefix/binhost_settings/etc/portage/package.license -P /etc/portage/
-		sudo rm -R /etc/portage/env/
-		sudo mkdir /etc/portage/env/
-		sudo wget $gitprefix/binhost_settings/etc/portage/env/no-lto $gitprefix/binhost_settings/etc/portage/env/no-lto-graphite $gitprefix/binhost_settings/etc/portage/env/no-lto-graphite-ofast $gitprefix/binhost_settings/etc/portage/env/no-lto-o3 $gitprefix/binhost_settings/etc/portage/env/no-lto-ofast $gitprefix/binhost_settings/etc/portage/env/no-o3 $gitprefix/binhost_settings/etc/portage/env/no-ofast $gitprefix/binhost_settings/etc/portage/env/size -P /etc/portage/env/
-		useflags=$(curl -s $gitprefix/binhost_settings/etc/portage/make.conf | grep '^USE=')
-		if ! grep -q "$useflags" /etc/portage/make.conf; then
-			echo $useflags >> /etc/portage/make.conf
-		fi
-		echo -e "\nPortage configuration now mirrors binhost Portage configuration. Previous Portage config stored in ~/$backupportagedir"
 		;;
 
 	l)
@@ -309,6 +288,28 @@ case "$choice" in
 		sleep 1
 		sudo emerge xf86-video-vmware virtualbox-guest-additions
 		echo -e "\nRestart X to load driver."
+		;;
+
+	c)
+		backupportagedir=backupportage$(< /dev/urandom tr -dc 0-9 | head -c 5)
+		sudo mkdir ~/$backupportagedir
+		sudo mv /etc/portage/package.use /etc/portage/package.mask /etc/portage/package.keywords /etc/portage/package.env /etc/portage/package.mask /etc/portage/package.license ~/$backupportagedir
+		sudo wget $gitprefix/binhost_settings/etc/portage/package.use $gitprefix/binhost_settings/etc/portage/package.keywords $gitprefix/binhost_settings/etc/portage/package.env $gitprefix/binhost_settings/etc/portage/package.mask $gitprefix/binhost_settings/etc/portage/package.license -P /etc/portage/
+		sudo rm -R /etc/portage/env/
+		sudo mkdir /etc/portage/env/
+		sudo wget $gitprefix/binhost_settings/etc/portage/env/no-lto $gitprefix/binhost_settings/etc/portage/env/no-lto-graphite $gitprefix/binhost_settings/etc/portage/env/no-lto-graphite-ofast $gitprefix/binhost_settings/etc/portage/env/no-lto-o3 $gitprefix/binhost_settings/etc/portage/env/no-lto-ofast $gitprefix/binhost_settings/etc/portage/env/no-o3 $gitprefix/binhost_settings/etc/portage/env/no-ofast $gitprefix/binhost_settings/etc/portage/env/size -P /etc/portage/env/
+		useflags=$(curl -s $gitprefix/binhost_settings/etc/portage/make.conf | grep '^USE=')
+		if ! grep -q "$useflags" /etc/portage/make.conf; then
+			echo $useflags >> /etc/portage/make.conf
+		fi
+		echo -e "\nPortage configuration now mirrors binhost Portage configuration. Previous Portage config stored in ~/$backupportagedir"
+		;;
+
+	m)
+		backupmakeconf="make.conf.bak"$(< /dev/urandom tr -dc 0-9 | head -c 5)
+		sudo mv /etc/portage/make.conf $backupmakeconf
+		sudo wget -q "$gitprefix"/home/user/make.conf -P /etc/portage/
+		echo "/etc/portage/make.conf is now default Previous make.conf saved to $backupmakeconf"
 		;;
 
 	n)
