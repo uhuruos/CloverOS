@@ -196,7 +196,7 @@ case "$choice" in
 		done
 		binhostmirrors+='"'
 		if ! grep -q "$binhostmirrors" /etc/portage/make.conf; then
-			sudo sed -i "s@^binhost_mirrors=@$binhostmirrors@' /etc/portage/make.conf
+			sudo sed -i "s@^binhost_mirrors=@$binhostmirrors@" /etc/portage/make.conf
 		fi
 
 		if [ ! -s /usr/bin/fvwm ]; then
