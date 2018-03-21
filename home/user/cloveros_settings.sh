@@ -157,7 +157,7 @@ case "$choice" in
 		;;
 
 	8)
-		echo -e "Available timezones: $(find /usr/share/zoneinfo/ -type f | sed s#/usr/share/zoneinfo/## | sort | tr '\n' ' ') \n"
+		echo -e "Available timezones: $(find /usr/share/zoneinfo/ -type f | sed s@/usr/share/zoneinfo/@@ | sort | tr '\n' ' ') \n"
 		read -erp "Select a timezone: " timezone
 		sudo cp /usr/share/zoneinfo/${timezone} /etc/localtime
 		echo -e "\nTimezone set to ${timezone}. (/etc/localtime)"
@@ -196,7 +196,7 @@ case "$choice" in
 		done
 		binhostmirrors+='"'
 		if ! grep -q "$binhostmirrors" /etc/portage/make.conf; then
-			sudo sed -i 's/^binhost_mirrors=/'$binhostmirrors'/' /etc/portage/make.conf
+			sudo sed -i "s@^binhost_mirrors=@$binhostmirrors@' /etc/portage/make.conf
 		fi
 
 		if [ ! -s /usr/bin/fvwm ]; then
