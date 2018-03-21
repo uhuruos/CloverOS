@@ -18,7 +18,7 @@ emerge -uavD world
 emerge --depclean
 ```
 
-### Updating config files after upgrading system (Mostly optional)
+### Updating config files after upgrading system (Optional)
 `sudo dispatch-conf`
 
 After you run it, it will show you the changes it's going to make:
@@ -29,7 +29,7 @@ u To update and make the changes
 
 z To disregard the changes
 
-It will ask to modify the sudo settings back to default, just hit z there.
+Warning: It will ask to modify the sudo settings back to default, just hit z there.
 
 ### Controlling fvwm
 Open Applications menu: right click on desktop
