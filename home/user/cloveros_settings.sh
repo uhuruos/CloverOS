@@ -188,12 +188,24 @@ case "$choice" in
 			echo "Please enable binaries."
 			exit 1
 		fi
+
+		binhostmirrors='binhost_mirrors="$PORTAGE_BINHOST,'
+		for i in "${mirrors[@]}"
+		do
+		binhostmirrors+="$i,"
+		done
+		binhostmirrors+='"'
+		if grep -q "$binhostmirrors" /etc/portage/make.conf; then
+			sudo sed -i "s/^binhost_mirrors=/$binhostmirrors/" /etc/portage/make.conf
+		fi
+
 		if [ ! -s /usr/bin/fvwm ]; then
 			sudo emerge fvwm
 		fi
 		if [ ! -s .fvwm2rc ]; then
 			wget $gitprefix/home/user/.fvwm2rc
 		fi
+
 		sudo eselect profile set "default/linux/amd64/17.0/hardened"
 		./cloveros_settings.sh 4
 		sudo emerge --sync
