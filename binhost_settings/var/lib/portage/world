@@ -45,7 +45,6 @@ app-cdr/isomaster
 app-cdr/kcdemu
 app-cdr/xcdroast
 app-cdr/xfburn
-app-crypt/acme-tiny
 app-crypt/certbot
 app-crypt/gnupg
 app-crypt/gpa
@@ -277,7 +276,6 @@ lxde-base/lxappearance
 lxde-base/lxde-meta
 lxde-base/lxtask
 lxqt-base/lxqt-meta
-mail-client/alpine
 mail-client/mutt
 mail-client/thunderbird
 mate-base/mate
@@ -557,7 +555,6 @@ media-sound/mpc
 media-sound/mpd
 media-sound/mpdas
 media-sound/mumble
-media-sound/murmur
 media-sound/ncmpc
 media-sound/ncmpcpp
 media-sound/pianobar
@@ -596,7 +593,6 @@ media-video/ffmpegthumbnailer
 media-video/flowblade
 media-video/handbrake
 media-video/kaffeine
-media-video/makemkv
 media-video/mkvtoolnix
 media-video/mpv
 media-video/obs-studio
@@ -616,6 +612,7 @@ net-analyzer/iptraf-ng
 net-analyzer/mate-netspeed
 net-analyzer/mtr
 net-analyzer/munin
+net-analyzer/nagios
 net-analyzer/nethogs
 net-analyzer/nload
 net-analyzer/nmap
@@ -663,11 +660,9 @@ net-misc/electrum
 net-misc/freerdp
 net-misc/gofish
 net-misc/icecast
-net-misc/megatools
 net-misc/mosh
 net-misc/networkmanager
 net-misc/ntp
-net-misc/nxplayer
 net-misc/proxychains
 net-misc/putty
 net-misc/pyhoca-cli
@@ -688,14 +683,13 @@ net-nntp/pan
 net-p2p/amule
 net-p2p/bitcoin-qt
 net-p2p/deluge
-net-p2p/eiskaltdcpp
 net-p2p/freenet
 net-p2p/go-ipfs-bin
 net-p2p/mktorrent
+net-p2p/mldonkey
 net-p2p/ncdc
 net-p2p/nicotine+
 net-p2p/qbittorrent
-net-p2p/retroshare
 net-p2p/rtorrent-ps
 net-p2p/soulseek-qt
 net-p2p/transmission
@@ -946,7 +940,6 @@ x11-plugins/wmnd
 x11-plugins/wmnet
 x11-plugins/wmpager
 x11-plugins/wmpasman
-x11-plugins/wmpeople
 x11-plugins/wmpinboard
 x11-plugins/wmping
 x11-plugins/wmpop3

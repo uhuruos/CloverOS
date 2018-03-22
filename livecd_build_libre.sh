@@ -68,7 +68,7 @@ useradd $user
 echo "$user:$userpassword" | chpasswd
 gpasswd -a $user wheel
 
-emerge -e world xorg-server fvwm sudo xfe wpa_supplicant porthole firefox emacs gimp mpv smplayer rxvt-unicode filezilla rtorrent-ps weechat alsa-utils zsh zsh-completions gentoo-zsh-completions vlgothic hack liberation-fonts nano scrot xbindkeys xinput nitrogen arandr qastools wbar slock xarchiver p7zip gparted squashfs-tools cryptsetup os-prober
+emerge -e world xorg-server fvwm sudo xfe wpa_supplicant porthole firefox emacs gimp mpv smplayer rxvt-unicode filezilla rtorrent-ps weechat alsa-utils zsh zsh-completions gentoo-zsh-completions vlgothic hack liberation-fonts nano scrot xbindkeys xinput nitrogen arandr qastools wbar slock xarchiver p7zip gparted squashfs-tools os-prober
 
 sed -i "s/# %wheel ALL=(ALL) NOPASSWD: ALL/%wheel ALL=(ALL) NOPASSWD: ALL/" /etc/sudoers
 sed -Ei "s@c([2-6]):2345:respawn:/sbin/agetty 38400 tty@#\0@" /etc/inittab

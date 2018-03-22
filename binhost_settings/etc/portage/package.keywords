@@ -1,16 +1,17 @@
 #preference, remove when stable is bumped up
-x11-drivers/nvidia-drivers # 4.15
 =dev-lisp/clisp-2.49.90 # stable doesn't build
-=net-p2p/mldonkey-3.1.6-r1 # stable doesn't build
 media-gfx/blender # python
+media-sound/clementine # qt5
+media-sound/mumble ** # qt5
+media-sound/murmur # qt5
+www-client/firefox # quantum
+media-gfx/gimp # 2.9
 net-p2p/retroshare # needs latest
 net-misc/youtube-dl # needs latest
 x11-wm/enlightenment # old
 dev-libs/efl # old
 x11-terms/terminology # old
-www-client/firefox # quantum
-media-sound/clementine ** # qt5
-media-gfx/gimp # 2.9
+net-p2p/mldonkey # old
 sys-kernel/gentoo-sources
 sys-devel/gcc
 #firefox
@@ -18,10 +19,24 @@ sys-devel/gcc
 #mednafen
 =dev-libs/lzo-2.10
 #vapoursynth
-=dev-lang/nasm-2.13.01
 =media-libs/zimg-2.7.4
 #sway
 =dev-libs/json-c-0.12.1
+#libressl
+dev-libs/libressl:0/44
+media-libs/opusfile
+dev-libs/cyrus-sasl
+sci-electronics/eagle
+app-editors/xemacs
+media-libs/openimageio
+net-mail/dovecot
+net-libs/serf
+media-libs/liblrdf
+www-client/elinks
+www-client/dillo
+net-ftp/vsftpd
+net-ftp/proftpd
+net-ftp/pure-ftpd
 
 #keyworded, remove when stable exists
 sys-fs/zfs-kmod
@@ -532,11 +547,10 @@ media-plugins/vapoursynth-hqdn3d
 #window maker plugins
 x11-plugins/wmmand
 x11-plugins/wmbluecpu
-x11-plugins/wmsystemtray
-net-mail/peephole
 x11-plugins/wmhdplop
 x11-plugins/wmbio
 x11-plugins/wmdiskmon
+x11-plugins/wmsystemtray
 x11-plugins/wmmemfree
 x11-plugins/wmcalendar
 x11-plugins/wmmp3
@@ -559,7 +573,6 @@ x11-plugins/wmXName **
 x11-plugins/wmgtemp
 x11-plugins/wmstickynotes
 x11-plugins/wmcdplay
-x11-plugins/wmpeople *
 x11-plugins/wmrack
 x11-plugins/wmxres
 x11-plugins/wmmisc
