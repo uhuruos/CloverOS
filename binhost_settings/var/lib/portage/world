@@ -141,7 +141,6 @@ app-text/zathura
 app-text/zathura-meta
 dev-db/postgresql
 dev-db/redis
-dev-db/rethinkdb
 dev-games/ogre
 dev-haskell/haskell-platform
 dev-java/icedtea:8
@@ -275,6 +274,7 @@ lxde-base/lxappearance
 lxde-base/lxde-meta
 lxde-base/lxtask
 lxqt-base/lxqt-meta
+mail-client/alpine
 mail-client/mutt
 mail-client/thunderbird
 mate-base/mate
@@ -491,6 +491,7 @@ media-gfx/inkscape
 media-gfx/jpegoptim
 media-gfx/krita
 media-gfx/librecad
+media-gfx/lximage-qt
 media-gfx/maim
 media-gfx/mcomix
 media-gfx/mirage
@@ -582,7 +583,6 @@ media-sound/umurmur
 media-sound/xmms2
 media-sound/xwax
 media-sound/yoshimi
-media-tv/plex-media-server
 media-video/aegisub
 media-video/avidemux
 media-video/baka-mplayer
@@ -922,7 +922,6 @@ x11-plugins/wmlaptop
 x11-plugins/wmlife
 x11-plugins/wmload
 x11-plugins/wmlongrun
-x11-plugins/wmmaiload
 x11-plugins/wmmand
 x11-plugins/wmmemload
 x11-plugins/wmmenu

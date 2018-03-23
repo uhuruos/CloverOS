@@ -326,7 +326,7 @@ x11-libs/wxGTK tiff
 
 #libressl
 net-misc/curl curl_ssl_libressl -curl_ssl_openssl
-net-libs/c-client libressl -chappa
+net-libs/c-client libressl chappa
 net-misc/iputils -ssl
 net-libs/nodejs bundled-ssl
 media-video/ffmpeg openssl
@@ -334,7 +334,6 @@ net-im/telepathy-connection-managers -msn -xmpp
 dev-libs/xmlsec nss
 net-p2p/mktorrent -ssl
 net-fs/samba -system-mitkrb5
-x11-misc/synergy libressl
 
 #wine
 x11-libs/libXinerama abi_x86_32

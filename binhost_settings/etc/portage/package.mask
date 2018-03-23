@@ -25,7 +25,6 @@ media-plugins/calf::fkmclane
 x11-misc/slop::fkmclane
 net-im/discord-bin::fkmclane
 sci-electronics/eagle::fkmclane
-media-tv/plex-media-server::fkmclane
 app-arch/p7zip::pg_overlay
 media-sound/mpd::pg_overlay
 x11-libs/wxGTK::pg_overlay
