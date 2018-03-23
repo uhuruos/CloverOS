@@ -37,6 +37,7 @@ www-client/dillo
 net-ftp/vsftpd
 net-ftp/proftpd
 net-ftp/pure-ftpd
+sys-fs/encfs
 
 #keyworded, remove when stable exists
 sys-fs/zfs-kmod

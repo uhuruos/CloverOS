@@ -8,6 +8,9 @@ www-client/firefox::jorgicio
 media-video/minitube::jorgicio
 net-im/telegram-desktop-bin::jorgicio
 dev-libs/libdbusmenu::jorgicio
+media-video/openshot::jorgicio
+media-libs/libopenshot::jorgicio
+media-libs/libopenshot-audio::jorgicio
 gnome-base/gsettings-desktop-schemas::elementary
 x11-misc/lightdm::elementary
 dev-libs/libdbusmenu::elementary
@@ -21,6 +24,8 @@ media-gfx/maim::fkmclane
 media-plugins/calf::fkmclane
 x11-misc/slop::fkmclane
 net-im/discord-bin::fkmclane
+sci-electronics/eagle::fkmclane
+media-tv/plex-media-server::fkmclane
 app-arch/p7zip::pg_overlay
 media-sound/mpd::pg_overlay
 x11-libs/wxGTK::pg_overlay
@@ -38,7 +43,9 @@ dev-libs/mpc::pg_overlay
 dev-libs/atk::pg_overlay
 app-accessibility/at-spi2-core::pg_overlay
 app-accessibility/at-spi2-atk::pg_overlay
+net-fs/nfs-utils::pg_overlay
 net-p2p/deluge::pg_overlay
+net-libs/serf::pg_overlay
 media-sound/ardour::4nykey
 media-fonts/monoid::4nykey
 www-client/torbrowser::4nykey

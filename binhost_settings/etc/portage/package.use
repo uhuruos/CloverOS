@@ -124,7 +124,6 @@ virtual/ffmpeg X sdl x264
 media-video/ffmpeg X openssl rubberband x265 libass vorbis ogg network vpx rtmp x264 aac wavpack opus mp3 sdl gme v4l webp theora xvid xcb cpudetection -opengl
 media-gfx/fontforge X gtk
 media-gfx/graphviz X gtk pdf svg python perl
-app-emulation/virt-manager gtk
 app-crypt/veracrypt X
 sci-chemistry/gromacs X
 mate-extra/mate-utils X
@@ -334,6 +333,8 @@ media-video/ffmpeg openssl
 net-im/telepathy-connection-managers -msn -xmpp
 dev-libs/xmlsec nss
 net-p2p/mktorrent -ssl
+net-fs/samba -system-mitkrb5
+x11-misc/synergy libressl
 
 #wine
 x11-libs/libXinerama abi_x86_32
