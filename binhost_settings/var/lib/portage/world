@@ -68,6 +68,7 @@ app-emulation/fuse
 app-emulation/open-vm-tools
 app-emulation/playonlinux
 app-emulation/qemu
+app-emulation/qt-virt-manager
 app-emulation/vagrant
 app-emulation/virt-manager
 app-emulation/virtualbox
@@ -141,6 +142,7 @@ app-text/zathura
 app-text/zathura-meta
 dev-db/postgresql
 dev-db/redis
+dev-db/rethinkdb
 dev-games/ogre
 dev-haskell/haskell-platform
 dev-java/icedtea:8
@@ -220,7 +222,6 @@ games-emulation/pcsx2
 games-emulation/pcsxr
 games-emulation/ppsspp
 games-emulation/retroarch
-games-emulation/rpcs3
 games-emulation/sdlmame
 games-emulation/snes9x
 games-emulation/stella
@@ -583,6 +584,7 @@ media-sound/umurmur
 media-sound/xmms2
 media-sound/xwax
 media-sound/yoshimi
+media-tv/plex-media-server
 media-video/aegisub
 media-video/avidemux
 media-video/baka-mplayer

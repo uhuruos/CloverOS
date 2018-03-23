@@ -1,6 +1,5 @@
 #temporary
 =xfce-extra/xfce4-indicator-plugin-2.3.4
-=games-emulation/rpcs3-0.0.5
 
 #overlays
 dev-util/google-perftools::farmboy0
@@ -70,3 +69,7 @@ app-emulation/wine-desktop-common::bobwya
 media-video/mpv::vapoursynth
 app-emulation/wine-any::pinkpieea
 x11-themes/arc-theme::ROKO__
+dev-libs/openssl::youbroketheinternet
+media-gfx/gmic::stefantalpalaru
+games-emulation/rpcs3::stefantalpalaru
+dev-lang/python::stefantalpalaru
