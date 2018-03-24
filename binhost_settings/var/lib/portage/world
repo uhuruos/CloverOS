@@ -269,6 +269,7 @@ kde-apps/kdebase-meta
 kde-apps/kdenlive
 kde-apps/konqueror
 kde-misc/kdirstat
+kde-misc/kmozillahelper
 kde-misc/krusader
 kde-misc/yakuake
 kde-plasma/bluedevil
