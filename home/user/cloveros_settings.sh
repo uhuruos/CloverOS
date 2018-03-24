@@ -107,7 +107,7 @@ case "$choice" in
 			sudo sed -i 's/EMERGE_DEFAULT_OPTS="\(.*\) -G"/EMERGE_DEFAULT_OPTS="\1"/' /etc/portage/make.conf
 			sudo sed -i 's/^ACCEPT_KEYWORDS="\*\*"/#ACCEPT_KEYWORDS="\*\*"/' /etc/portage/make.conf
 			sudo sed -i 's/^FETCHCOMMAND_HTTPS=/#FETCHCOMMAND_HTTPS=/' /etc/portage/make.conf
-			echo -e "\nemerge will now install from source. (/etc/portage/make.conf) Use ./cloveros_settings.sh c to copy binhost Portage configuration\n"
+			echo -e "\nemerge will now install from source. (/etc/portage/make.conf)\nUse ./cloveros_settings.sh c to copy binhost Portage configuration\n"
 		else
 			sudo sed -i 's/EMERGE_DEFAULT_OPTS="\(.*\)"/EMERGE_DEFAULT_OPTS="\1 -G"/' /etc/portage/make.conf
 			sudo sed -i 's/^#ACCEPT_KEYWORDS="\*\*"/ACCEPT_KEYWORDS="\*\*"/' /etc/portage/make.conf
