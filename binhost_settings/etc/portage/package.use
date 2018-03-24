@@ -7,9 +7,9 @@ media-plugins/vapoursynth-havsfunc -opencl
 media-gfx/digikam -panorama
 media-gfx/blender -opencl -cycles -openimageio -osl -opensubdiv tiff bullet dds elbeem game-engine openexr openmp tiff collada colorio ffmpeg fftw jemalloc llvm ndof openvdb player sdl sndfile valgrind
 games-simulation/openttd -openmedia
+games-emulation/rpcs3 joystick -vulkan
 
 #preference
-games-emulation/rpcs3 joystick
 net-p2p/rtorrent-ps daemon
 xfce-extra/tumbler ffmpeg
 media-plugins/gst-plugins-meta ffmpeg
