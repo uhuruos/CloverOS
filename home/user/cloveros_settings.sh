@@ -107,22 +107,7 @@ case "$choice" in
 			sudo sed -i 's/EMERGE_DEFAULT_OPTS="\(.*\) -G"/EMERGE_DEFAULT_OPTS="\1"/' /etc/portage/make.conf
 			sudo sed -i 's/^ACCEPT_KEYWORDS="\*\*"/#ACCEPT_KEYWORDS="\*\*"/' /etc/portage/make.conf
 			sudo sed -i 's/^FETCHCOMMAND_HTTPS=/#FETCHCOMMAND_HTTPS=/' /etc/portage/make.conf
-			echo -e "\nemerge will now install from source. (/etc/portage/make.conf)\n"
-			read -erp "Copy over binhost Portage config? (/etc/portage/package.use, /etc/portage/package.env, /etc/portage/package.keywords, /etc/portage/package.license, /etc/portage/package.mask) [y/n] " -n 1 binhostyn
-			if [[ $binhostyn == "y" || $binhostyn == "Y" ]]; then
-				backupportagedir=backupportage$(< /dev/urandom tr -dc 0-9 | head -c 5)
-				sudo mkdir ~/$backupportagedir
-				sudo mv /etc/portage/package.use /etc/portage/package.mask /etc/portage/package.keywords /etc/portage/package.env /etc/portage/package.mask /etc/portage/package.license ~/$backupportagedir
-				sudo wget $gitprefix/binhost_settings/etc/portage/package.use $gitprefix/binhost_settings/etc/portage/package.keywords $gitprefix/binhost_settings/etc/portage/package.env $gitprefix/binhost_settings/etc/portage/package.mask $gitprefix/binhost_settings/etc/portage/package.license -P /etc/portage/
-				sudo rm -R /etc/portage/env/
-				sudo mkdir /etc/portage/env/
-				sudo wget $gitprefix/binhost_settings/etc/portage/env/no-lto $gitprefix/binhost_settings/etc/portage/env/no-lto-graphite $gitprefix/binhost_settings/etc/portage/env/no-lto-graphite-ofast $gitprefix/binhost_settings/etc/portage/env/no-lto-o3 $gitprefix/binhost_settings/etc/portage/env/no-lto-ofast $gitprefix/binhost_settings/etc/portage/env/no-o3 $gitprefix/binhost_settings/etc/portage/env/no-ofast $gitprefix/binhost_settings/etc/portage/env/size -P /etc/portage/env/
-				useflags=$(curl -s $gitprefix/binhost_settings/etc/portage/make.conf | grep '^USE=')
-				if ! grep -q "$useflags" /etc/portage/make.conf; then
-					echo $useflags >> /etc/portage/make.conf
-				fi
-				echo -e "\nPortage configuration now mirrors binhost Portage configuration. Previous Portage config stored in ~/$backupportagedir"
-			fi
+			echo -e "\nemerge will now install from source. (/etc/portage/make.conf) Use ./cloveros_settings.sh c to copy binhost Portage configuration\n"
 		else
 			sudo sed -i 's/EMERGE_DEFAULT_OPTS="\(.*\)"/EMERGE_DEFAULT_OPTS="\1 -G"/' /etc/portage/make.conf
 			sudo sed -i 's/^#ACCEPT_KEYWORDS="\*\*"/ACCEPT_KEYWORDS="\*\*"/' /etc/portage/make.conf
