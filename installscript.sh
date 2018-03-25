@@ -80,11 +80,11 @@ PORTAGE_BINHOST="https://cloveros.ga"
 ACCEPT_LICENSE="*"
 ACCEPT_KEYWORDS="**"' >> /etc/portage/make.conf
 
-emerge -1 openssh openssl games-envd
+emerge -uvD world
 
 emerge gnupg aria2
-gpg --keyserver keys.gnupg.net --recv-key "78F5 AC55 A120 07F2 2DF9 A28A 78B9 3F76 B8E4 2805"
-echo 'binhost_mirrors=\$PORTAGE_BINHOST",https://useast.cloveros.ga,https://uswest.cloveros.ga,https://ca.cloveros.ga,https://ca2.cloveros.ga,https://fr.cloveros.ga,https://fr2.cloveros.ga,https://uk.cloveros.ga,https://au.cloveros.ga,"
+gpg --keyserver hkp://pool.sks-keyservers.net --recv-key "78F5 AC55 A120 07F2 2DF9 A28A 78B9 3F76 B8E4 2805"
+echo 'binhost_mirrors=\$PORTAGE_BINHOST",https://useast.cloveros.ga,https://uswest.cloveros.ga,https://ca.cloveros.ga,https://fr.cloveros.ga,https://nl.cloveros.ga,https://uk.cloveros.ga,https://au.cloveros.ga,https://sea.cloveros.ga,"
 FETCHCOMMAND_HTTPS="sh -c \"aria2c -x2 -s99 -j99 -k1M -t2 --dir \"\\\${DISTDIR}\" -o \"\\\${FILE}\" \\\\\\\$(sed -e \"s#,#\"\\\${DISTDIR}/\\\${FILE}\"\"\ \"#g\" -e \"s#"\$PKGDIR"##g\" -e \"s#.partial##g\" <<< "\$binhost_mirrors") && aria2c --dir \"\\\${DISTDIR}\" -o \"\\\${FILE}.asc\" \\\\\\\$(sed \"s#cloveros.ga/#cloveros.ga/s/signatures/#\" <<< \"\\\${URI}.asc\") && gpg --verify \"\\\${DISTDIR}/\\\${FILE}.asc\" \"\\\${DISTDIR}/\\\${FILE}\"\""' >> /etc/portage/make.conf
 
 #emerge gentoo-sources genkernel
@@ -113,8 +113,9 @@ useradd -M $user
 echo "$user:$userpassword" | chpasswd
 gpasswd -a $user wheel
 
-emerge -e world xorg-server fvwm sudo xfe wpa_supplicant porthole firefox emacs gimp mpv smplayer rxvt-unicode filezilla rtorrent-ps weechat linux-firmware alsa-utils zsh zsh-completions gentoo-zsh-completions vlgothic hack liberation-fonts nano scrot xbindkeys xinput nitrogen arandr qastools wbar slock xarchiver p7zip gparted squashfs-tools cryptsetup os-prober
+emerge -e world xorg-server fvwm sudo xfe wpa_supplicant porthole firefox emacs gimp mpv smplayer rxvt-unicode filezilla rtorrent-ps weechat linux-firmware alsa-utils zsh zsh-completions gentoo-zsh-completions vlgothic hack liberation-fonts nano scrot xbindkeys xinput nitrogen arandr qastools wbar slock xarchiver p7zip gparted squashfs-tools os-prober
 
+echo 'frozen-files="/etc/sudoers"' >> /etc/dispatch-conf.conf
 sed -i "s/# %wheel ALL=(ALL) NOPASSWD: ALL/%wheel ALL=(ALL) NOPASSWD: ALL/" /etc/sudoers
 sed -Ei "s@c([2-6]):2345:respawn:/sbin/agetty 38400 tty@#\0@" /etc/inittab
 sed -i "s@c1:12345:respawn:/sbin/agetty 38400 tty1 linux@c1:12345:respawn:/sbin/agetty --noclear 38400 tty1 linux@" /etc/inittab
@@ -130,6 +131,7 @@ locale-gen
 eselect locale set en_US.utf8
 gpasswd -a $user audio
 gpasswd -a $user video
+emerge -1O games-envd
 gpasswd -a $user games
 cd /home/$user/
 rm .bash_profile
