@@ -550,6 +550,7 @@ media-sound/mac
 media-sound/mikmod
 media-sound/mixxx
 media-sound/moc
+media-sound/mp3blaster
 media-sound/mp3info
 media-sound/mp3splt
 media-sound/mp3splt-gtk
@@ -572,6 +573,7 @@ media-sound/rosegarden
 media-sound/sexypsf
 media-sound/sfc
 media-sound/sidplay
+media-sound/sidplayfp
 media-sound/solfege
 media-sound/sox
 media-sound/spek

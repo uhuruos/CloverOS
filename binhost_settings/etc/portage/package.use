@@ -10,6 +10,7 @@ games-simulation/openttd -openmedia
 games-emulation/rpcs3 joystick -vulkan
 
 #preference
+media-sound/mp3blaster vorbis
 net-p2p/rtorrent-ps daemon
 xfce-extra/tumbler ffmpeg
 media-plugins/gst-plugins-meta ffmpeg
