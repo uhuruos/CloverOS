@@ -261,10 +261,12 @@ case "$choice" in
 		echo "Running the following:"
 		echo "./cloveros_settings.sh u"
 		echo "sudo emerge virtualbox"
+		echo "sudo depmod -a"
 		echo 'sudo useradd -a $USER vboxusers'
 		sleep 1
 		./cloveros_settings.sh u
 		sudo emerge virtualbox
+		sudo depmod -a
 		sudo useradd -g $USER vboxusers
 		echo "Virtualbox installed, please reboot to update kernel."
 		;;
