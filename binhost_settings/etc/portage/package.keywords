@@ -278,6 +278,7 @@ x11-wm/vtwm **
 x11-wm/subtle
 x11-wm/wmii
 www-client/uzbl **
+www-client/netsurf
 
 #dependencies
 #tlp
@@ -419,6 +420,19 @@ dev-lisp/clx
 dev-lisp/alexandria
 #wmii
 sys-libs/libixp
+#netsurf
+media-libs/libsvgtiny
+dev-libs/libnsutils
+dev-libs/libwapcaplet
+media-libs/libnsbmp
+media-libs/libnsgif
+dev-libs/libutf8proc
+dev-libs/libcss
+media-libs/libnspsl
+media-libs/librosprite
+dev-libs/nsgenbind
+dev-libs/libnsfb
+net-libs/libdom
 
 #fonts
 media-fonts/lohit-kannada
@@ -631,42 +645,3 @@ dev-python/phonenumbers
 dev-python/django-otp
 dev-python/django-formtools
 dev-python/django-otp-yubikey
-# required by www-client/netsurf-3.6::gentoo[svg,svgtiny]
-# required by netsurf (argument)
-=media-libs/libsvgtiny-0.1.6 ~amd64
-# required by www-client/netsurf-3.6::gentoo
-# required by netsurf (argument)
-=dev-libs/libnsutils-0.0.3 ~amd64
-# required by dev-libs/libcss-0.7.0::gentoo
-# required by www-client/netsurf-3.6::gentoo
-# required by netsurf (argument)
-=dev-libs/libwapcaplet-0.4.0 ~amd64
-# required by www-client/netsurf-3.6::gentoo[bmp]
-# required by netsurf (argument)
-=media-libs/libnsbmp-0.1.4 ~amd64
-# required by www-client/netsurf-3.6::gentoo[gif]
-# required by netsurf (argument)
-=media-libs/libnsgif-0.2.0 ~amd64
-# required by www-client/netsurf-3.6::gentoo
-# required by netsurf (argument)
-=dev-libs/libutf8proc-1.3.1_p3 ~amd64
-# required by www-client/netsurf-3.6::gentoo
-# required by netsurf (argument)
-=dev-libs/libcss-0.7.0 ~amd64
-# required by www-client/netsurf-3.6::gentoo[psl]
-# required by netsurf (argument)
-=media-libs/libnspsl-0.1.2 ~amd64
-# required by www-client/netsurf-3.6::gentoo[rosprite]
-# required by netsurf (argument)
-=media-libs/librosprite-0.1.2-r1 ~amd64
-# required by www-client/netsurf-3.6::gentoo[javascript]
-# required by netsurf (argument)
-=dev-libs/nsgenbind-0.5 ~amd64
-# required by www-client/netsurf-3.6::gentoo[fbcon]
-# required by netsurf (argument)
-=dev-libs/libnsfb-0.1.6 ~amd64
-# required by www-client/netsurf-3.6::gentoo
-# required by netsurf (argument)
-=net-libs/libdom-0.3.2 ~amd64
-# required by netsurf (argument)
-=www-client/netsurf-3.6 ~amd64
