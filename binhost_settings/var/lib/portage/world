@@ -146,6 +146,7 @@ dev-db/rethinkdb
 dev-games/ogre
 dev-haskell/haskell-platform
 dev-java/icedtea:8
+dev-java/maven-bin
 dev-lang/R
 dev-lang/go
 dev-lang/open-cobol
@@ -815,6 +816,7 @@ www-servers/apache
 www-servers/lighttpd
 www-servers/nginx
 www-servers/onionshare
+www-servers/tomcat
 x11-apps/mesa-progs
 x11-apps/xbacklight
 x11-apps/xev

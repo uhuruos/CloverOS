@@ -10,6 +10,8 @@ games-simulation/openttd -openmedia
 games-emulation/rpcs3 joystick -vulkan
 
 #preference
+www-servers/tomcat extra-webapps
+www-client/netsurf truetype
 media-sound/mp3blaster vorbis
 net-p2p/rtorrent-ps daemon
 xfce-extra/tumbler ffmpeg
@@ -451,3 +453,7 @@ media-libs/libsoundtouch abi_x86_32
 app-arch/xz-utils abi_x86_32
 x11-libs/pixman abi_x86_32
 media-libs/libsdl abi_x86_32
+# required by media-libs/libsvgtiny-0.1.6::gentoo
+# required by www-client/netsurf-3.6::gentoo[svg,svgtiny]
+# required by netsurf (argument)
+>=net-libs/libdom-0.3.2 xml
