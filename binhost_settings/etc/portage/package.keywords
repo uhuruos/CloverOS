@@ -5,7 +5,7 @@ media-sound/clementine # qt5
 media-sound/mumble ** # qt5
 media-sound/murmur # qt5
 www-client/firefox # quantum
-media-gfx/gimp ** # 2.9
+media-gfx/gimp # 2.9
 net-misc/youtube-dl # needs latest
 net-p2p/retroshare # needs latest
 x11-wm/enlightenment # old
