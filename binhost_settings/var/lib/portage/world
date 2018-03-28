@@ -89,7 +89,6 @@ app-misc/ckermit
 app-misc/cmatrix
 app-misc/colordiff
 app-misc/dtach
-app-misc/dvtm
 app-misc/fdupes
 app-misc/figlet
 app-misc/fslint
@@ -157,6 +156,7 @@ dev-libs/amdgpu-pro-opencl
 dev-libs/libisoburn
 dev-libs/sway
 dev-libs/weston
+dev-php/composer
 dev-python/ansi2html
 dev-python/django-two-factor-auth
 dev-python/pip

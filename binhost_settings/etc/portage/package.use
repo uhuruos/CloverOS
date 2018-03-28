@@ -204,7 +204,7 @@ media-sound/lmms alsa fluidsynth ogg portaudio sdl stk qt5
 app-admin/testdisk ntfs
 www-client/netsurf fbcon fbcon_frontend_linux
 net-p2p/qbittorrent geoip webui
-media-gfx/gimp smp pdf
+media-gfx/gimp smp pdf aalib
 net-fs/nfs-utils nfsv41
 net-irc/hexchat plugin-sysinfo
 net-fs/cifs-utils -acl -ads -caps caps-ng

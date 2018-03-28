@@ -585,7 +585,7 @@ First, connect to wifi using wpa_gui ('wifi' in fvwm)
 Kill X and relog. After you log in and the "Start X?" dialog pops up, instead of y/n, type one of the WM options and hit y when it asks to install.
 
 ### I want to host a mirror
-Run `rsync -av --delete rsync://fr.cloveros.ga/cloveros /your/webserver/location/` and tell me the domain (or IP) so I can give you a cloveros.ga subdomain
+Run `rsync -av --delete rsync://nl.cloveros.ga/cloveros /your/webserver/location/` and tell me the domain (or IP) so I can give you a cloveros.ga subdomain
 
 ### What if CloverOS dies? Will my install become useless?
 No. Edit `/etc/portage/make.conf` and change

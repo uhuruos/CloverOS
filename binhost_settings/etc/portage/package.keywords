@@ -5,7 +5,7 @@ media-sound/clementine # qt5
 media-sound/mumble ** # qt5
 media-sound/murmur # qt5
 www-client/firefox # quantum
-media-gfx/gimp # 2.9
+media-gfx/gimp ** # 2.9
 net-misc/youtube-dl # needs latest
 net-p2p/retroshare # needs latest
 x11-wm/enlightenment # old
@@ -433,6 +433,23 @@ media-libs/librosprite
 dev-libs/nsgenbind
 dev-libs/libnsfb
 net-libs/libdom
+#composer
+dev-php/symfony-finder
+dev-php/ca-bundle
+dev-php/symfony-console
+dev-php/jsonlint
+dev-php/psr-log
+dev-php/symfony-filesystem
+dev-php/composer
+dev-php/phar-utils
+dev-php/spdx-licenses
+dev-php/symfony-process
+dev-php/json-schema
+dev-php/symfony-dependency-injection
+dev-php/cli-prompt
+dev-php/symfony-event-dispatcher
+dev-php/symfony-config
+dev-php/semver
 
 #fonts
 media-fonts/lohit-kannada
