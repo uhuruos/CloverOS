@@ -831,6 +831,7 @@ x11-base/xorg-x11
 x11-drivers/nvidia-drivers
 x11-drivers/xf86-input-wacom
 x11-drivers/xf86-video-vmware
+x11-libs/libXp
 x11-misc/arandr
 x11-misc/autocutsel
 x11-misc/bumblebee
