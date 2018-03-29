@@ -190,6 +190,11 @@ case "$choice" in
 			wget $gitprefix/home/user/.fvwm2rc
 		fi
 
+		if [ -d /var/db/pkg/net-p2p/rtorrent-0.9.6-r1/ ]; then
+			sudo emerge -C rtorrent
+			sudo emerge rtorrent-ps
+		fi
+
 		binhostmirrors='binhost_mirrors="$PORTAGE_BINHOST,'
 		for i in "${mirrors[@]}"
 		do
