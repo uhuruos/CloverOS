@@ -68,7 +68,7 @@ useradd $user
 echo "$user:$userpassword" | chpasswd
 gpasswd -a $user wheel
 
-emerge -e world xorg-server fvwm sudo xfe wpa_supplicant porthole firefox emacs gimp mpv smplayer rxvt-unicode filezilla rtorrent-ps weechat alsa-utils zsh zsh-completions gentoo-zsh-completions vlgothic hack liberation-fonts nano scrot xbindkeys xinput nitrogen arandr qastools wbar slock xarchiver p7zip gparted squashfs-tools os-prober
+emerge -e world xorg-server fvwm rox-filer rxvt-unicode sudo wpa_supplicant porthole firefox emacs gimp mpv smplayer filezilla rtorrent-ps weechat alsa-utils zsh zsh-completions gentoo-zsh-completions vlgothic hack liberation-fonts nano scrot xbindkeys xinput arandr qastools slock xarchiver p7zip gparted squashfs-tools os-prober
 
 echo 'frozen-files="/etc/sudoers"' >> /etc/dispatch-conf.conf
 sed -i "s/# %wheel ALL=(ALL) NOPASSWD: ALL/%wheel ALL=(ALL) NOPASSWD: ALL/" /etc/sudoers
@@ -93,7 +93,6 @@ wget https://gitgud.io/cloveros/cloveros/raw/master/home/user/.bash_profile
 wget https://gitgud.io/cloveros/cloveros/raw/master/home/user/.zprofile
 wget https://gitgud.io/cloveros/cloveros/raw/master/home/user/.zshrc
 wget https://gitgud.io/cloveros/cloveros/raw/master/home/user/.fvwm2rc
-wget https://gitgud.io/cloveros/cloveros/raw/master/home/user/.wbar
 wget https://gitgud.io/cloveros/cloveros/raw/master/home/user/.Xdefaults
 wget https://gitgud.io/cloveros/cloveros/raw/master/home/user/wallpaper.png
 wget https://gitgud.io/cloveros/cloveros/raw/master/home/user/.xbindkeysrc
@@ -110,12 +109,6 @@ chmod +x rotate_screen.sh
 wget https://gitgud.io/cloveros/cloveros/raw/master/home/user/.emacs
 mkdir -p .emacs.d/backups
 mkdir .emacs.d/autosaves
-mkdir -p .config/xfe/
-wget https://gitgud.io/cloveros/cloveros/raw/master/home/user/.config/xfe/xferc -P .config/xfe
-wget https://gitgud.io/cloveros/cloveros/raw/master/home/user/.config/xfe/xfirc -P .config/xfe
-mkdir .config/nitrogen/
-wget https://gitgud.io/cloveros/cloveros/raw/master/home/user/.config/nitrogen/nitrogen.cfg -P .config/nitrogen
-sed -i "s@/home/user/@/home/$user/@" .config/nitrogen/nitrogen.cfg
 wget https://gitgud.io/cloveros/cloveros/raw/master/home/user/.rtorrent.rc
 sed -i "s@/home/user/@/home/$user/@" .rtorrent.rc
 mkdir Downloads
