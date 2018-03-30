@@ -11,7 +11,7 @@ mirrors=(
 	"https://sea.cloveros.ga"
 )
 
-kernelversion="4.15.13"
+kernelversion="4.15.14"
 
 gitprefix="https://gitgud.io/cloveros/cloveros/raw/master"
 
