@@ -72,10 +72,10 @@ Style * HilightIconTitleColorset 1
 Colorset 2 bg green, fg blue, hi purple, sh red
 Style * IconBackgroundColorset 2
 
-Style ROX-Panel !Title, Sticky, WindowListSkip, BorderWidth 0, HandleWidth 0
 Style stats.sh !Title, Sticky, WindowListSkip, BorderWidth 0, HandleWidth 0
-Style Plank !Title, StaysOnTop, Sticky, WindowListSkip, BorderWidth 0, HandleWidth 0
 Style wbar !Title, Sticky, WindowListSkip, BorderWidth 0, HandleWidth 0
+Style Plank !Title, StaysOnTop, Sticky, WindowListSkip, BorderWidth 0, HandleWidth 0
+Style ROX-Panel !Title, Sticky, WindowListSkip, BorderWidth 0, HandleWidth 0
 
 DestroyMenu FvwmWindowOpsMenu
 AddToMenu   FvwmWindowOpsMenu "Window Operations" Title
@@ -98,7 +98,7 @@ AddToMenu   FvwmWindowOpsMenu "Window Operations" Title
 DestroyMenu MenuFvwmRoot
 AddToMenu MenuFvwmRoot Applications Title
 + "urxvt" Exec if pgrep urxvtd; then urxvtc -e zsh; else urxvtd -o -f && urxvtc -e zsh; fi
-+ "rox" Exec rox
++ "spacefm" Exec spacefm
 + "wifi" Exec sudo rc-service wpa_supplicant start & wpa_gui
 + "porthole" Exec porthole
 + "firefox" Exec firefox
@@ -111,6 +111,7 @@ AddToMenu MenuFvwmRoot Applications Title
 + "weechat" Exec if pgrep urxvtd; then urxvtc -e weechat; else urxvtd -o -f && urxvtc -e weechat; fi
 + "stats.sh" Exec if pgrep urxvtd; then urxvtc -geometry 400x1+0+0 -fn '6x13' -sl 0 -e ~/stats.sh; else urxvtd -o -f && urxvtc -geometry 400x1+0+0 -fn '6x13' -sl 0 -e ~/stats.sh; fi
 + "settings.sh" Exec if pgrep urxvtd; then urxvtc -e sh -c '~/cloveros_settings.sh && read'; else urxvtd -o -f && urxvtc -e sh -c '~/cloveros_settings.sh && read'; fi
++ "desktop" Exec spacefm --desktop
 + "resolution" Exec arandr
 + "screenshot" Exec scrot
 + "volume" Exec qasmixer
