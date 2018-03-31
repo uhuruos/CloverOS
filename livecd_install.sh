@@ -82,6 +82,7 @@ gpasswd -a $user audio
 gpasswd -a $user games
 sed -i "s@/home/$livecduser/@/home/$user/@" /home/$livecduser/.rtorrent.rc
 sed -i "s@/home/$livecduser/@/home/$user/@" /home/$livecduser/.config/nitrogen/nitrogen.cfg
+sed -i "s@/home/$livecduser/@/home/$user/@" /home/$livecduser/.config/spacefm/session
 mv /home/$livecduser/ /home/$user/
 chown -R $user /home/$user/
 if [[ $user != $livecduser ]]; then
