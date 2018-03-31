@@ -121,7 +121,7 @@ xdg-settings set default-web-browser firefox.desktop
 mkdir Desktop/
 echo -e "[Desktop Entry]\nEncoding=UTF-8\nType=Link\nName=Home\nIcon=user-home\nExec=spacefm ~/" > Desktop/home.desktop
 cp /usr/share/applications/{firefox.desktop,smplayer.desktop,emacs.desktop,zzz-gimp.desktop,porthole.desktop,filezilla.desktop,xarchiver.desktop} Desktop/
-echo -e "~rows=9\n1=home.desktop\n2=firefox.desktop\n3=smplayer.desktop\n4=emacs.desktop\n5=porthole.desktop\n6=zzz-gimp.desktop\n7=filezilla.desktop\n8=xarchiver.desktop" > .config/spacefm/desktop0
+echo -e "~rows=0\n1=home.desktop\n2=firefox.desktop\n3=smplayer.desktop\n4=emacs.desktop\n5=porthole.desktop\n6=zzz-gimp.desktop\n7=filezilla.desktop\n8=xarchiver.desktop" > .config/spacefm/desktop0
 mkdir .config/nitrogen/
 wget https://gitgud.io/cloveros/cloveros/raw/master/home/user/.config/nitrogen/nitrogen.cfg -P .config/nitrogen/
 sed -i "s@/home/user/@/home/$user/@" .config/nitrogen/nitrogen.cfg
