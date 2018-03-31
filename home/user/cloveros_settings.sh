@@ -119,7 +119,7 @@ case "$choice" in
 	6)
 		backupdir=backup$(< /dev/urandom tr -dc 0-9 | head -c 5)
 		mkdir $backupdir
-		mv .bash_profile .zprofile .zshrc .fvwm2rc .Xdefaults wallpaper.png .xbindkeysrc screenfetch-dev bl.sh cloveros_settings.sh stats.sh rotate_screen.sh .emacs .emacs.d .rtorrent.rc .mpv .config/nitrogen/ $backupdir/
+		mv .bash_profile .zprofile .zshrc .fvwm2rc .Xdefaults wallpaper.png .xbindkeysrc screenfetch-dev bl.sh cloveros_settings.sh stats.sh rotate_screen.sh .emacs .emacs.d .rtorrent.rc .mpv .config/nitrogen/ .config/spacefm $backupdir/
 		wget -q "$gitprefix"/home/user/{.bash_profile,.zprofile,.zshrc,.fvwm2rc,.Xdefaults,wallpaper.png,.xbindkeysrc,screenfetch-dev,bl.sh,cloveros_settings.sh,stats.sh,rotate_screen.sh,.emacs,.rtorrent.rc}
 		chmod +x screenfetch-dev bl.sh cloveros_settings.sh stats.sh rotate_screen.sh
 		sed -i "s@/home/user/@/home/$USER/@" .rtorrent.rc
@@ -127,7 +127,7 @@ case "$choice" in
 		mkdir -p .config/nitrogen/
 		wget -q "$gitprefix"/home/user/.config/nitrogen/nitrogen.cfg -P .config/nitrogen/
 		sed -i "s@/home/user/@/home/$USER/@" .config/nitrogen/nitrogen.cfg
-		mkdir -p .config/nitrogen/
+		mkdir -p .config/spacefm/
 		wget -q "$gitprefix"/home/user/.config/spacefm/session -P .config/spacefm/
 		sed -i "s@/home/user/@/home/$USER/@" .config/spacefm/session
 		mkdir .mpv
