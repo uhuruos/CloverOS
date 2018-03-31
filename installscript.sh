@@ -139,7 +139,6 @@ wget https://gitgud.io/cloveros/cloveros/raw/master/home/user/.bash_profile
 wget https://gitgud.io/cloveros/cloveros/raw/master/home/user/.zprofile
 wget https://gitgud.io/cloveros/cloveros/raw/master/home/user/.zshrc
 wget https://gitgud.io/cloveros/cloveros/raw/master/home/user/.fvwm2rc
-wget https://gitgud.io/cloveros/cloveros/raw/master/home/user/.wbar
 wget https://gitgud.io/cloveros/cloveros/raw/master/home/user/.Xdefaults
 wget https://gitgud.io/cloveros/cloveros/raw/master/home/user/wallpaper.png
 wget https://gitgud.io/cloveros/cloveros/raw/master/home/user/.xbindkeysrc
@@ -154,20 +153,19 @@ chmod +x stats.sh
 wget https://gitgud.io/cloveros/cloveros/raw/master/home/user/rotate_screen.sh
 chmod +x rotate_screen.sh
 wget https://gitgud.io/cloveros/cloveros/raw/master/home/user/.emacs
-mkdir -p .emacs.d/backups
-mkdir .emacs.d/autosaves
-mkdir -p .config/xfe/
-wget https://gitgud.io/cloveros/cloveros/raw/master/home/user/.config/xfe/xferc -P .config/xfe
-wget https://gitgud.io/cloveros/cloveros/raw/master/home/user/.config/xfe/xfirc -P .config/xfe
-mkdir .config/nitrogen/
-wget https://gitgud.io/cloveros/cloveros/raw/master/home/user/.config/nitrogen/nitrogen.cfg -P .config/nitrogen
-sed -i "s@/home/user/@/home/$user/@" .config/nitrogen/nitrogen.cfg
+mkdir -p .emacs.d/backups .emacs.d/autosaves
 wget https://gitgud.io/cloveros/cloveros/raw/master/home/user/.rtorrent.rc
 sed -i "s@/home/user/@/home/$user/@" .rtorrent.rc
-mkdir Downloads
-mkdir .rtorrent
-mkdir .mpv
-wget https://gitgud.io/cloveros/cloveros/raw/master/home/user/.mpv/config -P .mpv
+mkdir Downloads/
+mkdir .rtorrent/
+mkdir .mpv/
+wget https://gitgud.io/cloveros/cloveros/raw/master/home/user/.mpv/config -P .mpv/
+mkdir -p .config/spacefm/
+wget https://gitgud.io/cloveros/cloveros/raw/master/home/user/.config/spacefm/session -P .config/spacefm/
+sed -i "s@/home/user/@/home/$user/@" .config/spacefm/session
+mkdir .config/nitrogen/
+wget https://gitgud.io/cloveros/cloveros/raw/master/home/user/.config/nitrogen/nitrogen.cfg -P .config/nitrogen/
+sed -i "s@/home/user/@/home/$user/@" .config/nitrogen/nitrogen.cfg
 chown -R $user /home/$user/
 
 emerge --depclean

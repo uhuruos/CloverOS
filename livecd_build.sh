@@ -107,14 +107,19 @@ chmod +x stats.sh
 wget https://gitgud.io/cloveros/cloveros/raw/master/home/user/rotate_screen.sh
 chmod +x rotate_screen.sh
 wget https://gitgud.io/cloveros/cloveros/raw/master/home/user/.emacs
-mkdir -p .emacs.d/backups
-mkdir .emacs.d/autosaves
+mkdir -p .emacs.d/backups .emacs.d/autosaves
 wget https://gitgud.io/cloveros/cloveros/raw/master/home/user/.rtorrent.rc
 sed -i "s@/home/user/@/home/$user/@" .rtorrent.rc
-mkdir Downloads
-mkdir .rtorrent
-mkdir .mpv
-wget https://gitgud.io/cloveros/cloveros/raw/master/home/user/.mpv/config -P .mpv
+mkdir Downloads/
+mkdir .rtorrent/
+mkdir .mpv/
+wget https://gitgud.io/cloveros/cloveros/raw/master/home/user/.mpv/config -P .mpv/
+mkdir -p .config/spacefm/
+wget https://gitgud.io/cloveros/cloveros/raw/master/home/user/.config/spacefm/session -P .config/spacefm/
+sed -i "s@/home/user/@/home/$user/@" .config/spacefm/session
+mkdir .config/nitrogen/
+wget https://gitgud.io/cloveros/cloveros/raw/master/home/user/.config/nitrogen/nitrogen.cfg -P .config/nitrogen/
+sed -i "s@/home/user/@/home/$user/@" .config/nitrogen/nitrogen.cfg
 chown -R $user /home/$user/
 
 sed -i "s@c1:12345:respawn:/sbin/agetty --noclear 38400 tty1 linux@c1:12345:respawn:/sbin/agetty -a $user --noclear 38400 tty1 linux@" /etc/inittab
