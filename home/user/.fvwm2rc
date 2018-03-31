@@ -112,6 +112,7 @@ AddToMenu MenuFvwmRoot Applications Title
 + "stats.sh" Exec if pgrep urxvtd; then urxvtc -geometry 400x1+0+0 -fn '6x13' -sl 0 -e ~/stats.sh; else urxvtd -o -f && urxvtc -geometry 400x1+0+0 -fn '6x13' -sl 0 -e ~/stats.sh; fi
 + "settings.sh" Exec if pgrep urxvtd; then urxvtc -e sh -c '~/cloveros_settings.sh && read'; else urxvtd -o -f && urxvtc -e sh -c '~/cloveros_settings.sh && read'; fi
 + "desktop" Exec spacefm --desktop
++ "wallpaper" Exec nitrogen
 + "resolution" Exec arandr
 + "screenshot" Exec scrot
 + "volume" Exec qasmixer

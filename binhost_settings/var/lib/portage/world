@@ -638,6 +638,7 @@ net-fs/nfs-utils
 net-fs/samba
 net-fs/sshfs
 net-ftp/filezilla
+net-ftp/gftp
 net-ftp/lftp
 net-ftp/proftpd
 net-ftp/pure-ftpd

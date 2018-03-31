@@ -117,6 +117,7 @@ wget https://gitgud.io/cloveros/cloveros/raw/master/home/user/.mpv/config -P .mp
 mkdir -p .config/spacefm/
 wget https://gitgud.io/cloveros/cloveros/raw/master/home/user/.config/spacefm/session -P .config/spacefm/
 sed -i "s@/home/user/@/home/$user/@" .config/spacefm/session
+xdg-settings set default-web-browser firefox.desktop
 mkdir .config/nitrogen/
 wget https://gitgud.io/cloveros/cloveros/raw/master/home/user/.config/nitrogen/nitrogen.cfg -P .config/nitrogen/
 sed -i "s@/home/user/@/home/$user/@" .config/nitrogen/nitrogen.cfg

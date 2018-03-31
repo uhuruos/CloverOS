@@ -27,6 +27,7 @@ x11-misc/polybar github mpd i3wm
 x11-misc/rofi windowmode
 app-arch/peazip gtk
 x11-misc/wbar gtk
+net-ftp/gftp gtk
 kde-plasma/plasma-meta grub gtk
 kde-plasma/plasma-desktop gtk3 gtk2 legacy-systray
 kde-apps/kde-apps-meta accessibility sdk pim
@@ -142,7 +143,7 @@ x11-libs/gdk-pixbuf X
 sci-mathematics/octave X gui fftw curl gnuplot postscript jit
 www-servers/varnish jit jemalloc
 media-video/mpv rubberband lcms archive cdda bluray dvd encode libmpv cplugins v4l
-dev-lang/php curl gd fpm pdo recode fpm curl intl sqlite xmlwriter
+dev-lang/php curl gd fpm pdo recode fpm curl intl sqlite xmlwriter nls
 net-p2p/retroshare feedreader voip
 media-video/handbrake x265
 app-text/texlive X cjk context detex dvi2tty dvipdfm epspdf extra games graphics humanities jadetex luatex metapost music omega png pstricks publishers science tex4ht texi2html truetype xetex xindy xml
