@@ -72,7 +72,7 @@ Style * HilightIconTitleColorset 1
 Colorset 2 bg green, fg blue, hi purple, sh red
 Style * IconBackgroundColorset 2
 
-Style rox !Title, Sticky, WindowListSkip, BorderWidth 0, HandleWidth 0
+Style ROX-Panel !Title, Sticky, WindowListSkip, BorderWidth 0, HandleWidth 0
 Style stats.sh !Title, Sticky, WindowListSkip, BorderWidth 0, HandleWidth 0
 Style Plank !Title, StaysOnTop, Sticky, WindowListSkip, BorderWidth 0, HandleWidth 0
 Style wbar !Title, Sticky, WindowListSkip, BorderWidth 0, HandleWidth 0
