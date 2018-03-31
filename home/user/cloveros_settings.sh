@@ -131,6 +131,7 @@ case "$choice" in
 		wget -q "$gitprefix"/home/user/.config/nitrogen/nitrogen.cfg -P .config/nitrogen
 		sed -i "s@/home/user/@/home/$USER/@" .config/nitrogen/nitrogen.cfg
 		sed -i "s@/home/user/@/home/$USER/@" .rtorrent.rc
+		sed -i "s@/home/user/@/home/$USER/@" .config/spacefm/session
 		mkdir .mpv
 		wget -q "$gitprefix"/home/user/.mpv/config -P .mpv
 		echo -e "\nConfiguration updated to new CloverOS defaults, old settings are moved to ~/$backupdir/ (~)"
