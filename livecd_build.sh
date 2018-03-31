@@ -119,6 +119,7 @@ wget https://gitgud.io/cloveros/cloveros/raw/master/home/user/.config/spacefm/se
 sed -i "s@/home/user/@/home/$user/@" .config/spacefm/session
 xdg-settings set default-web-browser firefox.desktop
 mkdir Desktop/
+echo "[Desktop Entry]\nEncoding=UTF-8\nType=Link\nName=Home\nIcon=user-home\nExec=spacefm ~/" > Desktop/home.desktop
 cp /usr/share/applications/{firefox.desktop,smplayer.desktop,emacs.desktop,zzz-gimp.desktop,porthole.desktop,filezilla.desktop,xarchiver.desktop} Desktop/
 mkdir .config/nitrogen/
 wget https://gitgud.io/cloveros/cloveros/raw/master/home/user/.config/nitrogen/nitrogen.cfg -P .config/nitrogen/
