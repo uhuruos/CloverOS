@@ -1727,7 +1727,7 @@ detectde () {
 					elif [ -n "$TDE_FULL_SESSION" ]; then DE=Trinity;
 					elif [ -n "$GNOME_DESKTOP_SESSION_ID" ]; then DE=GNOME;
 					elif [ -n "$MATE_DESKTOP_SESSION_ID" ]; then DE=MATE;
-					elif `dbus-send --print-reply --dest=org.freedesktop.DBus /org/freedesktop/DBus org.freedesktop.DBus.GetNameOwner string:org.gnome.SessionManager > /dev/null 2>&1` ; then DE=GNOME;
+#					elif `dbus-send --print-reply --dest=org.freedesktop.DBus /org/freedesktop/DBus org.freedesktop.DBus.GetNameOwner string:org.gnome.SessionManager > /dev/null 2>&1` ; then DE=GNOME;
 					elif xprop -root _DT_SAVE_MODE 2> /dev/null | grep ' = \"xfce4\"$' >/dev/null 2>&1; then DE=Xfce;
 					elif xprop -root 2> /dev/null | grep -i '^xfce_desktop_window' >/dev/null 2>&1; then DE=Xfce
 					elif echo $DESKTOP | grep -q '^Enlightenment'; then DE=Enlightenment;
