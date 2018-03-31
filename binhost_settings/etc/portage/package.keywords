@@ -1,5 +1,6 @@
 #preference, remove when stable is bumped up
 =dev-lisp/clisp-2.49.90 # stable doesn't build
+=x11-misc/synergy-1.8.8
 media-gfx/blender # python
 media-sound/clementine # qt5
 media-sound/mumble ** # qt5
@@ -279,6 +280,7 @@ x11-wm/subtle
 x11-wm/wmii
 www-client/uzbl **
 www-client/netsurf
+media-gfx/qiv
 
 #dependencies
 #tlp
