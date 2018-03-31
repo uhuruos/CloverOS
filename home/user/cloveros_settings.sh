@@ -119,21 +119,19 @@ case "$choice" in
 	6)
 		backupdir=backup$(< /dev/urandom tr -dc 0-9 | head -c 5)
 		mkdir $backupdir
-		mv .bash_profile .zprofile .zshrc .fvwm2rc .wbar .Xdefaults wallpaper.png .xbindkeysrc screenfetch-dev bl.sh cloveros_settings.sh stats.sh rotate_screen.sh .emacs .emacs.d .rtorrent.rc .mpv .config/xfe/ .config/nitrogen/ $backupdir/
-		wget -q "$gitprefix"/home/user/{.bash_profile,.zprofile,.zshrc,.fvwm2rc,.wbar,.Xdefaults,wallpaper.png,.xbindkeysrc,screenfetch-dev,bl.sh,cloveros_settings.sh,stats.sh,rotate_screen.sh,.emacs,.rtorrent.rc}
+		mv .bash_profile .zprofile .zshrc .fvwm2rc .Xdefaults wallpaper.png .xbindkeysrc screenfetch-dev bl.sh cloveros_settings.sh stats.sh rotate_screen.sh .emacs .emacs.d .rtorrent.rc .mpv .config/xfe/ .config/nitrogen/ $backupdir/
+		wget -q "$gitprefix"/home/user/{.bash_profile,.zprofile,.zshrc,.fvwm2rc,.Xdefaults,wallpaper.png,.xbindkeysrc,screenfetch-dev,bl.sh,cloveros_settings.sh,stats.sh,rotate_screen.sh,.emacs,.rtorrent.rc}
 		chmod +x screenfetch-dev bl.sh cloveros_settings.sh stats.sh rotate_screen.sh
-		mkdir -p .emacs.d/backups
-		mkdir .emacs.d/autosaves
-		mkdir -p .config/xfe/
-		wget -q "$gitprefix"/home/user/.config/xfe/xferc -P .config/xfe
-		wget -q "$gitprefix"/home/user/.config/xfe/xfirc -P .config/xfe
-		mkdir -p .config/nitrogen/
-		wget -q "$gitprefix"/home/user/.config/nitrogen/nitrogen.cfg -P .config/nitrogen
-		sed -i "s@/home/user/@/home/$USER/@" .config/nitrogen/nitrogen.cfg
 		sed -i "s@/home/user/@/home/$USER/@" .rtorrent.rc
+		mkdir -p .emacs.d/backups/ .emacs.d/autosaves/
+		mkdir -p .config/nitrogen/
+		wget -q "$gitprefix"/home/user/.config/nitrogen/nitrogen.cfg -P .config/nitrogen/
+		sed -i "s@/home/user/@/home/$USER/@" .config/nitrogen/nitrogen.cfg
+		mkdir -p .config/nitrogen/
+		wget -q "$gitprefix"/home/user/.config/nitrogen/nitrogen.cfg -P .config/spacefm/
 		sed -i "s@/home/user/@/home/$USER/@" .config/spacefm/session
 		mkdir .mpv
-		wget -q "$gitprefix"/home/user/.mpv/config -P .mpv
+		wget -q "$gitprefix"/home/user/.mpv/config -P .mpv/
 		echo -e "\nConfiguration updated to new CloverOS defaults, old settings are moved to ~/$backupdir/ (~)"
 		;;
 
