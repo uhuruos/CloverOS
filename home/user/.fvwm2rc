@@ -100,23 +100,23 @@ AddToMenu MenuFvwmRoot Applications Title
 + "urxvt" Exec if pgrep urxvtd; then urxvtc -e zsh; else urxvtd -o -f && urxvtc -e zsh; fi
 + "spacefm" Exec spacefm
 + "wifi" Exec sudo rc-service wpa_supplicant start & wpa_gui
-+ "porthole" Exec porthole
 + "firefox" Exec firefox
++ "smplayer" Exec smplayer
++ "porthole" Exec porthole
 + "emacs" Exec emacs
 + "gimp" Exec gimp
-+ "smplayer" Exec smplayer
-+ "nomacs" Exec nomacs ~
 + "filezilla" Exec filezilla
 + "xarchiver" Exec xarchiver
++ "nomacs" Exec nomacs ~
++ "desktop" Exec spacefm --desktop
++ "stats.sh" Exec if pgrep urxvtd; then urxvtc -geometry 400x1+0+0 -fn '6x13' -sl 0 -e ~/stats.sh; else urxvtd -o -f && urxvtc -geometry 400x1+0+0 -fn '6x13' -sl 0 -e ~/stats.sh; fi
 + "rtorrent-ps" Exec if pgrep urxvtd; then urxvtc -e rtorrent; else urxvtd -o -f && urxvtc -e rtorrent; fi
 + "weechat" Exec if pgrep urxvtd; then urxvtc -e weechat; else urxvtd -o -f && urxvtc -e weechat; fi
-+ "stats.sh" Exec if pgrep urxvtd; then urxvtc -geometry 400x1+0+0 -fn '6x13' -sl 0 -e ~/stats.sh; else urxvtd -o -f && urxvtc -geometry 400x1+0+0 -fn '6x13' -sl 0 -e ~/stats.sh; fi
-+ "settings.sh" Exec if pgrep urxvtd; then urxvtc -e sh -c '~/cloveros_settings.sh && read'; else urxvtd -o -f && urxvtc -e sh -c '~/cloveros_settings.sh && read'; fi
-+ "desktop" Exec spacefm --desktop
 + "wallpaper" Exec nitrogen
 + "resolution" Exec arandr
-+ "screenshot" Exec scrot
 + "volume" Exec qasmixer
++ "screenshot" Exec scrot
++ "settings.sh" Exec if pgrep urxvtd; then urxvtc -e sh -c '~/cloveros_settings.sh && read'; else urxvtd -o -f && urxvtc -e sh -c '~/cloveros_settings.sh && read'; fi
 + "gparted" Exec sudo gparted
 + "restart fvwm" Restart
 + "exit X" Exec killall X
