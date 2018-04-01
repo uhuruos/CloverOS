@@ -10,7 +10,6 @@ games-simulation/openttd -openmedia
 games-emulation/rpcs3 joystick -vulkan
 
 #preference
-media-gfx/nomacs zip
 x11-misc/spacefm -startup-notification
 www-servers/tomcat extra-webapps
 www-client/netsurf truetype
