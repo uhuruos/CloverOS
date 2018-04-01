@@ -488,6 +488,7 @@ media-gfx/feh
 media-gfx/fontforge
 media-gfx/gifsicle
 media-gfx/gimp
+media-gfx/gphotofs
 media-gfx/graphicsmagick
 media-gfx/graphviz
 media-gfx/gthumb
@@ -766,10 +767,14 @@ sys-fs/ecryptfs-utils
 sys-fs/exfat-nofuse
 sys-fs/exfat-utils
 sys-fs/extundelete
+sys-fs/go-mtpfs
+sys-fs/jmtpfs
+sys-fs/mtpfs
 sys-fs/multipath-tools
 sys-fs/ncdu
 sys-fs/ntfs3g
 sys-fs/safecopy
+sys-fs/simple-mtpfs
 sys-fs/squashfs-tools
 sys-fs/zfs
 sys-kernel/bliss-initramfs

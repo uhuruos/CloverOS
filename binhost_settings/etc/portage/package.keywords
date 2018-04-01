@@ -667,3 +667,14 @@ dev-python/phonenumbers
 dev-python/django-otp
 dev-python/django-formtools
 dev-python/django-otp-yubikey
+
+=sys-fs/go-mtpfs-9999 **
+# required by sys-fs/go-mtpfs-9999::gentoo
+# required by go-mtpfs (argument)
+=dev-libs/go-fuse-0_p20150422 ~amd64
+# required by jmtpfs (argument)
+=sys-fs/jmtpfs-0.5 ~amd64
+# required by sys-fs/go-mtpfs-9999::gentoo
+# required by go-mtpfs (argument)
+=dev-libs/go-usb-9999 **
+
