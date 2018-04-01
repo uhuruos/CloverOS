@@ -8,6 +8,7 @@
 show_thumbnail=1
 big_icon_size=36
 small_icon_size=16
+no_execute=0
 
 [Window]
 width=800
