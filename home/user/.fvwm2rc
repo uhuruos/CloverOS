@@ -105,6 +105,7 @@ AddToMenu MenuFvwmRoot Applications Title
 + "emacs" Exec emacs
 + "gimp" Exec gimp
 + "smplayer" Exec smplayer
++ "nomacs" Exec nomacs ~
 + "filezilla" Exec filezilla
 + "xarchiver" Exec xarchiver
 + "rtorrent-ps" Exec if pgrep urxvtd; then urxvtc -e rtorrent; else urxvtd -o -f && urxvtc -e rtorrent; fi

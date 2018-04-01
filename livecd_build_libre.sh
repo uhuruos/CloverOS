@@ -68,7 +68,7 @@ useradd $user
 echo "$user:$userpassword" | chpasswd
 gpasswd -a $user wheel
 
-emerge -e world xorg-server fvwm spacefm rxvt-unicode nitrogen sudo wpa_supplicant porthole firefox emacs gimp mpv smplayer filezilla rtorrent-ps weechat alsa-utils zsh zsh-completions gentoo-zsh-completions vlgothic hack liberation-fonts nano scrot xbindkeys xinput arandr qastools slock xarchiver p7zip gparted squashfs-tools os-prober
+emerge -e world xorg-server fvwm spacefm rxvt-unicode nitrogen nomacs sudo wpa_supplicant porthole firefox emacs gimp mpv smplayer filezilla rtorrent-ps weechat alsa-utils zsh zsh-completions gentoo-zsh-completions vlgothic hack liberation-fonts nano scrot xbindkeys xinput arandr qastools slock xarchiver p7zip gparted squashfs-tools os-prober
 
 echo 'frozen-files="/etc/sudoers"' >> /etc/dispatch-conf.conf
 sed -i "s/# %wheel ALL=(ALL) NOPASSWD: ALL/%wheel ALL=(ALL) NOPASSWD: ALL/" /etc/sudoers
@@ -125,6 +125,8 @@ echo -e "~rows=0\n1=home.desktop\n2=firefox.desktop\n3=smplayer.desktop\n4=emacs
 mkdir .config/nitrogen/
 wget https://gitgud.io/cloveros/cloveros/raw/master/home/user/.config/nitrogen/nitrogen.cfg -P .config/nitrogen/
 sed -i "s@/home/user/@/home/$user/@" .config/nitrogen/nitrogen.cfg
+mkdir .config/nomacs/
+wget https://gitgud.io/cloveros/cloveros/raw/master/home/user/.config/nomacs/Image%20Lounge.conf -P .config/nomacs/
 chown -R $user /home/$user/
 
 sed -i "s@c1:12345:respawn:/sbin/agetty --noclear 38400 tty1 linux@c1:12345:respawn:/sbin/agetty -a $user --noclear 38400 tty1 linux@" /etc/inittab
