@@ -13,10 +13,13 @@ x11-wm/enlightenment # old
 dev-libs/efl # old
 x11-terms/terminology # old
 net-p2p/mldonkey # old
+net-ftp/filezilla # old
 sys-kernel/gentoo-sources
 sys-devel/gcc
 #firefox
 =media-libs/libpng-1.6.34
+#filezilla
+dev-libs/libfilezilla
 #mednafen
 =dev-libs/lzo-2.10
 #vapoursynth

@@ -145,6 +145,7 @@ dev-db/rethinkdb
 dev-games/ogre
 dev-haskell/haskell-platform
 dev-java/icedtea:8
+dev-java/junit
 dev-java/maven-bin
 dev-lang/R
 dev-lang/go
