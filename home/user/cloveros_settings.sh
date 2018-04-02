@@ -181,14 +181,12 @@ case "$choice" in
 			sudo emerge gnupg
 			sudo gpg --keyserver hkp://pool.sks-keyservers.net --recv-key "78F5 AC55 A120 07F2 2DF9 A28A 78B9 3F76 B8E4 2805"
 		fi
-
 		if [ ! -s /usr/bin/fvwm ]; then
 			sudo emerge fvwm
 		fi
 		if [ ! -s .fvwm2rc ]; then
 			wget $gitprefix/home/user/.fvwm2rc
 		fi
-
 		if [ -d /var/db/pkg/net-p2p/rtorrent-0.9.6-r1/ ]; then
 			sudo emerge -C rtorrent
 			sudo emerge rtorrent-ps
@@ -231,11 +229,47 @@ case "$choice" in
 
 	a)
 		echo "1) Change default ALSA device
-2) Configure ALSA for OBS
-3) GUI volume control
-4) CLI volume control"
-		read -erp "Select option: " -n 1 choice
-		echo "In Progress."
+2) Change default sample rate
+3) Bypass dmix
+4) Configure ALSA for OBS
+5) GUI volume control
+6) CLI volume control"
+		read -erp "Select option: " -n 1 choicealsa
+		echo
+		case "$choicealsa" in
+			1)
+				grep " \[" /proc/asound/cards
+				read -erp "Select the audio device to become default: " -n 1 choiceaudio
+				echo -e "defaults.pcm.card ${choiceaudio}\ndefaults.ctl.card ${choiceaudio}" > ~/.asoundrc
+				echo -e "\nAudio device ${choiceaudio} is now the default for ALSA programs. (~/.asoundrc)"
+				;;
+
+			2)
+				echo "Sample rate examples: 44100 48000 96000 192000"
+				read -erp "Select sample rate: " choicesamplerate
+				echo "defaults.pcm.dmix.rate $choicesamplerate" >> ~/.asoundrc
+				;;
+
+			3)
+				echo "In Progress."
+				;;
+			4)
+				echo "In progress."
+				;;
+
+			5)
+				alsamixer
+				;;
+
+			6)
+				qasmixer&
+				;;
+
+			*)
+				echo "Invalid option: '$choice'" >&2
+				exit 1
+				;;
+		esac
 		;;
 
 	t)
