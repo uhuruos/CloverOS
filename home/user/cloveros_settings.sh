@@ -274,7 +274,7 @@ case "$choice" in
 				;;
 
 			*)
-				echo "Invalid option: '$choice'" >&2
+				echo "Invalid option: '$choicealsa'" >&2
 				exit 1
 				;;
 		esac
