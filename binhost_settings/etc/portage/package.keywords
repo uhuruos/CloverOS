@@ -1,18 +1,19 @@
 #preference, remove when stable is bumped up
 =dev-lisp/clisp-2.49.90 # stable doesn't build
-=x11-misc/synergy-1.8.8
-media-gfx/blender # python
+=x11-misc/synergy-1.8.8 # 2.0 doesn't build
 media-sound/clementine # qt5
 media-sound/mumble ** # qt5
 media-sound/murmur ** # qt5
-www-client/firefox # quantum
 media-gfx/gimp # 2.9
-net-misc/youtube-dl # needs latest
 net-p2p/retroshare # needs latest
+x11-misc/spacefm ** # fixes drag file into tree view crash
+dev-python/pillow # mcomix needs 4.3
 x11-wm/enlightenment # old
 dev-libs/efl # old
 x11-terms/terminology # old
 net-p2p/mldonkey # old
+net-misc/youtube-dl
+www-client/firefox
 sys-kernel/gentoo-sources
 sys-devel/gcc
 #firefox
@@ -23,6 +24,8 @@ sys-devel/gcc
 =media-libs/zimg-2.7.4
 #sway
 =dev-libs/json-c-0.12.1
+#pillow
+dev-python/olefile
 #libressl
 dev-libs/libressl:0/44
 media-libs/opusfile
