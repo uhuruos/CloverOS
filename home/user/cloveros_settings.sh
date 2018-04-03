@@ -256,7 +256,10 @@ case "$choice" in
 				;;
 
 			3)
-				echo -e "\nIn Progress."
+				grep " \[" /proc/asound/cards
+				read -erp "Select the audio device to become default: " -n 1 choiceaudio
+				echo -e "pcm.!default {\n  type hw\n  card ${choiceaudio}\n}" > ~/.asoundrc
+				echo -e "\nAudio device ${choiceaudio} is now the default (hw) for ALSA programs. (~/.asoundrc) Only one program will output audio."
 				;;
 			4)
 				echo -e "\nIn progress."
