@@ -230,7 +230,7 @@ case "$choice" in
 	a)
 		echo "1) Change default ALSA device
 2) Change default sample rate
-3) Bypass dmix
+3) Bypass dmix (DSD, high sample rate)
 4) Configure ALSA for OBS
 5) GUI volume control
 6) CLI volume control"
