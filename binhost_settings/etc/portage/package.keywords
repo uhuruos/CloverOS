@@ -4,7 +4,7 @@
 media-gfx/blender # python
 media-sound/clementine # qt5
 media-sound/mumble ** # qt5
-media-sound/murmur # qt5
+media-sound/murmur ** # qt5
 www-client/firefox # quantum
 media-gfx/gimp # 2.9
 net-misc/youtube-dl # needs latest
@@ -13,13 +13,10 @@ x11-wm/enlightenment # old
 dev-libs/efl # old
 x11-terms/terminology # old
 net-p2p/mldonkey # old
-net-ftp/filezilla # old
 sys-kernel/gentoo-sources
 sys-devel/gcc
 #firefox
 =media-libs/libpng-1.6.34
-#filezilla
-dev-libs/libfilezilla
 #mednafen
 =dev-libs/lzo-2.10
 #vapoursynth
@@ -204,7 +201,7 @@ net-p2p/eiskaltdcpp **
 sys-block/sas3flash
 app-crypt/kencfs-plasma
 app-emulation/wine-any
-=games-emulation/rpcs3-0.0.4
+games-emulation/rpcs3
 games-emulation/citra **
 dev-libs/sway
 x11-wm/bspwm
@@ -286,6 +283,7 @@ www-client/netsurf
 media-gfx/qiv
 sys-fs/go-mtpfs **
 sys-fs/jmtpfs
+media-gfx/ahoviewer
 
 #dependencies
 #tlp
@@ -672,3 +670,14 @@ dev-python/phonenumbers
 dev-python/django-otp
 dev-python/django-formtools
 dev-python/django-otp-yubikey
+# required by net-nntp/sabnzbd-2.3.2::gentoo
+# required by sabnzbd (argument)
+=dev-python/sabyenc-3.3.2 ~amd64
+# required by net-nntp/sabnzbd-2.3.2::gentoo
+# required by sabnzbd (argument)
+=dev-python/gntp-1.0.1 ~amd64
+# required by sabnzbd (argument)
+=net-nntp/sabnzbd-2.3.2 ~amd64
+# required by net-nntp/sabnzbd-2.3.2::gentoo
+# required by sabnzbd (argument)
+=dev-python/pythonutils-0.4.0-r1 ~amd64

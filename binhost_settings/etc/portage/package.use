@@ -10,9 +10,10 @@ games-simulation/openttd -openmedia
 games-emulation/rpcs3 joystick -vulkan
 
 #preference
+media-gfx/ahoviewer -libsecret -rar
+net-nntp/sabnzbd -rar
 x11-misc/spacefm -startup-notification
 www-servers/tomcat extra-webapps
-www-client/netsurf truetype
 media-sound/mp3blaster vorbis
 net-p2p/rtorrent-ps daemon
 xfce-extra/tumbler ffmpeg
@@ -203,7 +204,6 @@ app-portage/layman subversion
 net-analyzer/rrdtool perl graph
 media-sound/lmms alsa fluidsynth ogg portaudio sdl stk qt5
 app-admin/testdisk ntfs
-www-client/netsurf fbcon fbcon_frontend_linux
 net-p2p/qbittorrent geoip webui
 media-gfx/gimp smp pdf aalib
 net-fs/nfs-utils nfsv41
@@ -326,6 +326,7 @@ x11-libs/gdk-pixbuf tiff
 dev-libs/libxml2 icu
 dev-libs/libxslt python
 x11-libs/wxGTK tiff
+net-libs/libdom xml
 
 #libressl
 net-misc/curl curl_ssl_libressl -curl_ssl_openssl
@@ -454,7 +455,3 @@ media-libs/libsoundtouch abi_x86_32
 app-arch/xz-utils abi_x86_32
 x11-libs/pixman abi_x86_32
 media-libs/libsdl abi_x86_32
-# required by media-libs/libsvgtiny-0.1.6::gentoo
-# required by www-client/netsurf-3.6::gentoo[svg,svgtiny]
-# required by netsurf (argument)
->=net-libs/libdom-0.3.2 xml

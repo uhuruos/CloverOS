@@ -477,6 +477,7 @@ media-fonts/wqy-microhei
 media-fonts/wqy-zenhei
 media-fonts/x11fonts-jmk
 media-fonts/zh-kcfonts
+media-gfx/ahoviewer
 media-gfx/apngasm
 media-gfx/apngdis
 media-gfx/blender
@@ -687,6 +688,7 @@ net-misc/zssh
 net-news/liferea
 net-news/newsboat
 net-nntp/pan
+net-nntp/sabnzbd
 net-p2p/amule
 net-p2p/bitcoin-qt
 net-p2p/deluge
@@ -1134,7 +1136,6 @@ x11-wm/xmonad-contrib
 x11-wm/xoat
 xfce-base/exo
 xfce-base/xfce4-meta
-xfce-extra/eatmonkey
 xfce-extra/multiload-nandhp
 xfce-extra/thunar-archive-plugin
 xfce-extra/thunar-media-tags-plugin
