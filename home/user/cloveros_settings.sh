@@ -247,22 +247,27 @@ case "$choice" in
 			2)
 				echo "Sample rate examples: 44100 48000 96000 192000"
 				read -erp "Select sample rate: " choicesamplerate
-				echo "defaults.pcm.dmix.rate $choicesamplerate" >> ~/.asoundrc
+				if grep -q 'defaults.pcm.dmix.rate' ~/.asoundrc; then
+					sed -i "s/defaults.pcm.dmix.rate .*/defaults.pcm.dmix.rate $choicesamplerate/" ~/.asoundrc
+				else
+					echo "defaults.pcm.dmix.rate $choicesamplerate" >> ~/.asoundrc
+				fi
+				echo -e "\nSample rate set to $choicesamplerate"
 				;;
 
 			3)
-				echo "In Progress."
+				echo -e "\nIn Progress."
 				;;
 			4)
-				echo "In progress."
+				echo -e "\nIn progress."
 				;;
 
 			5)
-				alsamixer
+				qasmixer&
 				;;
 
 			6)
-				qasmixer&
+				alsamixer
 				;;
 
 			*)
