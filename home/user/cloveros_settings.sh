@@ -252,14 +252,14 @@ case "$choice" in
 				else
 					echo "defaults.pcm.dmix.rate $choicesamplerate" >> ~/.asoundrc
 				fi
-				echo -e "\nSample rate set to $choicesamplerate"
+				echo -e "\nSample rate set to $choicesamplerate (~/.asoundrc)"
 				;;
 
 			3)
 				grep " \[" /proc/asound/cards
 				read -erp "Select the audio device to become default: " -n 1 choiceaudio
 				echo -e "pcm.!default {\n  type hw\n  card ${choiceaudio}\n}" > ~/.asoundrc
-				echo -e "\nAudio device ${choiceaudio} is now the default (hw) for ALSA programs. (~/.asoundrc) Only one program will output audio."
+				echo -e "\nAudio device ${choiceaudio} is now the default (hw) for ALSA programs. Only one program will output audio. (~/.asoundrc)"
 				;;
 			4)
 				echo -e "\nIn progress."
