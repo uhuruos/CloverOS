@@ -42,9 +42,6 @@ sys-fs/encfs
 net-misc/spice-gtk
 
 #keyworded, remove when stable exists
-sys-fs/zfs-kmod
-sys-fs/zfs
-sys-kernel/spl
 net-vpn/logmein-hamachi
 app-arch/zpaq-extras
 app-crypt/certbot
@@ -284,6 +281,7 @@ media-gfx/qiv
 sys-fs/go-mtpfs **
 sys-fs/jmtpfs
 media-gfx/ahoviewer
+net-nntp/sabnzbd
 
 #dependencies
 #tlp
@@ -458,6 +456,10 @@ dev-php/semver
 #go-mtpfs
 dev-libs/go-fuse
 dev-libs/go-usb **
+#sabnzbd
+dev-python/sabyenc
+dev-python/gntp
+dev-python/pythonutils
 
 #fonts
 media-fonts/lohit-kannada
@@ -670,14 +672,3 @@ dev-python/phonenumbers
 dev-python/django-otp
 dev-python/django-formtools
 dev-python/django-otp-yubikey
-# required by net-nntp/sabnzbd-2.3.2::gentoo
-# required by sabnzbd (argument)
-=dev-python/sabyenc-3.3.2 ~amd64
-# required by net-nntp/sabnzbd-2.3.2::gentoo
-# required by sabnzbd (argument)
-=dev-python/gntp-1.0.1 ~amd64
-# required by sabnzbd (argument)
-=net-nntp/sabnzbd-2.3.2 ~amd64
-# required by net-nntp/sabnzbd-2.3.2::gentoo
-# required by sabnzbd (argument)
-=dev-python/pythonutils-0.4.0-r1 ~amd64
