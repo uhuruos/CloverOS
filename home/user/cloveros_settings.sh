@@ -257,7 +257,7 @@ case "$choice" in
 
 			3)
 				grep " \[" /proc/asound/cards
-				read -erp "Select the audio device to become default: " -n 1 choiceaudio
+				read -erp "Select the audio device to become (hw) default: " -n 1 choiceaudio
 				echo -e "pcm.!default {\n  type hw\n  card ${choiceaudio}\n}" > ~/.asoundrc
 				echo -e "\nAudio device ${choiceaudio} is now the default (hw) for ALSA programs. Only one program will output audio. (~/.asoundrc)"
 				;;
