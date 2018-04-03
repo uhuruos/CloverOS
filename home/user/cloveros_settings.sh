@@ -35,7 +35,7 @@ else
 9) Clean emerge cache
 u) Update system, kernel, cloveros_settings.sh, clean emerge cache
 l) Update or install Libre kernel
-a) ALSA settings
+a) ALSA settings configurator
 t) Enable tap to click on touchpad
 b) Install bluetooth manager
 i) Install VirtualBox
