@@ -10,9 +10,9 @@ games-simulation/openttd -openmedia
 games-emulation/rpcs3 joystick -vulkan
 
 #preference
+x11-misc/spacefm -startup-notification -gtk3 gtk2
 media-gfx/ahoviewer -libsecret -rar
 net-nntp/sabnzbd -rar
-x11-misc/spacefm -startup-notification
 www-servers/tomcat extra-webapps
 media-sound/mp3blaster vorbis
 net-p2p/rtorrent-ps daemon

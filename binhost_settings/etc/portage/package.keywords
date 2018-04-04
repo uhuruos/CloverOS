@@ -6,7 +6,6 @@ media-sound/mumble ** # qt5
 media-sound/murmur ** # qt5
 media-gfx/gimp # 2.9
 net-p2p/retroshare # needs latest
-x11-misc/spacefm ** # fixes drag file into tree view crash
 dev-python/pillow # mcomix needs 4.3
 x11-wm/enlightenment # old
 dev-libs/efl # old
