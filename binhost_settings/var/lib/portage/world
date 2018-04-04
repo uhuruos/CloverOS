@@ -660,6 +660,7 @@ net-libs/nodejs
 net-mail/dovecot
 net-mail/mailman
 net-mail/mlmmj
+net-misc/aria2
 net-misc/autossh
 net-misc/axel
 net-misc/bridge-utils
