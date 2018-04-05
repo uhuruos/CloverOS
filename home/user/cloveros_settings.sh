@@ -181,12 +181,6 @@ case "$choice" in
 			sudo emerge gnupg
 			sudo gpg --keyserver hkp://pool.sks-keyservers.net --recv-key "78F5 AC55 A120 07F2 2DF9 A28A 78B9 3F76 B8E4 2805"
 		fi
-		if [ ! -s /usr/bin/fvwm ]; then
-			sudo emerge fvwm
-		fi
-		if [ ! -s .fvwm2rc ]; then
-			wget $gitprefix/home/user/.fvwm2rc
-		fi
 		if [ -d /var/db/pkg/net-p2p/rtorrent-0.9.6-r1/ ]; then
 			sudo emerge -C rtorrent
 			sudo emerge rtorrent-ps
