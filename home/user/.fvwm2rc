@@ -107,8 +107,8 @@ AddToMenu MenuFvwmRoot Applications Title
 + "porthole" Exec porthole
 + "emacs" Exec emacs
 + "gimp" Exec gimp
-+ "filezilla" Exec filezilla
 + "xarchiver" Exec xarchiver
++ "filezilla" Exec filezilla
 + "nomacs" Exec nomacs ~
 + "desktop" Exec spacefm --desktop
 + "stats.sh" Exec if pgrep urxvtd; then urxvtc -geometry 400x1+0+0 -fn '6x13' -sl 0 -e ~/stats.sh; else urxvtd -o -f && urxvtc -geometry 400x1+0+0 -fn '6x13' -sl 0 -e ~/stats.sh; fi

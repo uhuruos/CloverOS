@@ -61,7 +61,7 @@ Window manager - fvwm
 
 Terminal - urxvt
 
-File manager - xfe
+File manager - spacefm
 
 Wifi configuration - wpa_gui
 
@@ -73,13 +73,13 @@ Graphic editor - gimp
 
 Video player - smplayer / mpv
 
+Image Viewer - nomacs
+
 FTP client - filezilla
 
 Torrent client - rtorrent-ps
 
 IRC client - weechat
-
-Application launcher - wbar
 
 ### Setting default sound device
 Run `alsamixer` and hit F6 to see your audio devices.
@@ -563,7 +563,7 @@ XDG_RUNTIME_DIR=. weston-launch
 - It needs a cloveros.ga mirror that doesn't host the non-free software packages
 
 ### Does CloverOS have binaries?
-It's a pre-setup Gentoo image with `PORTAGE_BINHOST="https://cloveors.ga" emerge -G package` preset in /etc/portage/make.conf. It uses Gentoo for everything (versions, ebuilds, etc.) and gets it from cloveros.ga instead of building
+Yes. It's a pre-setup Gentoo image with `PORTAGE_BINHOST="https://cloveors.ga" emerge -G package` preset in /etc/portage/make.conf. It uses Gentoo for everything (versions, ebuilds, etc.) and gets packages from cloveros.ga instead of building
 
 ### How often is this updated?
 It's stable rolling release (Gentoo Stable). It's updated about once a week: http://twitter.com/cloveros_ga
@@ -585,7 +585,7 @@ First, connect to wifi using wpa_gui ('wifi' in fvwm)
 Kill X and relog. After you log in and the "Start X?" dialog pops up, instead of y/n, type one of the WM options and hit y when it asks to install.
 
 ### I want to host a mirror
-Run `rsync -av --delete rsync://nl.cloveros.ga/cloveros /your/webserver/location/` and tell me the domain (or IP) so I can give you a cloveros.ga subdomain
+Run `rsync -av --delete rsync://nl.cloveros.ga/cloveros /your/webserver/location/` and link the http://
 
 ### What if CloverOS dies? Will my install become useless?
 No. Edit `/etc/portage/make.conf` and change
