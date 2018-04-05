@@ -6,7 +6,6 @@ media-sound/mumble ** # qt5
 media-sound/murmur ** # qt5
 media-gfx/gimp # 2.9
 net-p2p/retroshare # needs latest
-dev-python/pillow # mcomix needs 4.3
 x11-wm/enlightenment # old
 dev-libs/efl # old
 x11-terms/terminology # old
@@ -23,8 +22,6 @@ sys-devel/gcc
 =media-libs/zimg-2.7.4
 #sway
 =dev-libs/json-c-0.12.1
-#pillow
-dev-python/olefile
 #libressl
 dev-libs/libressl:0/44
 media-libs/opusfile

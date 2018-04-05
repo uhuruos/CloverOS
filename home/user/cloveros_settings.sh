@@ -173,14 +173,6 @@ case "$choice" in
 		fi
 
 		sudo eselect profile set "default/linux/amd64/17.0/hardened"
-
-		if [ ! -s /usr/bin/aria2c ]; then
-			sudo emerge aria2
-		fi
-		if [ ! -s /usr/bin/gpg ]; then
-			sudo emerge gnupg
-			sudo gpg --keyserver hkp://pool.sks-keyservers.net --recv-key "78F5 AC55 A120 07F2 2DF9 A28A 78B9 3F76 B8E4 2805"
-		fi
 		if [ -d /var/db/pkg/net-p2p/rtorrent-0.9.6-r1/ ]; then
 			sudo emerge -C rtorrent
 			sudo emerge rtorrent-ps

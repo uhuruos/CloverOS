@@ -601,6 +601,7 @@ media-video/ffmpegthumbnailer
 media-video/flowblade
 media-video/handbrake
 media-video/kaffeine
+media-video/mediainfo
 media-video/mkvtoolnix
 media-video/mpv
 media-video/obs-studio
