@@ -10,8 +10,6 @@ games-simulation/openttd -openmedia
 games-emulation/rpcs3 joystick -vulkan
 
 #preference
-media-video/mediainfo curl wxwidgets
-media-libs/libmediainfo curl
 x11-misc/spacefm -startup-notification -gtk3 gtk2
 media-gfx/ahoviewer -libsecret -rar
 net-nntp/sabnzbd -rar

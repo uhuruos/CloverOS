@@ -281,6 +281,7 @@ sys-fs/go-mtpfs **
 sys-fs/jmtpfs
 media-gfx/ahoviewer
 net-nntp/sabnzbd
+media-gfx/flameshot
 
 #dependencies
 #tlp
