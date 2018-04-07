@@ -109,7 +109,7 @@ grub-mkconfig -o /boot/grub/grub.cfg &> /dev/null
 rc-update add dhcpcd default
 
 echo "root:$rootpassword" | chpasswd
-useradd -M $user
+useradd $user
 echo "$user:$userpassword" | chpasswd
 gpasswd -a $user wheel
 
