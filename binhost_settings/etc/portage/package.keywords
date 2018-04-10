@@ -282,6 +282,10 @@ sys-fs/jmtpfs
 media-gfx/ahoviewer
 net-nntp/sabnzbd
 media-gfx/flameshot
+sys-fs/zfs-kmod
+sys-fs/zfs
+sys-kernel/spl
+
 
 #dependencies
 #tlp
