@@ -8,7 +8,7 @@ binutils-config --linker ld.bfd
 
 cd /usr/src/linux/
 wget https://liquorix.net/sources/4.15/config.amd64
-sed -i "s/CONFIG_FW_LOADER_USER_HELPER_FALLBACK=y/CONFIG_FW_LOADER_USER_HELPER_FALLBACK=n/" config.amd64
+sed -i "s/CONFIG_FW_LOADER_USER_HELPER_FALLBACK=y/CONFIG_FW_LOADER_USER_HELPER_FALLBACK=n/; s/CONFIG_FW_LOADER_USER_HELPER=y/CONFIG_FW_LOADER_USER_HELPER=n/" config.amd64
 echo -e "CONFIG_SND_HDA_INPUT_BEEP=y\nCONFIG_SND_HDA_INPUT_BEEP_MODE=0" >> config.amd64
 genkernel --kernel-config=config.amd64 --luks --lvm all
 make clean
