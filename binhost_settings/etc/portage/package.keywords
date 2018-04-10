@@ -1,23 +1,22 @@
 #preference, remove when stable is bumped up
 =dev-lisp/clisp-2.49.90 # stable doesn't build
 =x11-misc/synergy-1.8.8 # 2.0 doesn't build
-media-sound/clementine # qt5
-media-sound/mumble ** # qt5
-media-sound/murmur ** # qt5
-media-gfx/gimp # 2.9
-net-p2p/retroshare # needs latest
 x11-wm/enlightenment # old
 dev-libs/efl # old
 x11-terms/terminology # old
 net-p2p/mldonkey # old
+media-sound/clementine # qt5
+media-sound/mumble ** # qt5
+media-sound/murmur ** # qt5
+net-p2p/retroshare # needs latest
 net-misc/youtube-dl
 www-client/firefox
-sys-kernel/gentoo-sources
+media-gfx/gimp
 sys-devel/gcc
+sys-kernel/gentoo-sources
+x11-drivers/nvidia-drivers
 #firefox
 =media-libs/libpng-1.6.34
-#mednafen
-=dev-libs/lzo-2.10
 #vapoursynth
 =media-libs/zimg-2.7.4
 #sway
@@ -285,7 +284,6 @@ media-gfx/flameshot
 sys-fs/zfs-kmod
 sys-fs/zfs
 sys-kernel/spl
-
 
 #dependencies
 #tlp
