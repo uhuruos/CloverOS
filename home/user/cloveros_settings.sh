@@ -58,6 +58,7 @@ case "$choice" in
 			echo -e "\ncloveros_settings.sh is now updated. (~/cloveros_settings.sh)"
 		else
 			echo -e "\nCould not retrieve file. Please connect to the Internet or try again."
+			exit 1
 		fi
 		;;
 
@@ -97,7 +98,8 @@ case "$choice" in
 				rm -R $tempdir
 				echo -e "\nKernel upgraded. (/boot/, /lib/modules/)"
 			else
-			echo -e "\nCould not retrieve file. Please connect to the Internet or try again."
+				echo -e "\nCould not retrieve file. Please connect to the Internet or try again."
+				exit 1
 			fi
 		fi
 		;;
@@ -117,11 +119,19 @@ case "$choice" in
 		;;
 
 	6)
+                wget "$gitprefix"/home/user/cloveros_settings.sh -O cloveros_settings.new.sh
+		if [[ -s cloveros_settings.new.sh ]]; then
+			chmod +x cloveros_settings.new.sh
+			mv cloveros_settings.new.sh cloveros_settings.sh
+		else
+			echo -e "\nCould not retrieve file. Please connect to the Internet or try again."
+			exit 1
+		fi
 		backupdir=backup$(< /dev/urandom tr -dc 0-9 | head -c 5)
 		mkdir $backupdir
-		mv .bash_profile .zprofile .zshrc .fvwm2rc .Xdefaults wallpaper.png .xbindkeysrc screenfetch-dev bl.sh cloveros_settings.sh stats.sh rotate_screen.sh .emacs .emacs.d .rtorrent.rc .mpv .config/nitrogen/ .config/spacefm $backupdir/
-		wget -q "$gitprefix"/home/user/{.bash_profile,.zprofile,.zshrc,.fvwm2rc,.Xdefaults,wallpaper.png,.xbindkeysrc,screenfetch-dev,bl.sh,cloveros_settings.sh,stats.sh,rotate_screen.sh,.emacs,.rtorrent.rc}
-		chmod +x screenfetch-dev bl.sh cloveros_settings.sh stats.sh rotate_screen.sh
+		mv .bash_profile .zprofile .zshrc .fvwm2rc .Xdefaults wallpaper.png .xbindkeysrc screenfetch-dev bl.sh stats.sh rotate_screen.sh .emacs .emacs.d .rtorrent.rc .mpv .config/nitrogen/ .config/spacefm $backupdir/
+		wget -q "$gitprefix"/home/user/{.bash_profile,.zprofile,.zshrc,.fvwm2rc,.Xdefaults,wallpaper.png,.xbindkeysrc,screenfetch-dev,bl.sh,stats.sh,rotate_screen.sh,.emacs,.rtorrent.rc}
+		chmod +x screenfetch-dev bl.sh stats.sh rotate_screen.sh
 		sed -i "s@/home/user/@/home/$USER/@" .rtorrent.rc
 		mkdir -p .emacs.d/backups/ .emacs.d/autosaves/
 		mkdir -p .config/nitrogen/
