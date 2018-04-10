@@ -8,7 +8,7 @@ binutils-config --linker ld.bfd
 
 cd /usr/src/linux/
 wget https://liquorix.net/sources/4.15/config.amd64
-genkernel --kernel-config=config.amd64 --luks --lvm all
+genkernel --kernel-config=config.amd64 --luks --lvm --firmware all
 make clean
 
 mkdir -p /usr/portage/packages/s/
