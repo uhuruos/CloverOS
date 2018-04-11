@@ -79,7 +79,7 @@ case "$choice" in
 		;;
 
 	4)
-		if [[ $(find /boot/ -iname \*$kernelversion\* | wc -l) -gt 0 ]]; then
+		if [[ $(find /boot/ -iname \*$kernelversion\*-gentoo | wc -l) -gt 0 ]]; then
 			echo "Kernel up to date."
 		else
 			tempdir=kernel$(< /dev/urandom tr -dc 0-9 | head -c 8)
@@ -205,7 +205,7 @@ case "$choice" in
 		;;
 
 	l)
-		if [[ $(find /boot/ -iname \*$kernelversion\* | wc -l) -gt 0 ]]; then
+		if [[ $(find /boot/ -iname \*$kernelversion\*-gnu | wc -l) -gt 0 ]]; then
 			echo "Kernel up to date."
 		else
 			tempdir=kernel$(< /dev/urandom tr -dc 0-9 | head -c 8)
