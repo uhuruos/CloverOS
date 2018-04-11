@@ -34,7 +34,7 @@ else
 8) Set timezone
 9) Clean emerge cache
 u) Update system, kernel, cloveros_settings.sh, clean emerge cache
-l) Update/install $kernelversion-gnu
+l) Update/install kernel $kernelversion-gnu
 a) ALSA settings configurator
 t) Enable tap to click on touchpad
 b) Install bluetooth manager
