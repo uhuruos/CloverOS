@@ -95,7 +95,6 @@ case "$choice" in
 				echo -e "\nKernel upgraded. (/boot/, /lib/modules/)"
 			else
 				echo -e "\nCould not retrieve file. Please connect to the Internet or try again."
-				exit 1
 			fi
 			cd ..
 			rm -R $tempdir
