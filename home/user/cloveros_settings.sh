@@ -82,7 +82,7 @@ case "$choice" in
 		if [[ $(find /boot/ -iname \*$kernelversion\* | wc -l) -gt 0 ]]; then
 			echo "Kernel up to date."
 		else
-			tempdir=kernel$(< /dev/urandom tr -dc 0-9 | head -c 5)
+			tempdir=kernel$(< /dev/urandom tr -dc 0-9 | head -c 8)
 			mkdir $tempdir
 			cd $tempdir
 			wget https://cloveros.ga/s/kernel.tar.xz
@@ -124,7 +124,7 @@ case "$choice" in
 			echo -e "\nCould not retrieve file. Please connect to the Internet or try again."
 			exit 1
 		fi
-		backupdir=backup$(< /dev/urandom tr -dc 0-9 | head -c 5)
+		backupdir=backup$(< /dev/urandom tr -dc 0-9 | head -c 8)
 		mkdir $backupdir
 		mv .bash_profile .zprofile .zshrc .fvwm2rc .Xdefaults wallpaper.png .xbindkeysrc screenfetch-dev bl.sh stats.sh rotate_screen.sh .emacs .emacs.d .rtorrent.rc .mpv .config/nitrogen/ .config/spacefm $backupdir/
 		wget -q "$gitprefix"/home/user/{.bash_profile,.zprofile,.zshrc,.fvwm2rc,.Xdefaults,wallpaper.png,.xbindkeysrc,screenfetch-dev,bl.sh,stats.sh,rotate_screen.sh,.emacs,.rtorrent.rc}
@@ -205,19 +205,26 @@ case "$choice" in
 		;;
 
 	l)
-		tempdir=kernel$(< /dev/urandom tr -dc 0-9 | head -c 5)
-		mkdir $tempdir
-		cd $tempdir
-		wget https://cloveros.ga/s/kernel-libre.tar.xz
-		wget https://cloveros.ga/s/signatures/s/kernel-libre.tar.xz.asc
-		sudo gpg --verify kernel-libre.tar.xz.asc kernel-libre.tar.xz
-		tar xf kernel-libre.tar.xz
-		sudo mv initramfs-genkernel-*-gentoo*-gnu kernel-genkernel-*-gentoo*-gnu System.map-genkernel-*-gentoo*-gnu /boot/
-		sudo mv *-gentoo*-gnu/ /lib/modules/
-		cd ..
-		rm -R $tempdir
-		sudo grub-mkconfig -o /boot/grub/grub.cfg
-		echo -e "\nKernel upgraded. (/boot/, /lib/modules/)"
+		if [[ $(find /boot/ -iname \*$kernelversion\* | wc -l) -gt 0 ]]; then
+			echo "Kernel up to date."
+		else
+			tempdir=kernel$(< /dev/urandom tr -dc 0-9 | head -c 8)
+			mkdir $tempdir
+			cd $tempdir
+			wget https://cloveros.ga/s/kernel-libre.tar.xz
+			wget https://cloveros.ga/s/signatures/s/kernel-libre.tar.xz.asc
+			if sudo gpg --verify kernel-libre.tar.xz.asc kernel-libre.tar.xz; then
+				tar xf kernel-libre.tar.xz
+				sudo mv initramfs-genkernel-*-gentoo*-gnu kernel-genkernel-*-gentoo*-gnu System.map-genkernel-*-gentoo*-gnu /boot/
+				sudo cp -R *-gentoo*-gnu/ /lib/modules/
+				sudo grub-mkconfig -o /boot/grub/grub.cfg
+				echo -e "\nKernel upgraded. (/boot/, /lib/modules/)"
+			else
+				echo -e "\nCould not retrieve file. Please connect to the Internet or try again."
+			fi
+			cd ..
+			rm -R $tempdir
+		fi
 		;;
 
 	a)
@@ -319,7 +326,7 @@ case "$choice" in
 		;;
 
 	c)
-		backupportagedir=backupportage$(< /dev/urandom tr -dc 0-9 | head -c 5)
+		backupportagedir=backupportage$(< /dev/urandom tr -dc 0-9 | head -c 8)
 		sudo mkdir ~/$backupportagedir
 		sudo mv /etc/portage/package.use /etc/portage/package.mask /etc/portage/package.keywords /etc/portage/package.env /etc/portage/package.mask /etc/portage/package.license ~/$backupportagedir
 		sudo wget $gitprefix/binhost_settings/etc/portage/package.use $gitprefix/binhost_settings/etc/portage/package.keywords $gitprefix/binhost_settings/etc/portage/package.env $gitprefix/binhost_settings/etc/portage/package.mask $gitprefix/binhost_settings/etc/portage/package.license -P /etc/portage/
@@ -334,7 +341,7 @@ case "$choice" in
 		;;
 
 	m)
-		backupmakeconf="make.conf.bak"$(< /dev/urandom tr -dc 0-9 | head -c 5)
+		backupmakeconf="make.conf.bak"$(< /dev/urandom tr -dc 0-9 | head -c 8)
 		sudo mv /etc/portage/make.conf $backupmakeconf
 		sudo wget -q "$gitprefix"/home/user/make.conf -P /etc/portage/
 		echo "/etc/portage/make.conf is now default Previous make.conf saved to $backupmakeconf"
