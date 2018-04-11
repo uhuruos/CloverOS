@@ -98,7 +98,7 @@ case "$choice" in
 				rm -R $tempdir
 				echo -e "\nKernel upgraded. (/boot/, /lib/modules/)"
 			else
-				rm kernel.tar.xz.asc
+				rm kernel.tar.xz.asc kernel.tar.xz
 				echo -e "\nCould not retrieve file. Please connect to the Internet or try again."
 				exit 1
 			fi
