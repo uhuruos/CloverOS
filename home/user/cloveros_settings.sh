@@ -82,26 +82,23 @@ case "$choice" in
 		if [[ $(find /boot/ -iname \*$kernelversion\* | wc -l) -gt 0 ]]; then
 			echo "Kernel up to date."
 		else
+			tempdir=kernel$(< /dev/urandom tr -dc 0-9 | head -c 5)
+			mkdir $tempdir
+			cd $tempdir
 			wget https://cloveros.ga/s/kernel.tar.xz
 			wget https://cloveros.ga/s/signatures/s/kernel.tar.xz.asc
 			if sudo gpg --verify kernel.tar.xz.asc kernel.tar.xz; then
-				rm kernel.tar.xz.asc
-				tempdir=kernel$(< /dev/urandom tr -dc 0-9 | head -c 5)
-				mkdir $tempdir
-				mv kernel.tar.xz $tempdir
-				cd $tempdir
 				tar xf kernel.tar.xz
 				sudo mv initramfs-genkernel-*-gentoo* kernel-genkernel-*-gentoo* System.map-genkernel-*-gentoo* /boot/
 				sudo cp -R *-gentoo*/ /lib/modules/
 				sudo grub-mkconfig -o /boot/grub/grub.cfg
-				cd ..
-				rm -R $tempdir
 				echo -e "\nKernel upgraded. (/boot/, /lib/modules/)"
 			else
-				rm kernel.tar.xz.asc kernel.tar.xz
 				echo -e "\nCould not retrieve file. Please connect to the Internet or try again."
 				exit 1
 			fi
+			cd ..
+			rm -R $tempdir
 		fi
 		;;
 
