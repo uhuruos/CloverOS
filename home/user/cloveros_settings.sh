@@ -27,14 +27,14 @@ else
 	echo "1) Update cloveros_settings.sh
 2) Change mirror
 3) Change default sound device
-4) Update to kernel $kernelversion
+4) Update/install kernel $kernelversion
 5) Change emerge to source or binary
 6) Update default dot files
 7) Sync time
 8) Set timezone
 9) Clean emerge cache
 u) Update system, kernel, cloveros_settings.sh, clean emerge cache
-l) Update or install Libre kernel
+l) Update/install $kernelversion-gnu
 a) ALSA settings configurator
 t) Enable tap to click on touchpad
 b) Install bluetooth manager
