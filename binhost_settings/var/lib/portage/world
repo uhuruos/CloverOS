@@ -728,6 +728,7 @@ sci-mathematics/gimps
 sci-mathematics/octave
 sci-visualization/gnuplot
 sys-apps/ack
+sys-apps/bleachbit
 sys-apps/dmidecode
 sys-apps/flatpak
 sys-apps/hwinfo
