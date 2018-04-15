@@ -1,5 +1,4 @@
 #preference, remove when stable is bumped up
-=app-laptop/tp_smapi-0.42-r2 # required for kernel >= 4.15
 =dev-lisp/clisp-2.49.90 # stable doesn't build
 =x11-misc/synergy-1.8.8 # 2.0 doesn't build
 x11-wm/enlightenment # old
@@ -16,6 +15,7 @@ media-gfx/gimp
 sys-devel/gcc
 sys-kernel/gentoo-sources
 x11-drivers/nvidia-drivers
+app-laptop/tp_smapi
 #firefox
 =media-libs/libpng-1.6.34
 #vapoursynth

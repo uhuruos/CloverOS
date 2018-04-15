@@ -49,7 +49,7 @@ games-emulation/nestopia gui
 games-emulation/stella joystick
 games-emulation/mgba qt5
 media-sound/supercollider qt5
-media-sound/clementine dbus udisks cdda lastfm moodbar projectm
+media-sound/clementine -udisks cdda lastfm moodbar projectm
 dev-python/networkx -doc
 sys-fs/zfs -rootfs
 games-emulation/citra sdl2 qt5 system-boost
@@ -69,7 +69,7 @@ app-laptop/tlp tlp_suggests
 app-emulation/fuse sdl joystick
 net-vpn/i2p -ecdsa
 app-text/calibre -udisks
-x11-libs/libfm gtk udisks
+x11-libs/libfm gtk
 pantheon-base/plank dbus
 xfce-base/thunar dbus
 app-i18n/fcitx dbus
@@ -305,7 +305,6 @@ games-emulation/mednafen debugger
 net-libs/libtorrent-rasterbar python
 x11-drivers/nvidia-drivers uvm
 media-video/vlc flac mp3
-gnome-base/gvfs udisks
 media-libs/libvpx svc
 app-text/ghostscript-gpl cups
 media-gfx/pstoedit plotutils
@@ -314,7 +313,6 @@ dev-libs/libdbusmenu gtk
 mate-base/mate-menus python
 dev-libs/boost python
 dev-python/numpy lapack
-xfce-base/thunar udisks
 dev-libs/libpcre2 pcre32
 x11-libs/qscintilla qt5
 sci-libs/cholmod -minimal
