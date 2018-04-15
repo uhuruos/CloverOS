@@ -1,4 +1,4 @@
-kernelversion=4.16.1
+kernelversion=4.16.2
 kernelmajversion=4.16
 
 #emerge gentoo-sources genkernel
