@@ -9,13 +9,13 @@ Mirrors and binary details: https://useast.cloveros.ga https://uswest.cloveros.g
 
 ## Cheat sheet
 ### Installing program
-`emerge filezilla`
+`sudo emerge filezilla`
 
 ### Upgrading system
 ```
-emerge --sync
-emerge -uavD world
-emerge --depclean
+sudo emerge --sync
+sudo emerge -uavD world
+sudo emerge --depclean
 ```
 
 ### Updating config files after upgrading system (Optional)
