@@ -21,7 +21,7 @@ if [ -z "$DISPLAY" ] && ! pgrep X > /dev/null; then
 	wms[w]=wmaker
 	wms[t]=fvwm-themes-start
 	wms[h]=xmonad
-	wmpkgs[y]=fvwm
+	wmspkg[y]=fvwm
 	wmspkg[Y]=fvwm
 	wmspkg[i]="i3-gaps i3status"
 	wmspkg[a]=awesome
