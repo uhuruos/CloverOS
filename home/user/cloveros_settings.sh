@@ -138,7 +138,7 @@ case "$choice" in
 		wget -q "$gitprefix"/home/user/.config/spacefm/session -P .config/spacefm/
 		sed -i "s@/home/user/@/home/$USER/@" .config/spacefm/session
 		mkdir .config/nomacs/
-		wget -q "$gitprefix/home/user/.config/nomacs/Image Lounge.conf"
+		wget -q "$gitprefix/home/user/.config/nomacs/Image%20Lounge.conf"
 		mkdir .mpv
 		wget -q "$gitprefix"/home/user/.mpv/config -P .mpv/
 		echo -e "\nConfiguration updated to new CloverOS defaults, old settings are moved to ~/$backupdir/ (~)"
