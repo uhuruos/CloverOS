@@ -75,6 +75,8 @@ Video player - smplayer / mpv
 
 Image Viewer - nomacs
 
+Archiver - xarchiver
+
 FTP client - filezilla
 
 Torrent client - rtorrent-ps
