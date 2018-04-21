@@ -126,7 +126,7 @@ case "$choice" in
 		fi
 		backupdir=backup$(< /dev/urandom tr -dc 0-9 | head -c 8)
 		mkdir $backupdir
-		mv .bash_profile .zprofile .zshrc .fvwm2rc .Xdefaults wallpaper.png .xbindkeysrc screenfetch-dev bl.sh stats.sh rotate_screen.sh .emacs .emacs.d .rtorrent.rc .mpv .config/nitrogen/ .config/spacefm $backupdir/
+		mv .bash_profile .zprofile .zshrc .fvwm2rc .Xdefaults wallpaper.png .xbindkeysrc screenfetch-dev bl.sh stats.sh rotate_screen.sh .emacs .emacs.d .rtorrent.rc .mpv .config/nitrogen/ .config/spacefm .config/nomacs $backupdir/
 		wget -q "$gitprefix"/home/user/{.bash_profile,.zprofile,.zshrc,.fvwm2rc,.Xdefaults,wallpaper.png,.xbindkeysrc,screenfetch-dev,bl.sh,stats.sh,rotate_screen.sh,.emacs,.rtorrent.rc}
 		chmod +x screenfetch-dev bl.sh stats.sh rotate_screen.sh
 		sed -i "s@/home/user/@/home/$USER/@" .rtorrent.rc
@@ -137,6 +137,8 @@ case "$choice" in
 		mkdir -p .config/spacefm/
 		wget -q "$gitprefix"/home/user/.config/spacefm/session -P .config/spacefm/
 		sed -i "s@/home/user/@/home/$USER/@" .config/spacefm/session
+		mkdir .config/nomacs/
+		wget -q "$gitprefix/home/user/.config/nomacs/Image Lounge.conf"
 		mkdir .mpv
 		wget -q "$gitprefix"/home/user/.mpv/config -P .mpv/
 		echo -e "\nConfiguration updated to new CloverOS defaults, old settings are moved to ~/$backupdir/ (~)"
