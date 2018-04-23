@@ -50,6 +50,7 @@ app-crypt/gnupg
 app-crypt/gpa
 app-crypt/kencfs-plasma
 app-crypt/veracrypt
+app-doc/linux-kernel-in-a-nutshell
 app-doc/phrack-all
 app-editors/emacs
 app-editors/gedit
@@ -105,6 +106,7 @@ app-misc/task
 app-misc/tmux
 app-misc/toilet
 app-misc/wipe
+app-mobilephone/heimdall
 app-office/calligra
 app-office/libreoffice
 app-office/orage
@@ -706,6 +708,7 @@ net-p2p/rtorrent-ps
 net-p2p/soulseek-qt
 net-p2p/transmission
 net-p2p/transmission-remote-gtk
+net-p2p/vuze
 net-vpn/i2p
 net-vpn/i2pd
 net-vpn/logmein-hamachi
@@ -992,6 +995,7 @@ x11-terms/multi-aterm
 x11-terms/rxvt-unicode
 x11-terms/sakura
 x11-terms/st
+x11-terms/terminator
 x11-terms/terminology
 x11-terms/termite
 x11-terms/xfce4-terminal

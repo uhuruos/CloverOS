@@ -74,3 +74,4 @@ media-gfx/gmic::stefantalpalaru
 games-emulation/rpcs3::stefantalpalaru
 dev-lang/python::stefantalpalaru
 media-sound/mumble::booboo
+net-libs/nodejs::gentoo

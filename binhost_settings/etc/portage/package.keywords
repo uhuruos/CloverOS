@@ -285,6 +285,7 @@ media-gfx/flameshot
 sys-fs/zfs-kmod
 sys-fs/zfs
 sys-kernel/spl
+app-mobilephone/heimdall
 
 #dependencies
 #tlp

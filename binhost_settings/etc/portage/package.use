@@ -10,6 +10,8 @@ games-simulation/openttd -openmedia
 games-emulation/rpcs3 joystick -vulkan
 
 #preference
+app-mobilephone/heimdall qt5
+xfce-base/thunar udisks
 x11-misc/nitrogen nls
 x11-misc/spacefm -startup-notification -gtk3 gtk2
 media-gfx/ahoviewer -libsecret -rar
@@ -49,7 +51,7 @@ games-emulation/nestopia gui
 games-emulation/stella joystick
 games-emulation/mgba qt5
 media-sound/supercollider qt5
-media-sound/clementine -udisks cdda lastfm moodbar projectm
+media-sound/clementine dbus -udisks cdda lastfm moodbar projectm
 dev-python/networkx -doc
 sys-fs/zfs -rootfs
 games-emulation/citra sdl2 qt5 system-boost
@@ -71,7 +73,6 @@ net-vpn/i2p -ecdsa
 app-text/calibre -udisks
 x11-libs/libfm gtk
 pantheon-base/plank dbus
-xfce-base/thunar dbus
 app-i18n/fcitx dbus
 net-p2p/mldonkey bittorrent gnutella magic fasttrack gd
 media-sound/qmmp alsa mad vorbis aac analyzer bs2b cdda cover crossfade cue curl enca ffmpeg flac game ladspa lyrics midi modplug musepack notifier opus projectm scrobbler sid sndfile soxr stereo tray wavpack
@@ -235,6 +236,8 @@ media-sound/deadbeef aac adplug alac alsa cdda converter cover cover-imlib2 cove
 app-emulation/qemu sdl usb virgl
 
 #required
+xfce-base/thunar dbus
+gnome-base/gvfs udisks
 app-misc/anki python_targets_python3_6
 net-misc/spice-gtk gtk3 usbredir
 net-wireless/lorcon python
@@ -326,6 +329,7 @@ dev-libs/libxml2 icu
 dev-libs/libxslt python
 x11-libs/wxGTK tiff
 net-libs/libdom xml
+dev-java/swt cairo
 
 #libressl
 net-misc/curl curl_ssl_libressl -curl_ssl_openssl
