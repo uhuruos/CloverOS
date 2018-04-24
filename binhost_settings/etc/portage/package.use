@@ -8,6 +8,7 @@ media-gfx/digikam -panorama
 media-gfx/blender -opencl -cycles -openimageio -osl -opensubdiv tiff bullet dds elbeem game-engine openexr openmp tiff collada colorio ffmpeg fftw jemalloc llvm ndof openvdb player sdl sndfile valgrind
 games-simulation/openttd -openmedia
 games-emulation/rpcs3 joystick -vulkan
+sys-block/open-isns -ssl
 
 #preference
 app-mobilephone/heimdall qt5
