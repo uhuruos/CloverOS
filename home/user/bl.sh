@@ -19,6 +19,9 @@ if [ -z "$bldir" ] || ! [ -d "$bldir" ]; then
 fi
 curr=$(($(cat "$bldir/brightness")+0))
 max=$(($(cat "$bldir/max_brightness")+0))
+if [[ $max = "7" ]]; then
+	exit
+fi
 mod="$1"
 case "$mod" in
 	+|-)
