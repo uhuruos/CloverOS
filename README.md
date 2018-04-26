@@ -119,8 +119,6 @@ This disables the binhost and uses Portage's ebuilds for packages. Now you can e
 * [What is CloverOS?](#what-is-cloveros)
 * [How do I install systemd/avahi/pulseaudio?](#how-do-i-install-systemdavahipulseaudio)
 * [It doesn't boot after installation](#it-doesnt-boot-after-installation)
-* [Steam doesn't install](#steam-doesnt-install)
-* [Steam doesn't work anymore](#steam-doesnt-work-anymore)
 * [Nvidia card crashes on boot with a green screen](#nvidia-card-crashes-on-boot-with-a-green-screen)
 * [Installing proprietary Nvidia drivers](#installing-proprietary-nvidia-drivers)
 * [Virtualbox doesn't work or any package that has a kernel module](#virtualbox-doesnt-work-or-any-package-that-has-a-kernel-module)
@@ -165,9 +163,6 @@ Switch to source and then emerge
 
 ### It doesn't boot after installation
 Take out your boot usb/cd.
-
-### Steam doesn't open anymore
-Run `rm -R ~/.steam/ ~/.steampath ~/.steampid` before running `steam`.
 
 ### Nvidia card crashes on boot with a green screen
 /etc/modprobe.d/blacklist.conf:
