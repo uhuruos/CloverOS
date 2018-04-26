@@ -104,7 +104,7 @@ AddToMenu MenuFvwmRoot Applications Title
 + "wifi" Exec sudo rc-service wpa_supplicant start & wpa_gui
 + "firefox" Exec firefox
 + "smplayer" Exec smplayer
-+ "porthole" Exec porthole
++ "porthole" Exec sudo porthole
 + "emacs" Exec emacs
 + "gimp" Exec gimp
 + "xarchiver" Exec xarchiver
