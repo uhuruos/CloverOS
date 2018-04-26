@@ -66,7 +66,6 @@ x11-wm/icewm -minimal
 media-sound/ncmpc help-screen artist-screen chat-screen colors key-screen lirc lyrics-screen mouse search-screen song-screen
 media-sound/beets convert discogs lastgenre lastimport bpd chroma mpdstats thumbnails web
 media-sound/moc ffmpeg
-www-client/uget aria2
 media-libs/waifu2x-converter-cpp models
 app-laptop/tlp tlp_suggests
 app-emulation/fuse sdl joystick

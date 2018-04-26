@@ -166,11 +166,8 @@ Switch to source and then emerge
 ### It doesn't boot after installation
 Take out your boot usb/cd.
 
-### Steam doesn't install
-Run `STEAM_PLATFORM=0 steam` for the first run.
-
-### Steam doesn't work anymore
-Run `rm -R ~/.steam*` before every time you run `steam`.
+### Steam doesn't open anymore
+Run `rm -R ~/.steam/ ~/.steampath ~/.steampid` before running `steam`.
 
 ### Nvidia card crashes on boot with a green screen
 /etc/modprobe.d/blacklist.conf:
