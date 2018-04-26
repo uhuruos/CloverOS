@@ -676,3 +676,9 @@ dev-python/phonenumbers
 dev-python/django-otp
 dev-python/django-formtools
 dev-python/django-otp-yubikey
+# required by jenkinsapi (argument)
+=dev-python/jenkinsapi-0.2.29 ~amd64
+# required by dev-python/jenkins-webapi (argument)
+=dev-python/jenkins-webapi-0.5.0 ~amd64
+# required by jenkins-bin (argument)
+=dev-util/jenkins-bin-2.116 ~amd64
