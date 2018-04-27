@@ -1,5 +1,6 @@
 #temporary
 =xfce-extra/xfce4-indicator-plugin-2.3.4
+www-client/firefox
 
 #overlays
 dev-util/google-perftools::farmboy0
@@ -75,3 +76,5 @@ games-emulation/rpcs3::stefantalpalaru
 dev-lang/python::stefantalpalaru
 media-sound/mumble::booboo
 net-libs/nodejs::gentoo
+app-shells/push::pg_overlay
+x11-misc/lightdm::jorgicio
