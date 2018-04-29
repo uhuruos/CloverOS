@@ -79,3 +79,6 @@ net-libs/nodejs::gentoo
 app-shells/push::pg_overlay
 x11-misc/lightdm::jorgicio
 app-shells/quoter::pg_overlay
+x11-wm/notion::oboeverlay
+dev-python/audioread::oboeverlay
+dev-python/pyacoustid::oboeverlay
