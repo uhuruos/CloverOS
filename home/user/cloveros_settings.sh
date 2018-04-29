@@ -43,7 +43,6 @@ v) Install Virtualbox/VMWare drivers
 c) Update Portage config from binhost
 m) Revert to default /etc/portage/make.conf
 n) Install proprietary Nvidia drivers
-g) Fix Nvidia doesn't boot problem
 q) Exit"
 	read -erp "Select option: " -n 1 choice
 	echo
@@ -354,23 +353,17 @@ case "$choice" in
 		echo "./cloveros_settings.sh 4"
 		echo "sudo emerge nvidia-drivers"
 		echo 'sudo depmod "$kernelversion-gentoo"'
-		echo "sudo nvidia-xconfig"
 		echo "sudo eselect opengl set nvidia"
 		echo "sudo eselect opencl set nvidia"
-		echo "sudo sh -c 'echo \"blacklist nouveau\" >> /etc/modprobe.d/blacklist.conf'"
+		echo "sudo sh -c 'echo -e \"blacklist nouveau\nblacklist vga16fb\nblacklist rivafb\nblacklist nvidiafb\nblacklist rivatv\" >> /etc/modprobe.d/blacklist.conf'"
 		sleep 1
 		./cloveros_settings.sh 4
 		sudo emerge nvidia-drivers
 		sudo depmod "$kernelversion-gentoo"
-		sudo nvidia-xconfig
 		sudo eselect opengl set nvidia
 		sudo eselect opencl set nvidia
-		sudo sh -c 'echo "blacklist nouveau" >> /etc/modprobe.d/blacklist.conf'
+		sudo sh -c 'echo -e "blacklist nouveau\nblacklist vga16fb\nblacklist rivafb\nblacklist nvidiafb\nblacklist rivatv" >> /etc/modprobe.d/blacklist.conf'
 		echo -e "\nNvidia drivers installed, please reboot.\nCheck https://wiki.gentoo.org/wiki/NVidia/nvidia-drivers for more info"
-		;;
-
-	g)
-		echo "In progress. See https://gitgud.io/cloveros/cloveros/#nvidia-card-crashes-on-boot-with-a-green-screen"
 		;;
 
 	q)

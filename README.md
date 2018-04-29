@@ -186,7 +186,6 @@ Make sure your kernel is up to date.
 ```
 sudo emerge nvidia-drivers
 sudo depmod -a
-sudo nvidia-xconfig
 sudo eselect opengl set nvidia
 sudo eselect opencl set nvidia
 sudo sh -c 'echo \"blacklist nouveau\" >> /etc/modprobe.d/blacklist.conf'
