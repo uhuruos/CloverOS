@@ -110,6 +110,7 @@ app-mobilephone/heimdall
 app-office/calligra
 app-office/libreoffice
 app-office/orage
+app-office/scribus
 app-office/texmaker
 app-office/texstudio
 app-portage/cpuid2cpuflags
@@ -480,7 +481,6 @@ media-fonts/wqy-microhei
 media-fonts/wqy-zenhei
 media-fonts/x11fonts-jmk
 media-fonts/zh-kcfonts
-media-gfx/ahoviewer
 media-gfx/apngasm
 media-gfx/apngdis
 media-gfx/blender
@@ -868,6 +868,7 @@ x11-misc/nitrogen
 x11-misc/obmenu
 x11-misc/parcellite
 x11-misc/pcmanfm
+x11-misc/polybar
 x11-misc/qt5ct
 x11-misc/redshift
 x11-misc/rofi
