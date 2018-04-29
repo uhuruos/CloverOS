@@ -202,7 +202,6 @@ media-libs/gd truetype fontconfig
 sys-libs/zlib minizip
 media-libs/libpng apng
 media-libs/flac ogg
-app-portage/layman subversion
 net-analyzer/rrdtool perl graph
 media-sound/lmms alsa fluidsynth ogg portaudio sdl stk qt5
 app-admin/testdisk ntfs

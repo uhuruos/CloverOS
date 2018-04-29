@@ -524,6 +524,7 @@ media-libs/vapoursynth
 media-libs/waifu2x-converter-cpp
 media-plugins/alsa-plugins
 media-plugins/gkrellmpc
+media-plugins/gst-plugins-oss
 media-plugins/vapoursynth-plugins-meta
 media-sound/alsa-utils
 media-sound/amsynth
