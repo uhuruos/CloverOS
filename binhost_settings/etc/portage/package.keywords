@@ -4,11 +4,11 @@
 x11-wm/enlightenment # old
 dev-libs/efl # old
 x11-terms/terminology # old
+media-fonts/vlgothic # old
 net-p2p/mldonkey # stable doesn't build
 media-sound/mumble ** # qt5
 media-sound/murmur ** # qt5
 app-laptop/tp_smapi # requested
-media-fonts/vlgothic # old
 net-p2p/retroshare # needs latest
 net-misc/youtube-dl # needs latest
 www-client/firefox
@@ -22,6 +22,8 @@ x11-drivers/nvidia-drivers
 =media-libs/zimg-2.7.4
 #sway
 =dev-libs/json-c-0.12.1
+#retroarch
+media-libs/vulkan-loader
 #libressl
 dev-libs/libressl:0/44
 media-libs/opusfile
