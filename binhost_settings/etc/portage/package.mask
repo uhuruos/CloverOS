@@ -1,9 +1,3 @@
-#temporary
-=xfce-extra/xfce4-indicator-plugin-2.3.4
-www-client/firefox
-net-libs/nodejs::gentoo
-
-#overlays
 */*::0x4d4c
 */*::4nykey
 */*::abendbrot
@@ -22,7 +16,6 @@ net-libs/nodejs::gentoo
 */*::oboeverlay
 */*::palemoon
 */*::pg_overlay
-*/*::pinkpieea
 */*::raiagent
 */*::rasdark
 */*::science
@@ -31,3 +24,8 @@ net-libs/nodejs::gentoo
 */*::torbrowser
 */*::vampire
 */*::vapoursynth
+
+#temporary
+=xfce-extra/xfce4-indicator-plugin-2.3.4
+www-client/firefox
+net-libs/nodejs::gentoo
