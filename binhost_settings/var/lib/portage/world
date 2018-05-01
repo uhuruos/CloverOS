@@ -806,6 +806,7 @@ sys-process/iotop
 sys-process/lsof
 sys-process/parallel
 virtual/ffmpeg
+virtual/wine
 www-apps/otrs
 www-apps/trac
 www-client/chromium
