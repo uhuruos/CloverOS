@@ -30,6 +30,7 @@ wget https://gitgud.io/cloveros/cloveros/raw/master/binhost_settings/etc/portage
 wget https://gitgud.io/cloveros/cloveros/raw/master/binhost_settings/etc/portage/package.keywords -O /etc/portage/package.keywords
 wget https://gitgud.io/cloveros/cloveros/raw/master/binhost_settings/etc/portage/package.license -O /etc/portage/package.license
 wget https://gitgud.io/cloveros/cloveros/raw/master/binhost_settings/etc/portage/package.mask -O /etc/portage/package.mask
+wget https://gitgud.io/cloveros/cloveros/raw/master/binhost_settings/etc/portage/package.unmask -O /etc/portage/package.unmask
 wget https://gitgud.io/cloveros/cloveros/raw/master/binhost_settings/etc/portage/make.conf -O /etc/portage/make.conf
 mkdir /etc/portage/env
 wget https://gitgud.io/cloveros/cloveros/raw/master/binhost_settings/etc/portage/env/{no-lto,no-lto-graphite,no-lto-graphite-ofast,no-lto-o3,no-lto-ofast,no-o3,no-ofast,size} -P /etc/portage/env/
