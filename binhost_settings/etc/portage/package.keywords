@@ -25,7 +25,6 @@ x11-drivers/nvidia-drivers
 #retroarch
 media-libs/vulkan-loader
 #libressl
-dev-libs/libressl:0/44
 media-libs/opusfile
 dev-libs/cyrus-sasl
 sci-electronics/eagle
@@ -284,11 +283,9 @@ sys-fs/jmtpfs
 media-gfx/ahoviewer
 net-nntp/sabnzbd
 media-gfx/flameshot
-sys-fs/zfs-kmod
-sys-fs/zfs
-sys-kernel/spl
 app-mobilephone/heimdall
 dev-util/jenkins-bin
+dev-db/dbeaver-bin
 
 #dependencies
 #tlp
@@ -679,5 +676,3 @@ dev-python/phonenumbers
 dev-python/django-otp
 dev-python/django-formtools
 dev-python/django-otp-yubikey
-# required by dbeaver-bin (argument)
-=dev-db/dbeaver-bin-5.0.2 ~amd64
