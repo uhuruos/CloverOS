@@ -466,7 +466,7 @@ Start playing something, then run `obs`, then add Audio Capture Device (ALSA) to
 ### Install Quake 3
 ```
 sudo emerge quake3
-wget "https://github.com/nrempel/q3-server/blob/master/baseq3/pak0.pk3?raw=true" -O /usr/share/games/quake3/baseq3/pak0.pk3
+sudo wget "https://github.com/nrempel/q3-server/blob/master/baseq3/pak0.pk3?raw=true" -O /usr/share/games/quake3/baseq3/pak0.pk3
 ```
 
 ### What is Gentoo?
