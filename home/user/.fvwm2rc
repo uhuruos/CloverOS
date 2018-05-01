@@ -36,7 +36,7 @@ Key Up A CS GotoPage +0p -1p
 OpaqueMoveSize unlimited
 
 Style * BorderWidth 1, HandleWidth 1
-
+Style * Lenience
 Style * ResizeOpaque
 
 EdgeScroll 0 0
