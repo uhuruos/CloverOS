@@ -129,6 +129,7 @@ This disables the binhost and uses Portage's ebuilds for packages. Now you can e
 * [Emerge error relating to openssl](#emerge-error-relating-to-openssl)
 * [GPU passthrough example](#gpu-passthrough-example)
 * [Generate Wbar config from installed programs](#generate-wbar-config-from-installed-programs)
+* [Change FVWM titlebar colors](#change-fvwm-titlebar-colors)
 * [Thumbnail file picker with Firefox](#thumbnail-file-picker-with-firefox)
 * [KDE theme in qt5 programs without KDE](#kde-theme-in-qt5-programs-without-kde)
 * [Vertical tabs in Firefox 57+](#vertical-tabs-in-firefox-57)
@@ -266,6 +267,13 @@ First: `sudo emerge imagemagick && mkdir ~/.wbaricons`
 ```
 grep -hE '^Name=|^Icon=|^Exec=' $(grep -rl "^Icon=" --exclude={compton,brasero,steam,qmmp,gcr-viewer}.desktop /usr/share/applications/) | sed 's/Name=/t: /; s/Exec=/c: /; s/Icon=/i: /; s#\(i: \)\(.*\)#i: .wbaricons/\2.xpm#; 0~3 a\\' >> .wbar && ls -v1 /usr/share/pixmaps/*.{png,ico} /usr/share/icons/hicolor/*/apps/*.* /usr/share/pixmaps/*.{xpm,svg} | sed -r 's#(.*/)(.*)(\..*)#convert \1\2\3 ~/.wbaricons/\2.xpm#' | xargs -I{} sh -c {}
 ```
+
+### Change FVWM titlebar colors
+```
+color=69aEb6; sed -i "s/\(Style \* BackColor \).*/\1#$color/; s/\(Style \* HilightBack \).*/\1#$color/; s/\(Colorset 1 bg #\)......\(.*\)/\1$color\2/" ~/.fvwm2rc && killall fvwm && fvwm &
+```
+
+Alternatively, replace every instance of #056839 (green) manually.
 
 ### Thumbnail file picker with Firefox
 ```
