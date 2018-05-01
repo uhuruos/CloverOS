@@ -5,6 +5,7 @@ games-emulation/sdlmame::jorgicio
 games-emulation/yabause::jorgicio
 games-fps/gzdoom::jorgicio
 games-util/steam-launcher::steam-overlay
+www-client/firefox-kde-opensuse::bobwya
 kde-misc/kmozillahelper::bobwya
 media-fonts/gohufont::4nykey
 media-fonts/tewi-font::4nykey

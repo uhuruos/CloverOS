@@ -75,7 +75,6 @@ app-emulation/virt-manager
 app-emulation/virtualbox
 app-emulation/virtualbox-additions
 app-emulation/virtualbox-guest-additions
-app-emulation/wine-any
 app-emulation/winetricks
 app-forensics/aide
 app-i18n/fcitx-anthy
@@ -148,7 +147,7 @@ dev-db/redis
 dev-db/rethinkdb
 dev-games/ogre
 dev-haskell/haskell-platform
-dev-java/icedtea:8
+dev-java/icedtea
 dev-java/junit
 dev-java/maven-bin
 dev-lang/R
@@ -793,7 +792,7 @@ sys-kernel/bliss-initramfs
 sys-kernel/dkms
 sys-kernel/dracut
 sys-kernel/genkernel
-sys-kernel/gentoo-sources:4.16.3
+sys-kernel/gentoo-sources
 sys-kernel/linux-firmware
 sys-power/acpi_call
 sys-power/acpitool
@@ -1049,7 +1048,6 @@ x11-themes/gtk-engines-rezlooks
 x11-themes/gtk-engines-ubuntulooks
 x11-themes/gtk-engines-unico
 x11-themes/gtk-engines-xfce
-x11-themes/gtk-engines-xfce:0
 x11-themes/gtk-theme-switch
 x11-themes/haematite-xcursors
 x11-themes/hicolor-icon-theme
