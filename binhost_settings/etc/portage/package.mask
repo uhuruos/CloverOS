@@ -1,6 +1,7 @@
 #temporary
 =xfce-extra/xfce4-indicator-plugin-2.3.4
 www-client/firefox
+net-libs/nodejs::gentoo
 
 #overlays
 */*::0x4d4c
@@ -11,6 +12,7 @@ www-client/firefox
 */*::deadbeef-overlay
 */*::dotnet
 */*::elementary
+*/*::erayd
 */*::eroen
 */*::farmboy0
 */*::fkmclane

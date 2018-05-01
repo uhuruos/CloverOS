@@ -142,6 +142,7 @@ app-text/texlive
 app-text/tree
 app-text/zathura
 app-text/zathura-meta
+dev-db/dbeaver-bin
 dev-db/postgresql
 dev-db/redis
 dev-db/rethinkdb
