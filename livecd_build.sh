@@ -46,7 +46,7 @@ echo 'binhost_mirrors=\$PORTAGE_BINHOST",https://useast.cloveros.ga,https://uswe
 FETCHCOMMAND_HTTPS="sh -c \"aria2c -x2 -s99 -j99 -k1M -m1 -t2 --connect-timeout=2 --lowest-speed-limit=25K --dir \"\\\${DISTDIR}\" -o \"\\\${FILE}\" \\\\\\\$(sed -e \"s#,#\"\\\${DISTDIR}/\\\${FILE}\"\"\ \"#g\" -e \"s#"\$PKGDIR"##g\" -e \"s#.partial##g\" <<< "\$binhost_mirrors") && aria2c --dir \"\\\${DISTDIR}\" -o \"\\\${FILE}.asc\" \\\\\\\$(sed \"s#cloveros.ga/#cloveros.ga/s/signatures/#\" <<< \"\\\${URI}.asc\") && gpg --verify \"\\\${DISTDIR}/\\\${FILE}.asc\" \"\\\${DISTDIR}/\\\${FILE}\"; rm \"\\\${DISTDIR}/\\\${FILE}.asc\"\""' >> /etc/portage/make.conf
 
 #emerge gentoo-sources genkernel
-#wget http://liquorix.net/sources/4.15/config.amd64
+#wget http://liquorix.net/sources/4.16/config.amd64
 #genkernel --kernel-config=config.amd64 all
 
 wget https://cloveros.ga/s/kernel.tar.xz
