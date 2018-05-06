@@ -11,6 +11,7 @@ games-emulation/rpcs3 joystick -vulkan
 sys-block/open-isns -ssl
 
 #preference
+dev-libs/beignet ocl-icd ocl20
 app-mobilephone/heimdall qt5
 xfce-base/thunar udisks
 x11-misc/nitrogen nls
