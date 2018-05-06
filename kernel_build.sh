@@ -10,7 +10,7 @@ cd /usr/src/linux/
 wget https://liquorix.net/sources/4.16/config.amd64
 sed -i "s/CONFIG_FW_LOADER_USER_HELPER_FALLBACK=y/CONFIG_FW_LOADER_USER_HELPER_FALLBACK=n/; s/CONFIG_FW_LOADER_USER_HELPER=y/CONFIG_FW_LOADER_USER_HELPER=n/" config.amd64
 echo -e "CONFIG_SND_HDA_INPUT_BEEP=y\nCONFIG_SND_HDA_INPUT_BEEP_MODE=0" >> config.amd64
-genkernel --kernel-config=config.amd64 --luks --lvm all
+MODULES_CRYPTO="sha256_generic cbc aes_generic aes-x86_64 aesni-intel xts crc32c" genkernel --kernel-config=config.amd64 --luks --lvm all
 make clean
 
 mkdir -p /usr/portage/packages/s/
@@ -28,7 +28,7 @@ wget https://linux-libre.fsfla.org/pub/linux-libre/releases/$kernelversion-gnu/d
 wget https://linux-libre.fsfla.org/pub/linux-libre/releases/$kernelversion-gnu/deblob-check
 chmod +x deblob-$kernelmajversion deblob-check
 PYTHON="python2.7" ./deblob-$kernelmajversion
-genkernel --kernel-config=config.amd64 --kerneldir=/usr/src/linux-$kernelversion-gentoo-gnu --luks --lvm all
+MODULES_CRYPTO="sha256_generic cbc aes_generic aes-x86_64 aesni-intel xts crc32c" genkernel --kernel-config=config.amd64 --kerneldir=/usr/src/linux-$kernelversion-gentoo-gnu --luks --lvm all
 make clean
 
 rm /usr/portage/packages/s/kernel-libre.tar.xz

@@ -286,6 +286,7 @@ media-gfx/flameshot
 app-mobilephone/heimdall
 dev-util/jenkins-bin
 dev-db/dbeaver-bin
+x11-misc/polybar
 
 #dependencies
 #tlp

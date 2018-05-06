@@ -29,7 +29,7 @@ dev-lang/perl ithreads
 sys-apps/iproute2 -minimal
 net-p2p/rtorrent-ps daemon
 kde-apps/dolphin thumbnail
-x11-misc/polybar github mpd i3wm
+x11-misc/polybar mpd i3wm
 x11-misc/rofi windowmode
 app-arch/peazip gtk
 x11-misc/wbar gtk

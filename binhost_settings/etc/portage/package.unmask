@@ -34,7 +34,6 @@ x11-libs/bamf::elementary
 x11-libs/vte::eroen
 x11-misc/i3blocks-gaps::0x4d4c
 x11-misc/lemonbar::fkmclane
-x11-misc/polybar::oboeverlay
 x11-terms/termite::eroen
 x11-themes/plank-theme-pantheon::elementary
 x11-wm/i3-gaps::oboeverlay
