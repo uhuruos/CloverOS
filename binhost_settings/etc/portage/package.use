@@ -113,7 +113,7 @@ media-libs/libvpx postproc
 mate-base/mate -extras
 mate-extra/mate-screensaver -pam
 app-benchmarks/i7z qt5
-media-video/vlc qt5 xml
+media-video/vlc qt5 xml projectm
 net-p2p/bitcoin-qt qt5
 media-video/avidemux qt5
 media-libs/avidemux-plugins qt5
@@ -129,7 +129,7 @@ sys-devel/distcc gtk crossdev
 media-video/handbrake gtk -fdk libav-aac
 media-sound/jack-audio-connection-kit cpudetection
 virtual/ffmpeg X sdl x264
-media-video/ffmpeg X openssl rubberband x265 libass vorbis ogg network vpx rtmp x264 aac wavpack opus mp3 sdl gme v4l webp theora xvid xcb cpudetection -opengl
+media-video/ffmpeg X rubberband x265 libass vorbis ogg network vpx rtmp x264 aac wavpack opus mp3 sdl gme v4l webp theora xvid xcb cpudetection -opengl
 media-gfx/fontforge X gtk
 media-gfx/graphviz X gtk pdf svg python perl
 app-crypt/veracrypt X
@@ -308,7 +308,7 @@ media-libs/libsdl2 X gles haptic
 games-emulation/mednafen debugger
 net-libs/libtorrent-rasterbar python
 x11-drivers/nvidia-drivers uvm
-media-video/vlc flac mp3
+media-video/vlc gnutls flac mp3
 media-libs/libvpx svc
 app-text/ghostscript-gpl cups
 media-gfx/pstoedit plotutils
