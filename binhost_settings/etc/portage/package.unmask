@@ -1,3 +1,4 @@
+x11-misc/i3blocks-gaps::0x4d4c
 <app-laptop/tlp-9999::tlp
 games-emulation/citra::vampire
 games-emulation/rpcs3::jm-overlay
@@ -32,11 +33,9 @@ www-client/waterfox-bin::rasdark
 www-servers/onionshare::torbrowser
 x11-libs/bamf::elementary
 x11-libs/vte::eroen
-x11-misc/i3blocks-gaps::0x4d4c
 x11-misc/lemonbar::fkmclane
 x11-terms/termite::eroen
 x11-themes/plank-theme-pantheon::elementary
-x11-wm/i3-gaps::oboeverlay
 dev-db/dbeaver-bin::erayd
 
 games-emulation/2048-libretro::abendbrot
