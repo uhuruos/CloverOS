@@ -677,3 +677,5 @@ dev-python/phonenumbers
 dev-python/django-otp
 dev-python/django-formtools
 dev-python/django-otp-yubikey
+# required by kafka-bin (argument)
+=net-misc/kafka-bin-1.1.0 ~amd64
