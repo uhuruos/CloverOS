@@ -752,6 +752,7 @@ sys-apps/paludis
 sys-apps/pmount
 sys-apps/pv
 sys-apps/qdirstat
+sys-apps/qingy
 sys-apps/ripgrep
 sys-apps/rng-tools
 sys-apps/sg3_utils
@@ -1171,7 +1172,6 @@ xfce-extra/xfce4-fsguard-plugin
 xfce-extra/xfce4-genmon-plugin
 xfce-extra/xfce4-gvfs-mount
 xfce-extra/xfce4-hdaps
-xfce-extra/xfce4-indicator-plugin
 xfce-extra/xfce4-kbdleds-plugin
 xfce-extra/xfce4-linelight-plugin
 xfce-extra/xfce4-mailwatch-plugin

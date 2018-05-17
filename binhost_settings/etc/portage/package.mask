@@ -25,6 +25,5 @@
 */*::vampire
 */*::vapoursynth
 
-#temporary
-=xfce-extra/xfce4-indicator-plugin-2.3.4
+=games-strategy/wesnoth-1.14.1
 net-libs/nodejs::gentoo

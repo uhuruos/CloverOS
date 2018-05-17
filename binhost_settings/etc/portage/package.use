@@ -157,8 +157,8 @@ media-libs/mesa -bindist opencl d3d9 llvm gallium osmesa gles1 gles2 openmax xa 
 dev-cpp/gtkmm X
 media-libs/clutter X
 dev-libs/weston xwayland
-dev-libs/efl X sound -opengl gles physics tslib xpm
-x11-wm/enlightenment X
+dev-libs/efl -wayland X sound physics tslib xpm
+x11-wm/enlightenment X -wayland
 x11-libs/gtk+ X
 x11-libs/libva X
 x11-libs/libXfont X freetype
@@ -238,6 +238,7 @@ media-sound/deadbeef aac adplug alac alsa cdda converter cover cover-imlib2 cove
 app-emulation/qemu sdl usb virgl
 
 #required
+sys-boot/grub mount
 xfce-base/thunar dbus
 gnome-base/gvfs udisks
 app-misc/anki python_targets_python3_6
