@@ -203,6 +203,7 @@ case "$choice" in
 		sudo emerge --depclean
 		sudo depmod "$kernelversion-gentoo"
 		./cloveros_settings.sh 9
+		echo -e "\nSystem updated."
 		;;
 
 	l)
