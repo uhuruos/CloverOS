@@ -16,6 +16,7 @@
 */*::oboeverlay
 */*::palemoon
 */*::pg_overlay
+*/*::pinkpieea
 */*::raiagent
 */*::rasdark
 */*::science

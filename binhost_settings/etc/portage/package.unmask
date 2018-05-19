@@ -1,7 +1,7 @@
 x11-misc/i3blocks-gaps::0x4d4c
 <app-laptop/tlp-9999::tlp
 games-emulation/citra::vampire
-games-emulation/rpcs3::jm-overlay
+games-emulation/rpcs3::pinkpieea
 games-emulation/sdlmame::jorgicio
 games-emulation/yabause::jorgicio
 games-fps/gzdoom::jorgicio
