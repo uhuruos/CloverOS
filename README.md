@@ -21,15 +21,15 @@ sudo emerge --depclean
 ### Updating config files after upgrading system (Optional)
 `sudo dispatch-conf`
 
-After you run it, it will show you the changes it's going to make:
+After you run it, it will show you the changes to config files it's going to make:
 
-q To exit without making changes
+q To quit without making changes
 
 u To update and make the changes
 
-z To disregard the changes
+z To zap and disregard the changes
 
-Warning: It will ask to modify the sudo settings back to default, just hit z there.
+Hit z if you're not sure or wish to keep your configuration files the same.
 
 ### Controlling fvwm
 Open Applications menu: right click on desktop
