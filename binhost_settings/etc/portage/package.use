@@ -1,16 +1,14 @@
 #temporary
-media-libs/libopenshot -imagemagick
-media-plugins/vapoursynth-tcanny -opencl
-media-plugins/vapoursynth-vstaambk -opencl
-media-plugins/vapoursynth-eedi3 -opencl
-media-plugins/vapoursynth-havsfunc -opencl
-media-gfx/digikam -panorama
-media-gfx/blender -opencl -cycles -openimageio -osl -opensubdiv tiff bullet dds elbeem game-engine openexr openmp tiff collada colorio ffmpeg fftw jemalloc llvm ndof openvdb player sdl sndfile valgrind
-games-simulation/openttd -openmedia
 sys-block/open-isns -ssl
 media-video/ffmpeg -opencl
+media-libs/libopenshot -imagemagick
+#media-plugins/vapoursynth-tcanny -opencl
+#media-plugins/vapoursynth-eedi3 -opencl
+media-plugins/vapoursynth-vstaambk -opencl
+media-plugins/vapoursynth-havsfunc -opencl
 
 #preference
+media-gfx/blender opencl cycles openimageio osl opensubdiv tiff bullet dds elbeem game-engine openexr openmp tiff collada colorio ffmpeg fftw jemalloc llvm ndof openvdb player sdl sndfile valgrind
 games-emulation/rpcs3 joystick
 sys-kernel/genkernel cryptsetup
 dev-libs/beignet ocl-icd ocl20
@@ -44,7 +42,7 @@ app-emulation/open-vm-tools modules
 media-gfx/graphicsmagick modules
 games-fps/redeclipse dedicated
 games-fps/enemy-territory dedicated
-games-simulation/openttd dedicated
+games-simulation/openttd dedicated -openmedia
 games-fps/nexuiz dedicated
 games-fps/darkplaces dedicated
 games-fps/quake3 dedicated
