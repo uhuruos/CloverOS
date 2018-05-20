@@ -4,6 +4,14 @@ media-libs/libopenshot -imagemagick
 media-plugins/vapoursynth-vstaambk -opencl
 media-plugins/vapoursynth-havsfunc -opencl
 
+#libressl
+media-video/ffmpeg openssl
+net-misc/curl curl_ssl_libressl -curl_ssl_openssl
+net-p2p/mktorrent -ssl
+net-libs/nodejs bundled-ssl
+net-misc/iputils -ssl
+net-voip/telepathy-gabble gnutls
+
 #preference
 games-emulation/yabause pic qt5
 media-gfx/blender opencl cycles openimageio osl opensubdiv tiff bullet dds elbeem game-engine openexr openmp tiff collada colorio ffmpeg fftw jemalloc llvm ndof openvdb player sdl sndfile valgrind
@@ -154,7 +162,7 @@ media-libs/mesa -bindist opencl d3d9 llvm gallium osmesa gles1 gles2 openmax xa 
 dev-cpp/gtkmm X
 media-libs/clutter X
 dev-libs/weston xwayland
-dev-libs/efl -wayland X sound physics tslib xpm -egl
+dev-libs/efl X sound harfbuzz physics tslib xpm -egl -wayland
 x11-wm/enlightenment X -wayland
 x11-libs/gtk+ X
 x11-libs/libva X
@@ -330,17 +338,6 @@ dev-libs/libxslt python
 x11-libs/wxGTK tiff
 net-libs/libdom xml
 dev-java/swt cairo
-
-#libressl
-media-video/ffmpeg openssl
-net-misc/curl curl_ssl_libressl -curl_ssl_openssl
-net-libs/c-client libressl chappa
-net-misc/iputils -ssl
-net-libs/nodejs bundled-ssl
-net-im/telepathy-connection-managers -msn -xmpp
-dev-libs/xmlsec nss
-net-p2p/mktorrent -ssl
-net-fs/samba -system-mitkrb5
 
 #wine
 x11-libs/libXinerama abi_x86_32
