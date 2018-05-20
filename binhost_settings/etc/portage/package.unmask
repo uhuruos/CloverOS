@@ -3,7 +3,6 @@ x11-misc/i3blocks-gaps::0x4d4c
 games-emulation/citra::vampire
 games-emulation/rpcs3::pinkpieea
 games-emulation/sdlmame::jorgicio
-games-emulation/yabause::jorgicio
 games-fps/gzdoom::jorgicio
 games-util/steam-launcher::steam-overlay
 www-client/firefox-kde-opensuse::bobwya
