@@ -4,21 +4,19 @@
 x11-wm/enlightenment # old
 dev-libs/efl # old
 x11-terms/terminology # old
-media-fonts/vlgothic # old
 net-p2p/mldonkey # stable doesn't build
-games-emulation/dolphin ** # stable doesn't build
 media-sound/mumble ** # qt5
 media-sound/murmur ** # qt5
 app-laptop/tp_smapi # requested
 net-p2p/retroshare # needs latest
 net-misc/youtube-dl # needs latest
+media-fonts/vlgothic # old
 www-client/firefox
 media-gfx/gimp
+media-libs/mesa
 sys-devel/gcc
 sys-kernel/gentoo-sources
 x11-drivers/nvidia-drivers
-#firefox
-=media-libs/libpng-1.6.34
 #vapoursynth
 =media-libs/zimg-2.7.4
 #sway
