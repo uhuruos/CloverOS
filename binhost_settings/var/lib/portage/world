@@ -91,6 +91,7 @@ app-misc/ckermit
 app-misc/cmatrix
 app-misc/colordiff
 app-misc/dtach
+app-misc/dvtm
 app-misc/fdupes
 app-misc/figlet
 app-misc/fslint
@@ -231,7 +232,6 @@ games-emulation/pcsx2
 games-emulation/pcsxr
 games-emulation/ppsspp
 games-emulation/retroarch
-games-emulation/rpcs3
 games-emulation/sdlmame
 games-emulation/snes9x
 games-emulation/stella
@@ -598,6 +598,7 @@ media-sound/umurmur
 media-sound/xmms2
 media-sound/xwax
 media-sound/yoshimi
+media-tv/kodi
 media-tv/plex-media-server
 media-video/aegisub
 media-video/avidemux

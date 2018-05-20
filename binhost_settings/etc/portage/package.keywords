@@ -6,6 +6,7 @@ dev-libs/efl # old
 x11-terms/terminology # old
 media-fonts/vlgothic # old
 net-p2p/mldonkey # stable doesn't build
+games-emulation/dolphin ** # stable doesn't build
 media-sound/mumble ** # qt5
 media-sound/murmur ** # qt5
 app-laptop/tp_smapi # requested
@@ -199,7 +200,7 @@ net-p2p/eiskaltdcpp **
 sys-block/sas3flash
 app-crypt/kencfs-plasma
 app-emulation/wine-any
-games-emulation/rpcs3
+games-emulation/rpcs3 **
 games-emulation/citra **
 dev-libs/sway
 x11-wm/bspwm
