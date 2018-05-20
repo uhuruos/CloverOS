@@ -290,6 +290,7 @@ dev-util/jenkins-bin
 dev-db/dbeaver-bin
 x11-misc/polybar
 net-misc/kafka-bin
+media-gfx/qimgv
 
 #dependencies
 #tlp
