@@ -9,7 +9,6 @@ mirrors=(
 	"https://uk.cloveros.ga"
 	"https://au.cloveros.ga"
 	"https://sea.cloveros.ga"
-	"https://cernet.mirrors.ustc.edu.cn/cloveros/"
 )
 
 kernelversion="4.16.3"
