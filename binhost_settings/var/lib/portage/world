@@ -271,6 +271,7 @@ dev-util/geany
 dev-util/geany-plugins
 dev-util/jenkins-bin
 dev-util/kdevelop
+dev-util/lldb
 dev-util/lxqt-build-tools
 dev-util/monodevelop
 dev-util/plan9port
