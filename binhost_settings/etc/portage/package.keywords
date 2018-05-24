@@ -324,7 +324,7 @@ app-portage/keyword-stat
 =app-text/extract_url-1.6.2 ~amd64
 =dev-util/lxqt-build-tools-0.4.0 ~amd64
 =dev-util/visual-regexp-3.1 ~amd64
-=dev-util/lldb-6.0.0 ~amd64
+dev-util/lldb
 =kde-misc/kio-locate-0.5.3-r1 ~amd64
 =kde-apps/kamoso-18.04.1 ~amd64
 =kde-misc/kio-gopher-0.1.99 ~amd64
@@ -336,7 +336,7 @@ app-portage/keyword-stat
 kde-misc/plasma-applet-weather-widget
 =media-plugins/gimp-lensfun-0.2.4 ~amd64
 =media-plugins/gimp-paint-studio-2.0-r1 ~amd64
-media-libs/fontconfig-ultimate **
+media-libs/fontconfig-ultimate
 =media-plugins/gimp-resynthesizer-2.0.3-r1 ~amd64
 =media-sound/mps-youtube-0.2.8 ~amd64
 =media-sound/teamspeak-client-bin-3.1.9 ~amd64

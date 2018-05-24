@@ -4,15 +4,6 @@ media-libs/libopenshot -imagemagick
 media-plugins/vapoursynth-vstaambk -opencl
 media-plugins/vapoursynth-havsfunc -opencl
 
-#libressl
-media-video/ffmpeg openssl
-net-misc/curl curl_ssl_libressl -curl_ssl_openssl
-net-libs/nodejs bundled-ssl
-net-voip/telepathy-gabble gnutls
-net-p2p/mktorrent -ssl
-net-misc/iputils -ssl
-dev-cpp/asio -ssl
-
 app-i18n/scim gtk3
 app-text/zathura-meta pdf cb djvu postscript
 media-sound/bluez-alsa aac hcitop
@@ -338,6 +329,16 @@ media-libs/clutter-gtk X
 net-analyzer/netperf demo
 dev-python/QtPy gui
 dev-libs/marisa python
+sys-devel/clang xml
+
+#libressl
+media-video/ffmpeg openssl
+net-misc/curl curl_ssl_libressl -curl_ssl_openssl
+net-libs/nodejs bundled-ssl
+net-voip/telepathy-gabble gnutls
+net-p2p/mktorrent -ssl
+net-misc/iputils -ssl
+dev-cpp/asio -ssl
 
 #wine
 x11-libs/libXinerama abi_x86_32

@@ -66,7 +66,6 @@ media-fonts/gohufont::4nykey
 media-fonts/tewi-font::4nykey
 media-plugins/gimp-plugin-bimp::4nykey
 app-shells/zsh-syntax-highlighting::4nykey
-media-libs/fontconfig-ultimate::4nykey
 
 media-plugins/deadbeef-plugins-meta::deadbeef-overlay
 media-sound/deadbeef::deadbeef-overlay

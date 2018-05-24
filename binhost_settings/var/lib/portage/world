@@ -765,7 +765,6 @@ net-analyzer/iftop
 net-analyzer/iptraf-ng
 net-analyzer/mate-netspeed
 net-analyzer/mtr
-net-analyzer/munin
 net-analyzer/nagios
 net-analyzer/nagstamon
 net-analyzer/nethogs
