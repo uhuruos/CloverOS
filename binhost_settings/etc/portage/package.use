@@ -240,7 +240,7 @@ media-sound/mixxx shout aac ffmpeg hid mp3 mp4 wavpack
 www-client/w3m X imlib gpm
 app-office/texstudio video
 www-client/links fbcon gpm
-media-gfx/imagemagick png
+media-gfx/imagemagick png hdri
 media-gfx/feh exif curl
 x11-terms/rxvt-unicode -vanilla alt-font-width xft 256-color blink unicode3
 net-analyzer/vnstat gd

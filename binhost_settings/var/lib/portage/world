@@ -208,13 +208,13 @@ app-text/unrtf
 app-text/wgetpaste
 app-text/zathura
 app-text/zathura-meta
-app-vim/editorconfig-vim
 app-vim/extra-syntax
 app-vim/vim-tmux
 dev-db/dbeaver-bin
 dev-db/postgresql
 dev-db/redis
 dev-db/rethinkdb
+dev-dotnet/nuget
 dev-games/ogre
 dev-games/openscenegraph
 dev-haskell/haskell-platform
@@ -228,6 +228,7 @@ dev-lang/open-cobol
 dev-lang/php
 dev-lang/rust
 dev-lang/scala
+dev-lang/tauthon
 dev-libs/amdgpu-pro-opencl
 dev-libs/beignet
 dev-libs/libisoburn
@@ -241,6 +242,7 @@ dev-python/ansi2html
 dev-python/cgroup-utils
 dev-python/django-two-factor-auth
 dev-python/docker-py
+dev-python/jsbeautifier
 dev-python/pip
 dev-python/potr
 dev-python/py-cpuinfo
@@ -254,6 +256,7 @@ dev-qt/qt-creator
 dev-ruby/nokogiri
 dev-util/android-sdk-update-manager
 dev-util/android-tools
+dev-util/android-udev-rules
 dev-util/bless
 dev-util/catalyst
 dev-util/catfish
@@ -272,6 +275,7 @@ dev-util/pycharm-community
 dev-util/pycharm-professional
 dev-util/re2c
 dev-util/regexxer
+dev-util/spirv-cross
 dev-util/staruml-bin
 dev-util/strace
 dev-util/valgrind

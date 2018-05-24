@@ -11,12 +11,15 @@
 */*::farmboy0
 */*::fkmclane
 */*::flatpak-overlay
+*/*::frabjous
+*/*::genthree
 */*::haskell
 */*::jorgicio
 #*/*::libressl
 */*::linxon
 */*::oboeverlay
 */*::palemoon
+*/*::pentoo
 */*::pg_overlay
 */*::pinkpieea
 */*::poly-c
@@ -25,6 +28,7 @@
 */*::science
 */*::sk-overlay
 */*::steam-overlay
+*/*::stefantalpalaru
 */*::tlp
 */*::torbrowser
 */*::vampire

@@ -1,5 +1,17 @@
+dev-cvs/gitkraken-bin::frabjous
+
+dev-util/android-udev-rules::genthree
+dev-util/spirv-cross::genthree
+
+dev-python/jsbeautifier::pentoo
+dev-python/editorconfig::pentoo
+
+dev-lang/tauthon::stefantalpalaru
+
 dev-dotnet/nuget::dotnet
 dev-dotnet/xdt-for-monodevelop::dotnet
+dev-util/monodevelop::dotnet
+dev-dotnet/referenceassemblies-pcl::dotnet
 
 app-portage/keyword-stat::haskell
 
@@ -233,3 +245,9 @@ media-plugins/vapoursynth-waifu2x-w2xc::vapoursynth
 media-plugins/vapoursynth-wwxd::vapoursynth
 media-plugins/vapoursynth-yadifmod::vapoursynth
 media-plugins/vapoursynth-znedi3::vapoursynth
+media-plugins/vapoursynth-oyster::vapoursynth
+media-plugins/vapoursynth-plum::vapoursynth
+media-plugins/vapoursynth-nnedi3cl::vapoursynth
+media-plugins/vapoursynth-qrcodesource::vapoursynth
+media-plugins/vapoursynth-vine::vapoursynth
+media-plugins/vapoursynth-knlmeanscl::vapoursynth
