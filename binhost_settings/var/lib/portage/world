@@ -388,6 +388,7 @@ kde-frameworks/breeze-icons-rcc
 kde-misc/basket
 kde-misc/kdeconnect
 kde-misc/kdirstat
+kde-misc/kio-stash
 kde-misc/kmozillahelper
 kde-misc/krename
 kde-misc/krusader
@@ -657,6 +658,7 @@ media-plugins/gimp-resynthesizer
 media-plugins/gkrellmpc
 media-plugins/gst-plugins-oss
 media-plugins/vapoursynth-plugins-meta
+media-plugins/vocoder-ladspa
 media-sound/alsa-tools
 media-sound/alsa-utils
 media-sound/amsynth
@@ -961,6 +963,7 @@ sys-fs/simple-mtpfs
 sys-fs/squashfs-tools
 sys-fs/udiskie
 sys-fs/zfs
+sys-fs/zfs-auto-snapshot
 sys-kernel/bliss-initramfs
 sys-kernel/dkms
 sys-kernel/dracut
