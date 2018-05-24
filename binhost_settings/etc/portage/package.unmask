@@ -1,3 +1,19 @@
+dev-dotnet/nuget::dotnet
+dev-dotnet/xdt-for-monodevelop::dotnet
+
+app-portage/keyword-stat::haskell
+
+x11-themes/sddm-gentoo-black-theme::poly-c
+
+net-misc/youtube-dl-gui::linxon
+sys-apps/psensor::linxon
+net-misc/youtube-comment-downloader::linxon
+net-misc/ripme::linxon
+dev-python/twodict::linxon
+app-misc/fsearch::linxon
+
+net-irc/hexchat-otr::sk-overlay
+
 x11-misc/i3blocks-gaps::0x4d4c
 
 <app-laptop/tlp-9999::tlp
@@ -11,6 +27,10 @@ games-emulation/sdlmame::jorgicio
 games-fps/gzdoom::jorgicio
 media-gfx/flameshot::jorgicio
 media-video/flowblade::jorgicio
+media-video/vidcutter::jorgicio
+media-plugins/gimp-paint-studio::jorgicio
+net-im/telegram-cli::jorgicio
+x11-plugins/telegram-purple::jorgicio
 
 games-util/steam-launcher::steam-overlay
 
@@ -19,6 +39,8 @@ kde-misc/kmozillahelper::bobwya
 
 media-fonts/gohufont::4nykey
 media-fonts/tewi-font::4nykey
+media-plugins/gimp-plugin-bimp::4nykey
+app-shells/zsh-syntax-highlighting::4nykey
 
 media-plugins/deadbeef-plugins-meta::deadbeef-overlay
 media-sound/deadbeef::deadbeef-overlay
@@ -50,6 +72,7 @@ www-client/torbrowser-launcher::torbrowser
 www-servers/onionshare::torbrowser
 
 www-client/waterfox-bin::rasdark
+app-shells/fzf::rasdark
 
 x11-libs/bamf::elementary
 
@@ -58,6 +81,7 @@ x11-terms/termite::eroen
 
 dev-db/dbeaver-bin::erayd
 
+kde-plasma/plasma-applet-active-window-control::abendbrot
 games-emulation/2048-libretro::abendbrot
 games-emulation/4do-libretro::abendbrot
 games-emulation/beetle-psx-libretro::abendbrot

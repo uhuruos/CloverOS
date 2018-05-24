@@ -11,6 +11,7 @@ app-laptop/tp_smapi # requested
 net-p2p/retroshare # needs latest
 net-misc/youtube-dl # needs latest
 media-fonts/vlgothic # old
+media-gfx/mypaint
 www-client/firefox
 media-gfx/gimp
 media-libs/mesa
@@ -135,7 +136,7 @@ sys-apps/ripgrep
 media-sound/puddletag
 sci-biology/foldingathome
 app-arch/brotli
-net-vpn/zeronet **
+net-vpn/zeronet
 dev-db/rethinkdb
 www-client/waterfox-bin
 net-p2p/go-ipfs-bin
@@ -289,6 +290,31 @@ dev-db/dbeaver-bin
 x11-misc/polybar
 net-misc/kafka-bin
 media-gfx/qimgv
+net-misc/electron-cash
+net-analyzer/flent
+media-video/vidcutter
+net-misc/electrum-ltc
+app-arch/wimlib
+app-admin/consul
+app-admin/go-updater
+app-editors/wxhexeditor
+app-admin/clsync
+app-arch/tardelta
+dev-python/cgroup-utils
+app-misc/ddccontrol
+app-misc/ddcutil
+app-misc/abduco
+app-misc/nnn
+app-misc/icdiff
+app-portage/diffmask
+app-portage/fquery
+app-mobilephone/wammu
+app-portage/gpyutils
+dev-util/android-sdk-update-manager
+dev-python/py-cpuinfo
+dev-util/clinfo
+app-misc/fsearch
+app-portage/keyword-stat
 
 #dependencies
 #tlp
@@ -678,3 +704,160 @@ dev-python/phonenumbers
 dev-python/django-otp
 dev-python/django-formtools
 dev-python/django-otp-yubikey
+
+# required by app-text/master-pdf-editor (argument)
+=app-text/master-pdf-editor-4.3.82 ~amd64
+# required by app-vim/editorconfig-vim (argument)
+=app-vim/editorconfig-vim-0.3.3-r2 ~amd64
+# required by app-shells/thefuck (argument)
+=app-shells/thefuck-3.26 ~amd64
+# required by dev-java/android-util (argument)
+=dev-java/android-util-4.1.1.4 ~amd64
+# required by app-shells/rust-zshcomp (argument)
+=app-shells/rust-zshcomp-1_beta20150411 ~amd64
+# required by app-shells/tmux-bash-completion (argument)
+=app-shells/tmux-bash-completion-9999 **
+# required by app-text/extract_url (argument)
+=app-text/extract_url-1.6.2 ~amd64
+=dev-util/lxqt-build-tools-0.4.0 ~amd64
+# required by dev-util/visual-regexp (argument)
+=dev-util/visual-regexp-3.1 ~amd64
+# required by dev-util/lldb (argument)
+=dev-util/lldb-6.0.0 ~amd64
+=kde-misc/kio-locate-0.5.3-r1 ~amd64
+# required by kde-apps/kamoso (argument)
+=kde-apps/kamoso-18.04.1 ~amd64
+# required by kde-misc/kio-gopher (argument)
+=kde-misc/kio-gopher-0.1.99 ~amd64
+# required by kde-misc/kwebkitpart (argument)
+=kde-misc/kwebkitpart-1.4.0_pre20180406 ~amd64
+# required by kde-misc/kio-stash (argument)
+=kde-misc/kio-stash-1.0 ~amd64
+=kde-plasma/plasma-applet-active-window-control-1.7.3 ~amd64
+# required by kde-misc/plasma-applet-network-monitor (argument)
+=kde-misc/plasma-applet-network-monitor-1.7.3 ~amd64
+# required by media-plugins/gimp-plugin-bimp (argument)
+=media-plugins/gimp-plugin-bimp-1.18 ~amd64
+# required by kde-misc/plasma-applet-weather-widget (argument)
+=kde-misc/plasma-applet-weather-widget-1.6.10 ~amd64
+# required by media-plugins/gimp-lensfun (argument)
+=media-plugins/gimp-lensfun-0.2.4 ~amd64
+# required by media-plugins/gimp-paint-studio (argument)
+=media-plugins/gimp-paint-studio-2.0-r1 ~amd64
+# required by media-libs/fontconfig-ultimate (argument)
+=media-libs/fontconfig-ultimate-2015.08.01 ~amd64
+=media-plugins/gimp-resynthesizer-2.0.3-r1 ~amd64
+=media-sound/mps-youtube-0.2.8 ~amd64
+# required by media-sound/teamspeak-client-bin (argument)
+=media-sound/teamspeak-client-bin-3.1.9 ~amd64
+=media-video/gnome-mpv-0.14 ~amd64
+# required by media-video/libva-utils (argument)
+=media-video/libva-utils-2.1.0 ~amd64
+# required by media-video/shotcut (argument)
+=media-video/shotcut-18.03 ~amd64
+# required by telegram-cli (argument)
+=net-im/telegram-cli-1.3.1-r1 ~amd64
+=x11-plugins/telegram-purple-1.3.1-r3 ~amd64
+=net-misc/gerbera-1.2.0-r1 ~amd64
+# required by net-irc/hexchat-otr (argument)
+=net-irc/hexchat-otr-0.2.2 ~amd64
+=dev-perl/LWP-UserAgent-Cached-0.60.0-r1 ~amd64
+# required by sys-apps/hprofile (argument)
+=sys-apps/hprofile-6.1.3 ~amd64
+# required by sys-fs/bcache-tools (argument)
+=sys-fs/bcache-tools-1.0.8_p20140220-r1 ~amd64
+# required by www-client/google-chrome-beta (argument)
+=www-client/google-chrome-beta-67.0.3396.48 ~amd64
+# required by net-misc/ripme (argument)
+=net-misc/ripme-1.7.47 ~amd64
+# required by x11-apps/intel-gpu-tools (argument)
+=x11-apps/intel-gpu-tools-1.20 ~amd64
+# required by x11-apps/radeontop (argument)
+=x11-apps/radeontop-1.0-r1 ~amd64
+# required by sys-boot/woeusb (argument)
+=sys-boot/woeusb-3.1.5 ~amd64
+# required by sys-apps/pkgcore (argument)
+=sys-apps/pkgcore-0.9.7 ~amd64
+# required by sys-block/zram-init (argument)
+=sys-block/zram-init-3.8 ~amd64
+# required by sys-apps/hwdata-redhat (argument)
+=sys-apps/hwdata-redhat-0.217 ~amd64
+# required by x11-misc/vym (argument)
+=x11-misc/vym-2.6.11 ~amd64
+# required by net-misc/youtube-comment-downloader (argument)
+=net-misc/youtube-comment-downloader-20180306 ~amd64
+# required by x11-plugins/pidgin-skypeweb (argument)
+=x11-plugins/pidgin-skypeweb-1.4 ~amd64
+# required by net-misc/youtube-dl-gui (argument)
+=net-misc/youtube-dl-gui-0.4 ~amd64
+=x11-plugins/purple-hangouts-0_p20180328 ~amd64
+# required by x11-terms/kitty (argument)
+=x11-terms/kitty-0.9.1 ~amd64
+# required by x11-themes/kvantum (argument)
+=x11-themes/kvantum-0.10.6 ~amd64
+# required by x11-themes/kvantum (argument)
+=x11-themes/kvantum-0.10.6 ~amd64
+=x11-themes/smplayer-skins-15.2.0-r1
+=net-libs/libupnp-1.8.3-r1 ~amd64
+# required by net-misc/gerbera-1.2.0-r1::gentoo[javascript]
+# required by net-misc/gerbera (argument)
+=dev-lang/duktape-2.2.0 ~amd64
+# required by sys-apps/pkgcore-0.9.7::gentoo
+# required by sys-apps/pkgcore (argument)
+=dev-python/snakeoil-0.7.5 ~amd64
+# required by media-sound/mps-youtube-0.2.8::gentoo
+# required by media-sound/mps-youtube (argument)
+=dev-python/pafy-0.5.4 ~amd64
+# required by net-misc/youtube-dl-gui (argument)
+=dev-python/twodict-1.2 ~amd64
+# required by x11-themes/sddm-gentoo-black-theme (argument)
+=x11-themes/sddm-gentoo-black-theme-1.0 ~amd64
+
+
+# required by app-admin/consul-1.0.6::gentoo                
+# required by app-admin/consul (argument)             
+=dev-go/gox-0.4.0 ~amd64                          
+# required by app-admin/clsync-0.4.2::gentoo                   
+# required by app-admin/clsync (argument)                   
+=app-doc/clsync-docs-0.4.2 ~amd64                
+# required by app-text/extract_url-1.6.2::gentoo
+# required by app-text/extract_url (argument)
+=dev-perl/URI-Find-20160806.0.0 ~amd64
+# required by dev-go/go-net-0_pre20160216::gentoo
+# required by dev-go/go-tools-0_pre20160220::gentoo
+# required by app-admin/consul-1.0.6::gentoo
+# required by app-admin/consul (argument)
+=dev-go/go-crypto-0_pre20160126 ~amd64
+# required by app-misc/ddccontrol-0.4.2_p20140105-r2::gentoo
+# required by app-misc/ddccontrol (argument)
+=app-misc/ddccontrol-db-20061014_p20121105 ~amd64
+# required by dev-go/go-net-0_pre20160216::gentoo
+# required by dev-go/go-tools-0_pre20160220::gentoo
+# required by app-admin/consul-1.0.6::gentoo
+# required by app-admin/consul (argument)
+=dev-go/go-text-0_pre20160211 ~amd64
+# required by app-admin/go-updater-0.2.0::gentoo
+# required by app-admin/go-updater (argument)
+=dev-go/goversion-1.2.0 ~amd64
+# required by app-admin/consul-1.0.6::gentoo
+# required by app-admin/consul (argument)
+=dev-go/go-tools-0_pre20160220 ~amd64
+# required by app-mobilephone/wammu-0.44::gentoo
+# required by app-mobilephone/wammu (argument)
+=dev-python/python-gammu-2.11 ~amd64
+# required by dev-go/go-tools-0_pre20160220::gentoo
+# required by app-admin/consul-1.0.6::gentoo
+# required by app-admin/consul (argument)
+=dev-go/go-net-0_pre20160216 ~amd64
+# required by app-vim/editorconfig-vim-0.3.3-r2::gentoo
+# required by app-vim/editorconfig-vim (argument)
+=dev-python/editorconfig-core-py-0.12.0 ~amd64
+# required by dev-dotnet/nuget (argument)
+# /etc/portage/package.mask:
+=dev-dotnet/nuget-2.8.7-r3
+# required by app-shells/zsh-syntax-highlighting (argument)
+# /etc/portage/package.mask:
+=app-shells/zsh-syntax-highlighting-0.6.0
+# required by dev-dotnet/nuget-2.8.7-r3::dotnet
+# required by nuget (argument)
+=dev-dotnet/xdt-for-monodevelop-2.8.1-r2 ~amd64

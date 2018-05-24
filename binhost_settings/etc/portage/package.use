@@ -14,6 +14,8 @@ net-misc/iputils -ssl
 dev-cpp/asio -ssl
 
 #preference
+app-i18n/scim gtk3
+app-text/zathura-meta pdf cb djvu postscript
 media-sound/bluez-alsa aac hcitop
 app-office/abiword readline calendar latex map math ots spell thesaurus wordperfect
 app-office/libreoffice-l10n l10n_af l10n_am l10n_ar l10n_as l10n_ast l10n_be l10n_bg l10n_bn l10n_bn-IN l10n_bo l10n_br l10n_brx l10n_bs l10n_ca l10n_ca-valencia l10n_cs l10n_cy l10n_da l10n_de l10n_dgo l10n_dz l10n_el l10n_en l10n_en-GB l10n_en-ZA l10n_eo l10n_es l10n_et l10n_eu l10n_fa l10n_fi l10n_fr l10n_ga l10n_gd l10n_gl l10n_gu l10n_gug l10n_he l10n_hi l10n_hr l10n_hu l10n_id l10n_is l10n_it l10n_ja l10n_ka l10n_kk l10n_km l10n_kmr-Latn l10n_kn l10n_ko l10n_kok l10n_ks l10n_lb l10n_lo l10n_lt l10n_lv l10n_mai l10n_mk l10n_ml l10n_mn l10n_mni l10n_mr l10n_my l10n_nb l10n_ne l10n_nl l10n_nn l10n_nr l10n_nso l10n_oc l10n_om l10n_or l10n_pa l10n_pl l10n_pt l10n_pt-BR l10n_ro l10n_ru l10n_rw l10n_sa l10n_sat l10n_sd l10n_si l10n_sid l10n_sk l10n_sl l10n_sq l10n_sr l10n_sr-Latn l10n_ss l10n_st l10n_sv l10n_sw-TZ l10n_ta l10n_te l10n_tg l10n_th l10n_tn l10n_tr l10n_ts l10n_tt l10n_ug l10n_uk l10n_uz l10n_ve l10n_vi l10n_xh l10n_zh-CN l10n_zh-TW l10n_zu
@@ -32,7 +34,8 @@ www-servers/tomcat extra-webapps
 media-sound/mp3blaster vorbis
 net-p2p/rtorrent-ps daemon
 xfce-extra/tumbler ffmpeg
-media-plugins/gst-plugins-meta ffmpeg
+media-plugins/gst-plugins-meta ffmpeg theora v4l vorbis ogg
+media-libs/gst-plugins-base theora
 media-libs/libbluray aacs bdplus
 www-apache/mod_perl ithreads
 dev-lang/perl ithreads
@@ -87,8 +90,8 @@ pantheon-base/plank dbus
 app-i18n/fcitx dbus
 net-p2p/mldonkey bittorrent gnutella magic fasttrack gd
 media-sound/qmmp alsa mad vorbis aac analyzer bs2b cdda cover crossfade cue curl enca ffmpeg flac game ladspa lyrics midi modplug musepack notifier opus projectm scrobbler sid sndfile soxr stereo tray wavpack
-media-libs/vapoursynth vapoursynth_plugins_removegrain vapoursynth_plugins_eedi3 -vapoursynth_plugins_imagemagick vapoursynth_plugins_miscfilters vapoursynth_plugins_morpho vapoursynth_plugins_ocr vapoursynth_plugins_removegrain vapoursynth_plugins_subtext vapoursynth_plugins_vinverse vapoursynth_plugins_vivtc
-media-plugins/vapoursynth-plugins-meta vapoursynth_plugins_addgrain vapoursynth_plugins_adjust vapoursynth_plugins_autocrop vapoursynth_plugins_awarpsharp2 vapoursynth_plugins_beziercurve vapoursynth_plugins_bifrost vapoursynth_plugins_bilateral vapoursynth_plugins_bm3d vapoursynth_plugins_cnr2 vapoursynth_plugins_combmask vapoursynth_plugins_continuityfixer vapoursynth_plugins_ctmf vapoursynth_plugins_d2vsource vapoursynth_plugins_damb vapoursynth_plugins_dctfilter vapoursynth_plugins_deblock vapoursynth_plugins_degrainmedian vapoursynth_plugins_delogo vapoursynth_plugins_depan vapoursynth_plugins_descale vapoursynth_plugins_dfttest vapoursynth_plugins_dotkill vapoursynth_plugins_eedi2 vapoursynth_plugins_eedi3 vapoursynth_plugins_ffmpegsource vapoursynth_plugins_fft3dfilter vapoursynth_plugins_fieldhint vapoursynth_plugins_fillborders vapoursynth_plugins_finesharp vapoursynth_plugins_fix-telecined-fades vapoursynth_plugins_flash3kyuu_deband vapoursynth_plugins_fluxsmooth vapoursynth_plugins_fmtconv vapoursynth_plugins_genericfilters vapoursynth_plugins_havsfunc vapoursynth_plugins_histogram vapoursynth_plugins_hqdn3d vapoursynth_plugins_inpaint vapoursynth_plugins_it -vapoursynth_plugins_knlmeanscl vapoursynth_plugins_l-smash-works vapoursynth_plugins_minsrp vapoursynth_plugins_msmoosh vapoursynth_plugins_muvsfunc vapoursynth_plugins_mvsfunc vapoursynth_plugins_mvtools vapoursynth_plugins_mvtools-sf vapoursynth_plugins_nnedi3 vapoursynth_plugins_nnedi3_resample -vapoursynth_plugins_nnedi3cl -vapoursynth_plugins_oyster -vapoursynth_plugins_plum -vapoursynth_plugins_qrcodesource vapoursynth_plugins_reduceflicker vapoursynth_plugins_remapframes vapoursynth_plugins_removedirt vapoursynth_plugins_retinex vapoursynth_plugins_sangnom vapoursynth_plugins_scenechange vapoursynth_plugins_scxvid vapoursynth_plugins_ssiq vapoursynth_plugins_surfaceblur vapoursynth_plugins_tc2cfr vapoursynth_plugins_tcanny vapoursynth_plugins_tcomb vapoursynth_plugins_tdeintmod vapoursynth_plugins_templinearapproximate vapoursynth_plugins_temporalsoften vapoursynth_plugins_tnlmeans vapoursynth_plugins_tonemap vapoursynth_plugins_vaguedenoiser vapoursynth_plugins_vautodeint vapoursynth_plugins_vcfreq vapoursynth_plugins_vcmod vapoursynth_plugins_vcmove vapoursynth_plugins_vctrans vapoursynth_plugins_vfrtocrf vapoursynth_plugins_videoscope -vapoursynth_plugins_vine vapoursynth_plugins_vs-maskdetail vapoursynth_plugins_vsimagereader vapoursynth_plugins_vsrawsource vapoursynth_plugins_vstaambk vapoursynth_plugins_w3fdif vapoursynth_plugins_waifu2x-w2xc vapoursynth_plugins_wwxd vapoursynth_plugins_yadifmod vapoursynth_plugins_znedi3
+media-libs/vapoursynth vapoursynth_plugins_removegrain vapoursynth_plugins_eedi3 vapoursynth_plugins_imagemagick vapoursynth_plugins_miscfilters vapoursynth_plugins_morpho vapoursynth_plugins_ocr vapoursynth_plugins_removegrain vapoursynth_plugins_subtext vapoursynth_plugins_vinverse vapoursynth_plugins_vivtc
+media-plugins/vapoursynth-plugins-meta vapoursynth_plugins_addgrain vapoursynth_plugins_adjust vapoursynth_plugins_autocrop vapoursynth_plugins_awarpsharp2 vapoursynth_plugins_beziercurve vapoursynth_plugins_bifrost vapoursynth_plugins_bilateral vapoursynth_plugins_bm3d vapoursynth_plugins_cnr2 vapoursynth_plugins_combmask vapoursynth_plugins_continuityfixer vapoursynth_plugins_ctmf vapoursynth_plugins_d2vsource vapoursynth_plugins_damb vapoursynth_plugins_dctfilter vapoursynth_plugins_deblock vapoursynth_plugins_degrainmedian vapoursynth_plugins_delogo vapoursynth_plugins_depan vapoursynth_plugins_descale vapoursynth_plugins_dfttest vapoursynth_plugins_dotkill vapoursynth_plugins_eedi2 vapoursynth_plugins_eedi3 vapoursynth_plugins_ffmpegsource vapoursynth_plugins_fft3dfilter vapoursynth_plugins_fieldhint vapoursynth_plugins_fillborders vapoursynth_plugins_finesharp vapoursynth_plugins_fix-telecined-fades vapoursynth_plugins_flash3kyuu_deband vapoursynth_plugins_fluxsmooth vapoursynth_plugins_fmtconv vapoursynth_plugins_genericfilters vapoursynth_plugins_havsfunc vapoursynth_plugins_histogram vapoursynth_plugins_hqdn3d vapoursynth_plugins_inpaint vapoursynth_plugins_it vapoursynth_plugins_knlmeanscl vapoursynth_plugins_l-smash-works vapoursynth_plugins_minsrp vapoursynth_plugins_msmoosh vapoursynth_plugins_muvsfunc vapoursynth_plugins_mvsfunc vapoursynth_plugins_mvtools vapoursynth_plugins_mvtools-sf vapoursynth_plugins_nnedi3 vapoursynth_plugins_nnedi3_resample vapoursynth_plugins_nnedi3cl vapoursynth_plugins_oyster vapoursynth_plugins_plum vapoursynth_plugins_qrcodesource vapoursynth_plugins_reduceflicker vapoursynth_plugins_remapframes vapoursynth_plugins_removedirt vapoursynth_plugins_retinex vapoursynth_plugins_sangnom vapoursynth_plugins_scenechange vapoursynth_plugins_scxvid vapoursynth_plugins_ssiq vapoursynth_plugins_surfaceblur vapoursynth_plugins_tc2cfr vapoursynth_plugins_tcanny vapoursynth_plugins_tcomb vapoursynth_plugins_tdeintmod vapoursynth_plugins_templinearapproximate vapoursynth_plugins_temporalsoften vapoursynth_plugins_tnlmeans vapoursynth_plugins_tonemap vapoursynth_plugins_vaguedenoiser vapoursynth_plugins_vautodeint vapoursynth_plugins_vcfreq vapoursynth_plugins_vcmod vapoursynth_plugins_vcmove vapoursynth_plugins_vctrans vapoursynth_plugins_vfrtocrf vapoursynth_plugins_videoscope vapoursynth_plugins_vine vapoursynth_plugins_vs-maskdetail vapoursynth_plugins_vsimagereader vapoursynth_plugins_vsrawsource vapoursynth_plugins_vstaambk vapoursynth_plugins_w3fdif vapoursynth_plugins_waifu2x-w2xc vapoursynth_plugins_wwxd vapoursynth_plugins_yadifmod vapoursynth_plugins_znedi3
 media-sound/audacity id3tag
 app-admin/conky thinkpad mpd rss curl iostats
 media-sound/darkice vorbis mp3
@@ -106,7 +109,7 @@ media-libs/libsndfile -minimal
 sys-apps/smartmontools -minimal
 sys-libs/ncurses -minimal
 media-fonts/acroread-asianfonts -minimal
-app-editors/vim nls -minimal
+app-editors/vim nls -minimal python
 app-editors/vim-core nls -minimal
 dev-util/google-perftools -minimal
 app-editors/nano -minimal
@@ -182,7 +185,7 @@ media-video/mkvtoolnix qt5
 app-editors/emacs X gtk toolkit-scroll-bars xft sound games alsa jpeg png gif libxml2 dynamic-loading gsettings
 app-emacs/emacs-common-gentoo X games
 app-editors/xemacs X
-media-libs/gst-plugins-bad X
+media-libs/gst-plugins-bad X gtk
 app-admin/gkrellm X hddtemp lm_sensors
 games-emulation/dgen-sdl joystick
 games-emulation/snes9x joystick gtk netplay
@@ -244,9 +247,7 @@ net-analyzer/vnstat gd
 app-eselect/eselect-php fpm
 net-p2p/rtorrent xmlrpc
 media-sound/deadbeef aac adplug alac alsa cdda converter cover cover-imlib2 cover-network curl dts dumb equalizer ffmpeg flac hotkeys lastfm libnotify libsamplerate m3u mad midi mms mono2stereo mp3 musepack nullout oss psf shn sid sndfile tta vorbis vtx wavpack wma zip cdparanoia -gme gtk3 -libav mac mpg123 -nls playlist-browser -pulseaudio sc68 -shell-exec -unity
-app-emulation/qemu sdl usb virgl
-
-#required
+app-emulation/qemu sdl usb virgl virtfs
 sys-boot/grub mount
 xfce-base/thunar dbus
 gnome-base/gvfs udisks
@@ -333,7 +334,6 @@ x11-libs/qscintilla qt5
 sci-libs/cholmod -minimal
 dev-libs/libcdio -minimal
 x11-libs/libdrm libkms video_cards_vmware
-media-libs/gst-plugins-bad gtk
 media-gfx/gmic X ffmpeg cli
 media-libs/mlt python gtk ffmpeg
 x11-libs/gdk-pixbuf tiff
@@ -344,6 +344,9 @@ net-libs/libdom xml
 dev-java/swt cairo
 app-text/aiksaurus gtk
 media-libs/clutter-gtk X
+dev-python/PyQt5 multimedia
+net-analyzer/netperf demo
+dev-python/QtPy gui
 
 #wine
 x11-libs/libXinerama abi_x86_32
