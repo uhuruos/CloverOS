@@ -13,7 +13,6 @@ net-p2p/mktorrent -ssl
 net-misc/iputils -ssl
 dev-cpp/asio -ssl
 
-#preference
 app-i18n/scim gtk3
 app-text/zathura-meta pdf cb djvu postscript
 media-sound/bluez-alsa aac hcitop
@@ -91,9 +90,9 @@ app-i18n/fcitx dbus
 net-p2p/mldonkey bittorrent gnutella magic fasttrack gd
 media-sound/qmmp alsa mad vorbis aac analyzer bs2b cdda cover crossfade cue curl enca ffmpeg flac game ladspa lyrics midi modplug musepack notifier opus projectm scrobbler sid sndfile soxr stereo tray wavpack
 media-libs/vapoursynth vapoursynth_plugins_removegrain vapoursynth_plugins_eedi3 vapoursynth_plugins_imagemagick vapoursynth_plugins_miscfilters vapoursynth_plugins_morpho vapoursynth_plugins_ocr vapoursynth_plugins_removegrain vapoursynth_plugins_subtext vapoursynth_plugins_vinverse vapoursynth_plugins_vivtc
-media-plugins/vapoursynth-plugins-meta vapoursynth_plugins_addgrain vapoursynth_plugins_adjust vapoursynth_plugins_autocrop vapoursynth_plugins_awarpsharp2 vapoursynth_plugins_beziercurve vapoursynth_plugins_bifrost vapoursynth_plugins_bilateral vapoursynth_plugins_bm3d vapoursynth_plugins_cnr2 vapoursynth_plugins_combmask vapoursynth_plugins_continuityfixer vapoursynth_plugins_ctmf vapoursynth_plugins_d2vsource vapoursynth_plugins_damb vapoursynth_plugins_dctfilter vapoursynth_plugins_deblock vapoursynth_plugins_degrainmedian vapoursynth_plugins_delogo vapoursynth_plugins_depan vapoursynth_plugins_descale vapoursynth_plugins_dfttest vapoursynth_plugins_dotkill vapoursynth_plugins_eedi2 vapoursynth_plugins_eedi3 vapoursynth_plugins_ffmpegsource vapoursynth_plugins_fft3dfilter vapoursynth_plugins_fieldhint vapoursynth_plugins_fillborders vapoursynth_plugins_finesharp vapoursynth_plugins_fix-telecined-fades vapoursynth_plugins_flash3kyuu_deband vapoursynth_plugins_fluxsmooth vapoursynth_plugins_fmtconv vapoursynth_plugins_genericfilters vapoursynth_plugins_havsfunc vapoursynth_plugins_histogram vapoursynth_plugins_hqdn3d vapoursynth_plugins_inpaint vapoursynth_plugins_it vapoursynth_plugins_knlmeanscl vapoursynth_plugins_l-smash-works vapoursynth_plugins_minsrp vapoursynth_plugins_msmoosh vapoursynth_plugins_muvsfunc vapoursynth_plugins_mvsfunc vapoursynth_plugins_mvtools vapoursynth_plugins_mvtools-sf vapoursynth_plugins_nnedi3 vapoursynth_plugins_nnedi3_resample vapoursynth_plugins_nnedi3cl vapoursynth_plugins_oyster vapoursynth_plugins_plum vapoursynth_plugins_qrcodesource vapoursynth_plugins_reduceflicker vapoursynth_plugins_remapframes vapoursynth_plugins_removedirt vapoursynth_plugins_retinex vapoursynth_plugins_sangnom vapoursynth_plugins_scenechange vapoursynth_plugins_scxvid vapoursynth_plugins_ssiq vapoursynth_plugins_surfaceblur vapoursynth_plugins_tc2cfr vapoursynth_plugins_tcanny vapoursynth_plugins_tcomb vapoursynth_plugins_tdeintmod vapoursynth_plugins_templinearapproximate vapoursynth_plugins_temporalsoften vapoursynth_plugins_tnlmeans vapoursynth_plugins_tonemap vapoursynth_plugins_vaguedenoiser vapoursynth_plugins_vautodeint vapoursynth_plugins_vcfreq vapoursynth_plugins_vcmod vapoursynth_plugins_vcmove vapoursynth_plugins_vctrans vapoursynth_plugins_vfrtocrf vapoursynth_plugins_videoscope vapoursynth_plugins_vine vapoursynth_plugins_vs-maskdetail vapoursynth_plugins_vsimagereader vapoursynth_plugins_vsrawsource vapoursynth_plugins_vstaambk vapoursynth_plugins_w3fdif vapoursynth_plugins_waifu2x-w2xc vapoursynth_plugins_wwxd vapoursynth_plugins_yadifmod vapoursynth_plugins_znedi3
+media-plugins/vapoursynth-plugins-meta vapoursynth_plugins_addgrain vapoursynth_plugins_adjust vapoursynth_plugins_autocrop vapoursynth_plugins_awarpsharp2 vapoursynth_plugins_beziercurve vapoursynth_plugins_bifrost vapoursynth_plugins_bilateral vapoursynth_plugins_bm3d vapoursynth_plugins_cnr2 vapoursynth_plugins_combmask vapoursynth_plugins_continuityfixer vapoursynth_plugins_ctmf vapoursynth_plugins_d2vsource vapoursynth_plugins_damb vapoursynth_plugins_dctfilter vapoursynth_plugins_deblock vapoursynth_plugins_degrainmedian vapoursynth_plugins_delogo vapoursynth_plugins_depan vapoursynth_plugins_descale vapoursynth_plugins_dfttest vapoursynth_plugins_dotkill vapoursynth_plugins_eedi2 vapoursynth_plugins_eedi3 vapoursynth_plugins_ffmpegsource vapoursynth_plugins_fft3dfilter vapoursynth_plugins_fieldhint vapoursynth_plugins_fillborders vapoursynth_plugins_finesharp vapoursynth_plugins_fix-telecined-fades vapoursynth_plugins_flash3kyuu_deband vapoursynth_plugins_fluxsmooth vapoursynth_plugins_fmtconv vapoursynth_plugins_genericfilters vapoursynth_plugins_havsfunc vapoursynth_plugins_histogram vapoursynth_plugins_hqdn3d vapoursynth_plugins_inpaint vapoursynth_plugins_it vapoursynth_plugins_knlmeanscl vapoursynth_plugins_l-smash-works vapoursynth_plugins_minsrp vapoursynth_plugins_msmoosh vapoursynth_plugins_muvsfunc vapoursynth_plugins_mvsfunc vapoursynth_plugins_mvtools vapoursynth_plugins_mvtools-sf vapoursynth_plugins_nnedi3 vapoursynth_plugins_nnedi3_resample vapoursynth_plugins_nnedi3cl vapoursynth_plugins_oyster vapoursynth_plugins_plum -vapoursynth_plugins_qrcodesource vapoursynth_plugins_reduceflicker vapoursynth_plugins_remapframes vapoursynth_plugins_removedirt vapoursynth_plugins_retinex vapoursynth_plugins_sangnom vapoursynth_plugins_scenechange vapoursynth_plugins_scxvid vapoursynth_plugins_ssiq vapoursynth_plugins_surfaceblur vapoursynth_plugins_tc2cfr vapoursynth_plugins_tcanny vapoursynth_plugins_tcomb vapoursynth_plugins_tdeintmod vapoursynth_plugins_templinearapproximate vapoursynth_plugins_temporalsoften vapoursynth_plugins_tnlmeans vapoursynth_plugins_tonemap vapoursynth_plugins_vaguedenoiser vapoursynth_plugins_vautodeint vapoursynth_plugins_vcfreq vapoursynth_plugins_vcmod vapoursynth_plugins_vcmove vapoursynth_plugins_vctrans vapoursynth_plugins_vfrtocrf vapoursynth_plugins_videoscope vapoursynth_plugins_vine vapoursynth_plugins_vs-maskdetail vapoursynth_plugins_vsimagereader vapoursynth_plugins_vsrawsource vapoursynth_plugins_vstaambk vapoursynth_plugins_w3fdif vapoursynth_plugins_waifu2x-w2xc vapoursynth_plugins_wwxd vapoursynth_plugins_yadifmod vapoursynth_plugins_znedi3
 media-sound/audacity id3tag
-app-admin/conky thinkpad mpd rss curl iostats
+app-admin/conky X thinkpad mpd rss curl iostats
 media-sound/darkice vorbis mp3
 games-fps/urbanterror server
 media-gfx/krita color-management
@@ -104,7 +103,7 @@ sys-block/gparted btrfs dmraid f2fs fat -hfs jfs mdadm ntfs reiserfs reiser4 xfs
 dev-python/django-two-factor-auth yubikey
 app-admin/keepassxc yubikey
 app-admin/passwordsafe -minimal yubikey
-dev-lang/R -minimal
+dev-lang/R -minimal X cairo
 media-libs/libsndfile -minimal
 sys-apps/smartmontools -minimal
 sys-libs/ncurses -minimal
@@ -126,7 +125,7 @@ media-libs/libvpx postproc
 mate-base/mate -extras
 mate-extra/mate-screensaver -pam
 app-benchmarks/i7z qt5
-media-video/vlc qt5 xml projectm
+media-video/vlc qt5 xml projectm gnutls flac mp3
 net-p2p/bitcoin-qt qt5
 media-video/avidemux qt5
 media-libs/avidemux-plugins qt5
@@ -155,8 +154,6 @@ app-emulation/virtualbox-guest-additions X
 sys-apps/xdg-desktop-portal-gtk X
 sys-apps/flatpak gtk
 media-video/xine-ui curl X
-app-admin/conky X
-dev-lang/R X cairo
 x11-libs/gdk-pixbuf X
 sci-mathematics/octave X gui fftw curl gnuplot postscript jit
 www-servers/varnish jit jemalloc
@@ -192,8 +189,8 @@ games-emulation/snes9x joystick gtk netplay
 x11-misc/redshift gtk
 sys-apps/lshw gtk
 net-im/pidgin spell
-net-irc/hexchat spell
-dev-qt/qtgui gtkstyle
+net-irc/hexchat spell plugin-sysinfo
+dev-qt/qtgui gtkstyle dbus
 dev-qt/qtwidgets gtkstyle
 x11-base/xorg-drivers input_devices_joystick
 x11-drivers/xf86-video-intel uxa sna dri3
@@ -223,7 +220,6 @@ app-admin/testdisk ntfs
 net-p2p/qbittorrent geoip webui
 media-gfx/gimp smp pdf aalib openexr postscript python xpm vector-icons
 net-fs/nfs-utils nfsv41
-net-irc/hexchat plugin-sysinfo
 net-fs/cifs-utils -acl -ads -caps caps-ng
 media-sound/mpd sid sqlite alsa bzip2 curl ffmpeg fifo flac glib icu id3tag inotify mad network ogg opus tcpd unicode vorbis adplug ao audiofile cdio expat faad fluidsynth gme lame libsamplerate libsoxr mikmod mms modplug mp4v2 mpg123 musepack pipe recorder sndfile soundcloud twolame wavpack wildmidi zip libmpdclient
 media-sound/flacon aac opus vorbis qt5 flac mac mp3 mp4 ogg replaygain tta wavpack
@@ -255,11 +251,10 @@ app-misc/anki python_targets_python3_6
 net-misc/spice-gtk gtk3 usbredir
 net-wireless/lorcon python
 net-libs/gtk-vnc python
-dev-lang/perl berkdb
 app-crypt/gpgme qt5
 sys-devel/gcc fortran
 media-libs/cogl gles2
-media-libs/mlt qt5 kdenlive xml sdl melt
+media-libs/mlt qt5 kdenlive xml sdl melt python gtk ffmpeg
 media-libs/gegl cairo
 media-fonts/font-misc-misc nls
 dev-lua/lpeg luajit
@@ -267,7 +262,8 @@ sys-libs/tdb python
 dev-games/openscenegraph sdl svg ffmpeg truetype qt5
 dev-ml/lablgtk svg
 media-libs/vigra openexr
-dev-libs/libpcre2 pcre16
+dev-libs/libpcre2 pcre16 pcre32
+dev-libs/libpcre pcre16
 sys-devel/llvm clang
 dev-games/ogre gl3plus -gles3 -gles2
 dev-libs/glib dbus
@@ -281,7 +277,6 @@ dev-games/mygui -opengl
 dev-lang/luajit lua52compat
 dev-libs/libxml2 python
 dev-lang/python sqlite
-dev-libs/libpcre pcre16
 x11-libs/libxcb xkb
 x11-libs/cairo xcb
 app-text/xmlto text
@@ -293,7 +288,7 @@ dev-libs/botan -bindist
 dev-qt/qtnetwork -bindist
 media-libs/libmygpo-qt qt5
 dev-qt/qtwebengine widgets
-dev-python/PyQt5 gui widgets svg webkit network printsupport webengine webchannel sql declarative
+dev-python/PyQt5 gui widgets svg webkit network printsupport webengine webchannel sql declarative multimedia
 dev-qt/qtscript scripttools
 dev-qt/qtmultimedia widgets qml
 dev-qt/qtcore icu
@@ -302,7 +297,6 @@ dev-qt/qtlockedfile qt5
 dev-qt/qtsingleapplication qt5 X
 kde-frameworks/kwindowsystem X
 kde-frameworks/kdelibs4support X
-dev-qt/qtgui dbus
 dev-qt/qtwebchannel qml
 kde-plasma/libksysguard -minimal
 kde-apps/akonadi -mysql sqlite
@@ -320,7 +314,6 @@ media-libs/libsdl2 X gles haptic
 games-emulation/mednafen debugger
 net-libs/libtorrent-rasterbar python
 x11-drivers/nvidia-drivers uvm
-media-video/vlc gnutls flac mp3
 media-libs/libvpx svc
 app-text/ghostscript-gpl cups
 media-gfx/pstoedit plotutils
@@ -329,13 +322,11 @@ dev-libs/libdbusmenu gtk
 mate-base/mate-menus python
 dev-libs/boost python
 dev-python/numpy lapack
-dev-libs/libpcre2 pcre32
 x11-libs/qscintilla qt5
 sci-libs/cholmod -minimal
 dev-libs/libcdio -minimal
 x11-libs/libdrm libkms video_cards_vmware
 media-gfx/gmic X ffmpeg cli
-media-libs/mlt python gtk ffmpeg
 x11-libs/gdk-pixbuf tiff
 dev-libs/libxml2 icu
 dev-libs/libxslt python
@@ -344,9 +335,9 @@ net-libs/libdom xml
 dev-java/swt cairo
 app-text/aiksaurus gtk
 media-libs/clutter-gtk X
-dev-python/PyQt5 multimedia
 net-analyzer/netperf demo
 dev-python/QtPy gui
+dev-libs/marisa python
 
 #wine
 x11-libs/libXinerama abi_x86_32

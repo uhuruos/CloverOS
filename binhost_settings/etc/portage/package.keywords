@@ -889,3 +889,49 @@ dev-python/django-otp-yubikey
 # required by dev-util/monodevelop-6.0.0.4761::dotnet
 # required by monodevelop (argument)
 =www-servers/xsp-2014.12-r2014120900 ~amd64
+# required by ibus-kkc (argument)
+=app-i18n/ibus-kkc-1.5.22 ~amd64
+# required by ibus-sunpinyin (argument)
+=app-i18n/ibus-sunpinyin-2.0.4_pre20130108-r2 ~amd64
+# required by ibus-typing-booster (argument)
+=app-i18n/ibus-typing-booster-1.5.36 ~amd64
+# required by ibus-input-pad (argument)
+=app-i18n/ibus-input-pad-1.4.99_pre20140916 ~amd64
+# required by app-i18n/ibus-input-pad-1.4.99_pre20140916::gentoo
+# required by ibus-input-pad (argument)
+=dev-libs/input-pad-1.0.99_pre20140916 ~amd64
+# required by ibus-unikey (argument)
+=app-i18n/ibus-unikey-0.6.1-r2 ~amd64
+# required by ibus-chewing (argument)
+=app-i18n/ibus-chewing-1.6.1 ~amd64
+# required by app-i18n/ibus-kkc-1.5.22::gentoo
+# required by ibus-kkc (argument)
+=app-i18n/libkkc-0.3.5 ~amd64
+# required by ibus-tutcode (argument)
+=app-i18n/ibus-tutcode-1.0.2-r1 ~amd64
+
+# required by openjk-outcast (argument)
+=games-fps/openjk-outcast-9999 **
+# required by openjk-academy (argument)
+=games-fps/openjk-academy-9999 **
+# required by openjk-academy-mp (argument)
+=games-fps/openjk-academy-mp-9999 **
+=media-gfx/mypaint-brushes-1.3.0 ~amd64
+# required by media-plugins/gimp-refocus (argument)
+=media-plugins/gimp-refocus-0.9.0 ~amd64
+
+net-im/telegram-purple **
+
+
+=net-p2p/nicotine+-1.4.1 ~amd64
+# required by x11-libs/libvdpau-va-gl (argument)
+=x11-libs/libvdpau-va-gl-0.4.2 ~amd64
+# required by sys-fs/zfs-auto-snapshot (argument)
+=sys-fs/zfs-auto-snapshot-1.2.4 ~amd64
+
+# required by x11-plugins/purple-discord (argument)
+=x11-plugins/purple-discord-9999 ~amd64
+
+
+# required by mednafen-server (argument)
+=games-server/mednafen-server-0.5.2-r1 ~amd64

@@ -11,12 +11,15 @@
 */*::farmboy0
 */*::fkmclane
 */*::flatpak-overlay
+*/*::flussence
 */*::frabjous
 */*::genthree
 */*::haskell
+*/*::jm-overlay
 */*::jorgicio
 #*/*::libressl
 */*::linxon
+*/*::lukejr
 */*::oboeverlay
 */*::palemoon
 */*::pentoo
@@ -26,6 +29,7 @@
 */*::raiagent
 */*::rasdark
 */*::science
+*/*::seden
 */*::sk-overlay
 */*::steam-overlay
 */*::stefantalpalaru

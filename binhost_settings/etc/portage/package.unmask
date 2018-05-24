@@ -1,3 +1,14 @@
+x11-plugins/purple-discord::flussence
+
+net-im/telegram-purple::jm-overlay
+
+media-plugins/vocoder-ladspa::seden
+
+games-mud/kmuddy::lukejr
+games-fps/openjk-academy::lukejr
+games-fps/openjk-academy-mp::lukejr
+games-fps/openjk-outcast::lukejr
+
 dev-cvs/gitkraken-bin::frabjous
 
 dev-util/android-udev-rules::genthree
@@ -7,6 +18,7 @@ dev-python/jsbeautifier::pentoo
 dev-python/editorconfig::pentoo
 
 dev-lang/tauthon::stefantalpalaru
+media-plugins/gimp-refocus::stefantalpalaru
 
 dev-dotnet/nuget::dotnet
 dev-dotnet/xdt-for-monodevelop::dotnet
@@ -25,6 +37,7 @@ dev-python/twodict::linxon
 app-misc/fsearch::linxon
 
 net-irc/hexchat-otr::sk-overlay
+x11-libs/libvdpau-va-gl::sk-overlay
 
 x11-misc/i3blocks-gaps::0x4d4c
 

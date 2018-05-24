@@ -106,6 +106,8 @@ app-forensics/aide
 app-i18n/fcitx-anthy
 app-i18n/ibus
 app-i18n/ibus-anthy
+app-i18n/ibus-handwrite
+app-i18n/ibus-typing-booster
 app-laptop/laptop-mode-tools
 app-laptop/thinkfan
 app-laptop/tlp
@@ -270,6 +272,7 @@ dev-util/geany-plugins
 dev-util/jenkins-bin
 dev-util/kdevelop
 dev-util/lxqt-build-tools
+dev-util/monodevelop
 dev-util/plan9port
 dev-util/pycharm-community
 dev-util/pycharm-professional
@@ -351,6 +354,9 @@ games-fps/gzdoom
 games-fps/lsdldoom
 games-fps/nexuiz
 games-fps/openarena
+games-fps/openjk-academy
+games-fps/openjk-academy-mp
+games-fps/openjk-outcast
 games-fps/quake3
 games-fps/quake3-cpma
 games-fps/sauerbraten
@@ -365,6 +371,7 @@ games-roguelike/dwarf-fortress
 games-roguelike/nethack
 games-roguelike/rogue
 games-rpg/freedink
+games-server/mednafen-server
 games-simulation/openttd
 games-strategy/freeciv
 games-strategy/wesnoth
@@ -791,6 +798,7 @@ net-im/pidgin
 net-im/qtox
 net-im/telegram-cli
 net-im/telegram-desktop-bin
+net-im/telegram-purple
 net-irc/hexchat
 net-irc/hexchat-otr
 net-irc/irssi
@@ -1081,6 +1089,7 @@ x11-plugins/astime
 x11-plugins/fsviewer
 x11-plugins/pidgin-otr
 x11-plugins/pidgin-skypeweb
+x11-plugins/purple-discord
 x11-plugins/purple-hangouts
 x11-plugins/purple-libnotify-plus
 x11-plugins/wmCalClock
