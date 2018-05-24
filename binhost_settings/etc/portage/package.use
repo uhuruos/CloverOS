@@ -4,6 +4,7 @@ media-libs/libopenshot -imagemagick
 media-plugins/vapoursynth-vstaambk -opencl
 media-plugins/vapoursynth-havsfunc -opencl
 
+media-libs/fontconfig-infinality -nyx
 app-i18n/scim gtk3
 app-text/zathura-meta pdf cb djvu postscript
 media-sound/bluez-alsa aac hcitop

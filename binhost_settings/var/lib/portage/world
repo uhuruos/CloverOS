@@ -939,6 +939,7 @@ sys-devel/crossdev
 sys-devel/distcc
 sys-devel/gcc
 sys-devel/gdb
+sys-devel/lld
 sys-firmware/nvidia-firmware
 sys-fs/bashmount
 sys-fs/bcache-tools

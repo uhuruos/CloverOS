@@ -40,3 +40,4 @@
 
 >sys-devel/lld-5.0.1
 >dev-util/lldb-5.0.1
+net-libs/nodejs::gentoo
