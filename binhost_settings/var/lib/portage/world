@@ -377,7 +377,9 @@ games-simulation/openttd
 games-strategy/freeciv
 games-strategy/wesnoth
 games-util/higan-purify
+games-util/joystick
 games-util/lutris
+games-util/qjoypad
 games-util/steam-launcher
 gnome-extra/gnome-calculator
 kde-apps/kbackup

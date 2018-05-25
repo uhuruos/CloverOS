@@ -333,13 +333,13 @@ dev-libs/marisa python
 sys-devel/clang xml
 
 #libressl
-media-video/ffmpeg openssl
 net-misc/curl curl_ssl_libressl -curl_ssl_openssl
-net-libs/nodejs bundled-ssl
-net-voip/telepathy-gabble gnutls
 net-p2p/mktorrent -ssl
 net-misc/iputils -ssl
 dev-cpp/asio -ssl
+media-video/ffmpeg openssl
+net-libs/nodejs bundled-ssl
+net-voip/telepathy-gabble gnutls
 
 #wine
 x11-libs/libXinerama abi_x86_32
