@@ -11,6 +11,7 @@ app-laptop/tp_smapi # requested
 net-p2p/retroshare # needs latest
 net-misc/youtube-dl # needs latest
 media-fonts/vlgothic # old
+games-emulation/dolphin ** # old
 media-gfx/mypaint
 www-client/firefox
 media-gfx/gimp
