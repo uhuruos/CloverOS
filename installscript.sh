@@ -113,7 +113,7 @@ useradd $user
 echo "$user:$userpassword" | chpasswd
 gpasswd -a $user wheel
 
-emerge -e world xorg-server fvwm spacefm rxvt-unicode nitrogen nomacs sudo wpa_supplicant porthole firefox emacs gimp mpv smplayer filezilla rtorrent-ps weechat linux-firmware alsa-utils zsh zsh-completions gentoo-zsh-completions vlgothic hack liberation-fonts nano scrot xbindkeys xinput arandr qastools slock xarchiver p7zip games-envd gparted squashfs-tools os-prober
+emerge -e world xorg-server fvwm spacefm rxvt-unicode nitrogen compton nomacs sudo wpa_supplicant porthole firefox emacs gimp mpv smplayer filezilla rtorrent-ps weechat linux-firmware alsa-utils zsh zsh-completions gentoo-zsh-completions vlgothic hack liberation-fonts nano scrot xbindkeys xinput arandr qastools slock xarchiver p7zip games-envd gparted squashfs-tools os-prober
 
 echo 'frozen-files="/etc/sudoers"' >> /etc/dispatch-conf.conf
 sed -i "s/# %wheel ALL=(ALL) NOPASSWD: ALL/%wheel ALL=(ALL) NOPASSWD: ALL/" /etc/sudoers
