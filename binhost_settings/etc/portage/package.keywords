@@ -399,6 +399,7 @@ x11-themes/kvantum
 x11-themes/smplayer-skins
 games-util/qjoypad
 games-util/joystick
+media-tv/emby-server
 
 #dependencies
 #tlp
@@ -628,6 +629,7 @@ media-fonts/sophia-nubian
 media-fonts/viga
 media-fonts/tewi-font
 media-fonts/gohufont
+media-fonts/fontawesome
 
 #xfce plugins
 xfce-extra/xfce4-gvfs-mount

@@ -1,48 +1,48 @@
 #!/bin/bash
 
 if [ "$(id -u)" != "0" ]; then
-   echo "This script must be run as root" 1>&2
-   exit 1
+	echo "This script must be run as root" 1>&2
+	exit 1
 fi
 
 while :; do
-    echo
-    read -erp "Automatic partitioning (a) or manual partitioning? (m) [a/m] " -n 1 partitioning
-    if [[ $partitioning = "a" ]]; then
-        read -erp "Enter drive for CloverOS installation: " -i "/dev/sda" drive
-        partition=${drive}1
-    elif [[ $partitioning = "m" ]]; then
-        sudo gparted &> /dev/null &
-        read -erp "Enter partition for CloverOS installation: " -i "/dev/sda1" partition
-        if [[ $partition == /dev/map* ]]; then
-            read -erp "Enter drive that contains install partition: " -i "/dev/sda" drive
-        else
-            drive=${partition%"${partition##*[!0-9]}"}
-        fi
-    else
-        echo "Invalid option"
-        continue
-    fi
-    drive=${drive#*/dev/}
-    partition=${partition#*/dev/}
-    read -erp "Partitioning: $partitioning
+	echo
+	read -erp "Automatic partitioning (a) or manual partitioning? (m) [a/m] " -n 1 partitioning
+	if [[ $partitioning = "a" ]]; then
+		read -erp "Enter drive for CloverOS installation: " -i "/dev/sda" drive
+		partition=${drive}1
+	elif [[ $partitioning = "m" ]]; then
+		gparted &> /dev/null &
+		read -erp "Enter partition for CloverOS installation: " -i "/dev/sda1" partition
+		if [[ $partition == /dev/map* ]]; then
+			read -erp "Enter drive that contains install partition: " -i "/dev/sda" drive
+		else
+			drive=${partition%"${partition##*[!0-9]}"}
+		fi
+	else
+		echo "Invalid option"
+		continue
+	fi
+	drive=${drive#*/dev/}
+	partition=${partition#*/dev/}
+	read -erp "Partitioning: $partitioning
 Drive: /dev/$drive
 Partition: /dev/$partition
 Is this correct? [y/n] " -n 1 yn
-    if [[ $yn == "y" ]]; then
-        break
-    fi
+	if [[ $yn == "y" ]]; then
+		break
+	fi
 done
 
 while :; do
-    echo
-    read -erp "Enter preferred root password " rootpassword
-    read -erp "Enter preferred username " user
-    read -erp "Enter preferred user password " userpassword
-    read -erp "Is this correct? [y/n] " -n 1 yn
-    if [[ $yn == "y" ]]; then
-        break
-    fi
+	echo
+	read -erp "Enter preferred root password " rootpassword
+	read -erp "Enter preferred username " user
+	read -erp "Enter preferred user password " userpassword
+	read -erp "Is this correct? [y/n] " -n 1 yn
+	if [[ $yn == "y" ]]; then
+		break
+	fi
 done
 
 livecduser=livecd
@@ -50,8 +50,8 @@ livecduser=livecd
 mkdir gentoo
 
 if [[ $partitioning = "a" ]]; then
-    echo -e "o\nn\np\n1\n\n\nw" | fdisk /dev/$drive
-    mkfs.ext4 -F /dev/$partition
+	echo -e "o\nn\np\n1\n\n\nw" | fdisk /dev/$drive
+	mkfs.ext4 -F /dev/$partition
 fi
 mount /dev/$partition gentoo
 
@@ -86,7 +86,7 @@ sed -i "s@/home/$livecduser/@/home/$user/@" /home/$livecduser/.config/spacefm/se
 mv /home/$livecduser/ /home/$user/
 chown -R $user /home/$user/
 if [[ $user != $livecduser ]]; then
-    userdel $livecduser
+	userdel $livecduser
 fi
 rm /home/$user/livecd_install.sh
 
