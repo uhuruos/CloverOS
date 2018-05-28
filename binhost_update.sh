@@ -24,4 +24,4 @@ find /usr/portage/packages/ -type f | sed 's#/usr/portage/packages/##' | pv -qB 
 
 chmod -R 755 /usr/portage/packages/
 
-rsync -a --delete-before /usr/portage/packages/ root@nl.cloveros.ga:/var/www/html/cloveros.ga/
+rsync -a --delete /usr/portage/packages/ root@nl.cloveros.ga:/var/www/html/cloveros.ga/

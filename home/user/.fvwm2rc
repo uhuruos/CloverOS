@@ -36,7 +36,7 @@ Key Up A CS GotoPage +0p -1p
 OpaqueMoveSize unlimited
 
 Style * BorderWidth 1, HandleWidth 1
-Style * Lenience
+Style * FPLenient
 Style * ResizeOpaque
 
 EdgeScroll 0 0
@@ -46,7 +46,7 @@ Style * BackColor #056839
 Style * HilightFore #ffffff
 Style * HilightBack #056839
 
-TitleStyle -- Flat
+TitleStyle MiniIcon -- Left Flat
 
 Colorset 0 bg #000000
 BorderStyle Colorset 0 -- Flat
@@ -58,7 +58,7 @@ Mouse 1 2 A Close
 ButtonStyle 6 Vector 2 30x50@3 70x50@3
 ButtonStyle 4 Vector 5 30x30@3 30x70@3 70x70@3 70x30@3 30x30@3
 ButtonStyle 2 Vector 5 70x70@3 30x30@3 70x30@4 70x30@3 30x70@3
-ButtonStyle All -- UseTitleStyle Flat
+ButtonStyle All -- Flat
 
 Style * SmartPlacement
 Style * RandomPlacement
