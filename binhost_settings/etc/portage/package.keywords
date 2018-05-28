@@ -401,6 +401,8 @@ x11-themes/smplayer-skins
 games-util/qjoypad
 games-util/joystick
 media-tv/emby-server
+media-gfx/ephoto
+app-crypt/hashcat
 
 #dependencies
 #tlp
@@ -579,6 +581,8 @@ dev-libs/go-usb **
 dev-python/sabyenc
 dev-python/gntp
 dev-python/pythonutils
+#dev-util/nvidia-cuda-toolkit
+dev-util/nvidia-cuda-sdk
 
 #fonts
 media-fonts/lohit-kannada

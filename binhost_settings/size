@@ -1,0 +1,2 @@
+CFLAGS="-Os -pipe -flto=8 -floop-block -floop-interchange -floop-strip-mine -ftree-loop-distribution"
+CXXFLAGS="${CFLAGS}"

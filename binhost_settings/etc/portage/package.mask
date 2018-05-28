@@ -2,12 +2,14 @@
 */*::4nykey
 */*::abendbrot
 */*::audio-overlay
+*/*::bar
 */*::bobwya
 */*::deadbeef-overlay
 */*::dotnet
 */*::elementary
 */*::erayd
 */*::eroen
+*/*::FireBurn
 */*::farmboy0
 */*::fkmclane
 */*::flatpak-overlay

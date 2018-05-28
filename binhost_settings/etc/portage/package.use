@@ -4,6 +4,7 @@ media-libs/libopenshot -imagemagick
 media-plugins/vapoursynth-vstaambk -opencl
 media-plugins/vapoursynth-havsfunc -opencl
 
+net-misc/connman nftables -wifi
 media-libs/fontconfig-infinality -nyx
 app-i18n/scim gtk3
 app-text/zathura-meta pdf cb djvu postscript
@@ -84,7 +85,7 @@ media-sound/darkice vorbis mp3
 games-fps/urbanterror server
 media-gfx/krita color-management
 virtual/wine d3d9 staging
-app-emulation/wine-any staging d3d9 s3tc -udisks
+app-emulation/wine-any staging d3d9 s3tc pba -udisks
 x11-wm/xmonad -default-term
 sys-block/gparted btrfs dmraid f2fs fat -hfs jfs mdadm ntfs reiserfs reiser4 xfs cryptsetup udf
 dev-python/django-two-factor-auth yubikey
@@ -101,6 +102,9 @@ dev-util/google-perftools -minimal
 app-editors/nano -minimal
 x11-base/xorg-server -minimal glamor xvfb
 net-p2p/eiskaltdcpp -minimal -emoticons -spell dht json gtk
+kde-plasma/libksysguard -minimal
+sci-libs/cholmod -minimal
+dev-libs/libcdio -minimal
 dev-lang/ruby -ncurses -readline
 net-libs/glib-networking -libproxy
 net-misc/dhcpcd -udev
@@ -116,7 +120,7 @@ app-mobilephone/heimdall qt5
 games-emulation/yabause pic qt5
 games-emulation/mgba qt5
 media-sound/supercollider qt5
-games-emulation/dolphin qt5 ao sdl bluetooth
+games-emulation/dolphin qt5 ao sdl bluetooth -wxwidgets
 app-benchmarks/i7z qt5
 media-video/vlc qt5 xml projectm gnutls flac mp3
 net-p2p/bitcoin-qt qt5
@@ -149,11 +153,6 @@ sys-apps/flatpak gtk
 media-video/xine-ui curl X
 x11-libs/gdk-pixbuf X
 sci-mathematics/octave X gui fftw curl gnuplot postscript jit
-www-servers/varnish jit jemalloc
-media-video/mpv rubberband lcms archive cdda bluray dvd encode libmpv cplugins v4l
-dev-lang/php curl gd fpm pdo recode fpm curl intl sqlite xmlwriter nls
-net-p2p/retroshare feedreader voip
-media-video/handbrake x265
 app-text/texlive X cjk context detex dvi2tty dvipdfm epspdf extra games graphics humanities jadetex luatex metapost music omega png pstricks publishers science tex4ht texi2html truetype xetex xindy xml
 media-libs/mesa -bindist opencl d3d9 llvm gallium osmesa gles1 gles2 openmax xa video_cards_vmware
 dev-cpp/gtkmm X
@@ -177,6 +176,11 @@ app-emacs/emacs-common-gentoo X games
 app-editors/xemacs X
 media-libs/gst-plugins-bad X gtk
 app-admin/gkrellm X hddtemp lm_sensors
+www-servers/varnish jit jemalloc
+media-video/mpv rubberband lcms archive cdda bluray dvd encode libmpv cplugins v4l
+dev-lang/php curl gd fpm pdo recode fpm curl intl sqlite xmlwriter nls
+net-p2p/retroshare feedreader voip
+media-video/handbrake x265
 games-emulation/dgen-sdl joystick
 games-emulation/snes9x joystick gtk netplay
 x11-misc/redshift gtk
@@ -194,7 +198,8 @@ net-libs/webkit-gtk -introspection -gstreamer -geoloc -geolocation -webgl
 games-emulation/pcsxr -sdl
 dev-db/sqlite secure-delete
 media-libs/phonon -vlc
-media-libs/libsdl custom-cflags
+app-crypt/hashcat custom-cflags
+media-libs/libsdl custom-cflags X
 www-client/chromium custom-cflags
 www-client/firefox custom-cflags custom-optimization -wifi system-harfbuzz system-icu system-jpeg system-libevent system-libvpx system-sqlite
 www-client/firefox-kde-opensuse custom-cflags custom-optimization -wifi system-harfbuzz system-icu system-jpeg system-libevent system-libvpx system-sqlite kde -egl -bindist
@@ -291,7 +296,6 @@ dev-qt/qtsingleapplication qt5 X
 kde-frameworks/kwindowsystem X
 kde-frameworks/kdelibs4support X
 dev-qt/qtwebchannel qml
-kde-plasma/libksysguard -minimal
 kde-apps/akonadi -mysql sqlite
 kde-apps/ktp-common-internals otr
 kde-apps/artikulate qtmedia
@@ -299,11 +303,9 @@ app-text/poppler qt5 cairo
 x11-libs/libva-intel-driver X
 x11-libs/cairo X
 dev-cpp/cairomm X
-media-libs/libsdl X
 x11-libs/libxkbcommon X
 x11-libs/pango X
 sys-apps/dbus X
-media-libs/libsdl2 X gles haptic
 games-emulation/mednafen debugger
 net-libs/libtorrent-rasterbar python
 x11-drivers/nvidia-drivers uvm
@@ -316,8 +318,6 @@ mate-base/mate-menus python
 dev-libs/boost python
 dev-python/numpy lapack
 x11-libs/qscintilla qt5
-sci-libs/cholmod -minimal
-dev-libs/libcdio -minimal
 x11-libs/libdrm libkms video_cards_vmware
 media-gfx/gmic X ffmpeg cli
 x11-libs/gdk-pixbuf tiff
@@ -332,6 +332,8 @@ net-analyzer/netperf demo
 dev-python/QtPy gui
 dev-libs/marisa python
 sys-devel/clang xml
+dev-libs/xmlsec nss
+media-libs/libsdl2 X gles haptic
 
 #libressl
 net-misc/curl curl_ssl_libressl -curl_ssl_openssl

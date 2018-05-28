@@ -67,6 +67,7 @@ app-cdr/xfburn
 app-crypt/certbot
 app-crypt/gnupg
 app-crypt/gpa
+app-crypt/hashcat
 app-crypt/kencfs-plasma
 app-crypt/veracrypt
 app-doc/linux-kernel-in-a-nutshell
@@ -607,12 +608,12 @@ media-fonts/zh-kcfonts
 media-gfx/apngasm
 media-gfx/apngdis
 media-gfx/blender
-media-gfx/comix
 media-gfx/cropgui
 media-gfx/darktable
 media-gfx/digikam
 media-gfx/eog
 media-gfx/eom
+media-gfx/ephoto
 media-gfx/fbida
 media-gfx/feh
 media-gfx/flameshot
@@ -786,6 +787,7 @@ net-dns/dnsmasq
 net-dns/ldns-utils
 net-dns/unbound
 net-firewall/iptables
+net-firewall/nftables
 net-fs/autofs
 net-fs/cifs-utils
 net-fs/curlftpfs
@@ -819,6 +821,7 @@ net-misc/aria2
 net-misc/autossh
 net-misc/axel
 net-misc/bridge-utils
+net-misc/connman
 net-misc/dhcp
 net-misc/dhcpcd
 net-misc/electron-cash
