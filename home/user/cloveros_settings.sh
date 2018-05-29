@@ -190,9 +190,8 @@ case "$choice" in
 		fi
 
 		binhostmirrors='binhost_mirrors="$PORTAGE_BINHOST,'
-		for i in "${mirrors[@]}"
-		do
-		binhostmirrors+="$i,"
+		for i in "${mirrors[@]}"; do
+			binhostmirrors+="$i,"
 		done
 		binhostmirrors+='"'
 		if ! grep -q "^$binhostmirrors$" /etc/portage/make.conf; then
@@ -292,7 +291,9 @@ case "$choice" in
 		;;
 
 	d)
-		for i in {0..99}; xinput set-prop $i "libinput Accel Profile Enabled" 0 1 &> /dev/null
+		for i in {0..99}; do
+			xinput set-prop $i "libinput Accel Profile Enabled" 0 1 &> /dev/null
+		done
 		echo -e "\nDisable mouse acceleration: xinput set-prop \"Your Device\" \"libinput Accel Profile Enabled\" 0 1"
 		;;
 
