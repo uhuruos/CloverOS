@@ -1,3 +1,19 @@
+media-sound/bitwig-studio::audio-overlay
+media-sound/cadence::audio-overlay
+media-sound/pure-data::audio-overlay
+media-sound/ladish::audio-overlay
+media-sound/guitarix::audio-overlay
+media-sound/mididings::audio-overlay
+media-sound/drumkv1::audio-overlay
+media-sound/padthv1::audio-overlay
+media-sound/setbfree::audio-overlay
+media-sound/sequencer64::audio-overlay
+media-sound/samplv1::audio-overlay
+media-libs/zita-resampler::audio-overlay
+media-sound/synthv1::audio-overlay
+media-sound/serialosc::audio-overlay
+media-libs/libmonome::audio-overlay # serialosc
+
 app-emulation/wine-any::FireBurn
 
 media-gfx/ephoto::bar

@@ -1,9 +1,13 @@
 #temporary
-media-video/ffmpeg -opencl
 media-libs/libopenshot -imagemagick
 media-plugins/vapoursynth-vstaambk -opencl
 media-plugins/vapoursynth-havsfunc -opencl
 
+media-sound/bitwig-studio -jack
+media-sound/synthv1 qt5 standalone
+media-sound/samplv1 qt5 standalone
+media-sound/padthv1 qt5 standalone
+media-sound/drumkv1 qt5 standalone
 net-misc/connman nftables -wifi
 media-libs/fontconfig-infinality -nyx
 app-i18n/scim gtk3
@@ -138,7 +142,7 @@ sys-devel/distcc gtk crossdev
 media-video/handbrake gtk -fdk libav-aac
 media-sound/jack-audio-connection-kit cpudetection
 virtual/ffmpeg X sdl x264
-media-video/ffmpeg X rubberband x265 libass vorbis ogg network vpx rtmp x264 aac wavpack opus mp3 sdl gme v4l webp theora xvid xcb cpudetection -opengl
+media-video/ffmpeg X rubberband x265 libass vorbis ogg network vpx rtmp x264 aac wavpack opus mp3 sdl gme v4l webp theora xvid xcb cpudetection -opencl
 media-gfx/fontforge X gtk
 media-gfx/graphviz X gtk pdf svg python perl
 app-crypt/veracrypt X
@@ -461,3 +465,11 @@ media-libs/libsoundtouch abi_x86_32
 app-arch/xz-utils abi_x86_32
 x11-libs/pixman abi_x86_32
 media-libs/libsdl abi_x86_32
+
+# required by media-sound/ladish-1::audio-overlay
+# required by ladish (argument)
+>=media-sound/jack2-1.9.12-r1 dbus
+# required by media-sound/pure-data-0.47_p1::audio-overlay
+# required by pure-data (argument)
+>=dev-lang/tk-8.6.6 truetype
+

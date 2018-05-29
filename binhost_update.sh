@@ -9,7 +9,7 @@ emerge -1 --buildpkg $(find /var/db/pkg/ -mindepth 2 -maxdepth 2 -name \*-9999 |
 #rm -Rf /usr/portage/packages/*
 #quickpkg --include-unmodified-config=y "*/*" 2>&1 | ansi2html | tail -n +1081 | head -n -7 > s/quickpkg.txt
 #mv s/ /usr/portage/packages/
-#emerge --buildpkgonly vnstat sudo openssh firefox-kde-opensuse
+#emerge --buildpkgonly vnstat sudo openssh firefox-kde-opensuse postfix
 #emerge -C hwinfo ntfs3g && emerge --buildpkg ntfs3g && emerge --buildpkg hwinfo
 
 cd /usr/portage/packages/s/

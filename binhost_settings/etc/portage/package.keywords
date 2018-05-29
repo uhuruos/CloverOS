@@ -12,7 +12,7 @@ net-p2p/retroshare # needs latest
 net-misc/youtube-dl # needs latest
 media-fonts/vlgothic # old
 games-emulation/dolphin ** # old
-media-gfx/mypaint
+media-gfx/mypaint # libmypaint dependency
 www-client/firefox
 media-gfx/gimp
 media-libs/mesa
@@ -44,9 +44,14 @@ net-misc/spice-gtk
 media-video/ffmpeg
 
 #keyworded, remove when stable exists
+app-emulation/wine-any
 net-vpn/logmein-hamachi
 app-arch/zpaq-extras
 app-crypt/certbot
+dev-python/pyrfc3339 # certbot
+dev-python/parsedatetime # certbot
+app-crypt/acme # certbot
+dev-python/josepy # certbot
 dev-util/bless
 media-gfx/apngdis
 net-dns/dnscrypt-proxy
@@ -66,6 +71,9 @@ media-video/avidemux
 games-emulation/ppsspp
 games-emulation/pcsxr
 media-video/openshot
+net-libs/cppzmq # openshot
+media-libs/libopenshot # openshot
+media-libs/libopenshot-audio # openshot
 media-sound/lmms
 media-gfx/pngquant
 media-sound/yoshimi
@@ -74,6 +82,10 @@ net-im/qtox
 games-engines/openmw
 media-sound/denemo
 sci-calculators/tiemu
+sci-libs/libticonv # tiemu
+sci-libs/libticalcs2 # tiemu
+sci-libs/libtifiles2 # tiemu
+sci-libs/libticables2 # tiemu
 media-sound/supercollider
 games-util/steam-launcher
 media-sound/deadbeef
@@ -90,6 +102,7 @@ www-client/qutebrowser
 sys-power/phc-intel
 x11-terms/termite
 media-video/handbrake
+media-libs/libbluray # handbrake
 www-client/palemoon-bin
 x11-misc/i3blocks-gaps
 net-im/telegram-desktop-bin
@@ -98,6 +111,7 @@ media-libs/waifu2x-converter-cpp
 app-editors/neovim
 sys-fs/ecryptfs-utils
 media-gfx/maim
+x11-misc/slop # maim
 net-wireless/gnuradio
 x11-wm/i3-gaps
 net-p2p/freenet
@@ -127,9 +141,10 @@ app-crypt/veracrypt
 net-analyzer/ntopng
 app-emulation/fuse
 app-laptop/tlp
+sys-power/linux-x86-power-tools # tlp
 sys-power/acpi_call
 dev-util/eclipse-sdk-bin
-dev-java/icedtea:8
+dev-java/icedtea
 dev-util/staruml-bin
 media-gfx/w3mimgfb
 dev-libs/amdgpu-pro-opencl
@@ -199,7 +214,6 @@ games-emulation/sdlmame
 net-p2p/eiskaltdcpp **
 sys-block/sas3flash
 app-crypt/kencfs-plasma
-app-emulation/wine-any
 games-emulation/rpcs3 **
 games-emulation/citra **
 dev-libs/sway
@@ -405,26 +419,6 @@ media-gfx/ephoto
 app-crypt/hashcat
 
 #dependencies
-#tlp
-sys-power/linux-x86-power-tools
-#handbrake
-media-libs/libbluray
-#tiemu
-sci-libs/libticonv
-sci-libs/libticalcs2
-sci-libs/libtifiles2
-sci-libs/libticables2
-#certbot
-dev-python/pyrfc3339
-dev-python/parsedatetime
-#maim
-x11-misc/slop
-#certbot
-app-crypt/acme
-#openshot
-net-libs/cppzmq
-media-libs/libopenshot
-media-libs/libopenshot-audio
 #ardour
 media-libs/suil
 #tomahawk
@@ -517,8 +511,6 @@ media-gfx/gmic
 media-libs/libsidplayfp
 #rtorrent-ps
 net-libs/libtorrent **
-#certbot
-dev-python/josepy
 #gkrellm-plugins
 x11-plugins/gkrellm-countdown
 #streamlink
@@ -867,3 +859,45 @@ dev-python/django-otp-yubikey
 # required by dev-util/monodevelop-6.0.0.4761::dotnet
 # required by monodevelop (argument)
 =www-servers/xsp-2014.12-r2014120900 ~amd64
+
+# required by pure-data (argument)
+=media-sound/pure-data-0.47_p1 ~amd64
+# required by bitwig-studio (argument)
+=media-sound/bitwig-studio-2.3.2 ~amd64
+# required by cadence (argument)
+=media-sound/cadence-9999-r3 **
+# required by ladish (argument)
+=media-sound/ladish-1-r2 ~amd64
+# required by guitarix (argument)
+=media-sound/guitarix-9999 **
+# required by mididings (argument)
+=media-sound/mididings-20120419 ~amd64
+# required by drumkv1 (argument)
+=media-sound/drumkv1-0.9.0 ~amd64
+# required by ladish (argument)
+=media-sound/ladish-1 ~amd64
+# required by padthv1 (argument)
+=media-sound/padthv1-0.9.0 ~amd64
+# required by setbfree (argument)
+=media-sound/setbfree-0.8.5 ~amd64
+# required by sequencer64 (argument)
+=media-sound/sequencer64-0.94.2 ~amd64
+# required by serialosc (argument)
+=media-sound/serialosc-1.4.1 ~amd64
+# required by samplv1 (argument)
+=media-sound/samplv1-0.9.0 ~amd64
+# required by media-sound/bitwig-studio-2.3.2::audio-overlay[jack]
+# required by bitwig-studio (argument)
+=media-sound/jack2-1.9.12-r1 ~amd64
+# required by synthv1 (argument)
+=media-sound/synthv1-0.9.0 ~amd64
+# required by media-sound/guitarix-9999::audio-overlay
+# required by guitarix (argument)
+=media-libs/zita-convolver-3.1.0 ~amd64
+# required by media-sound/serialosc-1.4.1::audio-overlay
+# required by serialosc (argument)
+=media-libs/libmonome-1.4.1 ~amd64
+# required by media-sound/guitarix-9999::audio-overlay
+# required by guitarix (argument)
+=media-libs/zita-resampler-1.6.0 ~amd64
+
