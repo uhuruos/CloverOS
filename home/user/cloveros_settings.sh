@@ -39,6 +39,7 @@ u) Update system, kernel, cloveros_settings.sh, clean emerge cache
 l) Update/install kernel $kernelversion-gnu
 a) ALSA settings configurator
 t) Enable tap to click on touchpad
+d) Disable mouse acceleration
 b) Install bluetooth manager
 i) Install VirtualBox
 v) Install Virtualbox/VMWare drivers
@@ -285,12 +286,14 @@ case "$choice" in
 		;;
 
 	t)
-		if [ ! -s /usr/bin/xinput ]; then
-			sudo emerge xinput
-		fi
 		xinput set-prop "SynPS/2 Synaptics TouchPad" "libinput Tapping Enabled" 1
 		echo -e "\nEnable Tap to Click: xinput set-prop \"SynPS/2 Synaptics TouchPad\" \"libinput Tapping Enabled\" 1"
 		echo "Disable Tap to Click: xinput set-prop \"SynPS/2 Synaptics TouchPad\" \"libinput Tapping Enabled\" 0"
+		;;
+
+	d)
+		for i in {0..99}; xinput set-prop $i "libinput Accel Profile Enabled" 0 1 &> /dev/null
+		echo -e "\nDisable mouse acceleration: xinput set-prop \"Your Device\" \"libinput Accel Profile Enabled\" 0 1"
 		;;
 
 	b)
