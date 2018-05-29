@@ -38,14 +38,13 @@ if [ -z "$DISPLAY" ] && ! pgrep X > /dev/null; then
 	wmspkg[w]=windowmaker
 	wmspkg[t]=fvwm-themes
 	wmspkg[h]=xmonad
-	taptoclick=$'tappingid=$(xinput list-props "SynPS/2 Synaptics TouchPad" | grep \'Tapping Enabled (\' | awk \'{print $4}\' | grep -o \'[0-9]\\+\') && xinput set-prop "SynPS/2 Synaptics TouchPad" $tappingid 1'
-	wmspost[y]="nitrogen --set-zoom wallpaper.png & xbindkeys & $taptoclick &"
-	wmspost[Y]="nitrogen --set-zoom wallpaper.png & xbindkeys & $taptoclick &"
-	wmspost[i]="nitrogen --set-zoom wallpaper.png & xbindkeys & $taptoclick &"
-	wmspost[a]="nitrogen --set-zoom wallpaper.png & xbindkeys & $taptoclick &"
-	wmspost[o]="nitrogen --set-zoom wallpaper.png & xbindkeys & $taptoclick &"
-	wmspost[t]="nitrogen --set-zoom wallpaper.png & xbindkeys & $taptoclick &"
-	wmspost[h]="nitrogen --set-zoom wallpaper.png & xbindkeys & $taptoclick &"
+	wmspost[y]="nitrogen --set-zoom wallpaper.png & xbindkeys & xinput set-prop "SynPS/2 Synaptics TouchPad" "libinput Tapping Enabled" 1 &"
+	wmspost[Y]="nitrogen --set-zoom wallpaper.png & xbindkeys & xinput set-prop "SynPS/2 Synaptics TouchPad" "libinput Tapping Enabled" 1 &"
+	wmspost[i]="nitrogen --set-zoom wallpaper.png & xbindkeys & xinput set-prop "SynPS/2 Synaptics TouchPad" "libinput Tapping Enabled" 1 &"
+	wmspost[a]="nitrogen --set-zoom wallpaper.png & xbindkeys & xinput set-prop "SynPS/2 Synaptics TouchPad" "libinput Tapping Enabled" 1 &"
+	wmspost[o]="nitrogen --set-zoom wallpaper.png & xbindkeys & xinput set-prop "SynPS/2 Synaptics TouchPad" "libinput Tapping Enabled" 1 &"
+	wmspost[t]="nitrogen --set-zoom wallpaper.png & xbindkeys & xinput set-prop "SynPS/2 Synaptics TouchPad" "libinput Tapping Enabled" 1 &"
+	wmspost[h]="nitrogen --set-zoom wallpaper.png & xbindkeys & xinput set-prop "SynPS/2 Synaptics TouchPad" "libinput Tapping Enabled" 1 &"
 	wmspost[e]=""
 	wmspost[k]=""
 	wmspost[m]=""

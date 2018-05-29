@@ -288,10 +288,9 @@ case "$choice" in
 		if [ ! -s /usr/bin/xinput ]; then
 			sudo emerge xinput
 		fi
-		tappingid=$(xinput list-props "SynPS/2 Synaptics TouchPad" | grep 'Tapping Enabled (' | awk '{print $4}' | grep -o "[0-9]\+")
-		xinput set-prop "SynPS/2 Synaptics TouchPad" $tappingid 1
-		echo -e "\nEnable Tap to Click: xinput set-prop \"SynPS/2 Synaptics TouchPad\" $tappingid 1"
-		echo "Disable Tap to Click: xinput set-prop \"SynPS/2 Synaptics TouchPad\" $tappingid 0"
+		xinput set-prop "SynPS/2 Synaptics TouchPad" "libinput Tapping Enabled" 1
+		echo -e "\nEnable Tap to Click: xinput set-prop \"SynPS/2 Synaptics TouchPad\" \"libinput Tapping Enabled\" 1"
+		echo "Disable Tap to Click: xinput set-prop \"SynPS/2 Synaptics TouchPad\" \"libinput Tapping Enabled\" 0"
 		;;
 
 	b)
