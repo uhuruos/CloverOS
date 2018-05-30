@@ -158,7 +158,6 @@ arc_dlg-b=1
 tab_new-key=116
 tab_new-keymod=4
 go_back-key=65288
-go_back-keymod=8
 go_forward-key=65363
 go_forward-keymod=8
 go_up-key=65362
