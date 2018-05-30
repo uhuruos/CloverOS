@@ -1,8 +1,10 @@
-kernelversion=4.16.12
+kernelversion=4.16.13
 kernelmajversion=4.16
 
-#emerge gentoo-sources genkernel
-#eselect kernel set 1
+emerge -C gentoo-sources
+rm -Rf /usr/src/*-gentoo*
+emerge gentoo-sources
+eselect kernel set 1
 
 binutils-config --linker ld.bfd
 
