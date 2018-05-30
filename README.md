@@ -128,7 +128,7 @@ This disables the binhost and uses Portage's ebuilds for packages. Now you can e
 * [What are keywording and unmasking?](#what-are-keywording-and-unmasking)
 * [Emerge error relating to openssl](#emerge-error-relating-to-openssl)
 * [GPU passthrough example](#gpu-passthrough-example)
-* [Generate Wbar config from installed programs](#generate-wbar-config-from-installed-programs)
+* [Generate Wbar dock config from installed programs](#generate-wbar-dock-config-from-installed-programs)
 * [Change FVWM titlebar color](#change-fvwm-titlebar-color)
 * [Thumbnail file picker with Firefox](#thumbnail-file-picker-with-firefox)
 * [KDE theme in qt5 programs without KDE](#kde-theme-in-qt5-programs-without-kde)
@@ -261,7 +261,7 @@ qemu-system-x86_64 -enable-kvm -m 4G -cpu host -smp cores=8,threads=1 -vga none 
 -device vfio-pci,host=00:12.2
 ```
 
-### Generate Wbar config from installed programs
+### Generate Wbar dock config from installed programs
 First: `sudo emerge imagemagick && mkdir ~/.wbaricons`
 
 ```
