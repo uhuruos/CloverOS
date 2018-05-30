@@ -406,6 +406,7 @@ kde-plasma/plasma-applet-active-window-control
 lxde-base/lxappearance
 lxde-base/lxde-meta
 lxde-base/lxtask
+lxde-base/lxterminal
 lxqt-base/lxqt-meta
 mail-client/alpine
 mail-client/mutt
