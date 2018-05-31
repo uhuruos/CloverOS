@@ -338,6 +338,7 @@ dev-libs/marisa python
 sys-devel/clang xml
 dev-libs/xmlsec nss
 media-libs/libsdl2 X gles haptic
+dev-lang/tk truetype
 
 #libressl
 net-misc/curl curl_ssl_libressl -curl_ssl_openssl
@@ -465,11 +466,3 @@ media-libs/libsoundtouch abi_x86_32
 app-arch/xz-utils abi_x86_32
 x11-libs/pixman abi_x86_32
 media-libs/libsdl abi_x86_32
-
-# required by media-sound/ladish-1::audio-overlay
-# required by ladish (argument)
->=media-sound/jack2-1.9.12-r1 dbus
-# required by media-sound/pure-data-0.47_p1::audio-overlay
-# required by pure-data (argument)
->=dev-lang/tk-8.6.6 truetype
-

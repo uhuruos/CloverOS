@@ -68,6 +68,8 @@ media-sound/spek
 media-sound/ardour
 media-video/makemkv
 media-video/avidemux
+media-libs/avidemux-plugins # avidemux
+media-libs/avidemux-core # avidemux
 games-emulation/ppsspp
 games-emulation/pcsxr
 media-video/openshot
@@ -109,6 +111,13 @@ net-im/telegram-desktop-bin
 media-libs/vapoursynth
 media-libs/waifu2x-converter-cpp
 app-editors/neovim
+dev-lua/mpack # neovim
+dev-libs/unibilium # neovim
+dev-lua/lpeg # neovim
+dev-libs/msgpack # neovim
+dev-libs/libtermkey #neovim
+dev-libs/libvterm # neovim
+media-libs/l-smash # neovim
 sys-fs/ecryptfs-utils
 media-gfx/maim
 x11-misc/slop # maim
@@ -116,6 +125,7 @@ net-wireless/gnuradio
 x11-wm/i3-gaps
 net-p2p/freenet
 media-sound/tomahawk
+dev-cpp/websocketpp # tomahawk
 media-video/obs-studio
 media-sound/oss
 app-emulation/open-vm-tools
@@ -421,8 +431,6 @@ app-crypt/hashcat
 #dependencies
 #ardour
 media-libs/suil
-#tomahawk
-dev-cpp/websocketpp
 #rstudio
 dev-libs/mathjax
 #deadbeef
@@ -430,9 +438,6 @@ media-plugins/deadbeef-plugins-meta
 #freenet
 dev-java/bcprov
 net-libs/NativeThread
-#avidemux
-media-libs/avidemux-plugins
-media-libs/avidemux-core
 #termite
 x11-libs/vte::eroen
 #gimp
@@ -440,14 +445,6 @@ media-libs/libmypaint
 media-libs/babl
 media-libs/gexiv2
 media-libs/gegl
-#neovim
-dev-lua/mpack
-dev-libs/unibilium
-dev-lua/lpeg
-dev-libs/msgpack
-dev-libs/libtermkey
-dev-libs/libvterm
-media-libs/l-smash
 #oss
 media-sound/oss-driver
 #waifu2x
@@ -900,4 +897,7 @@ dev-python/django-otp-yubikey
 # required by media-sound/guitarix-9999::audio-overlay
 # required by guitarix (argument)
 =media-libs/zita-resampler-1.6.0 ~amd64
-
+# required by kbfs (argument)
+=app-crypt/kbfs-1.0.44 ~amd64
+# required by keybase (argument)
+=app-crypt/keybase-1.0.44 ~amd64
