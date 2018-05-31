@@ -16,6 +16,7 @@
 */*::flussence
 */*::frabjous
 */*::genthree
+*/*::gnome
 */*::haskell
 */*::jm-overlay
 */*::jorgicio
