@@ -4,7 +4,7 @@ kernelmajversion=4.16
 emerge -C gentoo-sources
 rm -Rf /usr/src/*-gentoo*
 emerge gentoo-sources
-eselect kernel set 1
+eselect kernel set linux-$kernelversion-gentoo
 
 binutils-config --linker ld.bfd
 
