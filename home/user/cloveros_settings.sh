@@ -232,12 +232,13 @@ case "$choice" in
 		;;
 
 	a)
-		echo "1) Change default ALSA device
-2) Change default sample rate
-3) Bypass dmix (DSD, high sample rate)
-4) Configure ALSA for OBS
-5) GUI volume control
-6) CLI volume control"
+		echo "1) Change default ALSA playback device
+2) Change default ALSA capture device
+3) Change default sample rate
+4) Bypass dmix (DSD, high sample rate)
+5) Configure ALSA for OBS
+6) GUI volume control
+7) CLI volume control"
 		read -erp "Select option: " -n 1 choicealsa
 		echo
 		case "$choicealsa" in
@@ -249,6 +250,14 @@ case "$choice" in
 				;;
 
 			2)
+				grep " \[" /proc/asound/cards
+				read -erp "Select the audio device to become default for playback: " -n 1 choiceaudio
+				read -erp "Select the audio device to become default for capture: " -n 1 choicecapture
+				echo -e "\nPlayback device ${choiceaudio} and capture device ${choicecapture} are now default for ALSA programs. (~/.asoundrc)"
+				echo -e "pcm.!default {\n    type asym\n    playback.pcm \"plughw:${choiceaudio}\"\n    capture.pcm  \"plughw:${choicecapture}\"\n}"
+				;;
+
+			3)
 				echo "Sample rate examples: 44100 48000 96000 192000"
 				read -erp "Select sample rate: " choicesamplerate
 				if grep -q 'defaults.pcm.dmix.rate' ~/.asoundrc; then
@@ -259,21 +268,21 @@ case "$choice" in
 				echo -e "\nSample rate set to $choicesamplerate (~/.asoundrc)"
 				;;
 
-			3)
+			4)
 				grep " \[" /proc/asound/cards
 				read -erp "Select the audio device to become (hw) default: " -n 1 choiceaudio
 				echo -e "pcm.!default {\n  type hw\n  card ${choiceaudio}\n}" > ~/.asoundrc
 				echo -e "\nAudio device ${choiceaudio} is now the default (hw) for ALSA programs. Only one program will output audio. (~/.asoundrc)"
 				;;
-			4)
+			5)
 				echo -e "\nIn progress."
 				;;
 
-			5)
+			6)
 				qasmixer&
 				;;
 
-			6)
+			7)
 				alsamixer
 				;;
 
