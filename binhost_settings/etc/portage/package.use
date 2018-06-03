@@ -124,7 +124,7 @@ app-mobilephone/heimdall qt5
 games-emulation/yabause pic qt5
 games-emulation/mgba qt5
 media-sound/supercollider qt5
-games-emulation/dolphin qt5 ao sdl bluetooth -wxwidgets
+games-emulation/dolphin qt5 ao sdl bluetooth lto wxwidgets
 app-benchmarks/i7z qt5
 media-video/vlc qt5 xml projectm gnutls flac mp3
 net-p2p/bitcoin-qt qt5

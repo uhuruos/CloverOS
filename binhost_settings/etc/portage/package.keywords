@@ -11,7 +11,9 @@ app-laptop/tp_smapi # requested
 net-p2p/retroshare # needs latest
 net-misc/youtube-dl # needs latest
 media-fonts/vlgothic # old
+games-emulation/retroarch
 games-emulation/dolphin ** # old
+net-libs/mbedtls # dolphin
 media-gfx/mypaint # libmypaint dependency
 www-client/firefox
 media-gfx/gimp
@@ -436,6 +438,7 @@ media-gfx/ephoto
 app-crypt/hashcat
 net-print/hplip
 net-print/hplip-plugin
+games-emulation/melonds
 
 #dependencies
 #ardour

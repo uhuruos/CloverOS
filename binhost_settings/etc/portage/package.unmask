@@ -160,6 +160,7 @@ games-emulation/mednafen-snes-libretro::abendbrot
 games-emulation/mednafen-supergrafx-libretro::abendbrot
 games-emulation/mednafen-vb-libretro::abendbrot
 games-emulation/mednafen-wswan-libretro::abendbrot
+games-emulation/melonds-libretro::abendbrot
 games-emulation/meowpc98-libretro::abendbrot
 games-emulation/meteor-libretro::abendbrot
 games-emulation/mgba-libretro::abendbrot

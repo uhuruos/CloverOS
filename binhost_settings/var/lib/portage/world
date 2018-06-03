@@ -887,6 +887,8 @@ net-p2p/syncthing
 net-p2p/transmission
 net-p2p/transmission-remote-gtk
 net-p2p/vuze
+net-print/hplip
+net-print/hplip-plugin
 net-vpn/i2p
 net-vpn/i2pd
 net-vpn/logmein-hamachi
