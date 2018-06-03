@@ -253,8 +253,8 @@ case "$choice" in
 				grep " \[" /proc/asound/cards
 				read -erp "Select the audio device to become default for playback: " -n 1 choiceaudio
 				read -erp "Select the audio device to become default for capture: " -n 1 choicecapture
+				echo -e "pcm.!default {\n    type asym\n    playback.pcm \"plughw:${choiceaudio}\"\n    capture.pcm  \"plughw:${choicecapture}\"\n}" > ~/.asoundrc
 				echo -e "\nPlayback device ${choiceaudio} and capture device ${choicecapture} are now default for ALSA programs. (~/.asoundrc)"
-				echo -e "pcm.!default {\n    type asym\n    playback.pcm \"plughw:${choiceaudio}\"\n    capture.pcm  \"plughw:${choicecapture}\"\n}"
 				;;
 
 			3)
