@@ -27,8 +27,7 @@ cat << EOF | chroot .
 emerge-webrsync
 eselect profile set "default/linux/amd64/17.0/hardened"
 
-PORTAGE_BINHOST="https://cloveros.ga" emerge -G aria2
-
+PORTAGE_BINHOST="https://cloveros.ga" emerge -G gnupg aria2
 gpg --keyserver hkp://pool.sks-keyservers.net --recv-key "78F5 AC55 A120 07F2 2DF9 A28A 78B9 3F76 B8E4 2805"
 
 echo '
