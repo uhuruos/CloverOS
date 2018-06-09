@@ -51,12 +51,11 @@ FETCHCOMMAND_HTTPS="sh -c \"aria2c -x2 -s99 -j99 -k1M -m1 -t4 --connect-timeout=
 wget https://cloveros.ga/s/kernel-libre.tar.xz
 wget https://cloveros.ga/s/signatures/s/kernel-libre.tar.xz.asc
 gpg --verify kernel-libre.tar.xz.asc kernel-libre.tar.xz
-rm kernel-libre.tar.xz.asc
 tar xf kernel-libre.tar.xz
 mv initramfs-genkernel-*-gentoo-gnu kernel-genkernel-*-gentoo-gnu System.map-genkernel-*-gentoo-gnu /boot/
 mkdir /lib/modules/
 mv *-gentoo-gnu/ /lib/modules/
-rm kernel-libre.tar.xz
+rm kernel-libre.tar.xz kernel-libre.tar.xz.asc
 
 emerge grub dhcpcd
 

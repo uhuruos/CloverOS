@@ -93,12 +93,11 @@ FETCHCOMMAND_HTTPS="sh -c \"aria2c -x2 -s99 -j99 -k1M -m1 -t4 --connect-timeout=
 wget https://cloveros.ga/s/kernel.tar.xz
 wget https://cloveros.ga/s/signatures/s/kernel.tar.xz.asc
 gpg --verify kernel.tar.xz.asc kernel.tar.xz
-rm kernel.tar.xz.asc
 tar xf kernel.tar.xz
 mv initramfs-genkernel-*-gentoo* kernel-genkernel-*-gentoo* System.map-genkernel-*-gentoo* /boot/
 mkdir /lib/modules/
 mv *-gentoo*/ /lib/modules/
-rm kernel.tar.xz
+rm kernel.tar.xz kernel.tar.xz.asc
 
 emerge grub dhcpcd
 
