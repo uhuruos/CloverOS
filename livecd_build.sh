@@ -27,7 +27,7 @@ cat << EOF | chroot .
 emerge-webrsync
 eselect profile set "default/linux/amd64/17.0/hardened"
 
-PORTAGE_BINHOST="https://cloveros.ga" emerge -G gnupg aria2
+PORTAGE_BINHOST="https://cloveros.ga" ACCEPT_KEYWORDS="**" emerge -uvDG gnupg aria2
 gpg --keyserver hkp://pool.sks-keyservers.net --recv-key "78F5 AC55 A120 07F2 2DF9 A28A 78B9 3F76 B8E4 2805"
 
 echo '
@@ -42,9 +42,6 @@ ACCEPT_LICENSE="*"
 ACCEPT_KEYWORDS="**"
 binhost_mirrors=\$PORTAGE_BINHOST",https://useast.cloveros.ga,https://uswest.cloveros.ga,https://ca.cloveros.ga,https://fr.cloveros.ga,https://nl.cloveros.ga,https://uk.cloveros.ga,https://au.cloveros.ga,https://sea.cloveros.ga,https://cernet.mirrors.ustc.edu.cn/cloveros,https://openmirrors.cf/cloveros,"
 FETCHCOMMAND_HTTPS="sh -c \"aria2c -x2 -s99 -j99 -k1M -m1 -t4 --connect-timeout=4 --lowest-speed-limit=20K -d \"\\\${DISTDIR}\" -o \"\\\${FILE}\" \\\\\\\$(sed -e \"s#,#\"\\\${DISTDIR}/\\\${FILE}\"\"\ \"#g\" -e \"s#"\$PKGDIR"##g\" -e \"s#.partial##g\" <<< "\$binhost_mirrors") && aria2c --allow-overwrite -d \"\\\${DISTDIR}\" -o \"\\\${FILE}.asc\" \\\\\\\$(sed \"s#cloveros.ga/#cloveros.ga/s/signatures/#\" <<< \"\\\${URI}.asc\") && gpg --verify \"\\\${DISTDIR}/\\\${FILE}.asc\" \"\\\${DISTDIR}/\\\${FILE}\" && rm \"\\\${DISTDIR}/\\\${FILE}.asc\"\""' >> /etc/portage/make.conf
-
-emerge -uvD world
-emerge -C python:3.6
 
 #emerge gentoo-sources genkernel
 #wget http://liquorix.net/sources/4.16/config.amd64
@@ -68,6 +65,9 @@ echo "root:$rootpassword" | chpasswd
 useradd $user
 echo "$user:$userpassword" | chpasswd
 gpasswd -a $user wheel
+
+emerge -uvD world
+emerge -C python:3.6
 
 emerge xorg-server fvwm spacefm rxvt-unicode nitrogen compton nomacs sudo wpa_supplicant porthole firefox emacs gimp mpv smplayer filezilla rtorrent-ps weechat linux-firmware alsa-utils zsh zsh-completions gentoo-zsh-completions vlgothic hack liberation-fonts nano scrot xbindkeys xinput arandr qastools slock xarchiver p7zip games-envd gparted squashfs-tools os-prober
 
