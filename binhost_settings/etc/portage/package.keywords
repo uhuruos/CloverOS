@@ -445,6 +445,7 @@ net-print/cnijfilter2
 net-print/pnm2ppa
 sci-libs/matio
 sci-libs/tensorflow
+x11-wm/stumpwm
 
 #dependencies
 #ardour

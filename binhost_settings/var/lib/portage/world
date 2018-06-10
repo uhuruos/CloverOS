@@ -1068,6 +1068,7 @@ x11-misc/compton
 x11-misc/dmenu
 x11-misc/fbdesk
 x11-misc/fbpanel
+x11-misc/hsetroot
 x11-misc/i3blocks-gaps
 x11-misc/i3lock
 x11-misc/i3status
