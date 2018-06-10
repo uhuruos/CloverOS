@@ -3,6 +3,11 @@ media-libs/libopenshot -imagemagick
 media-plugins/vapoursynth-vstaambk -opencl
 media-plugins/vapoursynth-havsfunc -opencl
 
+media-gfx/nomacs zip
+app-crypt/kbfs git
+net-print/gtklp -ssl
+media-libs/vips imagemagick fftw fits tiff lcms matio
+media-gfx/nip2 fftw
 media-sound/bitwig-studio -jack
 media-sound/synthv1 qt5 standalone
 media-sound/samplv1 qt5 standalone
@@ -124,7 +129,7 @@ app-mobilephone/heimdall qt5
 games-emulation/yabause pic qt5
 games-emulation/mgba qt5
 media-sound/supercollider qt5
-games-emulation/dolphin qt5 ao sdl bluetooth lto wxwidgets
+games-emulation/dolphin qt5 ao sdl bluetooth lto
 app-benchmarks/i7z qt5
 media-video/vlc qt5 xml projectm gnutls flac mp3
 net-p2p/bitcoin-qt qt5
@@ -238,7 +243,7 @@ media-sound/mixxx shout aac ffmpeg hid mp3 mp4 wavpack
 www-client/w3m X imlib gpm
 app-office/texstudio video
 www-client/links fbcon gpm
-media-gfx/imagemagick png hdri
+media-gfx/imagemagick png hdri fftw lqr
 media-gfx/feh exif curl
 x11-terms/rxvt-unicode -vanilla alt-font-width xft 256-color blink unicode3
 net-analyzer/vnstat gd

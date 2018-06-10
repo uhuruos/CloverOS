@@ -13,7 +13,6 @@ net-misc/youtube-dl # needs latest
 media-fonts/vlgothic # old
 games-emulation/retroarch
 games-emulation/dolphin ** # old
-net-libs/mbedtls # dolphin
 media-gfx/mypaint # libmypaint dependency
 www-client/firefox
 media-gfx/gimp
@@ -27,6 +26,7 @@ x11-drivers/nvidia-drivers
 =dev-libs/json-c-0.12.1
 #retroarch
 media-libs/vulkan-loader
+dev-libs/wayland
 #gimp
 dev-util/gdbus-codegen
 dev-libs/glib
@@ -439,6 +439,12 @@ app-crypt/hashcat
 net-print/hplip
 net-print/hplip-plugin
 games-emulation/melonds
+media-gfx/nip2
+media-libs/vips # nip2
+net-print/cnijfilter2
+net-print/pnm2ppa
+sci-libs/matio
+sci-libs/tensorflow
 
 #dependencies
 #ardour

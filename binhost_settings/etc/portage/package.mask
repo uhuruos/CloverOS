@@ -4,6 +4,7 @@
 */*::audio-overlay
 */*::bar
 */*::bobwya
+*/*::brother-overlay
 */*::deadbeef-overlay
 */*::dotnet
 */*::elementary
@@ -41,6 +42,6 @@
 */*::vampire
 */*::vapoursynth
 
->sys-devel/lld-5.0.1
->dev-util/lldb-5.0.1
 net-libs/nodejs::gentoo
+>=dev-util/lldb-6
+>=sys-devel/lld-6

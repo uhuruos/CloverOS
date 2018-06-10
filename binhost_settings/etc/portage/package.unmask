@@ -1,3 +1,5 @@
+net-print/brother-genml1-bin::brother-overlay
+
 media-gfx/gimp::gnome
 dev-util/gdbus-codegen::gnome # gimp
 dev-libs/glib::gnome # gimp
