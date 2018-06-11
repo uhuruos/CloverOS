@@ -1,3 +1,5 @@
+games-util/rejoystick::gamerlay
+
 net-print/brother-genml1-bin::brother-overlay
 
 media-gfx/gimp::gnome
@@ -55,6 +57,7 @@ app-portage/keyword-stat::haskell
 
 x11-themes/sddm-gentoo-black-theme::poly-c
 
+games-misc/ckmame::linxon
 net-misc/youtube-dl-gui::linxon
 sys-apps/psensor::linxon
 net-misc/youtube-comment-downloader::linxon

@@ -446,6 +446,12 @@ net-print/pnm2ppa
 sci-libs/matio
 sci-libs/tensorflow
 x11-wm/stumpwm
+media-libs/svgalib **
+games-util/rejoystick
+games-emulation/advancemame
+games-emulation/advancescan
+games-emulation/advancemenu
+games-misc/ckmame
 
 #dependencies
 #ardour

@@ -16,6 +16,7 @@
 */*::flatpak-overlay
 */*::flussence
 */*::frabjous
+*/*::gamerlay
 */*::genthree
 */*::gnome
 */*::haskell

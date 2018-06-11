@@ -311,6 +311,8 @@ games-board/pychess
 games-board/sjeng
 games-board/stockfish
 games-board/xboard
+games-emulation/advancemenu
+games-emulation/advancescan
 games-emulation/citra
 games-emulation/daphne
 games-emulation/desmume
@@ -322,6 +324,7 @@ games-emulation/fakenes
 games-emulation/fceux
 games-emulation/gambatte
 games-emulation/generator
+games-emulation/gens
 games-emulation/gfceux
 games-emulation/gngeo
 games-emulation/hatari
@@ -369,6 +372,7 @@ games-fps/sauerbraten
 games-fps/urbanterror
 games-fps/wolfgl
 games-fps/xonotic
+games-misc/ckmame
 games-misc/cowsay
 games-misc/fortune-mod-all
 games-misc/xcowsay
@@ -385,6 +389,7 @@ games-util/higan-purify
 games-util/joystick
 games-util/lutris
 games-util/qjoypad
+games-util/rejoystick
 games-util/steam-launcher
 gnome-extra/gnome-calculator
 kde-apps/kbackup
