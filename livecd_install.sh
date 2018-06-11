@@ -71,8 +71,8 @@ gpasswd -a $user wheel
 
 grub-install --target=i386-pc /dev/$drive &> /dev/null
 grub-mkconfig -o /boot/grub/grub.cfg &> /dev/null
-
 sed -i "s/set timeout=5/set timeout=0/" /boot/grub/grub.cfg
+
 sed -i "s@c1:12345:respawn:/sbin/agetty -a $livecduser --noclear 38400 tty1 linux@c1:12345:respawn:/sbin/agetty --noclear 38400 tty1 linux@" /etc/inittab
 sed -i '/^#/!d' /home/$livecduser/.bash_profile
 sed -i 's/^#\(.*\)/\1/g' /home/$livecduser/.bash_profile

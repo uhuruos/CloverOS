@@ -47,8 +47,7 @@ FETCHCOMMAND_HTTPS="sh -c \"aria2c -x2 -s99 -j99 -k1M -m1 -t4 --connect-timeout=
 #wget http://liquorix.net/sources/4.15/config.amd64
 #genkernel --kernel-config=config.amd64 all
 
-wget https://cloveros.ga/s/kernel-libre.tar.xz
-wget https://cloveros.ga/s/signatures/s/kernel-libre.tar.xz.asc
+wget https://cloveros.ga/s/kernel-libre.tar.xz https://cloveros.ga/s/signatures/s/kernel-libre.tar.xz.asc
 gpg --verify kernel-libre.tar.xz.asc kernel-libre.tar.xz
 tar xf kernel-libre.tar.xz
 mv initramfs-genkernel-*-gentoo-gnu kernel-genkernel-*-gentoo-gnu System.map-genkernel-*-gentoo-gnu /boot/
@@ -86,46 +85,22 @@ gpasswd -a $user video
 gpasswd -a $user games
 cd /home/$user/
 rm .bash_profile
-wget https://gitgud.io/cloveros/cloveros/raw/master/home/user/.bash_profile
-wget https://gitgud.io/cloveros/cloveros/raw/master/home/user/.zprofile
-wget https://gitgud.io/cloveros/cloveros/raw/master/home/user/.zshrc
-wget https://gitgud.io/cloveros/cloveros/raw/master/home/user/.fvwm2rc
-wget https://gitgud.io/cloveros/cloveros/raw/master/home/user/.Xdefaults
-wget https://gitgud.io/cloveros/cloveros/raw/master/home/user/wallpaper.png
-wget https://gitgud.io/cloveros/cloveros/raw/master/home/user/.xbindkeysrc
-wget https://gitgud.io/cloveros/cloveros/raw/master/home/user/screenfetch-dev
-chmod +x screenfetch-dev
-wget https://gitgud.io/cloveros/cloveros/raw/master/home/user/bl.sh
-chmod +x bl.sh
-wget https://gitgud.io/cloveros/cloveros/raw/master/home/user/cloveros_settings.sh
-chmod +x cloveros_settings.sh
-wget https://gitgud.io/cloveros/cloveros/raw/master/home/user/stats.sh
-chmod +x stats.sh
-wget https://gitgud.io/cloveros/cloveros/raw/master/home/user/rotate_screen.sh
-chmod +x rotate_screen.sh
-wget https://gitgud.io/cloveros/cloveros/raw/master/home/user/.emacs
-mkdir -p .emacs.d/backups .emacs.d/autosaves
-wget https://gitgud.io/cloveros/cloveros/raw/master/home/user/.rtorrent.rc
+wget https://gitgud.io/cloveros/cloveros/raw/master/home/user/{.bash_profile,.zprofile,.zshrc,.fvwm2rc,.Xdefaults,wallpaper.png,.xbindkeysrc,screenfetch-dev,bl.sh,cloveros_settings.sh,stats.sh,rotate_screen.sh,.emacs,.rtorrent.rc}
+chmod +x screenfetch-dev bl.sh cloveros_settings.sh stats.sh rotate_screen.sh
+mkdir -p .emacs.d/backups/ .emacs.d/autosaves/ Downloads/ .rtorrent/ .mpv/ .config/spacefm/ .config/nitrogen/ .config/nomacs/ Desktop/
 sed -i "s@/home/user/@/home/$user/@" .rtorrent.rc
-mkdir Downloads/
-mkdir .rtorrent/
-mkdir .mpv/
 wget https://gitgud.io/cloveros/cloveros/raw/master/home/user/.mpv/config -P .mpv/
-mkdir -p .config/spacefm/
+wget https://gitgud.io/cloveros/cloveros/raw/master/home/user/.config/nitrogen/nitrogen.cfg -P .config/nitrogen/
+sed -i "s@/home/user/@/home/$user/@" .config/nitrogen/nitrogen.cfg
+wget https://gitgud.io/cloveros/cloveros/raw/master/home/user/.config/nomacs/Image%20Lounge.conf -P .config/nomacs/
 wget https://gitgud.io/cloveros/cloveros/raw/master/home/user/.config/spacefm/session -P .config/spacefm/
 sed -i "s@/home/user/@/home/$user/@" .config/spacefm/session
 xdg-settings set default-web-browser firefox.desktop
 wget https://gitgud.io/cloveros/cloveros/raw/master/home/user/.config/mimeapps.list -P .config/
-mkdir Desktop/
 echo -e "[Desktop Entry]\nEncoding=UTF-8\nType=Link\nName=Home\nIcon=user-home\nExec=spacefm ~/" > Desktop/home.desktop
 echo -e "[Desktop Entry]\nEncoding=UTF-8\nType=Link\nName=Applications\nIcon=folder\nExec=spacefm /usr/share/applications/" > Desktop/applications.desktop
 cp /usr/share/applications/{firefox.desktop,smplayer.desktop,emacs.desktop,zzz-gimp.desktop,porthole.desktop,xarchiver.desktop} Desktop/
 echo -e "~rows=0\n1=home.desktop\n2=applications.desktop\n3=firefox.desktop\n4=smplayer.desktop\n5=emacs.desktop\n6=porthole.desktop\n7=zzz-gimp.desktop\n8=xarchiver.desktop" > .config/spacefm/desktop0
-mkdir .config/nitrogen/
-wget https://gitgud.io/cloveros/cloveros/raw/master/home/user/.config/nitrogen/nitrogen.cfg -P .config/nitrogen/
-sed -i "s@/home/user/@/home/$user/@" .config/nitrogen/nitrogen.cfg
-mkdir .config/nomacs/
-wget https://gitgud.io/cloveros/cloveros/raw/master/home/user/.config/nomacs/Image%20Lounge.conf -P .config/nomacs/
 chown -R $user /home/$user/
 
 sed -i "s@c1:12345:respawn:/sbin/agetty --noclear 38400 tty1 linux@c1:12345:respawn:/sbin/agetty -a $user --noclear 38400 tty1 linux@" /etc/inittab
