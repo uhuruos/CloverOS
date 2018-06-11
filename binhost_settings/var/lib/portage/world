@@ -311,7 +311,6 @@ games-board/pychess
 games-board/sjeng
 games-board/stockfish
 games-board/xboard
-games-emulation/advancemenu
 games-emulation/advancescan
 games-emulation/citra
 games-emulation/daphne
