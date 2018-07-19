@@ -393,7 +393,13 @@ esac
 ```
 
 ### Dnscrypt-proxy howto
-`sudo sh -c "emerge dnscrypt-proxy && rc-service dnscrypt-proxy start && echo nameserver 127.0.0.1 > /etc/resolv.conf"`
+```
+sudo emerge dnscrypt-proxy
+sudo rc-config add dnscrypt-proxy
+sudo sh -c 'echo "static domain_name_servers=127.0.0.1" >> /etc/dhcpcd.conf'
+sudo /etc/init.d/dnscrypt-proxy start
+sudo /etc/init.d/dhcpcd restart
+```
 
 ### Sound in OBS / Open Broadcaster Software using ALSA
 Run `sudo modprobe snd_aloop` and edit the following file, replacing `device 0` and `hw:0,0` with your sound device:
