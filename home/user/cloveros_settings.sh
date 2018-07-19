@@ -183,19 +183,13 @@ case "$choice" in
 			exit 1
 		fi
 
+		rm /usr/portage/packages/Packages
+
 		sudo eselect profile set "default/linux/amd64/17.0/hardened"
+
 		if [ -d /var/db/pkg/net-p2p/rtorrent-0.9.6-r1/ ]; then
 			sudo emerge -C rtorrent
 			sudo emerge rtorrent-ps
-		fi
-
-		binhostmirrors='binhost_mirrors="$PORTAGE_BINHOST,'
-		for i in "${mirrors[@]}"; do
-			binhostmirrors+="$i,"
-		done
-		binhostmirrors+='"'
-		if ! grep -q "^$binhostmirrors$" /etc/portage/make.conf; then
-			sudo sed -i "s@^binhost_mirrors=.*@$binhostmirrors@" /etc/portage/make.conf
 		fi
 
 		./cloveros_settings.sh 4
