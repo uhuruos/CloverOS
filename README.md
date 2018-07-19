@@ -122,6 +122,7 @@ This disables the binhost and uses Portage's ebuilds for packages. Now you can e
 * [Nvidia card crashes on boot with a green screen](#nvidia-card-crashes-on-boot-with-a-green-screen)
 * [Installing proprietary Nvidia drivers](#installing-proprietary-nvidia-drivers)
 * [Virtualbox doesn't work or any package that has a kernel module](#virtualbox-doesnt-work-or-any-package-that-has-a-kernel-module)
+* [Steam stops working](#steam-stops-working)
 * [Upgrading wine or any other slotted package](#upgrading-wine-or-any-other-slotted-package)
 * [Firefox and Pulseaudio](#firefox-and-pulseaudio)
 * [What are USE flags?](#what-are-use-flags)
@@ -198,6 +199,9 @@ Be sure to upgrade your kernel and world. This can be done using `./cloveros_set
 Then run `depmod -a`
 
 To load virtualbox modules: `sudo modprobe -a vboxdrv vboxnetadp vboxnetflt`
+
+### Steam stops working
+Start steam with `rm -R ~/.steam/ && steam`
 
 ### Upgrading wine or any other slotted package
 `sudo emerge -C wine wine-any && sudo emerge wine`
