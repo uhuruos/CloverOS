@@ -103,13 +103,15 @@ List of binaries (no dependencies): https://gitgud.io/cloveros/cloveros/blob/mas
 List of all binaries: https://cloveros.ga/s/packages.html
 
 ### Package isn't available
-Make an issue so I can add the package to binhost. In the meantime, edit `/etc/portage/make.conf` and edit the following line:
+Make an issue so I can add the package to binhost. In the meantime, switch to source by running `./cloveros_settings.sh 5` or edit `/etc/portage/make.conf` and edit the following line:
 
 `EMERGE_DEFAULT_OPTS="--keep-going=y --autounmask-write=y --jobs=2 -G"`
 
 to
 
 `EMERGE_DEFAULT_OPTS="--keep-going=y --autounmask-write=y --jobs=2"`
+
+and comment out `ACCEPT_KEYWORDS="**"`
 
 This disables the binhost and uses Portage's ebuilds for packages. Now you can emerge from source.
 
@@ -137,6 +139,7 @@ This disables the binhost and uses Portage's ebuilds for packages. Now you can e
 * [Suspend when laptop lid is closed](#suspend-when-laptop-lid-is-closed)
 * [Dnscrypt-proxy howto](#dnscrypt-proxy-howto)
 * [Sound in OBS (Open Broadcaster Software) using ALSA](#sound-in-obs-open-broadcaster-software-using-alsa)
+* [Bluetooth audio using ALSA][#bluetooth-audio-using-alsa]
 * [Install Quake 3](#install-quake-3)
 * [What is Gentoo?](#what-is-gentoo)
 * [Is this an overlay?](#is-this-an-overlay)
@@ -472,6 +475,22 @@ Run `sudo modprobe snd_aloop` and edit the following file, replacing `device 0` 
 Start playing something, then run `obs`, then add Audio Capture Device (ALSA) to your Sources.
 
 ![OBS with ALSA](https://i.imgur.com/tc1pMRX.png)
+
+### Bluetooth audio using ALSA
+```
+sudo emerge bluez-alsa
+/etc/init.d/bluealsa start
+blueman-manager&
+```
+
+~/.asoundrc:
+```
+pcm.!default {
+        type bluealsa
+        device "RE:PL:AC:E:TH:IS"
+        profile "a2dp"
+}
+```
 
 ### Install Quake 3
 ```
