@@ -103,13 +103,15 @@ List of binaries (no dependencies): https://gitgud.io/cloveros/cloveros/blob/mas
 List of all binaries: https://cloveros.ga/s/packages.html
 
 ### Package isn't available
-Make an issue so I can add the package to binhost. In the meantime, edit `/etc/portage/make.conf` and edit the following line:
+Make an issue so I can add the package to binhost. In the meantime, switch to source by running `./cloveros_settings.sh 5` or edit `/etc/portage/make.conf` and edit the following line:
 
 `EMERGE_DEFAULT_OPTS="--keep-going=y --autounmask-write=y --jobs=2 -G"`
 
 to
 
 `EMERGE_DEFAULT_OPTS="--keep-going=y --autounmask-write=y --jobs=2"`
+
+and comment out `ACCEPT_KEYWORDS="**"`
 
 This disables the binhost and uses Portage's ebuilds for packages. Now you can emerge from source.
 
@@ -122,6 +124,7 @@ This disables the binhost and uses Portage's ebuilds for packages. Now you can e
 * [Nvidia card crashes on boot with a green screen](#nvidia-card-crashes-on-boot-with-a-green-screen)
 * [Installing proprietary Nvidia drivers](#installing-proprietary-nvidia-drivers)
 * [Virtualbox doesn't work or any package that has a kernel module](#virtualbox-doesnt-work-or-any-package-that-has-a-kernel-module)
+* [Steam stops working](#steam-stops-working)
 * [Upgrading wine or any other slotted package](#upgrading-wine-or-any-other-slotted-package)
 * [Firefox and Pulseaudio](#firefox-and-pulseaudio)
 * [What are USE flags?](#what-are-use-flags)
@@ -136,6 +139,7 @@ This disables the binhost and uses Portage's ebuilds for packages. Now you can e
 * [Suspend when laptop lid is closed](#suspend-when-laptop-lid-is-closed)
 * [Dnscrypt-proxy howto](#dnscrypt-proxy-howto)
 * [Sound in OBS (Open Broadcaster Software) using ALSA](#sound-in-obs-open-broadcaster-software-using-alsa)
+* [Bluetooth audio using ALSA](#bluetooth-audio-using-alsa)
 * [Install Quake 3](#install-quake-3)
 * [What is Gentoo?](#what-is-gentoo)
 * [Is this an overlay?](#is-this-an-overlay)
@@ -198,6 +202,9 @@ Be sure to upgrade your kernel and world. This can be done using `./cloveros_set
 Then run `depmod -a`
 
 To load virtualbox modules: `sudo modprobe -a vboxdrv vboxnetadp vboxnetflt`
+
+### Steam stops working
+Start steam with `rm -R ~/.steam/ && steam`
 
 ### Upgrading wine or any other slotted package
 `sudo emerge -C wine wine-any && sudo emerge wine`
@@ -389,7 +396,13 @@ esac
 ```
 
 ### Dnscrypt-proxy howto
-`sudo sh -c "emerge dnscrypt-proxy && rc-service dnscrypt-proxy start && echo nameserver 127.0.0.1 > /etc/resolv.conf"`
+```
+sudo emerge dnscrypt-proxy
+sudo rc-config add dnscrypt-proxy
+sudo sh -c 'echo "static domain_name_servers=127.0.0.1" >> /etc/dhcpcd.conf'
+sudo /etc/init.d/dnscrypt-proxy start
+sudo /etc/init.d/dhcpcd restart
+```
 
 ### Sound in OBS / Open Broadcaster Software using ALSA
 Run `sudo modprobe snd_aloop` and edit the following file, replacing `device 0` and `hw:0,0` with your sound device:
@@ -462,6 +475,22 @@ Run `sudo modprobe snd_aloop` and edit the following file, replacing `device 0` 
 Start playing something, then run `obs`, then add Audio Capture Device (ALSA) to your Sources.
 
 ![OBS with ALSA](https://i.imgur.com/tc1pMRX.png)
+
+### Bluetooth audio using ALSA
+```
+sudo emerge bluez-alsa
+/etc/init.d/bluealsa start
+blueman-manager&
+```
+
+~/.asoundrc:
+```
+pcm.!default {
+        type bluealsa
+        device "RE:PL:AC:E:TH:IS"
+        profile "a2dp"
+}
+```
 
 ### Install Quake 3
 ```

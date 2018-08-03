@@ -1,6 +1,6 @@
 #!/bin/bash
 
-if [ "$(id -u)" != "0" ]; then
+if [ $(id -u) != 0 ]; then
    echo "This script must be run as root" 1>&2
    exit 1
 fi
@@ -87,12 +87,12 @@ cd /home/$user/
 rm .bash_profile
 wget https://gitgud.io/cloveros/cloveros/raw/master/home/user/{.bash_profile,.zprofile,.zshrc,.fvwm2rc,.Xdefaults,wallpaper.png,.xbindkeysrc,screenfetch-dev,bl.sh,cloveros_settings.sh,stats.sh,rotate_screen.sh,.emacs,.rtorrent.rc}
 chmod +x screenfetch-dev bl.sh cloveros_settings.sh stats.sh rotate_screen.sh
-mkdir -p .emacs.d/backups/ .emacs.d/autosaves/ Downloads/ .rtorrent/ .mpv/ .config/spacefm/ .config/nitrogen/ .config/nomacs/ Desktop/
+mkdir -p .emacs.d/backups/ .emacs.d/autosaves/ Downloads/ .rtorrent/ .mpv/ .config/spacefm/ .config/nitrogen/ .local/share/nomacs/ Desktop/
 sed -i "s@/home/user/@/home/$user/@" .rtorrent.rc
 wget https://gitgud.io/cloveros/cloveros/raw/master/home/user/.mpv/config -P .mpv/
 wget https://gitgud.io/cloveros/cloveros/raw/master/home/user/.config/nitrogen/nitrogen.cfg -P .config/nitrogen/
 sed -i "s@/home/user/@/home/$user/@" .config/nitrogen/nitrogen.cfg
-wget https://gitgud.io/cloveros/cloveros/raw/master/home/user/.config/nomacs/Image%20Lounge.conf -P .config/nomacs/
+wget https://gitgud.io/cloveros/cloveros/raw/master/home/user/.local/share/nomacs/settings.ini -P .local/share/nomacs/
 wget https://gitgud.io/cloveros/cloveros/raw/master/home/user/.config/spacefm/session -P .config/spacefm/
 sed -i "s@/home/user/@/home/$user/@" .config/spacefm/session
 xdg-settings set default-web-browser firefox.desktop

@@ -183,19 +183,13 @@ case "$choice" in
 			exit 1
 		fi
 
+		rm /usr/portage/packages/Packages
+
 		sudo eselect profile set "default/linux/amd64/17.0/hardened"
+
 		if [ -d /var/db/pkg/net-p2p/rtorrent-0.9.6-r1/ ]; then
 			sudo emerge -C rtorrent
 			sudo emerge rtorrent-ps
-		fi
-
-		binhostmirrors='binhost_mirrors="$PORTAGE_BINHOST,'
-		for i in "${mirrors[@]}"; do
-			binhostmirrors+="$i,"
-		done
-		binhostmirrors+='"'
-		if ! grep -q "^$binhostmirrors$" /etc/portage/make.conf; then
-			sudo sed -i "s@^binhost_mirrors=.*@$binhostmirrors@" /etc/portage/make.conf
 		fi
 
 		./cloveros_settings.sh 4
@@ -309,14 +303,16 @@ case "$choice" in
 	b)
 		echo "Running the following:"
 		echo "sudo emerge blueman"
+		echo "sudo useradd -a $USER plugdev"
 		echo "sudo /etc/init.d/bluetooth start"
 		echo "sudo blueman-applet&"
-		echo "sudo blueman-browse&"
+		echo "sudo blueman-manager&"
 		sleep 1
 		sudo emerge blueman
+		sudo useradd -a $USER plugdev
 		sudo /etc/init.d/bluetooth start
 		sudo blueman-applet&
-		sudo blueman-browse&
+		sudo blueman-manager&
 		;;
 
 	i)

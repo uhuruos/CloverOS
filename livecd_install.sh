@@ -1,6 +1,6 @@
 #!/bin/bash
 
-if [ "$(id -u)" != "0" ]; then
+if [ $(id -u) != 0 ]; then
 	echo "This script must be run as root" 1>&2
 	exit 1
 fi
@@ -17,7 +17,7 @@ while :; do
 		if [[ $partition == /dev/map* ]]; then
 			read -erp "Enter drive that contains install partition: " -i "/dev/sda" drive
 		else
-			drive=${partition%"${partition##*[!0-9]}"}
+			drive=${partition%${partition##*[!0-9]}}
 		fi
 	else
 		echo "Invalid option"
@@ -38,6 +38,11 @@ while :; do
 	echo
 	read -erp "Enter preferred root password " rootpassword
 	read -erp "Enter preferred username " user
+	newuser=$(echo "$user" | tr A-Z a-z | tr -cd "[:alpha:][:digit:]" | cut -c -31)
+	if [[ "$newuser" != "$user" ]]; then
+		user=$newuser
+		echo username changed to $newuser
+	fi
 	read -erp "Enter preferred user password " userpassword
 	read -erp "Is this correct? [y/n] " -n 1 yn
 	if [[ $yn == "y" ]]; then
@@ -74,8 +79,8 @@ grub-mkconfig -o /boot/grub/grub.cfg &> /dev/null
 sed -i "s/set timeout=5/set timeout=0/" /boot/grub/grub.cfg
 
 sed -i "s@c1:12345:respawn:/sbin/agetty -a $livecduser --noclear 38400 tty1 linux@c1:12345:respawn:/sbin/agetty --noclear 38400 tty1 linux@" /etc/inittab
-sed -i '/^#/!d' /home/$livecduser/.bash_profile
-sed -i 's/^#\(.*\)/\1/g' /home/$livecduser/.bash_profile
+sed -i "/^#/!d" /home/$livecduser/.bash_profile
+sed -i "s/^#\(.*\)/\1/g" /home/$livecduser/.bash_profile
 
 gpasswd -a $user video
 gpasswd -a $user audio
