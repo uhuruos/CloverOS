@@ -914,7 +914,6 @@ net-wireless/aircrack-ng
 net-wireless/blueman
 net-wireless/gnuradio
 net-wireless/iw
-net-wireless/rfkill
 net-wireless/wpa_supplicant
 pantheon-base/plank
 sci-biology/foldingathome
