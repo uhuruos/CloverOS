@@ -786,6 +786,7 @@ media-video/xine-ui
 net-analyzer/bwbar
 net-analyzer/bwm-ng
 net-analyzer/cutter
+net-analyzer/dhcpdump
 net-analyzer/iftop
 net-analyzer/iptraf-ng
 net-analyzer/mate-netspeed
@@ -906,6 +907,7 @@ net-vpn/i2p
 net-vpn/i2pd
 net-vpn/logmein-hamachi
 net-vpn/openvpn
+net-vpn/pptpd
 net-vpn/tor
 net-vpn/zeronet
 net-wireless/aircrack-ng
@@ -1011,6 +1013,7 @@ sys-power/cpupower
 sys-power/hibernate-script
 sys-power/pm-utils
 sys-power/powertop
+sys-power/suspend
 sys-process/glances
 sys-process/htop
 sys-process/iotop
@@ -1071,6 +1074,7 @@ x11-misc/autocutsel
 x11-misc/bumblebee
 x11-misc/compton
 x11-misc/dmenu
+x11-misc/enlightenment-extra
 x11-misc/fbdesk
 x11-misc/fbpanel
 x11-misc/hsetroot

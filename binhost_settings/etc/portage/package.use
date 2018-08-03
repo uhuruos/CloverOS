@@ -3,6 +3,7 @@ media-libs/libopenshot -imagemagick
 media-plugins/vapoursynth-vstaambk -opencl
 media-plugins/vapoursynth-havsfunc -opencl
 
+sys-power/suspend -crypt -lzo
 media-gfx/nomacs zip
 app-crypt/kbfs git
 net-print/gtklp -ssl
@@ -136,7 +137,7 @@ net-p2p/bitcoin-qt qt5
 media-video/avidemux qt5
 media-libs/avidemux-plugins qt5
 media-sound/audacious qt5
-media-plugins/audacious-plugins qt5
+media-plugins/audacious-plugins qt5 adplug alsa aac -ampache aosd bs2b cdda cue ffmpeg flac fluidsynth gme -gnome -gtk -gtk3 hotkeys http -jack lame -libav -libnotify libsamplerate lirc mms modplug mp3 -nls -pulseaudio scrobbler sdl sid sndfile soxr speedpitch vorbis wavpack
 x11-themes/qtcurve qt5
 net-p2p/transmission qt5
 net-wireless/wpa_supplicant qt5
@@ -261,7 +262,7 @@ net-libs/gtk-vnc python
 app-crypt/gpgme qt5
 sys-devel/gcc fortran
 media-libs/cogl gles2
-media-libs/mlt qt5 kdenlive xml sdl melt python gtk ffmpeg
+media-libs/mlt qt5 kdenlive xml sdl sdl2 melt python gtk ffmpeg
 media-libs/gegl cairo
 media-fonts/font-misc-misc nls
 dev-lua/lpeg luajit
@@ -275,7 +276,7 @@ sys-devel/llvm gold
 dev-games/ogre gl3plus -gles3 -gles2
 dev-libs/glib dbus
 app-crypt/gcr gtk
-dev-libs/boost icu nls
+dev-libs/boost icu nls context python
 dev-libs/libdbusmenu gtk3
 media-libs/sdl-mixer vorbis flac mikmod mod midi fluidsynth
 net-nds/openldap sasl
@@ -324,7 +325,6 @@ media-gfx/pstoedit plotutils
 app-text/texlive-core xetex cjk
 dev-libs/libdbusmenu gtk
 mate-base/mate-menus python
-dev-libs/boost python
 dev-python/numpy lapack
 x11-libs/qscintilla qt5
 x11-libs/libdrm libkms video_cards_vmware
@@ -471,3 +471,15 @@ media-libs/libsoundtouch abi_x86_32
 app-arch/xz-utils abi_x86_32
 x11-libs/pixman abi_x86_32
 media-libs/libsdl abi_x86_32
+
+dev-python/six python_targets_python3_5
+dev-python/python-dateutil python_targets_python3_5
+dev-python/pytz python_targets_python3_5
+dev-python/setuptools_scm python_targets_python3_5
+dev-python/gst-python python_targets_python3_5
+dev-python/pygobject python_targets_python3_5
+dev-python/setuptools python_targets_python3_5
+dev-python/PyQt5 python_targets_python3_5
+dev-python/certifi python_targets_python3_5
+dev-python/sip python_targets_python3_5
+dev-python/pycairo python_targets_python3_5

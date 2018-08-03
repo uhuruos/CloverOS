@@ -37,8 +37,6 @@ games-fps/openjk-academy::lukejr
 games-fps/openjk-academy-mp::lukejr
 games-fps/openjk-outcast::lukejr
 
-dev-cvs/gitkraken-bin::frabjous
-
 dev-util/android-udev-rules::genthree
 dev-util/spirv-cross::genthree
 

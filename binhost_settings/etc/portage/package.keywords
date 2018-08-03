@@ -11,26 +11,30 @@ app-laptop/tp_smapi # requested
 net-p2p/retroshare # needs latest
 net-misc/youtube-dl # needs latest
 media-fonts/vlgothic # old
-games-emulation/retroarch
 games-emulation/dolphin ** # old
-media-gfx/mypaint # libmypaint dependency
-www-client/firefox
 media-gfx/gimp
 media-libs/mesa
 sys-devel/gcc
 sys-kernel/gentoo-sources
 x11-drivers/nvidia-drivers
+www-client/firefox
+dev-libs/nss # firefox
+games-emulation/retroarch
+games-emulation/citra-libretro ** # retroarch
+media-libs/vulkan-loader # retroarch
+dev-util/vulkan-headers # retroarch
 #vapoursynth
 =media-libs/zimg-2.7.4
+=dev-python/cython-0.28.4
 #sway
 =dev-libs/json-c-0.12.1
 #retroarch
-media-libs/vulkan-loader
 dev-libs/wayland
 #gimp
 dev-util/gdbus-codegen
 dev-libs/glib
 media-libs/libmypaint
+media-gfx/mypaint # libmypaint
 media-libs/babl
 media-libs/gexiv2
 media-libs/gegl
@@ -55,6 +59,7 @@ media-video/ffmpeg
 
 #keyworded, remove when stable exists
 app-emulation/wine-any
+app-emulation/wine-mono # wine-any
 net-vpn/logmein-hamachi
 app-arch/zpaq-extras
 app-crypt/certbot
@@ -76,6 +81,7 @@ app-arch/defluff
 games-fps/ezquake-bin
 media-sound/spek
 media-sound/ardour
+media-libs/suil # ardour
 media-video/makemkv
 media-video/avidemux
 media-libs/avidemux-plugins # avidemux
@@ -87,6 +93,8 @@ net-libs/cppzmq # openshot
 media-libs/libopenshot # openshot
 media-libs/libopenshot-audio # openshot
 media-sound/lmms
+media-libs/stk # lmms
+media-plugins/calf # lmms
 media-gfx/pngquant
 media-sound/yoshimi
 net-libs/tox
@@ -101,6 +109,7 @@ sci-libs/libticables2 # tiemu
 media-sound/supercollider
 games-util/steam-launcher
 media-sound/deadbeef
+media-plugins/deadbeef-plugins-meta # deadbeef
 net-im/discord-bin
 media-gfx/opentoonz
 media-gfx/freecad
@@ -111,8 +120,10 @@ games-fps/lsdldoom **
 games-fps/tribes2 **
 games-fps/wolfgl **
 www-client/qutebrowser
+dev-python/pypeg2 # qutebrowser
 sys-power/phc-intel
-x11-terms/termite
+x11-terms/termite::eroen
+x11-libs/vte::eroen # termite
 media-video/handbrake
 media-libs/libbluray # handbrake
 www-client/palemoon-bin
@@ -120,6 +131,7 @@ x11-misc/i3blocks-gaps
 net-im/telegram-desktop-bin
 media-libs/vapoursynth
 media-libs/waifu2x-converter-cpp
+media-libs/opencv # waifu2x-converter-cpp
 app-editors/neovim
 dev-lua/mpack # neovim
 dev-libs/unibilium # neovim
@@ -134,32 +146,40 @@ x11-misc/slop # maim
 net-wireless/gnuradio
 x11-wm/i3-gaps
 net-p2p/freenet
+dev-java/bcprov # freenet
+net-libs/NativeThread # freenet
 media-sound/tomahawk
 dev-cpp/websocketpp # tomahawk
 media-video/obs-studio
 media-sound/oss
+media-sound/oss-driver # oss
 app-emulation/open-vm-tools
 sci-calculators/calcoo
 net-p2p/soulseek-qt
 sys-fs/exfat-nofuse **
 www-servers/onionshare
+net-libs/stem # onionshare
 app-emacs/emms
 games-roguelike/nethack
 app-crypt/acme-tiny
 www-client/midori
 sys-apps/qdirstat
 www-client/torbrowser
+dev-python/pyliblzma # torbrowser-launcher
 app-emulation/playonlinux
 net-vpn/i2pd
 net-wireless/blueman
 net-wireless/blueberry
+net-wireless/bluez-tools # blueberry
 media-sound/bluez-alsa
 x11-misc/urxvtconfig
 net-misc/pyhoca-gui
+net-misc/python-x2go # pyhoca-gui
 net-misc/pyhoca-cli
 app-crypt/veracrypt
 net-analyzer/ntopng
 app-emulation/fuse
+app-emulation/libspectrum # fuse
 app-laptop/tlp
 sys-power/linux-x86-power-tools # tlp
 sys-power/acpi_call
@@ -174,9 +194,15 @@ sci-biology/foldingathome
 app-arch/brotli
 net-vpn/zeronet
 dev-db/rethinkdb
+dev-libs/jemalloc # rethinkdb
 www-client/waterfox-bin
 net-p2p/go-ipfs-bin
 media-sound/beets
+dev-python/jellyfish # beets
+dev-python/munkres # beets
+dev-python/bluelet # beets
+dev-python/audioread # beets
+dev-python/pyacoustid # beets
 app-misc/neofetch
 www-client/torbrowser-launcher
 games-action/extreme-tuxracer
@@ -230,6 +256,15 @@ games-emulation/mednaffe
 games-util/higan-purify
 games-emulation/mednafen
 games-emulation/mupen64plus
+games-emulation/mupen64plus-video-glide64mk2 # mupen64plus
+games-emulation/mupen64plus-video-rice # mupen64plus
+games-emulation/mupen64plus-core # mupen64plus
+games-emulation/mupen64plus-ui-console # mupen64plus
+games-emulation/mupen64plus-audio-sdl # mupen64plus
+games-emulation/mupen64plus-rsp-hle # mupen64plus
+games-emulation/mupen64plus-input-sdl # mupen64plus
+games-emulation/m64py # mupen64plus
+dev-python/PySDL2 # m64py
 games-emulation/sdlmame
 net-p2p/eiskaltdcpp **
 sys-block/sas3flash
@@ -279,19 +314,21 @@ x11-wm/treewm **
 x11-wm/amiwm
 x11-plugins/gkrellm-plugins **
 dev-util/nvidia-cuda-toolkit
+dev-util/nvidia-cuda-sdk # dev-util/nvidia-cuda-toolkit
 games-fps/gzdoom
 games-fps/redeclipse
 app-emulation/qt-virt-manager **
 net-misc/streamlink
 dev-lang/open-cobol
 www-client/firefox-kde-opensuse
+kde-misc/kmozillahelper # firefox-kde-opensuse
 net-misc/sgopherd
 app-emulation/vagrant
 www-apps/otrs
 dev-libs/log4cplus
 media-gfx/openvdb
-sys-devel/lld
 x11-drivers/amdgpu-pro
+sys-devel/lld # amdgpu-pro
 games-emulation/kega-fusion
 media-sound/ezstream
 x11-themes/arc-theme
@@ -311,6 +348,7 @@ x11-wm/stumpwm-contrib
 x11-wm/vtwm **
 x11-wm/subtle
 x11-wm/wmii
+sys-libs/libixp # wmii
 www-client/uzbl **
 www-client/netsurf
 media-gfx/qiv
@@ -452,62 +490,11 @@ games-emulation/advancemame
 games-emulation/advancescan
 games-emulation/advancemenu
 games-misc/ckmame
+x11-misc/enlightenment-extra
+sci-mathematics/rstudio
+dev-libs/mathjax # rstudio
 
 #dependencies
-#ardour
-media-libs/suil
-#rstudio
-dev-libs/mathjax
-#deadbeef
-media-plugins/deadbeef-plugins-meta
-#freenet
-dev-java/bcprov
-net-libs/NativeThread
-#termite
-x11-libs/vte::eroen
-#oss
-media-sound/oss-driver
-#waifu2x
-media-libs/opencv
-#onionshare
-net-libs/stem
-#lmms
-media-libs/stk
-media-plugins/calf
-#blueberry
-net-wireless/bluez-tools
-#mupen64plus
-games-emulation/mupen64plus-video-glide64mk2
-games-emulation/mupen64plus-video-rice
-games-emulation/mupen64plus-core
-games-emulation/mupen64plus-ui-console
-games-emulation/mupen64plus-audio-sdl
-games-emulation/m64py
-games-emulation/mupen64plus-rsp-hle
-games-emulation/mupen64plus-input-sdl
-dev-python/PySDL2
-#pyhoca
-net-misc/python-x2go
-#firefox
-dev-lang/rust
-dev-util/cargo
-virtual/rust
-dev-libs/nspr
-dev-libs/nss
-#fuse
-app-emulation/libspectrum
-#rethinkdb
-dev-libs/jemalloc
-#qutebrowser
-dev-python/pypeg2
-#beets
-dev-python/jellyfish
-dev-python/munkres
-dev-python/bluelet
-dev-python/audioread
-dev-python/pyacoustid
-#torbrowser-launcher
-dev-python/pyliblzma
 #lutris
 dev-python/python-evdev
 #xonotic
@@ -516,8 +503,6 @@ dev-libs/d0_blind_id
 dev-libs/wlc
 #pngquant
 media-gfx/libimagequant
-#retroarch
-games-emulation/citra-libretro **
 #openmw
 sci-physics/bullet
 #bspwm
@@ -532,8 +517,6 @@ net-libs/libtorrent **
 x11-plugins/gkrellm-countdown
 #streamlink
 dev-python/backports-shutil_which
-#firefox-kde-opensuse
-kde-misc/kmozillahelper
 #vagrant
 dev-ruby/net-ssh
 dev-ruby/net-scp
@@ -542,17 +525,11 @@ dev-ruby/rake
 dev-ruby/i18n
 #otrs
 dev-perl/LWP-UserAgent-Determined
-#amdgpu-pro
-sys-devel/lld
 #urbanterror
 games-fps/urbanterror-data
-#clementine
-media-libs/liblastfm
 #stumpwm
 dev-lisp/clx
 dev-lisp/alexandria
-#wmii
-sys-libs/libixp
 #netsurf
 media-libs/libsvgtiny
 dev-libs/libnsutils
@@ -590,8 +567,6 @@ dev-libs/go-usb **
 dev-python/sabyenc
 dev-python/gntp
 dev-python/pythonutils
-#dev-util/nvidia-cuda-toolkit
-dev-util/nvidia-cuda-sdk
 
 #fonts
 media-fonts/lohit-kannada
