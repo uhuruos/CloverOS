@@ -1,8 +1,4 @@
-#temporary
-media-libs/libopenshot -imagemagick
-media-plugins/vapoursynth-vstaambk -opencl
-media-plugins/vapoursynth-havsfunc -opencl
-
+sys-apps/util-linux static-libs
 sys-power/suspend -crypt -lzo
 media-gfx/nomacs zip
 app-crypt/kbfs git
