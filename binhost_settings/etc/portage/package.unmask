@@ -102,9 +102,6 @@ media-sound/deadbeef::deadbeef-overlay
 media-tv/plex-media-server::fkmclane
 x11-misc/lemonbar::fkmclane
 
-net-libs/libtorrent::pg_overlay
-net-p2p/rtorrent-ps::pg_overlay
-
 net-vpn/zeronet::raiagent
 
 pantheon-base/plank::elementary

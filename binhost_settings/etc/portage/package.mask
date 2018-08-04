@@ -28,7 +28,6 @@
 */*::oboeverlay
 */*::palemoon
 */*::pentoo
-*/*::pg_overlay
 */*::pinkpieea
 */*::poly-c
 */*::raiagent

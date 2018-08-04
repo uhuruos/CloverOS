@@ -327,7 +327,6 @@ games-emulation/generator
 games-emulation/gens
 games-emulation/gfceux
 games-emulation/gngeo
-games-emulation/hatari
 games-emulation/higan
 games-emulation/kigb
 games-emulation/lxdream
@@ -889,7 +888,6 @@ net-p2p/mldonkey
 net-p2p/ncdc
 net-p2p/nicotine+
 net-p2p/qbittorrent
-net-p2p/rtorrent-ps
 net-p2p/soulseek-qt
 net-p2p/syncthing
 net-p2p/transmission
@@ -1259,7 +1257,6 @@ x11-themes/comix-xcursors
 x11-themes/commonbox-styles
 x11-themes/commonbox-styles-extra
 x11-themes/constantine-backgrounds
-x11-themes/ethemes
 x11-themes/experience
 x11-themes/faenza-icon-theme
 x11-themes/flatsvg

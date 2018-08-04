@@ -187,9 +187,9 @@ case "$choice" in
 
 		sudo eselect profile set "default/linux/amd64/17.0/hardened"
 
-		if [ -d /var/db/pkg/net-p2p/rtorrent-0.9.6-r1/ ]; then
-			sudo emerge -C rtorrent
-			sudo emerge rtorrent-ps
+		if [ -d /var/db/pkg/net-p2p/rtorrent-ps-9999/ ]; then
+			sudo emerge -C rtorrent-ps
+			sudo emerge rtorrent
 		fi
 
 		./cloveros_settings.sh 4
