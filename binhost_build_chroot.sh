@@ -42,7 +42,7 @@ emerge openssl openssh
 USE="-vaapi" emerge mesa
 emerge -1 netcat6
 emerge genkernel gentoo-sources
-wget https://liquorix.net/sources/4.16/config.amd64
+wget https://liquorix.net/sources/4.17/config.amd64
 binutils-config --linker ld.bfd
 genkernel --kernel-config=config.amd64 all
 binutils-config --linker ld.gold

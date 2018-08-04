@@ -40,6 +40,7 @@ media-libs/gexiv2
 media-libs/gegl
 media-gfx/mypaint-brushes
 #libressl
+media-video/ffmpeg::libressl
 media-libs/opusfile
 dev-libs/cyrus-sasl
 sci-electronics/eagle
@@ -55,7 +56,6 @@ net-ftp/proftpd
 net-ftp/pure-ftpd
 sys-fs/encfs
 net-misc/spice-gtk
-media-video/ffmpeg
 
 #keyworded, remove when stable exists
 app-emulation/wine-any
@@ -96,10 +96,12 @@ media-sound/lmms
 media-libs/stk # lmms
 media-plugins/calf # lmms
 media-gfx/pngquant
+media-gfx/libimagequant # pngquant
 media-sound/yoshimi
 net-libs/tox
 net-im/qtox
 games-engines/openmw
+sci-physics/bullet # openmw
 media-sound/denemo
 sci-calculators/tiemu
 sci-libs/libticonv # tiemu
@@ -129,7 +131,6 @@ media-libs/libbluray # handbrake
 www-client/palemoon-bin
 x11-misc/i3blocks-gaps
 net-im/telegram-desktop-bin
-media-libs/vapoursynth
 media-libs/waifu2x-converter-cpp
 media-libs/opencv # waifu2x-converter-cpp
 app-editors/neovim
@@ -144,7 +145,6 @@ sys-fs/ecryptfs-utils
 media-gfx/maim
 x11-misc/slop # maim
 net-wireless/gnuradio
-x11-wm/i3-gaps
 net-p2p/freenet
 dev-java/bcprov # freenet
 net-libs/NativeThread # freenet
@@ -154,6 +154,7 @@ media-video/obs-studio
 media-sound/oss
 media-sound/oss-driver # oss
 app-emulation/open-vm-tools
+dev-libs/xml-security-c # open-vm-tools
 sci-calculators/calcoo
 net-p2p/soulseek-qt
 sys-fs/exfat-nofuse **
@@ -208,6 +209,7 @@ www-client/torbrowser-launcher
 games-action/extreme-tuxracer
 games-emulation/vbam
 games-util/lutris
+dev-python/python-evdev # lutris
 games-fps/quake3
 games-emulation/fakenes
 games-puzzle/bastet
@@ -229,6 +231,7 @@ games-emulation/gfceux
 games-strategy/freeciv
 games-fps/avp
 games-fps/xonotic
+dev-libs/d0_blind_id # xonotic
 games-board/eboard
 games-fps/alienarena
 games-emulation/higan
@@ -252,6 +255,7 @@ games-fps/enemy-territory
 games-rpg/freedink
 games-fps/openarena
 games-fps/urbanterror
+games-fps/urbanterror-data # urbanterror
 games-emulation/mednaffe
 games-util/higan-purify
 games-emulation/mednafen
@@ -272,7 +276,7 @@ app-crypt/kencfs-plasma
 games-emulation/rpcs3 **
 games-emulation/citra **
 dev-libs/sway
-x11-wm/bspwm
+dev-libs/wlc # sway
 x11-terms/lilyterm
 net-misc/megatools
 games-emulation/vgba **
@@ -298,11 +302,14 @@ net-misc/nxplayer
 x11-misc/lemonbar
 sys-firmware/nvidia-firmware
 media-video/flowblade
+media-gfx/gmic # flowblade
 media-sound/sidplayfp
+media-libs/libsidplayfp # sidplayfp
 media-sound/libvisual-projectm-alsa
 media-sound/audacious
 media-plugins/audacious-plugins
-net-p2p/rtorrent-ps **
+net-p2p/rtorrent-ps::pg_overlay **
+net-libs/libtorrent::pg_overlay ** # rtorrent-ps
 media-sound/coquillo
 media-gfx/phototonic
 media-sound/bempc
@@ -310,21 +317,26 @@ media-sound/qtractor
 media-sound/protux
 net-misc/clipgrab
 net-wireless/broadcom-sta
-x11-wm/treewm **
-x11-wm/amiwm
-x11-plugins/gkrellm-plugins **
+x11-plugins/gkrellm-countdown
 dev-util/nvidia-cuda-toolkit
 dev-util/nvidia-cuda-sdk # dev-util/nvidia-cuda-toolkit
 games-fps/gzdoom
 games-fps/redeclipse
 app-emulation/qt-virt-manager **
 net-misc/streamlink
+dev-python/backports-shutil_which # streamlink
 dev-lang/open-cobol
 www-client/firefox-kde-opensuse
 kde-misc/kmozillahelper # firefox-kde-opensuse
 net-misc/sgopherd
 app-emulation/vagrant
+dev-ruby/net-ssh # vagrant
+dev-ruby/net-scp # vagrant
+dev-ruby/hashicorp-checkpoint # vagrant
+dev-ruby/rake # vagrant
+dev-ruby/i18n # vagrant
 www-apps/otrs
+dev-perl/LWP-UserAgent-Determined # otrs
 dev-libs/log4cplus
 media-gfx/openvdb
 x11-drivers/amdgpu-pro
@@ -332,30 +344,18 @@ sys-devel/lld # amdgpu-pro
 games-emulation/kega-fusion
 media-sound/ezstream
 x11-themes/arc-theme
-x11-wm/goomwwm
-x11-wm/echinus
-x11-wm/stumpwm
-x11-wm/plwm
-x11-wm/matwm2
-x11-wm/larswm
-x11-wm/sithwm
-x11-wm/page
-x11-wm/qtile
-x11-wm/notion
-x11-wm/wmfs
-x11-wm/xoat **
-x11-wm/stumpwm-contrib
-x11-wm/vtwm **
-x11-wm/subtle
-x11-wm/wmii
 sys-libs/libixp # wmii
 www-client/uzbl **
-www-client/netsurf
 media-gfx/qiv
 sys-fs/go-mtpfs **
+dev-libs/go-fuse # go-mtpfs
+dev-libs/go-usb ** # go-mtpfs
 sys-fs/jmtpfs
 media-gfx/ahoviewer
 net-nntp/sabnzbd
+dev-python/sabyenc # sabnzbd
+dev-python/gntp # sabnzbd
+dev-python/pythonutils # sabnzbd
 media-gfx/flameshot
 app-mobilephone/heimdall
 dev-util/jenkins-bin
@@ -426,6 +426,7 @@ sys-fs/bcache-tools
 www-client/google-chrome-beta
 net-misc/ripme
 x11-apps/intel-gpu-tools
+dev-util/peg # intel-gpu-tools
 x11-apps/radeontop
 sys-boot/woeusb
 sys-apps/pkgcore
@@ -483,7 +484,6 @@ net-print/cnijfilter2
 net-print/pnm2ppa
 sci-libs/matio
 sci-libs/tensorflow
-x11-wm/stumpwm
 media-libs/svgalib **
 games-util/rejoystick
 games-emulation/advancemame
@@ -493,82 +493,58 @@ games-misc/ckmame
 x11-misc/enlightenment-extra
 sci-mathematics/rstudio
 dev-libs/mathjax # rstudio
-
-#dependencies
-#lutris
-dev-python/python-evdev
-#xonotic
-dev-libs/d0_blind_id
-#sway
-dev-libs/wlc
-#pngquant
-media-gfx/libimagequant
-#openmw
-sci-physics/bullet
-#bspwm
-x11-misc/sxhkd
-#flowblade
-media-gfx/gmic
-#sidplayfp
-media-libs/libsidplayfp
-#rtorrent-ps
-net-libs/libtorrent **
-#gkrellm-plugins
-x11-plugins/gkrellm-countdown
-#streamlink
-dev-python/backports-shutil_which
-#vagrant
-dev-ruby/net-ssh
-dev-ruby/net-scp
-dev-ruby/hashicorp-checkpoint
-dev-ruby/rake
-dev-ruby/i18n
-#otrs
-dev-perl/LWP-UserAgent-Determined
-#urbanterror
-games-fps/urbanterror-data
-#stumpwm
-dev-lisp/clx
-dev-lisp/alexandria
-#netsurf
-media-libs/libsvgtiny
-dev-libs/libnsutils
-dev-libs/libwapcaplet
-media-libs/libnsbmp
-media-libs/libnsgif
-dev-libs/libutf8proc
-dev-libs/libcss
-media-libs/libnspsl
-media-libs/librosprite
-dev-libs/nsgenbind
-dev-libs/libnsfb
-net-libs/libdom
-#composer
-dev-php/symfony-finder
-dev-php/ca-bundle
-dev-php/symfony-console
-dev-php/jsonlint
-dev-php/psr-log
-dev-php/symfony-filesystem
 dev-php/composer
-dev-php/phar-utils
-dev-php/spdx-licenses
-dev-php/symfony-process
-dev-php/json-schema
-dev-php/symfony-dependency-injection
-dev-php/cli-prompt
-dev-php/symfony-event-dispatcher
-dev-php/symfony-config
-dev-php/semver
-#go-mtpfs
-dev-libs/go-fuse
-dev-libs/go-usb **
-#sabnzbd
-dev-python/sabyenc
-dev-python/gntp
-dev-python/pythonutils
-
-#fonts
+dev-php/symfony-finder # composer
+dev-php/ca-bundle # composer
+dev-php/symfony-console # composer
+dev-php/jsonlint # composer
+dev-php/psr-log # composer
+dev-php/symfony-filesystem # composer
+dev-php/phar-utils # composer
+dev-php/spdx-licenses # composer
+dev-php/symfony-process # composer
+dev-php/json-schema # composer
+dev-php/symfony-dependency-injection # composer
+dev-php/cli-prompt # composer
+dev-php/symfony-event-dispatcher # composer
+dev-php/symfony-config # composer
+dev-php/semver # composer
+www-client/netsurf
+media-libs/libsvgtiny # netsurf
+dev-libs/libnsutils # netsurf
+dev-libs/libwapcaplet # netsurf
+media-libs/libnsbmp # netsurf
+media-libs/libnsgif # netsurf
+dev-libs/libutf8proc # netsurf
+dev-libs/libcss # netsurf
+media-libs/libnspsl # netsurf
+media-libs/librosprite # netsurf
+dev-libs/nsgenbind # netsurf
+dev-libs/libnsfb # netsurf
+net-libs/libdom # netsurf
+x11-wm/bspwm
+x11-misc/sxhkd # bspwm
+x11-wm/treewm **
+x11-wm/amiwm
+x11-wm/goomwwm
+x11-wm/echinus
+x11-wm/stumpwm
+dev-lisp/clx # stumpwm
+dev-lisp/alexandria # stumpwm
+x11-wm/stumpwm-contrib
+x11-wm/plwm
+x11-wm/matwm2
+x11-wm/larswm
+x11-wm/sithwm
+x11-wm/page
+x11-wm/qtile
+x11-wm/notion
+x11-wm/wmfs
+x11-wm/xoat **
+x11-wm/vtwm **
+x11-wm/subtle
+x11-wm/wmii
+x11-wm/i3-gaps
 media-fonts/lohit-kannada
 media-fonts/montecarlo
 media-fonts/lohit-gujarati
@@ -619,16 +595,7 @@ media-fonts/viga
 media-fonts/tewi-font
 media-fonts/gohufont
 media-fonts/fontawesome
-
-#xfce plugins
-xfce-extra/xfce4-gvfs-mount
-xfce-extra/eatmonkey
-xfce-extra/xfce-theme-manager
-xfce-extra/xfce4-alsa-plugin
-xfce-extra/multiload-nandhp
-xfce-extra/xfce4-composite-editor
-
-#vaporsynth plugins
+media-libs/vapoursynth
 media-plugins/vapoursynth-vaguedenoiser
 media-plugins/vapoursynth-finesharp
 media-plugins/vapoursynth-bifrost
@@ -717,8 +684,6 @@ media-plugins/vapoursynth-dotkill
 media-plugins/vapoursynth-znedi3
 media-plugins/vapoursynth-remapframes
 media-plugins/vapoursynth-hqdn3d
-
-#window maker plugins
 x11-plugins/wmmand
 x11-plugins/wmbluecpu
 x11-plugins/wmhdplop
@@ -758,6 +723,16 @@ x11-plugins/wmacpiload-ac
 x11-plugins/wmbatteries **
 x11-plugins/wmping
 x11-plugins/wmamixer
+
+#xfce plugins
+xfce-extra/xfce4-gvfs-mount
+xfce-extra/eatmonkey
+xfce-extra/xfce-theme-manager
+xfce-extra/xfce4-alsa-plugin
+xfce-extra/multiload-nandhp
+xfce-extra/xfce4-composite-editor
+
+#vaporsynth plugins
 
 #yubikey applications
 #pam_yubico

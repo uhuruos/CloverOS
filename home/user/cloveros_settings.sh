@@ -13,7 +13,7 @@ mirrors=(
 	"https://openmirrors.cf/cloveros"
 )
 
-kernelversion="4.16.14"
+kernelversion="4.17.12"
 
 gitprefix="https://gitgud.io/cloveros/cloveros/raw/master"
 

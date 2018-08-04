@@ -26,6 +26,8 @@ app-emulation/wine-any::FireBurn
 
 media-gfx/ephoto::bar
 
+games-util/qcma::chaos
+
 x11-plugins/purple-discord::flussence
 
 net-im/telegram-purple::jm-overlay
@@ -133,6 +135,7 @@ x11-terms/termite::eroen
 
 dev-db/dbeaver-bin::erayd
 
+games-emulation/xnp2::abendbrot
 kde-plasma/plasma-applet-active-window-control::abendbrot
 games-emulation/2048-libretro::abendbrot
 games-emulation/4do-libretro::abendbrot

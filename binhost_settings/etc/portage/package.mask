@@ -5,6 +5,7 @@
 */*::bar
 */*::bobwya
 */*::brother-overlay
+*/*::chaos
 */*::deadbeef-overlay
 */*::dotnet
 */*::elementary
@@ -15,7 +16,6 @@
 */*::fkmclane
 */*::flatpak-overlay
 */*::flussence
-*/*::frabjous
 */*::gamerlay
 */*::genthree
 */*::gnome
