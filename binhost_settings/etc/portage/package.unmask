@@ -2,10 +2,6 @@ games-util/rejoystick::gamerlay
 
 net-print/brother-genml1-bin::brother-overlay
 
-media-gfx/gimp::gnome
-dev-util/gdbus-codegen::gnome # gimp
-dev-libs/glib::gnome # gimp
-
 media-sound/bitwig-studio::audio-overlay
 media-sound/cadence::audio-overlay
 media-sound/pure-data::audio-overlay

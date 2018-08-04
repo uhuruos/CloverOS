@@ -4,6 +4,8 @@
 x11-wm/enlightenment # old
 dev-libs/efl # old
 x11-terms/terminology # old
+net-p2p/rtorrent # old
+net-libs/libtorrent # old
 net-p2p/mldonkey # stable doesn't build
 media-sound/mumble ** # qt5
 media-sound/murmur ** # qt5
@@ -30,15 +32,6 @@ dev-util/vulkan-headers # retroarch
 =dev-libs/json-c-0.12.1
 #retroarch
 dev-libs/wayland
-#gimp
-dev-util/gdbus-codegen
-dev-libs/glib
-media-libs/libmypaint
-media-gfx/mypaint # libmypaint
-media-libs/babl
-media-libs/gexiv2
-media-libs/gegl
-media-gfx/mypaint-brushes
 #libressl
 media-video/ffmpeg::libressl
 media-libs/opusfile
