@@ -308,8 +308,6 @@ media-libs/libsidplayfp # sidplayfp
 media-sound/libvisual-projectm-alsa
 media-sound/audacious
 media-plugins/audacious-plugins
-net-p2p/rtorrent-ps::pg_overlay **
-net-libs/libtorrent::pg_overlay ** # rtorrent-ps
 media-sound/coquillo
 media-gfx/phototonic
 media-sound/bempc

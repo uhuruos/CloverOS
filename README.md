@@ -79,7 +79,7 @@ Archiver - xarchiver
 
 FTP client - filezilla
 
-Torrent client - rtorrent-ps
+Torrent client - rtorrent
 
 IRC client - weechat
 

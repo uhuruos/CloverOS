@@ -86,7 +86,7 @@ binhost_mirrors=\$PORTAGE_BINHOST",https://useast.cloveros.ga,https://uswest.clo
 FETCHCOMMAND_HTTPS="sh -c \"aria2c -x2 -s99 -j99 -k1M -m1 -t4 --connect-timeout=4 --lowest-speed-limit=15K -d \"\\\${DISTDIR}\" -o \"\\\${FILE}\" \\\\\\\$(sed -e \"s#,#\"\\\${DISTDIR}/\\\${FILE}\"\"\ \"#g\" -e \"s#"\$PKGDIR"##g\" -e \"s#.partial##g\" <<< "\$binhost_mirrors") && aria2c --allow-overwrite -d \"\\\${DISTDIR}\" -o \"\\\${FILE}.asc\" \\\\\\\$(sed \"s#cloveros.ga/#cloveros.ga/s/signatures/#\" <<< \"\\\${URI}.asc\") && gpg --verify \"\\\${DISTDIR}/\\\${FILE}.asc\" \"\\\${DISTDIR}/\\\${FILE}\" && rm \"\\\${DISTDIR}/\\\${FILE}.asc\"\""' >> /etc/portage/make.conf
 
 #emerge gentoo-sources genkernel
-#wget http://liquorix.net/sources/4.15/config.amd64
+#wget http://liquorix.net/sources/4.17/config.amd64
 #genkernel --kernel-config=config.amd64 all
 
 wget https://cloveros.ga/s/kernel.tar.xz https://cloveros.ga/s/signatures/s/kernel.tar.xz.asc
@@ -110,7 +110,7 @@ useradd $user
 echo "$user:$userpassword" | chpasswd
 gpasswd -a $user wheel
 
-emerge -eD world aria2 xorg-server fvwm spacefm rxvt-unicode nitrogen compton nomacs sudo wpa_supplicant porthole firefox emacs gimp mpv smplayer filezilla rtorrent-ps weechat linux-firmware alsa-utils zsh zsh-completions gentoo-zsh-completions vlgothic hack liberation-fonts nano scrot xbindkeys xinput arandr qastools slock xarchiver p7zip games-envd gparted squashfs-tools os-prober
+emerge -eD world aria2 xorg-server fvwm spacefm rxvt-unicode nitrogen compton nomacs sudo wpa_supplicant porthole firefox emacs gimp mpv smplayer filezilla rtorrent weechat linux-firmware alsa-utils zsh zsh-completions gentoo-zsh-completions vlgothic hack liberation-fonts nano scrot xbindkeys xinput arandr qastools slock xarchiver p7zip games-envd gparted squashfs-tools os-prober
 emerge --depclean
 
 echo 'frozen-files="/etc/sudoers"' >> /etc/dispatch-conf.conf

@@ -113,7 +113,7 @@ AddToMenu MenuFvwmRoot Applications Title
 + "desktop" Exec spacefm --desktop
 + "comptonvsync" Exec compton --backend glx --vsync opengl-swc --glx-no-stencil --paint-on-overlay --unredir-if-possible # --glx-no-rebind-pixmap --glx-swap-method buffer-age
 + "stats.sh" Exec if pgrep urxvtd; then urxvtc -geometry 800x1+0+0 -fn '6x13' -sl 0 -e ~/stats.sh; else urxvtd -o -f && urxvtc -geometry 800x1+0+0 -fn '6x13' -sl 0 -e ~/stats.sh; fi
-+ "rtorrent-ps" Exec if pgrep urxvtd; then urxvtc -e rtorrent; else urxvtd -o -f && urxvtc -e rtorrent; fi
++ "rtorrent" Exec if pgrep urxvtd; then urxvtc -e rtorrent; else urxvtd -o -f && urxvtc -e rtorrent; fi
 + "weechat" Exec if pgrep urxvtd; then urxvtc -e weechat; else urxvtd -o -f && urxvtc -e weechat; fi
 + "wallpaper" Exec nitrogen
 + "resolution" Exec arandr

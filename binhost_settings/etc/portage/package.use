@@ -32,7 +32,6 @@ media-gfx/ahoviewer -libsecret -rar
 net-nntp/sabnzbd -rar
 www-servers/tomcat extra-webapps
 media-sound/mp3blaster vorbis
-net-p2p/rtorrent-ps daemon
 xfce-extra/tumbler ffmpeg
 media-plugins/gst-plugins-meta ffmpeg theora v4l vorbis ogg
 media-libs/gst-plugins-base theora
@@ -40,7 +39,6 @@ media-libs/libbluray aacs bdplus
 www-apache/mod_perl ithreads
 dev-lang/perl ithreads
 sys-apps/iproute2 -minimal
-net-p2p/rtorrent-ps daemon
 kde-apps/dolphin thumbnail
 x11-misc/polybar mpd i3wm
 x11-misc/rofi windowmode
@@ -72,7 +70,6 @@ media-libs/sdl2-mixer flac mikmod vorbis mod mp3 mad
 media-video/obs-studio jack truetype imagemagick v4l
 media-plugins/alsa-plugins jack
 x11-libs/vte termite-patch
-net-p2p/rtorrent-ps -daemon
 x11-wm/icewm -minimal
 media-sound/ncmpc help-screen artist-screen chat-screen colors key-screen lirc lyrics-screen mouse search-screen song-screen
 media-sound/beets convert discogs lastgenre lastimport bpd chroma mpdstats thumbnails web
