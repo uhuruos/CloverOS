@@ -390,6 +390,7 @@ games-util/lutris
 games-util/qjoypad
 games-util/rejoystick
 games-util/steam-launcher
+games-util/vitamtp-fork
 gnome-extra/gnome-calculator
 kde-apps/kbackup
 kde-apps/kde-meta
