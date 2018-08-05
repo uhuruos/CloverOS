@@ -615,6 +615,14 @@ to
 
 `EMERGE_DEFAULT_OPTS="--keep-going=y --autounmask-write=y --jobs=4"`
 
+and change
+
+`ACCEPT_KEYWORDS="**"`
+
+to
+
+`#ACCEPT_KEYWORDS="**"`
+
 Your system is now Gentoo Linux.
 
 After emerge determines what it needs to install and checks dependencies, the -G switch tells emerge to check the binhost before it starts building source. Removing -G reverts to regular emerge operation. It's exactly the same as running `PORTAGE_BINHOST="https://cloveros.ga" emerge -G package` on any Gentoo install. Because it still uses Gentoo repo (versions, ebuilds), and only uses CloverOS as a binhost, you still need to run `emerge --sync`.
