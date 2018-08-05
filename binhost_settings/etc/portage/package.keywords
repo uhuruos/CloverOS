@@ -14,11 +14,18 @@ net-p2p/retroshare # needs latest
 net-misc/youtube-dl # needs latest
 media-fonts/vlgothic # old
 games-emulation/dolphin ** # old
-media-gfx/gimp
 media-libs/mesa
 sys-devel/gcc
 sys-kernel/gentoo-sources
 x11-drivers/nvidia-drivers
+media-gfx/gimp
+media-gfx/mypaint-brushes # gimp
+media-libs/libmypaint # gimp
+media-gfx/mypaint # gimp
+media-libs/babl # gimp
+media-libs/gegl # gimp
+dev-util/gdbus-codegen # gimp
+dev-libs/glib # gimp
 www-client/firefox
 dev-libs/nss # firefox
 games-emulation/retroarch
@@ -30,8 +37,6 @@ dev-util/vulkan-headers # retroarch
 =dev-python/cython-0.28.4
 #sway
 =dev-libs/json-c-0.12.1
-#retroarch
-dev-libs/wayland
 #libressl
 media-video/ffmpeg::libressl
 media-libs/opusfile
