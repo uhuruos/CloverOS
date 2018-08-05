@@ -183,7 +183,7 @@ case "$choice" in
 			exit 1
 		fi
 
-		sudo rm /usr/portage/packages/Packages
+		sudo rm /usr/portage/packages/Packages &> /dev/null
 
 		sudo eselect profile set "default/linux/amd64/17.0/hardened"
 
