@@ -60,6 +60,7 @@ sys-fs/encfs
 net-misc/spice-gtk
 
 #keyworded, remove when stable exists
+games-util/vitamtp-fork
 dev-util/lldb
 sys-devel/lld
 app-emulation/wine-any

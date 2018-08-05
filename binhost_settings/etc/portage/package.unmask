@@ -22,6 +22,8 @@ app-emulation/wine-any::FireBurn
 
 media-gfx/ephoto::bar
 
+games-util/vitamtp-fork::chaos
+
 x11-plugins/purple-discord::flussence
 
 net-im/telegram-purple::jm-overlay
