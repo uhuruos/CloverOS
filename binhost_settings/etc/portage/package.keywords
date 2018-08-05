@@ -322,8 +322,6 @@ app-emulation/qt-virt-manager **
 net-misc/streamlink
 dev-python/backports-shutil_which # streamlink
 dev-lang/open-cobol
-www-client/firefox-kde-opensuse
-kde-misc/kmozillahelper # firefox-kde-opensuse
 net-misc/sgopherd
 app-emulation/vagrant
 dev-ruby/net-ssh # vagrant

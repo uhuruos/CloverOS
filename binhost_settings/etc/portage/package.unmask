@@ -82,9 +82,6 @@ x11-plugins/telegram-purple::jorgicio
 
 games-util/steam-launcher::steam-overlay
 
-www-client/firefox-kde-opensuse::bobwya
-kde-misc/kmozillahelper::bobwya
-
 media-fonts/gohufont::4nykey
 media-fonts/tewi-font::4nykey
 media-plugins/gimp-plugin-bimp::4nykey

@@ -208,8 +208,8 @@ app-crypt/hashcat custom-cflags
 media-libs/libsdl custom-cflags X
 www-client/chromium custom-cflags
 www-client/firefox custom-cflags custom-optimization -wifi system-harfbuzz system-icu system-jpeg system-libevent system-libvpx system-sqlite
-www-client/firefox-kde-opensuse custom-cflags custom-optimization -wifi system-harfbuzz system-icu system-jpeg system-libevent system-libvpx system-sqlite kde -egl -bindist
-www-client/torbrowser custom-cflags custom-optimization hardened system-cairo system-harfbuzz system-icu system-jpeg system-libevent system-libvpx system-sqlite
+www-client/firefox::bobwya kde -egl
+www-client/torbrowser custom-cflags custom-optimization system-cairo system-harfbuzz system-icu system-jpeg system-libevent system-libvpx system-sqlite
 mail-client/thunderbird custom-cflags custom-optimization -crypt system-harfbuzz system-icu system-jpeg system-libevent system-libvpx system-sqlite
 www-client/seamonkey custom-cflags custom-optimization -crypt -minimal system-harfbuzz system-icu system-jpeg system-libevent system-libvpx system-sqlite
 media-sound/sox alsa openmp png encode flac id3tag ladspa mad ogg opus sndfile twolame wavpack
