@@ -3,6 +3,7 @@
 */*::abendbrot
 */*::audio-overlay
 */*::bar
+*/*::bobwya
 */*::brother-overlay
 */*::deadbeef-overlay
 */*::dotnet

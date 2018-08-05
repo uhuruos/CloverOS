@@ -104,6 +104,7 @@ sys-apps/xdg-desktop-portal-gtk::flatpak-overlay
 sys-fs/libostree::flatpak-overlay
 
 sys-fs/exfat-nofuse::bobwya
+kde-misc/kmozillahelper::bobwya
 
 sys-kernel/dkms::farmboy0
 
