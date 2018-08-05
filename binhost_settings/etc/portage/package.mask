@@ -5,7 +5,6 @@
 */*::bar
 */*::bobwya
 */*::brother-overlay
-*/*::chaos
 */*::deadbeef-overlay
 */*::dotnet
 */*::elementary

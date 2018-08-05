@@ -251,7 +251,8 @@ app-emulation/qemu sdl usb virgl virtfs
 sys-boot/grub mount
 xfce-base/thunar dbus
 gnome-base/gvfs udisks
-app-misc/anki python_targets_python3_6
+sys-libs/libselinux python
+sys-libs/libsemanage python
 net-misc/spice-gtk gtk3 usbredir
 net-wireless/lorcon python
 net-libs/gtk-vnc python
@@ -483,3 +484,4 @@ dev-python/numpy python_targets_python3_5
 dev-python/dbus-python python_targets_python3_5
 media-video/pitivi python_targets_python3_5 python_single_target_python3_5
 dev-python/pyparsing python_targets_python3_5
+app-misc/anki python_targets_python3_6
