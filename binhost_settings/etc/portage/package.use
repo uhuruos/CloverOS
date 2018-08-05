@@ -1,5 +1,21 @@
 #temporary
 media-libs/libopenshot -imagemagick
+dev-python/six python_targets_python3_5
+dev-python/python-dateutil python_targets_python3_5
+dev-python/pytz python_targets_python3_5
+dev-python/setuptools_scm python_targets_python3_5
+dev-python/gst-python python_targets_python3_5
+dev-python/pygobject python_targets_python3_5
+dev-python/setuptools python_targets_python3_5
+dev-python/PyQt5 python_targets_python3_5
+dev-python/certifi python_targets_python3_5
+dev-python/sip python_targets_python3_5
+dev-python/pycairo python_targets_python3_5
+dev-python/numpy python_targets_python3_5
+dev-python/dbus-python python_targets_python3_5
+media-video/pitivi python_targets_python3_5 python_single_target_python3_5
+dev-python/pyparsing python_targets_python3_5
+app-misc/anki python_targets_python3_6
 
 sys-apps/util-linux static-libs
 sys-power/suspend -crypt -lzo
@@ -468,20 +484,3 @@ media-libs/libsoundtouch abi_x86_32
 app-arch/xz-utils abi_x86_32
 x11-libs/pixman abi_x86_32
 media-libs/libsdl abi_x86_32
-
-dev-python/six python_targets_python3_5
-dev-python/python-dateutil python_targets_python3_5
-dev-python/pytz python_targets_python3_5
-dev-python/setuptools_scm python_targets_python3_5
-dev-python/gst-python python_targets_python3_5
-dev-python/pygobject python_targets_python3_5
-dev-python/setuptools python_targets_python3_5
-dev-python/PyQt5 python_targets_python3_5
-dev-python/certifi python_targets_python3_5
-dev-python/sip python_targets_python3_5
-dev-python/pycairo python_targets_python3_5
-dev-python/numpy python_targets_python3_5
-dev-python/dbus-python python_targets_python3_5
-media-video/pitivi python_targets_python3_5 python_single_target_python3_5
-dev-python/pyparsing python_targets_python3_5
-app-misc/anki python_targets_python3_6

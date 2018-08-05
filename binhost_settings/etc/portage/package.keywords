@@ -374,6 +374,7 @@ dev-go/go-crypto # consul
 dev-go/go-text # consul
 dev-go/go-tools # consul
 app-admin/go-updater
+dev-go/goversion # go-updater
 app-editors/wxhexeditor
 app-admin/clsync
 app-arch/tardelta
@@ -766,10 +767,6 @@ dev-python/django-otp-yubikey
 # required by app-text/extract_url-1.6.2::gentoo
 # required by app-text/extract_url (argument)
 =dev-perl/URI-Find-20160806.0.0 ~amd64
-
-# required by app-admin/go-updater-0.2.0::gentoo
-# required by app-admin/go-updater (argument)
-=dev-go/goversion-1.2.0 ~amd64
 
 # required by app-mobilephone/wammu-0.44::gentoo
 # required by app-mobilephone/wammu (argument)
