@@ -1,23 +1,10 @@
-#preference, remove when stable is bumped up
-=dev-lisp/clisp-2.49.90 # stable doesn't build
-=x11-misc/synergy-1.8.8 # 2.0 doesn't build
-x11-wm/enlightenment # old
-dev-libs/efl # old
-x11-terms/terminology # old
-net-p2p/rtorrent # old
-net-libs/libtorrent # old
-net-p2p/mldonkey # stable doesn't build
-media-sound/mumble ** # qt5
-media-sound/murmur ** # qt5
-app-laptop/tp_smapi # requested
-net-p2p/retroshare # needs latest
-net-misc/youtube-dl # needs latest
-media-fonts/vlgothic # old
-games-emulation/dolphin ** # old
+#preference
 media-libs/mesa
 sys-devel/gcc
 sys-kernel/gentoo-sources
 x11-drivers/nvidia-drivers
+net-p2p/retroshare
+net-misc/youtube-dl
 media-gfx/gimp
 media-gfx/mypaint-brushes # gimp
 media-libs/libmypaint # gimp
@@ -32,6 +19,23 @@ games-emulation/retroarch
 games-emulation/citra-libretro ** # retroarch
 media-libs/vulkan-loader # retroarch
 dev-util/vulkan-headers # retroarch
+
+#old, remove when stable is bumped up
+=dev-lisp/clisp-2.49.90
+=x11-misc/synergy-1.8.8
+x11-wm/enlightenment
+dev-libs/efl
+x11-terms/terminology
+net-p2p/rtorrent
+net-libs/libtorrent
+net-p2p/mldonkey
+media-sound/mumble **
+media-sound/murmur **
+app-laptop/tp_smapi
+media-fonts/vlgothic
+games-emulation/dolphin **
+
+#dependencies, remove when no longer demanded
 #vapoursynth
 =media-libs/zimg-2.7.4
 =dev-python/cython-0.28.4
@@ -56,6 +60,8 @@ sys-fs/encfs
 net-misc/spice-gtk
 
 #keyworded, remove when stable exists
+dev-util/lldb
+sys-devel/lld
 app-emulation/wine-any
 app-emulation/wine-mono # wine-any
 net-vpn/logmein-hamachi
@@ -334,7 +340,6 @@ dev-perl/LWP-UserAgent-Determined # otrs
 dev-libs/log4cplus
 media-gfx/openvdb
 x11-drivers/amdgpu-pro
-sys-devel/lld # amdgpu-pro
 games-emulation/kega-fusion
 media-sound/ezstream
 x11-themes/arc-theme
@@ -363,6 +368,11 @@ media-video/vidcutter
 net-misc/electrum-ltc
 app-arch/wimlib
 app-admin/consul
+dev-go/gox # consul
+dev-go/go-net # consul
+dev-go/go-crypto # consul
+dev-go/go-text # consul
+dev-go/go-tools # consul
 app-admin/go-updater
 app-editors/wxhexeditor
 app-admin/clsync
@@ -391,7 +401,6 @@ app-shells/tmux-bash-completion **
 app-text/extract_url
 dev-util/lxqt-build-tools
 dev-util/visual-regexp
-dev-util/lldb
 kde-misc/kio-locate
 kde-apps/kamoso
 kde-misc/kio-gopher
@@ -406,6 +415,7 @@ media-plugins/gimp-paint-studio
 media-libs/fontconfig-ultimate
 media-plugins/gimp-resynthesizer
 media-sound/mps-youtube
+dev-python/pafy # mps-youtube
 media-sound/teamspeak-client-bin
 media-video/gnome-mpv
 media-video/libva-utils
@@ -413,6 +423,8 @@ media-video/shotcut
 net-im/telegram-cli
 x11-plugins/telegram-purple
 net-misc/gerbera
+dev-lang/duktape # gerbera
+net-libs/libupnp # gerbera
 net-irc/hexchat-otr
 dev-perl/LWP-UserAgent-Cached
 sys-apps/hprofile
@@ -424,12 +436,14 @@ dev-util/peg # intel-gpu-tools
 x11-apps/radeontop
 sys-boot/woeusb
 sys-apps/pkgcore
+dev-python/snakeoil # pkgcore
 sys-block/zram-init
 sys-apps/hwdata-redhat
 x11-misc/vym
 net-misc/youtube-comment-downloader
 x11-plugins/pidgin-skypeweb
 net-misc/youtube-dl-gui
+dev-python/twodict # youtube-dl-gui
 x11-plugins/purple-hangouts
 x11-terms/kitty
 x11-themes/sddm-gentoo-black-theme
@@ -717,16 +731,12 @@ x11-plugins/wmacpiload-ac
 x11-plugins/wmbatteries **
 x11-plugins/wmping
 x11-plugins/wmamixer
-
-#xfce plugins
 xfce-extra/xfce4-gvfs-mount
 xfce-extra/eatmonkey
 xfce-extra/xfce-theme-manager
 xfce-extra/xfce4-alsa-plugin
 xfce-extra/multiload-nandhp
 xfce-extra/xfce4-composite-editor
-
-#vaporsynth plugins
 
 #yubikey applications
 #pam_yubico
@@ -749,26 +759,6 @@ dev-python/django-otp
 dev-python/django-formtools
 dev-python/django-otp-yubikey
 
-# required by net-misc/gerbera-1.2.0-r1::gentoo[javascript]
-# required by net-misc/gerbera (argument)
-=dev-lang/duktape-2.2.0 ~amd64
-=net-libs/libupnp-1.8.3-r1 ~amd64
-
-# required by sys-apps/pkgcore-0.9.7::gentoo
-# required by sys-apps/pkgcore (argument)
-=dev-python/snakeoil-0.7.5 ~amd64
-
-# required by media-sound/mps-youtube-0.2.8::gentoo
-# required by media-sound/mps-youtube (argument)
-=dev-python/pafy-0.5.4 ~amd64
-
-# required by net-misc/youtube-dl-gui (argument)
-=dev-python/twodict-1.2 ~amd64
-
-# required by app-admin/consul-1.0.6::gentoo
-# required by app-admin/consul (argument)
-=dev-go/gox-0.4.0 ~amd64
-
 # required by app-admin/clsync-0.4.2::gentoo
 # required by app-admin/clsync (argument)
 =app-doc/clsync-docs-0.4.2 ~amd64
@@ -777,34 +767,13 @@ dev-python/django-otp-yubikey
 # required by app-text/extract_url (argument)
 =dev-perl/URI-Find-20160806.0.0 ~amd64
 
-# required by dev-go/go-net-0_pre20160216::gentoo
-# required by dev-go/go-tools-0_pre20160220::gentoo
-# required by app-admin/consul-1.0.6::gentoo
-# required by app-admin/consul (argument)
-=dev-go/go-crypto-0_pre20160126 ~amd64
-
-# required by dev-go/go-net-0_pre20160216::gentoo
-# required by dev-go/go-tools-0_pre20160220::gentoo
-# required by app-admin/consul-1.0.6::gentoo
-# required by app-admin/consul (argument)
-=dev-go/go-text-0_pre20160211 ~amd64
-
 # required by app-admin/go-updater-0.2.0::gentoo
 # required by app-admin/go-updater (argument)
 =dev-go/goversion-1.2.0 ~amd64
 
-# required by app-admin/consul-1.0.6::gentoo
-# required by app-admin/consul (argument)
-=dev-go/go-tools-0_pre20160220 ~amd64
-
 # required by app-mobilephone/wammu-0.44::gentoo
 # required by app-mobilephone/wammu (argument)
 =dev-python/python-gammu-2.11 ~amd64
-
-# required by dev-go/go-tools-0_pre20160220::gentoo
-# required by app-admin/consul-1.0.6::gentoo
-# required by app-admin/consul (argument)
-=dev-go/go-net-0_pre20160216 ~amd64
 
 =dev-dotnet/nuget-2.8.7-r3
 =app-shells/zsh-syntax-highlighting-0.6.0

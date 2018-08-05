@@ -41,5 +41,3 @@
 */*::vapoursynth
 
 net-libs/nodejs::gentoo
->=dev-util/lldb-6
->=sys-devel/lld-6
