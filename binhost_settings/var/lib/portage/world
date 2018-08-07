@@ -111,6 +111,9 @@ app-i18n/ibus
 app-i18n/ibus-anthy
 app-i18n/ibus-handwrite
 app-i18n/ibus-typing-booster
+app-i18n/scim
+app-i18n/scim-anthy
+app-i18n/scim-m17n
 app-laptop/laptop-mode-tools
 app-laptop/thinkfan
 app-laptop/tlp
@@ -278,6 +281,7 @@ dev-util/kdevelop
 dev-util/lldb
 dev-util/lxqt-build-tools
 dev-util/monodevelop
+dev-util/nvidia-cuda-toolkit
 dev-util/plan9port
 dev-util/pycharm-community
 dev-util/pycharm-professional
@@ -392,6 +396,7 @@ games-util/rejoystick
 games-util/steam-launcher
 games-util/vitamtp-fork
 gnome-extra/gnome-calculator
+kde-apps/kamoso
 kde-apps/kbackup
 kde-apps/kde-meta
 kde-apps/kdebase-meta
@@ -776,6 +781,7 @@ media-video/mpv
 media-video/obs-studio
 media-video/openshot
 media-video/pitivi
+media-video/shotcut
 media-video/smplayer
 media-video/smtube
 media-video/subtitleripper
@@ -859,6 +865,7 @@ net-misc/ntp
 net-misc/proxychains
 net-misc/putty
 net-misc/pyhoca-cli
+net-misc/pyhoca-gui
 net-misc/python-x2go
 net-misc/ripme
 net-misc/sgopherd
@@ -923,6 +930,7 @@ sci-calculators/tiemu
 sci-electronics/kicad
 sci-mathematics/gimps
 sci-mathematics/octave
+sci-mathematics/rstudio
 sci-visualization/gnuplot
 sys-apps/ack
 sys-apps/baobab
@@ -970,6 +978,7 @@ sys-boot/grub
 sys-boot/os-prober
 sys-boot/plymouth
 sys-boot/syslinux
+sys-boot/unetbootin
 sys-boot/woeusb
 sys-devel/crossdev
 sys-devel/distcc

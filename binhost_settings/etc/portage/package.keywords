@@ -60,6 +60,7 @@ sys-fs/encfs
 net-misc/spice-gtk
 
 #keyworded, remove when stable exists
+net-im/tdlib
 games-util/vitamtp-fork
 dev-util/lldb
 sys-devel/lld
@@ -321,8 +322,8 @@ media-sound/protux
 net-misc/clipgrab
 net-wireless/broadcom-sta
 x11-plugins/gkrellm-countdown
-dev-util/nvidia-cuda-toolkit
-dev-util/nvidia-cuda-sdk # dev-util/nvidia-cuda-toolkit
+dev-util/nvidia-cuda-sdk
+dev-util/nvidia-cuda-toolkit # nvidia-cuda-sdk
 games-fps/gzdoom
 games-fps/redeclipse
 app-emulation/qt-virt-manager **

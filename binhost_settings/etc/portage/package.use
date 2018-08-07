@@ -275,7 +275,7 @@ net-libs/gtk-vnc python
 app-crypt/gpgme qt5
 sys-devel/gcc fortran
 media-libs/cogl gles2
-media-libs/mlt qt5 kdenlive xml sdl sdl2 melt python gtk ffmpeg
+media-libs/mlt qt5 kdenlive xml sdl sdl2 melt python gtk ffmpeg frei0r
 media-libs/gegl cairo
 media-fonts/font-misc-misc nls
 dev-lua/lpeg luajit

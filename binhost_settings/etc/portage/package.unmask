@@ -73,6 +73,8 @@ games-emulation/citra::vampire
 
 games-emulation/rpcs3::pinkpieea
 
+net-im/tdlib::jollheef-overlay
+
 games-emulation/sdlmame::jorgicio
 games-fps/gzdoom::jorgicio
 media-gfx/flameshot::jorgicio
