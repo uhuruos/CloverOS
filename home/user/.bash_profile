@@ -1,5 +1,5 @@
 if [ -z "$DISPLAY" ] && ! pgrep X > /dev/null; then
-	echo "WM Options: (y) Default (i) i3 (a) Awesome (o) Openbox (e) Enlightenment (k) KDE (m) MATE (x) XFCE (l) LXDE (q) LXQT (f) Fluxbox (d) dwm (c) IceWM (w) Window Maker (t) FVWM Themes (n) xmonad (s) Sawfish (b) bspwm (g) goomwwm (h) herbstluftwm (v) evilwm"
+	echo "WM Options: (y) Default (i) i3 (a) Awesome (o) Openbox (e) Enlightenment (k) KDE (m) MATE (x) XFCE (l) LXDE (q) LXQT (f) Fluxbox (d) dwm (c) IceWM (w) Window Maker (t) FVWM Themes (p) xmonad (s) Sawfish (b) bspwm (g) goomwwm (h) herbstluftwm (v) evilwm"
 	read -erp "Start X? [y/n] " -n 1 choice
 	declare -A wms
 	declare -A wmspkg
@@ -11,9 +11,9 @@ if [ -z "$DISPLAY" ] && ! pgrep X > /dev/null; then
 	wmspkg[y]=fvwm
 	wmspost[y]=$defaultpost
 
-	wms[Y]=fvwm
-	wmspkg[Y]=fvwm
-	wmspost[Y]=$defaultpost
+	wms[Y]=wms[y]
+	wmspkg[Y]=wmspkg[y]
+	wmspost[Y]=wmspost[y]
 
 	wms[i]=i3
 	wmspkg[i]="i3-gaps i3status"
@@ -71,9 +71,9 @@ if [ -z "$DISPLAY" ] && ! pgrep X > /dev/null; then
 	wmspkg[t]=fvwm-themes
 	wmspost[t]=$defaultpost
 
-	wms[n]=xmonad
-	wmspkg[n]=xmonad
-	wmspost[n]=$defaultpost
+	wms[p]=xmonad
+	wmspkg[p]=xmonad
+	wmspost[p]=$defaultpost
 
 	wms[s]=sawfish
 	wmspkg[s]=sawfish
