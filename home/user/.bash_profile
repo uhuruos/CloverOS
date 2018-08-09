@@ -1,5 +1,5 @@
 if [ -z "$DISPLAY" ] && ! pgrep X > /dev/null; then
-	echo "WM Options: (y) Default (i) i3 (a) Awesome (o) Openbox (e) Enlightenment (k) KDE (m) MATE (x) XFCE (l) LXDE (q) LXQT (f) Fluxbox (d) dwm (c) IceWM (w) Window Maker (t) FVWM Themes (p) xmonad (s) Sawfish (b) bspwm (g) goomwwm (h) herbstluftwm (v) evilwm"
+	echo "WM Options: (y) Default (i) i3 (a) Awesome (o) Openbox (e) Enlightenment (k) KDE (m) MATE (x) XFCE (l) LXDE (q) LXQT (f) Fluxbox (d) dwm (c) IceWM (w) Window Maker (t) FVWM Themes (p) xmonad (s) Sawfish (b) bspwm (g) goomwwm (h) herbstluftwm (v) evilwm (u) Blackbox"
 	read -erp "Start X? [y/n] " -n 1 choice
 	declare -A wms
 	declare -A wmspkg
@@ -95,16 +95,20 @@ if [ -z "$DISPLAY" ] && ! pgrep X > /dev/null; then
 	wmspkg[v]=evilwm
 	wmspost[v]=$defaultpost
 
+	wms[u]=blackbox
+	wmspkg[u]=blackbox
+	wmspost[u]=$defaultpost
+
+	wms[null]=aewm
+	wmspkg[null]=aewm
+	wmspost[null]=$defaultpost
+
 	wms[null]=aewm++
 	wmspkg[null]=aewm++
 	wmspost[null]=$defaultpost
 
 	wms[null]=amiwm
 	wmspkg[null]=amiwm
-	wmspost[null]=$defaultpost
-
-	wms[null]=blackbox
-	wmspkg[null]=blackbox
 	wmspost[null]=$defaultpost
 
 	wms[null]=ctwm
