@@ -42,7 +42,7 @@ t) Enable tap to click on touchpad
 d) Disable mouse acceleration
 c) Update Portage config from binhost
 m) Revert to default /etc/portage/make.conf
-b) Install bluetooth manager
+b) Install Bluetooth manager
 i) Install VirtualBox
 v) Install Virtualbox/VMWare drivers
 s) Install and add dnscrypt-proxy to startup

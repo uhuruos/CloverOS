@@ -139,6 +139,8 @@ This disables the binhost and uses Portage's ebuilds for packages. Now you can e
 * [Thumbnail file picker with Firefox](#thumbnail-file-picker-with-firefox)
 * [KDE theme in qt5 programs without KDE](#kde-theme-in-qt5-programs-without-kde)
 * [Vertical tabs in Firefox 57+](#vertical-tabs-in-firefox-57)
+* [Enable tap to click on touchpads](#enable-tap-to-click-on-touchpads)
+* [Disable mouse acceleration](#disable-mouse-acceleration)
 * [Suspend when laptop lid is closed](#suspend-when-laptop-lid-is-closed)
 * [Dnscrypt-proxy howto](#dnscrypt-proxy-howto)
 * [Sound in OBS (Open Broadcaster Software) using ALSA](#sound-in-obs-open-broadcaster-software-using-alsa)
@@ -324,6 +326,16 @@ https://addons.mozilla.org/en-US/firefox/addon/vertical-tabs-reloaded/
 ```
 
 ![Firefox](https://i.imgur.com/z6NaM5a.png)
+
+### Enable tap to click on touchpads
+`xinput set-prop "SynPS/2 Synaptics TouchPad" "libinput Tapping Enabled" 1`
+
+### Disable mouse acceleration
+```
+for i in {0..99}; do
+	xinput set-prop $i "libinput Accel Profile Enabled" 0 1 &> /dev/null
+done
+```
 
 ### Suspend when laptop lid is closed
 First run `emerge acpid && /etc/init.d/acpid start`
