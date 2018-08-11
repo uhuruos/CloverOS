@@ -491,7 +491,7 @@ Start playing something, then run `obs`, then add Audio Capture Device (ALSA) to
 ```
 sudo emerge bluez-alsa
 /etc/init.d/bluealsa start
-blueman-manager&
+blueman-manager &
 ```
 
 ~/.asoundrc:
