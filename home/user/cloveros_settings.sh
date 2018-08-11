@@ -67,6 +67,7 @@ case "$choice" in
 
 	2)
 		echo "Running the following:"
+		echo "./cloveros_settings.sh 1"
 		echo "./cloveros_settings.sh 4"
 		echo "sudo emerge --sync"
 		echo "sudo emerge -uvD world"
