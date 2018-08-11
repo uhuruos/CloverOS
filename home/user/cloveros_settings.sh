@@ -302,15 +302,17 @@ case "$choice" in
 
 	b)
 		echo "Running the following:"
-		echo "sudo emerge blueman"
+		echo "sudo emerge blueman bluez-alsa"
 		echo "sudo useradd -a $USER plugdev"
 		echo "sudo /etc/init.d/bluetooth start"
+		echo "sudo /etc/init.d/bluealsa start"
 		echo "sudo blueman-applet&"
 		echo "sudo blueman-manager&"
 		sleep 1
-		sudo emerge blueman
+		sudo emerge blueman bluez-alsa
 		sudo useradd -a $USER plugdev
 		sudo /etc/init.d/bluetooth start
+		sudo /etc/init.d/bluealsa start
 		sudo blueman-applet&
 		sudo blueman-manager&
 		;;
