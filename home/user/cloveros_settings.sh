@@ -27,7 +27,6 @@ if [[ -n "$1" ]]; then
 	fi
 else
 	echo "1) Update cloveros_settings.sh
-2) Change mirror
 3) Change default sound device
 4) Update/install kernel $kernelversion
 5) Change emerge to source or binary
@@ -64,15 +63,6 @@ case "$choice" in
 			echo -e "\nCould not retrieve file. Please connect to the Internet or try again."
 			exit 1
 		fi
-		;;
-
-	2)
-		for i in "${!mirrors[@]}"; do
-			echo "$((i+1))) ${mirrors[i]}"
-		done
-		read -erp "Select mirror: " -n 1 choicemirror
-		sudo sed -i "s@PORTAGE_BINHOST=\".*\"@PORTAGE_BINHOST=\"${mirrors[$choicemirror-1]}\"@" /etc/portage/make.conf
-		echo -e "\nMirror changed to: ${mirrors[choicemirror-1]}. (/etc/portage/make.conf)"
 		;;
 
 	3)
