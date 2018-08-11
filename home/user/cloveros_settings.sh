@@ -38,6 +38,7 @@ else
 u) Update system, kernel, cloveros_settings.sh, clean emerge cache
 l) Update/install kernel $kernelversion-gnu
 a) ALSA settings configurator
+f) Fix emerge "Too many arguments" error
 t) Enable tap to click on touchpad
 d) Disable mouse acceleration
 c) Update Portage config from binhost
@@ -294,6 +295,11 @@ case "$choice" in
 				exit 1
 				;;
 		esac
+		;;
+
+	f)
+		sudo rm /usr/portage/packages/Packages &> /dev/null
+		echo "Ran sudo rm /usr/portage/packages/Packages"
 		;;
 
 	t)
