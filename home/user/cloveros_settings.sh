@@ -45,7 +45,7 @@ m) Revert to default /etc/portage/make.conf
 b) Install bluetooth manager
 i) Install VirtualBox
 v) Install Virtualbox/VMWare drivers
-n) Install and configure dnscrypt-proxy
+s) Install and add dnscrypt-proxy to startup
 n) Install proprietary Nvidia drivers
 q) Exit"
 	read -erp "Select option: " -n 1 choice
@@ -367,6 +367,21 @@ case "$choice" in
 		sleep 2
 		sudo emerge xf86-video-vmware virtualbox-guest-additions
 		echo -e "\nRestart X to load driver."
+		;;
+
+	s)
+		echo "Running the following:"
+		echo "sudo emerge dnscrypt-proxy"
+		echo "sudo /etc/init.d/dnscrypt-proxy start"
+		echo "sudo rc-config add dnscrypt-proxy"
+		echo "sudo sh -c 'echo \"static domain_name_servers=127.0.0.1\" >> /etc/dhcpcd.conf'"
+		echo "sudo /etc/init.d/dhcpcd restart"
+		sleep 2
+		sudo emerge dnscrypt-proxy
+		sudo /etc/init.d/dnscrypt-proxy start
+		sudo rc-config add dnscrypt-proxy
+		sudo sh -c 'echo "static domain_name_servers=127.0.0.1" >> /etc/dhcpcd.conf'
+		sudo /etc/init.d/dhcpcd restart
 		;;
 
 	n)
