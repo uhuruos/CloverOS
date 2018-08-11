@@ -59,6 +59,16 @@ Volume control: Laptop (software) Volume up/down keys
 
 Key bindings are in `~/.xbindkeysrc`
 
+### Setting default sound device
+Run `alsamixer` and hit F6 to see your audio devices.
+
+To make 1 the default device, edit `~/.asoundrc` and add this:
+
+```
+defaults.pcm.card 1
+defaults.ctl.card 1
+```
+
 ### Included software
 Window manager - fvwm
 
@@ -85,16 +95,6 @@ FTP client - filezilla
 Torrent client - rtorrent
 
 IRC client - weechat
-
-### Setting default sound device
-Run `alsamixer` and hit F6 to see your audio devices.
-
-To make 1 the default device, edit `~/.asoundrc` and add this:
-
-```
-defaults.pcm.card 1
-defaults.ctl.card 1
-```
 
 ### Listing available packages
 Use `porthole` or `eix`
