@@ -128,7 +128,6 @@ This disables the binhost and uses Portage's ebuilds for packages. Now you can e
 * [Installing proprietary Nvidia drivers](#installing-proprietary-nvidia-drivers)
 * [Virtualbox doesn't work or any package that has a kernel module](#virtualbox-doesnt-work-or-any-package-that-has-a-kernel-module)
 * [Steam stops working](#steam-stops-working)
-* [Upgrading wine or any other slotted package](#upgrading-wine-or-any-other-slotted-package)
 * [Firefox and Pulseaudio](#firefox-and-pulseaudio)
 * [What are USE flags?](#what-are-use-flags)
 * [What are keywording and unmasking?](#what-are-keywording-and-unmasking)
@@ -210,9 +209,6 @@ To load virtualbox modules: `sudo modprobe -a vboxdrv vboxnetadp vboxnetflt`
 
 ### Steam stops working
 Start steam with `rm -R ~/.steam/ && steam &`
-
-### Upgrading wine or any other slotted package
-`sudo emerge -C wine wine-any && sudo emerge wine`
 
 ### Firefox and Pulseaudio
 Firefox 57+ still works with ALSA. If this changes, it will be built with apulse.
