@@ -198,7 +198,7 @@ sudo emerge nvidia-drivers
 sudo depmod -a
 sudo eselect opengl set nvidia
 sudo eselect opencl set nvidia
-sudo sh -c 'echo \"blacklist nouveau\" >> /etc/modprobe.d/blacklist.conf'
+sudo sh -c 'echo -e "blacklist nouveau\nblacklist vga16fb\nblacklist rivafb\nblacklist nvidiafb\nblacklist rivatv" >> /etc/modprobe.d/blacklist.conf'
 ```
 
 ### Virtualbox doesn't work or any package that has a kernel module
