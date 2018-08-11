@@ -337,13 +337,13 @@ case "$choice" in
 		echo "sudo useradd -a $USER plugdev"
 		echo "sudo /etc/init.d/bluetooth start"
 		echo "sudo /etc/init.d/bluealsa start"
-		echo "blueman-manager&"
+		echo "blueman-manager &"
 		sleep 2
 		sudo emerge blueman bluez-alsa
 		sudo useradd -a $USER plugdev
 		sudo /etc/init.d/bluetooth start
 		sudo /etc/init.d/bluealsa start
-		blueman-manager&
+		blueman-manager &
 		echo "blueman installed. To have it automatically start on boot, run: sudo rc-config add bluetooth & sudo rc-config add bluealsa"
 		;;
 

@@ -209,7 +209,7 @@ Then run `depmod -a`
 To load virtualbox modules: `sudo modprobe -a vboxdrv vboxnetadp vboxnetflt`
 
 ### Steam stops working
-Start steam with `rm -R ~/.steam/ && steam`
+Start steam with `rm -R ~/.steam/ && steam &`
 
 ### Upgrading wine or any other slotted package
 `sudo emerge -C wine wine-any && sudo emerge wine`
