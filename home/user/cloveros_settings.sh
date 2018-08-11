@@ -27,6 +27,7 @@ if [[ -n "$1" ]]; then
 	fi
 else
 	echo "1) Update cloveros_settings.sh
+2) Update system
 3) Change default sound device
 4) Update/install kernel $kernelversion
 5) Change emerge to source or binary
@@ -34,7 +35,6 @@ else
 7) Sync time
 8) Set timezone
 9) Clean emerge cache
-u) Update system, kernel, cloveros_settings.sh, clean emerge cache
 l) Update/install kernel $kernelversion-gnu
 a) ALSA settings configurator
 f) Fix emerge \"Argument too long\" error
@@ -63,6 +63,45 @@ case "$choice" in
 			echo -e "\nCould not retrieve file. Please connect to the Internet or try again."
 			exit 1
 		fi
+		;;
+
+	2)
+		echo "Running the following:"
+		echo "./cloveros_settings.sh 4"
+		echo "sudo emerge --sync"
+		echo "sudo emerge -uvD world"
+		echo "sudo emerge @preserved-rebuild"
+		echo "sudo emerge --depclean"
+		echo 'sudo depmod "$kernelversion-gentoo"'
+		echo "./cloveros_settings.sh 9"
+		sleep 2
+		./cloveros_settings.sh 1
+		./cloveros_settings.sh u
+		;;
+
+	u)
+		if ! grep -q 'EMERGE_DEFAULT_OPTS=".* -G"' /etc/portage/make.conf; then
+			echo "Please enable binaries."
+			exit 1
+		fi
+
+		sudo rm /usr/portage/packages/Packages &> /dev/null
+
+		sudo eselect profile set "default/linux/amd64/17.0/hardened"
+
+		if [ -d /var/db/pkg/net-p2p/rtorrent-ps-9999/ ]; then
+			sudo emerge -C rtorrent-ps
+			sudo emerge rtorrent
+		fi
+
+		./cloveros_settings.sh 4
+		sudo emerge --sync
+		sudo emerge -uvD world
+		sudo emerge @preserved-rebuild
+		sudo emerge --depclean
+		sudo depmod "$kernelversion-gentoo"
+		./cloveros_settings.sh 9
+		echo -e "\nSystem updated."
 		;;
 
 	3)
@@ -153,45 +192,6 @@ case "$choice" in
 	9)
 		sudo rm -Rf /usr/portage/packages/* /usr/portage/distfiles/* /var/tmp/portage/*
 		echo -e "\nPackage cache cleared. (/usr/portage/packages/, /usr/portage/distfiles/, /var/tmp/portage/)"
-		;;
-
-	u)
-		echo "Running the following:"
-		echo "./cloveros_settings.sh 4"
-		echo "sudo emerge --sync"
-		echo "sudo emerge -uvD world"
-		echo "sudo emerge @preserved-rebuild"
-		echo "sudo emerge --depclean"
-		echo 'sudo depmod "$kernelversion-gentoo"'
-		echo "./cloveros_settings.sh 9"
-		sleep 1
-		./cloveros_settings.sh 1
-		./cloveros_settings.sh zz
-		;;
-
-	zz)
-		if ! grep -q 'EMERGE_DEFAULT_OPTS=".* -G"' /etc/portage/make.conf; then
-			echo "Please enable binaries."
-			exit 1
-		fi
-
-		sudo rm /usr/portage/packages/Packages &> /dev/null
-
-		sudo eselect profile set "default/linux/amd64/17.0/hardened"
-
-		if [ -d /var/db/pkg/net-p2p/rtorrent-ps-9999/ ]; then
-			sudo emerge -C rtorrent-ps
-			sudo emerge rtorrent
-		fi
-
-		./cloveros_settings.sh 4
-		sudo emerge --sync
-		sudo emerge -uvD world
-		sudo emerge @preserved-rebuild
-		sudo emerge --depclean
-		sudo depmod "$kernelversion-gentoo"
-		./cloveros_settings.sh 9
-		echo -e "\nSystem updated."
 		;;
 
 	l)
