@@ -36,7 +36,7 @@ else
 8) Set timezone
 9) Clean emerge cache
 l) Update/install kernel $kernelversion-gnu
-a) ALSA settings configurator
+a) ALSA settings configuration
 f) Fix emerge \"Argument too long\" error
 t) Enable tap to click on touchpad
 d) Disable mouse acceleration
