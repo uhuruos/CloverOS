@@ -228,11 +228,12 @@ case "$choice" in
 	a)
 		echo "1) Change default ALSA playback device
 2) Change default ALSA capture device
-3) Change default sample rate
-4) Bypass dmix (DSD, high sample rate)
-5) Configure ALSA for OBS
-6) GUI volume control
-7) CLI volume control"
+3) Change default ALSA playback device to a Bluetooth device
+4) Change default sample rate
+5) Bypass dmix (DSD, high sample rate)
+6) Configure ALSA for OBS
+7) GUI volume control
+8) CLI volume control"
 		read -erp "Select option: " -n 1 choicealsa
 		echo
 		case "$choicealsa" in
@@ -252,6 +253,12 @@ case "$choice" in
 				;;
 
 			3)
+				read -erp "First pair the Bluetooth device with blueman-manager. Specify the Bluetooth address: " -i 00:00:00:00:00:00 bluetoothaddress
+				echo -e "pcm.!default {\n	type bluealsa\n	device "${bluetoothaddress}"\n	profile "a2dp"\n}" > ~/.asoundrc
+				echo -e "\nAudio device ${bluetoothaddress} is now the default for ALSA programs. (~/.asoundrc)"
+				;;
+
+			4)
 				echo "Sample rate examples: 44100 48000 96000 192000"
 				read -erp "Select sample rate: " choicesamplerate
 				if grep -q 'defaults.pcm.dmix.rate' ~/.asoundrc; then
@@ -262,21 +269,21 @@ case "$choice" in
 				echo -e "\nSample rate set to $choicesamplerate (~/.asoundrc)"
 				;;
 
-			4)
+			5)
 				grep " \[" /proc/asound/cards
 				read -erp "Select the audio device to become (hw) default: " -n 1 choiceaudio
 				echo -e "pcm.!default {\n  type hw\n  card ${choiceaudio}\n}" > ~/.asoundrc
 				echo -e "\nAudio device ${choiceaudio} is now the default (hw) for ALSA programs. Only one program will output audio. (~/.asoundrc)"
 				;;
-			5)
+			6)
 				echo -e "\nIn progress."
 				;;
 
-			6)
+			7)
 				qasmixer&
 				;;
 
-			7)
+			8)
 				alsamixer
 				;;
 
