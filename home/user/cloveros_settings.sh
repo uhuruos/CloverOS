@@ -40,11 +40,12 @@ l) Update/install kernel $kernelversion-gnu
 a) ALSA settings configurator
 t) Enable tap to click on touchpad
 d) Disable mouse acceleration
+c) Update Portage config from binhost
+m) Revert to default /etc/portage/make.conf
 b) Install bluetooth manager
 i) Install VirtualBox
 v) Install Virtualbox/VMWare drivers
-c) Update Portage config from binhost
-m) Revert to default /etc/portage/make.conf
+n) Install and configure dnscrypt-proxy
 n) Install proprietary Nvidia drivers
 q) Exit"
 	read -erp "Select option: " -n 1 choice
@@ -308,44 +309,6 @@ case "$choice" in
 		echo -e "\nDisable mouse acceleration: xinput set-prop \"Your Device\" \"libinput Accel Profile Enabled\" 0 1"
 		;;
 
-	b)
-		echo "Running the following:"
-		echo "sudo emerge blueman bluez-alsa"
-		echo "sudo useradd -a $USER plugdev"
-		echo "sudo /etc/init.d/bluetooth start"
-		echo "sudo /etc/init.d/bluealsa start"
-		echo "blueman-manager&"
-		sleep 1
-		sudo emerge blueman bluez-alsa
-		sudo useradd -a $USER plugdev
-		sudo /etc/init.d/bluetooth start
-		sudo /etc/init.d/bluealsa start
-		blueman-manager&
-		echo "blueman installed. To have it automatically start on boot, run: sudo rc-config add bluetooth & sudo rc-config add bluealsa"
-		;;
-
-	i)
-		echo "Running the following:"
-		echo "./cloveros_settings.sh u"
-		echo "sudo emerge virtualbox"
-		echo "sudo depmod"
-		echo 'sudo useradd -a $USER vboxusers'
-		sleep 1
-		./cloveros_settings.sh u
-		sudo emerge virtualbox
-		sudo depmod
-		sudo useradd -g $USER vboxusers
-		echo "Virtualbox installed, please reboot to update kernel."
-		;;
-
-	v)
-		echo "Running the following:"
-		echo "sudo emerge xf86-video-vmware virtualbox-guest-additions"
-		sleep 1
-		sudo emerge xf86-video-vmware virtualbox-guest-additions
-		echo -e "\nRestart X to load driver."
-		;;
-
 	c)
 		backupportagedir=backupportage$(< /dev/urandom tr -dc 0-9 | head -c 8)
 		sudo mkdir ~/$backupportagedir
@@ -368,6 +331,44 @@ case "$choice" in
 		echo "/etc/portage/make.conf is now default Previous make.conf saved to $backupmakeconf"
 		;;
 
+	b)
+		echo "Running the following:"
+		echo "sudo emerge blueman bluez-alsa"
+		echo "sudo useradd -a $USER plugdev"
+		echo "sudo /etc/init.d/bluetooth start"
+		echo "sudo /etc/init.d/bluealsa start"
+		echo "blueman-manager&"
+		sleep 2
+		sudo emerge blueman bluez-alsa
+		sudo useradd -a $USER plugdev
+		sudo /etc/init.d/bluetooth start
+		sudo /etc/init.d/bluealsa start
+		blueman-manager&
+		echo "blueman installed. To have it automatically start on boot, run: sudo rc-config add bluetooth & sudo rc-config add bluealsa"
+		;;
+
+	i)
+		echo "Running the following:"
+		echo "./cloveros_settings.sh 4"
+		echo "sudo emerge virtualbox"
+		echo 'sudo depmod "$kernelversion-gentoo"'
+		echo 'sudo useradd -a $USER vboxusers'
+		sleep 2
+		./cloveros_settings.sh 4
+		sudo emerge virtualbox
+		sudo depmod "$kernelversion-gentoo"
+		sudo useradd -g $USER vboxusers
+		echo "Virtualbox installed, please reboot to update kernel."
+		;;
+
+	v)
+		echo "Running the following:"
+		echo "sudo emerge xf86-video-vmware virtualbox-guest-additions"
+		sleep 2
+		sudo emerge xf86-video-vmware virtualbox-guest-additions
+		echo -e "\nRestart X to load driver."
+		;;
+
 	n)
 		echo "Running the following:"
 		echo "./cloveros_settings.sh 4"
@@ -376,7 +377,7 @@ case "$choice" in
 		echo "sudo eselect opengl set nvidia"
 		echo "sudo eselect opencl set nvidia"
 		echo "sudo sh -c 'echo -e \"blacklist nouveau\nblacklist vga16fb\nblacklist rivafb\nblacklist nvidiafb\nblacklist rivatv\" >> /etc/modprobe.d/blacklist.conf'"
-		sleep 1
+		sleep 2
 		./cloveros_settings.sh 4
 		sudo emerge nvidia-drivers
 		sudo depmod "$kernelversion-gentoo"

@@ -401,9 +401,9 @@ esac
 ### Dnscrypt-proxy howto
 ```
 sudo emerge dnscrypt-proxy
+sudo /etc/init.d/dnscrypt-proxy start
 sudo rc-config add dnscrypt-proxy
 sudo sh -c 'echo "static domain_name_servers=127.0.0.1" >> /etc/dhcpcd.conf'
-sudo /etc/init.d/dnscrypt-proxy start
 sudo /etc/init.d/dhcpcd restart
 ```
 
