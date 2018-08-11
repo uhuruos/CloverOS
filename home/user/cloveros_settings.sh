@@ -38,7 +38,7 @@ else
 u) Update system, kernel, cloveros_settings.sh, clean emerge cache
 l) Update/install kernel $kernelversion-gnu
 a) ALSA settings configurator
-f) Fix emerge "Too many arguments" error
+f) Fix emerge "Argument too long" error
 t) Enable tap to click on touchpad
 d) Disable mouse acceleration
 c) Update Portage config from binhost
