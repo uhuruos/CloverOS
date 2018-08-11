@@ -253,8 +253,8 @@ case "$choice" in
 				;;
 
 			3)
-				read -erp "First pair the Bluetooth device with blueman-manager. Specify the Bluetooth address: " -i 00:00:00:00:00:00 bluetoothaddress
-				echo -e "pcm.!default {\n	type bluealsa\n	device "${bluetoothaddress}"\n	profile "a2dp"\n}" > ~/.asoundrc
+				read -erp "First pair the Bluetooth device with blueman-manager.\nSpecify the Bluetooth address: " -i 00:00:00:00:00:00 bluetoothaddress
+				echo -e "pcm.!default {\n	type bluealsa\n	device \"${bluetoothaddress}\"\n	profile "a2dp"\n}" > ~/.asoundrc
 				echo -e "\nAudio device ${bluetoothaddress} is now the default for ALSA programs. (~/.asoundrc)"
 				;;
 
