@@ -1,5 +1,5 @@
 if [ -z "$DISPLAY" ] && ! pgrep X > /dev/null; then
-	echo "WM Options: (y) Default (i) i3 (a) Awesome (o) Openbox (e) Enlightenment (k) KDE (m) MATE (x) XFCE (l) LXDE (q) LXQT (f) Fluxbox (d) dwm (c) IceWM (w) Window Maker (t) FVWM Themes (p) xmonad (s) Sawfish (b) bspwm (g) goomwwm (h) herbstluftwm (v) evilwm (u) Blackbox"
+	echo "WM Options: (y) Default (i) i3 (a) Awesome (o) Openbox (e) Enlightenment (k) KDE (m) MATE (x) XFCE (l) LXDE (q) LXQT (f) Fluxbox (d) dwm (c) IceWM (w) Window Maker (t) FVWM Themes (p) xmonad (s) Sawfish (b) bspwm (g) goomwwm (h) herbstluftwm (v) evilwm (u) Blackbox !) aewm +) aewm++ @) amiwm #) ctwm $) cwm %) echinus ^) jwm &) larswm *) lumina <) lwm >) matwm2"
 	read -erp "Start X? [y/n] " -n 1 choice
 	declare -A wms
 	declare -A wmspkg
@@ -99,49 +99,49 @@ if [ -z "$DISPLAY" ] && ! pgrep X > /dev/null; then
 	wmspkg[u]=blackbox
 	wmspost[u]=$defaultpost
 
-	wms[null]=aewm
-	wmspkg[null]=aewm
-	wmspost[null]=$defaultpost
+	wms[!]=aewm
+	wmspkg[!]=aewm
+	wmspost[!]=$defaultpost
 
-	wms[null]=aewm++
-	wmspkg[null]=aewm++
-	wmspost[null]=$defaultpost
+	wms[+]=aewm++
+	wmspkg[+]=aewm++
+	wmspost[+]=$defaultpost
 
-	wms[null]=amiwm
-	wmspkg[null]=amiwm
-	wmspost[null]=$defaultpost
+	wms[@]=amiwm
+	wmspkg[@]=amiwm
+	wmspost[@]=$defaultpost
 
-	wms[null]=ctwm
-	wmspkg[null]=ctwm
-	wmspost[null]=$defaultpost
+	wms[#]=ctwm
+	wmspkg[#]=ctwm
+	wmspost[#]=$defaultpost
 
-	wms[null]=cwm
-	wmspkg[null]=cwm
-	wmspost[null]=$defaultpost
+	wms[$]=cwm
+	wmspkg[$]=cwm
+	wmspost[$]=$defaultpost
 
-	wms[null]=echinus
-	wmspkg[null]=echinus
-	wmspost[null]=$defaultpost
+	wms[%]=echinus
+	wmspkg[%]=echinus
+	wmspost[%]=$defaultpost
 
-	wms[null]=jwm
-	wmspkg[null]=jwm
-	wmspost[null]=$defaultpost
+	wms[^]=jwm
+	wmspkg[^]=jwm
+	wmspost[^]=$defaultpost
 
-	wms[null]=larswm
-	wmspkg[null]=larswm
-	wmspost[null]=$defaultpost
+	wms[&]=larswm
+	wmspkg[&]=larswm
+	wmspost[&]=$defaultpost
 
-	wms[null]=lumina
-	wmspkg[null]=""
-	wmspost[null]=$defaultpost
+	wms[*]=lumina-desktop
+	wmspkg[*]=lumina
+	wmspost[*]=$defaultpost
 
-	wms[null]=lwm
-	wmspkg[null]=lwm
-	wmspost[null]=$defaultpost
+	wms[<]=lwm
+	wmspkg[<]=lwm
+	wmspost[<]=$defaultpost
 
-	wms[null]=matwm2
-	wmspkg[null]=matwm2
-	wmspost[null]=$defaultpost
+	wms[>]=matwm2
+	wmspkg[>]=matwm2
+	wmspost[>]=$defaultpost
 
 	wms[null]=musca
 	wmspkg[null]=musca
