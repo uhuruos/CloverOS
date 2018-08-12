@@ -56,7 +56,7 @@ if [ -z "$DISPLAY" ] && ! pgrep X > /dev/null; then
 	wmspost[f]=$defaultpost
 
 	wms[d]=dwm
-	wmspkg[d]=dwm
+	wmspkg[d]="dwm dmenu"
 	wmspost[d]=$defaultpost
 
 	wms[c]=icewm
