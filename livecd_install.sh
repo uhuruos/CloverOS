@@ -38,7 +38,7 @@ while :; do
 	echo
 	read -erp "Enter preferred root password " rootpassword
 	read -erp "Enter preferred username " user
-	newuser=$(echo "$user" | tr A-Z a-z | tr -cd "[:alpha:][:digit:]" | cut -c -31)
+	newuser=$(echo "$user" | tr A-Z a-z | tr -cd "[:alpha:][:digit:]" | sed 's/^[0-9]\+//' | cut -c -31)
 	if [[ "$newuser" != "$user" ]]; then
 		user=$newuser
 		echo username changed to $newuser
