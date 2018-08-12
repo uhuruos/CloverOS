@@ -107,9 +107,9 @@ if [ -z "$DISPLAY" ] && ! pgrep X > /dev/null; then
 	wmspkg[+]=aewm++
 	wmspost[+]=$defaultpost
 
-	wms[@]=amiwm
-	wmspkg[@]=amiwm
-	wmspost[@]=$defaultpost
+	wms["@"]=amiwm
+	wmspkg["@"]=amiwm
+	wmspost["@"]=$defaultpost
 
 	wms[#]=ctwm
 	wmspkg[#]=ctwm
@@ -131,9 +131,9 @@ if [ -z "$DISPLAY" ] && ! pgrep X > /dev/null; then
 	wmspkg[&]=larswm
 	wmspost[&]=$defaultpost
 
-	wms[*]=lumina-desktop
-	wmspkg[*]=lumina
-	wmspost[*]=$defaultpost
+	wms["*"]=lumina-desktop
+	wmspkg["*"]=lumina
+	wmspost["*"]=$defaultpost
 
 	wms[<]=lwm
 	wmspkg[<]=lwm
