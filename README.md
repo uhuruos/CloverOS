@@ -14,7 +14,7 @@ Mirrors and binary details: https://useast.cloveros.ga https://uswest.cloveros.g
 ### Upgrading system
 ```
 sudo emerge --sync
-sudo emerge -uavD world
+sudo emerge -uavD @world
 sudo emerge --depclean
 ```
 
