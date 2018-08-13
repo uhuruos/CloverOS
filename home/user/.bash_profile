@@ -1,5 +1,5 @@
 if [ -z "$DISPLAY" ] && ! pgrep X > /dev/null; then
-	echo "WM Options: (y) Default (i) i3 (a) Awesome (o) Openbox (e) Enlightenment (k) KDE (m) MATE (x) XFCE (l) LXDE (q) LXQT (f) Fluxbox (d) dwm (c) IceWM (w) Window Maker (t) FVWM Themes (p) xmonad (s) Sawfish (b) bspwm (g) goomwwm (h) herbstluftwm (v) evilwm (u) Blackbox !) aewm +) aewm++ @) amiwm #) ctwm $) cwm %) echinus ^) jwm &) larswm *) lumina <) lwm >) matwm2 :) musca ;) notion /) oroborus ?) pagewm"
+	echo "WM Options: (y) Default (i) i3 (a) Awesome (o) Openbox (e) Enlightenment (k) KDE (m) MATE (x) XFCE (l) LXDE (q) LXQT (f) Fluxbox (d) dwm (c) IceWM (w) Window Maker (t) FVWM Themes (p) xmonad (s) Sawfish (b) bspwm (g) goomwwm (h) herbstluftwm (v) evilwm (u) Blackbox !) aewm +) aewm++ @) amiwm #) ctwm $) cwm %) echinus ^) jwm &) larswm *) lumina <) lwm >) matwm2 :) musca ;) notion /) oroborus ?) pagewm \) pekwm |) plwm -) qtile _) ratpoison {) selectwm2 =) sithwm"
 	read -erp "Start X? [y/n] " -n 1 choice
 	declare -A wms
 	declare -A wmspkg
@@ -159,29 +159,29 @@ if [ -z "$DISPLAY" ] && ! pgrep X > /dev/null; then
 	wmspkg[?]=pagewm
 	wmspost[?]=$defaultpost
 
-	wms[null]=pekwm
-	wmspkg[null]=pekwm
-	wmspost[null]=$defaultpost
+	wms[\]=pekwm
+	wmspkg[\]=pekwm
+	wmspost[\]=$defaultpost
 
-	wms[null]=plwm
-	wmspkg[null]=plwm
-	wmspost[null]=$defaultpost
+	wms[|]=plwm
+	wmspkg[|]=plwm
+	wmspost[|]=$defaultpost
 
-	wms[null]=qtile
-	wmspkg[null]=qtile
-	wmspost[null]=$defaultpost
+	wms[-]=qtile
+	wmspkg[-]=qtile
+	wmspost[-]=$defaultpost
 
-	wms[null]=ratpoison
-	wmspkg[null]=ratpoison
-	wmspost[null]=$defaultpost
+	wms[_]=ratpoison
+	wmspkg[_]=ratpoison
+	wmspost[_]=$defaultpost
 
-	wms[null]=selectwm
-	wmspkg[null]=selectwm2
-	wmspost[null]=$defaultpost
+	wms[{]=selectwm
+	wmspkg[{]=selectwm2
+	wmspost[{]=$defaultpost
 
-	wms[null]=sithwm
-	wmspkg[null]=sithwm
-	wmspost[null]=$defaultpost
+	wms[=]=sithwm
+	wmspkg[=]=sithwm
+	wmspost[=]=$defaultpost
 
 	wms[null]=spectrwm
 	wmspkg[null]=spectrwm
