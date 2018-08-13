@@ -1,5 +1,5 @@
 if [ -z "$DISPLAY" ] && ! pgrep X > /dev/null; then
-	echo "WM Options: (y) Default (i) i3 (a) Awesome (o) Openbox (e) Enlightenment (k) KDE (m) MATE (x) XFCE (l) LXDE (q) LXQT (f) Fluxbox (d) dwm (c) IceWM (w) Window Maker (t) FVWM Themes (p) xmonad (s) Sawfish (b) bspwm (g) goomwwm (h) herbstluftwm (v) evilwm (u) Blackbox !) aewm +) aewm++ @) amiwm #) ctwm $) cwm %) echinus ^) jwm &) larswm *) lumina <) lwm >) matwm2 :) musca ;) notion /) oroborus ?) pagewm \`) pekwm |) plwm -) qtile _) ratpoison {) selectwm2 =) sithwm ~) spectrwm"
+	echo "WM Options: (y) Default (i) i3 (a) Awesome (o) Openbox (e) Enlightenment (k) KDE (m) MATE (x) XFCE (l) LXDE (q) LXQT (f) Fluxbox (d) dwm (c) IceWM (w) Window Maker (t) FVWM Themes (p) xmonad (s) Sawfish (b) bspwm (g) goomwwm (h) herbstluftwm (v) evilwm (u) Blackbox !) aewm +) aewm++ @) amiwm #) ctwm $) cwm %) echinus ^) jwm &) larswm *) lumina <) lwm >) matwm2 :) musca ;) notion /) oroborus ?) pagewm P) pekwm |) plwm -) qtile _) ratpoison {) selectwm2 =) sithwm S) spectrwm U) subtle T) treewm W) twm L) windowlab"
 	read -erp "Start X? [y/n] " -n 1 choice
 	declare -A wms
 	declare -A wmspkg
@@ -159,9 +159,9 @@ if [ -z "$DISPLAY" ] && ! pgrep X > /dev/null; then
 	wmspkg[?]=pagewm
 	wmspost[?]=$defaultpost
 
-	wms[\`]=pekwm
-	wmspkg[\`]=pekwm
-	wmspost[\`]=$defaultpost
+	wms[P]=pekwm
+	wmspkg[P]=pekwm
+	wmspost[P]=$defaultpost
 
 	wms[|]=plwm
 	wmspkg[|]=plwm
@@ -183,25 +183,25 @@ if [ -z "$DISPLAY" ] && ! pgrep X > /dev/null; then
 	wmspkg[=]=sithwm
 	wmspost[=]=$defaultpost
 
-	wms[~]=spectrwm
-	wmspkg[~]=spectrwm
-	wmspost[~]=$defaultpost
+	wms[S]=spectrwm
+	wmspkg[S]=spectrwm
+	wmspost[S]=$defaultpost
 
-	wms[null]=subtle
-	wmspkg[null]=subtle
-	wmspost[null]=$defaultpost
+	wms[U]=subtle
+	wmspkg[U]=subtle
+	wmspost[U]=$defaultpost
 
-	wms[null]=treewm
-	wmspkg[null]=treewm
-	wmspost[null]=$defaultpost
+	wms[T]=treewm
+	wmspkg[T]=treewm
+	wmspost[T]=$defaultpost
 
-	wms[null]=twm
-	wmspkg[null]=twm
-	wmspost[null]=$defaultpost
+	wms[W]=twm
+	wmspkg[W]=twm
+	wmspost[W]=$defaultpost
 
-	wms[null]=windowlab
-	wmspkg[null]=windowlab
-	wmspost[null]=$defaultpost
+	wms[L]=windowlab
+	wmspkg[L]=windowlab
+	wmspost[L]=$defaultpost
 
 	wms[null]=wm2
 	wmspkg[null]=wm2
