@@ -122,7 +122,7 @@ AddToMenu MenuFvwmRoot Applications Title
 + "settings.sh" Exec if pgrep urxvtd; then urxvtc -e sh -c '~/cloveros_settings.sh && read'; else urxvtd -o -f && urxvtc -e sh -c '~/cloveros_settings.sh && read'; fi
 + "gparted" Exec sudo gparted
 + "restart fvwm" Restart
-+ "exit X" Exec sudo killall X
++ "exit X" Exec pkill X
 + "sleep+lock" Exec slock & sudo sh -c 'echo -n mem > /sys/power/state'
 + "lock" Exec slock
 + "sleep" Exec sudo sudo sh -c 'echo -n mem > /sys/power/state'
