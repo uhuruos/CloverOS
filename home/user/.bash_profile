@@ -1,9 +1,7 @@
 if [ -z "$DISPLAY" ] && ! pgrep X > /dev/null; then
 	echo "WM Options: (y) Default (i) i3 (a) Awesome (o) Openbox (e) Enlightenment (k) KDE (m) MATE (x) XFCE (l) LXDE (q) LXQT (f) Fluxbox (d) dwm (c) IceWM (w) Window Maker (t) FVWM Themes (p) xmonad (s) Sawfish (b) bspwm (g) goomwwm (h) herbstluftwm (v) evilwm (u) Blackbox !) aewm +) aewm++ @) amiwm #) ctwm $) cwm %) echinus ^) jwm &) larswm *) lumina <) lwm >) matwm2 :) musca ;) notion /) oroborus ?) pagewm P) pekwm |) plwm -) qtile _) ratpoison 5) selectwm2 =) sithwm S) spectrwm U) subtle T) treewm W) twm L) windowlab 2) wm2 1) wmfs 3) wmii 4) xoat"
 	read -erp "Start X? [y/n] " -n 1 choice
-	declare -A wms
-	declare -A wmspkg
-	declare -A wmspost
+	declare -A wms wmspkg wmspost
 
 	defaultpost="nitrogen --set-zoom wallpaper.png & xbindkeys & xinput set-prop \"SynPS/2 Synaptics TouchPad\" \"libinput Tapping Enabled\" 1"
 
