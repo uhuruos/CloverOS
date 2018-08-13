@@ -159,9 +159,9 @@ if [ -z "$DISPLAY" ] && ! pgrep X > /dev/null; then
 	wmspkg[?]=pagewm
 	wmspost[?]=$defaultpost
 
-	wms["\"]=pekwm
-	wmspkg["\"]=pekwm
-	wmspost["\"]=$defaultpost
+	wms[\\]=pekwm
+	wmspkg[\\]=pekwm
+	wmspost[\\]=$defaultpost
 
 	wms[|]=plwm
 	wmspkg[|]=plwm
