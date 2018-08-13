@@ -1,5 +1,5 @@
 if [ -z "$DISPLAY" ] && ! pgrep X > /dev/null; then
-	echo "WM Options: (y) Default (i) i3 (a) Awesome (o) Openbox (e) Enlightenment (k) KDE (m) MATE (x) XFCE (l) LXDE (q) LXQT (f) Fluxbox (d) dwm (c) IceWM (w) Window Maker (t) FVWM Themes (p) xmonad (s) Sawfish (b) bspwm (g) goomwwm (h) herbstluftwm (v) evilwm (u) Blackbox !) aewm +) aewm++ @) amiwm #) ctwm $) cwm %) echinus ^) jwm &) larswm *) lumina <) lwm >) matwm2 :) musca ;) notion [) oroborus ]) pagewm"
+	echo "WM Options: (y) Default (i) i3 (a) Awesome (o) Openbox (e) Enlightenment (k) KDE (m) MATE (x) XFCE (l) LXDE (q) LXQT (f) Fluxbox (d) dwm (c) IceWM (w) Window Maker (t) FVWM Themes (p) xmonad (s) Sawfish (b) bspwm (g) goomwwm (h) herbstluftwm (v) evilwm (u) Blackbox !) aewm +) aewm++ @) amiwm #) ctwm $) cwm %) echinus ^) jwm &) larswm *) lumina <) lwm >) matwm2 :) musca ;) notion /) oroborus ?) pagewm"
 	read -erp "Start X? [y/n] " -n 1 choice
 	declare -A wms
 	declare -A wmspkg
@@ -151,13 +151,13 @@ if [ -z "$DISPLAY" ] && ! pgrep X > /dev/null; then
 	wmspkg[;]=notion
 	wmspost[;]=$defaultpost
 
-	wms["["]=oroborus
-	wmspkg["["]=oroborus
-	wmspost["["]=$defaultpost
+	wms[/]=oroborus
+	wmspkg[/]=oroborus
+	wmspost[/]=$defaultpost
 
-	wms["]"]=page
-	wmspkg["]"]=pagewm
-	wmspost["]"]=$defaultpost
+	wms[?]=page
+	wmspkg[?]=pagewm
+	wmspost[?]=$defaultpost
 
 	wms[null]=pekwm
 	wmspkg[null]=pekwm
