@@ -43,6 +43,5 @@
 */*::vapoursynth
 
 net-libs/nodejs::gentoo
->=x11-terms/kitty-0.11.2
->=xfce-extra/xfdashboard-0.4.0
->=app-emulation/open-vm-tools-10.2.5
+x11-terms/kitty
+app-emulation/open-vm-tools
