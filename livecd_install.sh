@@ -38,7 +38,7 @@ while :; do
 	echo
 	read -erp "Enter preferred root password " rootpassword
 	read -erp "Enter preferred username " user
-	newuser=$(echo "$user" | tr A-Z a-z | tr -cd "[:alpha:][:digit:]" | sed 's/^[0-9]\+//' | cut -c -31)
+	newuser=$(echo "$user" | tr A-Z a-z | tr -cd "[:alpha:][:digit:]" | sed "s/^[0-9]\+//" | cut -c -31)
 	if [[ "$newuser" != "$user" ]]; then
 		user=$newuser
 		echo username changed to $newuser
@@ -79,7 +79,7 @@ grub-mkconfig -o /boot/grub/grub.cfg &> /dev/null
 sed -i "s/set timeout=5/set timeout=0/" /boot/grub/grub.cfg
 
 sed -i "s@c1:12345:respawn:/sbin/agetty -a $livecduser --noclear 38400 tty1 linux@c1:12345:respawn:/sbin/agetty --noclear 38400 tty1 linux@" /etc/inittab
-sed -i "/^#/\!d" /home/$livecduser/.bash_profile
+sed -i '/^#/!d' /home/$livecduser/.bash_profile
 sed -i "s/^#\(.*\)/\1/g" /home/$livecduser/.bash_profile
 
 gpasswd -a $user video
