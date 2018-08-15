@@ -65,7 +65,7 @@ case "$choice" in
 		fi
 		;;
 
-	2)
+	2|u)
 		echo "Running the following:"
 		echo "./cloveros_settings.sh 1"
 		echo "./cloveros_settings.sh 4"
@@ -77,10 +77,10 @@ case "$choice" in
 		echo "./cloveros_settings.sh 9"
 		sleep 2
 		./cloveros_settings.sh 1
-		./cloveros_settings.sh u
+		./cloveros_settings.sh zz
 		;;
 
-	u)
+	zz)
 		if ! grep -q 'EMERGE_DEFAULT_OPTS=".* -G"' /etc/portage/make.conf; then
 			echo "Please enable binaries."
 			exit 1
