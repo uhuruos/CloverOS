@@ -1,5 +1,4 @@
 #temporary
-media-libs/libopenshot -imagemagick
 dev-python/six python_targets_python3_5
 dev-python/python-dateutil python_targets_python3_5
 dev-python/pytz python_targets_python3_5
@@ -363,6 +362,7 @@ net-misc/curl curl_ssl_libressl -curl_ssl_openssl
 net-p2p/mktorrent -ssl
 net-misc/iputils -ssl
 dev-cpp/asio -ssl
+net-ftp/gproftpd -ssl
 media-video/ffmpeg openssl
 net-libs/nodejs bundled-ssl
 net-voip/telepathy-gabble gnutls
