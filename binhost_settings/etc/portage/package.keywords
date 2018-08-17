@@ -50,6 +50,7 @@ net-ftp/proftpd
 net-ftp/pure-ftpd
 
 #keyworded, remove when stable exists
+app-misc/anki
 media-sound/mumble **
 media-sound/murmur **
 net-im/tdlib

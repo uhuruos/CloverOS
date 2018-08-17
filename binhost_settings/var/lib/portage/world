@@ -119,6 +119,7 @@ app-laptop/thinkfan
 app-laptop/tlp
 app-laptop/tp_smapi
 app-misc/abduco
+app-misc/anki
 app-misc/byobu
 app-misc/ckermit
 app-misc/cmatrix
@@ -1078,6 +1079,7 @@ x11-apps/xbacklight
 x11-apps/xev
 x11-apps/xhost
 x11-apps/xinput
+x11-apps/xinput_calibrator
 x11-apps/xkill
 x11-apps/xlsfonts
 x11-apps/xrandr
