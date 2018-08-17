@@ -455,6 +455,7 @@ x11-libs/pixman abi_x86_32
 media-libs/libsdl abi_x86_32
 
 #temporary
+media-libs/libopenshot -imagemagick
 dev-python/six python_targets_python3_5
 dev-python/python-dateutil python_targets_python3_5
 dev-python/pytz python_targets_python3_5
