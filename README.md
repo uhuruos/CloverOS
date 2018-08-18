@@ -122,7 +122,13 @@ to
 
 `EMERGE_DEFAULT_OPTS="--keep-going=y --autounmask-write=y --jobs=2"`
 
-and comment out `ACCEPT_KEYWORDS="**"`
+and change
+
+`ACCEPT_KEYWORDS="**"`
+
+to
+
+`#ACCEPT_KEYWORDS="**"`
 
 This disables the binhost and uses Portage's ebuilds for packages. Now you can emerge from source.
 
