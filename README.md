@@ -140,7 +140,7 @@ This disables the binhost and uses Portage's ebuilds for packages. Now you can e
 * [It doesn't boot after installation](#it-doesnt-boot-after-installation)
 * [Nvidia card crashes on boot with a green screen](#nvidia-card-crashes-on-boot-with-a-green-screen)
 * [Installing proprietary Nvidia drivers](#installing-proprietary-nvidia-drivers)
-* [Virtualbox doesn't work or any package that has a kernel module](#virtualbox-doesnt-work-or-any-package-that-has-a-kernel-module)
+* [Installing Virtualbox](#installing-virtualbox)
 * [Steam stops working](#steam-stops-working)
 * [Firefox and Pulseaudio](#firefox-and-pulseaudio)
 * [What are USE flags?](#what-are-use-flags)
