@@ -142,6 +142,7 @@ This disables the binhost and uses Portage's ebuilds for packages. Now you can e
 * [Disable mouse acceleration](#disable-mouse-acceleration)
 * [Suspend when laptop lid is closed](#suspend-when-laptop-lid-is-closed)
 * [Dnscrypt-proxy howto](#dnscrypt-proxy-howto)
+* [Clean outdated kernels])(#clean-outdated-kernels)
 * [Sound in OBS (Open Broadcaster Software) using ALSA](#sound-in-obs-open-broadcaster-software-using-alsa)
 * [Bluetooth audio using ALSA](#bluetooth-audio-using-alsa)
 * [Install Quake 3](#install-quake-3)
@@ -414,6 +415,9 @@ sudo rc-config add dnscrypt-proxy
 sudo sh -c 'echo "static domain_name_servers=127.0.0.1" >> /etc/dhcpcd.conf'
 sudo /etc/init.d/dhcpcd restart
 ```
+
+### Clean outdated kernels
+`sudo find /boot/ /lib/modules/ -mindepth 1 -maxdepth 1 -name \*gentoo\* ! -name \*$(uname -r) -exec rm -R {} \;`
 
 ### Sound in OBS / Open Broadcaster Software using ALSA
 Run `sudo modprobe snd_aloop` and edit the following file, replacing `device 0` and `hw:0,0` with your sound device:
