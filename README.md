@@ -143,7 +143,6 @@ This disables the binhost and uses Portage's ebuilds for packages. Now you can e
 * [GPU passthrough example](#gpu-passthrough-example)
 * [Generate Wbar dock config from installed programs](#generate-wbar-dock-config-from-installed-programs)
 * [Change FVWM titlebar color](#change-fvwm-titlebar-color)
-* [Thumbnail file picker with Firefox](#thumbnail-file-picker-with-firefox)
 * [KDE theme in qt5 programs without KDE](#kde-theme-in-qt5-programs-without-kde)
 * [Vertical tabs in Firefox 57+](#vertical-tabs-in-firefox-57)
 * [Enable tap to click on touchpads](#enable-tap-to-click-on-touchpads)
@@ -295,14 +294,6 @@ color=69aEb6; sed -i "s/\(Style \* BackColor \).*/\1#$color/; s/\(Style \* Hilig
 ```
 
 Alternatively, replace every instance of #056839 (green) manually.
-
-### Thumbnail file picker with Firefox
-```
-sudo emerge firefox-kde-opensuse
-QT_QPA_PLATFORMTHEME="KDE" firefox
-```
-
-![Firefox with file picker](https://i.imgur.com/RVebdVX.png)
 
 ### KDE theme in qt5 programs without KDE
 ```
