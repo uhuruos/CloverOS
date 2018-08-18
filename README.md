@@ -60,6 +60,10 @@ Volume control: Laptop (software) Volume up/down keys
 Key bindings are in `~/.xbindkeysrc`
 
 ### Setting default sound device
+Run `./cloveros_settings.sh 3`
+
+Or:
+
 Run `alsamixer` and hit F6 to see your audio devices.
 
 To make 1 the default device, edit `~/.asoundrc` and add this:
@@ -106,7 +110,11 @@ List of binaries (no dependencies): https://gitgud.io/cloveros/cloveros/blob/mas
 List of all binaries: https://cloveros.ga/s/packages.html
 
 ### Package isn't available
-Make an issue so I can add the package to binhost. In the meantime, switch to source by running `./cloveros_settings.sh 5` or edit `/etc/portage/make.conf` and edit the following line:
+Make an issue so I can add the package to binhost. In the meantime, switch to source by running `./cloveros_settings.sh 5`
+
+Or:
+
+Edit `/etc/portage/make.conf` and edit the following line:
 
 `EMERGE_DEFAULT_OPTS="--keep-going=y --autounmask-write=y --jobs=2 -G"`
 
