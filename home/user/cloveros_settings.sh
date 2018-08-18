@@ -36,8 +36,9 @@ else
 8) Set timezone
 9) Clean emerge cache
 l) Update/install kernel $kernelversion-gnu
-a) ALSA settings configuration
 f) Fix emerge \"Argument too long\" error
+a) ALSA settings configuration
+k) Delete all kernels except for $(uname -r)
 t) Enable tap to click on touchpad
 d) Disable mouse acceleration
 c) Update Portage config from binhost
@@ -46,8 +47,7 @@ b) Install Bluetooth manager
 i) Install VirtualBox
 v) Install Virtualbox/VMWare drivers
 s) Install and add dnscrypt-proxy to startup
-n) Install proprietary Nvidia drivers
-q) Exit"
+n) Install proprietary Nvidia drivers"
 	read -erp "Select option: " -n 1 choice
 	echo
 fi
@@ -218,6 +218,11 @@ case "$choice" in
 		fi
 		;;
 
+	f)
+		sudo rm /usr/portage/packages/Packages &> /dev/null
+		echo "Ran sudo rm /usr/portage/packages/Packages"
+		;;
+
 	a)
 		echo "1) Change default ALSA playback device
 2) Change default ALSA capture device
@@ -288,22 +293,21 @@ case "$choice" in
 		esac
 		;;
 
-	f)
-		sudo rm /usr/portage/packages/Packages &> /dev/null
-		echo "Ran sudo rm /usr/portage/packages/Packages"
+	k)
+		sudo find /boot/ /lib/modules/ -mindepth 1 -maxdepth 1 ! -name \*$(uname -r) ! -name grub -exec echo rm -R {} \;
+		echo "All kernels except for $(uname -r) deleted."
 		;;
 
 	t)
 		xinput set-prop "SynPS/2 Synaptics TouchPad" "libinput Tapping Enabled" 1
-		echo -e "\nEnable Tap to Click: xinput set-prop \"SynPS/2 Synaptics TouchPad\" \"libinput Tapping Enabled\" 1"
-		echo "Disable Tap to Click: xinput set-prop \"SynPS/2 Synaptics TouchPad\" \"libinput Tapping Enabled\" 0"
+		echo "Tap to click enabled. (xinput set-prop \"SynPS/2 Synaptics TouchPad\" \"libinput Tapping Enabled\" 0)"
 		;;
 
 	d)
 		for i in {0..99}; do
 			xinput set-prop $i "libinput Accel Profile Enabled" 0 1 &> /dev/null
 		done
-		echo -e "\nDisable mouse acceleration: xinput set-prop \"Your Device\" \"libinput Accel Profile Enabled\" 0 1"
+		echo -e "\nMouse acceleration disabled. (xinput set-prop \"Your Device\" \"libinput Accel Profile Enabled\" 0 1)"
 		;;
 
 	c)
@@ -397,9 +401,6 @@ case "$choice" in
 		sudo eselect opencl set nvidia
 		sudo sh -c 'echo -e "blacklist nouveau\nblacklist vga16fb\nblacklist rivafb\nblacklist nvidiafb\nblacklist rivatv" >> /etc/modprobe.d/blacklist.conf'
 		echo -e "\nNvidia drivers installed, please reboot.\nCheck https://wiki.gentoo.org/wiki/NVidia/nvidia-drivers for more info"
-		;;
-
-	q)
 		;;
 
 	*)
