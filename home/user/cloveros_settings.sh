@@ -29,13 +29,13 @@ else
 	echo "1) Update cloveros_settings.sh
 2) Update system
 3) Change default sound device
-4) Update/install kernel $kernelversion
+4) Install kernel $kernelversion
 5) Change emerge to source or binary
 6) Update default dot files
 7) Sync time
 8) Set timezone
 9) Clean emerge cache
-l) Update/install kernel $kernelversion-gnu
+l) Install kernel $kernelversion-gnu
 f) Fix emerge \"Argument too long\" error
 a) ALSA settings configuration
 k) Delete all kernels except for $(uname -r)
@@ -130,8 +130,7 @@ case "$choice" in
 			else
 				echo -e "\nCould not retrieve file. Please connect to the Internet or try again."
 			fi
-			cd ..
-			rm -R $tempdir
+			rm -R ../$tempdir
 		fi
 		;;
 
@@ -213,8 +212,7 @@ case "$choice" in
 			else
 				echo -e "\nCould not retrieve file. Please connect to the Internet or try again."
 			fi
-			cd ..
-			rm -R $tempdir
+			rm -R ../$tempdir
 		fi
 		;;
 
