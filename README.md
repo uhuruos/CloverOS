@@ -217,7 +217,7 @@ sudo emerge virtualbox
 ls -1 /lib/modules/ | sudo xargs -I{} depmod
 sudo useradd -g $USER vboxusers
 sudo modprobe -a vboxdrv vboxnetadp vboxnetflt
-``
+```
 Reboot if your kernel isn't up to date.
 
 ### Steam stops working
