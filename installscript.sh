@@ -131,18 +131,19 @@ gpasswd -a $user video
 gpasswd -a $user games
 cd /home/$user/
 rm .bash_profile
-wget https://gitgud.io/cloveros/cloveros/raw/master/home/user/{.bash_profile,.zprofile,.zshrc,.fvwm2rc,.Xdefaults,wallpaper.png,.xbindkeysrc,screenfetch-dev,bl.sh,cloveros_settings.sh,stats.sh,rotate_screen.sh,.emacs,.rtorrent.rc}
+gitprefix="https://gitgud.io/cloveros/cloveros/raw/master"
+wget $gitprefix/home/user/{.bash_profile,.zprofile,.zshrc,.fvwm2rc,.Xdefaults,wallpaper.png,.xbindkeysrc,screenfetch-dev,bl.sh,cloveros_settings.sh,stats.sh,rotate_screen.sh,.emacs,.rtorrent.rc}
 chmod +x screenfetch-dev bl.sh cloveros_settings.sh stats.sh rotate_screen.sh
 mkdir -p .emacs.d/backups/ .emacs.d/autosaves/ Downloads/ .rtorrent/ .mpv/ .config/spacefm/ .config/nitrogen/ .local/share/nomacs/ Desktop/
 sed -i "s@/home/user/@/home/$user/@" .rtorrent.rc
-wget https://gitgud.io/cloveros/cloveros/raw/master/home/user/.mpv/config -P .mpv/
-wget https://gitgud.io/cloveros/cloveros/raw/master/home/user/.config/nitrogen/nitrogen.cfg -P .config/nitrogen/
+wget $gitprefix/home/user/.mpv/config -P .mpv/
+wget $gitprefix/home/user/.config/nitrogen/nitrogen.cfg -P .config/nitrogen/
 sed -i "s@/home/user/@/home/$user/@" .config/nitrogen/nitrogen.cfg
-wget https://gitgud.io/cloveros/cloveros/raw/master/home/user/.local/share/nomacs/settings.ini -P .local/share/nomacs/
-wget https://gitgud.io/cloveros/cloveros/raw/master/home/user/.config/spacefm/session -P .config/spacefm/
+wget $gitprefix/home/user/.local/share/nomacs/settings.ini -P .local/share/nomacs/
+wget $gitprefix/home/user/.config/spacefm/session -P .config/spacefm/
 sed -i "s@/home/user/@/home/$user/@" .config/spacefm/session
 xdg-settings set default-web-browser firefox.desktop
-wget https://gitgud.io/cloveros/cloveros/raw/master/home/user/.config/mimeapps.list -P .config/
+wget $gitprefix/home/user/.config/mimeapps.list -P .config/
 echo -e "[Desktop Entry]\nEncoding=UTF-8\nType=Link\nName=Home\nIcon=user-home\nExec=spacefm ~/" > Desktop/home.desktop
 echo -e "[Desktop Entry]\nEncoding=UTF-8\nType=Link\nName=Applications\nIcon=folder\nExec=spacefm /usr/share/applications/" > Desktop/applications.desktop
 cp /usr/share/applications/{firefox.desktop,smplayer.desktop,emacs.desktop,zzz-gimp.desktop,porthole.desktop,xarchiver.desktop} Desktop/
