@@ -350,14 +350,14 @@ case "$choice" in
 
 	i)
 		echo "Running the following:"
-		echo "./cloveros_settings.sh 4"
 		echo "sudo emerge virtualbox"
+		echo "./cloveros_settings.sh 4"
 		echo "ls -1 /lib/modules/ | sudo xargs -I{} depmod"
 		echo "sudo useradd -a $USER vboxusers"
 		echo "sudo modprobe -a vboxdrv vboxnetadp vboxnetflt"
 		sleep 2
-		./cloveros_settings.sh 4
 		sudo emerge virtualbox
+		./cloveros_settings.sh 4
 		ls -1 /lib/modules/ | sudo xargs -I{} depmod
 		sudo useradd -g $USER vboxusers
 		sudo modprobe -a vboxdrv vboxnetadp vboxnetflt
@@ -389,15 +389,15 @@ case "$choice" in
 
 	n)
 		echo "Running the following:"
-		echo "./cloveros_settings.sh 4"
 		echo "sudo emerge nvidia-drivers"
+		echo "./cloveros_settings.sh 4"
 		echo "ls -1 /lib/modules/ | sudo xargs -I{} depmod"
 		echo "sudo eselect opengl set nvidia"
 		echo "sudo eselect opencl set nvidia"
 		echo "sudo sh -c 'echo -e \"blacklist nouveau\nblacklist vga16fb\nblacklist rivafb\nblacklist nvidiafb\nblacklist rivatv\" >> /etc/modprobe.d/blacklist.conf'"
 		sleep 2
-		./cloveros_settings.sh 4
 		sudo emerge nvidia-drivers
+		./cloveros_settings.sh 4
 		ls -1 /lib/modules/ | sudo xargs -I{} depmod
 		sudo eselect opengl set nvidia
 		sudo eselect opencl set nvidia
