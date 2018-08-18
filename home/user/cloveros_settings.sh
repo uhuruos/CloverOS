@@ -294,7 +294,7 @@ case "$choice" in
 		;;
 
 	k)
-		sudo find /boot/ /lib/modules/ -mindepth 1 -maxdepth 1 ! -name \*$(uname -r) ! -name grub -exec echo rm -R {} \;
+		sudo find /boot/ /lib/modules/ -mindepth 1 -maxdepth 1 -name \*gentoo\* ! -name \*$(uname -r) -exec rm -R {} \;
 		echo "All kernels except for $(uname -r) deleted."
 		;;
 
