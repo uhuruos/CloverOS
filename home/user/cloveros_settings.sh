@@ -54,7 +54,7 @@ fi
 
 case "$choice" in
 	1)
-		wget "$gitprefix"/home/user/cloveros_settings.sh -O cloveros_settings.new.sh
+		wget $gitprefix/home/user/cloveros_settings.sh -O cloveros_settings.new.sh
 		if [[ -s cloveros_settings.new.sh ]]; then
 			chmod +x cloveros_settings.new.sh
 			mv cloveros_settings.new.sh cloveros_settings.sh
@@ -149,7 +149,7 @@ case "$choice" in
 		;;
 
 	6)
-                wget "$gitprefix"/home/user/cloveros_settings.sh -O cloveros_settings.new.sh
+                wget $gitprefix/home/user/cloveros_settings.sh -O cloveros_settings.new.sh
 		if [[ -s cloveros_settings.new.sh ]]; then
 			chmod +x cloveros_settings.new.sh
 			mv cloveros_settings.new.sh cloveros_settings.sh
@@ -159,21 +159,23 @@ case "$choice" in
 		fi
 		backupdir=backup$(< /dev/urandom tr -dc 0-9 | head -c 8)
 		mkdir $backupdir
-		mv .bash_profile .zprofile .zshrc .fvwm2rc .Xdefaults wallpaper.png .xbindkeysrc screenfetch-dev bl.sh stats.sh rotate_screen.sh .emacs .emacs.d .rtorrent.rc .mpv .config/nitrogen/ .config/spacefm .config/nomacs $backupdir/
-		wget -q "$gitprefix"/home/user/{.bash_profile,.zprofile,.zshrc,.fvwm2rc,.Xdefaults,wallpaper.png,.xbindkeysrc,screenfetch-dev,bl.sh,stats.sh,rotate_screen.sh,.emacs,.rtorrent.rc}
-		chmod +x screenfetch-dev bl.sh stats.sh rotate_screen.sh
+		mv .bash_profile .zprofile .zshrc .fvwm2rc .Xdefaults wallpaper.png .xbindkeysrc screenfetch-dev bl.sh stats.sh rotate_screen.sh .emacs .emacs.d/ .rtorrent.rc .mpv .config/nitrogen/ .config/spacefm/ .local/share/nomacs/ $backupdir/
+		wget $gitprefix/home/user/{.bash_profile,.zprofile,.zshrc,.fvwm2rc,.Xdefaults,wallpaper.png,.xbindkeysrc,screenfetch-dev,bl.sh,cloveros_settings.sh,stats.sh,rotate_screen.sh,.emacs,.rtorrent.rc}
+		chmod +x screenfetch-dev bl.sh cloveros_settings.sh stats.sh rotate_screen.sh
+		mkdir -p .emacs.d/backups/ .emacs.d/autosaves/ Downloads/ .rtorrent/ .mpv/ .config/spacefm/ .config/nitrogen/ .local/share/nomacs/ Desktop/
 		sed -i "s@/home/user/@/home/$USER/@" .rtorrent.rc
-		mkdir -p .emacs.d/backups/ .emacs.d/autosaves/
-		mkdir -p .config/nitrogen/
-		wget -q "$gitprefix"/home/user/.config/nitrogen/nitrogen.cfg -P .config/nitrogen/
+		wget $gitprefix/home/user/.mpv/config -P .mpv/
+		wget $gitprefix/home/user/.config/nitrogen/nitrogen.cfg -P .config/nitrogen/
 		sed -i "s@/home/user/@/home/$USER/@" .config/nitrogen/nitrogen.cfg
-		mkdir -p .config/spacefm/
-		wget -q "$gitprefix"/home/user/.config/spacefm/session -P .config/spacefm/
+		wget $gitprefix/home/user/.local/share/nomacs/settings.ini -P .local/share/nomacs/
+		wget $gitprefix/home/user/.config/spacefm/session -P .config/spacefm/
 		sed -i "s@/home/user/@/home/$USER/@" .config/spacefm/session
-		mkdir .config/nomacs/
-		wget -q "$gitprefix/home/user/.config/nomacs/Image Lounge.conf" -P .config/nomacs
-		mkdir .mpv
-		wget -q "$gitprefix"/home/user/.mpv/config -P .mpv/
+		xdg-settings set default-web-browser firefox.desktop
+		wget $gitprefix/home/user/.config/mimeapps.list -P .config/
+		echo -e "[Desktop Entry]\nEncoding=UTF-8\nType=Link\nName=Home\nIcon=user-home\nExec=spacefm ~/" > Desktop/home.desktop
+		echo -e "[Desktop Entry]\nEncoding=UTF-8\nType=Link\nName=Applications\nIcon=folder\nExec=spacefm /usr/share/applications/" > Desktop/applications.desktop
+		cp /usr/share/applications/{firefox.desktop,smplayer.desktop,emacs.desktop,zzz-gimp.desktop,porthole.desktop,xarchiver.desktop} Desktop/
+		echo -e "~rows=0\n1=home.desktop\n2=applications.desktop\n3=firefox.desktop\n4=smplayer.desktop\n5=emacs.desktop\n6=porthole.desktop\n7=zzz-gimp.desktop\n8=xarchiver.desktop" > .config/spacefm/desktop0
 		echo -e "\nConfiguration updated to new CloverOS defaults, old settings are moved to ~/$backupdir/ (~)"
 		;;
 
@@ -326,7 +328,7 @@ case "$choice" in
 	m)
 		backupmakeconf="make.conf.bak"$(< /dev/urandom tr -dc 0-9 | head -c 8)
 		sudo mv /etc/portage/make.conf $backupmakeconf
-		sudo wget -q "$gitprefix"/home/user/make.conf -P /etc/portage/
+		sudo wget -q $gitprefix/home/user/make.conf -P /etc/portage/
 		echo "/etc/portage/make.conf is now default Previous make.conf saved to $backupmakeconf"
 		;;
 
