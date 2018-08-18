@@ -200,21 +200,25 @@ linux   /boot/kernel-genkernel-x86_64-[ver]-gentoo root=UUID=[id] ro nomodeset n
 ```
 
 ### Installing proprietary Nvidia drivers
-Make sure your kernel is up to date.
 ```
 sudo emerge nvidia-drivers
-sudo depmod -a
+./cloveros_settings.sh 4
+ls -1 /lib/modules/ | sudo xargs -I{} depmod
 sudo eselect opengl set nvidia
 sudo eselect opencl set nvidia
 sudo sh -c 'echo -e "blacklist nouveau\nblacklist vga16fb\nblacklist rivafb\nblacklist nvidiafb\nblacklist rivatv" >> /etc/modprobe.d/blacklist.conf'
 ```
+Reboot if your kernel isn't up to date.
 
-### Virtualbox doesn't work or any package that has a kernel module
-Be sure to upgrade your kernel and world. This can be done using `./cloveros_settings.sh u` and rebooting
-
-Then run `depmod -a`
-
-To load virtualbox modules: `sudo modprobe -a vboxdrv vboxnetadp vboxnetflt`
+### Installing Virtualbox
+```
+sudo emerge virtualbox
+./cloveros_settings.sh 4
+ls -1 /lib/modules/ | sudo xargs -I{} depmod
+sudo useradd -g $USER vboxusers
+sudo modprobe -a vboxdrv vboxnetadp vboxnetflt
+``
+Reboot if your kernel isn't up to date.
 
 ### Steam stops working
 Start steam with `rm -R ~/.steam/ && steam &`

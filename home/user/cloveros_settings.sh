@@ -73,7 +73,7 @@ case "$choice" in
 		echo "sudo emerge -uvD @world"
 		echo "sudo emerge @preserved-rebuild"
 		echo "sudo emerge --depclean"
-		echo 'sudo depmod "$kernelversion-gentoo"'
+		echo "ls -1 /lib/modules/ | sudo xargs -I{} depmod"
 		echo "./cloveros_settings.sh 9"
 		sleep 2
 		./cloveros_settings.sh 1
@@ -100,7 +100,7 @@ case "$choice" in
 		sudo emerge -uvD @world
 		sudo emerge @preserved-rebuild
 		sudo emerge --depclean
-		sudo depmod "$kernelversion-gentoo"
+		ls -1 /lib/modules/ | sudo xargs -I{} depmod
 		./cloveros_settings.sh 9
 		echo -e "\nSystem updated."
 		;;
@@ -352,13 +352,15 @@ case "$choice" in
 		echo "Running the following:"
 		echo "./cloveros_settings.sh 4"
 		echo "sudo emerge virtualbox"
-		echo 'sudo depmod "$kernelversion-gentoo"'
-		echo 'sudo useradd -a $USER vboxusers'
+		echo "ls -1 /lib/modules/ | sudo xargs -I{} depmod"
+		echo "sudo useradd -a $USER vboxusers"
+		echo "sudo modprobe -a vboxdrv vboxnetadp vboxnetflt"
 		sleep 2
 		./cloveros_settings.sh 4
 		sudo emerge virtualbox
-		sudo depmod "$kernelversion-gentoo"
+		ls -1 /lib/modules/ | sudo xargs -I{} depmod
 		sudo useradd -g $USER vboxusers
+		sudo modprobe -a vboxdrv vboxnetadp vboxnetflt
 		echo "Virtualbox installed, please reboot to update kernel."
 		;;
 
@@ -389,14 +391,14 @@ case "$choice" in
 		echo "Running the following:"
 		echo "./cloveros_settings.sh 4"
 		echo "sudo emerge nvidia-drivers"
-		echo 'sudo depmod "$kernelversion-gentoo"'
+		echo "ls -1 /lib/modules/ | sudo xargs -I{} depmod"
 		echo "sudo eselect opengl set nvidia"
 		echo "sudo eselect opencl set nvidia"
 		echo "sudo sh -c 'echo -e \"blacklist nouveau\nblacklist vga16fb\nblacklist rivafb\nblacklist nvidiafb\nblacklist rivatv\" >> /etc/modprobe.d/blacklist.conf'"
 		sleep 2
 		./cloveros_settings.sh 4
 		sudo emerge nvidia-drivers
-		sudo depmod "$kernelversion-gentoo"
+		ls -1 /lib/modules/ | sudo xargs -I{} depmod
 		sudo eselect opengl set nvidia
 		sudo eselect opencl set nvidia
 		sudo sh -c 'echo -e "blacklist nouveau\nblacklist vga16fb\nblacklist rivafb\nblacklist nvidiafb\nblacklist rivatv" >> /etc/modprobe.d/blacklist.conf'
