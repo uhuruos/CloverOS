@@ -30,8 +30,8 @@ else
 2) Update system
 3) Change default sound device
 4) Install kernel $kernelversion
-5) Change emerge to source or binary
-6) Update default dot files
+5) Change emerge to source/binary
+6) Revert to default dot files
 7) Sync time
 8) Set timezone
 9) Clean emerge cache
