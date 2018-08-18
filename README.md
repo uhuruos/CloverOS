@@ -142,7 +142,7 @@ This disables the binhost and uses Portage's ebuilds for packages. Now you can e
 * [Disable mouse acceleration](#disable-mouse-acceleration)
 * [Suspend when laptop lid is closed](#suspend-when-laptop-lid-is-closed)
 * [Dnscrypt-proxy howto](#dnscrypt-proxy-howto)
-* [Clean outdated kernels])(#clean-outdated-kernels)
+* [Clean outdated kernels](#clean-outdated-kernels)
 * [Sound in OBS (Open Broadcaster Software) using ALSA](#sound-in-obs-open-broadcaster-software-using-alsa)
 * [Bluetooth audio using ALSA](#bluetooth-audio-using-alsa)
 * [Install Quake 3](#install-quake-3)
