@@ -133,10 +133,10 @@ rm -R *aufs*
 mksquashfs image/ image.squashfs -b 1024k -comp xz -Xbcj x86 -Xdict-size 100%
 mv image.squashfs files
 xorriso -as mkisofs -r -J \
-       	-joliet-long -l -cache-inodes \
-       	-isohybrid-mbr isohdpfx.bin \
-       	-partition_offset 16 -A "Gentoo Live" \
-       	-b isolinux/isolinux.bin -c isolinux/boot.cat \
-       	-no-emul-boot -boot-load-size 4 -boot-info-table  \
+	-joliet-long -l -cache-inodes \
+	-isohybrid-mbr isohdpfx.bin \
+	-partition_offset 16 -A "Gentoo Live" \
+	-b isolinux/isolinux.bin -c isolinux/boot.cat \
+	-no-emul-boot -boot-load-size 4 -boot-info-table  \
 	-o CloverOS_Libre-x86_64-$(date +"%Y%m%d").iso files
 rm -Rf image/ files/ isohdpfx.bin livecd_files.tar.xz
