@@ -145,7 +145,7 @@ This disables the binhost and uses Portage's ebuilds for packages. Now you can e
 * [Firefox and Pulseaudio](#firefox-and-pulseaudio)
 * [What are USE flags?](#what-are-use-flags)
 * [What are keywording and unmasking?](#what-are-keywording-and-unmasking)
-* [Emerge error relating to openssl](#emerge-error-relating-to-openssl)
+* [Emerge error relating to openssl](#emerge-error-relating-to-openssl-fix-opengl-34-not-working)
 * [GPU passthrough example](#gpu-passthrough-example)
 * [Generate Wbar dock config from installed programs](#generate-wbar-dock-config-from-installed-programs)
 * [Change FVWM titlebar color](#change-fvwm-titlebar-color)
