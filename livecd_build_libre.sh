@@ -5,6 +5,8 @@ if [ $(id -u) != 0 ]; then
    exit 1
 fi
 
+gitprefix="https://gitgud.io/cloveros/cloveros/raw/master"
+
 rootpassword=password
 user=livecd
 userpassword=password
@@ -85,7 +87,6 @@ gpasswd -a $user video
 gpasswd -a $user games
 cd /home/$user/
 rm .bash_profile
-gitprefix="https://gitgud.io/cloveros/cloveros/raw/master"
 wget $gitprefix/home/user/{.bash_profile,.zprofile,.zshrc,.fvwm2rc,.Xdefaults,wallpaper.png,.xbindkeysrc,screenfetch-dev,bl.sh,cloveros_settings.sh,stats.sh,rotate_screen.sh,.emacs,.rtorrent.rc}
 chmod +x screenfetch-dev bl.sh cloveros_settings.sh stats.sh rotate_screen.sh
 mkdir -p .emacs.d/backups/ .emacs.d/autosaves/ Downloads/ .rtorrent/ .mpv/ .config/spacefm/ .config/nitrogen/ .local/share/nomacs Desktop/
