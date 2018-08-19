@@ -46,3 +46,4 @@
 net-libs/nodejs::gentoo
 x11-terms/kitty
 app-emulation/open-vm-tools
+media-gfx/qimgv
