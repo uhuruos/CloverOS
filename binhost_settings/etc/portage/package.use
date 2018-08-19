@@ -236,6 +236,7 @@ sys-apps/util-linux static-libs # required for genkernel
 sys-devel/gcc fortran # required for octave
 net-libs/libtorrent-rasterbar python # required by deluge
 media-libs/libpng apng # required by firefox
+media-libs/libsndfile -minimal # required by mumble
 sys-apps/xdg-desktop-portal-gtk X
 x11-libs/gtk+ X
 x11-libs/libva X

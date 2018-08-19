@@ -92,7 +92,6 @@ app-emulation/diskimage-builder
 app-emulation/docker
 app-emulation/fuse
 app-emulation/nemu
-app-emulation/open-vm-tools
 app-emulation/playonlinux
 app-emulation/q4wine
 app-emulation/qemu
@@ -242,14 +241,12 @@ dev-libs/amdgpu-pro-opencl
 dev-libs/beignet
 dev-libs/libisoburn
 dev-libs/sway
-dev-libs/weston
 dev-perl/LWP-UserAgent-Cached
 dev-perl/Mozilla-CA
 dev-perl/rename
 dev-php/composer
 dev-python/ansi2html
 dev-python/cgroup-utils
-dev-python/django-two-factor-auth
 dev-python/docker-py
 dev-python/jsbeautifier
 dev-python/pip
@@ -282,13 +279,11 @@ dev-util/kdevelop
 dev-util/lldb
 dev-util/lxqt-build-tools
 dev-util/monodevelop
-dev-util/nvidia-cuda-toolkit
 dev-util/plan9port
 dev-util/pycharm-community
 dev-util/pycharm-professional
 dev-util/re2c
 dev-util/regexxer
-dev-util/spirv-cross
 dev-util/staruml-bin
 dev-util/strace
 dev-util/valgrind
@@ -330,10 +325,8 @@ games-emulation/fceux
 games-emulation/gambatte
 games-emulation/generator
 games-emulation/gens
-games-emulation/gfceux
 games-emulation/gngeo
 games-emulation/higan
-games-emulation/kigb
 games-emulation/lxdream
 games-emulation/mednafen
 games-emulation/mednaffe
@@ -360,11 +353,9 @@ games-engines/scummvm
 games-fps/avp
 games-fps/darkplaces
 games-fps/doomsday
-games-fps/doomsday-resources
 games-fps/enemy-territory
 games-fps/ezquake-bin
 games-fps/gzdoom
-games-fps/lsdldoom
 games-fps/nexuiz
 games-fps/openarena
 games-fps/openjk-academy
@@ -408,7 +399,6 @@ kde-misc/basket
 kde-misc/kdeconnect
 kde-misc/kdirstat
 kde-misc/kio-stash
-kde-misc/kmozillahelper
 kde-misc/krename
 kde-misc/krusader
 kde-misc/kshutdown
@@ -658,7 +648,6 @@ media-gfx/phototonic
 media-gfx/pinta
 media-gfx/pngcrush
 media-gfx/pngquant
-media-gfx/qimgv
 media-gfx/qiv
 media-gfx/scrot
 media-gfx/sxiv
@@ -702,7 +691,6 @@ media-sound/audacity
 media-sound/beets
 media-sound/bitwig-studio
 media-sound/bluez-alsa
-media-sound/cadence
 media-sound/cantata
 media-sound/clementine
 media-sound/cmus
@@ -963,10 +951,8 @@ sys-apps/iucode_tool
 sys-apps/kexec-tools
 sys-apps/lm_sensors
 sys-apps/lshw
-sys-apps/microcode-ctl
 sys-apps/mlocate
 sys-apps/moreutils
-sys-apps/paludis
 sys-apps/pkgcore
 sys-apps/pmount
 sys-apps/psensor
@@ -992,7 +978,6 @@ sys-boot/unetbootin
 sys-boot/woeusb
 sys-devel/crossdev
 sys-devel/distcc
-sys-devel/gcc
 sys-devel/gdb
 sys-devel/lld
 sys-firmware/nvidia-firmware
@@ -1024,7 +1009,6 @@ sys-kernel/bliss-initramfs
 sys-kernel/dkms
 sys-kernel/dracut
 sys-kernel/genkernel
-sys-kernel/gentoo-sources:4.17.14
 sys-kernel/linux-firmware
 sys-power/acpi_call
 sys-power/acpitool
@@ -1216,7 +1200,6 @@ x11-plugins/wmifs
 x11-plugins/wminet
 x11-plugins/wmitime
 x11-plugins/wmix
-x11-plugins/wmlaptop
 x11-plugins/wmlife
 x11-plugins/wmload
 x11-plugins/wmlongrun
@@ -1259,7 +1242,6 @@ x11-plugins/wmwork
 x11-plugins/wmxkb
 x11-plugins/wmxres
 x11-terms/aterm
-x11-terms/kitty
 x11-terms/lilyterm
 x11-terms/mrxvt
 x11-terms/multi-aterm

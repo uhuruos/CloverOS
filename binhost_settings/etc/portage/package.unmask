@@ -123,8 +123,8 @@ app-shells/fzf::rasdark
 
 x11-libs/bamf::elementary
 
-x11-libs/vte::eroen
 x11-terms/termite::eroen
+x11-libs/vte::eroen # termite
 
 dev-db/dbeaver-bin::erayd
 

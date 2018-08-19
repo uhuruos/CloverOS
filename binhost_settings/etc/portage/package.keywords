@@ -50,6 +50,23 @@ net-ftp/proftpd
 net-ftp/pure-ftpd
 
 #keyworded, remove when stable exists
+media-sound/pure-data
+media-sound/guitarix **
+media-libs/zita-convolver # guitarix
+media-libs/libmonome # guitarix
+media-libs/zita-resampler # guitarix
+media-sound/bitwig-studio
+media-sound/cadence
+media-sound/ladish
+media-sound/mididings
+media-sound/setbfree
+media-sound/sequencer64
+media-sound/serialosc
+media-sound/synthv1
+media-sound/padthv1
+media-sound/drumkv1
+media-sound/samplv1
+x11-themes/wm-icons
 app-misc/anki
 media-sound/mumble **
 media-sound/murmur **
@@ -750,15 +767,6 @@ app-admin/passwordsafe
 #keepassxc
 app-admin/keepassxc
 app-crypt/argon2
-#django-two-factor-auth
-dev-python/django-phonenumber-field
-dev-python/yubiotp
-dev-python/django-two-factor-auth
-dev-python/twilio
-dev-python/phonenumbers
-dev-python/django-otp
-dev-python/django-formtools
-dev-python/django-otp-yubikey
 
 # required by app-admin/clsync-0.4.2::gentoo
 # required by app-admin/clsync (argument)
@@ -787,46 +795,6 @@ dev-python/django-otp-yubikey
 # required by monodevelop (argument)
 =www-servers/xsp-2014.12-r2014120900 ~amd64
 
-# required by pure-data (argument)
-=media-sound/pure-data-0.47_p1 ~amd64
-# required by bitwig-studio (argument)
-=media-sound/bitwig-studio-2.3.2 ~amd64
-# required by cadence (argument)
-=media-sound/cadence-9999-r3 **
-# required by ladish (argument)
-=media-sound/ladish-1-r2 ~amd64
-# required by guitarix (argument)
-=media-sound/guitarix-9999 **
-# required by mididings (argument)
-=media-sound/mididings-20120419 ~amd64
-# required by drumkv1 (argument)
-=media-sound/drumkv1-0.9.0 ~amd64
-# required by ladish (argument)
-=media-sound/ladish-1 ~amd64
-# required by padthv1 (argument)
-=media-sound/padthv1-0.9.0 ~amd64
-# required by setbfree (argument)
-=media-sound/setbfree-0.8.5 ~amd64
-# required by sequencer64 (argument)
-=media-sound/sequencer64-0.94.2 ~amd64
-# required by serialosc (argument)
-=media-sound/serialosc-1.4.1 ~amd64
-# required by samplv1 (argument)
-=media-sound/samplv1-0.9.0 ~amd64
-# required by media-sound/bitwig-studio-2.3.2::audio-overlay[jack]
-# required by bitwig-studio (argument)
-=media-sound/jack2-1.9.12-r1 ~amd64
-# required by synthv1 (argument)
-=media-sound/synthv1-0.9.0 ~amd64
-# required by media-sound/guitarix-9999::audio-overlay
-# required by guitarix (argument)
-=media-libs/zita-convolver-3.1.0 ~amd64
-# required by media-sound/serialosc-1.4.1::audio-overlay
-# required by serialosc (argument)
-=media-libs/libmonome-1.4.1 ~amd64
-# required by media-sound/guitarix-9999::audio-overlay
-# required by guitarix (argument)
-=media-libs/zita-resampler-1.6.0 ~amd64
 # required by kbfs (argument)
 =app-crypt/kbfs-1.0.44 ~amd64
 # required by keybase (argument)
