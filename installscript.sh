@@ -38,6 +38,11 @@ while :; do
 	echo
 	read -erp "Enter preferred root password " rootpassword
 	read -erp "Enter preferred username " user
+	newuser=$(echo "$user" | tr A-Z a-z | tr -cd "[:alpha:][:digit:]" | sed "s/^[0-9]\+//" | cut -c -31)
+	if [[ "$newuser" != "$user" ]]; then
+		user=$newuser
+		echo username changed to $newuser
+	fi
 	read -erp "Enter preferred user password " userpassword
 	read -erp "Is this correct? [y/n] " -n 1 yn
 	if [[ $yn == "y" ]]; then
