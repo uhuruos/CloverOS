@@ -263,15 +263,13 @@ Masked (Red) is just another step forward of keywording and the file is at /etc/
 
 You can unmask or unkeyword a specific version by doing =media-gfx/gimp-2.9.6
 
-### Emerge error relating to openssl
+### Emerge error relating to openssl, fix OpenGL 3/4 not working
 Add this to `/etc/portage/package.use`:
 ```
 dev-libs/openssl -bindist
 net-misc/openssh -bindist
 media-libs/mesa -bindist
 ```
-
-Mesa needs `-bindist` or OpenGL 3/4 won't work.
 
 ### GPU passthrough example
 ```
