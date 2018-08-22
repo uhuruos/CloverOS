@@ -1,0 +1,42 @@
+--- todo ---
+
+cloveros_settings.sh: configure non us keyboard
+livecd_install.sh: uefi install
+automatic ~/.asoundrc configuration. it gets the first audio device without hdmi in the name
+livecd_install.sh: encryption
+100% cloveros-libre
+spacefm drive mounting
+eject usb after livecd install
+fvwm dynamic menu
+
+--- packages that don't build ---
+
+# doesn't build on gcc8
+rogue telegram-cli subversion wesnoth ecryptfs-utils tauthon foldingathome synergy vigra w3mimgfb vdr dolphin-libretro agg xen-tools stella openjk-outcast sauerbraten mp3blaster tomahawk waterfox-bin citra blender staruml-bin spice-gtk kencfs-plasma
+
+#doesn't emerge
+nvidia-cuda-sdk xnp2 stumpwm stumpwm-contrib pure-data sequencer64 netsurf gkrellm-plugins alienarena opentoonz
+
+#libressl
+tdlib eagle megatools nxplayer murmur makemkv eiskaltdcpp retroshare acme-tiny spyder
+
+#removed from portage
+dev-libs/weston
+
+#gcc7
+nvidia-cuda-toolkit
+
+#jack2
+media-sound/cadence
+
+#qt 5.11
+rpcs3
+
+#qtdeclarative xml
+plasma-applet-weather-widget
+
+#perl berkdb
+net-analyzer/munin
+
+#ncurses tinfo
+android-ndk android-studio

@@ -121,6 +121,7 @@ www-client/torbrowser-launcher::torbrowser
 www-servers/onionshare::torbrowser
 
 app-shells/fzf::rasdark
+www-client/waterfox-bin::rasdark
 
 x11-libs/bamf::elementary
 

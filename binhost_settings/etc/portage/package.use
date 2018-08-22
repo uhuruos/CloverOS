@@ -6,10 +6,6 @@ app-crypt/kbfs git
 media-libs/vips imagemagick fftw fits tiff lcms matio
 media-gfx/nip2 fftw
 media-sound/bitwig-studio -jack # requires jack2
-media-sound/synthv1 qt5 standalone
-media-sound/samplv1 qt5 standalone
-media-sound/padthv1 qt5 standalone
-media-sound/drumkv1 qt5 standalone
 net-misc/connman nftables -wifi
 media-libs/fontconfig-infinality -nyx
 app-text/zathura-meta pdf cb djvu postscript
@@ -128,6 +124,11 @@ net-wireless/wpa_supplicant qt5
 app-misc/recoll qt5
 media-sound/audacious qt5
 media-video/mkvtoolnix qt5
+media-sound/synthv1 qt5 standalone
+media-sound/samplv1 qt5 standalone
+media-sound/padthv1 qt5 standalone
+media-sound/drumkv1 qt5 standalone
+x11-misc/synergy qt5
 media-plugins/audacious-plugins qt5 adplug alsa aac -ampache -aosd bs2b cdda cue ffmpeg flac fluidsynth gme -gnome -gtk -gtk3 -hotkeys http -jack lame -libav -libnotify libsamplerate lirc mms modplug mp3 -nls -pulseaudio scrobbler sdl sid sndfile soxr speedpitch vorbis wavpack
 games-emulation/yabause qt5 pic
 games-emulation/citra sdl2 qt5 system-boost
