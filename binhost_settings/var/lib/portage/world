@@ -92,6 +92,7 @@ app-emulation/diskimage-builder
 app-emulation/docker
 app-emulation/fuse
 app-emulation/nemu
+app-emulation/open-vm-tools
 app-emulation/playonlinux
 app-emulation/q4wine
 app-emulation/qemu
@@ -648,6 +649,7 @@ media-gfx/phototonic
 media-gfx/pinta
 media-gfx/pngcrush
 media-gfx/pngquant
+media-gfx/qimgv
 media-gfx/qiv
 media-gfx/scrot
 media-gfx/sxiv
@@ -1244,6 +1246,7 @@ x11-plugins/wmwork
 x11-plugins/wmxkb
 x11-plugins/wmxres
 x11-terms/aterm
+x11-terms/kitty
 x11-terms/lilyterm
 x11-terms/mrxvt
 x11-terms/multi-aterm
