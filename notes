@@ -12,7 +12,7 @@ fvwm dynamic menu
 --- packages that don't build ---
 
 # doesn't build on gcc8
-rogue telegram-cli subversion wesnoth ecryptfs-utils tauthon foldingathome synergy vigra w3mimgfb vdr dolphin-libretro agg xen-tools stella openjk-outcast sauerbraten mp3blaster tomahawk waterfox-bin citra blender staruml-bin spice-gtk kencfs-plasma
+rogue telegram-cli subversion ecryptfs-utils tauthon foldingathome synergy vigra w3mimgfb vdr dolphin-libretro agg xen-tools stella openjk-outcast sauerbraten mp3blaster tomahawk waterfox-bin citra blender staruml-bin spice-gtk kencfs-plasma
 
 #doesn't emerge
 nvidia-cuda-sdk xnp2 stumpwm stumpwm-contrib pure-data sequencer64 netsurf gkrellm-plugins alienarena opentoonz
