@@ -1009,6 +1009,7 @@ sys-kernel/bliss-initramfs
 sys-kernel/dkms
 sys-kernel/dracut
 sys-kernel/genkernel
+sys-kernel/gentoo-sources:4.17.16
 sys-kernel/linux-firmware
 sys-power/acpi_call
 sys-power/acpitool
@@ -1051,6 +1052,7 @@ www-misc/profile-sync-daemon
 www-misc/urlwatch
 www-plugins/adobe-flash
 www-plugins/chrome-binary-plugins
+www-plugins/gnash
 www-servers/apache
 www-servers/lighttpd
 www-servers/nginx

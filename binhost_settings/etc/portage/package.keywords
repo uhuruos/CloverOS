@@ -50,6 +50,8 @@ net-ftp/proftpd
 net-ftp/pure-ftpd
 
 #keyworded, remove when stable exists
+dev-util/pycharm-professional
+dev-util/pycharm-community
 media-sound/pure-data
 media-sound/guitarix **
 media-libs/zita-convolver # guitarix
