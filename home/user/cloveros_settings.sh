@@ -102,7 +102,9 @@ case "$choice" in
 		sudo emerge --depclean
 		ls -1 /lib/modules/ | sudo xargs -I{} depmod
 		./cloveros_settings.sh 9
+
 		sudo eselect infinality set infinality &> /dev/null
+
 		echo -e "\nSystem updated."
 		;;
 
