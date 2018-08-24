@@ -128,6 +128,7 @@ case "$choice" in
 				sudo mv initramfs-genkernel-*-gentoo* kernel-genkernel-*-gentoo* System.map-genkernel-*-gentoo* /boot/
 				sudo cp -R *-gentoo*/ /lib/modules/
 				sudo grub-mkconfig -o /boot/grub/grub.cfg
+				ls -1 /lib/modules/ | sudo xargs -I{} depmod
 				echo -e "\nKernel upgraded. (/boot/, /lib/modules/)"
 			else
 				echo -e "\nCould not retrieve file. Please connect to the Internet or try again."
