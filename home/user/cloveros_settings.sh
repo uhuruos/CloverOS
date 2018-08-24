@@ -36,7 +36,6 @@ else
 8) Set timezone
 9) Clean emerge cache
 l) Install kernel $kernelversion-gnu
-f) Fix emerge \"Argument too long\" error
 a) ALSA settings configuration
 k) Delete all kernels except for $(uname -r)
 t) Enable tap to click on touchpad
@@ -221,11 +220,6 @@ case "$choice" in
 		fi
 		;;
 
-	f)
-		sudo rm /usr/portage/packages/Packages &> /dev/null
-		echo "Ran sudo rm /usr/portage/packages/Packages"
-		;;
-
 	a)
 		echo "1) Change default ALSA playback device
 2) Change default ALSA capture device
@@ -298,6 +292,7 @@ case "$choice" in
 
 	k)
 		sudo find /boot/ /lib/modules/ -mindepth 1 -maxdepth 1 -name \*gentoo\* ! -name \*$(uname -r) -exec rm -R {} \;
+		sudo grub-mkconfig -o /boot/grub/grub.cfg
 		echo "All kernels except for $(uname -r) deleted."
 		;;
 
