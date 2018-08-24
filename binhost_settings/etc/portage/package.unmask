@@ -1,4 +1,4 @@
-www-client/waterfox-bin::spikyatlinux
+app-eselect/eselect-infinality::petkovich
 
 games-util/rejoystick::gamerlay
 
@@ -74,8 +74,6 @@ sys-power/linux-x86-power-tools::tlp
 games-emulation/citra::vampire
 
 games-emulation/rpcs3::pinkpieea
-
-net-im/tdlib::jollheef-overlay
 
 games-emulation/sdlmame::jorgicio
 games-fps/gzdoom::jorgicio

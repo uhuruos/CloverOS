@@ -4,6 +4,7 @@ sys-kernel/gentoo-sources
 x11-drivers/nvidia-drivers
 net-p2p/retroshare
 net-misc/youtube-dl
+app-eselect/eselect-infinality::petkovich # fixes symlink bug
 media-libs/mesa
 x11-libs/libdrm # mesa
 www-client/firefox
@@ -20,6 +21,7 @@ media-libs/babl # gimp
 media-libs/gegl # gimp
 dev-util/gdbus-codegen # gimp
 dev-libs/glib # gimp
+dev-util/glib-utils # gimp
 
 #old, remove when stable is bumped up
 =dev-lisp/clisp-2.49.90
@@ -450,7 +452,7 @@ www-client/google-chrome-beta
 net-misc/ripme
 x11-apps/intel-gpu-tools
 dev-util/peg # intel-gpu-tools
-x11-apps/radeontop
+app-misc/radeontop
 sys-boot/woeusb
 sys-apps/pkgcore
 dev-python/snakeoil # pkgcore

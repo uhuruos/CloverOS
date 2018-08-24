@@ -20,7 +20,6 @@
 */*::genthree
 */*::haskell
 */*::jm-overlay
-*/*::jollheef-overlay
 */*::jorgicio
 #*/*::libressl
 */*::linxon
@@ -28,6 +27,7 @@
 */*::oboeverlay
 */*::palemoon
 */*::pentoo
+*/*::petkovich
 */*::pinkpieea
 */*::poly-c
 */*::raiagent
@@ -35,7 +35,6 @@
 */*::science
 */*::seden
 */*::sk-overlay
-*/*::spikyatlinux
 */*::steam-overlay
 */*::stefantalpalaru
 */*::tlp

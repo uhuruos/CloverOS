@@ -137,6 +137,7 @@ app-misc/icdiff
 app-misc/mc
 app-misc/neofetch
 app-misc/nnn
+app-misc/radeontop
 app-misc/ranger
 app-misc/recoll
 app-misc/rox-filer
@@ -1011,7 +1012,7 @@ sys-kernel/bliss-initramfs
 sys-kernel/dkms
 sys-kernel/dracut
 sys-kernel/genkernel
-sys-kernel/gentoo-sources:4.17.16
+sys-kernel/gentoo-sources:4.17.18
 sys-kernel/linux-firmware
 sys-power/acpi_call
 sys-power/acpitool
@@ -1062,7 +1063,6 @@ www-servers/onionshare
 www-servers/tomcat
 x11-apps/intel-gpu-tools
 x11-apps/mesa-progs
-x11-apps/radeontop
 x11-apps/xbacklight
 x11-apps/xev
 x11-apps/xhost
