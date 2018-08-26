@@ -129,6 +129,7 @@ case "$choice" in
 				sudo cp -R *-gentoo*/ /lib/modules/
 				sudo grub-mkconfig -o /boot/grub/grub.cfg
 				sudo emerge @module-rebuild
+				ls -1 /lib/modules/ | sudo xargs -I{} depmod
 				echo -e "\nKernel upgraded. (/boot/, /lib/modules/)"
 			else
 				echo -e "\nCould not retrieve file. Please connect to the Internet or try again."
