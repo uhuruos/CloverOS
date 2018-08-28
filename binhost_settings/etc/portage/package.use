@@ -147,6 +147,7 @@ sys-apps/flatpak gtk
 games-emulation/snes9x gtk netplay
 sys-devel/distcc gtk crossdev
 media-video/handbrake gtk -fdk libav-aac x265
+media-libs/vulkan-loader X
 media-gfx/fontforge X gtk
 media-libs/gst-plugins-bad X gtk
 media-gfx/graphviz X gtk pdf svg python perl

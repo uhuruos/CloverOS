@@ -51,6 +51,9 @@ net-ftp/proftpd
 net-ftp/pure-ftpd
 
 #keyworded, remove when stable exists
+net-wireless/soapysdr
+net-wireless/sdrplay
+net-wireless/rtl-sdr
 dev-util/pycharm-professional
 dev-util/pycharm-community
 media-sound/pure-data

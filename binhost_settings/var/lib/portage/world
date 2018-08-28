@@ -662,6 +662,7 @@ media-libs/glyr
 media-libs/libtxc_dxtn
 media-libs/vapoursynth
 media-libs/vips
+media-libs/vulkan-loader
 media-libs/waifu2x-converter-cpp
 media-plugins/alsa-plugins
 media-plugins/gimp-lensfun
@@ -922,6 +923,9 @@ net-wireless/aircrack-ng
 net-wireless/blueman
 net-wireless/gnuradio
 net-wireless/iw
+net-wireless/rtl-sdr
+net-wireless/sdrplay
+net-wireless/soapysdr
 net-wireless/wpa_supplicant
 pantheon-base/plank
 sci-biology/foldingathome
@@ -1012,7 +1016,7 @@ sys-kernel/bliss-initramfs
 sys-kernel/dkms
 sys-kernel/dracut
 sys-kernel/genkernel
-sys-kernel/gentoo-sources:4.17.18
+sys-kernel/gentoo-sources:4.17.19
 sys-kernel/linux-firmware
 sys-power/acpi_call
 sys-power/acpitool
