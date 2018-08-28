@@ -1,18 +1,5 @@
 #!/bin/bash
 
-mirrors=(
-	"https://useast.cloveros.ga"
-	"https://uswest.cloveros.ga"
-	"https://ca.cloveros.ga"
-	"https://fr.cloveros.ga"
-	"https://nl.cloveros.ga"
-	"https://uk.cloveros.ga"
-	"https://au.cloveros.ga"
-	"https://sea.cloveros.ga"
-	"https://cernet.mirrors.ustc.edu.cn/cloveros"
-	"https://openmirrors.cf/cloveros"
-)
-
 kernelversion="4.17.19"
 
 gitprefix="https://gitgud.io/cloveros/cloveros/raw/master"
