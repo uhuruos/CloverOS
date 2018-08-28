@@ -1032,6 +1032,7 @@ www-apps/trac
 www-client/chromium
 www-client/dillo
 www-client/elinks
+www-client/falkon
 www-client/firefox
 www-client/firefox-bin
 www-client/google-chrome
@@ -1040,7 +1041,6 @@ www-client/links
 www-client/lynx
 www-client/midori
 www-client/palemoon-bin
-www-client/qupzilla
 www-client/qutebrowser
 www-client/seamonkey
 www-client/surf
