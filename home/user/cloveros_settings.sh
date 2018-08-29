@@ -107,10 +107,8 @@ case "$choice" in
 			wget https://cloveros.ga/s/kernel.tar.xz
 			wget https://cloveros.ga/s/signatures/s/kernel.tar.xz.asc
 			if sudo gpg --verify kernel.tar.xz.asc kernel.tar.xz; then
-				sudo tar xf kernel.tar.xz
-				rm kernel.tar.xz kernel.tar.xz.asc
-				sudo mv */ /lib/modules/
-				sudo mv * /boot/
+				sudo tar xf kernel.tar.xz -C /boot/ --wildcards --add-file "*genkernel*"
+				sudo tar xf kernel.tar.xz -C /lib/modules/ --exclude "*genkernel*"
 				sudo grub-mkconfig -o /boot/grub/grub.cfg
 				sudo emerge -uO @module-rebuild
 				sudo depmod -a $kernelversion-gentoo
