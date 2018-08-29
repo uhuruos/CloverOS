@@ -313,10 +313,16 @@ case "$choice" in
 		;;
 
 	m)
-		backupmakeconf="make.conf.bak"$(< /dev/urandom tr -dc 0-9 | head -c 8)
-		sudo mv /etc/portage/make.conf $backupmakeconf
-		sudo wget -q $gitprefix/home/user/make.conf -P /etc/portage/
-		echo "/etc/portage/make.conf is now default Previous make.conf saved to $backupmakeconf"
+		sudo wget -q $gitprefix/home/user/make.conf -O make.conf.new
+		if [[ -s make.conf.new ]]; then
+			backupmakeconf="make.conf.bak"$(< /dev/urandom tr -dc 0-9 | head -c 8)
+			sudo mv /etc/portage/make.conf $backupmakeconf
+			sudo mv make.conf.new /etc/portage/make.conf
+			echo "/etc/portage/make.conf is now default Previous make.conf saved to $backupmakeconf"
+		else
+			echo -e "\nCould not retrieve file. Please connect to the Internet or try again."
+			exit 1
+		fi
 		;;
 
 	b)
