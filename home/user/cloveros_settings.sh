@@ -101,9 +101,6 @@ case "$choice" in
 		if ls /boot/ | grep -q $kernelversion; then
 			echo "Kernel up to date."
 		else
-			tempdir=temp$(< /dev/urandom tr -dc 0-9 | head -c 8)
-			mkdir $tempdir
-			cd $tempdir
 			wget https://cloveros.ga/s/kernel.tar.xz
 			wget https://cloveros.ga/s/signatures/s/kernel.tar.xz.asc
 			if sudo gpg --verify kernel.tar.xz.asc kernel.tar.xz; then
@@ -116,7 +113,7 @@ case "$choice" in
 			else
 				echo -e "\nCould not retrieve file. Please connect to the Internet or try again."
 			fi
-			rm -R ../$tempdir
+			rm kernel.tar.xz kernel.tar.xz.asc
 		fi
 		;;
 
