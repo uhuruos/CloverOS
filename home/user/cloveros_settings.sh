@@ -101,8 +101,7 @@ case "$choice" in
 		if ls /boot/ | grep -q $kernelversion; then
 			echo "Kernel up to date."
 		else
-			wget https://cloveros.ga/s/kernel.tar.xz
-			wget https://cloveros.ga/s/signatures/s/kernel.tar.xz.asc
+			wget -N https://cloveros.ga/s/kernel.tar.xz https://cloveros.ga/s/signatures/s/kernel.tar.xz.asc
 			if sudo gpg --verify kernel.tar.xz.asc kernel.tar.xz; then
 				sudo tar xf kernel.tar.xz -C /boot/ --wildcards --add-file "*genkernel*"
 				sudo tar xf kernel.tar.xz -C /lib/modules/ --exclude "*genkernel*"
