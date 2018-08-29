@@ -59,7 +59,6 @@ case "$choice" in
 		echo "sudo emerge -uvD @world"
 		echo "sudo emerge @preserved-rebuild"
 		echo "sudo emerge --depclean"
-		echo "ls -1 /lib/modules/ | sudo xargs -I{} depmod"
 		echo "./cloveros_settings.sh 9"
 		sleep 2
 		./cloveros_settings.sh 1
@@ -86,7 +85,6 @@ case "$choice" in
 		sudo emerge -uvD @world
 		sudo emerge @preserved-rebuild
 		sudo emerge --depclean
-		ls -1 /lib/modules/ | sudo xargs -I{} depmod
 		./cloveros_settings.sh 9
 
 		sudo eselect infinality set infinality &> /dev/null
@@ -116,7 +114,7 @@ case "$choice" in
 				sudo cp -R *-gentoo*/ /lib/modules/
 				sudo grub-mkconfig -o /boot/grub/grub.cfg
 				sudo emerge @module-rebuild
-				ls -1 /lib/modules/ | sudo xargs -I{} depmod
+				sudo depmod
 				echo -e "\nKernel upgraded. (/boot/, /lib/modules/)"
 			else
 				echo -e "\nCould not retrieve file. Please connect to the Internet or try again."
@@ -345,13 +343,11 @@ case "$choice" in
 		echo "Running the following:"
 		echo "sudo emerge virtualbox"
 		echo "./cloveros_settings.sh 4"
-		echo "ls -1 /lib/modules/ | sudo xargs -I{} depmod"
 		echo "sudo useradd -a $USER vboxusers"
 		echo "sudo modprobe -a vboxdrv vboxnetadp vboxnetflt"
 		sleep 2
 		sudo emerge virtualbox
 		./cloveros_settings.sh 4
-		ls -1 /lib/modules/ | sudo xargs -I{} depmod
 		sudo useradd -g $USER vboxusers
 		sudo modprobe -a vboxdrv vboxnetadp vboxnetflt
 		echo "Virtualbox installed, please reboot to update kernel."
@@ -384,14 +380,12 @@ case "$choice" in
 		echo "Running the following:"
 		echo "sudo emerge nvidia-drivers"
 		echo "./cloveros_settings.sh 4"
-		echo "ls -1 /lib/modules/ | sudo xargs -I{} depmod"
 		echo "sudo eselect opengl set nvidia"
 		echo "sudo eselect opencl set nvidia"
 		echo "sudo sh -c 'echo -e \"blacklist nouveau\nblacklist vga16fb\nblacklist rivafb\nblacklist nvidiafb\nblacklist rivatv\" >> /etc/modprobe.d/blacklist.conf'"
 		sleep 2
 		sudo emerge nvidia-drivers
 		./cloveros_settings.sh 4
-		ls -1 /lib/modules/ | sudo xargs -I{} depmod
 		sudo eselect opengl set nvidia
 		sudo eselect opencl set nvidia
 		sudo sh -c 'echo -e "blacklist nouveau\nblacklist vga16fb\nblacklist rivafb\nblacklist nvidiafb\nblacklist rivatv" >> /etc/modprobe.d/blacklist.conf'
