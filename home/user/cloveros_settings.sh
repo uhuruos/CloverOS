@@ -101,7 +101,7 @@ case "$choice" in
 		if ls /boot/ | grep -q $kernelversion; then
 			echo "Kernel up to date."
 		else
-			tempdir=kernel$(< /dev/urandom tr -dc 0-9 | head -c 8)
+			tempdir=temp$(< /dev/urandom tr -dc 0-9 | head -c 8)
 			mkdir $tempdir
 			cd $tempdir
 			wget https://cloveros.ga/s/kernel.tar.xz
