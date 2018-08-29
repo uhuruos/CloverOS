@@ -1,7 +1,5 @@
 #!/bin/bash
 
-kernelversion="4.17.19"
-
 gitprefix="https://gitgud.io/cloveros/cloveros/raw/master"
 
 cd $( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )
@@ -100,6 +98,7 @@ case "$choice" in
 		;;
 
 	4)
+		kernelversion=$(curl -sr 0-100 https://cloveros.ga/s/kernel.tar.xz | grep -aoP "(?<=x86_64-).*(?=-gentoo)")
 		if [[ $(find /boot/ -iname \*$kernelversion\*-gentoo | wc -l) -gt 0 ]]; then
 			echo "Kernel up to date."
 		else
@@ -186,6 +185,7 @@ case "$choice" in
 		;;
 
 	l)
+		kernelversion=$(curl -sr 0-100 https://cloveros.ga/s/kernel.tar.xz | grep -aoP "(?<=x86_64-).*(?=-gentoo)")
 		if [[ $(find /boot/ -iname \*$kernelversion\*-gentoo-gnu | wc -l) -gt 0 ]]; then
 			echo "Kernel up to date."
 		else
