@@ -113,8 +113,8 @@ case "$choice" in
 				sudo mv initramfs-genkernel-*-gentoo* kernel-genkernel-*-gentoo* System.map-genkernel-*-gentoo* /boot/
 				sudo cp -R *-gentoo*/ /lib/modules/
 				sudo grub-mkconfig -o /boot/grub/grub.cfg
-				sudo emerge @module-rebuild
-				sudo depmod
+				sudo emerge -u @module-rebuild
+				sudo depmod -a $kernelversion-gentoo
 				echo -e "\nKernel upgraded. (/boot/, /lib/modules/)"
 			else
 				echo -e "\nCould not retrieve file. Please connect to the Internet or try again."
@@ -186,7 +186,7 @@ case "$choice" in
 		;;
 
 	l)
-		if [[ $(find /boot/ -iname \*$kernelversion\*-gnu | wc -l) -gt 0 ]]; then
+		if [[ $(find /boot/ -iname \*$kernelversion\*-gentoo-gnu | wc -l) -gt 0 ]]; then
 			echo "Kernel up to date."
 		else
 			tempdir=kernel$(< /dev/urandom tr -dc 0-9 | head -c 8)
@@ -196,9 +196,11 @@ case "$choice" in
 			wget https://cloveros.ga/s/signatures/s/kernel-libre.tar.xz.asc
 			if sudo gpg --verify kernel-libre.tar.xz.asc kernel-libre.tar.xz; then
 				tar xf kernel-libre.tar.xz
-				sudo mv initramfs-genkernel-*-gentoo*-gnu kernel-genkernel-*-gentoo*-gnu System.map-genkernel-*-gentoo*-gnu /boot/
+				sudo mv initramfs-genkernel-*-gentoo*-gnu kernel-genkernel-*-gentoo-gnu System.map-genkernel-*-gentoo-gnu /boot/
 				sudo cp -R *-gentoo*-gnu/ /lib/modules/
 				sudo grub-mkconfig -o /boot/grub/grub.cfg
+				sudo emerge -u @module-rebuild
+				sudo depmod -a $kernelversion-gentoo-gnu
 				echo -e "\nKernel upgraded. (/boot/, /lib/modules/)"
 			else
 				echo -e "\nCould not retrieve file. Please connect to the Internet or try again."
