@@ -14,13 +14,12 @@ else
 	echo "1) Update cloveros_settings.sh
 2) Update system
 3) Change default sound device
-4) Install kernel $kernelversion
+4) Update kernel
 5) Change emerge to source/binary
 6) Revert to default dot files
 7) Sync time
 8) Set timezone
 9) Clean emerge cache
-l) Install kernel $kernelversion-gnu
 a) ALSA settings configuration
 k) Delete all kernels except for $(uname -r)
 t) Enable tap to click on touchpad
@@ -99,7 +98,7 @@ case "$choice" in
 
 	4)
 		kernelversion=$(curl -sr 0-100 https://cloveros.ga/s/kernel.tar.xz | grep -aoP "(?<=x86_64-).*(?=-gentoo)")
-		if [[ $(find /boot/ -iname \*$kernelversion\*-gentoo | wc -l) -gt 0 ]]; then
+		if ls /boot/ | grep -q $kernelversion; then
 			echo "Kernel up to date."
 		else
 			tempdir=kernel$(< /dev/urandom tr -dc 0-9 | head -c 8)
@@ -109,8 +108,8 @@ case "$choice" in
 			wget https://cloveros.ga/s/signatures/s/kernel.tar.xz.asc
 			if sudo gpg --verify kernel.tar.xz.asc kernel.tar.xz; then
 				tar xf kernel.tar.xz
-				sudo mv initramfs-genkernel-*-gentoo* kernel-genkernel-*-gentoo* System.map-genkernel-*-gentoo* /boot/
-				sudo cp -R *-gentoo*/ /lib/modules/
+				sudo mv */ /lib/modules/
+				sudo mv * /boot/
 				sudo grub-mkconfig -o /boot/grub/grub.cfg
 				sudo emerge -u @module-rebuild
 				sudo depmod -a $kernelversion-gentoo
@@ -173,7 +172,7 @@ case "$choice" in
 		;;
 
 	8)
-		echo -e "Available timezones: $(find /usr/share/zoneinfo/ -type f | sed s@/usr/share/zoneinfo/@@ | sort | tr '\n' ' ') \n"
+		echo -e "Available timezones: $(find /usr/share/zoneinfo/ -type f | sed s@/usr/share/zoneinfo/@@ | sort | tr "\n" " ") \n"
 		read -erp "Select a timezone: " timezone
 		sudo cp /usr/share/zoneinfo/${timezone} /etc/localtime
 		echo -e "\nTimezone set to ${timezone}. (/etc/localtime)"
@@ -182,31 +181,6 @@ case "$choice" in
 	9)
 		sudo rm -Rf /usr/portage/packages/* /usr/portage/distfiles/* /var/tmp/portage/*
 		echo -e "\nPackage cache cleared. (/usr/portage/packages/, /usr/portage/distfiles/, /var/tmp/portage/)"
-		;;
-
-	l)
-		kernelversion=$(curl -sr 0-100 https://cloveros.ga/s/kernel.tar.xz | grep -aoP "(?<=x86_64-).*(?=-gentoo)")
-		if [[ $(find /boot/ -iname \*$kernelversion\*-gentoo-gnu | wc -l) -gt 0 ]]; then
-			echo "Kernel up to date."
-		else
-			tempdir=kernel$(< /dev/urandom tr -dc 0-9 | head -c 8)
-			mkdir $tempdir
-			cd $tempdir
-			wget https://cloveros.ga/s/kernel-libre.tar.xz
-			wget https://cloveros.ga/s/signatures/s/kernel-libre.tar.xz.asc
-			if sudo gpg --verify kernel-libre.tar.xz.asc kernel-libre.tar.xz; then
-				tar xf kernel-libre.tar.xz
-				sudo mv initramfs-genkernel-*-gentoo*-gnu kernel-genkernel-*-gentoo-gnu System.map-genkernel-*-gentoo-gnu /boot/
-				sudo cp -R *-gentoo*-gnu/ /lib/modules/
-				sudo grub-mkconfig -o /boot/grub/grub.cfg
-				sudo emerge -u @module-rebuild
-				sudo depmod -a $kernelversion-gentoo-gnu
-				echo -e "\nKernel upgraded. (/boot/, /lib/modules/)"
-			else
-				echo -e "\nCould not retrieve file. Please connect to the Internet or try again."
-			fi
-			rm -R ../$tempdir
-		fi
 		;;
 
 	a)
@@ -246,7 +220,7 @@ case "$choice" in
 			4)
 				echo "Sample rate examples: 44100 48000 96000 192000"
 				read -erp "Select sample rate: " choicesamplerate
-				if grep -q 'defaults.pcm.dmix.rate' ~/.asoundrc; then
+				if grep -q "defaults.pcm.dmix.rate" ~/.asoundrc; then
 					sed -i "s/defaults.pcm.dmix.rate .*/defaults.pcm.dmix.rate $choicesamplerate/" ~/.asoundrc
 				else
 					echo "defaults.pcm.dmix.rate $choicesamplerate" >> ~/.asoundrc
@@ -273,7 +247,7 @@ case "$choice" in
 				;;
 
 			*)
-				echo "Invalid option: '$choicealsa'" >&2
+				echo "Invalid option: $choicealsa" >&2
 				exit 1
 				;;
 		esac
@@ -305,9 +279,9 @@ case "$choice" in
 		sudo rm -R /etc/portage/env/
 		sudo mkdir /etc/portage/env/
 		sudo wget $gitprefix/binhost_settings/etc/portage/env/no-lto $gitprefix/binhost_settings/etc/portage/env/no-lto-graphite $gitprefix/binhost_settings/etc/portage/env/no-lto-graphite-ofast $gitprefix/binhost_settings/etc/portage/env/no-lto-o3 $gitprefix/binhost_settings/etc/portage/env/no-lto-ofast $gitprefix/binhost_settings/etc/portage/env/no-o3 $gitprefix/binhost_settings/etc/portage/env/no-ofast $gitprefix/binhost_settings/etc/portage/env/size $gitprefix/binhost_settings/etc/portage/env/no-gcc -P /etc/portage/env/
-		useflags=$(curl -s $gitprefix/binhost_settings/etc/portage/make.conf | grep '^USE=')
+		useflags=$(curl -s $gitprefix/binhost_settings/etc/portage/make.conf | grep "^USE=")
 		if ! grep -q "$useflags" /etc/portage/make.conf; then
-			echo $useflags >> /etc/portage/make.conf
+			sudo sh -c echo "$useflags" >> /etc/portage/make.conf
 		fi
 		echo -e "\nPortage configuration now mirrors binhost Portage configuration. Previous Portage config stored in ~/$backupportagedir"
 		;;
@@ -395,7 +369,7 @@ case "$choice" in
 		;;
 
 	*)
-		echo "Invalid option: '$choice'" >&2
+		echo "Invalid option: $choice" >&2
 		exit 1
 		;;
 esac
