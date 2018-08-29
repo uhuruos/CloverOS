@@ -108,10 +108,11 @@ case "$choice" in
 			wget https://cloveros.ga/s/signatures/s/kernel.tar.xz.asc
 			if sudo gpg --verify kernel.tar.xz.asc kernel.tar.xz; then
 				tar xf kernel.tar.xz
+				rm kernel.tar.xz kernel.tar.xz.asc
 				sudo mv */ /lib/modules/
 				sudo mv * /boot/
 				sudo grub-mkconfig -o /boot/grub/grub.cfg
-				sudo emerge -u @module-rebuild
+				sudo emerge -uO @module-rebuild
 				sudo depmod -a $kernelversion-gentoo
 				echo -e "\nKernel upgraded. (/boot/, /lib/modules/)"
 			else
