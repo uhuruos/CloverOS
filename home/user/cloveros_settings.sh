@@ -107,7 +107,7 @@ case "$choice" in
 			wget https://cloveros.ga/s/kernel.tar.xz
 			wget https://cloveros.ga/s/signatures/s/kernel.tar.xz.asc
 			if sudo gpg --verify kernel.tar.xz.asc kernel.tar.xz; then
-				tar xf kernel.tar.xz
+				sudo tar xf kernel.tar.xz
 				rm kernel.tar.xz kernel.tar.xz.asc
 				sudo mv */ /lib/modules/
 				sudo mv * /boot/
