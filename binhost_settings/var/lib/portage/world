@@ -389,6 +389,7 @@ games-util/qjoypad
 games-util/rejoystick
 games-util/steam-launcher
 games-util/vitamtp-fork
+games-util/xboxdrv
 gnome-extra/gnome-calculator
 kde-apps/kamoso
 kde-apps/kbackup

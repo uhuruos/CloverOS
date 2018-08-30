@@ -51,6 +51,7 @@ net-ftp/proftpd
 net-ftp/pure-ftpd
 
 #keyworded, remove when stable exists
+games-util/xboxdrv
 net-wireless/soapysdr
 net-wireless/sdrplay
 net-wireless/rtl-sdr
