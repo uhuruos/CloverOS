@@ -60,7 +60,7 @@ processes=${#processes[@]}
 
 mapfile -t procstat < /proc/stat
 activeprocesses=${procstat[-3]}
-activeprocesses=${activeprocesses:13}
+activeprocesses=${activeprocesses:14}
 
 IFS=' ' read -ra cpustats <<< ${procstat[0]}
 cpustats=("${cpustats[@]:1}")
@@ -103,6 +103,13 @@ if [[ $volume != 'N/A' ]]; then
     volume=$((16#$volume))%
 fi
 
+ac=$(</sys/class/power_supply/AC/online)
+if [[ $ac == "1" ]]; then
+	ac="Y"
+else
+	ac="N"
+fi
+
 if [[ $battery != 'N/A' ]]; then
     battery=$(</sys/class/power_supply/BAT0/capacity)%
 fi
@@ -127,7 +134,7 @@ date=$(printf '%(%c)T')
 clr1='\e[37m'
 clr2='\e[32m'
 
-echo -ne "\e[?25l$clr1$system Up: $clr2$uptime$clr1 Proc: $clr2$processes$clr1 Active: $clr2$activeprocesses$clr1 Cpu: $clr2$cpuusage$clr1 Mem: $clr2$meminfo$clr1 Net in: $clr2$netin$clr1 Net out: $clr2$netout$clr1 Battery: $clr2$battery$clr1 Brightness: $clr2$brightness$clr1 Volume: $clr2$volume$clr1 Wifi: $clr2$signal$clr1 $date        \r"
+echo -ne "\e[?25l$clr1$system Up: $clr2$uptime$clr1 Proc: $clr2$processes$clr1 Active: $clr2$activeprocesses$clr1 Cpu: $clr2$cpuusage$clr1 Mem: $clr2$meminfo$clr1 Net in: $clr2$netin$clr1 Net out: $clr2$netout$clr1 AC: $clr2$ac$clr1 Battery: $clr2$battery$clr1 Brightness: $clr2$brightness$clr1 Volume: $clr2$volume$clr1 Wifi: $clr2$signal$clr1 $date        \r"
 
 sleep 2
 done
