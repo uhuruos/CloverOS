@@ -6,7 +6,7 @@ mapfile -t netdev < /proc/net/dev
 i=0
 for line in $netdev; do
 	IFS=' ' read -a netdevice <<< $line
-	if [[ ${netdev[0]} != "lo" ]]; then
+	if [[ ${netdev[0]} != 'lo' ]]; then
 		netdevice=$i
 	fi
 	((i++))
@@ -114,10 +114,10 @@ mapfile -t asound < /proc/asound/card$alsadevice/codec#0
 fi
 
 ac=$(</sys/class/power_supply/AC/online)
-if [[ $ac == "1" ]]; then
-	ac="Y"
+if [[ $ac == '1' ]]; then
+	ac='Y'
 else
-	ac="N"
+	ac='N'
 fi
 
 if [[ $battery != 'N/A' ]]; then
