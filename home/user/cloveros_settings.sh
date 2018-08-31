@@ -182,8 +182,8 @@ case "$choice" in
 		echo "1) Change default ALSA playback device
 2) Change default ALSA capture device
 3) Change default ALSA playback device to a Bluetooth device
-4) Change default sample rate
-5) Bypass dmix (DSD, high sample rate)
+4) Set sample rate
+5) Bypass dmix and use hw (DSD, high sample rate)
 6) Configure ALSA for OBS
 7) GUI volume control
 8) CLI volume control"
