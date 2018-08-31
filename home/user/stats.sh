@@ -4,9 +4,9 @@ cpulastidle=0
 
 mapfile -t netdev < /proc/net/dev
 i=0
-for line in $netdev; do
+for line in "${netdev[@]}"; do
 	IFS=' ' read -a netdevline <<< $line
-	if [[ ${netdevline[0]} != 'lo' ]]; then
+	if [[ ${netdevline[0]} != 'lo:' ]]; then
 		netdevice=$i
 	fi
 	((i++))
