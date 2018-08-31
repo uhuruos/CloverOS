@@ -73,7 +73,7 @@ activeprocesses=${procstat[-3]}
 activeprocesses=${activeprocesses:14}
 
 IFS=' ' read -a cpustats <<< ${procstat[0]}
-cpustats=("${cpustats[@]:1}")
+cpustats=(${cpustats[@]:1})
 cpuidle=${cpustats[3]}
 cputotal=0
 for i in "${cpustats[@]}"; do
