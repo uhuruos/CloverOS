@@ -22,6 +22,7 @@ tdlib eagle megatools nxplayer murmur makemkv eiskaltdcpp retroshare acme-tiny s
 
 #removed from portage
 dev-libs/weston
+www-plugins/gnash
 
 #gcc7
 nvidia-cuda-toolkit
