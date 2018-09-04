@@ -20,10 +20,6 @@ nvidia-cuda-sdk waterfox-bin xnp2 stumpwm stumpwm-contrib pure-data sequencer64 
 #libressl
 tdlib eagle megatools nxplayer murmur makemkv eiskaltdcpp retroshare acme-tiny spyder
 
-#removed from portage
-dev-libs/weston
-www-plugins/gnash
-
 #gcc7
 nvidia-cuda-toolkit
 
