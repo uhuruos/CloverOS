@@ -243,6 +243,7 @@ dev-libs/amdgpu-pro-opencl
 dev-libs/beignet
 dev-libs/libisoburn
 dev-libs/sway
+dev-libs/weston
 dev-perl/LWP-UserAgent-Cached
 dev-perl/Mozilla-CA
 dev-perl/rename

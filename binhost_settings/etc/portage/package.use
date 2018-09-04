@@ -1,4 +1,4 @@
-www-plugins/gnash sdl
+www-plugins/lightspark ppapi nsplugin ffmpeg curl gles rtmp
 app-misc/anki -sound
 sys-power/suspend -crypt -lzo # crypt/lzo requires USE=static-libs dev-libs/libgcrypt dev-libs/lzo
 media-gfx/nomacs zip
