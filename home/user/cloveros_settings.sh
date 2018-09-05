@@ -269,7 +269,7 @@ case "$choice" in
 	c)
 		backupportagedir=backupportage$(< /dev/urandom tr -dc 0-9 | head -c 8)
 		sudo mkdir ~/$backupportagedir
-		sudo mv /etc/portage/package.use /etc/portage/package.mask /etc/portage/package.keywords /etc/portage/package.env /etc/portage/package.mask /etc/portage/package.unmask ~/$backupportagedir
+		sudo mv /etc/portage/package.use /etc/portage/package.mask /etc/portage/package.keywords /etc/portage/package.env /etc/portage/package.unmask ~/$backupportagedir
 		sudo wget $gitprefix/binhost_settings/etc/portage/package.use $gitprefix/binhost_settings/etc/portage/package.keywords $gitprefix/binhost_settings/etc/portage/package.env $gitprefix/binhost_settings/etc/portage/package.mask $gitprefix/binhost_settings/etc/portage/package.unmask -P /etc/portage/
 		sudo rm -R /etc/portage/env/
 		sudo mkdir /etc/portage/env/
