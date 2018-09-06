@@ -3,6 +3,7 @@ www-client/waterfox-bin::spikyatlinux
 games-util/zdbsp::jacendi-overlay
 games-util/acc::jacendi-overlay
 games-util/udmf-convert::jacendi-overlay
+games-fps/gzdoom::jorgicio
 
 app-eselect/eselect-infinality::petkovich
 
@@ -85,7 +86,6 @@ games-fps/chocolate-doom::vampire
 games-emulation/rpcs3::pinkpieea
 
 games-emulation/sdlmame::jorgicio
-games-fps/gzdoom::jorgicio
 media-gfx/flameshot::jorgicio
 media-video/flowblade::jorgicio
 media-video/vidcutter::jorgicio
