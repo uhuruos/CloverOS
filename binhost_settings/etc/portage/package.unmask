@@ -1,9 +1,10 @@
+games-fps/gzdoom::haarp
+
 www-client/waterfox-bin::spikyatlinux
 
 games-util/zdbsp::jacendi-overlay
 games-util/acc::jacendi-overlay
 games-util/udmf-convert::jacendi-overlay
-games-fps/gzdoom::jorgicio
 
 app-eselect/eselect-infinality::petkovich
 

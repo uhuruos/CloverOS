@@ -51,6 +51,8 @@ net-ftp/proftpd
 net-ftp/pure-ftpd
 
 #keyworded, remove when stable exists
+media-sound/teamspeak-server
+media-sound/teamspeak-client
 games-fps/chocolate-doom **
 net-wireless/cubicsdr
 net-libs/liquid-dsp # cubicsdr

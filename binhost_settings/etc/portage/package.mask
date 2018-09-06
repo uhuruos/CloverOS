@@ -17,6 +17,7 @@
 */*::flussence
 */*::gamerlay
 */*::genthree
+*/*::haarp
 */*::haskell
 */*::jacendi-overlay
 */*::jm-overlay
