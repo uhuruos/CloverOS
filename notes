@@ -12,17 +12,17 @@ fvwm dynamic menu
 
 --- packages that don't build ---
 
-# doesn't emerge anymore (gcc8)
+#doesn't emerge anymore (gcc8)
 rogue telegram-cli subversion ecryptfs-utils tauthon foldingathome synergy vigra w3mimgfb vdr dolphin-libretro agg xen-tools stella openjk-outcast sauerbraten mp3blaster tomahawk citra blender staruml-bin spice-gtk kencfs-plasma
 
+#requires gcc7
+dev-util/nvidia-cuda-sdk
+
 #doesn't emerge
-nvidia-cuda-sdk waterfox-bin xnp2 stumpwm stumpwm-contrib pure-data sequencer64 netsurf gkrellm-plugins alienarena opentoonz
+waterfox-bin xnp2 stumpwm stumpwm-contrib pure-data sequencer64 netsurf gkrellm-plugins alienarena opentoonz
 
 #libressl
-tdlib eagle megatools nxplayer murmur makemkv eiskaltdcpp retroshare acme-tiny spyder zandronum
-
-#gcc7
-nvidia-cuda-toolkit
+tdlib eagle megatools nxplayer murmur makemkv eiskaltdcpp retroshare acme-tiny spyder
 
 #jack2
 media-sound/cadence

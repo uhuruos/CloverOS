@@ -51,10 +51,21 @@ net-ftp/proftpd
 net-ftp/pure-ftpd
 
 #keyworded, remove when stable exists
+net-wireless/cubicsdr
+net-libs/liquid-dsp # cubicsdr
+games-util/acc
+games-util/zdbsp
+games-util/udmf-convert **
+games-util/slade
+games-fps/dhewm3
+games-fps/prboom
+games-fps/doom-data
+games-util/glbsp
+games-misc/yadex
+games-util/deutex
+games-fps/freedoom
 games-fps/zdoom
 games-engines/odamex
-games-util/doomseeker
-games-fps/zandronum
 games-simulation/corsix-th
 dev-lua/luasocket # corsix-th
 www-plugins/lightspark
