@@ -1,3 +1,5 @@
+www-client/waterfox-bin::spikyatlinux
+
 games-util/zdbsp::jacendi-overlay
 games-util/acc::jacendi-overlay
 games-util/udmf-convert::jacendi-overlay
@@ -119,13 +121,13 @@ sys-fs/libostree::flatpak-overlay
 sys-kernel/dkms::farmboy0
 
 www-client/palemoon-bin::palemoon
+www-client/palemoon::palemoon
 
 www-client/torbrowser::torbrowser
 www-client/torbrowser-launcher::torbrowser
 www-servers/onionshare::torbrowser
 
 app-shells/fzf::rasdark
-www-client/waterfox-bin::rasdark
 
 x11-libs/bamf::elementary
 
