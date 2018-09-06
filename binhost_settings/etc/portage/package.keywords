@@ -51,6 +51,8 @@ net-ftp/proftpd
 net-ftp/pure-ftpd
 
 #keyworded, remove when stable exists
+games-simulation/corsix-th
+dev-lua/luasocket # corsix-th
 www-plugins/lightspark
 games-util/xboxdrv
 net-wireless/soapysdr
@@ -223,6 +225,7 @@ dev-libs/jemalloc # rethinkdb
 www-client/waterfox-bin
 net-p2p/go-ipfs-bin
 media-sound/beets
+dev-python/discogs-client # beets
 dev-python/jellyfish # beets
 dev-python/munkres # beets
 dev-python/bluelet # beets

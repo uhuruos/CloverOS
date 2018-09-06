@@ -380,6 +380,7 @@ games-roguelike/nethack
 games-roguelike/rogue
 games-rpg/freedink
 games-server/mednafen-server
+games-simulation/corsix-th
 games-simulation/openttd
 games-strategy/freeciv
 games-strategy/wesnoth
@@ -785,6 +786,7 @@ media-video/mpv
 media-video/obs-studio
 media-video/openshot
 media-video/pitivi
+media-video/rtmpdump
 media-video/shotcut
 media-video/smplayer
 media-video/smtube
@@ -1061,6 +1063,7 @@ www-misc/profile-sync-daemon
 www-misc/urlwatch
 www-plugins/adobe-flash
 www-plugins/chrome-binary-plugins
+www-plugins/lightspark
 www-servers/apache
 www-servers/lighttpd
 www-servers/nginx
