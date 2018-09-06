@@ -4,8 +4,6 @@ games-util/zdbsp::jacendi-overlay
 games-util/acc::jacendi-overlay
 games-util/udmf-convert::jacendi-overlay
 
-games-fps/gzdoom::haarp
-
 app-eselect/eselect-infinality::petkovich
 
 games-util/rejoystick::gamerlay
@@ -82,6 +80,7 @@ x11-misc/i3blocks-gaps::0x4d4c
 sys-power/linux-x86-power-tools::tlp
 
 games-emulation/citra::vampire
+games-fps/chocolate-doom::vampire
 
 games-emulation/rpcs3::pinkpieea
 

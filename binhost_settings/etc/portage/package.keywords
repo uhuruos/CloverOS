@@ -51,6 +51,7 @@ net-ftp/proftpd
 net-ftp/pure-ftpd
 
 #keyworded, remove when stable exists
+games-fps/chocolate-doom **
 net-wireless/cubicsdr
 net-libs/liquid-dsp # cubicsdr
 games-util/acc
