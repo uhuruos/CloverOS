@@ -1,6 +1,11 @@
+games-util/doomseeker::haarp
+games-fps/gzdoom::haarp
+games-fps/zandronum::haarp
+
 app-eselect/eselect-infinality::petkovich
 
 games-util/rejoystick::gamerlay
+games-fps/zdoom::gamerlay
 
 net-print/brother-genml1-bin::brother-overlay
 

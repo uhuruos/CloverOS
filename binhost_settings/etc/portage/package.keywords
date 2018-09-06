@@ -51,6 +51,10 @@ net-ftp/proftpd
 net-ftp/pure-ftpd
 
 #keyworded, remove when stable exists
+games-fps/zdoom
+games-engines/odamex
+games-util/doomseeker
+games-fps/zandronum
 games-simulation/corsix-th
 dev-lua/luasocket # corsix-th
 www-plugins/lightspark
