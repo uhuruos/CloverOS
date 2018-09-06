@@ -29,8 +29,6 @@ media-sound/synthv1::audio-overlay
 media-sound/serialosc::audio-overlay
 media-libs/libmonome::audio-overlay # serialosc
 
-app-emulation/wine-any::FireBurn
-
 media-gfx/ephoto::bar
 
 games-util/vitamtp-fork::chaos
@@ -38,6 +36,7 @@ games-util/vitamtp-fork::chaos
 x11-plugins/purple-discord::flussence
 
 net-im/telegram-purple::jm-overlay
+games-emulation/rpcs3::jm-overlay
 
 media-plugins/vocoder-ladspa::seden
 
@@ -83,8 +82,6 @@ sys-power/linux-x86-power-tools::tlp
 
 games-emulation/citra::vampire
 games-fps/chocolate-doom::vampire
-
-games-emulation/rpcs3::pinkpieea
 
 games-emulation/sdlmame::jorgicio
 media-gfx/flameshot::jorgicio
