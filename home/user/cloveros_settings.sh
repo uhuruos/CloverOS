@@ -248,6 +248,26 @@ case "$choice" in
 		esac
 		;;
 
+	l)
+		kernelversion=$(curl -sr 0-100 https://cloveros.ga/s/kernel-libre.tar.xz | grep -aoP "(?<=x86_64-).*(?=-gentoo)")
+		if ls /boot/ | grep -q $kernelversion-gentoo-gnu; then
+			echo "Kernel up to date."
+		else
+			wget -N https://cloveros.ga/s/kernel-libre.tar.xz https://cloveros.ga/s/signatures/s/kernel-libre.tar.xz.asc
+			if sudo gpg --verify kernel-libre.tar.xz.asc kernel-libre.tar.xz; then
+				sudo tar xf kernel-libre.tar.xz -C /boot/ --wildcards --add-file "*genkernel*"
+				sudo tar xf kernel-libre.tar.xz -C /lib/modules/ --exclude "*genkernel*"
+				sudo grub-mkconfig -o /boot/grub/grub.cfg
+				sudo emerge @module-rebuild
+				sudo depmod -a $kernelversion-gentoo-gnu
+				echo -e "\nKernel upgraded. (/boot/, /lib/modules/)"
+			else
+				echo -e "\nCould not retrieve file. Please connect to the Internet or try again."
+			fi
+			rm kernel-libre.tar.xz kernel-libre.tar.xz.asc
+		fi
+		;;
+
 	k)
 		sudo find /boot/ /lib/modules/ -mindepth 1 -maxdepth 1 -name \*gentoo\* ! -name \*$(uname -r) -exec rm -R {} \;
 		sudo grub-mkconfig -o /boot/grub/grub.cfg
