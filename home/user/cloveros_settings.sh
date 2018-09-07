@@ -21,6 +21,7 @@ else
 8) Set timezone
 9) Clean emerge cache
 a) ALSA settings configuration
+l) Update libre kernel
 k) Delete all kernels except for $(uname -r)
 t) Enable tap to click on touchpad
 d) Disable mouse acceleration
