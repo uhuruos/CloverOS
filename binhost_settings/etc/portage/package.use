@@ -197,7 +197,7 @@ media-libs/phonon -vlc
 app-crypt/hashcat custom-cflags
 media-libs/libsdl custom-cflags X
 www-client/chromium custom-cflags
-www-client/firefox custom-cflags custom-optimization -wifi system-harfbuzz system-icu system-jpeg system-libevent system-libvpx system-sqlite
+www-client/firefox dbus custom-cflags custom-optimization -wifi system-harfbuzz system-icu system-jpeg system-libevent system-libvpx system-sqlite
 www-client/firefox::bobwya kde -egl -bindist
 www-client/torbrowser custom-cflags custom-optimization system-cairo system-harfbuzz system-icu system-jpeg system-libevent system-libvpx system-sqlite
 mail-client/thunderbird custom-cflags custom-optimization -crypt system-harfbuzz system-icu system-jpeg system-libevent system-libvpx system-sqlite
