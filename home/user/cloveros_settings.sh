@@ -106,7 +106,7 @@ case "$choice" in
 				sudo tar xf kernel.tar.xz -C /boot/ --wildcards --add-file "*genkernel*"
 				sudo tar xf kernel.tar.xz -C /lib/modules/ --exclude "*genkernel*"
 				sudo grub-mkconfig -o /boot/grub/grub.cfg
-				sudo emerge -uO @module-rebuild
+				sudo emerge @module-rebuild
 				sudo depmod -a $kernelversion-gentoo
 				echo -e "\nKernel upgraded. (/boot/, /lib/modules/)"
 			else
