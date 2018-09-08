@@ -3,6 +3,7 @@
 */*::abendbrot
 */*::audio-overlay
 */*::bar
+*/*::betagarden
 */*::brother-overlay
 */*::chaos
 */*::deadbeef-overlay
