@@ -27,6 +27,7 @@
 */*::palemoon
 */*::pentoo
 */*::petkovich
+*/*::pinkpieea
 */*::poly-c
 */*::raiagent
 */*::rasdark

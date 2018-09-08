@@ -72,6 +72,7 @@ app-crypt/kbfs
 app-crypt/kencfs-plasma
 app-crypt/keybase
 app-crypt/veracrypt
+app-doc/gimp-help
 app-doc/linux-kernel-in-a-nutshell
 app-doc/phrack-all
 app-doc/zsh-lovers
@@ -685,6 +686,7 @@ media-plugins/gimp-lensfun
 media-plugins/gimp-lqr
 media-plugins/gimp-paint-studio
 media-plugins/gimp-plugin-bimp
+media-plugins/gimp-refocus
 media-plugins/gimp-resynthesizer
 media-plugins/gkrellmpc
 media-plugins/gst-plugins-oss
