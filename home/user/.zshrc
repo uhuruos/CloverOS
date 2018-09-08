@@ -7,7 +7,7 @@ SAVEHIST=10000
 autoload -U compinit
 compinit
 
-setopt correctall
+#setopt correctall
 
 autoload -U promptinit
 promptinit
