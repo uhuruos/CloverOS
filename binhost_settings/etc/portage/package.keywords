@@ -51,6 +51,7 @@ net-ftp/proftpd
 net-ftp/pure-ftpd
 
 #keyworded, remove when stable exists
+app-portage/gentwoo
 media-sound/teamspeak-server
 games-fps/chocolate-doom **
 net-wireless/cubicsdr
