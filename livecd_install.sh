@@ -14,11 +14,7 @@ while :; do
 	elif [[ $partitioning = "m" ]]; then
 		gparted &> /dev/null &
 		read -erp "Enter partition for CloverOS installation: " -i "/dev/sda1" partition
-		if [[ $partition == /dev/map* ]]; then
-			read -erp "Enter drive that contains install partition: " -i "/dev/sda" drive
-		else
-			drive=${partition%${partition##*[!0-9]}}
-		fi
+		read -erp "Enter drive that contains install partition: " -i ${partition%${partition##*[!0-9]}} drive
 	else
 		echo "Invalid option"
 		continue
