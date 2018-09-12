@@ -1,10 +1,11 @@
+app-eselect/eselect-infinality # fixes symlink bug
+
 #preference
 sys-devel/gcc
 sys-kernel/gentoo-sources
 x11-drivers/nvidia-drivers
 net-p2p/retroshare
 net-misc/youtube-dl
-app-eselect/eselect-infinality::petkovich # fixes symlink bug
 media-libs/mesa
 x11-libs/libdrm # mesa
 www-client/firefox

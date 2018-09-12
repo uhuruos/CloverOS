@@ -27,7 +27,6 @@
 */*::lukejr
 */*::palemoon
 */*::pentoo
-*/*::petkovich
 */*::pinkpieea
 */*::poly-c
 */*::raiagent

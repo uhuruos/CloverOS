@@ -8,8 +8,6 @@ games-util/zdbsp::jacendi-overlay
 games-util/acc::jacendi-overlay
 games-util/udmf-convert::jacendi-overlay
 
-app-eselect/eselect-infinality::petkovich
-
 games-util/rejoystick::gamerlay
 games-fps/zdoom::gamerlay
 
