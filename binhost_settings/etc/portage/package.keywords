@@ -51,6 +51,11 @@ net-ftp/proftpd
 net-ftp/pure-ftpd
 
 #keyworded, remove when stable exists
+sys-apps/nvme-cli
+app-emulation/uae
+games-fps/quakeforge
+games-fps/qudos
+games-fps/quake2-textures # qudos
 app-portage/gentwoo
 media-sound/teamspeak-server
 games-fps/chocolate-doom **

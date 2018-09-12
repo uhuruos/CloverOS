@@ -1,6 +1,9 @@
+net-vpn/tor tor-hardening lzma
 app-doc/gimp-help l10n_en
 www-plugins/lightspark ppapi nsplugin ffmpeg curl gles rtmp
 app-misc/anki -sound
+mate-extra/mate-screensaver -pam # prevent gnome-keyring
+mate-base/mate -extras # prevent gnome-keyring
 sys-power/suspend -crypt -lzo # crypt/lzo requires USE=static-libs dev-libs/libgcrypt dev-libs/lzo
 media-gfx/nomacs zip
 app-crypt/kbfs git
@@ -104,8 +107,7 @@ net-misc/iputils -caps -filecaps
 app-admin/sudo -pam -sendmail
 media-libs/harfbuzz icu
 media-libs/libvpx postproc
-mate-base/mate -extras
-mate-extra/mate-screensaver -pam
+games-fps/qudos dedicated qmax textures
 games-fps/redeclipse dedicated
 games-fps/enemy-territory dedicated
 games-simulation/openttd dedicated
@@ -154,8 +156,6 @@ media-libs/gst-plugins-bad X gtk
 media-gfx/graphviz X gtk pdf svg python perl
 app-crypt/veracrypt X
 sci-chemistry/gromacs X
-mate-extra/mate-utils X
-mate-extra/mate-screensaver X
 games-emulation/retroarch X
 app-misc/neofetch X
 app-emulation/virtualbox-guest-additions X
@@ -241,6 +241,7 @@ media-libs/libpng apng # required for firefox
 media-libs/libsndfile -minimal # required for mumble
 dev-libs/libpcre2 pcre16 pcre32 # required for qtcore fish
 dev-qt/qtgui dbus # required for plasma-integration
+mate-base/mate-menus python # required by mozo
 sys-apps/xdg-desktop-portal-gtk X
 x11-libs/gtk+ X
 x11-libs/libva X
@@ -309,7 +310,6 @@ sys-libs/libsemanage python
 net-wireless/lorcon python
 sys-libs/tdb python
 dev-libs/libxml2 python
-mate-base/mate-menus python
 dev-libs/libxslt python
 dev-python/numpy lapack
 x11-libs/qscintilla qt5

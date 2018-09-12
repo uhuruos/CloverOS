@@ -91,6 +91,7 @@ app-emacs/org-mode
 app-emacs/slime
 app-emulation/diskimage-builder
 app-emulation/docker
+app-emulation/e-uae
 app-emulation/fuse
 app-emulation/nemu
 app-emulation/open-vm-tools
@@ -98,6 +99,7 @@ app-emulation/playonlinux
 app-emulation/q4wine
 app-emulation/qemu
 app-emulation/qt-virt-manager
+app-emulation/uae
 app-emulation/vagrant
 app-emulation/virt-manager
 app-emulation/virtualbox
@@ -108,6 +110,7 @@ app-emulation/xen
 app-eselect/eselect-repository
 app-forensics/aide
 app-i18n/fcitx-anthy
+app-i18n/fcitx-qt5
 app-i18n/ibus
 app-i18n/ibus-anthy
 app-i18n/ibus-handwrite
@@ -375,6 +378,8 @@ games-fps/openjk-outcast
 games-fps/prboom
 games-fps/quake3
 games-fps/quake3-cpma
+games-fps/quakeforge
+games-fps/qudos
 games-fps/sauerbraten
 games-fps/urbanterror
 games-fps/wolfgl
@@ -437,12 +442,7 @@ mail-client/alpine
 mail-client/mutt
 mail-client/thunderbird
 mate-base/mate
-mate-extra/caja-extensions
-mate-extra/mate-netbook
-mate-extra/mate-power-manager
-mate-extra/mate-screensaver
-mate-extra/mate-system-monitor
-mate-extra/mate-utils
+mate-extra/mate-calc
 media-fonts/Humor-Sans
 media-fonts/ahem
 media-fonts/alee-fonts
@@ -819,7 +819,6 @@ net-analyzer/cutter
 net-analyzer/dhcpdump
 net-analyzer/iftop
 net-analyzer/iptraf-ng
-net-analyzer/mate-netspeed
 net-analyzer/mtr
 net-analyzer/nagios
 net-analyzer/nagstamon
@@ -915,6 +914,7 @@ net-p2p/bitcoin-qt
 net-p2p/deluge
 net-p2p/freenet
 net-p2p/go-ipfs-bin
+net-p2p/ktorrent
 net-p2p/mktorrent
 net-p2p/mldonkey
 net-p2p/ncdc
@@ -943,6 +943,7 @@ net-vpn/tor
 net-vpn/zeronet
 net-wireless/aircrack-ng
 net-wireless/blueman
+net-wireless/broadcom-sta
 net-wireless/cubicsdr
 net-wireless/gnuradio
 net-wireless/iw
@@ -983,6 +984,7 @@ sys-apps/lm_sensors
 sys-apps/lshw
 sys-apps/mlocate
 sys-apps/moreutils
+sys-apps/nvme-cli
 sys-apps/pkgcore
 sys-apps/pmount
 sys-apps/psensor
