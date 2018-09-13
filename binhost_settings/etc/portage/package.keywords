@@ -1,11 +1,10 @@
-app-eselect/eselect-infinality # fixes symlink bug
-
 #preference
 sys-devel/gcc
 sys-kernel/gentoo-sources
 x11-drivers/nvidia-drivers
 net-p2p/retroshare
 net-misc/youtube-dl
+app-eselect/eselect-infinality # fixes symlink bug
 media-libs/mesa
 x11-libs/libdrm # mesa
 www-client/firefox
@@ -40,16 +39,13 @@ games-emulation/dolphin **
 =dev-libs/json-c-0.12.1 # sway
 
 #libressl
-media-video/ffmpeg::libressl
+www-client/dillo
+net-libs/serf
+app-editors/xemacs
+www-client/elinks
+media-libs/liblrdf
 media-libs/opusfile
 dev-libs/cyrus-sasl
-app-editors/xemacs
-net-libs/serf
-media-libs/liblrdf
-www-client/elinks
-www-client/dillo
-net-ftp/proftpd
-net-ftp/pure-ftpd
 
 #keyworded, remove when stable exists
 sys-apps/nvme-cli

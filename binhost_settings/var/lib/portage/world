@@ -442,7 +442,13 @@ mail-client/alpine
 mail-client/mutt
 mail-client/thunderbird
 mate-base/mate
+mate-extra/caja-extensions
 mate-extra/mate-calc
+mate-extra/mate-netbook
+mate-extra/mate-power-manager
+mate-extra/mate-screensaver
+mate-extra/mate-system-monitor
+mate-extra/mate-utils
 media-fonts/Humor-Sans
 media-fonts/ahem
 media-fonts/alee-fonts
@@ -846,6 +852,7 @@ net-fs/samba
 net-fs/sshfs
 net-ftp/filezilla
 net-ftp/gftp
+net-ftp/gproftpd
 net-ftp/lftp
 net-ftp/proftpd
 net-ftp/pure-ftpd

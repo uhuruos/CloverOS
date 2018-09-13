@@ -22,7 +22,6 @@
 */*::jacendi-overlay
 */*::jm-overlay
 */*::jorgicio
-#*/*::libressl
 */*::linxon
 */*::lukejr
 */*::palemoon
@@ -42,4 +41,5 @@
 */*::vampire
 */*::vapoursynth
 
-net-libs/nodejs::gentoo
+dev-libs/libevent::libressl
+media-libs/opusfile::libressl
