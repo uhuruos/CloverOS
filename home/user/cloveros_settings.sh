@@ -297,7 +297,7 @@ case "$choice" in
 		sudo wget $gitprefix/binhost_settings/etc/portage/env/no-lto $gitprefix/binhost_settings/etc/portage/env/no-lto-graphite $gitprefix/binhost_settings/etc/portage/env/no-lto-graphite-ofast $gitprefix/binhost_settings/etc/portage/env/no-lto-o3 $gitprefix/binhost_settings/etc/portage/env/no-lto-ofast $gitprefix/binhost_settings/etc/portage/env/no-o3 $gitprefix/binhost_settings/etc/portage/env/no-ofast $gitprefix/binhost_settings/etc/portage/env/size $gitprefix/binhost_settings/etc/portage/env/no-gcc -P /etc/portage/env/
 		useflags=$(curl -s $gitprefix/binhost_settings/etc/portage/make.conf | grep "^USE=")
 		if ! grep -q "$useflags" /etc/portage/make.conf; then
-			sudo sh -c "echo \"$useflags\" >> /etc/portage/make.conf"
+			sudo sh -c 'echo "$useflags" >> /etc/portage/make.conf'
 		fi
 		echo -e "\nPortage configuration now mirrors binhost Portage configuration. Previous Portage config stored in ~/$backupportagedir"
 		;;
