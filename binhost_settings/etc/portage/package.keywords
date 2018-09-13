@@ -39,6 +39,7 @@ games-emulation/dolphin **
 =dev-libs/json-c-0.12.1 # sway
 
 #libressl
+net-ftp/proftpd
 www-client/dillo
 net-libs/serf
 app-editors/xemacs
