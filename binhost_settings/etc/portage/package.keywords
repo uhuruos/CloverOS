@@ -32,6 +32,7 @@ net-p2p/mldonkey
 app-laptop/tp_smapi
 media-fonts/vlgothic
 games-emulation/dolphin **
+media-video/ffmpeg
 
 #dependencies, remove when no longer demanded
 =media-libs/zimg-2.7.4 # vapoursynth
