@@ -338,7 +338,7 @@ net-misc/iputils -ssl
 net-ftp/gproftpd -ssl
 net-print/gtklp -ssl
 net-libs/nodejs -ssl -npm
-media-libs/opusfile -ssl -http
+media-libs/opusfile -libressl -ssl -http
 media-video/ffmpeg openssl
 net-voip/telepathy-gabble gnutls
 
@@ -479,3 +479,7 @@ dev-python/dbus-python python_targets_python3_5
 media-video/pitivi python_targets_python3_5 python_single_target_python3_5
 dev-python/pyparsing python_targets_python3_5
 app-misc/anki python_targets_python3_5
+dev-python/matplotlib python_targets_python3_5
+dev-python/cycler python_targets_python3_5
+dev-python/kiwisolver python_targets_python3_5
+dev-python/versioneer python_targets_python3_5
