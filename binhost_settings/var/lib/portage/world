@@ -1003,6 +1003,7 @@ sys-apps/sg3_utils
 sys-apps/smartmontools
 sys-apps/udevil
 sys-apps/usermode-utilities
+sys-apps/vbetool
 sys-auth/pam_yubico
 sys-block/gparted
 sys-block/open-iscsi

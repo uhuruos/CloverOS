@@ -177,7 +177,7 @@ app-editors/emacs X gtk toolkit-scroll-bars xft sound games alsa jpeg png gif li
 app-emacs/emacs-common-gentoo X games
 app-admin/gkrellm X hddtemp lm_sensors
 app-text/texlive X cjk context detex dvi2tty dvipdfm epspdf extra games graphics humanities jadetex luatex metapost music omega png pstricks publishers science tex4ht texi2html truetype xetex xindy xml
-media-video/ffmpeg X rubberband x265 libass vorbis ogg network vpx rtmp x264 aac wavpack opus mp3 sdl gme v4l webp theora xvid xcb cpudetection
+media-video/ffmpeg X rubberband x265 libass vorbis ogg network vpx rtmp x264 aac wavpack opus mp3 sdl gme v4l webp theora xvid xcb cpudetection -opencl
 virtual/ffmpeg X sdl x264
 www-servers/varnish jit jemalloc
 media-video/mpv rubberband lcms archive cdda bluray dvd encode libmpv cplugins v4l
