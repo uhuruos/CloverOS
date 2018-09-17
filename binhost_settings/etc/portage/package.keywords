@@ -11,6 +11,8 @@ www-client/firefox
 dev-libs/nss # firefox
 games-emulation/retroarch
 games-emulation/citra-libretro ** # retroarch
+games-emulation/desmume-libretro # retroarch
+games-emulation/ppsspp-libretro # retroarch
 media-libs/vulkan-loader # retroarch
 dev-util/vulkan-headers # retroarch
 media-gfx/gimp

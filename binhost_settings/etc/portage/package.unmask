@@ -132,15 +132,16 @@ x11-libs/vte::eroen # termite
 
 dev-db/dbeaver-bin::erayd
 
-games-emulation/xnp2::abendbrot
 kde-plasma/plasma-applet-active-window-control::abendbrot
 games-emulation/2048-libretro::abendbrot
 games-emulation/4do-libretro::abendbrot
 games-emulation/beetle-psx-libretro::abendbrot
 games-emulation/bnes-libretro::abendbrot
 games-emulation/bsnes-libretro::abendbrot
+games-emulation/bsnes-libretro-cplusplus98::abendbrot
 games-emulation/common-overlays::abendbrot
 games-emulation/craft-libretro::abendbrot
+games-emulation/citra-libretro::abendbrot
 games-emulation/desmume-libretro::abendbrot
 games-emulation/dolphin-libretro::abendbrot
 games-emulation/easyrpg-libretro::abendbrot
@@ -169,6 +170,8 @@ games-emulation/meteor-libretro::abendbrot
 games-emulation/mgba-libretro::abendbrot
 games-emulation/mrboom-libretro::abendbrot
 games-emulation/mupen64plus-libretro::abendbrot
+games-emulation/mame2000-libretro::abendbrot
+games-emulation/mame2003-libretro::abendbrot
 games-emulation/nestopia-libretro::abendbrot
 games-emulation/nxengine-libretro::abendbrot
 games-emulation/openlara-libretro::abendbrot

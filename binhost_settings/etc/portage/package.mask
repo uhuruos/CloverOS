@@ -43,7 +43,6 @@
 
 dev-libs/libevent::libressl
 media-libs/opusfile::libressl
-sci-biology/foldingathome
 >=app-emulation/open-vm-tools-10.2
 >=sci-biology/foldingathome-7.5
 >=media-gfx/qimgv-0.7

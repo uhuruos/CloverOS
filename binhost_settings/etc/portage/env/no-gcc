@@ -1,1 +1,4 @@
-CC="clang" CXX="clang++" CFLAGS="-Ofast -mmmx -mssse3 -pipe -funroll-loops" CXXFLAGS="-Ofast -mmmx -mssse3 -pipe -funroll-loops"
+CC="clang"
+CXX="clang++"
+CFLAGS="-Ofast -mmmx -mssse3 -pipe -funroll-loops"
+CXXFLAGS="${CFLAGS}"

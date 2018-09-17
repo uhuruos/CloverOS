@@ -1,3 +1,4 @@
+games-emulation/ppsspp sdl
 net-vpn/tor tor-hardening lzma
 app-doc/gimp-help l10n_en
 www-plugins/lightspark ppapi nsplugin ffmpeg curl gles rtmp
@@ -52,7 +53,7 @@ games-emulation/stella joystick
 media-sound/clementine dbus cdda lastfm moodbar projectm -udisks
 dev-python/networkx -doc
 sys-fs/zfs -rootfs
-games-emulation/libretro-meta -bsnes-cpp98 -melonds -mame2000 -mame2003 -citra 2048 4do beetle-psx bsnes desmume fbalpha gambatte genplus handy mednafen-ngp mednafen-pce-fast mednafen-saturn mednafen-supergrafx mednafen-vb mednafen-wswan mgba mupen64plus nestopia nxengine prboom prosystem psp1 reicast scummvm stella tyrquake bnes craft dolphin easyrpg fbalpha2012 fceumm mame mame2016 mednafen-gba mednafen-snes meowpc98 meteor mrboom openlara parallel-n64 pcsx-rearmed picodrive ppsspp px68k quicknes redream sameboy snes9x snes9x2002 snes9x2010 tgbdual vba-next vbam yabause
+games-emulation/libretro-meta bsnes-cpp98 melonds mame2000 mame2003 citra 2048 4do beetle-psx bsnes desmume fbalpha gambatte genplus handy mednafen-ngp mednafen-pce-fast mednafen-saturn mednafen-supergrafx mednafen-vb mednafen-wswan mgba mupen64plus nestopia nxengine prboom prosystem psp1 reicast scummvm stella tyrquake bnes craft dolphin easyrpg fbalpha2012 fceumm mame mame2016 mednafen-gba mednafen-snes meowpc98 meteor mrboom openlara parallel-n64 pcsx-rearmed picodrive ppsspp px68k quicknes redream sameboy snes9x snes9x2002 snes9x2010 tgbdual vba-next vbam yabause
 media-libs/sdl2-mixer flac mikmod vorbis mod mp3 mad midi fluidsynth
 media-video/obs-studio jack truetype imagemagick v4l
 media-plugins/alsa-plugins jack
