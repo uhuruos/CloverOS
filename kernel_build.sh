@@ -1,12 +1,12 @@
+kernelversion=4.17.19
+kernelmajversion=4.17
+
 emerge -C gentoo-sources
 rm -Rf /usr/src/*-gentoo*
 rm /usr/portage/packages/s/kernel*.tar.xz
 find /boot/ /lib/modules/ -mindepth 1 -maxdepth 1 -name \*gentoo\* ! -name \*$(uname -r) -exec rm -R {} \;
 mkdir -p /usr/portage/packages/s/
 binutils-config --linker ld.bfd
-
-kernelversion=4.17.19
-kernelmajversion=4.17
 
 emerge =gentoo-sources-$kernelversion
 eselect kernel set linux-$kernelversion-gentoo
