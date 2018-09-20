@@ -549,6 +549,7 @@ x11-misc/enlightenment-extra
 sci-mathematics/rstudio
 dev-libs/mathjax # rstudio
 dev-php/composer
+dev-php/xdebug-handler # composer
 dev-php/symfony-finder # composer
 dev-php/ca-bundle # composer
 dev-php/symfony-console # composer

@@ -1,3 +1,5 @@
+media-video/ffmpeg::libressl
+
 app-portage/gentwoo::betagarden
 
 games-fps/gzdoom::haarp
