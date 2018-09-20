@@ -30,7 +30,6 @@
 */*::poly-c
 */*::raiagent
 */*::rasdark
-*/*::science
 */*::seden
 */*::sk-overlay
 */*::spikyatlinux
