@@ -1,12 +1,7 @@
-sci-mathematics/scilab **
-
 #preference
 sys-devel/gcc
 sys-kernel/gentoo-sources
-x11-drivers/nvidia-drivers
-net-p2p/retroshare
 net-misc/youtube-dl
-app-eselect/eselect-infinality # fixes symlink bug
 media-libs/mesa
 x11-libs/libdrm # mesa
 www-client/firefox
@@ -30,17 +25,13 @@ dev-util/glib-utils # gimp
 sys-kernel/spl
 sys-fs/zfs
 sys-fs/zfs-kmod
+media-video/ffmpeg
 =dev-lisp/clisp-2.49.90
-x11-wm/enlightenment
-dev-libs/efl
 x11-terms/terminology
 net-p2p/mldonkey
 app-laptop/tp_smapi
 media-fonts/vlgothic
 games-emulation/dolphin **
-media-video/ffmpeg
-
-#dependencies, remove when no longer demanded
 =media-libs/zimg-2.7.4 # vapoursynth
 =dev-python/cython-0.28.4 # vapoursynth
 =dev-libs/json-c-0.12.1 # sway

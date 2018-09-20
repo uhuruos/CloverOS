@@ -47,3 +47,6 @@ media-libs/opusfile::libressl
 >=media-gfx/qimgv-0.7
 >=kde-apps/kamoso-18.08
 >=x11-terms/kitty-0.11
+>=sys-devel/lld-7.0.0 # llvm7
+>=sys-devel/lldb-7.0.0 # llvm7
+>=www-client/chromium-69.0.3497.100 # llvm7
