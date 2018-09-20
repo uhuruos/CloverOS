@@ -100,9 +100,9 @@ case "$choice" in
 		if ls /boot/ | grep -q $kernelversion; then
 			echo "Kernel up to date."
 		else
-			wget -N https://cloveros.ga/s/kernel.tar.xz https://cloveros.ga/s/signatures/s/kernel.tar.xz.asc
+			wget https://cloveros.ga/s/kernel.tar.xz https://cloveros.ga/s/signatures/s/kernel.tar.xz.asc
 			if sudo gpg --verify kernel.tar.xz.asc kernel.tar.xz; then
-				sudo tar xf -C / kernel.tar.xz
+				sudo tar -C / -xf kernel.tar.xz
 				sudo grub-mkconfig -o /boot/grub/grub.cfg
 				sudo emerge @module-rebuild
 				sudo depmod -a $kernelversion-gentoo
@@ -251,9 +251,9 @@ case "$choice" in
 		if ls /boot/ | grep -q $kernelversion-gentoo-gnu; then
 			echo "Kernel up to date."
 		else
-			wget -N https://cloveros.ga/s/kernel-libre.tar.xz https://cloveros.ga/s/signatures/s/kernel-libre.tar.xz.asc
+			wget https://cloveros.ga/s/kernel-libre.tar.xz https://cloveros.ga/s/signatures/s/kernel-libre.tar.xz.asc
 			if sudo gpg --verify kernel-libre.tar.xz.asc kernel-libre.tar.xz; then
-				sudo tar xf -C / kernel-libre.tar.xz
+				sudo tar -C / -xf kernel-libre.tar.xz
 				sudo grub-mkconfig -o /boot/grub/grub.cfg
 				sudo emerge @module-rebuild
 				sudo depmod -a $kernelversion-gentoo-gnu
