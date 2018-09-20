@@ -132,6 +132,7 @@ app-misc/ddccontrol
 app-misc/ddcutil
 app-misc/dtach
 app-misc/dvtm
+app-misc/evtest
 app-misc/fdupes
 app-misc/figlet
 app-misc/fsearch
@@ -1049,7 +1050,6 @@ sys-kernel/bliss-initramfs
 sys-kernel/dkms
 sys-kernel/dracut
 sys-kernel/genkernel
-sys-kernel/gentoo-sources:4.17.19
 sys-kernel/linux-firmware
 sys-power/acpi_call
 sys-power/acpitool

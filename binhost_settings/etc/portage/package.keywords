@@ -10,7 +10,6 @@ x11-libs/libdrm # mesa
 www-client/firefox
 dev-libs/nss # firefox
 games-emulation/retroarch
-games-emulation/citra-libretro ** # retroarch
 games-emulation/desmume-libretro # retroarch
 games-emulation/ppsspp-libretro # retroarch
 media-libs/vulkan-loader # retroarch
@@ -26,6 +25,9 @@ dev-libs/glib # gimp
 dev-util/glib-utils # gimp
 
 #old, remove when stable is bumped up
+sys-kernel/spl
+sys-fs/zfs
+sys-fs/zfs-kmod
 =dev-lisp/clisp-2.49.90
 x11-wm/enlightenment
 dev-libs/efl
