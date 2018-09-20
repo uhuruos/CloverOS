@@ -22,6 +22,7 @@
 */*::jacendi-overlay
 */*::jm-overlay
 */*::jorgicio
+*/*::libressl
 */*::linxon
 */*::lukejr
 */*::palemoon
@@ -40,13 +41,11 @@
 */*::vampire
 */*::vapoursynth
 
-dev-libs/libevent::libressl
-media-libs/opusfile::libressl
->=app-emulation/open-vm-tools-10.2
+>=app-emulation/open-vm-tools-10.2 # openssl
 >=sci-biology/foldingathome-7.5
->=media-gfx/qimgv-0.7
->=kde-apps/kamoso-18.08
->=x11-terms/kitty-0.11
+>=x11-terms/kitty-0.11 # sphinx
+>=media-gfx/qimgv-0.7 # qt5.11
+>=kde-apps/kamoso-18.08 # qt5.11
 >=sys-devel/lld-7.0.0 # llvm7
 >=sys-devel/lldb-7.0.0 # llvm7
 >=www-client/chromium-69.0.3497.100 # llvm7
