@@ -27,6 +27,7 @@ XZ_OPT="-9e --lzma2=dict=256MB" tar -cJf /usr/portage/packages/s/kernel.tar.xz /
 XZ_OPT="-9e --lzma2=dict=256MB" tar -cJf /usr/portage/packages/s/kernel-libre.tar.xz /boot/*$kernelversion-gentoo-gnu /lib/modules/$kernelversion-gentoo-gnu
 
 binutils-config --linker ld.gold
+rm config.amd64
 cd /usr/src/linux/
 make clean
 make prepare
