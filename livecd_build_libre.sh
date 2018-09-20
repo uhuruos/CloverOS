@@ -85,6 +85,7 @@ eselect locale set en_US.utf8
 gpasswd -a $user audio
 gpasswd -a $user video
 gpasswd -a $user games
+gpasswd -a $user input
 cd /home/$user/
 rm .bash_profile
 wget $gitprefix/home/user/{.bash_profile,.zprofile,.zshrc,.fvwm2rc,.Xdefaults,wallpaper.png,.xbindkeysrc,screenfetch-dev,bl.sh,cloveros_settings.sh,stats.sh,rotate_screen.sh,.emacs,.rtorrent.rc}
