@@ -35,6 +35,7 @@ games-emulation/dolphin **
 =media-libs/zimg-2.7.4 # vapoursynth
 =dev-python/cython-0.28.4 # vapoursynth
 =dev-libs/json-c-0.12.1 # sway
+=dev-python/sphinx-1.7.5-r1 # kitty
 
 #libressl
 net-ftp/proftpd

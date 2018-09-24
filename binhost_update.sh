@@ -8,7 +8,7 @@ emerge -1 --buildpkg $(find /var/db/pkg/ -mindepth 2 -maxdepth 2 -name \*-9999 |
 #mv /usr/portage/packages/s/ .
 #rm -Rf /usr/portage/packages/*
 #mv s/ /usr/portage/packages/
-#quickpkg --include-unmodified-config=y "*/*" 2>&1 | ansi2html | tail -n +1081 | head -n -7 > s/quickpkg.txt
+#quickpkg --include-unmodified-config=y "*/*" 2>&1 | ansi2html | tail -n +1081 | head -n -7 > /usr/portage/packages/s/quickpkg.txt
 #emerge --buildpkgonly sudo openssh postfix dcron vixie-cron cronie fcron anacron
 #emerge -C hwinfo ntfs3g && emerge --buildpkg ntfs3g && emerge --buildpkg hwinfo
 

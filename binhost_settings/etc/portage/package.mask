@@ -43,7 +43,7 @@
 
 >=app-emulation/open-vm-tools-10.2 # openssl
 >=sci-biology/foldingathome-7.5
->=x11-terms/kitty-0.11 # sphinx
+#>=x11-terms/kitty-0.11 # sphinx
 >=media-gfx/qimgv-0.7 # qt5.11
 >=kde-apps/kamoso-18.08 # qt5.11
 >=sys-devel/lld-7.0.0 # llvm7
