@@ -79,7 +79,7 @@ case "$choice" in
 
 		kernel=$(uname -r)
 		if [[ ${kernel: -3} == "gnu" ]]; then
-			./cloveros_settings.sh k
+			./cloveros_settings.sh l
 		else
 			./cloveros_settings.sh 4
 		fi
