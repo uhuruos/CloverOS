@@ -81,7 +81,7 @@ sed -i "s/^#\(.*\)/\1/g" /home/$livecduser/.bash_profile
 gpasswd -a $user video
 gpasswd -a $user audio
 gpasswd -a $user games
-sudo -u $user xdg-settings set default-web-browser firefox.desktop
+gpasswd -a $user input
 sed -i "s@/home/$livecduser/@/home/$user/@" /home/$livecduser/.rtorrent.rc
 sed -i "s@/home/$livecduser/@/home/$user/@" /home/$livecduser/.config/nitrogen/nitrogen.cfg
 sed -i "s@/home/$livecduser/@/home/$user/@" /home/$livecduser/.config/spacefm/session
