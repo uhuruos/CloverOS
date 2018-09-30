@@ -52,3 +52,4 @@
 >=sys-devel/clang-runtime-7.0.0
 >=sys-devel/clang-7.0.0
 >=sys-libs/compiler-rt-7.0.0
+>=sys-apps/openrc-0.38.2
