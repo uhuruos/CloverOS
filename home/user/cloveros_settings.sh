@@ -77,7 +77,13 @@ case "$choice" in
 			sudo emerge rtorrent
 		fi
 
-		./cloveros_settings.sh 4
+		kernel=$(uname -r)
+		if [[ ${kernel: -3} == "gnu" ]]; then
+			./cloveros_settings.sh k
+		else
+			./cloveros_settings.sh 4
+		fi
+
 		sudo emerge --sync
 		sudo emerge -uvD @world
 		sudo emerge --depclean
