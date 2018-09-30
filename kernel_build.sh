@@ -1,4 +1,4 @@
-kernelversion=4.18.8
+kernelversion=4.18.11
 kernelmajversion=4.18
 
 emerge -C gentoo-sources

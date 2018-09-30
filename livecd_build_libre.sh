@@ -98,7 +98,7 @@ sed -i "s@/home/user/@/home/$user/@" .config/nitrogen/nitrogen.cfg
 wget $gitprefix/home/user/.local/share/nomacs/settings.ini -P .local/share/nomacs/
 wget $gitprefix/home/user/.config/spacefm/session -P .config/spacefm/
 sed -i "s@/home/user/@/home/$user/@" .config/spacefm/session
-xdg-settings set default-web-browser firefox.desktop
+sudo -u $user xdg-settings set default-web-browser firefox.desktop
 wget $gitprefix/home/user/.config/mimeapps.list -P .config/
 echo -e "[Desktop Entry]\nEncoding=UTF-8\nType=Link\nName=Home\nIcon=user-home\nExec=spacefm ~/" > Desktop/home.desktop
 echo -e "[Desktop Entry]\nEncoding=UTF-8\nType=Link\nName=Applications\nIcon=folder\nExec=spacefm /usr/share/applications/" > Desktop/applications.desktop
