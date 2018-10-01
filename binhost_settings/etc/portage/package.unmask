@@ -55,6 +55,7 @@ dev-python/editorconfig::pentoo
 
 dev-lang/tauthon::stefantalpalaru
 media-plugins/gimp-refocus::stefantalpalaru
+www-client/ungoogled-chromium::stefantalpalaru
 
 dev-dotnet/nuget::dotnet
 dev-dotnet/xdt-for-monodevelop::dotnet
