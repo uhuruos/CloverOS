@@ -25,19 +25,20 @@ dev-util/glib-utils # gimp
 sys-kernel/spl
 sys-fs/zfs
 sys-fs/zfs-kmod
-media-video/ffmpeg
-=dev-lisp/clisp-2.49.90
-x11-terms/terminology
+dev-lisp/clisp
 net-p2p/mldonkey
 app-laptop/tp_smapi
 media-fonts/vlgothic
 games-emulation/dolphin **
-=media-libs/zimg-2.7.4 # vapoursynth
-=dev-python/cython-0.28.4 # vapoursynth
-=dev-libs/json-c-0.12.1 # sway
-=dev-python/sphinx-1.7.5-r1 # kitty
+media-libs/zimg # vapoursynth
+dev-python/cython # vapoursynth
+dev-libs/json-c # sway
+dev-python/sphinx # kitty
+media-libs/opencv # waifu2x-converter-cpp
 
 #libressl
+media-video/ffmpeg::libressl
+net-libs/nodejs::libressl
 net-ftp/proftpd
 net-ftp/pure-ftpd
 www-client/dillo
@@ -159,8 +160,6 @@ sci-libs/libtifiles2 # tiemu
 sci-libs/libticables2 # tiemu
 media-sound/supercollider
 games-util/steam-launcher
-media-sound/deadbeef
-media-plugins/deadbeef-plugins-meta # deadbeef
 net-im/discord-bin
 media-gfx/opentoonz
 media-gfx/freecad
@@ -180,8 +179,6 @@ media-libs/libbluray # handbrake
 www-client/palemoon-bin
 x11-misc/i3blocks-gaps
 net-im/telegram-desktop-bin
-media-libs/waifu2x-converter-cpp
-media-libs/opencv # waifu2x-converter-cpp
 app-editors/neovim
 dev-lua/mpack # neovim
 dev-libs/unibilium # neovim
@@ -189,7 +186,6 @@ dev-lua/lpeg # neovim
 dev-libs/msgpack # neovim
 dev-libs/libtermkey #neovim
 dev-libs/libvterm # neovim
-media-libs/l-smash # neovim
 sys-fs/ecryptfs-utils
 media-gfx/maim
 x11-misc/slop # maim
@@ -656,6 +652,8 @@ media-fonts/tewi-font
 media-fonts/gohufont
 media-fonts/fontawesome
 media-libs/vapoursynth
+media-libs/waifu2x-converter-cpp
+media-libs/l-smash
 media-plugins/vapoursynth-vaguedenoiser
 media-plugins/vapoursynth-finesharp
 media-plugins/vapoursynth-bifrost
@@ -744,6 +742,39 @@ media-plugins/vapoursynth-dotkill
 media-plugins/vapoursynth-znedi3
 media-plugins/vapoursynth-remapframes
 media-plugins/vapoursynth-hqdn3d
+media-plugins/vapoursynth-timecube
+media-plugins/vapoursynth-deblockpp7
+media-plugins/vapoursynth-temporalsoften2
+media-plugins/vapoursynth-smoothuv
+media-plugins/vapoursynth-minideen
+media-plugins/vapoursynth-ttempsmooth
+media-plugins/vapoursynth-temporalmedian
+media-plugins/vapoursynth-warpsharpsupport
+media-plugins/vapoursynth-decross
+media-plugins/vapoursynth-motionmask
+media-plugins/vapoursynth-dedot
+media-sound/deadbeef
+media-plugins/deadbeef-plugins-meta
+media-plugins/deadbeef-soxr
+media-plugins/deadbeef-gnome-mmkeys
+media-plugins/deadbeef-replaygain-control
+media-plugins/deadbeef-spectrogram
+media-plugins/deadbeef-musical-spectrum
+media-plugins/deadbeef-quick-search
+media-plugins/deadbeef-statusnotifier
+media-plugins/deadbeef-bookmark-manager
+media-plugins/deadbeef-bs2b
+media-plugins/deadbeef-waveform-seekbar
+media-plugins/deadbeef-vk
+media-plugins/deadbeef-vu-meter
+media-plugins/deadbeef-stereo-widener
+media-plugins/deadbeef-mpris
+media-plugins/deadbeef-jack
+media-plugins/deadbeef-infobar
+media-plugins/deadbeef-librarybrowser
+media-plugins/deadbeef-decast
+media-plugins/deadbeef-fb
+media-plugins/deadbeef-archive-reader
 x11-plugins/wmmand
 x11-plugins/wmbluecpu
 x11-plugins/wmhdplop

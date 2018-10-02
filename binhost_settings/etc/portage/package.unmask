@@ -101,8 +101,28 @@ media-fonts/tewi-font::4nykey
 media-plugins/gimp-plugin-bimp::4nykey
 app-shells/zsh-syntax-highlighting::4nykey
 
-media-plugins/deadbeef-plugins-meta::deadbeef-overlay
 media-sound/deadbeef::deadbeef-overlay
+media-plugins/deadbeef-plugins-meta::deadbeef-overlay
+media-plugins/deadbeef-soxr::deadbeef-overlay
+media-plugins/deadbeef-gnome-mmkeys::deadbeef-overlay
+media-plugins/deadbeef-replaygain-control::deadbeef-overlay
+media-plugins/deadbeef-spectrogram::deadbeef-overlay
+media-plugins/deadbeef-musical-spectrum::deadbeef-overlay
+media-plugins/deadbeef-quick-search::deadbeef-overlay
+media-plugins/deadbeef-statusnotifier::deadbeef-overlay
+media-plugins/deadbeef-bookmark-manager::deadbeef-overlay
+media-plugins/deadbeef-bs2b::deadbeef-overlay
+media-plugins/deadbeef-waveform-seekbar::deadbeef-overlay
+media-plugins/deadbeef-vk::deadbeef-overlay
+media-plugins/deadbeef-vu-meter::deadbeef-overlay
+media-plugins/deadbeef-stereo-widener::deadbeef-overlay
+media-plugins/deadbeef-mpris::deadbeef-overlay
+media-plugins/deadbeef-jack::deadbeef-overlay
+media-plugins/deadbeef-infobar::deadbeef-overlay
+media-plugins/deadbeef-librarybrowser::deadbeef-overlay
+media-plugins/deadbeef-decast::deadbeef-overlay
+media-plugins/deadbeef-fb::deadbeef-overlay
+media-plugins/deadbeef-archive-reader::deadbeef-overlay
 
 media-tv/plex-media-server::fkmclane
 x11-misc/lemonbar::fkmclane
@@ -206,10 +226,9 @@ games-emulation/vbam-libretro::abendbrot
 games-emulation/vba-next-libretro::abendbrot
 games-emulation/yabause-libretro::abendbrot
 
-media-libs/l-smash::vapoursynth
 media-libs/vapoursynth::vapoursynth
 media-libs/waifu2x-converter-cpp::vapoursynth
-media-libs/zimg::vapoursynth
+media-libs/l-smash::vapoursynth
 media-plugins/vapoursynth-addgrain::vapoursynth
 media-plugins/vapoursynth-adjust::vapoursynth
 media-plugins/vapoursynth-autocrop::vapoursynth
@@ -299,3 +318,14 @@ media-plugins/vapoursynth-nnedi3cl::vapoursynth
 media-plugins/vapoursynth-qrcodesource::vapoursynth
 media-plugins/vapoursynth-vine::vapoursynth
 media-plugins/vapoursynth-knlmeanscl::vapoursynth
+media-plugins/vapoursynth-smoothuv::vapoursynth
+media-plugins/vapoursynth-warpsharpsupport::vapoursynth
+media-plugins/vapoursynth-deblockpp7::vapoursynth
+media-plugins/vapoursynth-temporalsoften2::vapoursynth
+media-plugins/vapoursynth-dedot::vapoursynth
+media-plugins/vapoursynth-temporalmedian::vapoursynth
+media-plugins/vapoursynth-decross::vapoursynth
+media-plugins/vapoursynth-ttempsmooth::vapoursynth
+media-plugins/vapoursynth-motionmask::vapoursynth
+media-plugins/vapoursynth-minideen::vapoursynth
+media-plugins/vapoursynth-timecube::vapoursynth
