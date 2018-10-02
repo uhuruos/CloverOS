@@ -79,7 +79,7 @@ media-sound/darkice vorbis mp3
 games-fps/urbanterror server
 media-gfx/krita color-management
 virtual/wine d3d9 staging
-app-emulation/wine-any staging d3d9 s3tc pba -udisks
+app-emulation/wine-any staging d3d9 pba -udisks
 app-admin/sudo -pam -sendmail
 sys-apps/openrc -netifrc -unicode -ncurses -pam
 x11-wm/xmonad -default-term
