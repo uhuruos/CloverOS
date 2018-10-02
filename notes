@@ -13,13 +13,13 @@ fvwm dynamic menu
 --- packages that don't build ---
 
 #doesn't emerge anymore (gcc8)
-rogue telegram-cli subversion ecryptfs-utils tauthon foldingathome synergy vigra w3mimgfb vdr dolphin-libretro agg xen-tools stella openjk-outcast sauerbraten mp3blaster tomahawk citra blender staruml-bin spice-gtk kencfs-plasma
+rogue telegram-cli subversion ecryptfs-utils tauthon foldingathome synergy vigra w3mimgfb vdr dolphin-libretro agg stella openjk-outcast sauerbraten mp3blaster tomahawk citra blender staruml-bin spice-gtk kencfs-plasma
 
 #requires gcc7
 dev-util/nvidia-cuda-sdk
 
 #doesn't emerge
-ungoogled-chromium cinelerra palemoon stumpwm stumpwm-contrib pure-data sequencer64 netsurf gkrellm-plugins alienarena opentoonz
+xen ungoogled-chromium cinelerra palemoon stumpwm stumpwm-contrib pure-data sequencer64 netsurf gkrellm-plugins alienarena opentoonz
 
 #libressl
 tdlib eagle megatools nxplayer murmur makemkv eiskaltdcpp retroshare acme-tiny spyder
