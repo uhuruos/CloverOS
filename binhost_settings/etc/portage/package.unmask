@@ -1,4 +1,5 @@
 media-video/ffmpeg::libressl
+net-libs/nodejs::libressl
 
 app-portage/gentwoo::betagarden
 

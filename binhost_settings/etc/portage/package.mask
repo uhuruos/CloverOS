@@ -41,6 +41,7 @@
 */*::vampire
 */*::vapoursynth
 
+net-libs/nodejs::gentoo
 >=app-emulation/open-vm-tools-10.2 # openssl
 >=sci-biology/foldingathome-7.5
 #>=x11-terms/kitty-0.11 # sphinx
