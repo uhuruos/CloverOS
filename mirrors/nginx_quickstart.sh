@@ -12,7 +12,7 @@ CFLAGS="-Ofast -march=native -flto=4 -pipe -funroll-loops -floop-block -floop-in
 make -j8
 cp -R conf ../nginx/
 cd ..
-wget https://chiru.no/u/nginxtemplate.conf -O nginx/nginx.conf
+wget https://gitgud.io/cloveros/cloveros/raw/master/mirrors/nginxtemplate.conf -O nginx/nginx.conf
 openssl dhparam -out nginx/dhparam.pem 4096
 mkdir nginx/ssl/
 mkdir nginx/logs/
