@@ -68,14 +68,12 @@ case "$choice" in
 			exit 1
 		fi
 
-		sudo rm /usr/portage/packages/Packages &> /dev/null
-
-		sudo eselect profile set "default/linux/amd64/17.0/hardened"
-
 		if [ -d /var/db/pkg/net-p2p/rtorrent-ps-9999/ ]; then
 			sudo emerge -C rtorrent-ps
 			sudo emerge rtorrent
 		fi
+
+		sudo rm /usr/portage/packages/Packages &> /dev/null
 
 		kernel=$(uname -r)
 		if [[ ${kernel: -3} == "gnu" ]]; then
