@@ -1075,9 +1075,9 @@ www-client/dillo
 www-client/elinks
 www-client/falkon
 www-client/firefox
-www-client/firefox-bin
 www-client/google-chrome
 www-client/google-chrome-beta
+www-client/google-chrome-unstable
 www-client/links
 www-client/lynx
 www-client/midori

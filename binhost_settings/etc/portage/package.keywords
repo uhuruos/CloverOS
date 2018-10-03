@@ -50,6 +50,8 @@ media-libs/opusfile
 dev-libs/cyrus-sasl
 
 #keyworded, remove when stable exists
+www-client/google-chrome-unstable
+games-fps/ezquake-bin
 net-misc/megatools
 sys-auth/pam_yubico
 sys-auth/libyubikey # pam_yubico
