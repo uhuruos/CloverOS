@@ -51,10 +51,7 @@ gpg --keyserver hkp://pool.sks-keyservers.net --recv-key "78F5 AC55 A120 07F2 2D
 #genkernel --kernel-config=config.amd64 all
 wget https://cloveros.ga/s/kernel-libre.tar.xz https://cloveros.ga/s/signatures/s/kernel-libre.tar.xz.asc
 gpg --verify kernel-libre.tar.xz.asc kernel-libre.tar.xz
-tar xf kernel-libre.tar.xz
-mv initramfs-genkernel-*-gentoo-gnu kernel-genkernel-*-gentoo-gnu System.map-genkernel-*-gentoo-gnu /boot/
-mkdir /lib/modules/
-mv *-gentoo-gnu/ /lib/modules/
+tar -C / -xf kernel-libre.tar.xz
 rm kernel-libre.tar.xz kernel-libre.tar.xz.asc
 
 emerge grub dhcpcd
