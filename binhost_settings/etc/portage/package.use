@@ -197,7 +197,7 @@ www-client/firefox custom-cflags custom-optimization -wifi system-harfbuzz syste
 www-client/torbrowser custom-cflags custom-optimization system-cairo system-harfbuzz system-icu system-jpeg system-libevent system-libvpx system-sqlite
 mail-client/thunderbird custom-cflags custom-optimization -crypt system-harfbuzz system-icu system-jpeg system-libevent system-libvpx system-sqlite
 www-client/seamonkey custom-cflags custom-optimization -crypt -minimal system-harfbuzz system-icu system-jpeg system-libevent system-libvpx system-sqlite
-www-client/palemoon -official-branding system-cairo system-compress-system-images system-libevent system-nss system-pixman system-sqlite system-vpx
+www-client/palemoon -official-branding -gconf system-cairo system-compress system-images system-libevent system-nss system-pixman system-sqlite system-vpx
 media-sound/sox alsa openmp encode flac id3tag ladspa mad ogg opus sndfile twolame wavpack
 net-analyzer/rrdtool perl graph
 media-sound/lmms alsa fluidsynth ogg portaudio sdl stk qt5
