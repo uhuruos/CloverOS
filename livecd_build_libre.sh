@@ -28,8 +28,7 @@ cat << EOF | chroot .
 
 emerge-webrsync
 eselect profile set "default/linux/amd64/17.0/hardened"
-
-PORTAGE_BINHOST="https://cloveros.ga" ACCEPT_KEYWORDS="**" emerge -1G --jobs=8 aria2 portage python:2.7 python:3.6 openssh iputils wget curl
+PORTAGE_BINHOST="https://cloveros.ga" ACCEPT_KEYWORDS="**" emerge -1G aria2 portage python:2.7 python:3.6 openssh iputils wget curl
 
 echo '
 CFLAGS="-O3 -march=native -pipe -funroll-loops -floop-block -floop-interchange -floop-strip-mine -ftree-loop-distribution"
