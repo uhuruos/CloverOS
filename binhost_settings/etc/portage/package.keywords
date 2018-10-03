@@ -50,6 +50,17 @@ media-libs/opusfile
 dev-libs/cyrus-sasl
 
 #keyworded, remove when stable exists
+net-misc/megatools
+sys-auth/pam_yubico
+sys-auth/libyubikey # pam_yubico
+sys-auth/ykpers # pam_yubico
+sys-auth/ykclient # pam_yubico
+app-admin/keepassxc
+app-crypt/argon2 # keepassxc
+app-admin/passwordsafe
+app-shells/zsh-syntax-highlighting
+app-crypt/kbfs
+app-crypt/keybase
 www-client/ungoogled-chromium
 app-shells/loksh
 sys-apps/nvme-cli
@@ -91,7 +102,6 @@ media-libs/libmonome # guitarix
 media-libs/zita-resampler # guitarix
 media-sound/bitwig-studio
 media-sound/cadence
-media-sound/ladish
 media-sound/mididings
 media-sound/setbfree
 media-sound/sequencer64
@@ -103,8 +113,6 @@ media-sound/samplv1
 x11-themes/wm-icons
 app-misc/anki
 media-sound/mumble **
-media-sound/murmur **
-net-im/tdlib
 games-util/vitamtp-fork
 dev-util/lldb
 sys-devel/lld
@@ -126,8 +134,6 @@ dev-util/plan9port
 net-vpn/i2p
 dev-util/vmtouch
 app-arch/zpaq
-media-video/makemkv
-app-arch/defluff
 games-fps/ezquake-bin
 media-sound/spek
 media-sound/ardour
@@ -138,10 +144,6 @@ media-libs/avidemux-plugins # avidemux
 media-libs/avidemux-core # avidemux
 games-emulation/ppsspp
 games-emulation/pcsxr
-media-video/openshot
-net-libs/cppzmq # openshot
-media-libs/libopenshot # openshot
-media-libs/libopenshot-audio # openshot
 media-sound/lmms
 media-libs/stk # lmms
 media-plugins/calf # lmms
@@ -152,7 +154,6 @@ net-libs/tox
 net-im/qtox
 games-engines/openmw
 sci-physics/bullet # openmw
-media-sound/denemo
 sci-calculators/tiemu
 sci-libs/libticonv # tiemu
 sci-libs/libticalcs2 # tiemu
@@ -162,11 +163,9 @@ media-sound/supercollider
 games-util/steam-launcher
 net-im/discord-bin
 media-gfx/opentoonz
-media-gfx/freecad
 media-sound/mp3splt
 net-analyzer/metasploit **
 games-roguelike/dwarf-fortress
-games-fps/lsdldoom **
 games-fps/tribes2 **
 games-fps/wolfgl **
 www-client/qutebrowser
@@ -175,8 +174,6 @@ sys-power/phc-intel
 x11-terms/termite::eroen
 x11-libs/vte::eroen # termite
 media-video/handbrake
-media-libs/libbluray # handbrake
-www-client/palemoon-bin
 x11-misc/i3blocks-gaps
 net-im/telegram-desktop-bin
 app-editors/neovim
@@ -196,8 +193,6 @@ net-libs/NativeThread # freenet
 media-sound/tomahawk
 dev-cpp/websocketpp # tomahawk
 media-video/obs-studio
-media-sound/oss
-media-sound/oss-driver # oss
 app-emulation/open-vm-tools
 dev-libs/xml-security-c # open-vm-tools
 sci-calculators/calcoo
@@ -207,7 +202,6 @@ www-servers/onionshare
 net-libs/stem # onionshare
 app-emacs/emms
 games-roguelike/nethack
-app-crypt/acme-tiny
 www-client/midori
 sys-apps/qdirstat
 www-client/torbrowser
@@ -224,7 +218,7 @@ net-misc/python-x2go # pyhoca-gui
 net-misc/pyhoca-cli
 app-crypt/veracrypt
 net-analyzer/ntopng
-net-libs/nDPI # ntopng
+=net-libs/nDPI-2.0 # ntopng
 app-emulation/fuse
 app-emulation/libspectrum # fuse
 app-laptop/tlp
@@ -236,13 +230,13 @@ dev-util/staruml-bin
 media-gfx/w3mimgfb
 dev-libs/amdgpu-pro-opencl
 sys-apps/ripgrep
-media-sound/puddletag
 sci-biology/foldingathome
 app-arch/brotli
 net-vpn/zeronet
 dev-db/rethinkdb
 dev-libs/jemalloc # rethinkdb
 www-client/waterfox-bin
+www-client/palemoon **
 net-p2p/go-ipfs-bin
 media-sound/beets
 dev-python/discogs-client # beets
@@ -265,7 +259,6 @@ games-arcade/tecnoballz
 games-emulation/snes9x
 games-emulation/generator
 games-fps/doomsday
-games-fps/doomsday-resources
 games-board/pychess
 games-board/sjeng
 games-board/phalanx
@@ -277,7 +270,6 @@ games-arcade/blobby
 games-action/supertuxkart
 games-roguelike/rogue
 games-board/xboard
-games-emulation/gfceux
 games-strategy/freeciv
 games-fps/avp
 games-fps/xonotic
@@ -320,42 +312,34 @@ games-emulation/mupen64plus-input-sdl # mupen64plus
 games-emulation/m64py # mupen64plus
 dev-python/PySDL2 # m64py
 games-emulation/sdlmame
-net-p2p/eiskaltdcpp **
 sys-block/sas3flash
 app-crypt/kencfs-plasma
-games-emulation/rpcs3 **
+games-emulation/rpcs3
 games-emulation/citra **
 dev-libs/sway
 dev-libs/wlc # sway
 x11-terms/lilyterm
-net-misc/megatools
 games-emulation/vgba **
 games-emulation/lxdream
-games-emulation/raine **
 games-emulation/zinc
 games-emulation/nestopia
 games-emulation/gngb **
-games-emulation/xe
 games-emulation/hatari
-games-emulation/kigb **
 games-emulation/mekanix **
 games-emulation/gens **
 games-emulation/stella
 games-emulation/gambatte
-games-emulation/hugo **
 games-emulation/nestra
 games-emulation/daphne
 games-emulation/emutos
 games-emulation/gngeo
 games-emulation/fceux
-net-misc/nxplayer
 x11-misc/lemonbar
 sys-firmware/nvidia-firmware
 media-video/flowblade
 media-gfx/gmic # flowblade
 media-sound/sidplayfp
 media-libs/libsidplayfp # sidplayfp
-media-sound/libvisual-projectm-alsa
 media-sound/audacious
 media-plugins/audacious-plugins
 media-sound/coquillo
@@ -363,7 +347,6 @@ media-gfx/phototonic
 media-sound/bempc
 media-sound/qtractor
 media-sound/protux
-net-misc/clipgrab
 net-wireless/broadcom-sta
 x11-plugins/gkrellm-countdown
 dev-util/nvidia-cuda-sdk
@@ -386,11 +369,9 @@ dev-perl/LWP-UserAgent-Determined # otrs
 dev-libs/log4cplus
 media-gfx/openvdb
 x11-drivers/amdgpu-pro
-games-emulation/kega-fusion
 media-sound/ezstream
 x11-themes/arc-theme
 sys-libs/libixp # wmii
-www-client/uzbl **
 media-gfx/qiv
 sys-fs/go-mtpfs **
 dev-libs/go-fuse # go-mtpfs
@@ -422,7 +403,6 @@ dev-go/go-tools # consul
 app-admin/go-updater
 dev-go/goversion # go-updater
 app-editors/wxhexeditor
-app-admin/clsync
 app-arch/tardelta
 dev-python/cgroup-utils
 app-misc/ddccontrol
@@ -433,6 +413,7 @@ app-misc/icdiff
 app-portage/diffmask
 app-portage/fquery
 app-mobilephone/wammu
+dev-python/python-gammu # wammu
 app-portage/gpyutils
 dev-util/android-sdk-update-manager
 dev-python/py-cpuinfo
@@ -446,6 +427,7 @@ dev-java/android-util
 app-shells/rust-zshcomp
 app-shells/tmux-bash-completion **
 app-text/extract_url
+dev-perl/URI-Find # extract_url
 dev-util/lxqt-build-tools
 dev-util/visual-regexp
 kde-misc/kio-locate
@@ -468,7 +450,6 @@ media-video/gnome-mpv
 media-video/libva-utils
 media-video/shotcut
 net-im/telegram-cli
-x11-plugins/telegram-purple
 net-misc/gerbera
 dev-lang/duktape # gerbera
 net-libs/libupnp # gerbera
@@ -503,7 +484,6 @@ dev-libs/input-pad
 app-i18n/ibus-unikey
 app-i18n/ibus-chewing
 app-i18n/libkkc
-app-i18n/ibus-tutcode
 games-fps/openjk-outcast **
 games-fps/openjk-academy **
 games-fps/openjk-academy-mp **
@@ -522,17 +502,18 @@ dev-python/pyqt-distutils
 dev-python/pytest-cython
 dev-util/glslang
 dev-util/monodevelop
-dev-util/spirv-cross
+dev-dotnet/nuget
+dev-dotnet/xdt-for-monodevelop # monodevelop
+dev-dotnet/referenceassemblies-pcl # monodevelop
+www-servers/xsp # monodevelop
 x11-themes/kvantum
 x11-themes/smplayer-skins
 games-util/qjoypad
 games-util/joystick
-media-tv/emby-server
 media-gfx/ephoto
 app-crypt/hashcat
 net-print/hplip
 net-print/hplip-plugin
-games-emulation/melonds
 media-gfx/nip2
 media-libs/vips # nip2
 net-print/cnijfilter2
@@ -543,7 +524,6 @@ media-libs/svgalib **
 games-util/rejoystick
 games-emulation/advancemame
 games-emulation/advancescan
-games-emulation/advancemenu
 games-misc/ckmame
 x11-misc/enlightenment-extra
 sci-mathematics/rstudio
@@ -598,7 +578,6 @@ x11-wm/qtile
 x11-wm/notion
 x11-wm/wmfs
 x11-wm/xoat **
-x11-wm/vtwm **
 x11-wm/subtle
 x11-wm/wmii
 x11-wm/i3-gaps
@@ -777,15 +756,12 @@ media-plugins/deadbeef-decast
 media-plugins/deadbeef-fb
 media-plugins/deadbeef-archive-reader
 x11-plugins/wmmand
-x11-plugins/wmbluecpu
 x11-plugins/wmhdplop
 x11-plugins/wmbio
 x11-plugins/wmdiskmon
 x11-plugins/wmsystemtray
-x11-plugins/wmmemfree
 x11-plugins/wmcalendar
 x11-plugins/wmmp3
-x11-plugins/wmpiki **
 x11-plugins/wmxkb
 x11-plugins/wmlongrun **
 x11-plugins/asapm
@@ -793,13 +769,8 @@ x11-plugins/wmlife
 x11-plugins/wmrecord **
 x11-plugins/wmgrabimage
 x11-plugins/wmmixer **
-x11-plugins/wmsvencd **
 x11-plugins/wmwork
 x11-plugins/wmtime
-x11-plugins/wmcpu **
-x11-plugins/wmlaptop
-x11-plugins/wmsound **
-x11-plugins/wmjsql **
 x11-plugins/wmXName **
 x11-plugins/wmgtemp
 x11-plugins/wmstickynotes
@@ -807,63 +778,14 @@ x11-plugins/wmcdplay
 x11-plugins/wmrack
 x11-plugins/wmxres
 x11-plugins/wmmisc
-x11-plugins/wmwave **
 x11-plugins/wmacpimon **
 x11-plugins/wmforkplop
-x11-plugins/wmlpq
 x11-plugins/wmacpiload-ac
 x11-plugins/wmbatteries **
 x11-plugins/wmping
 x11-plugins/wmamixer
 xfce-extra/xfce4-gvfs-mount
 xfce-extra/eatmonkey
-xfce-extra/xfce-theme-manager
 xfce-extra/xfce4-alsa-plugin
 xfce-extra/multiload-nandhp
 xfce-extra/xfce4-composite-editor
-
-#to be organized
-
-#yubikey applications
-#pam_yubico
-sys-auth/pam_yubico
-sys-auth/libyubikey
-sys-auth/ykpers
-sys-auth/ykclient
-#passwordsafe
-app-admin/passwordsafe
-#keepassxc
-app-admin/keepassxc
-app-crypt/argon2
-
-# required by app-admin/clsync-0.4.2::gentoo
-# required by app-admin/clsync (argument)
-=app-doc/clsync-docs-0.4.2 ~amd64
-
-# required by app-text/extract_url-1.6.2::gentoo
-# required by app-text/extract_url (argument)
-=dev-perl/URI-Find-20160806.0.0 ~amd64
-
-# required by app-mobilephone/wammu-0.44::gentoo
-# required by app-mobilephone/wammu (argument)
-=dev-python/python-gammu-2.11 ~amd64
-
-=dev-dotnet/nuget-2.8.7-r3
-=app-shells/zsh-syntax-highlighting-0.6.0
-
-# required by dev-dotnet/nuget-2.8.7-r3::dotnet
-# required by nuget (argument)
-=dev-dotnet/xdt-for-monodevelop-2.8.1-r2 ~amd64
-
-# required by dev-util/monodevelop-6.0.0.4761::dotnet
-# required by monodevelop (argument)
-=dev-dotnet/referenceassemblies-pcl-4.6 ~amd64
-
-# required by dev-util/monodevelop-6.0.0.4761::dotnet
-# required by monodevelop (argument)
-=www-servers/xsp-2014.12-r2014120900 ~amd64
-
-# required by kbfs (argument)
-=app-crypt/kbfs-1.0.44 ~amd64
-# required by keybase (argument)
-=app-crypt/keybase-1.0.44 ~amd64

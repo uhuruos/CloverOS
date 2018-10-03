@@ -82,10 +82,8 @@ virtual/wine d3d9 staging
 app-emulation/wine-any staging d3d9 pba -udisks
 app-admin/sudo -pam -sendmail
 sys-apps/openrc -netifrc -unicode -ncurses -pam
-net-misc/iputils -filecaps
 x11-wm/xmonad -default-term
 sys-block/gparted btrfs dmraid f2fs fat -hfs jfs mdadm ntfs reiserfs reiser4 xfs cryptsetup udf
-dev-python/django-two-factor-auth yubikey
 app-admin/keepassxc yubikey
 sys-apps/iproute2 -minimal
 x11-wm/icewm -minimal
@@ -93,7 +91,6 @@ app-admin/passwordsafe -minimal yubikey
 dev-lang/R -minimal X cairo
 sys-apps/smartmontools -minimal
 sys-libs/ncurses -minimal
-media-fonts/acroread-asianfonts -minimal
 app-editors/vim nls -minimal python
 app-editors/vim-core nls -minimal
 dev-util/google-perftools -minimal
@@ -196,12 +193,11 @@ media-libs/phonon -vlc
 app-crypt/hashcat custom-cflags
 media-libs/libsdl custom-cflags X
 www-client/chromium custom-cflags
-www-client/ungoogled-chromium custom-cflags
 www-client/firefox custom-cflags custom-optimization -wifi system-harfbuzz system-icu system-jpeg system-libevent system-libvpx system-sqlite
-www-client/firefox::bobwya kde -egl -bindist
 www-client/torbrowser custom-cflags custom-optimization system-cairo system-harfbuzz system-icu system-jpeg system-libevent system-libvpx system-sqlite
 mail-client/thunderbird custom-cflags custom-optimization -crypt system-harfbuzz system-icu system-jpeg system-libevent system-libvpx system-sqlite
 www-client/seamonkey custom-cflags custom-optimization -crypt -minimal system-harfbuzz system-icu system-jpeg system-libevent system-libvpx system-sqlite
+www-client/palemoon -official-branding system-cairo system-compress-system-images system-libevent system-nss system-pixman system-sqlite system-vpx
 media-sound/sox alsa openmp encode flac id3tag ladspa mad ogg opus sndfile twolame wavpack
 net-analyzer/rrdtool perl graph
 media-sound/lmms alsa fluidsynth ogg portaudio sdl stk qt5
@@ -213,7 +209,6 @@ net-fs/cifs-utils -acl -ads -caps caps-ng
 media-sound/mpd sid sqlite alsa bzip2 curl ffmpeg fifo flac glib icu id3tag inotify mad network ogg opus tcpd unicode vorbis adplug ao audiofile cdio expat faad fluidsynth gme lame libsamplerate libsoxr mikmod mms modplug mp4v2 mpg123 musepack pipe recorder sndfile soundcloud twolame wavpack wildmidi zip libmpdclient
 media-sound/flacon aac opus vorbis qt5 flac mac mp3 mp4 ogg replaygain tta wavpack
 media-sound/cmus ffmpeg alsa mad unicode aac ao cddb cdio cue discid examples flac mikmod modplug mp4 musepack opus vorbis wavpack wma zsh-completion
-media-sound/puddletag cover acoustid musicbrainz -quodlibet
 media-sound/streamripper vorbis
 net-ftp/lftp verify-file
 app-misc/recoll inotify
@@ -249,7 +244,6 @@ media-libs/gd truetype fontconfig # required by amule vnstat gnuplot graphviz
 sys-apps/xdg-desktop-portal-gtk X
 x11-libs/gtk+ X
 x11-libs/libva X
-x11-libs/libXfont X freetype
 dev-cpp/gtkmm X
 x11-libs/gdk-pixbuf X
 media-libs/flac ogg
@@ -345,16 +339,14 @@ net-voip/telepathy-gabble gnutls
 net-libs/nodejs bundled-ssl
 
 #wine
-x11-libs/libXinerama abi_x86_32
 x11-base/xcb-proto abi_x86_32
+x11-libs/libXinerama abi_x86_32
 sys-devel/llvm abi_x86_32
 x11-libs/libXext abi_x86_32
 virtual/libelf abi_x86_32
 x11-libs/libva-vdpau-driver abi_x86_32
 x11-libs/libva abi_x86_32
-x11-proto/glproto abi_x86_32
 virtual/libintl abi_x86_32
-x11-proto/dri2proto abi_x86_32
 x11-libs/libva-intel-driver abi_x86_32
 dev-libs/glib abi_x86_32
 net-libs/gnutls abi_x86_32
@@ -368,50 +360,36 @@ x11-libs/libxcb abi_x86_32
 x11-libs/libXdamage abi_x86_32
 x11-libs/libvdpau abi_x86_32
 sys-devel/clang abi_x86_32
-x11-proto/presentproto abi_x86_32
 sys-apps/util-linux abi_x86_32
 media-libs/libpng abi_x86_32
 dev-libs/libpcre abi_x86_32
 dev-libs/libxslt abi_x86_32
 dev-libs/libgpg-error abi_x86_32
-x11-proto/dri3proto abi_x86_32
 x11-libs/libXv abi_x86_32
 dev-libs/libtasn1 abi_x86_32
-x11-proto/kbproto abi_x86_32
 dev-libs/libxml2 abi_x86_32
-x11-proto/inputproto abi_x86_32
 sys-libs/zlib abi_x86_32
 virtual/glu abi_x86_32
 dev-libs/libgcrypt abi_x86_32
 x11-libs/libdrm abi_x86_32
 dev-libs/libffi abi_x86_32
-x11-proto/xineramaproto abi_x86_32
-x11-proto/compositeproto abi_x86_32
 x11-libs/libXrender abi_x86_32
-x11-proto/xf86vidmodeproto abi_x86_32
 x11-libs/libX11 abi_x86_32
 media-libs/alsa-lib abi_x86_32
 dev-util/pkgconfig abi_x86_32
 app-emulation/wine-gecko abi_x86_32
 x11-libs/libxshmfence abi_x86_32
-x11-proto/fixesproto abi_x86_32
 dev-libs/libunistring abi_x86_32
-x11-proto/randrproto abi_x86_32
-x11-proto/xf86driproto abi_x86_32
 x11-libs/libXxf86vm abi_x86_32
 virtual/libiconv abi_x86_32
 media-libs/glu abi_x86_32
-x11-proto/videoproto abi_x86_32
 dev-libs/wayland abi_x86_32
 app-arch/bzip2 abi_x86_32
 media-libs/libjpeg-turbo abi_x86_32
 media-libs/libomxil-bellagio abi_x86_32
 x11-libs/libpciaccess abi_x86_32
-x11-proto/renderproto abi_x86_32
 net-dns/libidn2 abi_x86_32
-x11-proto/damageproto abi_x86_32
 virtual/opengl abi_x86_32
-x11-proto/xproto abi_x86_32
 dev-libs/nettle abi_x86_32
 sys-libs/ncurses:0 abi_x86_32
 x11-libs/libXvMC abi_x86_32
@@ -425,8 +403,6 @@ media-libs/fontconfig abi_x86_32
 dev-libs/expat abi_x86_32
 media-libs/freetype abi_x86_32
 x11-libs/libXcursor abi_x86_32
-x11-proto/xextproto abi_x86_32
-x11-proto/xf86bigfontproto abi_x86_32
 virtual/libffi abi_x86_32
 media-libs/libtxc_dxtn abi_x86_32
 x11-libs/libXfixes abi_x86_32

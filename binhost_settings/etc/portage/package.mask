@@ -24,8 +24,7 @@
 */*::jorgicio
 */*::libressl
 */*::linxon
-*/*::lukejr
-*/*::palemoon
+*/*::luke-jr
 */*::pentoo
 */*::pinkpieea
 */*::poly-c
@@ -40,17 +39,16 @@
 */*::torbrowser
 */*::vampire
 */*::vapoursynth
+*/*::zyrenth
 
 net-libs/nodejs::gentoo
+>=sys-apps/openrc-0.38.2
 >=app-emulation/open-vm-tools-10.2 # openssl
 >=sci-biology/foldingathome-7.5
-#>=x11-terms/kitty-0.11 # sphinx
 >=media-gfx/qimgv-0.7 # qt5.11
 >=kde-apps/kamoso-18.08 # qt5.11
 >=sys-devel/lld-7.0.0 # llvm7
 >=dev-util/lldb-7.0.0 # llvm7
->=www-client/chromium-69.0.3497.100 # llvm7
 >=sys-devel/clang-runtime-7.0.0
 >=sys-devel/clang-7.0.0
 >=sys-libs/compiler-rt-7.0.0
->=sys-apps/openrc-0.38.2

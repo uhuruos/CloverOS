@@ -233,7 +233,6 @@ dev-db/dbeaver-bin
 dev-db/postgresql
 dev-db/redis
 dev-db/rethinkdb
-dev-dotnet/nuget
 dev-games/ogre
 dev-games/openscenegraph
 dev-haskell/haskell-platform
@@ -893,6 +892,7 @@ net-misc/gerbera
 net-misc/gofish
 net-misc/icecast
 net-misc/kafka-bin
+net-misc/megatools
 net-misc/mosh
 net-misc/ntp
 net-misc/proxychains
@@ -1081,7 +1081,6 @@ www-client/google-chrome-beta
 www-client/links
 www-client/lynx
 www-client/midori
-www-client/palemoon-bin
 www-client/qutebrowser
 www-client/seamonkey
 www-client/surf
