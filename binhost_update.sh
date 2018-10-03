@@ -14,7 +14,7 @@ emerge -1 --buildpkg $(find /var/db/pkg/ -mindepth 2 -maxdepth 2 -name \*-9999 |
 
 cd /usr/portage/packages/s/
 php website.php
-EIX_LIMIT=0 eix --installed -F | grep -v "Available versions" | ansi2html > packages.html
+EIX_LIMIT=0 eix -IF | grep -v "Available versions" | ansi2html > packages.html
 
 rm -Rf /usr/portage/packages/s/signatures/
 mkdir -p /usr/portage/packages/s/signatures/
