@@ -224,6 +224,7 @@ net-misc/python-x2go # pyhoca-gui
 net-misc/pyhoca-cli
 app-crypt/veracrypt
 net-analyzer/ntopng
+net-libs/nDPI # ntopng
 app-emulation/fuse
 app-emulation/libspectrum # fuse
 app-laptop/tlp

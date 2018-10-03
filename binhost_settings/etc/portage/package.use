@@ -82,6 +82,7 @@ virtual/wine d3d9 staging
 app-emulation/wine-any staging d3d9 pba -udisks
 app-admin/sudo -pam -sendmail
 sys-apps/openrc -netifrc -unicode -ncurses -pam
+net-misc/iputils -filecaps
 x11-wm/xmonad -default-term
 sys-block/gparted btrfs dmraid f2fs fat -hfs jfs mdadm ntfs reiserfs reiser4 xfs cryptsetup udf
 dev-python/django-two-factor-auth yubikey
