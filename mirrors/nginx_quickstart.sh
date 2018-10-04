@@ -30,5 +30,5 @@ rm acme_tiny.py
 sudo nginx-*/objs/nginx -p $(pwd)/nginx -c nginx.conf -s reload
 #renew certificate end
 sudo pkill nginx
-sed -ri 's/#(ssl_certificate.*;)/\1/; s/#(listen 443 ssl http2;)/\1/' nginxtemplate.conf
+sed -ri 's/#(ssl_certificate.*;)/\1/; s/#(listen 443 ssl http2;)/\1/' nginx/nginx.conf
 sudo nginx-*/objs/nginx -p $(pwd)/nginx -c nginx.conf
