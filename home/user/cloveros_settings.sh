@@ -68,6 +68,12 @@ case "$choice" in
 			exit 1
 		fi
 
+#                newmakeconf=$(curl -s $gitprefix/home/user/make.conf | grep -E "^(binhost_mirrors=|FETCHCOMMAND_HTTPS=)")
+#		binhostmirrors=
+#		fetchcommand=
+#		if ! grep -q "$fetchcommand" /etc/portage/make.conf; then
+#		fi
+
 		if [ -d /var/db/pkg/net-p2p/rtorrent-ps-9999/ ]; then
 			sudo emerge -C rtorrent-ps
 			sudo emerge rtorrent
@@ -288,17 +294,21 @@ case "$choice" in
 		;;
 
 	c)
-		backupportagedir=backupportage$(< /dev/urandom tr -dc 0-9 | head -c 8)
-		sudo mkdir ~/$backupportagedir
-		sudo mv /etc/portage/package.use /etc/portage/package.mask /etc/portage/package.keywords /etc/portage/package.env /etc/portage/package.unmask ~/$backupportagedir
-		sudo wget $gitprefix/binhost_settings/etc/portage/package.use $gitprefix/binhost_settings/etc/portage/package.keywords $gitprefix/binhost_settings/etc/portage/package.env $gitprefix/binhost_settings/etc/portage/package.mask $gitprefix/binhost_settings/etc/portage/package.unmask -P /etc/portage/
-		sudo rm -R /etc/portage/env/
-		sudo mkdir /etc/portage/env/
-		sudo wget $gitprefix/binhost_settings/etc/portage/env/no-lto $gitprefix/binhost_settings/etc/portage/env/no-lto-graphite $gitprefix/binhost_settings/etc/portage/env/no-lto-graphite-ofast $gitprefix/binhost_settings/etc/portage/env/no-lto-o3 $gitprefix/binhost_settings/etc/portage/env/no-lto-ofast $gitprefix/binhost_settings/etc/portage/env/no-o3 $gitprefix/binhost_settings/etc/portage/env/no-ofast $gitprefix/binhost_settings/etc/portage/env/size $gitprefix/binhost_settings/etc/portage/env/no-gcc -P /etc/portage/env/
+		portageworkdir=portageworkdir$(< /dev/urandom tr -dc 0-9 | head -c 8)
+		mkdir -p $portageworkdir/env/
+		wget $gitprefix/binhost_settings/etc/portage/package.use $gitprefix/binhost_settings/etc/portage/package.keywords $gitprefix/binhost_settings/etc/portage/package.env $gitprefix/binhost_settings/etc/portage/package.mask $gitprefix/binhost_settings/etc/portage/package.unmask -P $portageworkdir/
+		wget $gitprefix/binhost_settings/etc/portage/env/no-lto $gitprefix/binhost_settings/etc/portage/env/no-lto-graphite $gitprefix/binhost_settings/etc/portage/env/no-lto-graphite-ofast $gitprefix/binhost_settings/etc/portage/env/no-lto-o3 $gitprefix/binhost_settings/etc/portage/env/no-lto-ofast $gitprefix/binhost_settings/etc/portage/env/no-o3 $gitprefix/binhost_settings/etc/portage/env/no-ofast $gitprefix/binhost_settings/etc/portage/env/size $gitprefix/binhost_settings/etc/portage/env/no-gcc -P $portageworkdir/env/
+		if [[ $(find -type f | wc -l) == "14" ]]; then
+			backupportagedir=backupportage$(< /dev/urandom tr -dc 0-9 | head -c 8)
+			mkdir $backupportagedir
+			sudo mv /etc/portage/package.use /etc/portage/package.mask /etc/portage/package.keywords /etc/portage/package.env /etc/portage/package.unmask /etc/portage/env/ $backupportagedir
+			sudo mv $portageworkdir/* /etc/portage/
+		fi
 		useflags=$(curl -s $gitprefix/binhost_settings/etc/portage/make.conf | grep "^USE=")
 		if ! grep -q "$useflags" /etc/portage/make.conf; then
 			echo $useflags | sudo tee --append /etc/portage/make.conf > /dev/null
 		fi
+		rm -R $portageworkdir
 		echo -e "\nPortage configuration now mirrors binhost Portage configuration. Previous Portage config stored in ~/$backupportagedir"
 		;;
 
