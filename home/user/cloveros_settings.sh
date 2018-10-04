@@ -1,5 +1,4 @@
 #!/bin/bash
-
 gitprefix="https://gitgud.io/cloveros/cloveros/raw/master"
 
 cd $( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )
@@ -40,8 +39,8 @@ case "$choice" in
 	1)
 		wget $gitprefix/home/user/cloveros_settings.sh -O cloveros_settings.new.sh
 		if [[ -s cloveros_settings.new.sh ]]; then
-			chmod +x cloveros_settings.new.sh
 			mv cloveros_settings.new.sh cloveros_settings.sh
+			chmod +x cloveros_settings.sh
 			echo -e "\ncloveros_settings.sh is now updated. (~/cloveros_settings.sh)"
 		else
 			echo -e "\nCould not retrieve file. Please connect to the Internet or try again."
@@ -67,12 +66,6 @@ case "$choice" in
 			echo "Please enable binaries."
 			exit 1
 		fi
-
-#		newmakeconf=$(curl -s $gitprefix/home/user/make.conf | grep -E "^(binhost_mirrors=|FETCHCOMMAND_HTTPS=)")
-#		binhostmirrors=
-#		fetchcommand=
-#		if ! grep -q "$fetchcommand" /etc/portage/make.conf; then
-#		fi
 
 		if [ -d /var/db/pkg/net-p2p/rtorrent-ps-9999/ ]; then
 			sudo emerge -C rtorrent-ps
@@ -128,25 +121,17 @@ case "$choice" in
 		if grep -q 'EMERGE_DEFAULT_OPTS=".* -G"' /etc/portage/make.conf; then
 			sudo sed -i 's/EMERGE_DEFAULT_OPTS="\(.*\) -G"/EMERGE_DEFAULT_OPTS="\1"/' /etc/portage/make.conf
 			sudo sed -i 's/^ACCEPT_KEYWORDS="\*\*"/#ACCEPT_KEYWORDS="\*\*"/' /etc/portage/make.conf
-			sudo sed -i 's/^FETCHCOMMAND_HTTPS=/#FETCHCOMMAND_HTTPS=/' /etc/portage/make.conf
+			sudo sed -i "s/^FETCHCOMMAND_HTTPS=/#FETCHCOMMAND_HTTPS=/" /etc/portage/make.conf
 			echo -e "\nemerge will now install from source. (/etc/portage/make.conf)\nUse ./cloveros_settings.sh c to copy binhost Portage configuration"
 		else
 			sudo sed -i 's/EMERGE_DEFAULT_OPTS="\(.*\)"/EMERGE_DEFAULT_OPTS="\1 -G"/' /etc/portage/make.conf
 			sudo sed -i 's/^#ACCEPT_KEYWORDS="\*\*"/ACCEPT_KEYWORDS="\*\*"/' /etc/portage/make.conf
-			sudo sed -i 's/^#FETCHCOMMAND_HTTPS=/FETCHCOMMAND_HTTPS=/' /etc/portage/make.conf
+			sudo sed -i "s/^#FETCHCOMMAND_HTTPS=/FETCHCOMMAND_HTTPS=/" /etc/portage/make.conf
 			echo -e "\nemerge will now install from binary. (/etc/portage/make.conf)"
 		fi
 		;;
 
 	6)
-                wget $gitprefix/home/user/cloveros_settings.sh -O cloveros_settings.new.sh
-		if [[ -s cloveros_settings.new.sh ]]; then
-			chmod +x cloveros_settings.new.sh
-			mv cloveros_settings.new.sh cloveros_settings.sh
-		else
-			echo -e "\nCould not retrieve file. Please connect to the Internet or try again."
-			exit 1
-		fi
 		backupdir=backup$(< /dev/urandom tr -dc 0-9 | head -c 8)
 		mkdir $backupdir
 		mv .bash_profile .zprofile .zshrc .fvwm2rc .Xdefaults wallpaper.png .xbindkeysrc screenfetch-dev bl.sh stats.sh rotate_screen.sh .emacs .emacs.d/ .rtorrent.rc .mpv .config/nitrogen/ .config/spacefm/ .config/mimeapps.list .local/share/nomacs/ $backupdir/
@@ -167,6 +152,7 @@ case "$choice" in
 		cp /usr/share/applications/{firefox.desktop,smplayer.desktop,emacs.desktop,zzz-gimp.desktop,porthole.desktop,xarchiver.desktop} Desktop/
 		echo -e "~rows=0\n1=home.desktop\n2=applications.desktop\n3=firefox.desktop\n4=smplayer.desktop\n5=emacs.desktop\n6=porthole.desktop\n7=zzz-gimp.desktop\n8=xarchiver.desktop" > .config/spacefm/desktop0
 		echo -e "\nConfiguration updated to new CloverOS defaults, old settings are moved to ~/$backupdir/ (~)"
+		./cloveros_settings.sh 1
 		;;
 
 	7)
@@ -250,8 +236,7 @@ case "$choice" in
 				;;
 
 			*)
-				echo "Invalid option: $choicealsa" >&2
-				exit 1
+				echo "Invalid option: $choicealsa"
 				;;
 		esac
 		;;
@@ -323,7 +308,6 @@ case "$choice" in
 			echo "/etc/portage/make.conf is now default Previous make.conf saved to $backupmakeconf"
 		else
 			echo -e "\nCould not retrieve file. Please connect to the Internet or try again."
-			exit 1
 		fi
 		;;
 
@@ -397,7 +381,6 @@ case "$choice" in
 		;;
 
 	*)
-		echo "Invalid option: $choice" >&2
-		exit 1
+		echo "Invalid option: $choice"
 		;;
 esac
