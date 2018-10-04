@@ -16,7 +16,7 @@ wget https://gitgud.io/cloveros/cloveros/raw/master/mirrors/nginxtemplate.conf -
 openssl dhparam -out nginx/dhparam.pem 4096
 mkdir nginx/ssl/
 mkdir nginx/logs/
-sed -i 's@ssl_certificate ssl/certificate.crt;@#ssl_certificate ssl/certificate.crt;@; s@ssl_certificate_key ssl/certificate.key;@#ssl_certificate_key ssl/certificate.key;@' nginx/nginx.conf
+sed -ri 's/(ssl_certificate.*;)/#\1/; s/(listen 443 ssl http2;)/#\1/' nginx/nginx.conf
 sudo nginx-*/objs/nginx -p nginx -c nginx.conf
 mkdir -p /var/www/html/.well-known/acme-challenge/
 openssl genrsa 4096 > nginx/ssl/account.key
@@ -29,6 +29,6 @@ chmod +x acme_tiny.py
 rm acme_tiny.py
 sudo nginx-*/objs/nginx -p $(pwd)/nginx -c nginx.conf -s reload
 #renew certificate end
-sed -i 's@#ssl_certificate ssl/certificate.crt;@ssl_certificate ssl/certificate.crt;@; s@#ssl_certificate_key ssl/certificate.key;@ssl_certificate_key ssl/certificate.key;@' nginx/nginx.conf
 sudo pkill nginx
+sed -ri 's/#(ssl_certificate.*;)/\1/; s/#(listen 443 ssl http2;)/\1/' nginxtemplate.conf
 sudo nginx-*/objs/nginx -p $(pwd)/nginx -c nginx.conf
