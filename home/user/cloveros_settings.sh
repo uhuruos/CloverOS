@@ -303,13 +303,15 @@ case "$choice" in
 			mkdir $backupportagedir
 			sudo mv /etc/portage/package.use /etc/portage/package.mask /etc/portage/package.keywords /etc/portage/package.env /etc/portage/package.unmask /etc/portage/env/ $backupportagedir
 			sudo mv $portageworkdir/* /etc/portage/
-		fi
-		useflags=$(curl -s $gitprefix/binhost_settings/etc/portage/make.conf | grep "^USE=")
-		if ! grep -q "$useflags" /etc/portage/make.conf; then
-			echo $useflags | sudo tee --append /etc/portage/make.conf > /dev/null
+			useflags=$(curl -s $gitprefix/binhost_settings/etc/portage/make.conf | grep "^USE=")
+			if ! grep -q "$useflags" /etc/portage/make.conf; then
+				echo $useflags | sudo tee --append /etc/portage/make.conf > /dev/null
+			fi
+			echo -e "\nPortage configuration now mirrors binhost Portage configuration. Previous Portage config stored in ~/$backupportagedir"
+		else
+			echo -e "\nCould not retrieve file. Please connect to the Internet or try again."
 		fi
 		rm -R $portageworkdir
-		echo -e "\nPortage configuration now mirrors binhost Portage configuration. Previous Portage config stored in ~/$backupportagedir"
 		;;
 
 	m)
