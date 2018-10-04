@@ -5,7 +5,7 @@
 
 CloverOS GNU/Linux is scripts that creates a minimal (middleware-free), performance-optimized and out of the box Gentoo image (stage4) and a packages repo (Binhost)
 
-Mirrors and binary details: https://useast.cloveros.ga https://uswest.cloveros.ga https://ca.cloveros.ga https://fr.cloveros.ga https://nl.cloveros.ga https://au.cloveros.ga https://uk.cloveros.ga https://sea.cloveros.ga
+Mirrors and binary details: https://useast.cloveros.ga https://uswest.cloveros.ga https://ca.cloveros.ga https://fr.cloveros.ga https://nl.cloveros.ga https://au.cloveros.ga https://uk.cloveros.ga https://sg.cloveros.ga https://jp.cloveros.ga
 
 ## Cheat sheet
 ### Installing program
