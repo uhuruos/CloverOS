@@ -119,14 +119,10 @@ case "$choice" in
 
 	5)
 		if grep -q 'EMERGE_DEFAULT_OPTS=".* -G"' /etc/portage/make.conf; then
-			sudo sed -i 's/EMERGE_DEFAULT_OPTS="\(.*\) -G"/EMERGE_DEFAULT_OPTS="\1"/' /etc/portage/make.conf
-			sudo sed -i 's/^ACCEPT_KEYWORDS="\*\*"/#ACCEPT_KEYWORDS="\*\*"/' /etc/portage/make.conf
-			sudo sed -i "s/^FETCHCOMMAND_HTTPS=/#FETCHCOMMAND_HTTPS=/" /etc/portage/make.conf
+			sudo sed -ri 's/(EMERGE_DEFAULT_OPTS|PORTAGE_BINHOST|ACCEPT_LICENSE|ACCEPT_KEYWORDS|binhost_mirrors|FETCHCOMMAND_HTTPS.*)/#\1/' /etc/portage/make.conf
 			echo -e "\nemerge will now install from source. (/etc/portage/make.conf)\nUse ./cloveros_settings.sh c to copy binhost Portage configuration"
 		else
-			sudo sed -i 's/EMERGE_DEFAULT_OPTS="\(.*\)"/EMERGE_DEFAULT_OPTS="\1 -G"/' /etc/portage/make.conf
-			sudo sed -i 's/^#ACCEPT_KEYWORDS="\*\*"/ACCEPT_KEYWORDS="\*\*"/' /etc/portage/make.conf
-			sudo sed -i "s/^#FETCHCOMMAND_HTTPS=/FETCHCOMMAND_HTTPS=/" /etc/portage/make.conf
+			sudo sed -ri 's/#(EMERGE_DEFAULT_OPTS|PORTAGE_BINHOST|ACCEPT_LICENSE|ACCEPT_KEYWORDS|binhost_mirrors|FETCHCOMMAND_HTTPS.*)/\1/' /etc/portage/make.conf
 			echo -e "\nemerge will now install from binary. (/etc/portage/make.conf)"
 		fi
 		;;
