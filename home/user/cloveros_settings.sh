@@ -58,7 +58,7 @@ case "$choice" in
 		echo "sudo emerge --depclean"
 		echo "./cloveros_settings.sh 9"
 		sleep 2
-		./cloveros_settings.sh 1
+		./cloveros_settings.sh 1 || { exit 1; }
 		./cloveros_settings.sh zz
 		;;
 
@@ -68,7 +68,7 @@ case "$choice" in
 			exit 1
 		fi
 
-#                newmakeconf=$(curl -s $gitprefix/home/user/make.conf | grep -E "^(binhost_mirrors=|FETCHCOMMAND_HTTPS=)")
+#		newmakeconf=$(curl -s $gitprefix/home/user/make.conf | grep -E "^(binhost_mirrors=|FETCHCOMMAND_HTTPS=)")
 #		binhostmirrors=
 #		fetchcommand=
 #		if ! grep -q "$fetchcommand" /etc/portage/make.conf; then
