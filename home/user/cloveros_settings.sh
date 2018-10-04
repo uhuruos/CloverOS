@@ -118,7 +118,7 @@ case "$choice" in
 		;;
 
 	5)
-		if grep -q 'EMERGE_DEFAULT_OPTS=".* -G"' /etc/portage/make.conf; then
+		if grep -q '#EMERGE_DEFAULT_OPTS=".* -G"' /etc/portage/make.conf; then
 			sudo sed -ri 's/(EMERGE_DEFAULT_OPTS|PORTAGE_BINHOST|ACCEPT_LICENSE|ACCEPT_KEYWORDS|binhost_mirrors|FETCHCOMMAND_HTTPS.*)/#\1/' /etc/portage/make.conf
 			echo -e "\nemerge will now install from source. (/etc/portage/make.conf)\nUse ./cloveros_settings.sh c to copy binhost Portage configuration"
 		else
