@@ -58,7 +58,7 @@ case "$choice" in
 		echo "sudo emerge --depclean"
 		echo "./cloveros_settings.sh 9"
 		sleep 2
-		./cloveros_settings.sh 1 || { exit 1; }
+		./cloveros_settings.sh 1 || exit 1;
 		./cloveros_settings.sh zz
 		;;
 
