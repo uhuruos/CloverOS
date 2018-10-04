@@ -121,19 +121,25 @@ Or:
 
 Edit `/etc/portage/make.conf` and edit the following line:
 
-`EMERGE_DEFAULT_OPTS="--keep-going=y --autounmask-write=y --jobs=2 -G"`
+`EMERGE_DEFAULT_OPTS="--keep-going=y --autounmask-write=y --jobs=4 -G"`
 
 to
 
-`EMERGE_DEFAULT_OPTS="--keep-going=y --autounmask-write=y --jobs=2"`
+`EMERGE_DEFAULT_OPTS="--keep-going=y --autounmask-write=y --jobs=4"`
 
-and change
+and comment out the following lines, eg:
 
-`ACCEPT_KEYWORDS="**"`
+```
+ACCEPT_KEYWORDS="**"
+FETCHCOMMAND_HTTPS="...
+```
 
 to
 
-`#ACCEPT_KEYWORDS="**"`
+```
+#ACCEPT_KEYWORDS="**"
+#FETCHCOMMAND_HTTPS="...
+```
 
 This disables the binhost and uses Portage's ebuilds for packages. Now you can emerge from source.
 
@@ -631,7 +637,11 @@ Kill X and relog. After you log in and the "Start X?" dialog pops up, instead of
 Run `rsync -av --delete rsync://nl.cloveros.ga/cloveros /your/webserver/location/` and link me the https://
 
 ### What if CloverOS dies? Will my install become useless?
-No. Edit `/etc/portage/make.conf` and change
+No. Switch to source by running `./cloveros_settings.sh 5`
+
+Or:
+
+Edit `/etc/portage/make.conf` and edit the following line:
 
 `EMERGE_DEFAULT_OPTS="--keep-going=y --autounmask-write=y --jobs=4 -G"`
 
@@ -639,13 +649,19 @@ to
 
 `EMERGE_DEFAULT_OPTS="--keep-going=y --autounmask-write=y --jobs=4"`
 
-and change
+and comment out the following lines, eg:
 
-`ACCEPT_KEYWORDS="**"`
+```
+ACCEPT_KEYWORDS="**"
+FETCHCOMMAND_HTTPS="...
+```
 
 to
 
-`#ACCEPT_KEYWORDS="**"`
+```
+#ACCEPT_KEYWORDS="**"    
+#FETCHCOMMAND_HTTPS="...
+```
 
 Your system is now Gentoo Linux.
 
