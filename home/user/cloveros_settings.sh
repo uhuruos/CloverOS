@@ -103,6 +103,7 @@ case "$choice" in
 		if ls /boot/ | grep -q $kernelversion; then
 			echo "Kernel up to date."
 		else
+			rm kernel.tar.xz kernel.tar.xz.asc &> /dev/null
 			wget https://cloveros.ga/s/kernel.tar.xz https://cloveros.ga/s/signatures/s/kernel.tar.xz.asc
 			if sudo gpg --verify kernel.tar.xz.asc kernel.tar.xz; then
 				sudo tar -C / -xf kernel.tar.xz
@@ -113,7 +114,7 @@ case "$choice" in
 			else
 				echo -e "\nCould not retrieve file. Please connect to the Internet or try again."
 			fi
-			rm kernel.tar.xz kernel.tar.xz.asc
+			rm kernel.tar.xz kernel.tar.xz.asc &> /dev/null
 		fi
 		;;
 
@@ -242,6 +243,7 @@ case "$choice" in
 		if ls /boot/ | grep -q $kernelversion-gentoo-gnu; then
 			echo "Kernel up to date."
 		else
+			rm kernel-libre.tar.xz kernel-libre.tar.xz.asc &> /dev/null
 			wget https://cloveros.ga/s/kernel-libre.tar.xz https://cloveros.ga/s/signatures/s/kernel-libre.tar.xz.asc
 			if sudo gpg --verify kernel-libre.tar.xz.asc kernel-libre.tar.xz; then
 				sudo tar -C / -xf kernel-libre.tar.xz
@@ -252,7 +254,7 @@ case "$choice" in
 			else
 				echo -e "\nCould not retrieve file. Please connect to the Internet or try again."
 			fi
-			rm kernel-libre.tar.xz kernel-libre.tar.xz.asc
+			rm kernel-libre.tar.xz kernel-libre.tar.xz.asc &> /dev/null
 		fi
 		;;
 
