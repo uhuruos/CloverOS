@@ -1,5 +1,4 @@
 #!/bin/bash
-
 if [ $(id -u) != '0' ]; then
 	echo "This script must be run as root" 1>&2
 	exit 1
@@ -64,7 +63,6 @@ gpasswd -a $username wheel
 
 emerge -eD @world aria2 xorg-server fvwm spacefm rxvt-unicode nitrogen compton nomacs sudo wpa_supplicant porthole firefox emacs gimp mpv smplayer filezilla rtorrent weechat linux-firmware alsa-utils zsh zsh-completions gentoo-zsh-completions vlgothic hack liberation-fonts nano scrot xbindkeys xinput arandr qastools slock xarchiver p7zip games-envd gparted squashfs-tools os-prober
 emerge --depclean
-
 echo 'frozen-files="/etc/sudoers"' >> /etc/dispatch-conf.conf
 sed -i "s/# %wheel ALL=(ALL) NOPASSWD: ALL/%wheel ALL=(ALL) NOPASSWD: ALL/" /etc/sudoers
 sed -Ei "s@c([2-6]):2345:respawn:/sbin/agetty 38400 tty@#\0@" /etc/inittab

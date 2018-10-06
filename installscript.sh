@@ -1,5 +1,4 @@
 #!/bin/bash
-
 if [ $(id -u) != '0' ]; then
 	echo "This script must be run as root" 1>&2
 	exit 1
@@ -89,7 +88,7 @@ FETCHCOMMAND_HTTPS="sh -c \"aria2c -x2 -s99 -j99 -k1M -d \"\\\${DISTDIR}\" -o \"
 gpg --keyserver hkp://pool.sks-keyservers.net --recv-key "78F5 AC55 A120 07F2 2DF9 A28A 78B9 3F76 B8E4 2805"
 
 #emerge gentoo-sources genkernel
-#wget http://liquorix.net/sources/4.17/config.amd64
+#wget http://liquorix.net/sources/4.18/config.amd64
 #genkernel --kernel-config=config.amd64 all
 wget https://cloveros.ga/s/kernel.tar.xz https://cloveros.ga/s/signatures/s/kernel.tar.xz.asc
 gpg --verify kernel.tar.xz.asc kernel.tar.xz
@@ -111,7 +110,6 @@ gpasswd -a $username wheel
 
 emerge -eD @world aria2 xorg-server fvwm spacefm rxvt-unicode nitrogen compton nomacs sudo wpa_supplicant porthole firefox emacs gimp mpv smplayer filezilla rtorrent weechat linux-firmware alsa-utils zsh zsh-completions gentoo-zsh-completions vlgothic hack liberation-fonts nano scrot xbindkeys xinput arandr qastools slock xarchiver p7zip games-envd gparted squashfs-tools os-prober
 emerge --depclean
-
 echo 'frozen-files="/etc/sudoers"' >> /etc/dispatch-conf.conf
 sed -i "s/# %wheel ALL=(ALL) NOPASSWD: ALL/%wheel ALL=(ALL) NOPASSWD: ALL/" /etc/sudoers
 sed -Ei "s@c([2-6]):2345:respawn:/sbin/agetty 38400 tty@#\0@" /etc/inittab
