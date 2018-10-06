@@ -38,11 +38,9 @@ wget https://gitgud.io/cloveros/cloveros/raw/master/binhost_settings/var/lib/por
 
 CFLAGS="-Ofast -mmmx -mssse3 -pipe -flto=8 -funroll-loops" emerge gcc
 binutils-config --linker ld.gold
-emerge openssl openssh
-USE="-vaapi" emerge mesa
-emerge -1 netcat6
+USE="-vaapi" emerge -1 mesa netcat6
 emerge genkernel gentoo-sources
-wget https://liquorix.net/sources/4.17/config.amd64
+wget https://liquorix.net/sources/4.18/config.amd64
 binutils-config --linker ld.bfd
 genkernel --kernel-config=config.amd64 all
 binutils-config --linker ld.gold
@@ -50,7 +48,7 @@ emerge layman
 layman -S
 yes | layman -a 0x4d4c 4nykey abendbrot audio-overlay bar betagarden brother-overlay chaos deadbeef-overlay dotnet elementary erayd eroen farmboy0 FireBurn fkmclane flatpak-overlay flussence gamerlay genthree haarp haskell jacendi-overlay jm-overlay jorgicio libressl linxon luke-jr palemoon pentoo pinkpieea poly-c raiagent rasdark seden sk-overlay spikyatlinux steam-overlay stefantalpalaru tlp torbrowser vampire vapoursynth
 
-emerge -uvDN @world
+emerge -uvDN @world @system
 
 emerge -C hwinfo ntfs3g && emerge ntfs3g && emerge hwinfo
 
