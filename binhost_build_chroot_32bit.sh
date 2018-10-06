@@ -51,7 +51,7 @@ emerge layman
 layman -S
 yes | layman -a 0x4d4c 4nykey abendbrot audio-overlay bar betagarden brother-overlay chaos deadbeef-overlay dotnet elementary erayd eroen farmboy0 FireBurn fkmclane flatpak-overlay flussence gamerlay genthree haarp haskell jacendi-overlay jm-overlay jorgicio libressl linxon luke-jr palemoon pentoo pinkpieea poly-c raiagent rasdark seden sk-overlay spikyatlinux steam-overlay stefantalpalaru tlp torbrowser vampire vapoursynth
 
-emerge -uvDN @world @system
+emerge -uvDN @world
 
 emerge -C hwinfo ntfs3g && emerge ntfs3g && emerge hwinfo
 
