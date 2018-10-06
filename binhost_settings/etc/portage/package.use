@@ -1,4 +1,4 @@
-mail-mta/postfix dovecot-sasl
+\mail-mta/postfix dovecot-sasl
 media-video/gpac ffmpeg
 x11-terms/kitty imagemagick
 games-emulation/ppsspp sdl
@@ -6,14 +6,10 @@ net-vpn/tor tor-hardening lzma
 app-doc/gimp-help l10n_en
 www-plugins/lightspark ppapi nsplugin ffmpeg curl gles rtmp
 app-misc/anki -sound
-mate-extra/mate-screensaver -pam # prevent gnome-keyring
-mate-base/mate -extras # prevent gnome-keyring
-sys-power/suspend -crypt -lzo # crypt/lzo requires USE=static-libs dev-libs/libgcrypt dev-libs/lzo
 media-gfx/nomacs zip
 app-crypt/kbfs git
 media-libs/vips imagemagick fftw fits tiff lcms matio
 media-gfx/nip2 fftw
-media-sound/bitwig-studio -jack # requires jack2
 net-misc/connman nftables -wifi
 media-libs/fontconfig-infinality -nyx
 app-text/zathura-meta pdf cb djvu postscript
@@ -226,6 +222,11 @@ net-p2p/rtorrent xmlrpc
 media-sound/deadbeef aac adplug alac alsa cdda converter cover cover-imlib2 cover-network curl dts dumb equalizer ffmpeg flac hotkeys lastfm libnotify libsamplerate m3u mad midi mms mono2stereo mp3 musepack nullout oss psf shn sid sndfile tta vorbis vtx wavpack wma zip cdparanoia -gme gtk3 -libav mac mpg123 -nls playlist-browser -pulseaudio sc68 -shell-exec -unity
 media-plugins/deadbeef-plugins-meta bookmark-manager bs2b decast filebrowser gnome-mmkeys infobar mpris musical-spectrum quick-search replaygain-control spectrogram statusnotifier stereo-widener vk vu-meter waveform-seekbar
 app-emulation/qemu sdl usb virgl virtfs
+sys-apps/shadow -pam # login won't work (but su - user would)
+sys-power/suspend -crypt -lzo # requires USE=static-libs dev-libs/libgcrypt dev-libs/lzo
+media-sound/bitwig-studio -jack # requires jack2
+mate-extra/mate-screensaver -pam # prevent gnome-keyring
+mate-base/mate -extras # prevent gnome-keyring
 sys-libs/zlib minizip # required by many
 sys-apps/util-linux static-libs # required by genkernel
 sys-devel/gcc fortran # required by octave
