@@ -1,3 +1,4 @@
+mail-mta/postfix dovecot-sasl
 media-video/gpac ffmpeg
 x11-terms/kitty imagemagick
 games-emulation/ppsspp sdl
@@ -203,7 +204,7 @@ app-admin/testdisk ntfs
 net-p2p/qbittorrent geoip webui
 media-gfx/gimp smp pdf aalib openexr postscript python xpm vector-icons
 net-fs/nfs-utils nfsv41
-net-fs/cifs-utils -acl -ads -caps caps-ng
+net-fs/cifs-utils -acl -ads
 media-sound/mpd sid sqlite alsa bzip2 curl ffmpeg fifo flac glib icu id3tag inotify mad network ogg opus tcpd unicode vorbis adplug ao audiofile cdio expat faad fluidsynth gme lame libsamplerate libsoxr mikmod mms modplug mp4v2 mpg123 musepack pipe recorder sndfile soundcloud twolame wavpack wildmidi zip libmpdclient
 media-sound/flacon aac opus vorbis qt5 flac mac mp3 mp4 ogg replaygain tta wavpack
 media-sound/cmus ffmpeg alsa mad unicode aac ao cddb cdio cue discid examples flac mikmod modplug mp4 musepack opus vorbis wavpack wma zsh-completion
