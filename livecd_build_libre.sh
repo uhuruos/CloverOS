@@ -54,7 +54,7 @@ rm kernel-libre.tar.xz kernel-libre.tar.xz.asc
 
 emerge grub dhcpcd
 
-rc-update add dhcpcd
+rc-update add dhcpcd default
 
 echo "root:$rootpassword" | chpasswd
 useradd $username
@@ -68,8 +68,8 @@ sed -i "s/# %wheel ALL=(ALL) NOPASSWD: ALL/%wheel ALL=(ALL) NOPASSWD: ALL/" /etc
 sed -Ei "s@c([2-6]):2345:respawn:/sbin/agetty 38400 tty@#\0@" /etc/inittab
 sed -i "s@c1:12345:respawn:/sbin/agetty 38400 tty1 linux@c1:12345:respawn:/sbin/agetty --noclear 38400 tty1 linux@" /etc/inittab
 echo -e "ctrl_interface=DIR=/var/run/wpa_supplicant GROUP=wheel\nupdate_config=1" > /etc/wpa_supplicant/wpa_supplicant.conf
-rc-update add alsasound
-rc-update add wpa_supplicant
+rc-update add alsasound default
+rc-update add wpa_supplicant default
 eselect fontconfig enable 52-infinality.conf
 eselect infinality set infinality
 eselect lcdfilter set infinality
