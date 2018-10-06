@@ -8,7 +8,7 @@ fi
 gitprefix="https://gitgud.io/cloveros/cloveros/raw/master"
 
 rootpassword=password
-user=livecd
+username=livecd
 userpassword=password
 
 mkdir image
@@ -58,9 +58,9 @@ emerge grub dhcpcd
 rc-update add dhcpcd default
 
 echo "root:$rootpassword" | chpasswd
-useradd $user
-echo "$user:$userpassword" | chpasswd
-gpasswd -a $user wheel
+useradd $username
+echo "$username:$userpassword" | chpasswd
+gpasswd -a $username wheel
 
 emerge -eD @world aria2 xorg-server fvwm spacefm rxvt-unicode nitrogen compton nomacs sudo wpa_supplicant porthole firefox emacs gimp mpv smplayer filezilla rtorrent weechat alsa-utils zsh zsh-completions gentoo-zsh-completions vlgothic hack liberation-fonts nano scrot xbindkeys xinput arandr qastools slock xarchiver p7zip games-envd gparted squashfs-tools os-prober
 emerge --depclean
@@ -78,31 +78,31 @@ eselect lcdfilter set infinality
 echo "en_US.UTF-8 UTF-8" >> /etc/locale.gen
 locale-gen
 eselect locale set en_US.utf8
-gpasswd -a $user audio
-gpasswd -a $user video
-gpasswd -a $user games
-gpasswd -a $user input
-cd /home/$user/
+gpasswd -a $username audio
+gpasswd -a $username video
+gpasswd -a $username games
+gpasswd -a $username input
+cd /home/$username/
 rm .bash_profile
 wget $gitprefix/home/user/{.bash_profile,.zprofile,.zshrc,.fvwm2rc,.Xdefaults,wallpaper.png,.xbindkeysrc,screenfetch-dev,bl.sh,cloveros_settings.sh,stats.sh,rotate_screen.sh,.emacs,.rtorrent.rc}
 chmod +x screenfetch-dev bl.sh cloveros_settings.sh stats.sh rotate_screen.sh
 mkdir -p .emacs.d/backups/ .emacs.d/autosaves/ Downloads/ .rtorrent/ .mpv/ .config/spacefm/ .config/nitrogen/ .local/share/nomacs Desktop/
-sed -i "s@/home/user/@/home/$user/@" .rtorrent.rc
+sed -i "s@/home/user/@/home/$username/@" .rtorrent.rc
 wget $gitprefix/home/user/.mpv/config -P .mpv/
 wget $gitprefix/home/user/.config/nitrogen/nitrogen.cfg -P .config/nitrogen/
-sed -i "s@/home/user/@/home/$user/@" .config/nitrogen/nitrogen.cfg
+sed -i "s@/home/user/@/home/$username/@" .config/nitrogen/nitrogen.cfg
 wget $gitprefix/home/user/.local/share/nomacs/settings.ini -P .local/share/nomacs/
 wget $gitprefix/home/user/.config/spacefm/session -P .config/spacefm/
-sed -i "s@/home/user/@/home/$user/@" .config/spacefm/session
+sed -i "s@/home/user/@/home/$username/@" .config/spacefm/session
 wget $gitprefix/home/user/.config/mimeapps.list -P .config/
 echo -e "[Desktop Entry]\nEncoding=UTF-8\nType=Link\nName=Home\nIcon=user-home\nExec=spacefm ~/" > Desktop/home.desktop
 echo -e "[Desktop Entry]\nEncoding=UTF-8\nType=Link\nName=Applications\nIcon=folder\nExec=spacefm /usr/share/applications/" > Desktop/applications.desktop
 cp /usr/share/applications/{firefox.desktop,smplayer.desktop,emacs.desktop,zzz-gimp.desktop,porthole.desktop,xarchiver.desktop} Desktop/
 echo -e "~rows=0\n1=home.desktop\n2=applications.desktop\n3=firefox.desktop\n4=smplayer.desktop\n5=emacs.desktop\n6=porthole.desktop\n7=zzz-gimp.desktop\n8=xarchiver.desktop" > .config/spacefm/desktop0
-chown -R $user /home/$user/
+chown -R $username /home/$username/
 
-sed -i "s@c1:12345:respawn:/sbin/agetty --noclear 38400 tty1 linux@c1:12345:respawn:/sbin/agetty -a $user --noclear 38400 tty1 linux@" /etc/inittab
-sed -i 's/^/#/' /home/$user/.bash_profile
+sed -i "s@c1:12345:respawn:/sbin/agetty --noclear 38400 tty1 linux@c1:12345:respawn:/sbin/agetty -a $username --noclear 38400 tty1 linux@" /etc/inittab
+sed -i 's/^/#/' /home/$username/.bash_profile
 echo -e 'if [ -z "\$DISPLAY" ]; then
 export DISPLAY=:0
 X&
@@ -111,9 +111,9 @@ fvwm&
 nitrogen --set-zoom wallpaper.png
 xbindkeys
 urxvt -geometry \$(xrandr | awk "NR==1{print \"80x24+\"\\\$8/2-283\"+\"\\\$10/2-191}") -e sudo ./livecd_install.sh
-fi' >> /home/$user/.bash_profile
-wget https://gitgud.io/cloveros/cloveros/raw/master/livecd_install.sh -O /home/$user/livecd_install.sh
-chmod +x /home/$user/livecd_install.sh
+fi' >> /home/$username/.bash_profile
+wget https://gitgud.io/cloveros/cloveros/raw/master/livecd_install.sh -O /home/$username/livecd_install.sh
+chmod +x /home/$username/livecd_install.sh
 
 rm -Rf /usr/portage/packages/* /etc/resolv.conf
 
