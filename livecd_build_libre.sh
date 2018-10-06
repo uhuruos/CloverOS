@@ -46,7 +46,7 @@ FETCHCOMMAND_HTTPS="sh -c \"aria2c -x2 -s99 -j99 -k1M -d \"\\\${DISTDIR}\" -o \"
 gpg --keyserver hkp://pool.sks-keyservers.net --recv-key "78F5 AC55 A120 07F2 2DF9 A28A 78B9 3F76 B8E4 2805"
 
 #emerge gentoo-sources genkernel
-#wget http://liquorix.net/sources/4.17/config.amd64
+#wget http://liquorix.net/sources/4.18/config.amd64
 #genkernel --kernel-config=config.amd64 all
 wget https://cloveros.ga/s/kernel-libre.tar.xz https://cloveros.ga/s/signatures/s/kernel-libre.tar.xz.asc
 gpg --verify kernel-libre.tar.xz.asc kernel-libre.tar.xz
