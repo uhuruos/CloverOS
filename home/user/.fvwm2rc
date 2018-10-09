@@ -145,3 +145,4 @@ MenuStyle Applications BorderWidth 1
 MenuStyle Applications TitleUnderlines0 0
 MenuStyle Applications ItemFormat " %l "
 ChangeMenuStyle Applications MenuFvwmRoot
+ChangeMenuStyle Applications ProgramList
