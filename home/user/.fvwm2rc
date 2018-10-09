@@ -97,8 +97,13 @@ AddToMenu   FvwmWindowOpsMenu "Window Operations" Title
 + "Layer -1"  Pick (CirculateHit) Layer -1
 + "StaysOnBottom"  Pick (CirculateHit) Layer 0 2
 
+DestroyMenu ProgramList
+AddToMenu   ProgramList "Program List" Title
+PipeRead 'for i	in $(ls -1 /usr/share/applications/ | sed "s/.desktop//g; /mimeinfo.cache/d"); do echo "+ $i Exec $i"; done'
+
 DestroyMenu MenuFvwmRoot
 AddToMenu MenuFvwmRoot Applications Title
++ "Program List" Popup ProgramList
 + "urxvt" Exec if pgrep urxvtd; then urxvtc -e zsh; else urxvtd -o -f && urxvtc -e zsh; fi
 + "spacefm" Exec spacefm
 + "wifi" Exec sudo rc-service wpa_supplicant start & wpa_gui
