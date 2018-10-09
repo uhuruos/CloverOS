@@ -98,8 +98,14 @@ AddToMenu   FvwmWindowOpsMenu "Window Operations" Title
 + "StaysOnBottom"  Pick (CirculateHit) Layer 0 2
 
 DestroyMenu ProgramList
-AddToMenu   ProgramList "Program List" Title
-PipeRead 'for i	in $(ls -1 /usr/share/applications/ | sed "s/.desktop//g; /mimeinfo.cache/d"); do echo "+ $i Exec $i"; done'
+AddToMenu ProgramList "Program List" Title
++ DynamicPopUpAction Function MakeProgramList
+
+DestroyFunc MakeProgramList
+AddToFunc MakeProgramList
++ I DestroyMenu recreate ProgramList
++ I AddToMenu ProgramList "Program List" Title
++ I PipeRead 'for i in $(ls -1 /usr/share/applications/ | sed "s/.desktop//g; /mimeinfo.cache/d"); do echo "+ $i Exec $i"; done'
 
 DestroyMenu MenuFvwmRoot
 AddToMenu MenuFvwmRoot Applications Title
