@@ -1,14 +1,12 @@
 --- todo ---
 
-make the livecd files from scratch instead of replacing squashfs in gentoo 2016 iso
-cloveros_settings.sh: configure non us keyboard
-livecd_install.sh: uefi install
-automatic ~/.asoundrc configuration. it gets the first audio device without hdmi in the name
-livecd_install.sh: encryption
-100% cloveros-libre
 spacefm drive mounting
+cloveros_settings.sh: configure non us keyboard
+automatic ~/.asoundrc configuration. it gets the first audio device without hdmi in the name
+make the livecd files from scratch instead of replacing squashfs in gentoo 2016 iso
 eject usb after livecd install
-fvwm dynamic menu
+livecd_install.sh: uefi install, encryption
+100% cloveros-libre
 
 --- packages that don't build ---
 
