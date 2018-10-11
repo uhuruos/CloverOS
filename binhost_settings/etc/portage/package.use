@@ -1,3 +1,4 @@
+net-p2p/deluge console geoip gtk webinterface
 mail-mta/postfix dovecot-sasl
 media-video/gpac ffmpeg
 x11-terms/kitty imagemagick
