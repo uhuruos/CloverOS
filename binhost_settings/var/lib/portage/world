@@ -961,7 +961,6 @@ net-wireless/sdrplay
 net-wireless/soapysdr
 net-wireless/wpa_supplicant
 pantheon-base/plank
-sci-biology/foldingathome
 sci-calculators/calcoo
 sci-calculators/qalculate-gtk
 sci-calculators/tiemu
@@ -1386,6 +1385,7 @@ x11-themes/sound-theme-freedesktop
 x11-themes/tangerine-icon-theme
 x11-themes/tango-icon-theme
 x11-themes/tango-icon-theme-extras
+x11-themes/terminology-themes
 x11-themes/ubuntu-wallpapers
 x11-themes/vanilla-dmz-aa-xcursors
 x11-themes/vanilla-dmz-xcursors

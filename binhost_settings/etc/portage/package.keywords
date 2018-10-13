@@ -3,7 +3,6 @@ sys-devel/gcc
 sys-kernel/gentoo-sources
 net-misc/youtube-dl
 media-libs/mesa
-x11-libs/libdrm # mesa
 www-client/firefox
 dev-libs/nss # firefox
 games-emulation/retroarch
@@ -528,6 +527,7 @@ games-emulation/advancemame
 games-emulation/advancescan
 games-misc/ckmame
 x11-misc/enlightenment-extra
+x11-themes/terminology-themes
 sci-mathematics/rstudio
 dev-libs/mathjax # rstudio
 dev-php/composer
