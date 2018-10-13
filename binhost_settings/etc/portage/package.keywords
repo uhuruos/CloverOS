@@ -2,7 +2,6 @@
 sys-devel/gcc
 sys-kernel/gentoo-sources
 net-misc/youtube-dl
-media-libs/mesa
 www-client/firefox
 dev-libs/nss # firefox
 games-emulation/retroarch
@@ -12,13 +11,13 @@ media-libs/vulkan-loader # retroarch
 dev-util/vulkan-headers # retroarch
 media-gfx/gimp
 media-gfx/mypaint-brushes # gimp
-media-libs/libmypaint # gimp
 media-gfx/mypaint # gimp
+media-libs/libmypaint # gimp
 media-libs/babl # gimp
 media-libs/gegl # gimp
 dev-util/gdbus-codegen # gimp
-dev-libs/glib # gimp
 dev-util/glib-utils # gimp
+dev-libs/glib # gimp
 
 #old, remove when stable is bumped up
 sys-kernel/spl

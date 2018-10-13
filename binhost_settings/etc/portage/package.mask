@@ -45,8 +45,8 @@ net-libs/nodejs::gentoo
 net-misc/megatools::gentoo
 x11-libs/vte:2.91::gentoo
 >=media-gfx/qimgv-0.7 # qt5.11
->=sys-devel/lld-7.0.0 # llvm7
->=dev-util/lldb-7.0.0 # llvm7
+>=sys-devel/lld-7.0.0
+>=dev-util/lldb-7.0.0
 >=sys-devel/clang-runtime-7.0.0
 >=sys-devel/clang-7.0.0
 >=sys-libs/compiler-rt-7.0.0
