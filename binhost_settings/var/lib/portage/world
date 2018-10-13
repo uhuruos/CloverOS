@@ -861,7 +861,6 @@ net-ftp/pure-ftpd
 net-ftp/vsftpd
 net-im/discord-bin
 net-im/pidgin
-net-im/qtox
 net-im/telegram-cli
 net-im/telegram-desktop-bin
 net-im/telegram-purple

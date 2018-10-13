@@ -334,6 +334,7 @@ net-p2p/mktorrent -ssl
 net-misc/iputils -ssl
 net-ftp/gproftpd -ssl
 net-print/gtklp -ssl
+app-emulation/open-vm-tools -ssl -vgauth -grabbitmqproxy
 media-libs/opusfile -libressl -ssl -http
 media-video/ffmpeg openssl
 net-voip/telepathy-gabble gnutls

@@ -43,11 +43,10 @@
 */*::zyrenth
 
 net-libs/nodejs::gentoo
->=sys-apps/openrc-0.38.2
->=app-emulation/open-vm-tools-10.2 # openssl
+net-misc/megatools::gentoo
+#>=sys-apps/openrc-0.38.2
 >=sci-biology/foldingathome-7.5
 >=media-gfx/qimgv-0.7 # qt5.11
->=kde-apps/kamoso-18.08 # qt5.11
 >=sys-devel/lld-7.0.0 # llvm7
 >=dev-util/lldb-7.0.0 # llvm7
 >=sys-devel/clang-runtime-7.0.0

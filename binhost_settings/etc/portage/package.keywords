@@ -173,8 +173,8 @@ games-fps/wolfgl **
 www-client/qutebrowser
 dev-python/pypeg2 # qutebrowser
 sys-power/phc-intel
-x11-terms/termite::eroen
-x11-libs/vte::eroen # termite
+x11-terms/termite
+x11-libs/vte # termite
 media-video/handbrake
 x11-misc/i3blocks-gaps
 net-im/telegram-desktop-bin
