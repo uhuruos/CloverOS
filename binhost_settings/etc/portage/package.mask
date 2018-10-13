@@ -3,7 +3,6 @@
 */*::abendbrot
 */*::audio-overlay
 */*::bar
-*/*::betagarden
 */*::brother-overlay
 */*::chaos
 */*::deadbeef-overlay
@@ -44,7 +43,7 @@
 
 net-libs/nodejs::gentoo
 net-misc/megatools::gentoo
-x11-libs/vte::gentoo
+x11-libs/vte:2.91::gentoo
 >=media-gfx/qimgv-0.7 # qt5.11
 >=sys-devel/lld-7.0.0 # llvm7
 >=dev-util/lldb-7.0.0 # llvm7
