@@ -139,9 +139,9 @@ AddToMenu MenuFvwmRoot Applications Title
 + "wallpaper" Exec nitrogen
 + "resolution" Exec arandr
 + "volume" Exec qasmixer
-+ "screenshot" Exec scrot && nomacs ~/$(ls -1t ~ | grep scrot | head -n1)
 + "settings.sh" Exec if pgrep urxvtd; then urxvtc -e sh -c '~/cloveros_settings.sh && read'; else urxvtd -o -f && urxvtc -e sh -c '~/cloveros_settings.sh && read'; fi
 + "gparted" Exec sudo gparted
++ "screenshot" Exec scrot && nomacs ~/$(ls -1t ~ | grep scrot | head -n1)
 + "shutdown" Popup ShutdownList
 
 Colorset 3 fg #000000, bg #ffffff, hi #000000, sh #000000
