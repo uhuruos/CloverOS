@@ -38,8 +38,8 @@ Key XF86MonBrightnessUp A N Exec sudo ~/bl.sh +5
 Key XF86AudioLowerVolume A N Exec amixer set Master 5%-
 Key XF86AudioRaiseVolume A N Exec amixer set Master 5%+
 Key XF86AudioMute A N Exec amixer set Master toggle
-Key Print A N Exec scrot -e "nomacs $f"
-Key Print A M Exec scrot -ue "nomacs $f"
+Key Print A N Exec scrot -e 'nomacs $f'
+Key Print A M Exec scrot -ue 'nomacs $f'
 Key L A 4 Exec slock
 
 OpaqueMoveSize unlimited
