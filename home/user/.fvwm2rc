@@ -33,7 +33,14 @@ Key Left A CS GotoPage -1p +0p
 Key Down A CS GotoPage +0p +1p
 Key Up A CS GotoPage +0p -1p
 
-Key Super_L 
+Key XF86MonBrightnessDown A N Exec sudo ~/bl.sh -5
+Key XF86MonBrightnessUp A N Exec sudo ~/bl.sh +5
+Key XF86AudioLowerVolume A N Exec amixer set Master 5%-
+Key XF86AudioRaiseVolume A N Exec amixer set Master 5%+
+Key XF86AudioMute A N Exec amixer set Master toggle
+Key Print A N Exec scrot && nomacs ~/$(ls -1t ~ | grep scrot | head -n1)
+Key Print A M Exec scrot -u && nomacs ~/$(ls -1t ~ | grep scrot | head -n1)
+Key L A 4 Exec slock
 
 OpaqueMoveSize unlimited
 

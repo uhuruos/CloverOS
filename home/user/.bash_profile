@@ -7,7 +7,7 @@ if [ -z "$DISPLAY" ] && ! pgrep X > /dev/null; then
 
 	wms[y]=fvwm
 	wmspkg[y]=fvwm
-	wmspost[y]=$defaultpost
+	wmspost[y]="nitrogen --set-zoom wallpaper.png & xinput set-prop \"SynPS/2 Synaptics TouchPad\" \"libinput Tapping Enabled\" 1"
 
 	wms[Y]=wms[y]
 	wmspkg[Y]=wmspkg[y]
