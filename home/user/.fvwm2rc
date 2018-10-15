@@ -123,9 +123,9 @@ AddToMenu MenuFvwmRoot Applications Title
 + "urxvt" Exec if pgrep urxvtd; then urxvtc -e zsh; else urxvtd -o -f && urxvtc -e zsh; fi
 + "spacefm" Exec spacefm
 + "wifi" Exec sudo rc-service wpa_supplicant start & wpa_gui
++ "porthole" Exec sudo porthole
 + "firefox" Exec firefox
 + "smplayer" Exec smplayer
-+ "porthole" Exec sudo porthole
 + "emacs" Exec emacs
 + "gimp" Exec gimp
 + "xarchiver" Exec xarchiver
