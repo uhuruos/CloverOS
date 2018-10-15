@@ -107,6 +107,16 @@ AddToFunc MakeProgramList
 + I AddToMenu ProgramList "Program List" Title
 + I PipeRead 'for i in $(ls -1 /usr/share/applications/ | sed "s/.desktop//g; /mimeinfo.cache/d"); do echo "+ $i Exec $i"; done'
 
+DestroyMenu ShutdownList
+AddToMenu ShutdownList "Shutdown" Title
++ "restart fvwm" Restart
++ "kill X" Exec pkill X
++ "lock + sleep" Exec slock & sudo sh -c 'echo -n mem > /sys/power/state'
++ "lock" Exec slock
++ "sleep" Exec sudo sudo sh -c 'echo -n mem > /sys/power/state'
++ "reboot" Exec sudo reboot
++ "poweroff" Exec sudo poweroff
+
 DestroyMenu MenuFvwmRoot
 AddToMenu MenuFvwmRoot Applications Title
 + "Program List" Popup ProgramList
@@ -132,13 +142,7 @@ AddToMenu MenuFvwmRoot Applications Title
 + "screenshot" Exec scrot && nomacs ~/$(ls -1t ~ | grep scrot | head -n1)
 + "settings.sh" Exec if pgrep urxvtd; then urxvtc -e sh -c '~/cloveros_settings.sh && read'; else urxvtd -o -f && urxvtc -e sh -c '~/cloveros_settings.sh && read'; fi
 + "gparted" Exec sudo gparted
-+ "restart fvwm" Restart
-+ "exit X" Exec pkill X
-+ "sleep+lock" Exec slock & sudo sh -c 'echo -n mem > /sys/power/state'
-+ "lock" Exec slock
-+ "sleep" Exec sudo sudo sh -c 'echo -n mem > /sys/power/state'
-+ "reboot" Exec sudo reboot
-+ "shutdown" Exec sudo poweroff
++ "shutdown" Popup ShutdownList
 
 Colorset 3 fg #000000, bg #ffffff, hi #000000, sh #000000
 MenuStyle Applications MenuColorset 3
