@@ -33,6 +33,8 @@ Key Left A CS GotoPage -1p +0p
 Key Down A CS GotoPage +0p +1p
 Key Up A CS GotoPage +0p -1p
 
+Key Super_L 
+
 OpaqueMoveSize unlimited
 
 Style * BorderWidth 1, HandleWidth 1

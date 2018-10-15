@@ -15,3 +15,9 @@
 
 "scrot && nomacs ~/$(ls -1t ~ | grep scrot | head -n1)"
   m:0x0 + c:107
+
+"scrot && nomacs ~/$(ls -1t ~ | grep scrot | head -n1)"
+  m:0x0 + c:107
+
+"slock"
+  m:0x40 + c:46
