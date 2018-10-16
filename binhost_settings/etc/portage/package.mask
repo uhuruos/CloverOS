@@ -17,7 +17,6 @@
 */*::gamerlay
 */*::genthree
 */*::haarp
-*/*::haskell
 */*::jacendi-overlay
 */*::jm-overlay
 */*::jorgicio
@@ -25,7 +24,6 @@
 */*::linxon
 */*::luke-jr
 */*::pentoo
-*/*::pinkpieea
 */*::poly-c
 */*::raiagent
 */*::rasdark
@@ -45,8 +43,4 @@ net-libs/nodejs::gentoo
 net-misc/megatools::gentoo
 x11-libs/vte:2.91::gentoo
 >=media-gfx/qimgv-0.7
->=sys-devel/lld-7.0.0
 >=dev-util/lldb-7.0.0
->=sys-devel/clang-runtime-7.0.0
->=sys-devel/clang-7.0.0
->=sys-libs/compiler-rt-7.0.0

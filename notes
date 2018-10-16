@@ -10,14 +10,8 @@ livecd_install.sh: uefi install, encryption
 
 --- packages that don't build ---
 
-#doesn't emerge anymore (gcc8)
-rogue telegram-cli subversion ecryptfs-utils tauthon foldingathome synergy vigra w3mimgfb vdr dolphin-libretro agg stella openjk-outcast sauerbraten mp3blaster tomahawk citra blender staruml-bin spice-gtk kencfs-plasma
-
-#requires gcc7
-dev-util/nvidia-cuda-sdk
-
 #doesn't emerge
-xen ungoogled-chromium cinelerra palemoon stumpwm stumpwm-contrib pure-data sequencer64 netsurf gkrellm-plugins alienarena opentoonz
+xen ungoogled-chromium cinelerra palemoon stumpwm stumpwm-contrib pure-data netsurf gkrellm-plugins alienarena opentoonz qtox
 
 #libressl
 tdlib eagle megatools nxplayer murmur makemkv eiskaltdcpp retroshare acme-tiny spyder
@@ -36,3 +30,6 @@ net-analyzer/munin
 
 #ncurses tinfo
 android-ndk android-studio
+
+#doesn't emerge anymore (gcc8)
+rogue telegram-cli subversion ecryptfs-utils tauthon foldingathome synergy vigra w3mimgfb vdr dolphin-libretro agg stella openjk-outcast sauerbraten mp3blaster tomahawk citra blender staruml-bin spice-gtk kencfs-plasma

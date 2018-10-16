@@ -28,11 +28,10 @@ net-p2p/mldonkey # won't build
 app-laptop/tp_smapi # requested
 media-fonts/vlgothic # old
 games-emulation/dolphin ** # old
-games-emulation/pcsx2 ** # gcc8 breaks 1.4
+#games-emulation/pcsx2 ** # gcc8 breaks 1.4
 media-libs/zimg # vapoursynth
 dev-python/cython # vapoursynth
 dev-libs/json-c # sway
-dev-python/sphinx # kitty
 media-libs/opencv # waifu2x-converter-cpp
 
 #libressl
@@ -53,11 +52,9 @@ www-client/google-chrome-unstable
 games-fps/ezquake-bin
 net-misc/megatools
 sys-auth/pam_yubico
-sys-auth/libyubikey # pam_yubico
 sys-auth/ykpers # pam_yubico
 sys-auth/ykclient # pam_yubico
 app-admin/keepassxc
-app-crypt/argon2 # keepassxc
 app-admin/passwordsafe
 app-shells/zsh-syntax-highlighting
 app-crypt/kbfs
@@ -69,7 +66,6 @@ app-emulation/uae
 games-fps/quakeforge
 games-fps/qudos
 games-fps/quake2-textures # qudos
-app-portage/gentwoo
 media-sound/teamspeak-server
 games-fps/chocolate-doom **
 net-wireless/cubicsdr
@@ -77,7 +73,6 @@ net-libs/liquid-dsp # cubicsdr
 games-util/acc
 games-util/zdbsp
 games-util/udmf-convert **
-games-util/slade
 games-fps/dhewm3
 games-fps/prboom
 games-fps/doom-data
@@ -94,18 +89,15 @@ games-util/xboxdrv
 net-wireless/soapysdr
 net-wireless/sdrplay
 net-wireless/rtl-sdr
-dev-util/pycharm-professional
 dev-util/pycharm-community
-media-sound/pure-data
 media-sound/guitarix **
 media-libs/zita-convolver # guitarix
 media-libs/libmonome # guitarix
 media-libs/zita-resampler # guitarix
+media-sound/pure-data
 media-sound/bitwig-studio
-media-sound/cadence
 media-sound/mididings
 media-sound/setbfree
-media-sound/sequencer64
 media-sound/serialosc
 media-sound/synthv1
 media-sound/padthv1
@@ -116,31 +108,22 @@ app-misc/anki
 media-sound/mumble **
 games-util/vitamtp-fork
 dev-util/lldb
-sys-devel/lld
 virtual/wine
 app-emulation/wine-any
 app-emulation/wine-mono # wine
 net-vpn/logmein-hamachi
 app-arch/zpaq-extras
-app-crypt/certbot
-dev-python/pyrfc3339 # certbot
-dev-python/parsedatetime # certbot
-app-crypt/acme # certbot
-dev-python/josepy # certbot
 dev-util/bless
 media-gfx/apngdis
 net-dns/dnscrypt-proxy
-dev-python/potr
 sys-apps/idle3-tools
 dev-util/plan9port
 net-vpn/i2p
 dev-util/vmtouch
 app-arch/zpaq
-games-fps/ezquake-bin
 media-sound/spek
 media-sound/ardour
 media-libs/suil # ardour
-media-video/makemkv
 media-video/avidemux
 media-libs/avidemux-plugins # avidemux
 media-libs/avidemux-core # avidemux
@@ -150,12 +133,10 @@ media-sound/lmms
 media-libs/stk # lmms
 media-plugins/calf # lmms
 media-gfx/pngquant
-media-gfx/libimagequant # pngquant
 media-sound/yoshimi
 net-libs/tox
 net-im/qtox
 games-engines/openmw
-sci-physics/bullet # openmw
 sci-calculators/tiemu
 sci-libs/libticonv # tiemu
 sci-libs/libticalcs2 # tiemu
@@ -166,10 +147,8 @@ games-util/steam-launcher
 net-im/discord-bin
 media-gfx/opentoonz
 media-sound/mp3splt
-net-analyzer/metasploit **
 games-roguelike/dwarf-fortress
-games-fps/tribes2 **
-games-fps/wolfgl **
+games-fps/wolfgl ~*
 www-client/qutebrowser
 dev-python/pypeg2 # qutebrowser
 sys-power/phc-intel
@@ -179,11 +158,8 @@ media-video/handbrake
 x11-misc/i3blocks-gaps
 net-im/telegram-desktop-bin
 app-editors/neovim
-dev-lua/mpack # neovim
 dev-libs/unibilium # neovim
-dev-lua/lpeg # neovim
 dev-libs/msgpack # neovim
-dev-libs/libtermkey #neovim
 dev-libs/libvterm # neovim
 sys-fs/ecryptfs-utils
 media-gfx/maim
@@ -199,7 +175,7 @@ app-emulation/open-vm-tools
 dev-libs/xml-security-c # open-vm-tools
 sci-calculators/calcoo
 net-p2p/soulseek-qt
-sys-fs/exfat-nofuse **
+sys-fs/exfat-nofuse
 www-servers/onionshare
 net-libs/stem # onionshare
 app-emacs/emms
@@ -218,7 +194,6 @@ x11-misc/urxvtconfig
 net-misc/pyhoca-gui
 net-misc/python-x2go # pyhoca-gui
 net-misc/pyhoca-cli
-app-crypt/veracrypt
 net-analyzer/ntopng
 =net-libs/nDPI-2.0 # ntopng
 app-emulation/fuse
@@ -247,13 +222,13 @@ dev-python/munkres # beets
 dev-python/bluelet # beets
 dev-python/audioread # beets
 dev-python/pyacoustid # beets
-app-misc/neofetch
 www-client/torbrowser-launcher
 games-action/extreme-tuxracer
 games-emulation/vbam
 games-util/lutris
 dev-python/python-evdev # lutris
 games-fps/quake3
+games-fps/quake3-data # quake3
 games-emulation/fakenes
 games-puzzle/bastet
 games-engines/scummvm
@@ -267,7 +242,7 @@ games-board/phalanx
 games-simulation/openttd
 games-misc/opengfx # openttd
 games-util/grfcodec # openttd
-games-util/nml #openttd
+games-util/nml # openttd
 games-arcade/blobby
 games-action/supertuxkart
 games-roguelike/rogue
@@ -286,7 +261,6 @@ games-strategy/wesnoth
 games-fps/sauerbraten
 games-board/pouetchess
 games-emulation/openmsx
-games-misc/fortune-mod-all
 games-emulation/yabause
 games-emulation/desmume
 games-emulation/zsnes
@@ -316,19 +290,18 @@ dev-python/PySDL2 # m64py
 games-emulation/sdlmame
 sys-block/sas3flash
 app-crypt/kencfs-plasma
-games-emulation/rpcs3
 games-emulation/citra **
 dev-libs/sway
 dev-libs/wlc # sway
 x11-terms/lilyterm
-games-emulation/vgba **
+games-emulation/vgba
 games-emulation/lxdream
 games-emulation/zinc
 games-emulation/nestopia
-games-emulation/gngb **
+games-emulation/gngb
 games-emulation/hatari
-games-emulation/mekanix **
-games-emulation/gens **
+games-emulation/mekanix ~*
+games-emulation/gens
 games-emulation/stella
 games-emulation/gambatte
 games-emulation/nestra
@@ -346,31 +319,22 @@ media-sound/audacious
 media-plugins/audacious-plugins
 media-sound/coquillo
 media-gfx/phototonic
-media-sound/bempc
 media-sound/qtractor
 media-sound/protux
 net-wireless/broadcom-sta
 x11-plugins/gkrellm-countdown
-dev-util/nvidia-cuda-sdk
-dev-util/nvidia-cuda-toolkit # nvidia-cuda-sdk
 games-fps/gzdoom
 games-fps/redeclipse
 app-emulation/qt-virt-manager **
-net-misc/streamlink
-dev-python/backports-shutil_which # streamlink
 dev-lang/open-cobol
 net-misc/sgopherd
 app-emulation/vagrant
 dev-ruby/net-ssh # vagrant
-dev-ruby/net-scp # vagrant
 dev-ruby/hashicorp-checkpoint # vagrant
 dev-ruby/rake # vagrant
-dev-ruby/i18n # vagrant
 www-apps/otrs
 dev-perl/LWP-UserAgent-Determined # otrs
-dev-libs/log4cplus
 media-gfx/openvdb
-x11-drivers/amdgpu-pro
 media-sound/ezstream
 x11-themes/arc-theme
 sys-libs/libixp # wmii
@@ -379,7 +343,6 @@ sys-fs/go-mtpfs **
 dev-libs/go-fuse # go-mtpfs
 dev-libs/go-usb ** # go-mtpfs
 sys-fs/jmtpfs
-media-gfx/ahoviewer
 net-nntp/sabnzbd
 dev-python/sabyenc # sabnzbd
 dev-python/gntp # sabnzbd
@@ -388,7 +351,6 @@ media-gfx/flameshot
 app-mobilephone/heimdall
 dev-util/jenkins-bin
 dev-db/dbeaver-bin
-x11-misc/polybar
 net-misc/kafka-bin
 media-gfx/qimgv
 net-misc/electron-cash
@@ -398,9 +360,6 @@ net-misc/electrum-ltc
 app-arch/wimlib
 app-admin/consul
 dev-go/gox # consul
-dev-go/go-net # consul
-dev-go/go-crypto # consul
-dev-go/go-text # consul
 dev-go/go-tools # consul
 app-admin/go-updater
 dev-go/goversion # go-updater
@@ -416,7 +375,6 @@ app-portage/diffmask
 app-portage/fquery
 app-mobilephone/wammu
 dev-python/python-gammu # wammu
-app-portage/gpyutils
 dev-util/android-sdk-update-manager
 dev-python/py-cpuinfo
 dev-util/clinfo
@@ -435,12 +393,10 @@ dev-util/visual-regexp
 kde-misc/kio-locate
 kde-apps/kamoso
 kde-misc/kio-gopher
-kde-misc/kwebkitpart
 kde-misc/kio-stash
 kde-plasma/plasma-applet-active-window-control
 kde-misc/plasma-applet-network-monitor
 media-plugins/gimp-plugin-bimp
-kde-misc/plasma-applet-weather-widget
 media-plugins/gimp-lensfun
 media-plugins/gimp-paint-studio
 media-libs/fontconfig-ultimate
@@ -449,7 +405,6 @@ media-sound/mps-youtube
 dev-python/pafy # mps-youtube
 media-sound/teamspeak-client-bin
 media-video/gnome-mpv
-media-video/libva-utils
 media-video/shotcut
 net-im/telegram-cli
 net-misc/gerbera
@@ -464,10 +419,7 @@ net-misc/ripme
 x11-apps/intel-gpu-tools
 dev-util/peg # intel-gpu-tools
 app-misc/radeontop
-sys-boot/woeusb
 sys-apps/pkgcore
-dev-python/snakeoil # pkgcore
-sys-block/zram-init
 sys-apps/hwdata-redhat
 x11-misc/vym
 net-misc/youtube-comment-downloader
@@ -502,7 +454,6 @@ dev-python/txsocksx
 dev-python/pylzma
 dev-python/pyqt-distutils
 dev-python/pytest-cython
-dev-util/glslang
 dev-util/monodevelop
 dev-dotnet/nuget
 dev-dotnet/xdt-for-monodevelop # monodevelop
@@ -522,7 +473,6 @@ net-print/cnijfilter2
 net-print/pnm2ppa
 sci-libs/matio
 sci-libs/tensorflow
-media-libs/svgalib **
 games-util/rejoystick
 games-emulation/advancemame
 games-emulation/advancescan
@@ -548,33 +498,15 @@ dev-php/cli-prompt # composer
 dev-php/symfony-event-dispatcher # composer
 dev-php/symfony-config # composer
 dev-php/semver # composer
-www-client/netsurf
-media-libs/libsvgtiny # netsurf
-dev-libs/libnsutils # netsurf
-dev-libs/libwapcaplet # netsurf
-media-libs/libnsbmp # netsurf
-media-libs/libnsgif # netsurf
-dev-libs/libutf8proc # netsurf
-dev-libs/libcss # netsurf
-media-libs/libnspsl # netsurf
-media-libs/librosprite # netsurf
-dev-libs/nsgenbind # netsurf
-dev-libs/libnsfb # netsurf
-net-libs/libdom # netsurf
 x11-wm/bspwm
 x11-misc/sxhkd # bspwm
-x11-wm/treewm **
+x11-wm/treewm *
 x11-wm/amiwm
 x11-wm/goomwwm
 x11-wm/echinus
-x11-wm/stumpwm
-dev-lisp/clx # stumpwm
-dev-lisp/alexandria # stumpwm
-x11-wm/stumpwm-contrib
 x11-wm/plwm
 dev-python/python-xlib # plwm
 x11-wm/matwm2
-x11-wm/larswm
 x11-wm/sithwm
 x11-wm/page
 x11-wm/qtile
@@ -583,38 +515,21 @@ x11-wm/wmfs
 x11-wm/xoat **
 x11-wm/subtle
 x11-wm/wmii
-x11-wm/i3-gaps
-media-fonts/lohit-kannada
 media-fonts/montecarlo
-media-fonts/lohit-gujarati
 media-fonts/fantasque-sans-mono
-media-fonts/lohit-marathi
-media-fonts/lohit-nepali
 media-fonts/fifth-leg
 media-fonts/courier-prime
-media-fonts/lohit-tamil
 media-fonts/alegreya-sans
-media-fonts/lohit-assamese
-media-fonts/lohit-gurmukhi
 media-fonts/jomolhari
-media-fonts/lohit-odia
-media-fonts/lohit-tamil-classical
 media-fonts/inconsolata-hellenic
-media-fonts/clearsans
 media-fonts/heuristica
 media-fonts/ahem
-media-fonts/hkscs-ming
 media-fonts/hermit
-media-fonts/lohit-bengali
-media-fonts/lohit-devanagari
 media-fonts/fira-mono
-media-fonts/lohit-malayalam
 media-fonts/jsmath-extra-dark
-media-fonts/jsmath-extra-light
 media-fonts/koruri
 media-fonts/exljbris-free
 media-fonts/Humor-Sans
-media-fonts/lohit-telugu
 media-fonts/paratype
 media-fonts/ohsnap
 media-fonts/monoid
@@ -625,7 +540,6 @@ media-fonts/quivira
 media-fonts/qomolangma
 media-fonts/signika
 media-fonts/termsyn
-media-fonts/tex-gyre
 media-fonts/mix-mplus-ipa
 media-fonts/nuosu-sil
 media-fonts/ricty
@@ -686,7 +600,6 @@ media-plugins/vapoursynth-addgrain
 media-plugins/vapoursynth-mvtools
 media-plugins/vapoursynth-wwxd
 media-plugins/vapoursynth-fix-telecined-fades
-media-plugins/vapoursynth-qrcodesource
 media-plugins/vapoursynth-vine
 media-plugins/vapoursynth-continuityfixer
 media-plugins/vapoursynth-fmtconv
@@ -727,7 +640,6 @@ media-plugins/vapoursynth-remapframes
 media-plugins/vapoursynth-hqdn3d
 media-plugins/vapoursynth-timecube
 media-plugins/vapoursynth-deblockpp7
-media-plugins/vapoursynth-temporalsoften2
 media-plugins/vapoursynth-smoothuv
 media-plugins/vapoursynth-minideen
 media-plugins/vapoursynth-ttempsmooth
@@ -738,7 +650,6 @@ media-plugins/vapoursynth-motionmask
 media-plugins/vapoursynth-dedot
 media-sound/deadbeef
 media-plugins/deadbeef-plugins-meta
-media-plugins/deadbeef-soxr
 media-plugins/deadbeef-gnome-mmkeys
 media-plugins/deadbeef-replaygain-control
 media-plugins/deadbeef-spectrogram
@@ -754,10 +665,8 @@ media-plugins/deadbeef-stereo-widener
 media-plugins/deadbeef-mpris
 media-plugins/deadbeef-jack
 media-plugins/deadbeef-infobar
-media-plugins/deadbeef-librarybrowser
 media-plugins/deadbeef-decast
 media-plugins/deadbeef-fb
-media-plugins/deadbeef-archive-reader
 x11-plugins/wmmand
 x11-plugins/wmhdplop
 x11-plugins/wmbio
@@ -769,26 +678,58 @@ x11-plugins/wmxkb
 x11-plugins/wmlongrun **
 x11-plugins/asapm
 x11-plugins/wmlife
-x11-plugins/wmrecord **
+x11-plugins/wmrecord *
 x11-plugins/wmgrabimage
-x11-plugins/wmmixer **
+x11-plugins/wmmixer
 x11-plugins/wmwork
 x11-plugins/wmtime
-x11-plugins/wmXName **
+x11-plugins/wmXName *
 x11-plugins/wmgtemp
 x11-plugins/wmstickynotes
 x11-plugins/wmcdplay
 x11-plugins/wmrack
 x11-plugins/wmxres
 x11-plugins/wmmisc
-x11-plugins/wmacpimon **
+x11-plugins/wmacpimon *
 x11-plugins/wmforkplop
 x11-plugins/wmacpiload-ac
-x11-plugins/wmbatteries **
+x11-plugins/wmbatteries *
 x11-plugins/wmping
 x11-plugins/wmamixer
-xfce-extra/xfce4-gvfs-mount
-xfce-extra/eatmonkey
-xfce-extra/xfce4-alsa-plugin
-xfce-extra/multiload-nandhp
 xfce-extra/xfce4-composite-editor
+games-misc/fortune-mod-all
+games-misc/fortune-mod-bofh-excuses
+games-misc/fortune-mod-calvin
+games-misc/fortune-mod-chucknorris
+games-misc/fortune-mod-dubya
+games-misc/fortune-mod-familyguy
+games-misc/fortune-mod-firefly
+games-misc/fortune-mod-futurama
+games-misc/fortune-mod-gentoo-dev
+games-misc/fortune-mod-gentoo-forums
+games-misc/fortune-mod-hitchhiker
+games-misc/fortune-mod-homer
+games-misc/fortune-mod-humorixfortunes
+games-misc/fortune-mod-kernelcookies
+games-misc/fortune-mod-osfortune
+games-misc/fortune-mod-powerpuff
+games-misc/fortune-mod-pqf
+games-misc/fortune-mod-simpsons-chalkboard
+games-misc/fortune-mod-slackware
+games-misc/fortune-mod-smac
+games-misc/fortune-mod-sp-fortunes
+games-misc/fortune-mod-starwars
+games-misc/fortune-mod-strangelove
+games-misc/fortune-mod-tao
+games-misc/fortune-mod-zx-error
+
+www-client/netsurf
+net-libs/libdom # netsurf
+media-libs/librosprite # netsurf
+media-libs/libnsgif # netsurf
+dev-libs/libcss # netsurf
+media-libs/libnsbmp # netsurf
+dev-libs/nsgenbind # netsurf
+media-libs/libnspsl # netsurf
+media-libs/libsvgtiny # netsurf
+dev-libs/libnsfb # netsurf

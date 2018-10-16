@@ -3,8 +3,6 @@ dev-util/eclipse-sdk-bin::ssnb
 media-video/ffmpeg::libressl
 net-libs/nodejs::libressl
 
-app-portage/gentwoo::betagarden
-
 games-fps/gzdoom::haarp
 
 www-client/waterfox-bin::spikyatlinux
@@ -18,16 +16,13 @@ games-fps/zdoom::gamerlay
 
 net-print/brother-genml1-bin::brother-overlay
 
-media-sound/bitwig-studio::audio-overlay
-media-sound/cadence::audio-overlay
 media-sound/pure-data::audio-overlay
-media-sound/ladish::audio-overlay
+media-sound/bitwig-studio::audio-overlay
 media-sound/guitarix::audio-overlay
 media-sound/mididings::audio-overlay
 media-sound/drumkv1::audio-overlay
 media-sound/padthv1::audio-overlay
 media-sound/setbfree::audio-overlay
-media-sound/sequencer64::audio-overlay
 media-sound/samplv1::audio-overlay
 media-libs/zita-resampler::audio-overlay
 media-sound/synthv1::audio-overlay
@@ -46,7 +41,6 @@ games-emulation/rpcs3::jm-overlay
 
 media-plugins/vocoder-ladspa::seden
 
-games-mud/kmuddy::luke-jr
 games-fps/openjk-academy::luke-jr
 games-fps/openjk-academy-mp::luke-jr
 games-fps/openjk-outcast::luke-jr
@@ -58,14 +52,11 @@ dev-python/editorconfig::pentoo
 
 dev-lang/tauthon::stefantalpalaru
 media-plugins/gimp-refocus::stefantalpalaru
-www-client/ungoogled-chromium::stefantalpalaru
 
 dev-dotnet/nuget::dotnet
 dev-dotnet/xdt-for-monodevelop::dotnet
 dev-util/monodevelop::dotnet
 dev-dotnet/referenceassemblies-pcl::dotnet
-
-app-portage/keyword-stat::haskell
 
 x11-themes/sddm-gentoo-black-theme::poly-c
 games-fps/dhewm3::poly-c
@@ -104,7 +95,6 @@ app-shells/zsh-syntax-highlighting::4nykey
 
 media-sound/deadbeef::deadbeef-overlay
 media-plugins/deadbeef-plugins-meta::deadbeef-overlay
-media-plugins/deadbeef-soxr::deadbeef-overlay
 media-plugins/deadbeef-gnome-mmkeys::deadbeef-overlay
 media-plugins/deadbeef-replaygain-control::deadbeef-overlay
 media-plugins/deadbeef-spectrogram::deadbeef-overlay
@@ -123,7 +113,6 @@ media-plugins/deadbeef-infobar::deadbeef-overlay
 media-plugins/deadbeef-librarybrowser::deadbeef-overlay
 media-plugins/deadbeef-decast::deadbeef-overlay
 media-plugins/deadbeef-fb::deadbeef-overlay
-media-plugins/deadbeef-archive-reader::deadbeef-overlay
 
 media-tv/plex-media-server::fkmclane
 x11-misc/lemonbar::fkmclane
@@ -314,13 +303,11 @@ media-plugins/vapoursynth-znedi3::vapoursynth
 media-plugins/vapoursynth-oyster::vapoursynth
 media-plugins/vapoursynth-plum::vapoursynth
 media-plugins/vapoursynth-nnedi3cl::vapoursynth
-media-plugins/vapoursynth-qrcodesource::vapoursynth
 media-plugins/vapoursynth-vine::vapoursynth
 media-plugins/vapoursynth-knlmeanscl::vapoursynth
 media-plugins/vapoursynth-smoothuv::vapoursynth
 media-plugins/vapoursynth-warpsharpsupport::vapoursynth
 media-plugins/vapoursynth-deblockpp7::vapoursynth
-media-plugins/vapoursynth-temporalsoften2::vapoursynth
 media-plugins/vapoursynth-dedot::vapoursynth
 media-plugins/vapoursynth-temporalmedian::vapoursynth
 media-plugins/vapoursynth-decross::vapoursynth
