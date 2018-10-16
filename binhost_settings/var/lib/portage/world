@@ -104,6 +104,7 @@ app-emulation/virt-manager
 app-emulation/virtualbox
 app-emulation/virtualbox-additions
 app-emulation/virtualbox-guest-additions
+app-emulation/wine-any
 app-emulation/xen
 app-eselect/eselect-repository
 app-forensics/aide
@@ -1060,6 +1061,7 @@ sys-process/htop
 sys-process/iotop
 sys-process/lsof
 sys-process/parallel
+virtual/wine
 www-apps/otrs
 www-apps/trac
 www-client/chromium

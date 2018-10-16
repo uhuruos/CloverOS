@@ -395,7 +395,7 @@ virtual/libelf abi_x86_32
 dev-libs/elfutils abi_x86_32
 x11-base/xcb-proto abi_x86_32
 virtual/libintl abi_x86_32
-virtual/jpeg:0 abi_x86_32
+virtual/jpeg abi_x86_32
 media-libs/libjpeg-turbo abi_x86_32
 virtual/pkgconfig abi_x86_32
 dev-util/pkgconfig abi_x86_32
@@ -404,8 +404,14 @@ dev-libs/libpcre abi_x86_32
 virtual/libiconv abi_x86_32
 virtual/opengl abi_x86_32
 virtual/glu abi_x86_32
+x11-libs/libva abi_x86_32
+x11-libs/libva-vdpau-driver abi_x86_32
+x11-libs/libva-intel-driver abi_x86_32
+media-libs/glu abi_x86_32
+virtual/opencl abi_x86_32
 
 #temporary
+media-libs/libopenshot -imagemagick
 dev-python/six python_targets_python3_5
 dev-python/python-dateutil python_targets_python3_5
 dev-python/pytz python_targets_python3_5
