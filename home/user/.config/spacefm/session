@@ -30,6 +30,7 @@ always_show_tabs=0
 show_close_tab_buttons=0
 
 [MOD]
+dev_show_internal_drives-b=1
 dev_root_mount-z=/usr/bin/udevil mount -o %o %v
 dev_root_unmount-z=/usr/bin/udevil umount %v
 dev_show_internal_drives-b=2
