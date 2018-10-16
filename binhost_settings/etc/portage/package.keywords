@@ -1,6 +1,8 @@
 #preference
 sys-devel/gcc
 sys-kernel/gentoo-sources
+media-libs/mesa
+x11-libs/libdrm
 net-misc/youtube-dl
 www-client/firefox
 dev-libs/nss # firefox
