@@ -20,14 +20,15 @@ dev-util/glib-utils # gimp
 dev-libs/glib # gimp
 
 #old, remove when stable is bumped up
-sys-kernel/spl
-sys-fs/zfs
-sys-fs/zfs-kmod
-dev-lisp/clisp
-net-p2p/mldonkey
-app-laptop/tp_smapi
-media-fonts/vlgothic
-games-emulation/dolphin **
+sys-fs/zfs # kernel 4.18
+sys-fs/zfs-kmod # zfs
+sys-kernel/spl # zfs
+dev-lisp/clisp # won't build
+net-p2p/mldonkey # won't build
+app-laptop/tp_smapi # requested
+media-fonts/vlgothic # old
+games-emulation/dolphin ** # old
+games-emulation/pcsx2 ** # gcc8 breaks 1.4
 media-libs/zimg # vapoursynth
 dev-python/cython # vapoursynth
 dev-libs/json-c # sway
@@ -116,8 +117,9 @@ media-sound/mumble **
 games-util/vitamtp-fork
 dev-util/lldb
 sys-devel/lld
+virtual/wine
 app-emulation/wine-any
-app-emulation/wine-mono # wine-any
+app-emulation/wine-mono # wine
 net-vpn/logmein-hamachi
 app-arch/zpaq-extras
 app-crypt/certbot

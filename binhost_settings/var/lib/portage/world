@@ -105,8 +105,8 @@ app-emulation/virt-manager
 app-emulation/virtualbox
 app-emulation/virtualbox-additions
 app-emulation/virtualbox-guest-additions
+app-emulation/wine-any
 app-emulation/winetricks
-app-emulation/xen
 app-eselect/eselect-repository
 app-forensics/aide
 app-i18n/fcitx-anthy
@@ -245,7 +245,6 @@ dev-lang/open-cobol
 dev-lang/php
 dev-lang/rust
 dev-lang/scala
-dev-lang/tauthon
 dev-libs/amdgpu-pro-opencl
 dev-libs/beignet
 dev-libs/libisoburn
@@ -346,7 +345,6 @@ games-emulation/mupen64plus
 games-emulation/nestopia
 games-emulation/nestra
 games-emulation/openmsx
-games-emulation/pcsx2
 games-emulation/pcsxr
 games-emulation/ppsspp
 games-emulation/retroarch
@@ -1093,6 +1091,7 @@ www-misc/profile-sync-daemon
 www-misc/urlwatch
 www-plugins/adobe-flash
 www-plugins/chrome-binary-plugins
+www-plugins/freshplayerplugin
 www-plugins/lightspark
 www-servers/apache
 www-servers/lighttpd
