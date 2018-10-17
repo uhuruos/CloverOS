@@ -30,7 +30,6 @@ net-p2p/mldonkey # won't build
 app-laptop/tp_smapi # requested
 media-fonts/vlgothic # old
 games-emulation/dolphin ** # old
-#games-emulation/pcsx2 ** # gcc8 breaks 1.4
 media-libs/zimg # vapoursynth
 dev-python/cython # vapoursynth
 dev-libs/json-c # sway
@@ -153,7 +152,6 @@ games-roguelike/dwarf-fortress
 games-fps/wolfgl ~*
 www-client/qutebrowser
 dev-python/pypeg2 # qutebrowser
-sys-power/phc-intel
 x11-terms/termite
 x11-libs/vte # termite
 media-video/handbrake
@@ -171,10 +169,8 @@ net-p2p/freenet
 dev-java/bcprov # freenet
 net-libs/NativeThread # freenet
 media-sound/tomahawk
-dev-cpp/websocketpp # tomahawk
 media-video/obs-studio
 app-emulation/open-vm-tools
-dev-libs/xml-security-c # open-vm-tools
 sci-calculators/calcoo
 net-p2p/soulseek-qt
 sys-fs/exfat-nofuse
@@ -185,12 +181,9 @@ games-roguelike/nethack
 www-client/midori
 sys-apps/qdirstat
 www-client/torbrowser
-dev-python/pyliblzma # torbrowser-launcher
 app-emulation/playonlinux
 net-vpn/i2pd
 net-wireless/blueman
-net-wireless/blueberry
-net-wireless/bluez-tools # blueberry
 media-sound/bluez-alsa
 x11-misc/urxvtconfig
 net-misc/pyhoca-gui
@@ -221,9 +214,6 @@ media-sound/beets
 dev-python/discogs-client # beets
 dev-python/jellyfish # beets
 dev-python/munkres # beets
-dev-python/bluelet # beets
-dev-python/audioread # beets
-dev-python/pyacoustid # beets
 www-client/torbrowser-launcher
 games-action/extreme-tuxracer
 games-emulation/vbam
@@ -302,6 +292,7 @@ games-emulation/zinc
 games-emulation/nestopia
 games-emulation/gngb
 games-emulation/hatari
+dev-libs/spsdeclib # hatari
 games-emulation/mekanix ~*
 games-emulation/gens
 games-emulation/stella
@@ -381,9 +372,9 @@ dev-util/android-sdk-update-manager
 dev-python/py-cpuinfo
 dev-util/clinfo
 app-misc/fsearch
-app-portage/keyword-stat
 app-text/master-pdf-editor
 app-vim/editorconfig-vim
+dev-python/editorconfig-core-py # editorconfig-vim
 app-shells/thefuck
 dev-java/android-util
 app-shells/rust-zshcomp
@@ -405,7 +396,6 @@ media-libs/fontconfig-ultimate
 media-plugins/gimp-resynthesizer
 media-sound/mps-youtube
 dev-python/pafy # mps-youtube
-media-sound/teamspeak-client-bin
 media-video/gnome-mpv
 media-video/shotcut
 net-im/telegram-cli
@@ -434,6 +424,8 @@ x11-themes/sddm-gentoo-black-theme
 app-misc/ddccontrol-db
 app-i18n/ibus-kkc
 app-i18n/ibus-sunpinyin
+app-i18n/sunpinyin # ibus-sunpinyin
+app-i18n/sunpinyin-data # ibus-sunpinyin
 app-i18n/ibus-typing-booster
 app-i18n/ibus-input-pad
 dev-libs/input-pad
@@ -446,16 +438,10 @@ games-fps/openjk-academy-mp **
 media-plugins/gimp-refocus
 net-im/telegram-purple **
 net-p2p/nicotine+
-x11-libs/libvdpau-va-gl
 sys-fs/zfs-auto-snapshot
 x11-plugins/purple-discord
 games-server/mednafen-server
-dev-python/editorconfig
 dev-python/jsbeautifier
-dev-python/txsocksx
-dev-python/pylzma
-dev-python/pyqt-distutils
-dev-python/pytest-cython
 dev-util/monodevelop
 dev-dotnet/nuget
 dev-dotnet/xdt-for-monodevelop # monodevelop
@@ -474,7 +460,6 @@ media-libs/vips # nip2
 net-print/cnijfilter2
 net-print/pnm2ppa
 sci-libs/matio
-sci-libs/tensorflow
 games-util/rejoystick
 games-emulation/advancemame
 games-emulation/advancescan
@@ -496,7 +481,6 @@ dev-php/spdx-licenses # composer
 dev-php/symfony-process # composer
 dev-php/json-schema # composer
 dev-php/symfony-dependency-injection # composer
-dev-php/cli-prompt # composer
 dev-php/symfony-event-dispatcher # composer
 dev-php/symfony-config # composer
 dev-php/semver # composer
@@ -677,7 +661,7 @@ x11-plugins/wmsystemtray
 x11-plugins/wmcalendar
 x11-plugins/wmmp3
 x11-plugins/wmxkb
-x11-plugins/wmlongrun **
+x11-plugins/wmlongrun ~*
 x11-plugins/asapm
 x11-plugins/wmlife
 x11-plugins/wmrecord *

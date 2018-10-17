@@ -11,7 +11,7 @@ livecd_install.sh: uefi install, encryption
 --- packages that don't build ---
 
 #doesn't emerge
-xen ungoogled-chromium cinelerra palemoon stumpwm stumpwm-contrib pure-data netsurf gkrellm-plugins alienarena opentoonz qtox
+xen ungoogled-chromium cinelerra stumpwm stumpwm-contrib netsurf gkrellm-plugins redeclipse alienarena opentoonz qtox master-pdf-editor
 
 #libressl
 tdlib eagle megatools nxplayer murmur makemkv eiskaltdcpp retroshare acme-tiny spyder

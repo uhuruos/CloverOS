@@ -95,6 +95,7 @@ app-emulation/e-uae
 app-emulation/fuse
 app-emulation/nemu
 app-emulation/open-vm-tools
+app-emulation/playonlinux
 app-emulation/q4wine
 app-emulation/qemu
 app-emulation/qt-virt-manager
@@ -105,6 +106,7 @@ app-emulation/virtualbox
 app-emulation/virtualbox-additions
 app-emulation/virtualbox-guest-additions
 app-emulation/wine-any
+app-emulation/winetricks
 app-emulation/xen
 app-eselect/eselect-repository
 app-forensics/aide
@@ -112,8 +114,11 @@ app-i18n/fcitx-anthy
 app-i18n/fcitx-qt5
 app-i18n/ibus
 app-i18n/ibus-anthy
+app-i18n/ibus-chewing
 app-i18n/ibus-handwrite
+app-i18n/ibus-input-pad
 app-i18n/ibus-typing-booster
+app-i18n/ibus-unikey
 app-i18n/scim
 app-i18n/scim-anthy
 app-i18n/scim-m17n
@@ -225,6 +230,7 @@ app-text/unrtf
 app-text/wgetpaste
 app-text/zathura
 app-text/zathura-meta
+app-vim/editorconfig-vim
 app-vim/extra-syntax
 app-vim/vim-tmux
 dev-db/dbeaver-bin
@@ -247,6 +253,7 @@ dev-lang/scala
 dev-lang/tauthon
 dev-libs/amdgpu-pro-opencl
 dev-libs/beignet
+dev-libs/input-pad
 dev-libs/libisoburn
 dev-libs/sway
 dev-libs/weston
@@ -269,6 +276,7 @@ dev-python/yolk-portage
 dev-qt/qt-creator
 dev-ruby/nokogiri
 dev-scheme/racket
+dev-util/android-sdk-update-manager
 dev-util/android-tools
 dev-util/android-udev-rules
 dev-util/bless
@@ -333,7 +341,9 @@ games-emulation/fceux
 games-emulation/gambatte
 games-emulation/generator
 games-emulation/gens
+games-emulation/gngb
 games-emulation/gngeo
+games-emulation/hatari
 games-emulation/higan
 games-emulation/lxdream
 games-emulation/mednafen
@@ -342,6 +352,7 @@ games-emulation/mekanix
 games-emulation/mgba
 games-emulation/mupen64plus
 games-emulation/nestopia
+games-emulation/nestra
 games-emulation/openmsx
 games-emulation/pcsxr
 games-emulation/ppsspp
@@ -352,6 +363,8 @@ games-emulation/stella
 games-emulation/vbam
 games-emulation/vgba
 games-emulation/yabause
+games-emulation/zinc
+games-emulation/zsnes
 games-engines/odamex
 games-engines/openmw
 games-engines/openxcom
@@ -404,6 +417,7 @@ games-util/joystick
 games-util/lutris
 games-util/qjoypad
 games-util/rejoystick
+games-util/steam-launcher
 games-util/udmf-convert
 games-util/vitamtp-fork
 games-util/xboxdrv
@@ -419,6 +433,8 @@ kde-frameworks/breeze-icons-rcc
 kde-misc/basket
 kde-misc/kdeconnect
 kde-misc/kdirstat
+kde-misc/kio-gopher
+kde-misc/kio-locate
 kde-misc/kio-stash
 kde-misc/krename
 kde-misc/krusader
@@ -821,6 +837,7 @@ net-analyzer/bwbar
 net-analyzer/bwm-ng
 net-analyzer/cutter
 net-analyzer/dhcpdump
+net-analyzer/flent
 net-analyzer/iftop
 net-analyzer/iptraf-ng
 net-analyzer/mtr
@@ -1111,6 +1128,7 @@ x11-apps/xrandr
 x11-apps/xwininfo
 x11-base/xorg-server
 x11-base/xorg-x11
+x11-drivers/nvidia-drivers
 x11-drivers/xf86-input-wacom
 x11-drivers/xf86-video-vmware
 x11-misc/arandr
