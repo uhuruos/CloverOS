@@ -30,6 +30,7 @@ net-p2p/mldonkey # won't build
 app-laptop/tp_smapi # requested
 media-fonts/vlgothic # old
 games-emulation/dolphin ** # old
+games-emulation/pcsx2 ** # old
 media-libs/zimg # vapoursynth
 dev-python/cython # vapoursynth
 dev-libs/json-c # sway
