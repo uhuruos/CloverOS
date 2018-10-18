@@ -2,7 +2,6 @@
 */*::4nykey
 */*::abendbrot
 */*::audio-overlay
-*/*::bar
 */*::brother-overlay
 */*::chaos
 */*::deadbeef-overlay
@@ -23,7 +22,6 @@
 */*::libressl
 */*::linxon
 */*::luke-jr
-*/*::pentoo
 */*::poly-c
 */*::raiagent
 */*::rasdark

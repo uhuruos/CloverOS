@@ -2,6 +2,7 @@ dev-util/eclipse-sdk-bin::ssnb
 
 media-video/ffmpeg::libressl
 net-libs/nodejs::libressl
+dev-qt/qtnetwork::libressl
 
 games-fps/gzdoom::haarp
 
@@ -29,26 +30,19 @@ media-sound/synthv1::audio-overlay
 media-sound/serialosc::audio-overlay
 media-libs/libmonome::audio-overlay # serialosc
 
-media-gfx/ephoto::bar
-
 games-util/vitamtp-fork::chaos
 
 x11-plugins/purple-discord::flussence
 
 net-misc/megatools::jm-overlay
 net-im/telegram-purple::jm-overlay
-games-emulation/rpcs3::jm-overlay
-
-media-plugins/vocoder-ladspa::seden
+games-emulation/citra::jm-overlay
 
 games-fps/openjk-academy::luke-jr
 games-fps/openjk-academy-mp::luke-jr
 games-fps/openjk-outcast::luke-jr
 
 dev-util/android-udev-rules::genthree
-
-dev-python/jsbeautifier::pentoo
-dev-python/editorconfig::pentoo
 
 dev-lang/tauthon::stefantalpalaru
 media-plugins/gimp-refocus::stefantalpalaru
@@ -76,7 +70,6 @@ x11-misc/i3blocks-gaps::0x4d4c
 <app-laptop/tlp-9999::tlp
 sys-power/linux-x86-power-tools::tlp
 
-games-emulation/citra::vampire
 games-fps/chocolate-doom::vampire
 
 games-emulation/sdlmame::jorgicio

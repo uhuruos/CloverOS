@@ -1,8 +1,6 @@
 #preference
 sys-devel/gcc
 sys-kernel/gentoo-sources
-media-libs/mesa
-x11-libs/libdrm
 net-misc/youtube-dl
 www-client/firefox
 dev-libs/nss # firefox
@@ -28,6 +26,7 @@ sys-kernel/spl # zfs
 dev-lisp/clisp # won't build
 net-p2p/mldonkey # won't build
 app-laptop/tp_smapi # requested
+dev-libs/beignet # old clang version
 media-fonts/vlgothic # old
 games-emulation/dolphin ** # old
 games-emulation/pcsx2 ** # old
@@ -39,6 +38,7 @@ media-libs/opencv # waifu2x-converter-cpp
 #libressl
 media-video/ffmpeg::libressl
 net-libs/nodejs::libressl
+dev-qt/qtnetwork::libressl
 net-ftp/proftpd
 net-ftp/pure-ftpd
 www-client/dillo
@@ -50,6 +50,8 @@ media-libs/opusfile
 dev-libs/cyrus-sasl
 
 #keyworded, remove when stable exists
+dev-util/lldb
+games-emulation/rpcs3 **
 www-client/google-chrome-unstable
 games-fps/ezquake-bin
 net-misc/megatools
@@ -109,7 +111,6 @@ x11-themes/wm-icons
 app-misc/anki
 media-sound/mumble **
 games-util/vitamtp-fork
-dev-util/lldb
 virtual/wine
 app-emulation/wine-any
 app-emulation/wine-mono # wine
@@ -163,6 +164,7 @@ dev-libs/unibilium # neovim
 dev-libs/msgpack # neovim
 dev-libs/libvterm # neovim
 sys-fs/ecryptfs-utils
+sys-apps/keyutils # ecryptfs-utils
 media-gfx/maim
 x11-misc/slop # maim
 net-wireless/gnuradio
@@ -442,7 +444,6 @@ net-p2p/nicotine+
 sys-fs/zfs-auto-snapshot
 x11-plugins/purple-discord
 games-server/mednafen-server
-dev-python/jsbeautifier
 dev-util/monodevelop
 dev-dotnet/nuget
 dev-dotnet/xdt-for-monodevelop # monodevelop

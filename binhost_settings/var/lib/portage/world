@@ -264,7 +264,6 @@ dev-php/composer
 dev-python/ansi2html
 dev-python/cgroup-utils
 dev-python/docker-py
-dev-python/jsbeautifier
 dev-python/pip
 dev-python/py-cpuinfo
 dev-python/pystache
@@ -358,6 +357,7 @@ games-emulation/pcsx2
 games-emulation/pcsxr
 games-emulation/ppsspp
 games-emulation/retroarch
+games-emulation/rpcs3
 games-emulation/sdlmame
 games-emulation/snes9x
 games-emulation/stella
@@ -721,7 +721,6 @@ media-plugins/vapoursynth-scenechange
 media-plugins/vapoursynth-templinearapproximate
 media-plugins/vapoursynth-vautodeint
 media-plugins/vapoursynth-vs-maskdetail
-media-plugins/vocoder-ladspa
 media-sound/alsa-tools
 media-sound/alsa-utils
 media-sound/amsynth
@@ -1065,7 +1064,7 @@ sys-kernel/bliss-initramfs
 sys-kernel/dkms
 sys-kernel/dracut
 sys-kernel/genkernel
-sys-kernel/gentoo-sources:4.18.12
+sys-kernel/gentoo-sources:4.18.14
 sys-kernel/linux-firmware
 sys-power/acpi_call
 sys-power/acpitool
@@ -1129,7 +1128,6 @@ x11-apps/xrandr
 x11-apps/xwininfo
 x11-base/xorg-server
 x11-base/xorg-x11
-x11-drivers/nvidia-drivers
 x11-drivers/xf86-input-wacom
 x11-drivers/xf86-video-vmware
 x11-misc/arandr
