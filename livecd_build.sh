@@ -107,7 +107,6 @@ X&
 sleep 1
 fvwm&
 nitrogen --set-zoom wallpaper.png
-xbindkeys
 urxvt -geometry \$(xrandr | awk "NR==1{print \"80x24+\"\\\$8/2-283\"+\"\\\$10/2-191}") -e sudo ./livecd_install.sh
 fi' >> /home/$username/.bash_profile
 wget https://gitgud.io/cloveros/cloveros/raw/master/livecd_install.sh -O /home/$username/livecd_install.sh
