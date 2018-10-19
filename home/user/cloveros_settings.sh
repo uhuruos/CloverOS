@@ -72,6 +72,10 @@ case "$choice" in
 			sudo emerge rtorrent
 		fi
 
+		if [ -d /var/db/pkg/net-wireless/rfkill-*/ ]; then
+			sudo emerge -C rfkill
+		fi
+
 		sudo rm /usr/portage/packages/Packages &> /dev/null
 
 		kernel=$(uname -r)
