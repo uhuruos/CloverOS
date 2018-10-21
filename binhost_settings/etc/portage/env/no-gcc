@@ -1,4 +1,0 @@
-CC="clang"
-CXX="clang++"
-CFLAGS="-Ofast -mmmx -mssse3 -pipe -funroll-loops"
-CXXFLAGS="${CFLAGS}"

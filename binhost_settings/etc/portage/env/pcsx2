@@ -1,3 +1,2 @@
-CFLAGS="-Ofast -mmmx -mssse3 -pipe -funroll-loops -floop-block -floop-interchange -floop-strip-mine -ftree-loop-distribution -mxsave"
+CFLAGS="${CFLAGS} -mxsave"
 CXXFLAGS="${CFLAGS}"
-LDFLAGS="-Wl,-O1 -Wl,--as-needed -fuse-ld=bfd"
