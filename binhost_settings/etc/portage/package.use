@@ -241,6 +241,7 @@ dev-libs/glib dbus # required by consolekit
 dev-libs/botan -bindist # required by qt-creator
 app-crypt/gpgme python # required by torbrowser-launcher
 media-libs/gd truetype fontconfig # required by amule vnstat gnuplot graphviz
+xfce-base/thunar dbus # required by xfce-base/xfdesktop
 sys-apps/xdg-desktop-portal-gtk X
 x11-libs/gtk+ X
 x11-libs/libva X
@@ -248,7 +249,6 @@ dev-cpp/gtkmm X
 x11-libs/gdk-pixbuf X
 media-libs/flac ogg
 sys-boot/grub mount
-xfce-base/thunar dbus
 gnome-base/gvfs udisks
 net-misc/spice-gtk gtk3 usbredir
 app-crypt/gpgme qt5
