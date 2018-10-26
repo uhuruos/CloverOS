@@ -300,6 +300,7 @@ dev-util/re2c
 dev-util/regexxer
 dev-util/staruml-bin
 dev-util/strace
+dev-util/trace-cmd
 dev-util/valgrind
 dev-util/visual-regexp
 dev-util/vmtouch

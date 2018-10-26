@@ -4,6 +4,7 @@ sys-kernel/gentoo-sources
 net-misc/youtube-dl
 www-client/firefox
 dev-libs/nss # firefox
+dev-util/cbindgen # firefox
 games-emulation/retroarch
 games-emulation/desmume-libretro # retroarch
 games-emulation/ppsspp-libretro # retroarch
@@ -37,7 +38,7 @@ media-libs/opencv # waifu2x-converter-cpp
 
 #libressl
 media-video/ffmpeg::libressl
-net-libs/nodejs::libressl
+net-libs/nodejs::pigfoot
 dev-qt/qtnetwork::libressl
 net-ftp/proftpd
 net-ftp/pure-ftpd
@@ -50,6 +51,7 @@ media-libs/opusfile
 dev-libs/cyrus-sasl
 
 #keyworded, remove when stable exists
+dev-util/trace-cmd
 dev-util/lldb
 games-emulation/rpcs3 **
 www-client/google-chrome-unstable

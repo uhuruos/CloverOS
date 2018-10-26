@@ -40,8 +40,6 @@
 net-libs/nodejs::gentoo
 net-misc/megatools::gentoo
 x11-libs/vte:2.91::gentoo
->=media-gfx/qimgv-0.7
 >=dev-util/lldb-7.0.0
 >dev-lang/tk-8.6.6
 >dev-lang/tcl-8.6.6
->=www-client/chromium-70
