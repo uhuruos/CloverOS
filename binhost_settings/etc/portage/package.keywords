@@ -38,7 +38,7 @@ media-libs/opencv # waifu2x-converter-cpp
 
 #libressl
 media-video/ffmpeg::libressl
-net-libs/nodejs::pigfoot
+net-libs/nodejs::libressl
 dev-qt/qtnetwork::libressl
 net-ftp/proftpd
 net-ftp/pure-ftpd

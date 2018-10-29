@@ -1,3 +1,4 @@
+games-engines/openmw devtools
 dev-util/trace-cmd gtk udis86
 www-client/netsurf gtk -gtk2 gtk3 -fbcon -fbcon_frontend_able -duktape -bmp -gif -javascript -jpeg -mng -png -psl -rosprite -svg -svgtiny -webp
 net-p2p/deluge console geoip gtk webinterface

@@ -1,9 +1,8 @@
-net-libs/nodejs::pigfoot
-
 dev-util/eclipse-sdk-bin::ssnb
 
 media-video/ffmpeg::libressl
 dev-qt/qtnetwork::libressl
+net-libs/nodejs::libressl
 
 games-fps/gzdoom::haarp
 
