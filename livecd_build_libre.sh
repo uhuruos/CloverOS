@@ -76,10 +76,7 @@ eselect lcdfilter set infinality
 echo "en_US.UTF-8 UTF-8" >> /etc/locale.gen
 locale-gen
 eselect locale set en_US.utf8
-gpasswd -a $username audio
-gpasswd -a $username video
-gpasswd -a $username games
-gpasswd -a $username input
+usermod -a -G audio,video,games,input,plugdev $username
 cd /home/$username/
 rm .bash_profile
 wget $gitprefix/home/user/{.bash_profile,.zprofile,.zshrc,.fvwm2rc,.Xdefaults,wallpaper.png,.xbindkeysrc,screenfetch-dev,bl.sh,cloveros_settings.sh,stats.sh,rotate_screen.sh,.emacs,.rtorrent.rc}
