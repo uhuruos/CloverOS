@@ -413,7 +413,7 @@ sys-apps/hprofile
 sys-fs/bcache-tools
 www-client/google-chrome-beta
 net-misc/ripme
-x11-apps/intel-gpu-tools
+x11-apps/igt-gpu-tools
 dev-util/peg # intel-gpu-tools
 app-misc/radeontop
 sys-apps/pkgcore
