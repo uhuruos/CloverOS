@@ -43,4 +43,3 @@ x11-libs/vte:2.91::gentoo
 >=dev-util/lldb-7.0.0
 >dev-lang/tk-8.6.6
 >dev-lang/tcl-8.6.6
->media-libs/mesa-18.2
