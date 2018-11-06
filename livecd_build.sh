@@ -4,14 +4,17 @@ if [ $(id -u) != '0' ]; then
 	exit 1
 fi
 
+mkdir iso/
+cd iso/
+
 gitprefix="https://gitgud.io/cloveros/cloveros/raw/master"
 
 rootpassword=password
 username=livecd
 userpassword=password
 
-mkdir image
-cd image
+mkdir image/
+cd image/
 
 builddate=$(curl -s http://distfiles.gentoo.org/releases/amd64/autobuilds/current-stage3-amd64/ | sed -nr 's/.*href="stage3-amd64-([0-9].*).tar.xz">.*/\1/p')
 wget http://distfiles.gentoo.org/releases/amd64/autobuilds/current-stage3-amd64/stage3-amd64-$builddate.tar.xz
@@ -129,4 +132,5 @@ xorriso -as mkisofs -r -J \
 	-b isolinux/isolinux.bin -c isolinux/boot.cat \
 	-no-emul-boot -boot-load-size 4 -boot-info-table  \
 	-o CloverOS-x86_64-$(date +"%Y%m%d").iso files
-rm -Rf image/ files/ isohdpfx.bin livecd_files.tar.xz
+mv CloverOS-x86_64-$(date +"%Y%m%d").iso ..
+rm -Rf iso/
