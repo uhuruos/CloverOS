@@ -132,4 +132,5 @@ xorriso -as mkisofs -r -J \
 	-no-emul-boot -boot-load-size 4 -boot-info-table  \
 	-o CloverOS_Libre-x86_64-$(date +"%Y%m%d").iso files
 mv CloverOS_Libre-x86_64-$(date +"%Y%m%d").iso ..
+cd ..
 rm -Rf iso-libre/
