@@ -93,7 +93,7 @@ app-editors/vim nls -minimal python
 app-editors/vim-core nls -minimal
 dev-util/google-perftools -minimal
 app-editors/nano -minimal
-x11-base/xorg-server -minimal xvfb
+x11-base/xorg-server -minimal xvfb suid
 net-p2p/eiskaltdcpp -minimal -emoticons -spell dht json gtk
 kde-plasma/libksysguard -minimal
 sci-libs/cholmod -minimal

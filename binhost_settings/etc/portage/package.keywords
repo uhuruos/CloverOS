@@ -457,6 +457,7 @@ games-util/qjoypad
 games-util/joystick
 media-gfx/ephoto
 app-crypt/hashcat
+app-arch/lzma # hashcat
 net-print/hplip
 net-print/hplip-plugin
 media-gfx/nip2
