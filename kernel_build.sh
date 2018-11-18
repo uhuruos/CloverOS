@@ -1,5 +1,5 @@
-kernelversion=4.19.2
-kernelmajversion=4.19
+kernelversion=4.18.19
+kernelmajversion=4.18
 
 emerge -C gentoo-sources
 rm -Rf /usr/src/*-gentoo*
