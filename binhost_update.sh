@@ -4,6 +4,7 @@ emerge -uvDN --buildpkg @world
 emerge --buildpkg @preserved-rebuild
 emerge --depclean
 emerge -1 --buildpkg $(find /var/db/pkg/ -mindepth 2 -maxdepth 2 -name \*-9999 | grep -v MERGING | awk -F \/ '{printf "=%s/%s ", $5, $6}')
+eclean-pkg
 
 #mv /usr/portage/packages/s/ .
 #rm -Rf /usr/portage/packages/*

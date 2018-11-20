@@ -201,7 +201,7 @@ net-analyzer/rrdtool perl graph
 media-sound/lmms alsa fluidsynth ogg portaudio sdl stk qt5
 app-admin/testdisk ntfs
 net-p2p/qbittorrent geoip webui
-media-gfx/gimp smp pdf aalib openexr postscript python xpm vector-icons
+media-gfx/gimp smp aalib openexr postscript python xpm vector-icons unwind
 net-fs/nfs-utils nfsv41
 net-fs/cifs-utils -acl -ads
 media-sound/mpd sid sqlite alsa bzip2 curl ffmpeg fifo flac glib icu id3tag inotify mad network ogg opus tcpd unicode vorbis adplug ao audiofile cdio expat faad fluidsynth gme lame libsamplerate libsoxr mikmod mms modplug mp4v2 mpg123 musepack pipe recorder sndfile soundcloud twolame wavpack wildmidi zip libmpdclient
