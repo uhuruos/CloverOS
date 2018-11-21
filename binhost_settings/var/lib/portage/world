@@ -595,7 +595,6 @@ media-fonts/nuosu-sil
 media-fonts/ohsnap
 media-fonts/oldstandard
 media-fonts/open-sans
-media-fonts/opendesktop-fonts
 media-fonts/oto
 media-fonts/paratype
 media-fonts/pcf2bdf
@@ -653,10 +652,12 @@ media-fonts/x11fonts-jmk
 media-fonts/zh-kcfonts
 media-gfx/apngasm
 media-gfx/apngdis
+media-gfx/argyllcms
 media-gfx/blender
 media-gfx/cropgui
 media-gfx/darktable
 media-gfx/digikam
+media-gfx/displaycal
 media-gfx/eog
 media-gfx/eom
 media-gfx/ephoto
@@ -691,10 +692,12 @@ media-gfx/pngcrush
 media-gfx/pngquant
 media-gfx/qimgv
 media-gfx/qiv
+media-gfx/sane-frontends
 media-gfx/scrot
 media-gfx/sxiv
 media-gfx/viewnior
 media-gfx/w3mimgfb
+media-gfx/xsane
 media-libs/alsa-oss
 media-libs/fontconfig-ultimate
 media-libs/glyr

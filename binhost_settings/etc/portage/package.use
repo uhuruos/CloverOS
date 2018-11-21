@@ -140,6 +140,7 @@ x11-misc/redshift gtk
 sys-apps/lshw gtk
 games-emulation/vbam gtk link
 sys-apps/flatpak gtk
+media-gfx/sane-frontends gtk
 games-emulation/snes9x gtk netplay
 sys-devel/distcc gtk crossdev
 media-video/handbrake gtk -fdk libav-aac x265
