@@ -1177,6 +1177,7 @@ x11-misc/wmctrl
 x11-misc/wmname
 x11-misc/x11vnc
 x11-misc/xbindkeys
+x11-misc/xcalib
 x11-misc/xclip
 x11-misc/xdotool
 x11-misc/xfe

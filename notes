@@ -31,5 +31,8 @@ net-analyzer/munin
 #ncurses tinfo
 android-ndk android-studio
 
+#libusb udev
+colorhug-client gnome-color-manager
+
 #doesn't emerge anymore (gcc8)
 rogue telegram-cli subversion ecryptfs-utils tauthon foldingathome synergy vigra w3mimgfb vdr dolphin-libretro agg stella openjk-outcast sauerbraten mp3blaster tomahawk citra blender staruml-bin spice-gtk kencfs-plasma

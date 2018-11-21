@@ -51,6 +51,8 @@ media-libs/opusfile
 dev-libs/cyrus-sasl
 
 #keyworded, remove when stable exists
+x11-misc/xcalib
+media-gfx/displaycal
 dev-util/trace-cmd
 dev-util/lldb
 games-emulation/rpcs3 **
