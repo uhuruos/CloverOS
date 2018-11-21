@@ -22,7 +22,6 @@
 */*::libressl
 */*::linxon
 */*::luke-jr
-*/*::pigfoot
 */*::poly-c
 */*::raiagent
 */*::rasdark

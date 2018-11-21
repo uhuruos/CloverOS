@@ -1,5 +1,3 @@
-net-libs/nodejs::pigfoot
-
 dev-util/eclipse-sdk-bin::ssnb
 
 media-video/ffmpeg::libressl
