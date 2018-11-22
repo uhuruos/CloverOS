@@ -38,17 +38,12 @@ media-libs/opencv # waifu2x-converter-cpp
 
 #libressl
 media-video/ffmpeg::libressl
-<=net-libs/nodejs-9::libressl
+net-libs/nodejs::libressl
 dev-qt/qtnetwork::libressl
-net-ftp/proftpd
-net-ftp/pure-ftpd
 www-client/dillo
-net-libs/serf
 app-editors/xemacs
 www-client/elinks
-media-libs/liblrdf
 media-libs/opusfile
-dev-libs/cyrus-sasl
 
 #keyworded, remove when stable exists
 x11-misc/xcalib
@@ -58,7 +53,7 @@ dev-util/lldb
 games-emulation/rpcs3 **
 www-client/google-chrome-unstable
 games-fps/ezquake-bin
-net-misc/megatools
+net-misc/megatools::jm-overlay
 sys-auth/pam_yubico
 sys-auth/ykpers # pam_yubico
 sys-auth/ykclient # pam_yubico

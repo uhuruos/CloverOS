@@ -653,7 +653,6 @@ media-fonts/zh-kcfonts
 media-gfx/apngasm
 media-gfx/apngdis
 media-gfx/argyllcms
-media-gfx/blender
 media-gfx/cropgui
 media-gfx/darktable
 media-gfx/digikam
@@ -828,7 +827,6 @@ media-video/mkvtoolnix
 media-video/mpv
 media-video/obs-studio
 media-video/openshot
-media-video/pitivi
 media-video/rtmpdump
 media-video/shotcut
 media-video/smplayer
