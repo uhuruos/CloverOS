@@ -316,11 +316,13 @@ case "$choice" in
 	b)
 		echo "Running the following:"
 		echo "sudo emerge blueman bluez-alsa"
+		echo 'sudo usermod -aG plugdev $USER'
 		echo "sudo /etc/init.d/bluetooth start"
 		echo "sudo /etc/init.d/bluealsa start"
 		echo "blueman-manager &"
 		sleep 2
 		sudo emerge blueman bluez-alsa
+		sudo usermod -aG plugdev $USER
 		sudo /etc/init.d/bluetooth start
 		sudo /etc/init.d/bluealsa start
 		blueman-manager &
