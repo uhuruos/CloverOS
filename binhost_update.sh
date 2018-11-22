@@ -2,7 +2,7 @@ trap exit SIGINT
 
 emerge --sync
 layman -S
-emerge -uavDN --buildpkg @world
+emerge -uavDN --buildpkg --exclude=gentoo-sources @world
 emerge --buildpkg @preserved-rebuild
 emerge --depclean
 emerge -1 --buildpkg $(find /var/db/pkg/ -mindepth 2 -maxdepth 2 -name \*-9999 | grep -v MERGING | awk -F \/ '{printf "=%s/%s ", $5, $6}')
