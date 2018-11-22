@@ -38,7 +38,7 @@ media-libs/opencv # waifu2x-converter-cpp
 
 #libressl
 media-video/ffmpeg::libressl
-net-libs/nodejs::libressl
+<=net-libs/nodejs-9::libressl
 dev-qt/qtnetwork::libressl
 www-client/dillo
 app-editors/xemacs
