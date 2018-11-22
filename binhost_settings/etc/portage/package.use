@@ -467,3 +467,4 @@ dev-python/cycler python_targets_python3_5
 dev-python/kiwisolver python_targets_python3_5
 dev-python/versioneer python_targets_python3_5
 app-emulation/vagrant -ruby_targets_ruby24
+kde-apps/kio-extras -sftp
