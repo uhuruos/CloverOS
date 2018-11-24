@@ -21,7 +21,7 @@ dev-util/glib-utils # gimp
 dev-libs/glib # gimp
 
 #old, remove when stable is bumped up
-sys-fs/zfs # kernel 4.18
+sys-fs/zfs # kernel 4.19
 sys-fs/zfs-kmod # zfs
 sys-kernel/spl # zfs
 dev-lisp/clisp # won't build
