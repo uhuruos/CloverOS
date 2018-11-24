@@ -10,6 +10,9 @@ livecd_install.sh: uefi install, encryption
 
 --- packages that don't build ---
 
+#always builds with avx/sse4 instructions no matter what, USE=x265 ffmpeg impossible
+media-libs/x265
+
 #doesn't emerge
 xen ungoogled-chromium cinelerra stumpwm stumpwm-contrib netsurf gkrellm-plugins redeclipse alienarena opentoonz qtox master-pdf-editor
 

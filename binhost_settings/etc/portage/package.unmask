@@ -6,8 +6,6 @@ net-libs/nodejs::libressl
 
 games-fps/gzdoom::haarp
 
-www-client/waterfox-bin::spikyatlinux
-
 games-util/zdbsp::jacendi-overlay
 games-util/acc::jacendi-overlay
 games-util/udmf-convert::jacendi-overlay
@@ -52,6 +50,7 @@ dev-dotnet/xdt-for-monodevelop::dotnet
 dev-util/monodevelop::dotnet
 dev-dotnet/referenceassemblies-pcl::dotnet
 
+www-client/waterfox::poly-c
 x11-themes/sddm-gentoo-black-theme::poly-c
 games-fps/dhewm3::poly-c
 

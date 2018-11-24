@@ -1106,7 +1106,6 @@ www-client/torbrowser
 www-client/torbrowser-launcher
 www-client/uget
 www-client/w3m
-www-client/waterfox-bin
 www-misc/fcgiwrap
 www-misc/profile-sync-daemon
 www-misc/urlwatch

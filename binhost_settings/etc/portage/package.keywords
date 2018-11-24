@@ -1,3 +1,4 @@
+media-libs/x265
 #preference
 sys-devel/gcc
 sys-kernel/gentoo-sources
@@ -46,6 +47,7 @@ www-client/elinks
 media-libs/opusfile
 
 #keyworded, remove when stable exists
+www-client/waterfox
 net-vpn/wireguard
 x11-misc/xcalib
 media-gfx/displaycal

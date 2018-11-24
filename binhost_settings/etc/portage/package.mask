@@ -27,7 +27,6 @@
 */*::rasdark
 */*::seden
 */*::sk-overlay
-*/*::spikyatlinux
 */*::ssnb
 */*::steam-overlay
 */*::stefantalpalaru

@@ -40,7 +40,7 @@ genkernel --kernel-config=config.amd64 all
 binutils-config --linker ld.gold
 emerge layman
 layman -S
-yes | layman -a 0x4d4c 4nykey abendbrot audio-overlay bar brother-overlay chaos deadbeef-overlay dotnet elementary erayd eroen farmboy0 fkmclane flatpak-overlay flussence gamerlay genthree haarp haskell jacendi-overlay jm-overlay jorgicio libressl linxon luke-jr pentoo pinkpieea poly-c raiagent rasdark seden sk-overlay spikyatlinux ssnb steam-overlay stefantalpalaru tlp torbrowser vampire vapoursynth zyrenth
+yes | layman -a 0x4d4c 4nykey abendbrot audio-overlay bar brother-overlay chaos deadbeef-overlay dotnet elementary erayd eroen farmboy0 fkmclane flatpak-overlay flussence gamerlay genthree haarp haskell jacendi-overlay jm-overlay jorgicio libressl linxon luke-jr pentoo pinkpieea poly-c raiagent rasdark seden sk-overlay ssnb steam-overlay stefantalpalaru tlp torbrowser vampire vapoursynth zyrenth
 
 emerge -uvDN @world
 
