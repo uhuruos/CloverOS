@@ -1,8 +1,9 @@
-media-libs/x265
 #preference
 sys-devel/gcc
 sys-kernel/gentoo-sources
 net-misc/youtube-dl
+x11-libs/gtk+:3::mv # removes dbus
+x11-themes/mate-themes-meta # gtk:3::mv
 www-client/firefox
 dev-libs/nss # firefox
 dev-util/cbindgen # firefox

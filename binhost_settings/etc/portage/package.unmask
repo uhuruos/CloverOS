@@ -1,3 +1,5 @@
+x11-libs/gtk+:3::mv
+
 dev-util/eclipse-sdk-bin::ssnb
 
 media-video/ffmpeg::libressl
