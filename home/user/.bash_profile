@@ -34,7 +34,7 @@ if [ -z "$DISPLAY" ] && ! pgrep X > /dev/null; then
 	wmspost[k]=""
 
 	wms[m]=mate-session
-	wmspkg[m]="mate engrampa pluma atril caja-extensions mate-calc mate-netbook mate-power-manager mate-screensaver mate-system-monitor mate-utils eom"
+	wmspkg[m]="mate"
 	wmspost[m]=""
 
 	wms[x]=startxfce4

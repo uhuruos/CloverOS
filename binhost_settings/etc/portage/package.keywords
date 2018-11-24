@@ -3,7 +3,6 @@ sys-devel/gcc
 sys-kernel/gentoo-sources
 net-misc/youtube-dl
 x11-libs/gtk+:3::mv # removes dbus
-x11-themes/mate-themes-meta # gtk:3::mv
 www-client/firefox
 dev-libs/nss # firefox
 dev-util/cbindgen # firefox
@@ -26,6 +25,8 @@ dev-libs/glib # gimp
 sys-fs/zfs # kernel 4.19
 sys-fs/zfs-kmod # zfs
 sys-kernel/spl # zfs
+x11-themes/mate-themes-meta # gtk:3::mv
+x11-themes/mate-themes # gtk:3::mv
 dev-lisp/clisp # won't build
 net-p2p/mldonkey # won't build
 app-laptop/tp_smapi # requested
