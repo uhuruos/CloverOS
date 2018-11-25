@@ -14,7 +14,7 @@ eclean-pkg
 #quickpkg --include-unmodified-config=y "*/*" 2>&1 | ansi2html | tail -n +1081 | head -n -7 > /usr/portage/packages/s/quickpkg.txt
 #emerge --buildpkgonly sudo openssh postfix dcron vixie-cron cronie fcron anacron
 #emerge -C hwinfo ntfs3g && emerge --buildpkg ntfs3g && emerge --buildpkg hwinfo
-PKGDIR="/usr/portage/packages/s/nodbus/" USE="-dbus" emerge --buildpkgonly glib qtgui
+PKGDIR="/usr/portage/packages/s/nodbus/" USE="-dbus -webengine" emerge --buildpkgonly glib qtgui PyQt5
 
 cd /usr/portage/packages/s/
 php website.php

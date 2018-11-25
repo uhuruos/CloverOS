@@ -92,6 +92,7 @@ case "$choice" in
 		./cloveros_settings.sh 9
 
 		sudo eselect infinality set infinality &> /dev/null
+		sudo sh -c 'FETCHCOMMAND="wget -O \"\${DISTDIR}/\${FILE}\" \"\${URI}\"" PORTAGE_BINHOST="https://cloveros.ga/s/nodbus" emerge -1 qtgui glib PyQt5 && emerge --depclean'
 
 		echo -e "\nSystem updated."
 		;;
