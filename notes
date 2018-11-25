@@ -15,7 +15,7 @@ get rid of USE=dbus glib, test plank (done: gtk+:3::mv, consolekit replaced with
 media-libs/x265
 
 #doesn't emerge
-xen ungoogled-chromium cinelerra stumpwm stumpwm-contrib netsurf gkrellm-plugins redeclipse alienarena opentoonz qtox master-pdf-editor
+pitivi xen ungoogled-chromium cinelerra stumpwm stumpwm-contrib netsurf gkrellm-plugins redeclipse alienarena opentoonz qtox master-pdf-editor
 
 #libressl
 tdlib eagle megatools nxplayer murmur makemkv eiskaltdcpp retroshare acme-tiny spyder

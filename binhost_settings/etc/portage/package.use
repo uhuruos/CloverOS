@@ -228,7 +228,8 @@ media-plugins/deadbeef-plugins-meta -archive bookmark-manager bs2b decast filebr
 app-emulation/qemu sdl usb virgl virtfs gtk
 dev-libs/glib dbus # required by mate baobab flatpak pitivi evince eog bluez-alsa gthumb gedit flowblade
 dev-qt/qtgui dbus # required by kde
-sys-auth/consolekit policykit # required by kde
+dev-python/PyQt5 webengine # required by anki qutebrowser (dbus)
+sys-auth/consolekit policykit # required by kde (dbus)
 mate-extra/mate-screensaver -pam # prevents gnome-keyring
 media-sound/bitwig-studio -jack # prevents jack2
 media-sound/clementine dbus # fix: does not build without it
@@ -247,7 +248,7 @@ dev-libs/botan -bindist # required by qt-creator
 app-crypt/gpgme python # required by torbrowser-launcher
 media-libs/gd truetype fontconfig # required by amule vnstat gnuplot graphviz
 net-libs/nodejs inspector icu # required by chromium
-dev-python/PyQt5 webengine # required by anki qutebrowser
+dev-libs/libsodium -minimal # required by qtox
 x11-libs/gtk+ X
 x11-libs/libva X
 dev-cpp/gtkmm X

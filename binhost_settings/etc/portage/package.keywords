@@ -25,7 +25,6 @@ dev-libs/glib # gimp
 sys-fs/zfs # kernel 4.19
 sys-fs/zfs-kmod # zfs
 sys-kernel/spl # zfs
-media-video/pitivi # python 3.6
 x11-themes/mate-themes-meta # gtk:3::mv
 x11-themes/mate-themes # gtk:3::mv
 dev-lisp/clisp # won't build
