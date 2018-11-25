@@ -23,19 +23,19 @@ tdlib eagle megatools nxplayer murmur makemkv eiskaltdcpp retroshare acme-tiny s
 #jack2
 cadence ladish
 
-#qt 5.11
-rpcs3
-
-#qtdeclarative xml
+#qtdeclarative USE=xml
 plasma-applet-weather-widget
 
-#perl berkdb
+#perl USE=berkdb
 net-analyzer/munin
 
-#ncurses tinfo
+#ncurses USE=tinfo
 android-ndk android-studio
 
-#libusb udev
+#glib USE=dbus
+baobab flatpak pitivi evince eog bluez-alsa gthumb gedit flowblade
+
+#libusb USE=udev
 colorhug-client gnome-color-manager
 
 #doesn't emerge anymore (gcc8)
