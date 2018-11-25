@@ -91,8 +91,7 @@ case "$choice" in
 		sudo emerge --depclean
 		./cloveros_settings.sh 9
 
-		sudo eselect infinality set infinality &> /dev/null
-		sudo sh -c 'PORTAGE_BINHOST="https://cloveros.ga/s/nodbus" FETCHCOMMAND="wget -O \"\${DISTDIR}/\${FILE}\" \"\${URI}\"" emerge -1u glib qtgui && emerge --depclean'
+		sudo sh -c 'PORTAGE_BINHOST="https://cloveros.ga/s/nodbus" FETCHCOMMAND_HTTPS="wget -O \"\${DISTDIR}/\${FILE}\" \"\${URI}\"" emerge -1u glib qtgui && emerge --depclean'
 
 		echo -e "\nSystem updated."
 		;;

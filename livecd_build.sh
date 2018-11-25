@@ -53,7 +53,6 @@ wget https://cloveros.ga/s/kernel.tar.xz https://cloveros.ga/s/signatures/s/kern
 gpg --verify kernel.tar.xz.asc kernel.tar.xz
 tar xf kernel.tar.xz
 rm kernel.tar.xz kernel.tar.xz.asc
-PORTAGE_BINHOST="https://cloveros.ga/s/nodbus" FETCHCOMMAND_HTTPS="wget -O \"\${DISTDIR}/\${FILE}\" \"\${URI}\"" emerge -1O glib qtgui
 
 emerge grub dhcpcd
 
@@ -65,6 +64,7 @@ echo "$username:$userpassword" | chpasswd
 gpasswd -a $username wheel
 
 emerge -eD @world aria2 xorg-server fvwm spacefm rxvt-unicode nitrogen compton nomacs sudo wpa_supplicant porthole firefox emacs gimp mpv smplayer rtorrent weechat linux-firmware alsa-utils zsh zsh-completions gentoo-zsh-completions vlgothic hack liberation-fonts nano scrot xbindkeys xinput arandr qastools slock xarchiver p7zip games-envd gparted squashfs-tools os-prober
+PORTAGE_BINHOST="https://cloveros.ga/s/nodbus" FETCHCOMMAND_HTTPS="wget -O \"\\\${DISTDIR}/\\\${FILE}\" \"\\\${URI}\"" emerge -1O glib qtgui
 emerge --depclean
 echo 'frozen-files="/etc/sudoers"' >> /etc/dispatch-conf.conf
 sed -i "s/# %wheel ALL=(ALL) NOPASSWD: ALL/%wheel ALL=(ALL) NOPASSWD: ALL/" /etc/sudoers
