@@ -3,6 +3,7 @@ games-emulation/rpcs3::cloveros-overlay # rpcs3-0.0.5::jm-overlay archive exchan
 base-mate/mate::cloveros-overlay # mate-1.18::gentoo with removed extras? ( sys-apps/gnome-disk-utility:0 )
 media-gfx/nip2::cloveros-overlay
 media-libs/vips::cloveros-overlay
+kde-plasma/plasma-integration::cloveros-overlay # removed DEPEND USE=dbus qtgui
 
 x11-libs/gtk+:3::mv
 
