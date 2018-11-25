@@ -4,6 +4,7 @@
 */*::audio-overlay
 */*::brother-overlay
 */*::chaos
+*/*::cloveros-overlay
 */*::deadbeef-overlay
 */*::dotnet
 */*::elementary

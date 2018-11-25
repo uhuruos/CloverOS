@@ -77,7 +77,6 @@ app-doc/linux-kernel-in-a-nutshell
 app-doc/phrack-all
 app-doc/zsh-lovers
 app-editors/emacs
-app-editors/gedit
 app-editors/gvim
 app-editors/mousepad
 app-editors/nano
@@ -215,7 +214,6 @@ app-text/calibre
 app-text/catdoc
 app-text/convmv
 app-text/dos2unix
-app-text/evince
 app-text/extract_url
 app-text/highlight
 app-text/kchmviewer
@@ -655,7 +653,6 @@ media-gfx/cropgui
 media-gfx/darktable
 media-gfx/digikam
 media-gfx/displaycal
-media-gfx/eog
 media-gfx/eom
 media-gfx/ephoto
 media-gfx/fbida
@@ -669,7 +666,6 @@ media-gfx/gimp-arrow-brushes
 media-gfx/gphotofs
 media-gfx/graphicsmagick
 media-gfx/graphviz
-media-gfx/gthumb
 media-gfx/imagemagick
 media-gfx/inkscape
 media-gfx/jpegoptim
@@ -734,7 +730,6 @@ media-sound/audacious
 media-sound/audacity
 media-sound/beets
 media-sound/bitwig-studio
-media-sound/bluez-alsa
 media-sound/cantata
 media-sound/clementine
 media-sound/cmus
@@ -815,7 +810,6 @@ media-video/baka-mplayer
 media-video/dvdbackup
 media-video/ffmpeg
 media-video/ffmpegthumbnailer
-media-video/flowblade
 media-video/gnome-mpv
 media-video/gpac
 media-video/handbrake
@@ -825,7 +819,6 @@ media-video/mkvtoolnix
 media-video/mpv
 media-video/obs-studio
 media-video/openshot
-media-video/pitivi
 media-video/rtmpdump
 media-video/shotcut
 media-video/smplayer
@@ -986,14 +979,12 @@ sci-mathematics/octave
 sci-mathematics/rstudio
 sci-visualization/gnuplot
 sys-apps/ack
-sys-apps/baobab
 sys-apps/bleachbit
 sys-apps/colorized-logs
 sys-apps/cpuid
 sys-apps/dmidecode
 sys-apps/fbset
 sys-apps/firejail
-sys-apps/flatpak
 sys-apps/hprofile
 sys-apps/hwdata-redhat
 sys-apps/hwinfo

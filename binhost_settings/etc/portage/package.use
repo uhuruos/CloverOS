@@ -24,13 +24,13 @@ media-gfx/blender cycles openimageio osl opensubdiv tiff bullet dds elbeem game-
 games-emulation/rpcs3 joystick evdev
 sys-kernel/genkernel cryptsetup
 dev-libs/beignet ocl-icd ocl20
-xfce-base/thunar udisks
 x11-misc/nitrogen nls
 x11-misc/spacefm -startup-notification -gtk3 gtk2 # gtk3 is buggy
 media-gfx/ahoviewer -libsecret -rar
 net-nntp/sabnzbd -rar
 www-servers/tomcat extra-webapps
 media-sound/mp3blaster vorbis
+xfce-base/thunar udisks
 xfce-extra/tumbler ffmpeg
 media-plugins/gst-plugins-meta ffmpeg theora v4l vorbis ogg
 media-libs/gst-plugins-base theora
@@ -53,7 +53,7 @@ media-libs/opencv -opengl
 media-fonts/tewi-font bdf pcf
 games-emulation/nestopia gui
 games-emulation/stella joystick
-media-sound/clementine cdda lastfm moodbar projectm -udisks
+media-sound/clementine cdda lastfm moodbar projectm
 games-emulation/libretro-meta -bsnes-cpp98 -melonds mame2000 mame2003 -citra 2048 4do beetle-psx bsnes desmume fbalpha gambatte genplus handy mednafen-ngp mednafen-pce-fast mednafen-saturn mednafen-supergrafx mednafen-vb mednafen-wswan mgba mupen64plus nestopia nxengine prboom prosystem psp1 reicast scummvm stella tyrquake bnes craft dolphin easyrpg fbalpha2012 fceumm mame mame2016 mednafen-gba mednafen-snes meowpc98 meteor mrboom openlara parallel-n64 pcsx-rearmed picodrive ppsspp px68k quicknes redream sameboy snes9x snes9x2002 snes9x2010 tgbdual vba-next vbam yabause
 media-libs/sdl2-mixer flac mikmod vorbis mod mp3 mad midi fluidsynth
 media-video/obs-studio jack truetype imagemagick v4l
@@ -66,7 +66,6 @@ media-libs/waifu2x-converter-cpp models
 app-laptop/tlp tlp_suggests
 app-emulation/fuse sdl joystick
 net-vpn/i2p -ecdsa
-app-text/calibre -udisks
 x11-libs/libfm gtk
 net-p2p/mldonkey bittorrent gnutella magic fasttrack gd
 media-sound/qmmp alsa mad vorbis aac analyzer bs2b cdda cover crossfade cue curl enca ffmpeg flac game ladspa lyrics midi modplug musepack notifier opus projectm scrobbler sid sndfile soxr stereo tray wavpack archive shout qsui
@@ -78,7 +77,7 @@ media-sound/darkice vorbis mp3
 games-fps/urbanterror server
 media-gfx/krita color-management
 virtual/wine d3d9 staging
-app-emulation/wine-any staging d3d9 pba -udisks
+app-emulation/wine-any staging d3d9 pba
 x11-wm/xmonad -default-term
 sys-block/gparted btrfs dmraid f2fs fat -hfs jfs mdadm ntfs reiserfs reiser4 xfs cryptsetup udf
 app-admin/keepassxc yubikey
@@ -127,7 +126,7 @@ x11-misc/synergy qt5
 media-plugins/audacious-plugins qt5 adplug alsa aac -ampache -aosd bs2b cdda cue ffmpeg flac fluidsynth gme -gnome -gtk -gtk3 -hotkeys http -jack lame -libav -libnotify libsamplerate lirc mms modplug mp3 -nls -pulseaudio scrobbler sdl sid sndfile soxr speedpitch vorbis wavpack
 games-emulation/yabause qt5 pic
 games-emulation/citra sdl2 qt5
-games-emulation/dolphin qt5 ao bluetooth lto portaudio ffmpeg
+games-emulation/dolphin qt5 ao lto portaudio ffmpeg bluetooth
 media-video/vlc qt5 xml projectm gnutls flac mp3
 app-i18n/scim gtk3
 x11-apps/xinput_calibrator gtk
@@ -196,7 +195,7 @@ www-client/torbrowser custom-cflags custom-optimization system-cairo system-harf
 mail-client/thunderbird custom-cflags custom-optimization -crypt system-harfbuzz system-icu system-jpeg system-libevent system-libvpx system-sqlite
 www-client/seamonkey custom-cflags custom-optimization -crypt -minimal system-harfbuzz system-icu system-jpeg system-libevent system-libvpx system-sqlite
 www-client/palemoon -official-branding -gconf system-cairo system-compress system-images system-libevent system-nss system-pixman system-sqlite system-vpx
-www-client/waterfox -custom-cflags -custom-optimization -pgo -wifi system-harfbuzz system-icu system-jpeg system-libevent system-libvpx system-sqlite
+www-client/waterfox custom-cflags custom-optimization -pgo -wifi system-harfbuzz system-icu system-jpeg system-libevent system-libvpx system-sqlite
 media-sound/sox alsa openmp encode flac id3tag ladspa mad ogg opus sndfile twolame wavpack
 net-analyzer/rrdtool perl graph
 media-sound/lmms alsa fluidsynth ogg portaudio sdl stk qt5
@@ -225,13 +224,12 @@ net-p2p/rtorrent xmlrpc
 media-sound/deadbeef aac adplug alac alsa cdda converter cover cover-imlib2 cover-network curl dts dumb equalizer ffmpeg flac hotkeys lastfm libnotify libsamplerate m3u mad midi mms mono2stereo mp3 musepack nullout oss psf shn sid sndfile tta vorbis vtx wavpack wma zip cdparanoia gme gtk3 -libav mac mpg123 -nls playlist-browser -pulseaudio sc68 -shell-exec -unity
 media-plugins/deadbeef-plugins-meta -archive bookmark-manager bs2b decast filebrowser gnome-mmkeys infobar jack -librarybrowser mpris musical-spectrum -opus quick-search replaygain-control -soxr spectrogram statusnotifier stereo-widener vk vu-meter waveform-seekbar
 app-emulation/qemu sdl usb virgl virtfs gtk
-sys-apps/accountsservice elogind # prevents consolekit/dbus
-sys-auth/polkit elogind # prevents consolekit/dbus
-xfce-base/xfdesktop -thunar # prevents USE=dbus thunar
-xfce-base/thunar -trash-panel-plugin #prevents USE=dbus
+sys-apps/accountsservice elogind # prevents consolekit
+sys-auth/polkit elogind # prevents consolekit
 mate-extra/mate-screensaver -pam # prevents gnome-keyring
 media-sound/bitwig-studio -jack # prevents jack2
 sys-apps/shadow -pam # fix: login won't work (but su - user would)
+media-sound/clementine dbus # fix: does not build without it
 sys-power/suspend -crypt -lzo # requires USE=static-libs dev-libs/libgcrypt dev-libs/lzo
 sys-libs/zlib minizip # required by many
 sys-apps/util-linux static-libs # required by genkernel
@@ -241,13 +239,13 @@ media-libs/libpng apng # required by firefox
 media-libs/libsndfile -minimal # required by mumble
 dev-libs/libpcre2 pcre16 pcre32 # required by qtcore fish
 mate-base/mate-menus python # required by mozo
-dev-qt/qtgui dbus # required by plasma-integration
-dev-libs/glib dbus # required by baobab flatpak gnome-desktop evince eog bluez-alsa gthumb gedit flowblade
 dev-libs/botan -bindist # required by qt-creator
 app-crypt/gpgme python # required by torbrowser-launcher
 media-libs/gd truetype fontconfig # required by amule vnstat gnuplot graphviz
 net-libs/nodejs inspector icu # required by chromium
 sys-apps/xdg-desktop-portal-gtk X # required by flatpak
+xfce-base/thunar dbus # required by xfce-base/xfdesktop
+dev-python/PyQt5 webengine # required by anki qutebrowser
 x11-libs/gtk+ X
 x11-libs/libva X
 dev-cpp/gtkmm X
@@ -278,7 +276,7 @@ x11-libs/cairo xcb
 app-text/xmlto text
 sys-libs/tevent python
 media-gfx/exiv2 xmp
-dev-python/PyQt5 gui widgets svg webkit network printsupport webengine webchannel sql declarative multimedia
+dev-python/PyQt5 gui widgets svg webkit network printsupport webchannel sql declarative multimedia
 media-libs/libmygpo-qt qt5
 dev-qt/qtwebengine widgets
 dev-qt/qtscript scripttools
@@ -446,26 +444,6 @@ media-libs/audiofile abi_x86_32
 sys-fs/eudev abi_x86_32
 
 #temporary
-media-libs/libopenshot -imagemagick
-dev-python/six python_targets_python3_5
-dev-python/python-dateutil python_targets_python3_5
-dev-python/pytz python_targets_python3_5
-dev-python/setuptools_scm python_targets_python3_5
-dev-python/gst-python python_targets_python3_5
-dev-python/pygobject python_targets_python3_5
-dev-python/setuptools python_targets_python3_5
-dev-python/PyQt5 python_targets_python3_5
-dev-python/certifi python_targets_python3_5
-dev-python/sip python_targets_python3_5
-dev-python/pycairo python_targets_python3_5
-dev-python/numpy python_targets_python3_5
-dev-python/dbus-python python_targets_python3_5
-media-video/pitivi python_targets_python3_5 python_single_target_python3_5
-dev-python/pyparsing python_targets_python3_5
-app-misc/anki python_targets_python3_5
-dev-python/matplotlib python_targets_python3_5
-dev-python/cycler python_targets_python3_5
-dev-python/kiwisolver python_targets_python3_5
-dev-python/versioneer python_targets_python3_5
 app-emulation/vagrant -ruby_targets_ruby24
-kde-apps/kio-extras -sftp
+kde-apps/kio-extras -sftp # fix: libssh won't build
+#dev-python/sip python_single_target_python3_6 python_targets_python3_6
