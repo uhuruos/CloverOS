@@ -99,8 +99,6 @@ Image Viewer - nomacs
 
 Archiver - xarchiver
 
-FTP client - filezilla
-
 Torrent client - rtorrent
 
 IRC client - weechat
