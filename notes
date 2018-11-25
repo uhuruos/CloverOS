@@ -32,9 +32,6 @@ net-analyzer/munin
 #ncurses USE=tinfo
 android-ndk android-studio
 
-#glib USE=dbus
-baobab flatpak pitivi evince eog bluez-alsa gthumb gedit flowblade
-
 #libusb USE=udev
 colorhug-client
 
