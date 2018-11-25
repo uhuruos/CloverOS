@@ -1,3 +1,5 @@
+gnome-extra/gnome-color-manager raw
+x11-misc/colord scanner -gusb
 games-engines/openmw devtools
 dev-util/trace-cmd gtk udis86
 www-client/netsurf gtk -gtk2 gtk3 -fbcon -fbcon_frontend_able -duktape -bmp -gif -javascript -jpeg -mng -png -psl -rosprite -svg -svgtiny -webp
@@ -226,8 +228,6 @@ media-plugins/deadbeef-plugins-meta -archive bookmark-manager bs2b decast filebr
 app-emulation/qemu sdl usb virgl virtfs gtk
 dev-libs/glib dbus # required by mate
 dev-qt/qtgui dbus # required by kde
-sys-apps/accountsservice elogind # prevents consolekit
-sys-auth/polkit elogind # prevents consolekit
 mate-extra/mate-screensaver -pam # prevents gnome-keyring
 media-sound/bitwig-studio -jack # prevents jack2
 media-sound/clementine dbus # fix: does not build without it

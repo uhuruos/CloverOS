@@ -36,7 +36,7 @@ android-ndk android-studio
 baobab flatpak pitivi evince eog bluez-alsa gthumb gedit flowblade
 
 #libusb USE=udev
-colorhug-client gnome-color-manager
+colorhug-client
 
 #doesn't emerge anymore (gcc8)
 rogue telegram-cli subversion ecryptfs-utils tauthon foldingathome synergy vigra w3mimgfb vdr dolphin-libretro agg stella openjk-outcast sauerbraten mp3blaster tomahawk citra blender staruml-bin spice-gtk kencfs-plasma

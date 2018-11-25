@@ -423,6 +423,7 @@ games-util/vitamtp-fork
 games-util/xboxdrv
 games-util/zdbsp
 gnome-extra/gnome-calculator
+gnome-extra/gnome-color-manager
 kde-apps/kamoso
 kde-apps/kbackup
 kde-apps/kde-meta
@@ -452,6 +453,7 @@ lxqt-base/lxqt-meta
 mail-client/alpine
 mail-client/mutt
 mail-client/thunderbird
+mate-base/mate
 mate-extra/caja-extensions
 mate-extra/mate-calc
 mate-extra/mate-netbook
