@@ -47,6 +47,7 @@ www-client/dillo
 app-editors/xemacs
 www-client/elinks
 media-libs/opusfile
+net-ftp/proftpd
 
 #keyworded, remove when stable exists
 www-client/waterfox

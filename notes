@@ -7,6 +7,7 @@ make the livecd files from scratch instead of replacing squashfs in gentoo 2016 
 eject usb after livecd install
 livecd_install.sh: uefi install, encryption
 100% cloveros-libre
+get rid of USE=dbus glib, test plank (done: gtk+:3::mv, consolekit replaced with elogind)
 
 --- packages that don't build ---
 

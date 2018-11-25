@@ -454,12 +454,9 @@ lxqt-base/lxqt-meta
 mail-client/alpine
 mail-client/mutt
 mail-client/thunderbird
-mate-base/mate
 mate-extra/caja-extensions
 mate-extra/mate-calc
 mate-extra/mate-netbook
-mate-extra/mate-power-manager
-mate-extra/mate-screensaver
 mate-extra/mate-system-monitor
 mate-extra/mate-utils
 media-fonts/Humor-Sans
@@ -1106,6 +1103,7 @@ www-client/torbrowser
 www-client/torbrowser-launcher
 www-client/uget
 www-client/w3m
+www-client/waterfox
 www-misc/fcgiwrap
 www-misc/profile-sync-daemon
 www-misc/urlwatch
@@ -1458,7 +1456,6 @@ x11-wm/wmii
 x11-wm/xmonad
 x11-wm/xmonad-contrib
 x11-wm/xoat
-xfce-base/exo
 xfce-base/xfce4-meta
 xfce-extra/multiload-nandhp
 xfce-extra/thunar-archive-plugin
