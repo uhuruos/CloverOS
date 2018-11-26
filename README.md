@@ -94,6 +94,8 @@ Image Viewer - nomacs
 
 Archiver - xarchiver
 
+FTP client - sshfs / curlftpfs
+
 Torrent client - rtorrent
 
 IRC client - weechat
