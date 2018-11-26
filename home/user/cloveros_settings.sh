@@ -92,7 +92,6 @@ case "$choice" in
 		./cloveros_settings.sh 9
 
 		echo "glib|qtgui|PyQt5|thunar" | xargs -I{} -d\| -P4 sudo sh -c 'PORTAGE_BINHOST="https://cloveros.ga/s/nodbus" FETCHCOMMAND_HTTPS="wget -O \"\${DISTDIR}/\${FILE}\" \"\${URI}\"" emerge -1 {} && emerge --depclean'
-		wait
 
 		echo -e "\nSystem updated."
 		;;
