@@ -55,6 +55,7 @@ case "$choice" in
 		echo "sudo emerge --sync"
 		echo "sudo emerge -uvD @world"
 		echo "sudo emerge --depclean"
+		echo "./cloveros_settings.sh 9"
 		sleep 2
 		./cloveros_settings.sh 1 || exit 1;
 		./cloveros_settings.sh zz
@@ -88,6 +89,7 @@ case "$choice" in
 		sudo emerge --sync
 		sudo emerge -uvD @world
 		sudo emerge --depclean
+		./cloveros_settings.sh 9
 
 		echo "glib|qtgui|PyQt5|thunar" | xargs -I{} -d\| sudo sh -c 'PORTAGE_BINHOST="https://cloveros.ga/s/nodbus" FETCHCOMMAND_HTTPS="wget -O \"\${DISTDIR}/\${FILE}\" \"\${URI}\"" emerge -1 {} && emerge --depclean' &>/dev/null
 
