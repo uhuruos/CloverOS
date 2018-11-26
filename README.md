@@ -21,11 +21,6 @@ sudo emerge --depclean
 ### "Argument too long" error when emerging
 Run `sudo rm /usr/portage/packages/Packages` (currently looking for causes/other fix)
 
-## Font problem
-There's a symlink problem with app-eselect/eselect-infinality.
-
-Run `sudo emerge -1 eselect-infinality && sudo eselect infinality set infinality` to update
-
 ### Updating config files after upgrading system (Optional)
 `sudo dispatch-conf`
 
