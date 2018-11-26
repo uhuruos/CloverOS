@@ -91,9 +91,11 @@ case "$choice" in
 		sudo emerge --depclean
 		./cloveros_settings.sh 9
 
-		sudo sh -c 'PORTAGE_BINHOST="https://cloveros.ga/s/nodbus" FETCHCOMMAND_HTTPS="wget -O \"\${DISTDIR}/\${FILE}\" \"\${URI}\"" emerge -1 glib qtgui && emerge --depclean' &> /dev/null
-		sudo sh -c 'PORTAGE_BINHOST="https://cloveros.ga/s/nodbus" FETCHCOMMAND_HTTPS="wget -O \"\${DISTDIR}/\${FILE}\" \"\${URI}\"" emerge -1 PyQt5 && emerge --depclean' &> /dev/null
-		sudo sh -c 'PORTAGE_BINHOST="https://cloveros.ga/s/nodbus" FETCHCOMMAND_HTTPS="wget -O \"\${DISTDIR}/\${FILE}\" \"\${URI}\"" emerge -1 thunar && emerge --depclean' &> /dev/null
+		sudo sh -c 'PORTAGE_BINHOST="https://cloveros.ga/s/nodbus" FETCHCOMMAND_HTTPS="wget -O \"\${DISTDIR}/\${FILE}\" \"\${URI}\"" emerge -1 glib && emerge --depclean' &> /dev/null &
+		sudo sh -c 'PORTAGE_BINHOST="https://cloveros.ga/s/nodbus" FETCHCOMMAND_HTTPS="wget -O \"\${DISTDIR}/\${FILE}\" \"\${URI}\"" emerge -1 qtgui && emerge --depclean' &> /dev/null &
+		sudo sh -c 'PORTAGE_BINHOST="https://cloveros.ga/s/nodbus" FETCHCOMMAND_HTTPS="wget -O \"\${DISTDIR}/\${FILE}\" \"\${URI}\"" emerge -1 PyQt5 && emerge --depclean' &> /dev/null &
+		sudo sh -c 'PORTAGE_BINHOST="https://cloveros.ga/s/nodbus" FETCHCOMMAND_HTTPS="wget -O \"\${DISTDIR}/\${FILE}\" \"\${URI}\"" emerge -1 thunar && emerge --depclean' &> /dev/null &
+		wait
 
 		echo -e "\nSystem updated."
 		;;
