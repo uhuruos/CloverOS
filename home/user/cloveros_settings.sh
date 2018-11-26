@@ -91,7 +91,7 @@ case "$choice" in
 		sudo emerge --depclean
 		./cloveros_settings.sh 9
 
-		echo "glib|qtgui|PyQt5|thunar" | xargs -I{} -d\| sudo sh -c 'PORTAGE_BINHOST="https://cloveros.ga/s/nodbus" FETCHCOMMAND_HTTPS="wget -O \"\${DISTDIR}/\${FILE}\" \"\${URI}\"" emerge -1 {} && emerge --depclean'
+		echo "glib|qtgui|PyQt5|thunar" | xargs -I{} -d\| sudo sh -c 'PORTAGE_BINHOST="https://cloveros.ga/s/nodbus" FETCHCOMMAND_HTTPS="wget -O \"\${DISTDIR}/\${FILE}\" \"\${URI}\"" emerge -1 {} && emerge --depclean' &>/dev/null
 
 		echo -e "\nSystem updated."
 		;;
