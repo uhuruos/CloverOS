@@ -1,18 +1,17 @@
 --- todo ---
 
-spacefm drive mounting
+spacefm drive mounting, sshfs, curlftpfs
 cloveros_settings.sh: configure non us keyboard
 automatic ~/.asoundrc configuration. it gets the first audio device without hdmi in the name
 make the livecd files from scratch instead of replacing squashfs in gentoo 2016 iso
 eject usb after livecd install
 livecd_install.sh: uefi install, encryption
 100% cloveros-libre
-get rid of USE=dbus glib, test plank (done: gtk+:3::mv, consolekit replaced with elogind)
 
 --- packages that don't build ---
 
-#always builds with avx/sse4 instructions no matter what, USE=x265 ffmpeg impossible
-media-libs/x265
+#always builds with avx/sse4 instructions no matter what
+x265 firefox
 
 #doesn't emerge
 pitivi xen ungoogled-chromium cinelerra stumpwm stumpwm-contrib netsurf gkrellm-plugins redeclipse alienarena opentoonz qtox master-pdf-editor
