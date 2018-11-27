@@ -1,2 +1,2 @@
-CFLAGS="-O2 -march=x86-64 -mssse3 -mfpmath=both -pipe -funroll-loops -floop-block -floop-interchange -floop-strip-mine -ftree-loop-distribution"
+CFLAGS="-O2 -mssse3 -mno-sse4 -mno-avx -mfpmath=both -pipe -funroll-loops -floop-block -floop-interchange -floop-strip-mine -ftree-loop-distribution"
 CXXFLAGS="${CFLAGS}"
