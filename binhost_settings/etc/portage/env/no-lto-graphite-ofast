@@ -1,2 +1,2 @@
-CFLAGS="-O3 -mmmx -mssse3 -pipe -funroll-loops"
+CFLAGS="-O3 -mmmx -mssse3 -mfpmath=both -pipe -funroll-loops"
 CXXFLAGS="${CFLAGS}"
