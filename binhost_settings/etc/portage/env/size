@@ -1,2 +1,2 @@
-CFLAGS="-Os -mtune=generic -pipe -flto=8 -ffunction-sections -fdata-sections -floop-block -floop-interchange -floop-strip-mine -ftree-loop-distribution"
+CFLAGS="-Os -march=x86-64 -pipe -flto=8 -ffunction-sections -fdata-sections -floop-block -floop-interchange -floop-strip-mine -ftree-loop-distribution"
 CXXFLAGS="${CFLAGS}"
