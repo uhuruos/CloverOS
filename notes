@@ -10,9 +10,6 @@ livecd_install.sh: uefi install, encryption
 
 --- packages that don't build ---
 
-#always builds with avx/sse4 instructions no matter what
-x265 firefox
-
 #doesn't emerge
 pitivi xen ungoogled-chromium cinelerra stumpwm stumpwm-contrib netsurf gkrellm-plugins redeclipse alienarena opentoonz qtox master-pdf-editor
 

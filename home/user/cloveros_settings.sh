@@ -104,14 +104,14 @@ case "$choice" in
 		;;
 
 	4)
-		kernelversion=$(curl -sr 0-100 https://cloveros.ga/s/kernel.tar.xz | grep -aoP "(?<=x86_64-).*(?=-gentoo)")
+		kernelversion=$(curl -sr 0-100 https://cloveros.ga/s/kernel.tar.lzma | grep -aoP "(?<=x86_64-).*(?=-gentoo)")
 		if ls /boot/ | grep -q $kernelversion; then
 			echo "Kernel up to date."
 		else
-			rm kernel.tar.xz kernel.tar.xz.asc &> /dev/null
-			wget https://cloveros.ga/s/kernel.tar.xz https://cloveros.ga/s/signatures/s/kernel.tar.xz.asc
-			if sudo gpg --verify kernel.tar.xz.asc kernel.tar.xz; then
-				sudo tar -C / -xf kernel.tar.xz
+			rm kernel.tar.lzma kernel.tar.lzma.asc &> /dev/null
+			wget https://cloveros.ga/s/kernel.tar.lzma https://cloveros.ga/s/signatures/s/kernel.tar.lzma.asc
+			if sudo gpg --verify kernel.tar.lzma.asc kernel.tar.lzma; then
+				sudo tar -C / -xf kernel.tar.lzma
 				sudo grub-mkconfig -o /boot/grub/grub.cfg
 				sudo emerge @module-rebuild
 				sudo depmod -a $kernelversion-gentoo
@@ -119,7 +119,7 @@ case "$choice" in
 			else
 				echo -e "\nCould not retrieve file. Please connect to the Internet or try again."
 			fi
-			rm kernel.tar.xz kernel.tar.xz.asc &> /dev/null
+			rm kernel.tar.lzma kernel.tar.lzma.asc &> /dev/null
 		fi
 		;;
 
@@ -243,14 +243,14 @@ case "$choice" in
 		;;
 
 	l)
-		kernelversion=$(curl -sr 0-100 https://cloveros.ga/s/kernel-libre.tar.xz | grep -aoP "(?<=x86_64-).*(?=-gentoo)")
+		kernelversion=$(curl -sr 0-100 https://cloveros.ga/s/kernel-libre.tar.lzma | grep -aoP "(?<=x86_64-).*(?=-gentoo)")
 		if ls /boot/ | grep -q $kernelversion-gentoo-gnu; then
 			echo "Kernel up to date."
 		else
-			rm kernel-libre.tar.xz kernel-libre.tar.xz.asc &> /dev/null
-			wget https://cloveros.ga/s/kernel-libre.tar.xz https://cloveros.ga/s/signatures/s/kernel-libre.tar.xz.asc
-			if sudo gpg --verify kernel-libre.tar.xz.asc kernel-libre.tar.xz; then
-				sudo tar -C / -xf kernel-libre.tar.xz
+			rm kernel-libre.tar.lzma kernel-libre.tar.lzma.asc &> /dev/null
+			wget https://cloveros.ga/s/kernel-libre.tar.lzma https://cloveros.ga/s/signatures/s/kernel-libre.tar.lzma.asc
+			if sudo gpg --verify kernel-libre.tar.lzma.asc kernel-libre.tar.lzma; then
+				sudo tar -C / -xf kernel-libre.tar.lzma
 				sudo grub-mkconfig -o /boot/grub/grub.cfg
 				sudo emerge @module-rebuild
 				sudo depmod -a $kernelversion-gentoo-gnu
@@ -258,7 +258,7 @@ case "$choice" in
 			else
 				echo -e "\nCould not retrieve file. Please connect to the Internet or try again."
 			fi
-			rm kernel-libre.tar.xz kernel-libre.tar.xz.asc &> /dev/null
+			rm kernel-libre.tar.lzma kernel-libre.tar.lzma.asc &> /dev/null
 		fi
 		;;
 

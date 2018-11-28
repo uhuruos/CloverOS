@@ -1,5 +1,5 @@
-kernelversion=4.19.4
-kernelmajversion=4.19
+kernelversion=4.18.20
+kernelmajversion=4.18
 
 emerge -C gentoo-sources
 rm -Rf /usr/src/*-gentoo*
@@ -21,8 +21,8 @@ chmod +x /usr/src/linux-$kernelversion-gentoo-gnu/deblob-$kernelmajversion /usr/
 cd /usr/src/linux-$kernelversion-gentoo-gnu/ ; PYTHON="python2.7" /usr/src/linux-$kernelversion-gentoo-gnu/deblob-$kernelmajversion ; cd -
 genkernel --kernel-config=config.amd64 --kerneldir=/usr/src/linux-$kernelversion-gentoo-gnu/ --luks --lvm all
 
-XZ_OPT="-9e --lzma2=dict=256MB" tar -cJf /usr/portage/packages/s/kernel.tar.xz /boot/*$kernelversion-gentoo /lib/modules/$kernelversion-gentoo
-XZ_OPT="-9e --lzma2=dict=256MB" tar -cJf /usr/portage/packages/s/kernel-libre.tar.xz /boot/*$kernelversion-gentoo-gnu /lib/modules/$kernelversion-gentoo-gnu
+XZ_OPT="--lzma1=preset=9e,dict=256MB,nice=273,depth=200,lc=4" tar --lzma -cf /usr/portage/packages/s/kernel.tar.lzma /boot/*$kernelversion-gentoo /lib/modules/$kernelversion-gentoo
+XZ_OPT="--lzma1=preset=9e,dict=256MB,nice=273,depth=200,lc=4" tar --lzma -cf /usr/portage/packages/s/kernel-libre.tar.lzma /boot/*$kernelversion-gentoo-gnu /lib/modules/$kernelversion-gentoo-gnu
 
 binutils-config --linker ld.gold
 rm config.amd64

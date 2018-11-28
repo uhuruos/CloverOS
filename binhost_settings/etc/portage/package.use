@@ -114,7 +114,7 @@ media-sound/supercollider qt5
 app-benchmarks/i7z qt5
 net-p2p/bitcoin-qt qt5
 media-video/avidemux qt5
-media-libs/avidemux-plugins qt5 x265
+media-libs/avidemux-plugins qt5
 net-p2p/transmission qt5
 net-wireless/wpa_supplicant qt5
 app-misc/recoll qt5
@@ -129,7 +129,7 @@ media-plugins/audacious-plugins qt5 adplug alsa aac -ampache -aosd bs2b cdda cue
 games-emulation/yabause qt5 pic
 games-emulation/citra sdl2 qt5
 games-emulation/dolphin qt5 ao lto portaudio ffmpeg bluetooth
-media-video/vlc qt5 xml projectm gnutls flac mp3 x265
+media-video/vlc qt5 xml projectm gnutls flac mp3
 app-i18n/scim gtk3
 x11-apps/xinput_calibrator gtk
 app-arch/peazip gtk
@@ -143,7 +143,7 @@ sys-apps/flatpak gtk
 media-gfx/sane-frontends gtk
 games-emulation/snes9x gtk netplay
 sys-devel/distcc gtk crossdev
-media-video/handbrake gtk -fdk libav-aac x265
+media-video/handbrake gtk -fdk libav-aac
 media-libs/vulkan-loader X
 media-gfx/fontforge X gtk
 media-libs/gst-plugins-bad X gtk
