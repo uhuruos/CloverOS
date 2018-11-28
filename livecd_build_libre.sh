@@ -49,10 +49,10 @@ gpg --keyserver hkp://pool.sks-keyservers.net --recv-key "78F5 AC55 A120 07F2 2D
 #emerge gentoo-sources genkernel
 #wget http://liquorix.net/sources/4.18/config.amd64
 #genkernel --kernel-config=config.amd64 all
-wget https://cloveros.ga/s/kernel-libre.tar.xz https://cloveros.ga/s/signatures/s/kernel-libre.tar.xz.asc
-gpg --verify kernel-libre.tar.xz.asc kernel-libre.tar.xz
-tar xf kernel-libre.tar.xz
-rm kernel-libre.tar.xz kernel-libre.tar.xz.asc
+wget https://cloveros.ga/s/kernel-libre.tar.lzma https://cloveros.ga/s/signatures/s/kernel-libre.tar.lzma.asc
+gpg --verify kernel-libre.tar.lzma.asc kernel-libre.tar.lzma
+tar xf kernel-libre.tar.lzma
+rm kernel-libre.tar.lzma kernel-libre.tar.lzma.asc
 
 emerge grub dhcpcd
 
