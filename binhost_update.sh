@@ -24,7 +24,7 @@ rm -Rf /usr/portage/packages/s/signatures/
 mkdir -p /usr/portage/packages/s/signatures/
 cd /usr/portage/packages/s/signatures/
 find /usr/portage/packages/ -type d | sed 's#/usr/portage/packages/##' | grep -v "^s/signatures$" | xargs mkdir
-find /usr/portage/packages/ -type f | sed 's#/usr/portage/packages/##' | pv -qB 1G | xargs -I{} gpg --disable-dirmngr --no-autostart --armor --detach-sign --output {}.asc --sign /usr/portage/packages/{}
+find /usr/portage/packages/ -type f | sed 's#/usr/portage/packages/##' | pv -qB 1G | xargs -I{} gpg --armor --detach-sign --output {}.asc --sign /usr/portage/packages/{}
 
 chmod -R 755 /usr/portage/packages/
 
