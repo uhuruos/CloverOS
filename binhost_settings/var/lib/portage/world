@@ -1069,7 +1069,7 @@ sys-kernel/bliss-initramfs
 sys-kernel/dkms
 sys-kernel/dracut
 sys-kernel/genkernel
-sys-kernel/gentoo-sources:4.18.19
+sys-kernel/gentoo-sources:4.18.20
 sys-kernel/linux-firmware
 sys-power/acpi_call
 sys-power/acpitool
