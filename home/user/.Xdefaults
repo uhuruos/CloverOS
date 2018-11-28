@@ -2,6 +2,7 @@ URxvt.font: xft:Hack:pixelsize=12
 URxvt.scrollBar: false
 URxvt.cursorBlink: true
 URxvt.jumpScroll: true
+URxvt*secondaryWheel: true
 URxvt.transparent: true
 URxvt.shading: 10
 URxvt.url-launcher: /usr/bin/firefox
