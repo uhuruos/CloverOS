@@ -104,7 +104,7 @@ case "$choice" in
 		;;
 
 	4)
-		kernelversion=$(curl -sr 0-100 https://cloveros.ga/s/kernel.tar.lzma | grep -aoP "(?<=x86_64-).*(?=-gentoo)")
+		kernelversion=$(curl -s https://cloveros.ga/s/kernel.tar.lzma | lzma -d | strings | grep -aoPm1 "(?<=x86_64-).*(?=-gentoo)")
 		if ls /boot/ | grep -q $kernelversion; then
 			echo "Kernel up to date."
 		else
@@ -243,7 +243,7 @@ case "$choice" in
 		;;
 
 	l)
-		kernelversion=$(curl -sr 0-100 https://cloveros.ga/s/kernel-libre.tar.lzma | grep -aoP "(?<=x86_64-).*(?=-gentoo)")
+		kernelversion=$(curl -s https://cloveros.ga/s/kernel-libre.tar.lzma | lzma -d | strings | grep -aoPm1 "(?<=x86_64-).*(?=-gentoo)")
 		if ls /boot/ | grep -q $kernelversion-gentoo-gnu; then
 			echo "Kernel up to date."
 		else
