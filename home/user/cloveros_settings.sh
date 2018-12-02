@@ -373,12 +373,14 @@ case "$choice" in
 		echo "sudo eselect opengl set nvidia"
 		echo "sudo eselect opencl set nvidia"
 		echo "sudo sh -c 'echo -e \"blacklist nouveau\nblacklist vga16fb\nblacklist rivafb\nblacklist nvidiafb\nblacklist rivatv\" >> /etc/modprobe.d/blacklist.conf'"
+		echo "sudo depmod -a"
 		sleep 2
 		sudo emerge nvidia-drivers
 		./cloveros_settings.sh 4
 		sudo eselect opengl set nvidia
 		sudo eselect opencl set nvidia
 		sudo sh -c 'echo -e "blacklist nouveau\nblacklist vga16fb\nblacklist rivafb\nblacklist nvidiafb\nblacklist rivatv" >> /etc/modprobe.d/blacklist.conf'
+		sudo depmod -a
 		echo -e "\nNvidia drivers installed, please reboot.\nCheck https://wiki.gentoo.org/wiki/NVidia/nvidia-drivers for more info"
 		;;
 

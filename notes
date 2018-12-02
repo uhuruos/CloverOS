@@ -14,7 +14,7 @@ livecd_install.sh: uefi install, encryption
 pitivi xen ungoogled-chromium cinelerra stumpwm stumpwm-contrib netsurf gkrellm-plugins redeclipse alienarena opentoonz qtox master-pdf-editor
 
 #libressl
-tdlib eagle megatools nxplayer murmur makemkv eiskaltdcpp retroshare acme-tiny spyder
+isync tdlib eagle megatools nxplayer murmur makemkv eiskaltdcpp retroshare acme-tiny spyder
 
 #jack2
 cadence ladish

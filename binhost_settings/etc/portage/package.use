@@ -73,7 +73,7 @@ net-p2p/mldonkey bittorrent gnutella magic fasttrack gd
 media-sound/qmmp alsa mad vorbis aac analyzer bs2b cdda cover crossfade cue curl enca ffmpeg flac game ladspa lyrics midi modplug musepack notifier opus projectm scrobbler sid sndfile soxr stereo tray wavpack archive shout qsui
 media-libs/vapoursynth vapoursynth_plugins_removegrain vapoursynth_plugins_eedi3 vapoursynth_plugins_imagemagick vapoursynth_plugins_miscfilters vapoursynth_plugins_morpho vapoursynth_plugins_ocr vapoursynth_plugins_removegrain vapoursynth_plugins_subtext vapoursynth_plugins_vinverse vapoursynth_plugins_vivtc
 media-plugins/vapoursynth-plugins-meta vapoursynth_plugins_addgrain vapoursynth_plugins_adjust vapoursynth_plugins_autocrop vapoursynth_plugins_awarpsharp2 vapoursynth_plugins_beziercurve vapoursynth_plugins_bifrost vapoursynth_plugins_bilateral vapoursynth_plugins_bm3d vapoursynth_plugins_cnr2 vapoursynth_plugins_combmask vapoursynth_plugins_continuityfixer vapoursynth_plugins_ctmf vapoursynth_plugins_d2vsource vapoursynth_plugins_damb vapoursynth_plugins_dctfilter vapoursynth_plugins_deblock vapoursynth_plugins_degrainmedian vapoursynth_plugins_delogo vapoursynth_plugins_depan vapoursynth_plugins_descale vapoursynth_plugins_dfttest vapoursynth_plugins_dotkill vapoursynth_plugins_eedi2 vapoursynth_plugins_eedi3 vapoursynth_plugins_ffmpegsource vapoursynth_plugins_fft3dfilter vapoursynth_plugins_fieldhint vapoursynth_plugins_fillborders vapoursynth_plugins_finesharp vapoursynth_plugins_fix-telecined-fades vapoursynth_plugins_flash3kyuu_deband vapoursynth_plugins_fluxsmooth vapoursynth_plugins_fmtconv vapoursynth_plugins_genericfilters vapoursynth_plugins_havsfunc vapoursynth_plugins_histogram vapoursynth_plugins_hqdn3d vapoursynth_plugins_inpaint vapoursynth_plugins_it vapoursynth_plugins_knlmeanscl vapoursynth_plugins_l-smash-works vapoursynth_plugins_minsrp vapoursynth_plugins_msmoosh vapoursynth_plugins_muvsfunc vapoursynth_plugins_mvsfunc vapoursynth_plugins_mvtools vapoursynth_plugins_mvtools-sf vapoursynth_plugins_nnedi3 vapoursynth_plugins_nnedi3_resample vapoursynth_plugins_nnedi3cl vapoursynth_plugins_oyster vapoursynth_plugins_plum vapoursynth_plugins_reduceflicker vapoursynth_plugins_remapframes vapoursynth_plugins_removedirt vapoursynth_plugins_retinex vapoursynth_plugins_sangnom vapoursynth_plugins_scenechange vapoursynth_plugins_scxvid vapoursynth_plugins_ssiq vapoursynth_plugins_surfaceblur vapoursynth_plugins_tc2cfr vapoursynth_plugins_tcanny vapoursynth_plugins_tcomb vapoursynth_plugins_tdeintmod vapoursynth_plugins_templinearapproximate vapoursynth_plugins_tnlmeans vapoursynth_plugins_tonemap vapoursynth_plugins_vaguedenoiser vapoursynth_plugins_vautodeint vapoursynth_plugins_vcfreq vapoursynth_plugins_vcmod vapoursynth_plugins_vcmove vapoursynth_plugins_vctrans vapoursynth_plugins_vfrtocrf vapoursynth_plugins_videoscope vapoursynth_plugins_vine vapoursynth_plugins_vs-maskdetail vapoursynth_plugins_vsimagereader vapoursynth_plugins_vsrawsource vapoursynth_plugins_vstaambk vapoursynth_plugins_w3fdif vapoursynth_plugins_waifu2x-w2xc vapoursynth_plugins_wwxd vapoursynth_plugins_yadifmod vapoursynth_plugins_znedi3 vapoursynth_plugins_deblockpp7 vapoursynth_plugins_decross vapoursynth_plugins_dedot vapoursynth_plugins_minideen vapoursynth_plugins_motionmask vapoursynth_plugins_smoothuv vapoursynth_plugins_temporalmedian vapoursynth_plugins_temporalsoften vapoursynth_plugins_timecube vapoursynth_plugins_ttempsmooth vapoursynth_plugins_warpsharpsupport
-media-sound/audacity id3tag ffmpeg -lv2
+media-sound/audacity id3tag ffmpeg
 app-admin/conky X thinkpad mpd rss curl iostats
 media-sound/darkice vorbis mp3
 games-fps/urbanterror server
@@ -125,7 +125,7 @@ media-sound/samplv1 qt5 standalone
 media-sound/padthv1 qt5 standalone
 media-sound/drumkv1 qt5 standalone
 x11-misc/synergy qt5
-media-plugins/audacious-plugins qt5 adplug alsa aac -ampache -aosd bs2b cdda cue ffmpeg flac fluidsynth gme -gnome -gtk -gtk3 -hotkeys http -jack lame -libav -libnotify libsamplerate lirc mms modplug mp3 -nls -pulseaudio scrobbler sdl sid sndfile soxr speedpitch vorbis wavpack
+media-plugins/audacious-plugins qt5 adplug alsa aac -ampache -aosd bs2b cdda cue ffmpeg flac fluidsynth gme -gnome -gtk -gtk3 -hotkeys http -jack lame -libav libsamplerate lirc mms modplug mp3 -nls -pulseaudio scrobbler sdl sid sndfile soxr speedpitch vorbis wavpack
 games-emulation/yabause qt5 pic
 games-emulation/citra sdl2 qt5
 games-emulation/dolphin qt5 ao lto portaudio ffmpeg bluetooth
@@ -220,10 +220,10 @@ app-office/texstudio video
 www-client/links fbcon gpm
 media-gfx/imagemagick hdri fftw lqr
 media-gfx/feh exif curl
-x11-terms/rxvt-unicode -vanilla alt-font-width xft 256-color blink unicode3 secondary-wheel fading-colors
+x11-terms/rxvt-unicode -vanilla alt-font-width xft 256-color blink unicode3 secondary-wheel fading-colors wcwidth
 net-analyzer/vnstat gd
 net-p2p/rtorrent xmlrpc
-media-sound/deadbeef aac adplug alac alsa cdda converter cover cover-imlib2 cover-network curl dts dumb equalizer ffmpeg flac hotkeys lastfm libnotify libsamplerate m3u mad midi mms mono2stereo mp3 musepack nullout oss psf shn sid sndfile tta vorbis vtx wavpack wma zip cdparanoia gme gtk3 -libav mac mpg123 -nls playlist-browser -pulseaudio sc68 -shell-exec -unity
+media-sound/deadbeef aac adplug alac alsa cdda converter cover cover-imlib2 cover-network curl dts dumb equalizer ffmpeg flac hotkeys lastfm libsamplerate m3u mad midi mms mono2stereo mp3 musepack nullout oss psf shn sid sndfile tta vorbis vtx wavpack wma zip cdparanoia gme gtk3 -libav mac mpg123 -nls playlist-browser -pulseaudio sc68 -shell-exec -unity
 media-plugins/deadbeef-plugins-meta -archive bookmark-manager bs2b decast filebrowser gnome-mmkeys infobar jack -librarybrowser mpris musical-spectrum -opus quick-search replaygain-control -soxr spectrogram statusnotifier stereo-widener vk vu-meter waveform-seekbar
 app-emulation/qemu sdl usb virgl virtfs gtk
 dev-libs/glib dbus # required by mate baobab flatpak pitivi evince eog bluez-alsa gthumb gedit flowblade
@@ -233,6 +233,7 @@ sys-auth/consolekit policykit # required by kde (dbus)
 mate-extra/mate-screensaver -pam # prevents gnome-keyring
 media-sound/bitwig-studio -jack # prevents jack2
 media-sound/clementine dbus # fix: does not build without it
+media-sound/audacity jack # fix: runtime requires jack no matter what, might as well add it as dependency
 xfce-base/thunar dbus # required by xfce-base/xfdesktop
 sys-apps/shadow -pam # fix: login won't work (but su - user would)
 sys-power/suspend -crypt -lzo # requires USE=static-libs dev-libs/libgcrypt dev-libs/lzo
