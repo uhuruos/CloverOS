@@ -4,6 +4,8 @@ mate-base/mate::cloveros-overlay # mate-1.18::gentoo with removed extras? ( sys-
 media-gfx/nip2::cloveros-overlay
 media-libs/vips::cloveros-overlay
 
+media-gfx/meh::lanodanOverlay
+
 x11-libs/gtk+:3::mv
 
 dev-util/eclipse-sdk-bin::ssnb

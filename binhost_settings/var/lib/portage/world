@@ -2,6 +2,7 @@ app-admin/clsync
 app-admin/conky
 app-admin/consul
 app-admin/cpulimit
+app-admin/entr
 app-admin/gkrellm
 app-admin/go-updater
 app-admin/hardinfo
@@ -11,6 +12,7 @@ app-admin/lastpass-cli
 app-admin/logrotate
 app-admin/mcelog
 app-admin/metalog
+app-admin/pass
 app-admin/passwordsafe
 app-admin/sshguard
 app-admin/sudo
@@ -79,11 +81,14 @@ app-doc/zsh-lovers
 app-editors/emacs
 app-editors/gedit
 app-editors/gvim
+app-editors/mg
 app-editors/mousepad
 app-editors/nano
 app-editors/neovim
+app-editors/nvi
 app-editors/pluma
 app-editors/vim
+app-editors/vis
 app-editors/wxhexeditor
 app-editors/xemacs
 app-emacs/emms
@@ -251,6 +256,7 @@ dev-lang/php
 dev-lang/rust
 dev-lang/scala
 dev-lang/tauthon
+dev-lang/tcc
 dev-libs/amdgpu-pro-opencl
 dev-libs/beignet
 dev-libs/input-pad
@@ -673,12 +679,14 @@ media-gfx/graphicsmagick
 media-gfx/graphviz
 media-gfx/gthumb
 media-gfx/imagemagick
+media-gfx/imv
 media-gfx/inkscape
 media-gfx/jpegoptim
 media-gfx/krita
 media-gfx/librecad
 media-gfx/lximage-qt
 media-gfx/maim
+media-gfx/meh
 media-gfx/mirage
 media-gfx/mypaint
 media-gfx/nip2
@@ -689,6 +697,7 @@ media-gfx/photoqt
 media-gfx/phototonic
 media-gfx/pinta
 media-gfx/pngcrush
+media-gfx/pngnq
 media-gfx/pngquant
 media-gfx/qimgv
 media-gfx/qiv
@@ -698,6 +707,7 @@ media-gfx/sxiv
 media-gfx/viewnior
 media-gfx/w3mimgfb
 media-gfx/xsane
+media-gfx/xzgv
 media-libs/alsa-oss
 media-libs/fontconfig-ultimate
 media-libs/glyr
@@ -741,6 +751,7 @@ media-sound/cantata
 media-sound/clementine
 media-sound/cmus
 media-sound/coquillo
+media-sound/cplay
 media-sound/darksnow
 media-sound/deadbeef
 media-sound/drumkv1
@@ -772,6 +783,7 @@ media-sound/mp3wrap
 media-sound/mpc
 media-sound/mpd
 media-sound/mpdas
+media-sound/mpg321
 media-sound/mps-youtube
 media-sound/mumble
 media-sound/ncmpc
@@ -815,6 +827,7 @@ media-video/aegisub
 media-video/avidemux
 media-video/baka-mplayer
 media-video/dvdbackup
+media-video/ffcast
 media-video/ffmpeg
 media-video/ffmpegthumbnailer
 media-video/flowblade
@@ -875,12 +888,15 @@ net-ftp/lftp
 net-ftp/proftpd
 net-ftp/pure-ftpd
 net-ftp/vsftpd
+net-im/bitlbee
 net-im/discord-bin
+net-im/mcabber
 net-im/pidgin
 net-im/qtox
 net-im/telegram-cli
 net-im/telegram-desktop-bin
 net-im/telegram-purple
+net-im/ysm
 net-irc/hexchat
 net-irc/hexchat-otr
 net-irc/irssi
@@ -1117,6 +1133,7 @@ www-servers/apache
 www-servers/lighttpd
 www-servers/nginx
 www-servers/onionshare
+www-servers/thttpd
 www-servers/tomcat
 www-servers/varnish
 x11-apps/igt-gpu-tools
@@ -1143,6 +1160,7 @@ x11-misc/dmenu
 x11-misc/enlightenment-extra
 x11-misc/fbdesk
 x11-misc/fbpanel
+x11-misc/grabc
 x11-misc/hsetroot
 x11-misc/i3blocks-gaps
 x11-misc/i3lock

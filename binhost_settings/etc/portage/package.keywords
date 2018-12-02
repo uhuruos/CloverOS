@@ -50,6 +50,14 @@ media-libs/opusfile
 net-ftp/proftpd
 
 #keyworded, remove when stable exists
+dev-lang/tcc
+app-accessibility/edbrowse
+media-video/ffcast
+app-admin/entr
+app-editors/vis
+media-gfx/imv
+media-sound/cplay
+media-gfx/meh
 www-client/waterfox
 net-vpn/wireguard
 x11-misc/xcalib

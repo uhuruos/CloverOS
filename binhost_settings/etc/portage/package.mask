@@ -20,8 +20,10 @@
 */*::jacendi-overlay
 */*::jm-overlay
 */*::jorgicio
+*/*::lanodanOverlay
 */*::libressl
 */*::linxon
+*/*::lua
 */*::luke-jr
 */*::mv
 */*::poly-c
