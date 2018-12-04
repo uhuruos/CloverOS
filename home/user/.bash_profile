@@ -219,28 +219,28 @@ if [ -z "$DISPLAY" ] && ! pgrep X > /dev/null; then
 
 	if [ -v wms[$choice] ]; then
 		if [ ! -f /usr/bin/${wms[$choice]} ]; then
-			echo
-			echo ${wms[$choice]} is not installed. Install it by running:
-			echo $ sudo emerge ${wmspkg[$choice]}
+			echo -e \\n${wms[$choice]} is not installed. Install it by running:\\n$ sudo emerge ${wmspkg[$choice]}
 			read -erp "Install now? [y/n] " -n 1 installyn
-			if [[ "$installyn" == "y" || "$installyn" == "Y" ]]; then
+			if [ $installyn == y || $installyn == Y ]]; then
 				sudo emerge -v ${wmspkg[$choice]}
 				if [ -f /usr/bin/${wms[$choice]} ]; then
-					export DISPLAY=:0
-					X&
+					X &
 					sleep 1
-					${wms[$choice]}&
-					eval ${wmspost[$choice]}&
+					export DISPLAY=:0
+					${wms[$choice]} &
+					eval ${wmspost[$choice]} &
+					disown
 				else
 					echo Please connect to the Internet
 				fi
 			fi
 		else
-			export DISPLAY=:0
-			X&
+			X &
 			sleep 1
-			${wms[$choice]}&
-			eval ${wmspost[$choice]}&
+			export DISPLAY=:0
+			${wms[$choice]} &
+			eval ${wmspost[$choice]} &
+			disown
 		fi
 	fi
 fi
