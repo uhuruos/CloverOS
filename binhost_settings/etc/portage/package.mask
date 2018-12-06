@@ -29,7 +29,6 @@
 */*::poly-c
 */*::raiagent
 */*::rasdark
-*/*::seden
 */*::sk-overlay
 */*::ssnb
 */*::steam-overlay
@@ -38,7 +37,6 @@
 */*::torbrowser
 */*::vampire
 */*::vapoursynth
-*/*::zyrenth
 
 net-libs/nodejs::gentoo
 x11-libs/vte:2.91::gentoo
