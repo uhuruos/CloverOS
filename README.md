@@ -607,7 +607,7 @@ XDG_RUNTIME_DIR=. weston-launch
 - It needs a cloveros.ga mirror that doesn't host the non-free software packages
 
 ### Does CloverOS have binaries?
-Yes. It's a pre-setup Gentoo image with `PORTAGE_BINHOST="https://cloveors.ga" emerge -G package` preset in /etc/portage/make.conf. It uses Gentoo for everything (versions, ebuilds, etc.) and gets packages from cloveros.ga instead of building
+Yes. It's a pre-setup Gentoo image with `PORTAGE_BINHOST="https://cloveros.ga" emerge -G package` preset in /etc/portage/make.conf. It uses Gentoo for everything (versions, ebuilds, etc.) and gets packages from cloveros.ga instead of building
 
 ### How often is this updated?
 It's stable rolling release (Gentoo Stable). It's updated about once a week: http://twitter.com/cloveros_ga
