@@ -1052,7 +1052,9 @@ sys-apps/smartmontools
 sys-apps/udevil
 sys-apps/usermode-utilities
 sys-apps/vbetool
+sys-auth/fingerprint-gui
 sys-auth/pam_yubico
+sys-auth/thinkfinger
 sys-block/gparted
 sys-block/open-iscsi
 sys-block/sas3flash

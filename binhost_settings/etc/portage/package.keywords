@@ -50,6 +50,10 @@ media-libs/opusfile
 net-ftp/proftpd
 
 #keyworded, remove when stable exists
+x11-misc/bumblebee **
+x11-misc/primus
+sys-auth/thinkfinger
+sys-auth/fingerprint-gui
 dev-lang/tcc
 app-accessibility/edbrowse
 media-video/ffcast

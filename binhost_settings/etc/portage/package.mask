@@ -29,6 +29,7 @@
 */*::poly-c
 */*::raiagent
 */*::rasdark
+*/*::seden
 */*::sk-overlay
 */*::ssnb
 */*::steam-overlay
