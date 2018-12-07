@@ -221,7 +221,7 @@ if [ -z "$DISPLAY" ] && ! pgrep X > /dev/null; then
 		if [ ! -f /usr/bin/${wms[$choice]} ]; then
 			echo -e \\n${wms[$choice]} is not installed. Install it by running:\\n$ sudo emerge ${wmspkg[$choice]}
 			read -erp "Install now? [y/n] " -n 1 installyn
-			if [ $installyn == y || $installyn == Y ]; then
+			if [[ $installyn == y || $installyn == Y ]]; then
 				sudo emerge -v ${wmspkg[$choice]}
 				if [ -f /usr/bin/${wms[$choice]} ]; then
 					X &
