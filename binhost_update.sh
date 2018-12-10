@@ -12,7 +12,7 @@ eclean-pkg
 #rm -Rf /usr/portage/packages/*
 #mv s/ /usr/portage/packages/
 #quickpkg --include-unmodified-config=y "*/*" 2>&1 | ansi2html | tail -n +1081 | head -n -7 > /usr/portage/packages/s/quickpkg.txt
-#emerge --buildpkgonly sudo openssh postfix dcron vixie-cron cronie fcron anacron
+#emerge --buildpkgonly sudo openssh postfix dcron vixie-cron cronie fcron anacron \=nvidia-drivers-390.87 \=nvidia-drivers-304.137
 #emerge -C hwinfo ntfs3g && emerge --buildpkg ntfs3g && emerge --buildpkg hwinfo
 PKGDIR="/usr/portage/packages/s/nodbus/" USE="-dbus -webengine -trash-panel-plugin" emerge --buildpkgonly glib qtgui PyQt5 thunar
 

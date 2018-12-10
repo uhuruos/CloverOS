@@ -1,11 +1,12 @@
-kernelversion=4.18.20
-kernelmajversion=4.18
+kernelversion=4.19.8
+kernelmajversion=4.19
+
+binutils-config --linker ld.bfd
 
 emerge -C gentoo-sources
 rm -Rf /usr/src/*-gentoo*
 find /boot/ /lib/modules/ -mindepth 1 -maxdepth 1 -name \*gentoo\* ! -name \*$(uname -r) -exec rm -R {} \;
 mkdir -p /usr/portage/packages/s/
-binutils-config --linker ld.bfd
 
 emerge =gentoo-sources-$kernelversion
 eselect kernel set linux-$kernelversion-gentoo
@@ -24,7 +25,6 @@ genkernel --kernel-config=config.amd64 --kerneldir=/usr/src/linux-$kernelversion
 XZ_OPT="--lzma1=preset=9e,dict=256MB,nice=273,depth=200,lc=4" tar --lzma -cf /usr/portage/packages/s/kernel.tar.lzma /boot/*$kernelversion-gentoo /lib/modules/$kernelversion-gentoo
 XZ_OPT="--lzma1=preset=9e,dict=256MB,nice=273,depth=200,lc=4" tar --lzma -cf /usr/portage/packages/s/kernel-libre.tar.lzma /boot/*$kernelversion-gentoo-gnu /lib/modules/$kernelversion-gentoo-gnu
 
-binutils-config --linker ld.gold
 rm config.amd64
 cd /usr/src/linux/
 make clean
@@ -33,3 +33,5 @@ make modules_prepare
 cd /usr/src/linux-$kernelversion-gentoo-gnu/
 make clean
 emerge --buildpkg @module-rebuild
+
+binutils-config --linker ld.gold
