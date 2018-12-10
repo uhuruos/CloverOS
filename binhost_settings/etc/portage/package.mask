@@ -38,6 +38,7 @@
 */*::torbrowser
 */*::vampire
 */*::vapoursynth
+*/*::vifino-overlay
 
 net-libs/nodejs::gentoo
 x11-libs/vte:2.91::gentoo

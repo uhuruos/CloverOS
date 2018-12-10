@@ -50,6 +50,10 @@ media-libs/opusfile
 net-ftp/proftpd
 
 #keyworded, remove when stable exists
+sys-apps/gtop
+app-shells/mcfly
+app-portage/kuroo
+x11-misc/synergy
 x11-misc/bumblebee **
 x11-misc/primus
 sys-auth/thinkfinger

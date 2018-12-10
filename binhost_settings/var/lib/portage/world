@@ -188,6 +188,7 @@ app-portage/gemato
 app-portage/genlop
 app-portage/gentoolkit
 app-portage/gpyutils
+app-portage/kuroo
 app-portage/layman
 app-portage/mirrorselect
 app-portage/overlint
@@ -205,6 +206,7 @@ app-shells/fish
 app-shells/fzf
 app-shells/gentoo-zsh-completions
 app-shells/loksh
+app-shells/mcfly
 app-shells/mksh
 app-shells/mpv-bash-completion
 app-shells/rust-zshcomp
@@ -1024,6 +1026,7 @@ sys-apps/dmidecode
 sys-apps/fbset
 sys-apps/firejail
 sys-apps/flatpak
+sys-apps/gtop
 sys-apps/hprofile
 sys-apps/hwdata-redhat
 sys-apps/hwinfo
@@ -1099,7 +1102,7 @@ sys-kernel/bliss-initramfs
 sys-kernel/dkms
 sys-kernel/dracut
 sys-kernel/genkernel
-sys-kernel/gentoo-sources:4.18.20
+sys-kernel/gentoo-sources:4.19.8
 sys-kernel/linux-firmware
 sys-power/acpi_call
 sys-power/acpitool
@@ -1191,6 +1194,7 @@ x11-misc/obmenu
 x11-misc/parcellite
 x11-misc/pcmanfm
 x11-misc/polybar
+x11-misc/primus
 x11-misc/qt5ct
 x11-misc/redshift
 x11-misc/rofi

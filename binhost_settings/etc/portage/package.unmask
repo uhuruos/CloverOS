@@ -1,3 +1,5 @@
+x11-misc/synergy::vifino-overlay
+
 x11-misc/bumblebee::seden
 
 games-emulation/pcsx2::cloveros-overlay # pcsx2-9999::gentoo with added src_configure() { local mycmakeargs=( -DDISABLE_ADVANCE_SIMD=ON ) }
@@ -89,6 +91,7 @@ media-video/flowblade::jorgicio
 media-video/vidcutter::jorgicio
 media-plugins/gimp-paint-studio::jorgicio
 net-im/telegram-cli::jorgicio
+sys-apps/gtop::jorgicio
 
 games-util/steam-launcher::steam-overlay
 

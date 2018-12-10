@@ -153,6 +153,7 @@ app-crypt/veracrypt X
 sci-chemistry/gromacs X
 games-emulation/retroarch X
 app-misc/neofetch X
+sys-apps/psensor X
 app-emulation/virtualbox-guest-additions X
 media-video/xine-ui curl X
 sci-mathematics/octave X gui fftw curl gnuplot postscript jit
