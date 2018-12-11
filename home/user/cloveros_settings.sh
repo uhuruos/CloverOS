@@ -21,6 +21,7 @@ else
 9) Clean emerge cache
 a) ALSA settings configuration
 l) Update libre kernel
+e) Set keyboard layout
 k) Delete all kernels except for $(uname -r)
 t) Enable tap to click on touchpad
 d) Disable mouse acceleration
@@ -260,6 +261,16 @@ case "$choice" in
 			fi
 			rm kernel-libre.tar.lzma kernel-libre.tar.lzma.asc &> /dev/null
 		fi
+		;;
+
+	e)
+		if [ ! -d /var/db/pkg/x11-apps/setxkbmap-*/ ]; then
+			sudo emerge setxkbmap
+		fi
+		echo -e "Available keyboard maps: $(ls /usr/share/X11/xkb/symbols | tr "\n" " ") \n"
+		read -erp "Select a keyboard map: " keyboardmap
+		setxkbmap $keyboardmap
+		echo -e "\nKeyboard map set to ${keyboardmap}. (xsetkbmap ${keyboardmap})"
 		;;
 
 	k)
