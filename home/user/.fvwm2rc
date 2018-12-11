@@ -33,8 +33,8 @@ Key Left A CS GotoPage -1p +0p
 Key Down A CS GotoPage +0p +1p
 Key Up A CS GotoPage +0p -1p
 
-Key XF86MonBrightnessDown A N Exec sudo ~/bl.sh -5
-Key XF86MonBrightnessUp A N Exec sudo ~/bl.sh +5
+Key XF86MonBrightnessDown A N Exec sudo sh -c 'for f in /sys/class/backlight/*; do echo $(($(<$f/brightness)-5*$(<$f/max_brightness)/100)) > $f/brightness; done'
+Key XF86MonBrightnessUp A N Exec sudo sh -c 'for f in /sys/class/backlight/*; do echo $(($(<$f/brightness)+5*$(<$f/max_brightness)/100)) > $f/brightness; done'
 Key XF86AudioLowerVolume A N Exec amixer set Master 5%-
 Key XF86AudioRaiseVolume A N Exec amixer set Master 5%+
 Key XF86AudioMute A N Exec amixer set Master toggle
