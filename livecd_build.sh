@@ -82,8 +82,8 @@ eselect locale set en_US.utf8
 usermod -aG audio,video,games,input $username
 cd /home/$username/
 rm .bash_profile
-wget $gitprefix/home/user/{.bash_profile,.zprofile,.zshrc,.fvwm2rc,.Xdefaults,wallpaper.png,.xbindkeysrc,screenfetch-dev,bl.sh,cloveros_settings.sh,stats.sh,rotate_screen.sh,.emacs,.rtorrent.rc}
-chmod +x screenfetch-dev bl.sh cloveros_settings.sh stats.sh rotate_screen.sh
+wget $gitprefix/home/user/{.bash_profile,.zprofile,.zshrc,.fvwm2rc,.Xdefaults,wallpaper.png,.xbindkeysrc,screenfetch-dev,cloveros_settings.sh,stats.sh,rotate_screen.sh,.emacs,.rtorrent.rc}
+chmod +x screenfetch-dev cloveros_settings.sh stats.sh rotate_screen.sh
 mkdir -p .emacs.d/backups/ .emacs.d/autosaves/ Downloads/ .rtorrent/ .mpv/ .config/spacefm/ .config/nitrogen/ .local/share/nomacs/ Desktop/
 sed -i "s@/home/user/@/home/$username/@" .rtorrent.rc
 wget $gitprefix/home/user/.mpv/config -P .mpv/
