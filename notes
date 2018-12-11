@@ -1,7 +1,6 @@
 --- todo ---
 
-spacefm drive mounting, sshfs, curlftpfs
-cloveros_settings.sh: configure non us keyboard
+spacefm drive/ssh/ftp mounting
 automatic ~/.asoundrc configuration. it gets the first audio device without hdmi in the name
 make the livecd files from scratch instead of replacing squashfs in gentoo 2016 iso
 eject usb after livecd install
