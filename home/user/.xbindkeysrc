@@ -1,7 +1,7 @@
 "sudo sh -c 'for f in /sys/class/backlight/*; do echo $(($(<$f/brightness)-5*$(<$f/max_brightness)/100)) > $f/brightness; done'"
   c:232
 
-"sudo sh -c 'for f in /sys/class/backlight/*; do echo $(($(<$f/brightness)-5*$(<$f/max_brightness)/100)) > $f/brightness; done'"
+"sudo sh -c 'for f in /sys/class/backlight/*; do echo $(($(<$f/brightness)+5*$(<$f/max_brightness)/100)) > $f/brightness; done'"
   c:233
 
 "amixer set Master 5%-"
