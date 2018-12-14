@@ -3,7 +3,6 @@
 #include <string.h>
 #include <time.h>
 #include <dirent.h>
-char buffer[40];
 char *getfile(char *filename, char *buffer) {
 	FILE *fp;
 	if ((fp = fopen(filename, "r"))) {
@@ -15,6 +14,7 @@ char *getfile(char *filename, char *buffer) {
 	}
 }
 void main(void) {
+	char buffer[40];
 	while (1) {
 		char *unamefp = getfile("/proc/version", buffer);
 		unamefp = strtok(unamefp, "(")+13;
