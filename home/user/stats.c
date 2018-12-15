@@ -100,7 +100,7 @@ void main(void) {
 			if (file == 0) {
 				break;
 			}
-			if (strcmp(file, "coretemp") == 0 || strcmp(file, "k8temp") == 0 || strcmp(file, "k9temp") == 0 || strcmp(file, "k10temp") == 0 || strcmp(file, "nct6775") == 0 || strncmp(file, "it87", 4) == 0 ) {
+			if (strcmp(file, "coretemp") == 0 || strcmp(file, "nct6775") == 0 || strncmp(file, "it87", 4) == 0 || strcmp(file, "k8temp") == 0 || strcmp(file, "k9temp") == 0 ) {
 				break;
 			}
 		}
@@ -141,7 +141,7 @@ void main(void) {
 		}
 		closedir(dp);
 		char brightness[5];
-		if (brightnessfilename != '\0' && brightnessfilename) {
+		if (strstr(brightnessfilename, "..") == NULL) {
 			sprintf(brightness, "%d%s", atoi(getfile(brightnessfilename, buffer))*100/atoi(getfile(brightnessmaxfilename, buffer)), "%");
 		} else {
 			strcpy(brightness, "N/A");
@@ -175,7 +175,7 @@ void main(void) {
 		file = strtok(NULL, "\n");
 		file = strtok(NULL, "\n");
 		char wifi[5];
-		if (strlen(file) > 50) {
+		if (file != NULL) {
 			file = strtok(file, " ");
 			file = strtok(NULL, " ");
 			file = strtok(NULL, " ");
