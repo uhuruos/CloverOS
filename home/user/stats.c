@@ -4,18 +4,20 @@
 #include <time.h>
 #include <dirent.h>
 char *getfile(char *filename, char *buffer) {
+	int size;
 	FILE *fp;
 	if ((fp = fopen(filename, "r"))) {
-		fread(buffer, 1, 40, fp);
+		size = fread(buffer, 1, 3000, fp);
 		fclose(fp);
+		buffer[size] = '\0';
 		return buffer;
 	} else {
 		return 0;
 	}
 }
 void main(void) {
-	char buffer[40];
-	while (1) {
+	char buffer[3000];
+	for (;;) {
 		char *unamefp = getfile("/proc/version", buffer);
 		unamefp = strtok(unamefp, "(")+13;
 		unamefp[strlen(unamefp)-1] = '\0';
@@ -37,9 +39,24 @@ void main(void) {
 
 		char memory[] = "N/A";
 
-		char netin[] = "N/A";
+		char *netdev = getfile("/proc/net/dev", buffer);
+		char *token = strtok(netdev, "\n");
+		char netin[500] = "";
+		int netin2 = 0;
+		while (token != NULL) {
+			if (strstr(token, ":")) {
+				token = strchr(token, ':')+2;
+				char *ptr = strstr(token, " ");
+				*ptr = '\0';
+				strcat(netin, token);
+				strcat(netin, "|");
+				netin2 = netin2+atoi(token);
+			}
+			token = strtok(NULL, "\n");
+		}
+//		sprintf(netin, "%d MiB", netin2);
 
-		char netout[] = "N/A";
+		char netout[500];
 
 		char *acfp = getfile("/sys/class/power_supply/AC/online", buffer);
 		acfp = strtok(acfp, "\n");
@@ -70,9 +87,9 @@ void main(void) {
 		}
 		tempfilename[strlen(tempfilename)-4] = '\0';
 		strcat(tempfilename, "temp1_input");
-		char temperature[4];
 		tempfp = getfile(tempfilename, buffer);
 		tempfp = strtok(tempfp, "\n");
+		char temperature[5];
 		if (tempfp) {
 			strcpy(temperature, tempfp);
 		} else {
@@ -121,13 +138,10 @@ void main(void) {
 		} else {
 			strcpy(soundfilename, "/proc/asound/card0/codec#0");
 		}
+		char *volumehex;
+		volumehex = getfile(soundfilename, buffer);
 		char volume[5];
-		FILE *fp;
-		if ((fp = fopen(soundfilename, "r"))) {
-			char buffer[9999];
-			fread(buffer, 1, 9999, fp);
-			fclose(fp);
-			char *volumehex;
+		if (volumehex) {
 			volumehex = strstr(buffer, "Amp-Out vals:  ");
 			volumehex = strtok(volumehex, "]");
 			volumehex = strrchr(volumehex, ' ')+1;
@@ -137,14 +151,27 @@ void main(void) {
 			strcpy(volume, "N/A");
 		}
 
-		char wifi[] = "N/A";
+		char *netwireless = getfile("/proc/net/wireless", buffer);
+		netwireless = strtok(netwireless, "\n");
+		netwireless = strtok(NULL, "\n");
+		netwireless = strtok(NULL, "\n");
+		char wifi[5];
+		if (strlen(netwireless) > 50) {
+			netwireless = strtok(netwireless, " ");
+			netwireless = strtok(NULL, " ");
+			netwireless = strtok(NULL, " ");
+			netwireless[strlen(netwireless)-1] = '\0';
+			sprintf(wifi, "%d%%", atoi(netwireless)*100/70);
+		} else {
+			strcpy(wifi, "N/A");
+		}
 
 		time_t rawtime = time(NULL);
 		struct tm *info = localtime(&rawtime);
 		char date[40];
 		strftime(date, 40, "%a %d %b %Y %H:%M:%S %Z", info);
 
-		printf("\e[?25l\e[37m%s Up: \e[32m%s\e[37m Proc: \e[32m%s\e[37m Active: \e[32m%s\e[37m Cpu: \e[32m%s \e[37mMem: \e[32m%s\e[37m Net in: \e[32m%s\e[37m Net out: \e[32m%s\e[37m AC: \e[32m%s\e[37m Temp: \e[32m%s\e[37m Battery: \e[32m%s\e[37m Brightness: \e[32m%s\e[37m Volume: \e[32m%s\e[37m Wifi: \e[32m%s\e[37m %s        \e[0m\r", uname, uptime, proc, active, cpu, memory, netin, netout, ac, temperature, battery, brightness, volume, wifi, date);
+		printf("\e[?25l\e[37m%s Up: \e[32m%s\e[37m Proc: \e[32m%s\e[37m Active: \e[32m%s\e[37m Cpu: \e[32m%s\e[37m Mem: \e[32m%s\e[37m Net in: \e[32m%s\e[37m Net out: \e[32m%s\e[37m AC: \e[32m%s\e[37m Temp: \e[32m%s\e[37m Battery: \e[32m%s\e[37m Brightness: \e[32m%s\e[37m Volume: \e[32m%s\e[37m Wifi: \e[32m%s\e[37m %s        \e[0m\r", uname, uptime, proc, active, cpu, memory, netin, netout, ac, temperature, battery, brightness, volume, wifi, date);
 		fflush(stdout);
 		nanosleep((struct timespec[]){{2, 0}}, NULL);
 	}
