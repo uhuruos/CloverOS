@@ -157,7 +157,6 @@ void main(void) {
 		} else {
 			strcpy(soundfilename, "/proc/asound/card0/codec#0");
 		}
-		char *volumehex;
 		file = getfile(soundfilename, buffer);
 		char volume[5];
 		if (file) {
