@@ -1,4 +1,4 @@
-gcc -o /tmp/stats -xc - <<READOC && exec /tmp/stats
+gcc -Os -mssse3 -mfpmath=both -ffast-math -funroll-loops -floop-block -floop-interchange -floop-strip-mine -ftree-loop-distribution -o /tmp/stats -xc - <<READOC && exec /tmp/stats
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
