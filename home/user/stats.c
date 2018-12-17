@@ -67,9 +67,9 @@ void main(void) {
 		sprintf(netout, "%llu MiB", netoutt/1048576);
 
 		file = getfile("/sys/class/power_supply/AC/online", buffer);
-		file[strlen(file)-1] = '\0';
 		char ac[2];
 		if (file) {
+			file[strlen(file)-1] = '\0';
 			if (strcmp(file, "1") == 0) {
 				ac[0] = 'Y';
 			} else {
@@ -160,7 +160,7 @@ void main(void) {
 		file = strchr(file, '\n')+1;
 		file = strchr(file, '\n')+1;
 		char wifi[5];
-		if (file != NULL) {
+		if (*file != '\0') {
 			strtok(file, " ");
 			file = strtok(NULL, " ");
 			file = strtok(NULL, " ");
