@@ -85,7 +85,7 @@ void main(void) {
 		file = strchr(file, '\n')+1;
 		file = strchr(file, '\n')+1;
 		int x;
-		for (int i=x=1; file[i]; ++i) {
+		for (int i = x = 1; file[i]; ++i) {
 			if (file[i] != ' ' || file[i-1] != ' ') {
 				file[x++] = file[i];
 			}
@@ -126,7 +126,7 @@ void main(void) {
 		for (int i = 0; i < 5; i++) {
 			sprintf(tempfilename, "%s%d%s", "/sys/class/hwmon/hwmon", i, "/name");
 			file = getfile(tempfilename, buffer);
-			strtok(file, "\n");
+			*strchr(file, '\n') = '\0';
 			if (file == 0) {
 				break;
 			}
@@ -152,7 +152,7 @@ void main(void) {
 		}
 		char battery[5];
 		if (file) {
-			strtok(file, "\n");
+			*strchr(file, '\n') = '\0';
 			strcat(file, "%");
 			strcpy(battery, file);
 		} else {
@@ -179,7 +179,7 @@ void main(void) {
 		file = getfile(soundfilename, buffer);
 		if (file != 0) {
 			file = strstr(file, "defaults.pcm.card ")+18;
-			strtok(file, "\n");
+			*strchr(file, '\n') = '\0';
 			sprintf(soundfilename, "%s%s%s", "/proc/asound/card", file, "/codec#0");
 		} else {
 			strcpy(soundfilename, "/proc/asound/card0/codec#0");
@@ -187,11 +187,9 @@ void main(void) {
 		file = getfile(soundfilename, buffer);
 		char volume[5];
 		if (file) {
-			file = strstr(buffer, "Amp-Out vals:  ");
-			strtok(file, "]");
-			file = strrchr(file, ' ')+1;
-			sprintf(file, "%lu%%", strtol(file, NULL, 16));
-			strcpy(volume, file);
+			file = strstr(file, "Amp-Out vals:  [0x")+18;
+			*strchr(file, ' ') = '\0';
+			sprintf(volume, "%lu%%", strtol(file, NULL, 16));
 		} else {
 			strcpy(volume, "N/A");
 		}
@@ -200,10 +198,9 @@ void main(void) {
 		file = strchr(file, '\n')+1;
 		file = strchr(file, '\n')+1;
 		char wifi[5];
-		if (*file != '\0') {
+		if (*file) {
 			strtok(file, " ");
-			file = strtok(NULL, " ");
-			file = strtok(NULL, " ");
+			for (int i = 0; i < 2; i++, file = strtok(NULL, " "));
 			file[strlen(file)-1] = '\0';
 			sprintf(wifi, "%d%%", atoi(file)*100/70);
 		} else {
