@@ -15,7 +15,7 @@ char *getfile(char *filename, char *buffer) {
 	}
 }
 void main(void) {
-	char buffer[10000], *file;
+	char buffer[3000], *file;
 	for (;;) {
 		file = getfile("/proc/version", buffer);
 		file = file+14;
