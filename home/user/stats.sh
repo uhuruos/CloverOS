@@ -1,160 +1,223 @@
-#!/bin/bash
-cpulasttotal=0
-cpulastidle=0
+gcc -o /tmp/stats -xc - <<READOC && exec /tmp/stats
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <time.h>
+#include <dirent.h>
+char *getfile(char *filename, char *buffer) {
+	FILE *fp;
+	if ((fp = fopen(filename, "r"))) {
+		int size = fread(buffer, 1, 3000, fp);
+		fclose(fp);
+		buffer[size] = '\0';
+		return buffer;
+	} else {
+		return 0;
+	}
+}
+void main(void) {
+	char buffer[3000], *file;
+	for (;;) {
+		file = getfile("/proc/version", buffer);
+		file = file+14;
+		*strchr(file, ' ') = '\0';
+		char uname[30];
+		sprintf(uname, "%s%s", "Linux ", file);
 
-mapfile -t netdev < /proc/net/dev
-i=0
-for line in "${netdev[@]}"; do
-	IFS=' ' read -a netdevline <<< $line
-	if [[ ${netdevline[0]} != 'lo:' && ${netdevline[9]} != '0' ]]; then
-		netdevice=$i
-	fi
-	((i++))
-done
+		file = getfile("/proc/uptime", buffer);
+		*strchr(file, '.') = '\0';
+		int hours = atoi(file)/3600;
+		int minutes = atoi(file)/60%60;
+		char uptime[10];
+		sprintf(uptime, "%02d:%02d", hours, minutes);
 
-for cputempdevice in /sys/class/hwmon/*; do
-	cputempname=$(<$cputempdevice/name);
-	if [[ $cputempname == 'coretemp' || $cputempname =~ 'k*temp' || $cputempname =~ 'it87*' || $cputempname == 'nct6775' ]]; then
-		break;
-	fi
-done
+		int processesi = 0;
+		DIR *dp;
+		struct dirent *dir;
+		dp = opendir("/proc/");
+		while ((dir = readdir(dp)) != NULL) {
+			if (dir->d_name[0] >= '0' && dir->d_name[0] <= '9') {
+				processesi++;
+			}
+		}
+		closedir(dp);
+		char processes[10];
+		sprintf(processes, "%d", processesi);
 
-if [[ ! -f /sys/class/power_supply/BAT0/capacity ]]; then
-	battery='N/A'
-fi
+		file = getfile("/proc/stat", buffer);
+		file = strstr(file, "procs_running ")+14;
+		*strchr(file, '\n') = '\0';
+		char active[5];
+		strcpy(active, file);
 
-if compgen -G /sys/class/backlight/* > /dev/null; then
-	backlightdevice=(/sys/class/backlight/*)
-	backlightdevice=${backlightdevice[-1]}
-else
-	brightness='N/A'
-fi
+		file = getfile("/proc/stat", buffer);
+		*strchr(file, '\n') = '\0';
+		file = file+3;
+		unsigned long long int cputotal = 0, cpuidle = 0, cpulasttotal, cpulastidle;
+		cputotal += atoll(strtok(file, " "));
+		for (int i = 0; i < 2; i++, cputotal += atoll(strtok(NULL, " ")));
+		char *cputoken = strtok(NULL, " ");
+		cpuidle += atoll(cputoken);
+		cputotal += atoll(cputoken);
+		for (int i = 0; i < 6; i++, cputotal += atoll(strtok(NULL, " ")));
+		char cpu[5];
+		sprintf(cpu, "%llu%%", (1000*((cputotal-cpulasttotal)-(cpuidle-cpulastidle))/(cputotal-cpulasttotal)+5)/10);
+		cpulasttotal = cputotal;
+		cpulastidle = cpuidle;
 
-if [[ -f ~/.asoundrc ]]; then
-	read alsadevice < ~/.asoundrc
-	alsadevice=${alsadevice/defaults.pcm.card /}
-	if [ $alsadevice -eq $alsadevice ] 2> /dev/null; then
-		:
-	else
-		alsadevice=0
-	fi
-else
-	alsadevice=0
-fi
-i=0
-if [[ -f /proc/asound/card$alsadevice/codec#0 ]]; then
-	while read line; do
-	if [[ $line == 'Amp-Out vals:  '* ]]; then
-		alsaline=$i
-		break
-	fi
-	((i++))
-	done < /proc/asound/card$alsadevice/codec#0
-else
-	volume='N/A'
-fi
+		file = getfile("/proc/meminfo", buffer);
+		char memory[50];
+		strncpy(memory, strstr(file, "MemTotal: ")+10, 50); *strstr(memory, " kB") = '\0'; *strrchr(memory, ' ')+1;
+		unsigned long long int memtotal = atoll(memory);
+		strncpy(memory, strstr(file, "MemFree: ")+9, 50); *strstr(memory, " kB") = '\0'; *strrchr(memory, ' ')+1;
+		unsigned long long int memfree = atoll(memory);
+		strncpy(memory, strstr(file, "Buffers: ")+9, 50); *strstr(memory, " kB") = '\0'; *strrchr(memory, ' ')+1;
+		unsigned long long int buffers = atoll(memory);
+		strncpy(memory, strstr(file, "Cached: ")+8, 50); *strstr(memory, " kB") = '\0'; *strrchr(memory, ' ')+1;
+		unsigned long long int cached = atoll(memory);
+		strncpy(memory, strstr(file, "Shmem: ")+7, 50); *strstr(memory, " kB") = '\0'; *strrchr(memory, ' ')+1;
+		unsigned long long int shmem = atoll(memory);
+		strncpy(memory, strstr(file, "SReclaimable: ")+14, 50); *strstr(memory, " kB") = '\0'; *strrchr(memory, ' ')+1;
+		unsigned long long int sreclaimable = atoll(memory);
+		sprintf(memory, "%llu MiB / %llu MiB", (memtotal+shmem-memfree-buffers-cached-sreclaimable)/1024, memtotal/1024);
 
-while :
-do
-system=$(</proc/version)
-system=${system%% (*}
-system=${system/ version/}
+		file = getfile("/proc/net/dev", buffer);
+		file = strchr(file, '\n')+1;
+		file = strchr(file, '\n')+1;
+		int x;
+		for (int i=x=1; file[i]; ++i) {
+			if (file[i] != ' ' || file[i-1] != ' ') {
+				file[x++] = file[i];
+			}
+		}
+		file[x] = '\0';
+		unsigned long long int netint = 0, netoutt = 0;
+		char *token;
+		token = strtok(file, "\n");
+		while (token != NULL) {
+			token = strchr(token, ':')+1;
+			token = token+1;
+			char *buf;
+			strtok_r(token, " ", &buf);
+			netint += atoll(token);
+			for (int i = 0; i < 8; i++, token = strtok_r(NULL, " ", &buf));
+			netoutt += atoll(token);
+			token = strtok(NULL, "\n");
+		}
+		char netin[20], netout[20];
+		sprintf(netin, "%llu MiB", netint/1048576);
+		sprintf(netout, "%llu MiB", netoutt/1048576);
 
-uptime=$(</proc/uptime)
-uptime=${uptime%%.*}
-hrs=$((uptime/3600))
-min=$((uptime/60%60))
-if [[ ${#min} -eq 1 ]]; then
-	min=0$min
-fi
-uptime="$hrs:$min"
+		file = getfile("/sys/class/power_supply/AC/online", buffer);
+		char ac[2];
+		if (file) {
+			file[strlen(file)-1] = '\0';
+			if (strcmp(file, "1") == 0) {
+				ac[0] = 'Y';
+			} else {
+				ac[0] = 'N';
+			}
+		} else {
+			ac[0] = 'Y';
+		}
+		ac[1] = '\0';
 
-processes=()
-for line in /proc/*[0-9]; do
-	processes+=($line)
-done
-processes=${#processes[@]}
+		char tempfilename[40];
+		for (int i = 0; i < 5; i++) {
+			sprintf(tempfilename, "%s%d%s", "/sys/class/hwmon/hwmon", i, "/name");
+			file = getfile(tempfilename, buffer);
+			strtok(file, "\n");
+			if (file == 0) {
+				break;
+			}
+			if (strcmp(file, "coretemp") == 0 || strcmp(file, "nct6775") == 0 || strncmp(file, "it87", 4) == 0 || strcmp(file, "k8temp") == 0 || strcmp(file, "k9temp") == 0 ) {
+				break;
+			}
+		}
+		tempfilename[strlen(tempfilename)-4] = '\0';
+		strcat(tempfilename, "temp1_input");
+		file = getfile(tempfilename, buffer);
+		char temperature[5];
+		if (file) {
+			file[strlen(file)-4] = 'C';
+			file[strlen(file)-3] = '\0';
+			strcpy(temperature, file);
+		} else {
+			strcpy(temperature, "N/A");
+		}
 
-mapfile -t procstat < /proc/stat
-activeprocesses=${procstat[-3]}
-activeprocesses=${activeprocesses:14}
+		file = getfile("/sys/class/power_supply/BAT0/capacity", buffer);
+		if (file == 0) {
+			file = getfile("/sys/class/power_supply/BAT1/capacity", buffer);
+		}
+		char battery[5];
+		if (file) {
+			strtok(file, "\n");
+			strcat(file, "%");
+			strcpy(battery, file);
+		} else {
+			strcpy(battery, "N/A");
+		}
 
-IFS=' ' read -a cpustats <<< ${procstat[0]}
-cpustats=(${cpustats[@]:1})
-cpuidle=${cpustats[3]}
-cputotal=0
-for i in "${cpustats[@]}"; do
-	cputotal=$(($cputotal+$i))
-done
-cpuusage=$(((1000*(($cputotal-$cpulasttotal)-($cpuidle-$cpulastidle))/($cputotal-$cpulasttotal)+5)/10))%
-cpulasttotal=$cputotal
-cpulastidle=$cpuidle
+		char brightnessfilename[70];
+		char brightnessmaxfilename[70];
+		dp = opendir("/sys/class/backlight/");
+		while ((dir = readdir(dp)) != NULL) {
+			sprintf(brightnessmaxfilename, "%s%s%s", "/sys/class/backlight/", dir->d_name, "/max_brightness");
+			sprintf(brightnessfilename, "%s%s%s", "/sys/class/backlight/", dir->d_name, "/actual_brightness");
+		}
+		closedir(dp);
+		char brightness[5];
+		if (strstr(brightnessfilename, "..") == NULL) {
+			sprintf(brightness, "%d%s", atoi(getfile(brightnessfilename, buffer))*100/atoi(getfile(brightnessmaxfilename, buffer)), "%");
+		} else {
+			strcpy(brightness, "N/A");
+		}
 
-mapfile -t meminfo < /proc/meminfo
-memtotal=${meminfo[0]}
-memtotal=${memtotal#* }
-memtotal=${memtotal/ kB/}
-memory[0]=${meminfo[1]} #memfree
-memory[1]=${meminfo[3]} #buffers
-memory[2]=${meminfo[4]} #cached
-memory[3]=${meminfo[20]} #shmem
-memory[4]=${meminfo[22]} #sreclaimable
-memused=$memtotal
-for line in "${memory[@]}"; do
-	line=${line#* }
-	line=${line/ kB/}
-	memused=$(($memused-$line))
-done
-meminfo=$(($memused/1024))\ MiB\ \/\ $(($memtotal/1024))\ MiB
+		char soundfilename[50];
+		sprintf(soundfilename, "%s%s%s", "/home/", getenv("USER"), "/.asoundrc");
+		file = getfile(soundfilename, buffer);
+		if (file != 0) {
+			file = strstr(file, "defaults.pcm.card ")+18;
+			strtok(file, "\n");
+			sprintf(soundfilename, "%s%s%s", "/proc/asound/card", file, "/codec#0");
+		} else {
+			strcpy(soundfilename, "/proc/asound/card0/codec#0");
+		}
+		file = getfile(soundfilename, buffer);
+		char volume[5];
+		if (file) {
+			file = strstr(buffer, "Amp-Out vals:  ");
+			strtok(file, "]");
+			file = strrchr(file, ' ')+1;
+			sprintf(file, "%lu%%", strtol(file, NULL, 16));
+			strcpy(volume, file);
+		} else {
+			strcpy(volume, "N/A");
+		}
 
-mapfile -t netdev < /proc/net/dev
-IFS=' ' read -a netdev <<< ${netdev[$netdevice]}
-netin=$((${netdev[1]}/1048576))\ MiB
-netout=$((${netdev[9]}/1048576))\ MiB
+		file = getfile("/proc/net/wireless", buffer);
+		file = strchr(file, '\n')+1;
+		file = strchr(file, '\n')+1;
+		char wifi[5];
+		if (*file != '\0') {
+			strtok(file, " ");
+			file = strtok(NULL, " ");
+			file = strtok(NULL, " ");
+			file[strlen(file)-1] = '\0';
+			sprintf(wifi, "%d%%", atoi(file)*100/70);
+		} else {
+			strcpy(wifi, "N/A");
+		}
 
-if [[ $volume != 'N/A' ]]; then
+		time_t rawtime = time(NULL);
+		struct tm *info = localtime(&rawtime);
+		char date[40];
+		strftime(date, 40, "%a %d %b %Y %H:%M:%S %Z", info);
 
-mapfile -t asound < /proc/asound/card$alsadevice/codec#0
-	volume=${asound[$alsaline]}
-	volume=${volume:20:2}
-	volume=$((16#$volume))%
-fi
-
-ac=$(</sys/class/power_supply/AC/online)
-if [[ $ac == '1' ]]; then
-	ac='Y'
-else
-	ac='N'
-fi
-
-temp=$(<$cputempdevice/temp1_input)
-temp=${temp:0:-3}C
-
-if [[ $battery != 'N/A' ]]; then
-	battery=$(</sys/class/power_supply/BAT0/capacity)%
-fi
-
-if [[ $brightness != 'N/A' ]]; then
-	brightness=$(($(<$backlightdevice/actual_brightness)*100/$(<$backlightdevice/max_brightness)))%
-fi
-
-mapfile -t signal -ra signal < /proc/net/wireless
-if [[ ${#signal[@]} -gt 2 ]]; then
-	signal=${signal[2]}
-	IFS=' ' read -a signal <<< $signal
-	signal=${signal[2]}
-	signal=${signal:0:-1}
-	signal=$((signal*100/70))%
-else
-	signal='N/A'
-fi
-
-date=$(printf '%(%c)T')
-
-clr1='\e[37m'
-clr2='\e[32m'
-
-echo -ne "\e[?25l$clr1$system Up: $clr2$uptime$clr1 Proc: $clr2$processes$clr1 Active: $clr2$activeprocesses$clr1 Cpu: $clr2$cpuusage$clr1 Mem: $clr2$meminfo$clr1 Net in: $clr2$netin$clr1 Net out: $clr2$netout$clr1 AC: $clr2$ac$clr1 Temp: $clr2$temp$clr1 Battery: $clr2$battery$clr1 Brightness: $clr2$brightness$clr1 Volume: $clr2$volume$clr1 Wifi: $clr2$signal$clr1 $date        \r"
-
-sleep 2
-done
+		printf("\e[?25l\e[37m%s Up: \e[32m%s\e[37m Proc: \e[32m%s\e[37m Active: \e[32m%s\e[37m Cpu: \e[32m%s\e[37m Mem: \e[32m%s\e[37m Net in: \e[32m%s\e[37m Net out: \e[32m%s\e[37m AC: \e[32m%s\e[37m Temp: \e[32m%s\e[37m Battery: \e[32m%s\e[37m Brightness: \e[32m%s\e[37m Volume: \e[32m%s\e[37m Wifi: \e[32m%s\e[37m %s        \e[0m\r", uname, uptime, processes, active, cpu, memory, netin, netout, ac, temperature, battery, brightness, volume, wifi, date);
+		fflush(stdout);
+		nanosleep((struct timespec[]){{2, 0}}, NULL);
+	}
+}
+READOC
