@@ -39,6 +39,7 @@ void main(void) {
 				processesi++;
 			}
 		}
+		closedir(dp);
 		char processes[10];
 		sprintf(processes, "%d", processesi);
 
