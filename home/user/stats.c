@@ -178,7 +178,7 @@ void main(void) {
 		file = getfile(soundfilename, buffer);
 		if (file != 0) {
 			file = strstr(file, "defaults.pcm.card ")+18;
-			strtok(file, "\n");
+			*strchr(file, '\n') = '\0';
 			sprintf(soundfilename, "%s%s%s", "/proc/asound/card", file, "/codec#0");
 		} else {
 			strcpy(soundfilename, "/proc/asound/card0/codec#0");
@@ -187,10 +187,9 @@ void main(void) {
 		char volume[5];
 		if (file) {
 			file = strstr(buffer, "Amp-Out vals:  ");
-			strtok(file, "]");
+			file = strchr(file, ']');
 			file = strrchr(file, ' ')+1;
-			sprintf(file, "%lu%%", strtol(file, NULL, 16));
-			strcpy(volume, file);
+			sprintf(volume, "%lu%%", strtol(file, NULL, 16));
 		} else {
 			strcpy(volume, "N/A");
 		}
