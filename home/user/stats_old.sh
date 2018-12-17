@@ -19,6 +19,10 @@ for cputempdevice in /sys/class/hwmon/*; do
 	fi
 done
 
+if [[ ! -f /sys/class/power_supply/AC/online ]]; then
+	acdev='N/A'
+fi
+
 if [[ ! -f /sys/class/power_supply/BAT0/capacity ]]; then
 	battery='N/A'
 fi
@@ -120,11 +124,15 @@ mapfile -t asound < /proc/asound/card$alsadevice/codec#0
 	volume=$((16#$volume))%
 fi
 
-ac=$(</sys/class/power_supply/AC/online)
-if [[ $ac == '1' ]]; then
-	ac='Y'
+if [[ $acdev != 'N/A' ]]; then
+	ac=$(</sys/class/power_supply/AC/online)
+	if [[ $ac == '1' ]]; then
+		ac='Y'
+	else
+		ac='N'
+	fi
 else
-	ac='N'
+	ac='Y'
 fi
 
 temp=$(<$cputempdevice/temp1_input)
