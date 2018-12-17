@@ -84,7 +84,7 @@ void main(void) {
 		file = strchr(file, '\n')+1;
 		file = strchr(file, '\n')+1;
 		int x;
-		for (int i=x=1; file[i]; ++i) {
+		for (int i = x = 1; file[i]; ++i) {
 			if (file[i] != ' ' || file[i-1] != ' ') {
 				file[x++] = file[i];
 			}
