@@ -6,7 +6,7 @@
 char *getfile(char *filename, char *buffer) {
 	FILE *fp;
 	if ((fp = fopen(filename, "r"))) {
-		int size = fread(buffer, 1, 3000, fp);
+		int size = fread(buffer, 1, 10000, fp);
 		fclose(fp);
 		buffer[size] = '\0';
 		return buffer;
@@ -15,7 +15,7 @@ char *getfile(char *filename, char *buffer) {
 	}
 }
 void main(void) {
-	char buffer[3000], *file;
+	char buffer[10000], *file;
 	for (;;) {
 		file = getfile("/proc/version", buffer);
 		file = file+14;
