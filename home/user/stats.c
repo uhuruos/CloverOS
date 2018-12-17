@@ -16,18 +16,16 @@ char *getfile(char *filename, char *buffer) {
 	}
 }
 void main(void) {
-	char buffer[3000];
-	char *file;
-	char *token;
+	char buffer[3000], *file;
 	for (;;) {
 		file = getfile("/proc/version", buffer);
-		file = strtok(file, "(")+13;
-		file[strlen(file)-1] = '\0';
+		*strstr(file, " (") = '\0';
+		file = file+13;
 		char uname[30];
 		sprintf(uname, "%s%s", "Linux", file);
 
 		file = getfile("/proc/uptime", buffer);
-		file = strtok(file, ".");
+		*strchr(file, '.') = '\0';
 		int hours = atoi(file)/3600;
 		int minutes = atoi(file)/60%60;
 		char uptime[10];
@@ -42,44 +40,34 @@ void main(void) {
 		char memory[] = "N/A";
 
 		file = getfile("/proc/net/dev", buffer);
-		token = strtok(file, "\n");
-		unsigned long long int netint = 0;
-		while (token != NULL) {
-			if (strstr(token, ":")) {
-				token = strchr(token, ':')+2;
-				char *ptr = strstr(token, " ");
-				*ptr = '\0';
-				netint += atoll(token);
+		file = strchr(file, '\n')+1;
+		file = strchr(file, '\n')+1;
+		int x;
+		for (int i=x=1; file[i]; ++i) {
+			if (file[i] != ' ' || file[i-1] != ' ') {
+				file[x++] = file[i];
 			}
+		}
+		file[x] = '\0';
+		unsigned long long int netint=0, netoutt=0;
+		char *token;
+		token = strtok(file, "\n");
+		while (token != NULL) {
+			token = strchr(token, ':')+1;
+			token = token+1;
+			char *buf;
+			strtok_r(token, " ", &buf);
+			netint += atoll(token);
+			for (int i=0; i<8; i++, token = strtok_r(NULL, " ", &buf));
+			netoutt += atoll(token);
 			token = strtok(NULL, "\n");
 		}
-		char netin[20];
+		char netin[20], netout[20];
 		sprintf(netin, "%llu MiB", netint/1048576);
-
-		file = getfile("/proc/net/dev", buffer);
-		token = strtok(file, "\n");
-		unsigned long long int netoutt = 0;
-		while (token != NULL) {
-			if (strstr(token, ":")) {
-				token = strchr(token, ':')+2;
-				token = strtok(token, " ");
-				token = strtok(NULL, " ");
-				token = strtok(NULL, " ");
-				token = strtok(NULL, " ");
-				token = strtok(NULL, " ");
-				token = strtok(NULL, " ");
-				token = strtok(NULL, " ");
-				token = strtok(NULL, " ");
-				token = strtok(NULL, " ");
-				netoutt += atoll(token);
-			}
-			token = strtok(NULL, "\n");
-		}
-		char netout[20];
 		sprintf(netout, "%llu MiB", netoutt/1048576);
 
 		file = getfile("/sys/class/power_supply/AC/online", buffer);
-		file = strtok(file, "\n");
+		file[strlen(file)-1] = '\0';
 		char ac[2];
 		if (file) {
 			if (strcmp(file, "1") == 0) {
@@ -96,7 +84,7 @@ void main(void) {
 		for (int i=0; i<5; i++) {
 			sprintf(tempfilename, "%s%d%s", "/sys/class/hwmon/hwmon", i, "/name");
 			file = getfile(tempfilename, buffer);
-			file = strtok(file, "\n");
+			strtok(file, "\n");
 			if (file == 0) {
 				break;
 			}
@@ -107,15 +95,14 @@ void main(void) {
 		tempfilename[strlen(tempfilename)-4] = '\0';
 		strcat(tempfilename, "temp1_input");
 		file = getfile(tempfilename, buffer);
-		file = strtok(file, "\n");
 		char temperature[5];
 		if (file) {
 			strcpy(temperature, file);
 		} else {
 			strcpy(temperature, "N/A");
 		}
-		temperature[strlen(temperature)-3] = 'C';
-		temperature[strlen(temperature)-2] = '\0';
+		temperature[strlen(temperature)-4] = 'C';
+		temperature[strlen(temperature)-3] = '\0';
 
 		file = getfile("/sys/class/power_supply/BAT0/capacity", buffer);
 		if (file == 0) {
@@ -123,7 +110,7 @@ void main(void) {
 		}
 		char battery[5];
 		if (file) {
-			file = strtok(file, "\n");
+			strtok(file, "\n");
 			strcpy(battery, file);
 			strcat(battery, "%");
 		} else {
@@ -152,7 +139,7 @@ void main(void) {
 		file = getfile(soundfilename, buffer);
 		if (file != 0) {
 			file = strstr(file, "defaults.pcm.card ")+18;
-			file = strtok(file, "\n");
+			strtok(file, "\n");
 			sprintf(soundfilename, "%s%s%s", "/proc/asound/card", file, "/codec#0");
 		} else {
 			strcpy(soundfilename, "/proc/asound/card0/codec#0");
@@ -161,7 +148,7 @@ void main(void) {
 		char volume[5];
 		if (file) {
 			file = strstr(buffer, "Amp-Out vals:  ");
-			file = strtok(file, "]");
+			strtok(file, "]");
 			file = strrchr(file, ' ')+1;
 			strcpy(volume, file);
 			sprintf(volume, "%lu%%", strtol(volume, NULL, 16));
@@ -170,12 +157,11 @@ void main(void) {
 		}
 
 		file = getfile("/proc/net/wireless", buffer);
-		file = strtok(file, "\n");
-		file = strtok(NULL, "\n");
-		file = strtok(NULL, "\n");
+		file = strchr(file, '\n')+1;
+		file = strchr(file, '\n')+1;
 		char wifi[5];
 		if (file != NULL) {
-			file = strtok(file, " ");
+			strtok(file, " ");
 			file = strtok(NULL, " ");
 			file = strtok(NULL, " ");
 			file[strlen(file)-1] = '\0';
