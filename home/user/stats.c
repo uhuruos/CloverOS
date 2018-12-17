@@ -199,7 +199,7 @@ void main(void) {
 		file = strchr(file, '\n')+1;
 		char wifi[5];
 		if (*file) {
-			for (int i = 0;	i < 3; i++, file = strchr(file, ' ')+1);
+			for (int i = 0; i < 3; i++, file = strchr(file, ' ')+1);
 			file[strlen(file)-1] = '\0';
 			sprintf(wifi, "%d%%", atoi(file)*100/70);
 		} else {
