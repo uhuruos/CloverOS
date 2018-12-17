@@ -30,27 +30,40 @@ void main(void) {
 		char uptime[10];
 		sprintf(uptime, "%02d:%02d", hours, minutes);
 
-		char processes[] = "N/A";
+		int processesi;
+		DIR *dp;
+		struct dirent *dir;
+		dp = opendir("/proc/");
+		while ((dir = readdir(dp)) != NULL) {
+			if (dir->d_name[0] >= '0' && dir->d_name[0] <= '9') {
+				processesi++;
+			}
+		}
+		char processes[10];
+		sprintf(processes, "%d", processesi);
 
-		char active[] = "N/A";
+		file = getfile("/proc/stat", buffer);
+		file = strstr(file, "procs_running ")+14;
+		*strchr(file, '\n') = '\0';
+		char active[5];
+		strcpy(active, file);
 
 		char cpu[] = "N/A";
 
 		file = getfile("/proc/meminfo", buffer);
-		char memorytemp[50];
-		strncpy(memorytemp, strstr(file, "MemTotal: ")+10, 50); *strstr(memorytemp, " kB") = '\0'; *strrchr(memorytemp, ' ')+1;
-		unsigned long long int memtotal = atoll(memorytemp);
-		strncpy(memorytemp, strstr(file, "MemFree: ")+9, 50); *strstr(memorytemp, " kB") = '\0'; *strrchr(memorytemp, ' ')+1;
-		unsigned long long int memfree = atoll(memorytemp);
-		strncpy(memorytemp, strstr(file, "Buffers: ")+9, 50); *strstr(memorytemp, " kB") = '\0'; *strrchr(memorytemp, ' ')+1;
-		unsigned long long int buffers = atoll(memorytemp);
-		strncpy(memorytemp, strstr(file, "Cached: ")+8, 50); *strstr(memorytemp, " kB") = '\0'; *strrchr(memorytemp, ' ')+1;
-		unsigned long long int cached = atoll(memorytemp);
-		strncpy(memorytemp, strstr(file, "Shmem: ")+7, 50); *strstr(memorytemp, " kB") = '\0'; *strrchr(memorytemp, ' ')+1;
-		unsigned long long int shmem = atoll(memorytemp);
-		strncpy(memorytemp, strstr(file, "SReclaimable: ")+14, 50); *strstr(memorytemp, " kB") = '\0'; *strrchr(memorytemp, ' ')+1;
-		unsigned long long int sreclaimable = atoll(memorytemp);
-		char memory[30];
+		char memory[50];
+		strncpy(memory, strstr(file, "MemTotal: ")+10, 50); *strstr(memory, " kB") = '\0'; *strrchr(memory, ' ')+1;
+		unsigned long long int memtotal = atoll(memory);
+		strncpy(memory, strstr(file, "MemFree: ")+9, 50); *strstr(memory, " kB") = '\0'; *strrchr(memory, ' ')+1;
+		unsigned long long int memfree = atoll(memory);
+		strncpy(memory, strstr(file, "Buffers: ")+9, 50); *strstr(memory, " kB") = '\0'; *strrchr(memory, ' ')+1;
+		unsigned long long int buffers = atoll(memory);
+		strncpy(memory, strstr(file, "Cached: ")+8, 50); *strstr(memory, " kB") = '\0'; *strrchr(memory, ' ')+1;
+		unsigned long long int cached = atoll(memory);
+		strncpy(memory, strstr(file, "Shmem: ")+7, 50); *strstr(memory, " kB") = '\0'; *strrchr(memory, ' ')+1;
+		unsigned long long int shmem = atoll(memory);
+		strncpy(memory, strstr(file, "SReclaimable: ")+14, 50); *strstr(memory, " kB") = '\0'; *strrchr(memory, ' ')+1;
+		unsigned long long int sreclaimable = atoll(memory);
 		sprintf(memory, "%llu MiB / %llu MiB", (memtotal+shmem-memfree-buffers-cached-sreclaimable)/1024, memtotal/1024);
 
 		file = getfile("/proc/net/dev", buffer);
@@ -133,8 +146,6 @@ void main(void) {
 
 		char brightnessfilename[70];
 		char brightnessmaxfilename[70];
-		DIR *dp;
-		struct dirent *dir;
 		dp = opendir("/sys/class/backlight/");
 		while ((dir = readdir(dp)) != NULL) {
 			sprintf(brightnessmaxfilename, "%s%s%s", "/sys/class/backlight/", dir->d_name, "/max_brightness");
