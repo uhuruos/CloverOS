@@ -6,7 +6,7 @@
 char *getfile(char *filename, char *buffer) {
 	FILE *fp;
 	if ((fp = fopen(filename, "r"))) {
-		int size = fread(buffer, 1, 10000, fp);
+		int size = fread(buffer, 1, 3000, fp);
 		fclose(fp);
 		buffer[size] = '\0';
 		return buffer;
@@ -186,7 +186,7 @@ void main(void) {
 		file = getfile(soundfilename, buffer);
 		char volume[5];
 		if (file) {
-			file = strstr(buffer, "Amp-Out vals:  ");
+			file = strstr(file, "Amp-Out vals:  ");
 			file = strchr(file, ']');
 			file = strrchr(file, ' ')+1;
 			sprintf(volume, "%lu%%", strtol(file, NULL, 16));
