@@ -4,10 +4,9 @@
 #include <time.h>
 #include <dirent.h>
 char *getfile(char *filename, char *buffer) {
-	int size;
 	FILE *fp;
 	if ((fp = fopen(filename, "r"))) {
-		size = fread(buffer, 1, 3000, fp);
+		int size = fread(buffer, 1, 3000, fp);
 		fclose(fp);
 		buffer[size] = '\0';
 		return buffer;
@@ -97,12 +96,12 @@ void main(void) {
 		file = getfile(tempfilename, buffer);
 		char temperature[5];
 		if (file) {
+			temperature[strlen(temperature)-4] = 'C';
+			temperature[strlen(temperature)-3] = '\0';
 			strcpy(temperature, file);
 		} else {
 			strcpy(temperature, "N/A");
 		}
-		temperature[strlen(temperature)-4] = 'C';
-		temperature[strlen(temperature)-3] = '\0';
 
 		file = getfile("/sys/class/power_supply/BAT0/capacity", buffer);
 		if (file == 0) {
