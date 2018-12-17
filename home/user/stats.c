@@ -110,8 +110,8 @@ void main(void) {
 		char battery[5];
 		if (file) {
 			strtok(file, "\n");
+			strcat(file, "%");
 			strcpy(battery, file);
-			strcat(battery, "%");
 		} else {
 			strcpy(battery, "N/A");
 		}
@@ -149,8 +149,8 @@ void main(void) {
 			file = strstr(buffer, "Amp-Out vals:  ");
 			strtok(file, "]");
 			file = strrchr(file, ' ')+1;
+			sprintf(file, "%lu%%", strtol(file, NULL, 16));
 			strcpy(volume, file);
-			sprintf(volume, "%lu%%", strtol(volume, NULL, 16));
 		} else {
 			strcpy(volume, "N/A");
 		}
