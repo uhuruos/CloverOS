@@ -125,7 +125,7 @@ void main(void) {
 		for (int i = 0; i < 5; i++) {
 			sprintf(tempfilename, "%s%d%s", "/sys/class/hwmon/hwmon", i, "/name");
 			file = getfile(tempfilename, buffer);
-			strtok(file, "\n");
+			file = strchr(file, '\n');
 			if (file == 0) {
 				break;
 			}
