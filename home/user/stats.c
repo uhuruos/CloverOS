@@ -30,7 +30,7 @@ void main(void) {
 		char uptime[10];
 		sprintf(uptime, "%02d:%02d", hours, minutes);
 
-		int processesi;
+		int processesi = 0;
 		DIR *dp;
 		struct dirent *dir;
 		dp = opendir("/proc/");
@@ -48,7 +48,20 @@ void main(void) {
 		char active[5];
 		strcpy(active, file);
 
-		char cpu[] = "N/A";
+		file = getfile("/proc/stat", buffer);
+		*strchr(file, '\n') = '\0';
+		file = file+3;
+		unsigned long long int cputotal = 0, cpuidle = 0, cpulasttotal, cpulastidle;
+		cputotal += atoll(strtok(file, " "));
+		for (int i = 0; i < 2; i++, cputotal += atoll(strtok(NULL, " ")));
+		char *cputoken = strtok(NULL, " ");
+		cpuidle += atoll(cputoken);
+		cputotal += atoll(cputoken);
+		for (int i = 0; i < 6; i++, cputotal += atoll(strtok(NULL, " ")));
+		char cpu[5];
+		sprintf(cpu, "%llu%%", (1000*((cputotal-cpulasttotal)-(cpuidle-cpulastidle))/(cputotal-cpulasttotal)+5)/10);
+		cpulasttotal = cputotal;
+		cpulastidle = cpuidle;
 
 		file = getfile("/proc/meminfo", buffer);
 		char memory[50];
@@ -76,7 +89,7 @@ void main(void) {
 			}
 		}
 		file[x] = '\0';
-		unsigned long long int netint=0, netoutt=0;
+		unsigned long long int netint = 0, netoutt = 0;
 		char *token;
 		token = strtok(file, "\n");
 		while (token != NULL) {
@@ -85,7 +98,7 @@ void main(void) {
 			char *buf;
 			strtok_r(token, " ", &buf);
 			netint += atoll(token);
-			for (int i=0; i<8; i++, token = strtok_r(NULL, " ", &buf));
+			for (int i = 0; i < 8; i++, token = strtok_r(NULL, " ", &buf));
 			netoutt += atoll(token);
 			token = strtok(NULL, "\n");
 		}
@@ -108,7 +121,7 @@ void main(void) {
 		ac[1] = '\0';
 
 		char tempfilename[40];
-		for (int i=0; i<5; i++) {
+		for (int i = 0; i < 5; i++) {
 			sprintf(tempfilename, "%s%d%s", "/sys/class/hwmon/hwmon", i, "/name");
 			file = getfile(tempfilename, buffer);
 			strtok(file, "\n");
