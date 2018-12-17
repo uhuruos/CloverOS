@@ -96,8 +96,8 @@ void main(void) {
 		file = getfile(tempfilename, buffer);
 		char temperature[5];
 		if (file) {
-			temperature[strlen(temperature)-4] = 'C';
-			temperature[strlen(temperature)-3] = '\0';
+			file[strlen(file)-4] = 'C';
+			file[strlen(file)-3] = '\0';
 			strcpy(temperature, file);
 		} else {
 			strcpy(temperature, "N/A");
