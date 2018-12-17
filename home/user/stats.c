@@ -125,7 +125,7 @@ void main(void) {
 		for (int i = 0; i < 5; i++) {
 			sprintf(tempfilename, "%s%d%s", "/sys/class/hwmon/hwmon", i, "/name");
 			file = getfile(tempfilename, buffer);
-			file = strchr(file, '\n');
+			*strchr(file, '\n') = '\0';
 			if (file == 0) {
 				break;
 			}
@@ -151,7 +151,7 @@ void main(void) {
 		}
 		char battery[5];
 		if (file) {
-			strtok(file, "\n");
+			*strchr(file, '\n') = '\0';
 			strcat(file, "%");
 			strcpy(battery, file);
 		} else {
@@ -199,9 +199,9 @@ void main(void) {
 		file = strchr(file, '\n')+1;
 		char wifi[5];
 		if (*file != '\0') {
-			strtok(file, " ");
-			file = strtok(NULL, " ");
-			file = strtok(NULL, " ");
+			file = strchr(file, ' ')+1;
+			file = strchr(file, ' ')+1;
+			file = strchr(file, ' ')+1;
 			file[strlen(file)-1] = '\0';
 			sprintf(wifi, "%d%%", atoi(file)*100/70);
 		} else {
