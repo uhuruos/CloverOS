@@ -18,10 +18,10 @@ void main(void) {
 	char buffer[3000], *file;
 	for (;;) {
 		file = getfile("/proc/version", buffer);
-		*strstr(file, " (") = '\0';
-		file = file+13;
+		file = file+14;
+		*strchr(file, ' ') = '\0';
 		char uname[30];
-		sprintf(uname, "%s%s", "Linux", file);
+		sprintf(uname, "%s%s", "Linux ", file);
 
 		file = getfile("/proc/uptime", buffer);
 		*strchr(file, '.') = '\0';
@@ -30,13 +30,28 @@ void main(void) {
 		char uptime[10];
 		sprintf(uptime, "%02d:%02d", hours, minutes);
 
-		char proc[] = "N/A";
+		char processes[] = "N/A";
 
 		char active[] = "N/A";
 
 		char cpu[] = "N/A";
 
-		char memory[] = "N/A";
+		file = getfile("/proc/meminfo", buffer);
+		char memorytemp[50];
+		strncpy(memorytemp, strstr(file, "MemTotal: ")+10, 50); *strstr(memorytemp, " kB") = '\0'; *strrchr(memorytemp, ' ')+1;
+		unsigned long long int memtotal = atoll(memorytemp);
+		strncpy(memorytemp, strstr(file, "MemFree: ")+9, 50); *strstr(memorytemp, " kB") = '\0'; *strrchr(memorytemp, ' ')+1;
+		unsigned long long int memfree = atoll(memorytemp);
+		strncpy(memorytemp, strstr(file, "Buffers: ")+9, 50); *strstr(memorytemp, " kB") = '\0'; *strrchr(memorytemp, ' ')+1;
+		unsigned long long int buffers = atoll(memorytemp);
+		strncpy(memorytemp, strstr(file, "Cached: ")+8, 50); *strstr(memorytemp, " kB") = '\0'; *strrchr(memorytemp, ' ')+1;
+		unsigned long long int cached = atoll(memorytemp);
+		strncpy(memorytemp, strstr(file, "Shmem: ")+7, 50); *strstr(memorytemp, " kB") = '\0'; *strrchr(memorytemp, ' ')+1;
+		unsigned long long int shmem = atoll(memorytemp);
+		strncpy(memorytemp, strstr(file, "SReclaimable: ")+14, 50); *strstr(memorytemp, " kB") = '\0'; *strrchr(memorytemp, ' ')+1;
+		unsigned long long int sreclaimable = atoll(memorytemp);
+		char memory[30];
+		sprintf(memory, "%llu MiB / %llu MiB", (memtotal+shmem-memfree-buffers-cached-sreclaimable)/1024, memtotal/1024);
 
 		file = getfile("/proc/net/dev", buffer);
 		file = strchr(file, '\n')+1;
@@ -174,7 +189,7 @@ void main(void) {
 		char date[40];
 		strftime(date, 40, "%a %d %b %Y %H:%M:%S %Z", info);
 
-		printf("\e[?25l\e[37m%s Up: \e[32m%s\e[37m Proc: \e[32m%s\e[37m Active: \e[32m%s\e[37m Cpu: \e[32m%s\e[37m Mem: \e[32m%s\e[37m Net in: \e[32m%s\e[37m Net out: \e[32m%s\e[37m AC: \e[32m%s\e[37m Temp: \e[32m%s\e[37m Battery: \e[32m%s\e[37m Brightness: \e[32m%s\e[37m Volume: \e[32m%s\e[37m Wifi: \e[32m%s\e[37m %s        \e[0m\r", uname, uptime, proc, active, cpu, memory, netin, netout, ac, temperature, battery, brightness, volume, wifi, date);
+		printf("\e[?25l\e[37m%s Up: \e[32m%s\e[37m Proc: \e[32m%s\e[37m Active: \e[32m%s\e[37m Cpu: \e[32m%s\e[37m Mem: \e[32m%s\e[37m Net in: \e[32m%s\e[37m Net out: \e[32m%s\e[37m AC: \e[32m%s\e[37m Temp: \e[32m%s\e[37m Battery: \e[32m%s\e[37m Brightness: \e[32m%s\e[37m Volume: \e[32m%s\e[37m Wifi: \e[32m%s\e[37m %s        \e[0m\r", uname, uptime, processes, active, cpu, memory, netin, netout, ac, temperature, battery, brightness, volume, wifi, date);
 		fflush(stdout);
 		nanosleep((struct timespec[]){{2, 0}}, NULL);
 	}
