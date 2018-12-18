@@ -14,7 +14,7 @@ done
 
 for cputempdevice in /sys/class/hwmon/*; do
 	cputempname=$(<$cputempdevice/name);
-	if [[ $cputempname == 'coretemp' || $cputempname =~ 'k*temp' || $cputempname =~ 'it87*' || $cputempname == 'nct6775' ]]; then
+	if [[ $cputempname == 'coretemp' || $cputempname =~ 'it87*' || $cputempname == 'nct6775'|| $cputempname == 'k8temp' || $cputempname == 'k9temp' ]]; then
 		break;
 	fi
 done
