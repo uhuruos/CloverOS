@@ -200,6 +200,7 @@ void main(void) {
 		snd_mixer_detach(handle, "default");
 		snd_mixer_close(handle);
 		snd_mixer_selem_id_free(sid);
+		char volume[5];
 		printf(volume, "%ld%%", outvol);
 
 		file = getfile("/proc/net/wireless", buffer);
