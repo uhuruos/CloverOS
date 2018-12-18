@@ -3,6 +3,13 @@
 #include <string.h>
 #include <time.h>
 #include <dirent.h>
+#include <alsa/output.h>
+#include <alsa/input.h>
+#include <alsa/global.h>
+#include <alsa/conf.h>
+#include <alsa/control.h>
+#include <alsa/pcm.h>
+#include <alsa/mixer.h>
 char *getfile(char *filename, char *buffer) {
 	FILE *fp;
 	if ((fp = fopen(filename, "r"))) {
@@ -59,7 +66,7 @@ void main(void) {
 		cpuidle += atoll(cputoken);
 		cputotal += atoll(cputoken);
 		for (int i = 0; i < 6; i++, cputotal += atoll(strtok(NULL, " ")));
-		char cpu[10];
+		char cpu[20];
 		sprintf(cpu, "%llu%%", (1000*((cputotal-cpulasttotal)-(cpuidle-cpulastidle))/(cputotal-cpulasttotal)+5)/10);
 		cpulasttotal = cputotal;
 		cpulastidle = cpuidle;
@@ -173,25 +180,27 @@ void main(void) {
 			strcpy(brightness, "N/A");
 		}
 
-		char soundfilename[50];
-		sprintf(soundfilename, "%s%s%s", "/home/", getenv("USER"), "/.asoundrc");
-		file = getfile(soundfilename, buffer);
-		if (file != 0) {
-			file = strstr(file, "defaults.pcm.card ")+18;
-			*strchr(file, '\n') = '\0';
-			sprintf(soundfilename, "%s%s%s", "/proc/asound/card", file, "/codec#0");
-		} else {
-			strcpy(soundfilename, "/proc/asound/card0/codec#0");
-		}
-		file = getfile(soundfilename, buffer);
-		char volume[5];
-		if (file) {
-			file = strstr(file, "Amp-Out vals:  [0x")+18;
-			*strchr(file, ' ') = '\0';
-			sprintf(volume, "%lu%%", strtol(file, NULL, 16));
-		} else {
-			strcpy(volume, "N/A");
-		}
+
+		long int minv, maxv, outvol;
+		snd_mixer_t *handle;
+		snd_mixer_elem_t *elem;
+		snd_mixer_selem_id_t *sid;
+		snd_mixer_open(&handle, 0);
+		snd_mixer_attach(handle, "default");
+		snd_mixer_selem_register(handle, NULL, NULL);
+		snd_mixer_load(handle);
+		snd_mixer_selem_id_malloc(&sid);
+		snd_mixer_selem_id_set_index(sid, 0);
+		snd_mixer_selem_id_set_name(sid, "Master");
+		elem = snd_mixer_find_selem(handle, sid);
+		snd_mixer_selem_get_playback_volume_range(elem, &minv, &maxv);
+		snd_mixer_selem_get_playback_volume(elem, 0, &outvol);
+		outvol = outvol + (minv * (-1));
+		outvol = ((float)(outvol + (minv * (-1))) / (maxv + (minv * (-1)))) * 100;
+		snd_mixer_detach(handle, "default");
+		snd_mixer_close(handle);
+		snd_mixer_selem_id_free(sid);
+		printf(volume, "%ld%%", outvol);
 
 		file = getfile("/proc/net/wireless", buffer);
 		file = strchr(file, '\n')+1;
