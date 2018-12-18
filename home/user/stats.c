@@ -174,14 +174,18 @@ void main(void) {
 		}
 
 		file = getfile("/proc/net/wireless", buffer);
-		file = strchr(file, '\n')+1;
-		file = strchr(file, '\n')+1;
 		char wifi[5];
-		if (*file) {
-			strtok(file, " ");
-			for (int i = 0; i < 2; i++, file = strtok(NULL, " "));
-			file[strlen(file)-1] = '\0';
-			sprintf(wifi, "%d%%", atoi(file)*100/70);
+		if (file) {
+			file = strchr(file, '\n')+1;
+			file = strchr(file, '\n')+1;
+			if (*file) {
+				strtok(file, " ");
+				for (int i = 0; i < 2; i++, file = strtok(NULL, " "));
+				file[strlen(file)-1] = '\0';
+				sprintf(wifi, "%d%%", atoi(file)*100/70);
+			} else {
+				strcpy(wifi, "N/A");
+			}
 		} else {
 			strcpy(wifi, "N/A");
 		}
