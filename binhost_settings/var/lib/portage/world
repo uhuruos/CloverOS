@@ -995,6 +995,7 @@ net-wireless/iw
 net-wireless/rtl-sdr
 net-wireless/sdrplay
 net-wireless/soapysdr
+net-wireless/wavemon
 net-wireless/wpa_supplicant
 pantheon-base/plank
 sci-calculators/calcoo
@@ -1111,6 +1112,7 @@ sys-power/hibernate-script
 sys-power/pm-utils
 sys-power/powertop
 sys-power/suspend
+sys-process/atop
 sys-process/glances
 sys-process/htop
 sys-process/iotop
