@@ -73,7 +73,7 @@ if [[ ${#min} -eq 1 ]]; then
 fi
 uptime="$hrs:$min"
 
-processes=0
+processes=1
 for line in /proc/[0-9]*; do
 	((processes++))
 done
