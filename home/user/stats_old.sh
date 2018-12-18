@@ -73,11 +73,10 @@ if [[ ${#min} -eq 1 ]]; then
 fi
 uptime="$hrs:$min"
 
-processes=()
+processes=
 for line in /proc/*[0-9]; do
-	processes+=($line)
+	((processes++))
 done
-processes=${#processes[@]}
 
 mapfile -t procstat < /proc/stat
 activeprocesses=${procstat[-3]}
