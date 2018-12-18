@@ -95,21 +95,19 @@ cpulasttotal=$cputotal
 cpulastidle=$cpuidle
 
 mapfile -t meminfo < /proc/meminfo
-memtotal=${meminfo[0]}
-memtotal=${memtotal#* }
-memtotal=${memtotal/ kB/}
-memory[0]=${meminfo[1]} #memfree
-memory[1]=${meminfo[3]} #buffers
-memory[2]=${meminfo[4]} #cached
-memory[3]=${meminfo[20]} #shmem
-memory[4]=${meminfo[22]} #sreclaimable
-memused=$memtotal
-for line in "${memory[@]}"; do
-	line=${line#* }
-	line=${line/ kB/}
-	memused=$(($memused-$line))
+memory[0]=${meminfo[0]} #memtotal
+memory[1]=${meminfo[1]} #memfree
+memory[2]=${meminfo[3]} #buffers
+memory[3]=${meminfo[4]} #cached
+memory[4]=${meminfo[20]} #shmem
+memory[5]=${meminfo[22]} #sreclaimable
+for ((i=0; i<=5; i++)); do
+	memory[$i]=${memory[i]#* };
+	memory[$i]=${memory[i]:0:-3
+};
 done
-meminfo=$(($memused/1024))\ MiB\ \/\ $(($memtotal/1024))\ MiB
+memused=$((${memory[0]}+${memory[4]}-${memory[1]}-${memory[2]}-${memory[3]}-${memory[5]}));
+meminfo="$(($memused/1024)) MiB / $((${memory[0]}/1024)) MiB"
 
 mapfile -t netdev < /proc/net/dev
 IFS=' ' read -a netdev <<< ${netdev[$netdevice]}
