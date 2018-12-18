@@ -180,7 +180,6 @@ void main(void) {
 			strcpy(brightness, "N/A");
 		}
 
-
 		long int minv, maxv, outvol;
 		snd_mixer_t *handle;
 		snd_mixer_elem_t *elem;
