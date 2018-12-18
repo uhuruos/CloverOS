@@ -3,13 +3,6 @@
 #include <string.h>
 #include <time.h>
 #include <dirent.h>
-#include <alsa/output.h>
-#include <alsa/input.h>
-#include <alsa/global.h>
-#include <alsa/conf.h>
-#include <alsa/control.h>
-#include <alsa/pcm.h>
-#include <alsa/mixer.h>
 char *getfile(char *filename, char *buffer) {
 	FILE *fp;
 	if ((fp = fopen(filename, "r"))) {
@@ -180,28 +173,6 @@ void main(void) {
 			strcpy(brightness, "N/A");
 		}
 
-		long int minv, maxv, outvol;
-		snd_mixer_t *handle;
-		snd_mixer_elem_t *elem;
-		snd_mixer_selem_id_t *sid;
-		snd_mixer_open(&handle, 0);
-		snd_mixer_attach(handle, "default");
-		snd_mixer_selem_register(handle, NULL, NULL);
-		snd_mixer_load(handle);
-		snd_mixer_selem_id_malloc(&sid);
-		snd_mixer_selem_id_set_index(sid, 0);
-		snd_mixer_selem_id_set_name(sid, "Master");
-		elem = snd_mixer_find_selem(handle, sid);
-		snd_mixer_selem_get_playback_volume_range(elem, &minv, &maxv);
-		snd_mixer_selem_get_playback_volume(elem, 0, &outvol);
-		outvol = outvol + (minv * (-1));
-		outvol = ((float)(outvol + (minv * (-1))) / (maxv + (minv * (-1)))) * 100;
-		snd_mixer_detach(handle, "default");
-		snd_mixer_close(handle);
-		snd_mixer_selem_id_free(sid);
-		char volume[5];
-		sprintf(volume, "%ld%%", outvol);
-
 		file = getfile("/proc/net/wireless", buffer);
 		file = strchr(file, '\n')+1;
 		file = strchr(file, '\n')+1;
@@ -220,7 +191,7 @@ void main(void) {
 		char date[40];
 		strftime(date, 40, "%a %d %b %Y %H:%M:%S %Z", info);
 
-		printf("\e[?25l\e[37m%s Up: \e[32m%s\e[37m Proc: \e[32m%s\e[37m Active: \e[32m%s\e[37m Cpu: \e[32m%s\e[37m Mem: \e[32m%s\e[37m Net in: \e[32m%s\e[37m Net out: \e[32m%s\e[37m AC: \e[32m%s\e[37m Temp: \e[32m%s\e[37m Battery: \e[32m%s\e[37m Brightness: \e[32m%s\e[37m Volume: \e[32m%s\e[37m Wifi: \e[32m%s\e[37m %s        \e[0m\r", uname, uptime, processes, active, cpu, memory, netin, netout, ac, temperature, battery, brightness, volume, wifi, date);
+		printf("\e[?25l\e[37m%s Up: \e[32m%s\e[37m Proc: \e[32m%s\e[37m Active: \e[32m%s\e[37m Cpu: \e[32m%s\e[37m Mem: \e[32m%s\e[37m Net in: \e[32m%s\e[37m Net out: \e[32m%s\e[37m AC: \e[32m%s\e[37m Temp: \e[32m%s\e[37m Battery: \e[32m%s\e[37m Brightness: \e[32m%s\e[37m Wifi: \e[32m%s\e[37m %s        \e[0m\r", uname, uptime, processes, active, cpu, memory, netin, netout, ac, temperature, battery, brightness, volume, wifi, date);
 		fflush(stdout);
 		nanosleep((struct timespec[]){{2, 0}}, NULL);
 	}
