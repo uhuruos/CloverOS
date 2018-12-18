@@ -158,9 +158,9 @@ void main(void) {
 			strcpy(battery, "N/A");
 		}
 
-		dp = opendir("/sys/class/backlight/");
 		char brightness[5];
-		if (dir) {
+		dp = opendir("/sys/class/backlight/");
+		if (dp) {
 			char brightnessfilename[70];
 			char brightnessmaxfilename[70];
 			while ((dir = readdir(dp)) != NULL) {
