@@ -59,7 +59,7 @@ void main(void) {
 		cpuidle += atoll(cputoken);
 		cputotal += atoll(cputoken);
 		for (int i = 0; i < 6; i++, cputotal += atoll(strtok(NULL, " ")));
-		char cpu[5];
+		char cpu[10];
 		sprintf(cpu, "%llu%%", (1000*((cputotal-cpulasttotal)-(cpuidle-cpulastidle))/(cputotal-cpulasttotal)+5)/10);
 		cpulasttotal = cputotal;
 		cpulastidle = cpuidle;
