@@ -31,9 +31,8 @@ void main(void) {
 		sprintf(uptime, "%02d:%02d", hours, minutes);
 
 		int processesi = 0;
-		DIR *dp;
 		struct dirent *dir;
-		dp = opendir("/proc/");
+		DIR *dp = opendir("/proc/");
 		while ((dir = readdir(dp)) != NULL) {
 			if (dir->d_name[0] >= '0' && dir->d_name[0] <= '9') {
 				processesi++;
@@ -158,17 +157,21 @@ void main(void) {
 			strcpy(battery, "N/A");
 		}
 
-		char brightnessfilename[70];
-		char brightnessmaxfilename[70];
 		dp = opendir("/sys/class/backlight/");
-		while ((dir = readdir(dp)) != NULL) {
-			sprintf(brightnessmaxfilename, "%s%s%s", "/sys/class/backlight/", dir->d_name, "/max_brightness");
-			sprintf(brightnessfilename, "%s%s%s", "/sys/class/backlight/", dir->d_name, "/actual_brightness");
-		}
-		closedir(dp);
 		char brightness[5];
-		if (strstr(brightnessfilename, "..") == NULL) {
-			sprintf(brightness, "%d%s", atoi(getfile(brightnessfilename, buffer))*100/atoi(getfile(brightnessmaxfilename, buffer)), "%");
+		if (dir) {
+			char brightnessfilename[70];
+			char brightnessmaxfilename[70];
+			while ((dir = readdir(dp)) != NULL) {
+				sprintf(brightnessmaxfilename, "%s%s%s", "/sys/class/backlight/", dir->d_name, "/max_brightness");
+				sprintf(brightnessfilename, "%s%s%s", "/sys/class/backlight/", dir->d_name, "/actual_brightness");
+			}
+			closedir(dp);
+			if (strstr(brightnessfilename, "..") == NULL) {
+				sprintf(brightness, "%d%s", atoi(getfile(brightnessfilename, buffer))*100/atoi(getfile(brightnessmaxfilename, buffer)), "%");
+			} else {
+				strcpy(brightness, "N/A");
+			}
 		} else {
 			strcpy(brightness, "N/A");
 		}
