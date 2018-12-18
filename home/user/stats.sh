@@ -1,4 +1,4 @@
-gcc -Os -march=native -mfpmath=both -ffast-math -funroll-loops -floop-block -floop-interchange -floop-strip-mine -ftree-loop-distribution -o /tmp/stats -xc - <<READOC && exec /tmp/stats
+gcc -Ofast -march=native -mfpmath=both -ffast-math -funroll-loops -floop-block -floop-interchange -floop-strip-mine -ftree-loop-distribution -o /tmp/stats -xc - <<READOC && exec /tmp/stats
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -60,7 +60,7 @@ void main(void) {
 		cpuidle += atoll(cputoken);
 		cputotal += atoll(cputoken);
 		for (int i = 0; i < 6; i++, cputotal += atoll(strtok(NULL, " ")));
-		char cpu[5];
+		char cpu[10];
 		sprintf(cpu, "%llu%%", (1000*((cputotal-cpulasttotal)-(cpuidle-cpulastidle))/(cputotal-cpulasttotal)+5)/10);
 		cpulasttotal = cputotal;
 		cpulastidle = cpuidle;
