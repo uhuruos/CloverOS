@@ -127,7 +127,7 @@ void main(void) {
 			sprintf(tempfilename, "%s%d%s", "/sys/class/hwmon/hwmon", i, "/name");
 			file = getfile(tempfilename, buffer);
 			*strchr(file, '\n') = '\0';
-			if (file == 0) {
+			if (!file) {
 				break;
 			}
 			if (strcmp(file, "coretemp") == 0 || strcmp(file, "nct6775") == 0 || strncmp(file, "it87", 4) == 0 || strcmp(file, "k8temp") == 0 || strcmp(file, "k9temp") == 0 ) {
@@ -147,7 +147,7 @@ void main(void) {
 		}
 
 		file = getfile("/sys/class/power_supply/BAT0/capacity", buffer);
-		if (file == 0) {
+		if (!file) {
 			file = getfile("/sys/class/power_supply/BAT1/capacity", buffer);
 		}
 		char battery[5];
