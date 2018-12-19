@@ -14,7 +14,7 @@ done
 
 for cputempdevice in /sys/class/hwmon/*; do
 	cputempname=$(<$cputempdevice/name);
-	if [[ $cputempname == 'coretemp' || $cputempname =~ 'it87*' || $cputempname == 'nct6775'|| $cputempname == 'k8temp' || $cputempname == 'k9temp' ]]; then
+	if [[ $cputempname == 'coretemp' || $cputempname =~ 'it87*' || $cputempname == 'nct6775' || $cputempname == 'k8temp' || $cputempname == 'k9temp' ]]; then
 		break;
 	fi
 done
@@ -113,14 +113,6 @@ IFS=' ' read -a netdev <<< ${netdev[$netdevice]}
 netin=$((${netdev[1]}/1048576))\ MiB
 netout=$((${netdev[9]}/1048576))\ MiB
 
-if [[ $volume != 'N/A' ]]; then
-
-mapfile -t asound < /proc/asound/card$alsadevice/codec#0
-	volume=${asound[$alsaline]}
-	volume=${volume:20:2}
-	volume=$((16#$volume))%
-fi
-
 if [[ $acdev != 'N/A' ]]; then
 	ac=$(</sys/class/power_supply/AC/online)
 	if [[ $ac == '1' ]]; then
@@ -134,6 +126,13 @@ fi
 
 temp=$(<$cputempdevice/temp1_input)
 temp=${temp:0:-3}C
+
+if [[ $volume != 'N/A' ]]; then
+mapfile -t asound < /proc/asound/card$alsadevice/codec#0
+	volume=${asound[$alsaline]}
+	volume=${volume:20:2}
+	volume=$((16#$volume))%
+fi
 
 if [[ $battery != 'N/A' ]]; then
 	battery=$(</sys/class/power_supply/BAT0/capacity)%
@@ -159,7 +158,7 @@ date=$(printf '%(%c)T')
 clr1='\e[37m'
 clr2='\e[32m'
 
-echo -ne "\e[?25l$clr1$system Up: $clr2$uptime$clr1 Proc: $clr2$processes$clr1 Active: $clr2$activeprocesses$clr1 Cpu: $clr2$cpuusage$clr1 Mem: $clr2$meminfo$clr1 Net in: $clr2$netin$clr1 Net out: $clr2$netout$clr1 AC: $clr2$ac$clr1 Temp: $clr2$temp$clr1 Battery: $clr2$battery$clr1 Brightness: $clr2$brightness$clr1 Volume: $clr2$volume$clr1 Wifi: $clr2$signal$clr1 $date        \r"
+echo -ne "\e[?25l$clr1$system Up: $clr2$uptime$clr1 Proc: $clr2$processes$clr1 Active: $clr2$activeprocesses$clr1 Cpu: $clr2$cpuusage$clr1 Mem: $clr2$meminfo$clr1 Net in: $clr2$netin$clr1 Net out: $clr2$netout$clr1 AC: $clr2$ac$clr1 Temp: $clr2$temp$clr1 Volume: $clr2$volume$clr1 Battery: $clr2$battery$clr1 Brightness: $clr2$brightness$clr1 Wifi: $clr2$signal$clr1 $date        \r"
 
 sleep 2
 done
