@@ -136,6 +136,11 @@ void main(void) {
 		tempfilename[strlen(tempfilename)-4] = '\0';
 		strcat(tempfilename, "temp1_input");
 		file = getfile(tempfilename, buffer);
+		if (!file) {
+			tempfilename[strlen(tempfilename)-11] = '\0';
+			strcat(tempfilename, "temp2_input");
+			file = getfile(tempfilename, buffer);
+		}
 		char temperature[5];
 		if (file) {
 			file[strlen(file)-4] = 'C';
