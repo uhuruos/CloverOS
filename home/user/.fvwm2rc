@@ -1,3 +1,5 @@
+#Style * NoTitle
+
 AddToFunc "WindowMove" "I" Raise
 + "H" Move
 + "M" Move
