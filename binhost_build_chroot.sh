@@ -34,7 +34,7 @@ CFLAGS="-Ofast -mmmx -mssse3 -pipe -flto=8 -funroll-loops" emerge gcc
 binutils-config --linker ld.gold
 USE="-vaapi" emerge -1 mesa netcat6
 emerge genkernel gentoo-sources
-wget https://liquorix.net/sources/4.18/config.amd64
+wget https://liquorix.net/sources/4.19/config.amd64
 binutils-config --linker ld.bfd
 genkernel --kernel-config=config.amd64 all
 binutils-config --linker ld.gold
