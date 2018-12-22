@@ -31,9 +31,9 @@ void main(void) {
 		int minutes = atoi(file)/60%60;
 		char uptime[20];
 		if ( days > 0 ) {
-			sprintf(uptime, "%dd %dh %02dm", days, hours, minutes);
+			sprintf(uptime, "%dd %dh %dm", days, hours, minutes);
 		} else {
-			sprintf(uptime, "%02dh %02dm", hours, minutes);
+			sprintf(uptime, "%dh %dm", hours, minutes);
 		}
 
 		int processesi = 0;
