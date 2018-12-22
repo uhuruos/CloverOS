@@ -26,9 +26,9 @@ void main(void) {
 
 		file = getfile("/proc/uptime", buffer);
 		*strchr(file, '.') = '\0';
-		int days = atoi(file)/86400;
-		int hours = atoi(file)/3600%24;
-		int minutes = atoi(file)/60%60;
+		int days = atoll(file)/86400;
+		int hours = atoll(file)/3600%24;
+		int minutes = atoll(file)/60%60;
 		char uptime[20];
 		if (days > 0) {
 			sprintf(uptime, "%dd %dh %dm", days, hours, minutes);
@@ -114,8 +114,16 @@ void main(void) {
 		sprintf(totalin, "%lluMiB", totalint/1048576);
 		sprintf(totalout, "%lluMiB", totaloutt/1048576);
 		char netin[20], netout[20];
-		sprintf(netin, "%.1fMiB/s", (float)(totalint-totallastint)/1048576/2);
-		sprintf(netout, "%.1fMiB/s", (float)(totaloutt-totallastoutt)/1048576/2);
+		if (totalint-totallastint >= 104858) {
+			sprintf(netin, "%.1fMiB/s", (float)(totalint-totallastint)/1048576/2);
+		} else {
+			sprintf(netin, "0MiB/s");
+		}
+		if (totaloutt-totallastoutt >= 104858) {
+			sprintf(netout, "%.1fMiB/s", (float)(totaloutt-totallastoutt)/1048576/2);
+		} else {
+			sprintf(netout, "0MiB/s");
+		}
 		totallastint = totalint;
 		totallastoutt = totaloutt;
 
@@ -150,7 +158,7 @@ void main(void) {
 
 		sprintf(buffer, "%ld", (time_t)time(NULL));
 		char volume[5];
-		if (atoi(buffer)%60 == 0 || volume[0] == '\0') {
+		if (atoll(buffer)%60 == 0 || volume[0] == '\0') {
 			char soundfilename[50];
 			sprintf(soundfilename, "%s%s%s", "/home/", getenv("USER"), "/.asoundrc");
 			file = getfile(soundfilename, buffer);
