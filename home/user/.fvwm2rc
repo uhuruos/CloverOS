@@ -163,7 +163,8 @@ MenuStyle Applications HilightBack #000000
 MenuStyle Applications ActiveFore #ffffff
 MenuStyle Applications BorderWidth 1
 MenuStyle Applications TitleUnderlines0 0
-MenuStyle Applications ItemFormat " %l "
+MenuStyle Applications ItemFormat " %l"
+MenuStyle Applications Hilight3DOff
 MenuStyle Applications !TitleWarp
 MenuStyle Applications PopupOffset 0 100
 MenuStyle Applications PopupImmediately
