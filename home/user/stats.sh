@@ -146,9 +146,9 @@ void main(void) {
 			strcpy(temperature, "N/A");
 		}
 
-		sprintf(file, "%ld", (time_t)time(NULL));
+		sprintf(buffer, "%ld", (time_t)time(NULL));
 		char volume[5];
-		if ( atoi(file)%60 == 0 || volume[0] == '\0' ) {
+		if ( atoi(buffer)%60 == 0 || volume[0] == '\0' ) {
 			char soundfilename[50];
 			sprintf(soundfilename, "%s%s%s", "/home/", getenv("USER"), "/.asoundrc");
 			file = getfile(soundfilename, buffer);
