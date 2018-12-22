@@ -30,10 +30,12 @@ void main(void) {
 		int hours = atoi(file)/3600%24;
 		int minutes = atoi(file)/60%60;
 		char uptime[20];
-		if ( days > 0 ) {
+		if (days > 0) {
 			sprintf(uptime, "%dd %dh %dm", days, hours, minutes);
-		} else {
+		} else if (hours > 0) {
 			sprintf(uptime, "%dh %dm", hours, minutes);
+		} else {
+			sprintf(uptime, "%dm", minutes);
 		}
 
 		int processesi = 0;
@@ -148,7 +150,7 @@ void main(void) {
 
 		sprintf(buffer, "%ld", (time_t)time(NULL));
 		char volume[5];
-		if ( atoi(buffer)%60 == 0 || volume[0] == '\0' ) {
+		if (atoi(buffer)%60 == 0 || volume[0] == '\0') {
 			char soundfilename[50];
 			sprintf(soundfilename, "%s%s%s", "/home/", getenv("USER"), "/.asoundrc");
 			file = getfile(soundfilename, buffer);
