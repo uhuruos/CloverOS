@@ -159,8 +159,7 @@ app-emulation/virtualbox-guest-additions X
 media-video/xine-ui curl X
 sci-mathematics/octave X gui fftw curl gnuplot postscript jit
 media-libs/clutter X
-x11-wm/enlightenment X -wayland
-dev-libs/efl X sound harfbuzz physics tslib xpm -egl -wayland
+dev-libs/efl X sound harfbuzz physics tslib xpm drm gles -opengl
 app-text/mupdf X
 games-emulation/sdlmame X
 net-im/qtox X
