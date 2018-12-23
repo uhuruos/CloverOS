@@ -166,6 +166,7 @@ MenuStyle Applications TitleUnderlines0 0
 MenuStyle Applications ItemFormat " %l "
 MenuStyle Applications Hilight3DOff
 MenuStyle Applications !TitleWarp
+MenuStyle Applications VerticalItemSpacing 2 2
 MenuStyle Applications PopupOffset 0 100
 MenuStyle Applications PopupImmediately
 ChangeMenuStyle Applications MenuFvwmRoot ProgramList ShutdownList
