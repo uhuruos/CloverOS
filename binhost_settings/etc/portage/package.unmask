@@ -5,6 +5,7 @@ x11-misc/bumblebee::seden
 games-emulation/pcsx2::cloveros-overlay # pcsx2-9999::gentoo with added src_configure() { local mycmakeargs=( -DDISABLE_ADVANCE_SIMD=ON ) }
 games-emulation/rpcs3::cloveros-overlay # rpcs3-0.0.5::jm-overlay archive exchanged with git and added src_configure() { local mycmakeargs=( -DUSE_NATIVE_INSTRUCTIONS=OFF ) }
 mate-base/mate::cloveros-overlay # mate-1.18::gentoo with removed extras? ( sys-apps/gnome-disk-utility:0 )
+games-util/vitamtp-fork::cloveros-overlay
 media-gfx/nip2::cloveros-overlay
 media-libs/vips::cloveros-overlay
 
@@ -41,8 +42,6 @@ media-libs/zita-resampler::audio-overlay
 media-sound/synthv1::audio-overlay
 media-sound/serialosc::audio-overlay
 media-libs/libmonome::audio-overlay # serialosc
-
-games-util/vitamtp-fork::chaos
 
 x11-plugins/purple-discord::flussence
 

@@ -431,7 +431,6 @@ games-util/qjoypad
 games-util/rejoystick
 games-util/steam-launcher
 games-util/udmf-convert
-games-util/vitamtp-fork
 games-util/xboxdrv
 games-util/zdbsp
 gnome-extra/gnome-calculator

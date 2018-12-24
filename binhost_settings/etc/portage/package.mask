@@ -3,7 +3,7 @@
 */*::abendbrot
 */*::audio-overlay
 */*::brother-overlay
-*/*::chaos
+*/*::calculate
 */*::cloveros-overlay
 */*::deadbeef-overlay
 */*::dotnet
