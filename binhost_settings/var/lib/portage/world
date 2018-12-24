@@ -34,6 +34,9 @@ app-arch/makeself
 app-arch/mt-st
 app-arch/p7zip
 app-arch/par
+app-arch/pbzip2
+app-arch/pigz
+app-arch/pxz
 app-arch/sharutils
 app-arch/tardelta
 app-arch/tarsync
@@ -67,7 +70,6 @@ app-cdr/kcdemu
 app-cdr/xcdroast
 app-cdr/xfburn
 app-crypt/certbot
-app-crypt/gnupg
 app-crypt/gpa
 app-crypt/hashcat
 app-crypt/kbfs
