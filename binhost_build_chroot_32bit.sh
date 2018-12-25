@@ -35,12 +35,12 @@ sed -i 's/CPU_FLAGS_X86="mmx mmxext sse sse2 sse3 ssse3"/CPU_FLAGS_X86="mmx mmxe
 
 CFLAGS="-Ofast -mmmx -mssse3 -pipe -flto=8 -funroll-loops" emerge gcc
 binutils-config --linker ld.gold
-USE="-vaapi" emerge -1 mesa netcat6
+USE="-vaapi" emerge -1 mesa
+USE="binary" emerge -1 scala
+emerge -1 netcat6
 emerge genkernel gentoo-sources
-wget https://liquorix.net/sources/4.19/config.i386-pae
-binutils-config --linker ld.bfd
-genkernel --kernel-config=config.i386-pae all
-binutils-config --linker ld.gold
+wget https://liquorix.net/sources/4.14/config.i386-pae
+binutils-config --linker ld.bfd ; genkernel --kernel-config=config.i386-pae all ; binutils-config --linker ld.gold
 emerge layman
 layman -S
 yes | layman -a $(grep -Po "(?<=\*/\*::).*" /etc/portage/package.mask | tr "\n" " ")
