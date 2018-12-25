@@ -50,6 +50,8 @@ media-libs/opusfile
 net-ftp/proftpd
 
 #keyworded, remove when stable exists
+app-emulation/nemu
+app-crypt/johntheripper-jumbo
 sys-apps/gtop
 app-shells/mcfly
 app-portage/kuroo
@@ -287,6 +289,7 @@ games-emulation/dgen-sdl
 games-misc/cowsay
 games-fps/enemy-territory
 games-rpg/freedink
+games-rpg/freedink-data # freedink
 games-fps/openarena
 games-fps/urbanterror
 games-fps/urbanterror-data # urbanterror

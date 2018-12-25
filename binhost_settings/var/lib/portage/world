@@ -72,6 +72,7 @@ app-cdr/xfburn
 app-crypt/certbot
 app-crypt/gpa
 app-crypt/hashcat
+app-crypt/johntheripper
 app-crypt/kbfs
 app-crypt/kencfs-plasma
 app-crypt/keybase
@@ -308,7 +309,6 @@ dev-util/pycharm-community
 dev-util/pycharm-professional
 dev-util/re2c
 dev-util/regexxer
-dev-util/staruml-bin
 dev-util/strace
 dev-util/trace-cmd
 dev-util/valgrind
@@ -1059,7 +1059,6 @@ sys-apps/usermode-utilities
 sys-apps/vbetool
 sys-auth/fingerprint-gui
 sys-auth/pam_yubico
-sys-auth/thinkfinger
 sys-block/gparted
 sys-block/open-iscsi
 sys-block/sas3flash

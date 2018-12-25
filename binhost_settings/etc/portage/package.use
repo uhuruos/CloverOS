@@ -265,6 +265,8 @@ media-libs/gd truetype fontconfig # required by amule vnstat gnuplot graphviz
 net-libs/nodejs inspector icu # required by chromium
 dev-libs/libsodium -minimal # required by qtox
 x11-drivers/nvidia-drivers compat # required by primus
+media-libs/leptonica tiff # required by tesseract, vapoursynth
+dev-lua/mpack luajit # required by neovim
 x11-libs/gtk+ X
 x11-libs/libva X
 dev-cpp/gtkmm X
@@ -361,6 +363,7 @@ app-emulation/open-vm-tools -ssl -vgauth -grabbitmqproxy
 media-libs/opusfile -libressl -ssl -http
 net-voip/telepathy-gabble gnutls
 net-libs/nodejs bundled-ssl
+app-crypt/johntheripper minimal -openmp -opencl
 
 #wine
 x11-libs/libXcursor abi_x86_32
