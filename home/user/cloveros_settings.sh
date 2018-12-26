@@ -277,6 +277,7 @@ case "$choice" in
 	k)
 		sudo find /boot/ /lib/modules/ -mindepth 1 -maxdepth 1 -name \*gentoo\* ! -name \*$(uname -r) -exec rm -R {} \;
 		sudo grub-mkconfig -o /boot/grub/grub.cfg
+		sudo sed -i "s/set timeout=5/set timeout=0/" /boot/grub/grub.cfg
 		echo "All kernels except for $(uname -r) deleted."
 		;;
 

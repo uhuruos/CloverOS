@@ -30,5 +30,8 @@ android-ndk android-studio
 #libusb USE=udev
 colorhug-client
 
+#old gcrypt
+staruml-bin
+
 #doesn't emerge anymore (gcc8)
-rogue telegram-cli subversion ecryptfs-utils tauthon foldingathome synergy vigra w3mimgfb vdr dolphin-libretro agg stella openjk-outcast sauerbraten mp3blaster tomahawk citra blender staruml-bin spice-gtk kencfs-plasma
+rogue telegram-cli ecryptfs-utils tauthon foldingathome vigra w3mimgfb vdr dolphin-libretro agg stella sauerbraten mp3blaster tomahawk blender
