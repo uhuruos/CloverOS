@@ -447,7 +447,7 @@ net-misc/youtube-dl-gui
 dev-python/twodict # youtube-dl-gui
 x11-plugins/purple-hangouts
 x11-terms/kitty
-x11-themes/sddm-gentoo-black-theme
+x11-themes/sddm-gentoo-black-theme **
 app-misc/ddccontrol-db
 app-i18n/ibus-kkc
 app-i18n/ibus-sunpinyin
