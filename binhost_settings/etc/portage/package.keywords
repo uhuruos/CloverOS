@@ -46,8 +46,8 @@ games-emulation/melonds-libretro ** # fix
 
 #libressl
 media-video/ffmpeg::libressl
-<net-libs/nodejs-9::libressl
-dev-qt/qtnetwork::libressl
+=net-libs/nodejs-8.12.0::libressl
+=dev-qt/qtnetwork-5.11.1::libressl
 www-client/dillo
 app-editors/xemacs
 www-client/elinks
