@@ -10,10 +10,13 @@ livecd_install.sh: uefi install, encryption
 --- packages that don't build ---
 
 #doesn't emerge
-pitivi xen ungoogled-chromium cinelerra stumpwm stumpwm-contrib netsurf gkrellm-plugins redeclipse alienarena opentoonz qtox master-pdf-editor
+eagle pitivi xen ungoogled-chromium stumpwm stumpwm-contrib netsurf gkrellm-plugins redeclipse alienarena opentoonz master-pdf-editor
+
+#doesn't emerge anymore
+
 
 #libressl
-isync tdlib eagle megatools nxplayer murmur makemkv eiskaltdcpp retroshare acme-tiny spyder
+nxplayer murmur makemkv eiskaltdcpp retroshare acme-tiny spyder
 
 #jack2
 cadence ladish
@@ -32,6 +35,3 @@ colorhug-client
 
 #old gcrypt
 staruml-bin
-
-#doesn't emerge anymore (gcc8)
-rogue telegram-cli ecryptfs-utils tauthon foldingathome vigra w3mimgfb vdr dolphin-libretro agg stella sauerbraten mp3blaster tomahawk blender

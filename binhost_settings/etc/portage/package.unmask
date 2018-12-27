@@ -15,9 +15,9 @@ x11-libs/gtk+:3::mv
 
 dev-util/eclipse-sdk-bin::ssnb
 
-media-video/ffmpeg::libressl
 dev-qt/qtnetwork::libressl
 net-libs/nodejs::libressl
+media-video/ffmpeg::libressl
 
 games-fps/gzdoom::haarp
 
@@ -47,7 +47,6 @@ x11-plugins/purple-discord::flussence
 
 net-misc/megatools::jm-overlay
 net-im/telegram-purple::jm-overlay
-games-emulation/citra::jm-overlay
 
 games-fps/openjk-academy::luke-jr
 games-fps/openjk-academy-mp::luke-jr
@@ -83,6 +82,8 @@ x11-misc/i3blocks-gaps::0x4d4c
 sys-power/linux-x86-power-tools::tlp
 
 games-fps/chocolate-doom::vampire
+media-video/shotcut::vampire
+games-emulation/citra::vampire
 
 games-emulation/sdlmame::jorgicio
 media-gfx/flameshot::jorgicio
@@ -91,6 +92,7 @@ media-video/vidcutter::jorgicio
 media-plugins/gimp-paint-studio::jorgicio
 net-im/telegram-cli::jorgicio
 sys-apps/gtop::jorgicio
+media-video/shotcut::jorgicio
 
 games-util/steam-launcher::steam-overlay
 
@@ -123,6 +125,7 @@ media-plugins/deadbeef-fb::deadbeef-overlay
 media-tv/plex-media-server::fkmclane
 x11-misc/lemonbar::fkmclane
 sys-fs/exfat-nofuse::fkmclane
+sci-electronics/eagle::fkmclane
 
 net-vpn/zeronet::raiagent
 

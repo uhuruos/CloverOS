@@ -829,6 +829,7 @@ media-tv/plex-media-server
 media-video/aegisub
 media-video/avidemux
 media-video/baka-mplayer
+media-video/cinelerra
 media-video/dvdbackup
 media-video/ffcast
 media-video/ffmpeg
@@ -909,6 +910,7 @@ net-libs/gtk-vnc
 net-libs/libotr
 net-libs/nodejs
 net-mail/dovecot
+net-mail/isync
 net-mail/mailman
 net-mail/mlmmj
 net-misc/aria2

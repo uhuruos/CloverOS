@@ -354,15 +354,17 @@ dev-lang/tk truetype
 #libressl
 net-misc/curl curl_ssl_libressl -curl_ssl_openssl
 media-video/ffmpeg openssl
+net-libs/libssh -libressl mbedtls
+app-crypt/johntheripper minimal -openmp -opencl
+net-libs/nodejs bundled-ssl
 net-p2p/mktorrent -ssl
 net-misc/iputils -ssl
 net-ftp/gproftpd -ssl
 net-print/gtklp -ssl
 mail-client/nmh -ssl
+net-mail/isync -ssl -libressl
+media-libs/opusfile -ssl -libressl -http
 app-emulation/open-vm-tools -ssl -vgauth -grabbitmqproxy
-media-libs/opusfile -libressl -ssl -http
-net-libs/nodejs bundled-ssl
-app-crypt/johntheripper minimal -openmp -opencl
 
 #wine
 x11-libs/libXcursor abi_x86_32
@@ -464,7 +466,3 @@ x11-libs/libxkbcommon abi_x86_32
 media-libs/libsdl abi_x86_32
 media-libs/audiofile abi_x86_32
 sys-fs/eudev abi_x86_32
-
-#temporary
-app-emulation/vagrant -ruby_targets_ruby24
-kde-apps/kio-extras -sftp # fix: libssh won't build

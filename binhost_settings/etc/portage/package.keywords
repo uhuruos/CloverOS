@@ -38,6 +38,9 @@ media-libs/zimg # vapoursynth
 dev-python/cython # vapoursynth
 dev-libs/json-c # sway
 media-libs/opencv # waifu2x-converter-cpp
+x11-themes/terminology-themes ** # fixes conflict
+x11-themes/sddm-gentoo-black-theme ** # fix
+games-emulation/fbalpha-libretro ** # fixes 404
 
 #libressl
 media-video/ffmpeg::libressl
@@ -50,6 +53,8 @@ media-libs/opusfile
 net-ftp/proftpd
 
 #keyworded, remove when stable exists
+sci-electronics/eagle
+x11-themes/terminology-themes
 app-emulation/nemu
 app-crypt/johntheripper-jumbo
 sys-apps/gtop
@@ -86,7 +91,6 @@ app-admin/passwordsafe
 app-shells/zsh-syntax-highlighting
 app-crypt/kbfs
 app-crypt/keybase
-www-client/ungoogled-chromium
 app-shells/loksh
 sys-apps/nvme-cli
 app-emulation/uae
@@ -447,7 +451,7 @@ net-misc/youtube-dl-gui
 dev-python/twodict # youtube-dl-gui
 x11-plugins/purple-hangouts
 x11-terms/kitty
-x11-themes/sddm-gentoo-black-theme **
+x11-themes/sddm-gentoo-black-theme
 app-misc/ddccontrol-db
 app-i18n/ibus-kkc
 app-i18n/ibus-sunpinyin
@@ -492,7 +496,6 @@ games-emulation/advancemame
 games-emulation/advancescan
 games-misc/ckmame
 x11-misc/enlightenment-extra
-x11-themes/terminology-themes
 sci-mathematics/rstudio
 dev-libs/mathjax # rstudio
 dev-php/composer
