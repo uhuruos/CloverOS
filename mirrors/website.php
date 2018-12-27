@@ -12,21 +12,32 @@ $worldtxt = file_get_contents("$git/binhost_settings/var/lib/portage/world");
 $installscriptsh = file_get_contents("$git/installscript.sh");
 $usermake = file_get_contents("$git/home/user/make.conf");
 $quickpkg = file_get_contents('quickpkg.txt');
+$quickpkg = substr($quickpkg, strpos($quickpkg, '<pre class="ansi2html-content">')+strlen('<pre class="ansi2html-content">')+1);
+$quickpkg = rtrim($quickpkg, "</pre></body>\n</html>");
 
 $mirrors = substr($usermake, strpos($usermake, 'binhost_mirrors="$PORTAGE_BINHOST,') + 34);
 $mirrors = substr($mirrors, 0, strpos($mirrors, ',"'));
 $mirrors = explode(',', $mirrors);
 $mirrorlinks = '';
-foreach ( $mirrors as $line ) {
+foreach ($mirrors as $line) {
 	$mirrorlinks .= '<a target="_blank" href="'.$line.'">'.$line.'</a> ';
 }
 
 $isoname = glob('CloverOS-x86_64-*.iso')[0];
 $libreisoname = glob('CloverOS_Libre-x86_64-*.iso')[0];
 
-$files = file_get_contents('http://127.0.0.1:20000'); // nginx index. working on replacement
-$files = substr($files, strpos($files, '<h1>Index of /'));
-$files = substr($files, 0, strpos($files, '</body>'));
+$files = '<h1>Index of /</h1><hr><pre>';
+$dir = '../';
+foreach (scandir($dir) as $line) {
+	if ($line == '.') {
+		continue;
+	}
+	if (is_dir($dir.$line)) {
+		$line = $line.'/';
+	}
+	$files .= '<a href="'.$line.'">'.str_pad($line.'</a>', 55).gmdate('d-M-Y H:i', filemtime($dir.$line)).'       -'."\n";
+}
+$files .= '</pre><hr>';
 
 $html = '<!DOCTYPE html>
 <html>
@@ -51,12 +62,12 @@ Libre ISO: <a href="s/'.$libreisoname.'">https://cloveros.ga/s/'.$libreisoname.'
 GPG: <a target="_blank" href="s/cloveros.gpg">78F5 AC55 A120 07F2 2DF9  A28A 78B9 3F76 B8E4 2805</a><br>
 IRC: <a target="_blank" href="irc://irc.rizon.net/cloveros">#cloveros</a> on irc.rizon.net<br>
 Twitter: <a target="_blank" href="https://twitter.com/cloveros_ga">https://twitter.com/cloveros_ga</a><br>
-Packages: <a target="_blank" href="s/packages.html">'.substr_count($quickpkg, ': ').' https://cloveros.ga/s/packages.html</a><br>
+Packages: <a target="_blank" href="s/packages.html">'.substr_count($quickpkg, 'Building package for ').' https://cloveros.ga/s/packages.html</a><br>
 Rsync: rsync://nl.cloveros.ga/cloveros<br>
 License: WTFPL<br>
 Mirrors: '.$mirrorlinks.'<br>
-CFLAGS: <span class="mono">CFLAGS="-Ofast -mmmx -mssse3 -pipe -funroll-loops -flto=8 -floop-block -floop-interchange -floop-strip-mine -ftree-loop-distribution"</span><br>
-USE flags: <span class="mono">USE="-systemd -pulseaudio -avahi -dbus -zeroconf -nls -doc -gnome-keyring -gstreamer -libav -openal -kde -gnome -openssl libressl bindist ipv6 http2 dri cli minimal jpeg gif png offensive zsh-completion threads aio jit lto graphite pgo numa alsa joystick xinerama wayland egl vulkan opengl opencl glamor vaapi vdpau xvmc"</span><br>
+CFLAGS: <span class="mono">CFLAGS="-Ofast -mssse3 -mfpmath=both -pipe -funroll-loops -flto=8 -floop-block -floop-interchange -floop-strip-mine -ftree-loop-distribution"</span><br>
+USE flags: <span class="mono">USE="-systemd -pulseaudio -avahi -dbus -consolekit -libnotify -udisks -zeroconf -nls -doc -gnome-keyring -gstreamer -libav -openal -kde -gnome -openssl libressl bindist ipv6 http2 dri cli minimal jpeg gif png offensive zsh-completion threads aio jit fftw lto graphite pgo numa alsa joystick xinerama wayland egl dga vulkan opengl opencl glamor vaapi vdpau"</span><br>
 Validate ISO: <pre class="mono">gpg --keyserver hkp://pool.sks-keyservers.net --recv-key "78F5 AC55 A120 07F2 2DF9 A28A 78B9 3F76 B8E4 2805"
 wget https://cloveros.ga/s/signatures/s/'.$isoname.'.asc
 gpg --verify '.$isoname.'.asc '.$isoname.'</pre>
@@ -84,8 +95,9 @@ gpg --verify '.$isoname.'.asc '.$isoname.'</pre>
 file_put_contents('../index.html', $html);
 
 $isos = '';
-foreach ( $mirrors as $line ) {
-	$isos .= "\n".'					<a href="'.$line.'/s/'.$isoname.'">'.$line.'/s/'.$isoname.'</a>';
+foreach ($mirrors as $line) {
+	$isos .= '							<a href="'.$line.'/s/'.$isoname.'">'.$line.'/s/'.$isoname.'</a>'."\n";
 }
-file_put_contents('../indexalt.html', str_replace("\n{iso_links}", $isos, file_get_contents('indexalt.txt')));
+$isos = rtrim($isos);
+file_put_contents('../indexalt.html', str_replace("{iso_links}", $isos, file_get_contents('indexalt.txt')));
 ?>
