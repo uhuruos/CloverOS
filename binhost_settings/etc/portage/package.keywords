@@ -1,6 +1,3 @@
-games-fps/redeclipse
-media-gfx/opentoonz
-media-video/pitivi
 #preference
 sys-devel/gcc
 sys-kernel/gentoo-sources
@@ -60,6 +57,7 @@ media-libs/opusfile
 net-ftp/proftpd
 
 #keyworded, remove when stable exists
+media-gfx/opentoonz
 net-wireless/iwd
 sci-electronics/eagle
 x11-themes/terminology-themes
@@ -71,7 +69,6 @@ app-portage/kuroo
 x11-misc/synergy
 x11-misc/bumblebee **
 x11-misc/primus
-sys-auth/thinkfinger
 sys-auth/fingerprint-gui
 dev-lang/tcc
 app-accessibility/edbrowse
