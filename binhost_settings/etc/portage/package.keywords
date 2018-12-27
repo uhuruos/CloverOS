@@ -1,3 +1,6 @@
+games-fps/redeclipse
+media-gfx/opentoonz
+media-video/pitivi
 #preference
 sys-devel/gcc
 sys-kernel/gentoo-sources
@@ -27,8 +30,10 @@ sys-fs/zfs-kmod # zfs
 sys-kernel/spl # zfs
 dev-lisp/clisp # fixes build
 net-p2p/mldonkey # fixes build
-media-libs/vigra # fixes build
 games-emulation/mgba # fixes build
+media-video/vdr # fixes build
+media-libs/vigra # fixes build
+media-libs/libsfml # fixes build
 app-laptop/tp_smapi # requested
 dev-libs/beignet # old clang version
 media-fonts/vlgothic # old
@@ -277,7 +282,6 @@ games-fps/avp
 games-fps/xonotic
 dev-libs/d0_blind_id # xonotic
 games-board/eboard
-games-fps/alienarena
 games-emulation/higan
 games-board/crafty
 games-fps/nexuiz

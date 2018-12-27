@@ -231,6 +231,7 @@ app-text/highlight
 app-text/kchmviewer
 app-text/lesspipe
 app-text/mupdf
+app-text/ots
 app-text/pandoc
 app-text/pstotext
 app-text/tesseract
@@ -908,6 +909,7 @@ net-irc/sic
 net-irc/weechat
 net-libs/gtk-vnc
 net-libs/libotr
+net-libs/loudmouth
 net-libs/nodejs
 net-mail/dovecot
 net-mail/isync

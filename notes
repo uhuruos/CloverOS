@@ -10,13 +10,13 @@ livecd_install.sh: uefi install, encryption
 --- packages that don't build ---
 
 #doesn't emerge
-eagle pitivi xen ungoogled-chromium stumpwm stumpwm-contrib netsurf gkrellm-plugins redeclipse alienarena opentoonz master-pdf-editor
+eagle pitivi ungoogled-chromium stumpwm stumpwm-contrib netsurf gkrellm-plugins opentoonz
 
 #doesn't emerge anymore
-rogue dolphin-libretro
+rogue dolphin-libretro loudmouth ots quakeforge tiemu citra sbt xen
 
 #requires AR="gcc-ar" commented out
-ftjam
+ftjam argyllcms
 
 #libressl
 nxplayer murmur makemkv eiskaltdcpp retroshare acme-tiny spyder
