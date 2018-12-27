@@ -7,7 +7,6 @@ emerge --buildpkg @preserved-rebuild
 emerge --depclean
 emerge -1 --buildpkg $(find /var/db/pkg/ -mindepth 2 -maxdepth 2 -name \*-9999 | grep -v MERGING | awk -F \/ '{printf "=%s/%s ", $5, $6}')
 eclean-pkg
-PKGDIR="/usr/portage/packages/s/nodbus/" USE="-dbus -webengine -trash-panel-plugin" emerge --buildpkgonly glib qtgui PyQt5 thunar
 
 #mv /usr/portage/packages/s/ .
 #rm -Rf /usr/portage/packages/*
@@ -15,6 +14,7 @@ PKGDIR="/usr/portage/packages/s/nodbus/" USE="-dbus -webengine -trash-panel-plug
 #quickpkg --include-unmodified-config=y "*/*" 2>&1 | ansi2html > /usr/portage/packages/s/quickpkg.txt
 #emerge --buildpkgonly sudo openssh postfix dcron vixie-cron cronie fcron anacron
 #emerge -C hwinfo ntfs3g && emerge --buildpkg ntfs3g && emerge --buildpkg hwinfo
+#PKGDIR="/usr/portage/packages/s/nodbus/" USE="-dbus -webengine -trash-panel-plugin" emerge --buildpkgonly glib qtgui PyQt5 thunar
 
 cd /usr/portage/packages/s/
 php website.php

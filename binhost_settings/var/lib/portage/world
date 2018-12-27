@@ -261,7 +261,6 @@ dev-lang/open-cobol
 dev-lang/php
 dev-lang/rust
 dev-lang/scala
-dev-lang/tauthon
 dev-lang/tcc
 dev-libs/amdgpu-pro-opencl
 dev-libs/beignet
@@ -286,7 +285,6 @@ dev-python/yolk
 dev-python/yolk-portage
 dev-qt/qt-creator
 dev-ruby/nokogiri
-dev-scheme/racket
 dev-util/android-sdk-update-manager
 dev-util/android-tools
 dev-util/android-udev-rules
@@ -696,6 +694,7 @@ media-gfx/mypaint
 media-gfx/nip2
 media-gfx/nomacs
 media-gfx/openexr_viewers
+media-gfx/opentoonz
 media-gfx/optipng
 media-gfx/photoqt
 media-gfx/phototonic
