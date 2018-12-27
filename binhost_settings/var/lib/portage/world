@@ -995,6 +995,7 @@ net-wireless/broadcom-sta
 net-wireless/cubicsdr
 net-wireless/gnuradio
 net-wireless/iw
+net-wireless/iwd
 net-wireless/rtl-sdr
 net-wireless/sdrplay
 net-wireless/soapysdr

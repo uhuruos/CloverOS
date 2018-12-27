@@ -13,7 +13,10 @@ livecd_install.sh: uefi install, encryption
 eagle pitivi xen ungoogled-chromium stumpwm stumpwm-contrib netsurf gkrellm-plugins redeclipse alienarena opentoonz master-pdf-editor
 
 #doesn't emerge anymore
-rogue dolphin-libretro ftjam
+rogue dolphin-libretro
+
+#requires AR="gcc-ar" commented out
+ftjam
 
 #libressl
 nxplayer murmur makemkv eiskaltdcpp retroshare acme-tiny spyder

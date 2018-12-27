@@ -25,10 +25,10 @@ dev-libs/glib # gimp
 sys-fs/zfs # kernel 4.19
 sys-fs/zfs-kmod # zfs
 sys-kernel/spl # zfs
-x11-themes/mate-themes-meta # gtk:3::mv
-x11-themes/mate-themes # gtk:3::mv
-dev-lisp/clisp # won't build
-net-p2p/mldonkey # won't build
+dev-lisp/clisp # fixes build
+net-p2p/mldonkey # fixes build
+media-libs/vigra # fixes build
+games-emulation/mgba # fixes build
 app-laptop/tp_smapi # requested
 dev-libs/beignet # old clang version
 media-fonts/vlgothic # old
@@ -40,12 +40,14 @@ dev-libs/json-c # sway
 media-libs/opencv # waifu2x-converter-cpp
 x11-themes/terminology-themes ** # fixes conflict
 x11-themes/sddm-gentoo-black-theme ** # fix
-games-emulation/fbalpha-libretro ** # fixes 404
+games-emulation/fbalpha-libretro ** # fix
+games-emulation/citra-libretro ** # fix
+games-emulation/melonds-libretro ** # fix
 
 #libressl
 media-video/ffmpeg::libressl
-<=net-libs/nodejs-8.12.0::libressl
-=dev-qt/qtnetwork-5.11.1::libressl
+<net-libs/nodejs-9::libressl
+dev-qt/qtnetwork::libressl
 www-client/dillo
 app-editors/xemacs
 www-client/elinks
@@ -53,6 +55,7 @@ media-libs/opusfile
 net-ftp/proftpd
 
 #keyworded, remove when stable exists
+net-wireless/iwd
 sci-electronics/eagle
 x11-themes/terminology-themes
 app-emulation/nemu
