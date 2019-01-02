@@ -47,7 +47,6 @@ x11-plugins/purple-discord::flussence
 
 net-misc/megatools::jm-overlay
 net-im/telegram-purple::jm-overlay
-games-emulation/citra::jm-overlay
 
 games-fps/openjk-academy::luke-jr
 games-fps/openjk-academy-mp::luke-jr

@@ -57,6 +57,7 @@ media-libs/opusfile
 net-ftp/proftpd
 
 #keyworded, remove when stable exists
+x11-terms/cool-retro-term
 media-gfx/opentoonz
 net-wireless/iwd
 sci-electronics/eagle

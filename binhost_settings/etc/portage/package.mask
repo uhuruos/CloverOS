@@ -49,5 +49,4 @@ x11-libs/vte:2.91::gentoo
 >=dev-libs/sway-1
 >app-emulation/vagrant-2.1.5
 >=x11-terms/kitty-0.13.1-r1
->net-print/hplip-3.18.10
 >media-video/gpac-0.6.1-r2
