@@ -144,6 +144,7 @@ games-emulation/fceux gtk
 games-emulation/snes9x gtk netplay
 sys-devel/distcc gtk crossdev
 media-video/handbrake gtk -fdk libav-aac
+app-emulation/open-vm-tools X gtkmm multimon
 media-tv/kodi X -wayland
 app-admin/conky X thinkpad mpd rss curl iostats
 media-libs/vulkan-loader X
