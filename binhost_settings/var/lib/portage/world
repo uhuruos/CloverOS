@@ -728,6 +728,7 @@ media-plugins/gimp-refocus
 media-plugins/gimp-resynthesizer
 media-plugins/gkrellmpc
 media-plugins/gst-plugins-oss
+media-plugins/refocus-it
 media-plugins/vapoursynth-adjust
 media-plugins/vapoursynth-finesharp
 media-plugins/vapoursynth-mvsfunc
