@@ -121,6 +121,7 @@ rc-update add wpa_supplicant default
 eselect fontconfig enable 52-infinality.conf
 eselect infinality set infinality
 eselect lcdfilter set infinality
+cp /usr/share/zoneinfo/UTC /etc/localtime
 echo "en_US.UTF-8 UTF-8" >> /etc/locale.gen
 locale-gen
 eselect locale set en_US.utf8
