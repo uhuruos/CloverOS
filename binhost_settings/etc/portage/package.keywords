@@ -31,6 +31,7 @@ games-emulation/mgba # fixes build
 media-video/vdr # fixes build
 media-libs/vigra # fixes build
 media-libs/libsfml # fixes build
+media-video/pitivi # fixes build
 app-laptop/tp_smapi # requested
 dev-libs/beignet # old clang version
 media-fonts/vlgothic # old
@@ -57,6 +58,7 @@ media-libs/opusfile
 net-ftp/proftpd
 
 #keyworded, remove when stable exists
+games-fps/eduke32
 media-plugins/refocus-it
 media-gfx/opentoonz
 net-wireless/iwd

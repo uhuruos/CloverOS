@@ -1,3 +1,4 @@
+games-fps/eduke32 -offensive flac fluidsynth gtk -hrp -opl -psx -sc-55 -sdk server -timidity tools vorbis -voxels vpx xmp
 gnome-extra/gnome-color-manager raw
 x11-misc/colord scanner -gusb
 games-engines/openmw devtools

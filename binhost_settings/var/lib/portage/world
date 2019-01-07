@@ -924,7 +924,6 @@ net-misc/dhcp
 net-misc/dhcpcd
 net-misc/electron-cash
 net-misc/electrum
-net-misc/electrum-ltc
 net-misc/freerdp
 net-misc/geoipupdate
 net-misc/gerbera
