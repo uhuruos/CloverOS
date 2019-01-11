@@ -18,6 +18,9 @@ rogue dolphin-libretro loudmouth ots quakeforge tiemu citra sbt xen sauerbraten 
 #requires AR="gcc-ar" commented out
 ftjam argyllcms
 
+# newer rust version
+alacritty
+
 # md2tool collision
 eduke32
 

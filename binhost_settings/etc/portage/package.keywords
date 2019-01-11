@@ -58,6 +58,7 @@ media-libs/opusfile
 net-ftp/proftpd
 
 #keyworded, remove when stable exists
+x11-terms/alacritty
 games-fps/eduke32
 media-plugins/refocus-it
 media-gfx/opentoonz

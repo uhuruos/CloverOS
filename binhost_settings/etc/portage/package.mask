@@ -49,5 +49,4 @@ dev-qt/qtnetwork::gentoo
 >dev-lang/tcl-8.6.6
 >=dev-libs/sway-1
 >app-emulation/vagrant-2.1.5
->=x11-terms/kitty-0.13.1-r1
 >media-video/gpac-0.6.1-r2
