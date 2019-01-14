@@ -199,7 +199,7 @@ void main(void) {
 		if (!file) {
 			file = getfile("/sys/class/power_supply/BAT1/capacity", buffer);
 		}
-		char battery[5];
+		char battery[10];
 		if (file) {
 			*strchr(file, '\n') = '\0';
 			strcat(file, "%");
