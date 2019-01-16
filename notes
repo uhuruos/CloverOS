@@ -18,10 +18,10 @@ rogue dolphin-libretro loudmouth ots quakeforge tiemu citra sbt xen sauerbraten 
 #requires AR="gcc-ar" commented out
 ftjam argyllcms
 
-# newer rust version
+#newer rust version
 alacritty
 
-# md2tool collision
+#md2tool collision
 eduke32
 
 #libressl
@@ -29,6 +29,9 @@ nxplayer murmur makemkv eiskaltdcpp retroshare acme-tiny spyder
 
 #jack2
 cadence ladish
+
+#clutter USE=gtk
+buzztrax
 
 #qtdeclarative USE=xml
 plasma-applet-weather-widget
