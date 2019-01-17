@@ -2,6 +2,7 @@
 */*::4nykey
 */*::abendbrot
 */*::audio-overlay
+*/*::bobwya
 */*::brother-overlay
 */*::calculate
 */*::cloveros-overlay
@@ -40,7 +41,6 @@
 */*::vampire
 */*::vapoursynth
 */*::vifino-overlay
-*/*::zugaina
 
 net-libs/nodejs::gentoo
 x11-libs/vte:2.91::gentoo

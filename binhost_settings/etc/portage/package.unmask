@@ -1,4 +1,4 @@
-media-sound/skale::zugaina
+sys-fs/exfat-nofuse::bobwya
 
 x11-misc/synergy::vifino-overlay
 
@@ -127,7 +127,6 @@ media-plugins/deadbeef-fb::deadbeef-overlay
 
 media-tv/plex-media-server::fkmclane
 x11-misc/lemonbar::fkmclane
-sys-fs/exfat-nofuse::fkmclane
 sci-electronics/eagle::fkmclane
 
 net-vpn/zeronet::raiagent

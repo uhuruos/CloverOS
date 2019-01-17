@@ -213,7 +213,7 @@ media-video/obs-studio
 app-emulation/open-vm-tools
 sci-calculators/calcoo
 net-p2p/soulseek-qt
-sys-fs/exfat-nofuse
+sys-fs/exfat-nofuse **
 www-servers/onionshare
 net-libs/stem # onionshare
 app-emacs/emms

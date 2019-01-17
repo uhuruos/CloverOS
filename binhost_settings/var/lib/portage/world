@@ -1091,7 +1091,6 @@ sys-fs/ecryptfs-utils
 sys-fs/exfat-nofuse
 sys-fs/exfat-utils
 sys-fs/extundelete
-sys-fs/fuse-exfat
 sys-fs/go-mtpfs
 sys-fs/inotify-tools
 sys-fs/jmtpfs
@@ -1109,7 +1108,7 @@ sys-kernel/bliss-initramfs
 sys-kernel/dkms
 sys-kernel/dracut
 sys-kernel/genkernel
-sys-kernel/gentoo-sources:4.19.14
+sys-kernel/gentoo-sources:4.19.15
 sys-kernel/linux-firmware
 sys-power/acpi_call
 sys-power/acpitool
