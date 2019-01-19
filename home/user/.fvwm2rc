@@ -122,7 +122,7 @@ DestroyMenu ShutdownList
 AddToMenu ShutdownList "Shutdown" Title
 + "restart fvwm" Restart
 + "kill X" Exec pkill X
-+ "lock + sleep" Exec slock && sudo sh -c "echo -n mem > /sys/power/state"
++ "lock + sleep" Exec slock & sudo sh -c "echo -n mem > /sys/power/state"
 + "lock" Exec slock
 + "sleep" Exec sudo sh -c "echo -n mem > /sys/power/state"
 + "reboot" Exec sudo reboot
