@@ -40,8 +40,8 @@ Key XF86MonBrightnessUp A N Exec sudo sh -c 'for f in /sys/class/backlight/*; do
 Key XF86AudioLowerVolume A N Exec amixer set Master 5%- > /dev/null
 Key XF86AudioRaiseVolume A N Exec amixer set Master 5%+ > /dev/null
 Key XF86AudioMute A N Exec amixer set Master toggle > /dev/null
-Key Print A N Exec scrot -e 'nomacs $f'
-Key Print A M Exec scrot -ue 'nomacs $f'
+Key Print A N Exec scrot -e "nomacs \$f"
+Key Print A M Exec scrot -ue "nomacs \$f"
 Key L A 4 Exec slock
 
 OpaqueMoveSize unlimited
@@ -122,9 +122,9 @@ DestroyMenu ShutdownList
 AddToMenu ShutdownList "Shutdown" Title
 + "restart fvwm" Restart
 + "kill X" Exec pkill X
-+ "lock + sleep" Exec slock & sudo sh -c 'echo -n mem > /sys/power/state'
++ "lock + sleep" Exec slock && sudo sh -c "echo -n mem > /sys/power/state"
 + "lock" Exec slock
-+ "sleep" Exec sudo sh -c 'echo -n mem > /sys/power/state'
++ "sleep" Exec sudo sh -c "echo -n mem > /sys/power/state"
 + "reboot" Exec sudo reboot
 + "poweroff" Exec sudo poweroff
 
@@ -149,7 +149,7 @@ AddToMenu MenuFvwmRoot Applications Title
 + "wallpaper" Exec nitrogen
 + "resolution" Exec arandr
 + "volume" Exec qasmixer
-+ "settings.sh" Exec if pgrep urxvtd; then urxvtc -e sh -c '~/cloveros_settings.sh && read'; else urxvtd -o -f && urxvtc -e sh -c '~/cloveros_settings.sh && read'; fi
++ "settings.sh" Exec if pgrep urxvtd; then urxvtc -e sh -c "~/cloveros_settings.sh && read"; else urxvtd -o -f && urxvtc -e sh -c "~/cloveros_settings.sh && read"; fi
 + "gparted" Exec sudo gparted
 + "screenshot" Exec scrot && nomacs ~/$(ls -1t ~ | grep scrot | head -n1)
 + "shutdown" Popup ShutdownList
