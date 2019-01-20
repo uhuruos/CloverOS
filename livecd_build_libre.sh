@@ -113,7 +113,7 @@ ratio=$(xrandr | awk "NR==1{print substr(\$8/\$10, 0, 4)}"); [ $ratio == 1.6 ] &
 nitrogen --set-zoom wallpaper.png
 urxvt -geometry \$(xrandr | awk "NR==1{print \"80x24+\"\\\$8/2-283\"+\"\\\$10/2-191}") -e sudo ./livecd_install.sh
 fi' >> /home/$username/.bash_profile
-wget $gitprefix/{livecd_install.sh,wallpaper1610.png,wallpaper169.png,wallpaper43.png} -P /home/$username/
+wget $gitprefix/{livecd_install.sh,home/user/wallpaper1610.png,home/user/wallpaper169.png,home/user/wallpaper43.png} -P /home/$username/
 chmod +x /home/$username/livecd_install.sh
 
 rm -Rf /usr/portage/packages/* /etc/resolv.conf
