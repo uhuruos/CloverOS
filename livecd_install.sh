@@ -76,11 +76,8 @@ sed -i "s/set timeout=5/set timeout=0/" /boot/grub/grub.cfg
 sed -i "s@c1:12345:respawn:/sbin/agetty -a $livecduser --noclear 38400 tty1 linux@c1:12345:respawn:/sbin/agetty --noclear 38400 tty1 linux@" /etc/inittab
 sed -i '/^#/!d' /home/$livecduser/.bash_profile
 sed -i "s/^#\(.*\)/\1/g" /home/$livecduser/.bash_profile
+rm -Rf /home/$livecduser/{livecd_install.sh,wallpaper43.png,wallpaper169.png,wallpaper1610.png} /lib/modules/*aufs*
 
-gpasswd -a $username video
-gpasswd -a $username audio
-gpasswd -a $username games
-gpasswd -a $username input
 sed -i "s@/home/$livecduser/@/home/$username/@" /home/$livecduser/.rtorrent.rc
 sed -i "s@/home/$livecduser/@/home/$username/@" /home/$livecduser/.config/nitrogen/nitrogen.cfg
 sed -i "s@/home/$livecduser/@/home/$username/@" /home/$livecduser/.config/spacefm/session
@@ -89,9 +86,11 @@ chown -R $username /home/$username/
 if [[ $username != $livecduser ]]; then
 	userdel $livecduser
 fi
-rm /home/$username/livecd_install.sh
+usermod -aG audio,video,games,input $username
 
-rm -Rf /lib/modules/*aufs*
+exit
+
+cp ../wallpaper.png home/$username/wallpaper.png
 
 EOF
 

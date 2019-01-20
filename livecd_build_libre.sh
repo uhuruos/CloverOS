@@ -3,6 +3,7 @@ if [ $(id -u) != '0' ]; then
 	echo "This script must be run as root" 1>&2
 	exit 1
 fi
+
 mkdir iso-libre/
 cd iso-libre/
 
@@ -108,10 +109,11 @@ export DISPLAY=:0
 X&
 sleep 1
 fvwm&
+ratio=$(xrandr | awk "NR==1{print substr(\$8/\$10, 0, 4)}"); [ $ratio == 1.6 ] && cp wallpaper1610.png wallpaper.png; [ $ratio == 1.33 ] && cp wallpaper43.png wallpaper.png;
 nitrogen --set-zoom wallpaper.png
 urxvt -geometry \$(xrandr | awk "NR==1{print \"80x24+\"\\\$8/2-283\"+\"\\\$10/2-191}") -e sudo ./livecd_install.sh
 fi' >> /home/$username/.bash_profile
-wget https://gitgud.io/cloveros/cloveros/raw/master/livecd_install.sh -O /home/$username/livecd_install.sh
+wget $gitprefix/{livecd_install.sh,wallpaper1610.png,wallpaper169.png,wallpaper43.png} -P /home/$username/
 chmod +x /home/$username/livecd_install.sh
 
 rm -Rf /usr/portage/packages/* /etc/resolv.conf
@@ -122,7 +124,7 @@ EOF
 
 cd ..
 umount -l image/*
-wget https://gitgud.io/cloveros/cloveros/raw/master/livecd_files.tar.xz
+wget $gitprefix/livecd_files.tar.xz
 tar xf livecd_files.tar.xz
 rm -R *aufs*
 mksquashfs image/ image.squashfs -b 1024k -comp xz -Xbcj x86 -Xdict-size 100%
