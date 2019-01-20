@@ -115,7 +115,7 @@ case "$choice" in
 				sudo tar -C / -xf kernel.tar.lzma
 				sudo grub-mkconfig -o /boot/grub/grub.cfg
 				sudo emerge @module-rebuild
-				sudo depmod -a $kernelversion-gentoo
+				sudo depmod $kernelversion-gentoo
 				echo -e "\nKernel upgraded. (/boot/, /lib/modules/)"
 			else
 				echo -e "\nCould not retrieve file. Please connect to the Internet or try again."
@@ -255,7 +255,7 @@ case "$choice" in
 				sudo tar -C / -xf kernel-libre.tar.lzma
 				sudo grub-mkconfig -o /boot/grub/grub.cfg
 				sudo emerge @module-rebuild
-				sudo depmod -a $kernelversion-gentoo-gnu
+				sudo depmod $kernelversion-gentoo-gnu
 				echo -e "\nKernel upgraded. (/boot/, /lib/modules/)"
 			else
 				echo -e "\nCould not retrieve file. Please connect to the Internet or try again."
@@ -343,14 +343,17 @@ case "$choice" in
 		;;
 
 	i)
+		kernelversion=$(curl -s https://cloveros.ga/s/kernel.tar.lzma | lzma -d | strings | grep -aoPm1 "(?<=x86_64-).*(?=-gentoo)")
 		echo "Running the following:"
-		echo "sudo emerge virtualbox"
 		echo "./cloveros_settings.sh 4"
+		echo "sudo emerge virtualbox"
+		echo "sudo depmod $kernelversion-gentoo"
 		echo "sudo useradd -a $USER vboxusers"
 		echo "sudo modprobe -a vboxdrv vboxnetadp vboxnetflt"
 		sleep 2
-		sudo emerge virtualbox
 		./cloveros_settings.sh 4
+		sudo emerge virtualbox
+		sudo depmod $kernelversion-gentoo
 		sudo useradd -g $USER vboxusers
 		sudo modprobe -a vboxdrv vboxnetadp vboxnetflt
 		echo "Virtualbox installed, please reboot to update kernel."
@@ -380,20 +383,22 @@ case "$choice" in
 		;;
 
 	n)
-		echo "Running the following:"
-		echo "sudo emerge nvidia-drivers"
+		kernelversion=$(curl -s https://cloveros.ga/s/kernel.tar.lzma | lzma -d | strings | grep -aoPm1 "(?<=x86_64-).*(?=-gentoo)")
+		echo Running the following:
 		echo "./cloveros_settings.sh 4"
+		echo "sudo emerge nvidia-drivers bumblebee"
+		echo "sudo depmod $kernelversion-gentoo"
 		echo "sudo eselect opengl set nvidia"
 		echo "sudo eselect opencl set nvidia"
 		echo "sudo sh -c 'echo -e \"blacklist nouveau\nblacklist vga16fb\nblacklist rivafb\nblacklist nvidiafb\nblacklist rivatv\" >> /etc/modprobe.d/blacklist.conf'"
-		echo "sudo depmod -a"
 		sleep 2
-		sudo emerge nvidia-drivers
 		./cloveros_settings.sh 4
+		sudo emerge nvidia-drivers bumblebee
+		sudo depmod $kernelversion-gentoo
 		sudo eselect opengl set nvidia
 		sudo eselect opencl set nvidia
 		sudo sh -c 'echo -e "blacklist nouveau\nblacklist vga16fb\nblacklist rivafb\nblacklist nvidiafb\nblacklist rivatv" >> /etc/modprobe.d/blacklist.conf'
-		sudo depmod -a
+		sudo sed -i 's/^Driver=$/Driver=nvidia/; s/^Bridge=auto$/Bridge=primus/; s/^VGLTransport=proxy$/VGLTransport=rgb/; s/^KernelDriver=$/KernelDriver=nvidia/; s/^PMMethod=auto$/PMMethod=bbswitch/; s@^LibraryPath=$@LibraryPath=/usr/lib64/opengl/nvidia/lib:/usr/lib/opengl/nvidia/lib@; s@^XorgModulePath=$@XorgModulePath=/usr/lib64/opengl/nvidia/lib,/usr/lib64/opengl/nvidia/extensions,/usr/lib64/xorg/modules/drivers,/usr/lib64/xorg/modules@' /etc/bumblebee/bumblebee.conf
 		echo -e "\nNvidia drivers installed, please reboot.\nCheck https://wiki.gentoo.org/wiki/NVidia/nvidia-drivers for more info"
 		;;
 
