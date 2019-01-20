@@ -90,7 +90,7 @@ usermod -aG audio,video,games,input $username
 
 exit
 
-cp ../wallpaper.png home/$username/wallpaper.png
+sudo cp ../wallpaper.png home/$username/wallpaper.png
 
 EOF
 
