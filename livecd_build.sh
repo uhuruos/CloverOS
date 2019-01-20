@@ -109,9 +109,9 @@ export DISPLAY=:0
 X&
 sleep 1
 fvwm&
-ratio=$(xrandr | awk "NR==1{print substr(\$8/\$10, 0, 4)}"); [ $ratio == 1.6 ] && cp wallpaper1610.png wallpaper.png; [ $ratio == 1.33 ] && cp wallpaper43.png wallpaper.png;
+ratio=\$(xrandr | awk "NR==1{print substr(\\\$8/\\\$10, 0, 4)}"); [ \\\$ratio == 1.6 ] && cp wallpaper1610.png wallpaper.png; [ \\\$ratio == 1.33 ] && cp wallpaper43.png wallpaper.png;
 nitrogen --set-zoom wallpaper.png
-urxvt -geometry \$(xrandr | awk "NR==1{print \"80x24+\"\\\$8/2-283\"+\"\\\$10/2-191}") -e sudo ./livecd_install.sh
+urxvt -geometry 80x24+\$(xrandr | awk "NR==1{print \\\$8/2-283\"+\"\\\$10/2-191}") -e sudo ./livecd_install.sh
 fi' >> /home/$username/.bash_profile
 wget $gitprefix/{livecd_install.sh,home/user/wallpaper1610.png,home/user/wallpaper169.png,home/user/wallpaper43.png} -P /home/$username/
 chmod +x /home/$username/livecd_install.sh
