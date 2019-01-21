@@ -13,7 +13,7 @@ livecd_install.sh: uefi install, encryption
 eagle pitivi ungoogled-chromium stumpwm stumpwm-contrib netsurf gkrellm-plugins tauthon racket
 
 #doesn't emerge anymore
-rogue dolphin-libretro loudmouth ots quakeforge tiemu citra sbt xen sauerbraten supertuxkart telegram-cli tomahawk psensor opencolorio blender
+rogue dolphin-libretro loudmouth ots quakeforge tiemu citra sbt xen sauerbraten supertuxkart telegram-cli tomahawk psensor opencolorio blender opentoonz
 
 #requires AR="gcc-ar" commented out
 ftjam argyllcms

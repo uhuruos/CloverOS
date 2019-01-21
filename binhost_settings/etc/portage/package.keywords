@@ -49,7 +49,7 @@ games-emulation/melonds-libretro ** # fix
 
 #libressl
 media-video/ffmpeg::libressl
-=net-libs/nodejs-8.12.0::libressl
+>net-libs/nodejs-10::libressl
 dev-qt/qtnetwork::libressl
 www-client/dillo
 app-editors/xemacs
@@ -508,21 +508,21 @@ x11-misc/enlightenment-extra
 sci-mathematics/rstudio
 dev-libs/mathjax # rstudio
 dev-php/composer
-dev-php/xdebug-handler # composer
-dev-php/symfony-finder # composer
-dev-php/ca-bundle # composer
-dev-php/symfony-console # composer
-dev-php/jsonlint # composer
-dev-php/psr-log # composer
-dev-php/symfony-filesystem # composer
-dev-php/phar-utils # composer
-dev-php/spdx-licenses # composer
-dev-php/symfony-process # composer
 dev-php/json-schema # composer
-dev-php/symfony-dependency-injection # composer
-dev-php/symfony-event-dispatcher # composer
-dev-php/symfony-config # composer
+dev-php/phar-utils # composer
+dev-php/ca-bundle # composer
+dev-php/psr-log # composer
 dev-php/semver # composer
+dev-php/symfony-console # composer
+dev-php/symfony-event-dispatcher # composer
+dev-php/symfony-finder  # composer
+dev-php/symfony-config # composer
+dev-php/symfony-filesystem # composer
+dev-php/symfony-dependency-injection # composer
+dev-php/xdebug-handler  # composer
+dev-php/symfony-process  # composer
+dev-php/spdx-licenses  # composer
+dev-php/jsonlint # composer
 x11-wm/bspwm
 x11-misc/sxhkd # bspwm
 x11-wm/treewm *

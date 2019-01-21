@@ -322,7 +322,7 @@ x11-libs/libxkbcommon X
 x11-libs/pango X
 sys-apps/dbus X
 games-emulation/mednafen debugger
-x11-drivers/nvidia-drivers uvm acpi gtk3
+x11-drivers/nvidia-drivers uvm gtk3 acpi
 media-libs/libvpx svc
 app-text/ghostscript-gpl cups
 media-gfx/pstoedit plotutils
