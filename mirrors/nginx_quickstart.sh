@@ -1,7 +1,7 @@
 #apt update && apt -y install gcc make git sudo libpcre3-dev libssl-dev zlib1g-dev
 domains='DNS:YourDomain.com,DNS:www.YourDomain.com'
 useradd www-data
-wget http://nginx.org/download/nginx-1.15.7.tar.gz
+wget http://nginx.org/download/nginx-1.15.8.tar.gz
 tar xvf nginx-*.tar.gz
 rm nginx-*.tar.gz
 cd nginx-*/

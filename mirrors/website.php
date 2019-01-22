@@ -99,5 +99,5 @@ foreach ($mirrors as $line) {
 	$isos .= '							<a href="'.$line.'/s/'.$isoname.'">'.$line.'/s/'.$isoname.'</a>'."\n";
 }
 $isos = rtrim($isos);
-file_put_contents('../indexalt.html', str_replace("{iso_links}", $isos, file_get_contents('indexalt.txt')));
+file_put_contents('../indexalt.html', str_replace("{iso_links}", $isos, str_replace("{iso_link}", $isoname, file_get_contents('indexalt.txt'))));
 ?>
