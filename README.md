@@ -47,15 +47,15 @@ Switch windows: alt + tab and shift + alt + tab
 
 Switch desktops: ctrl + shift + up/down/left/right (desktops are in a 3x3 grid)
 
-fvwm's settings are in `~/.fvwm2rc`
-
-### Keyboard bindings
-
 Take screenshot: Print Screen
+
+Lock: super + L
 
 Brightness controls: Laptop (software) Brightness up/down keys
 
 Volume control: Laptop (software) Volume up/down keys
+
+fvwm's settings are in `~/.fvwm2rc`
 
 Key bindings are in `~/.xbindkeysrc`
 
