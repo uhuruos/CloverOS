@@ -49,7 +49,7 @@ games-emulation/melonds-libretro ** # fix
 
 #libressl
 media-video/ffmpeg::libressl
->net-libs/nodejs-10::libressl
+<net-libs/nodejs-10::libressl
 dev-qt/qtnetwork::libressl
 www-client/dillo
 app-editors/xemacs
@@ -58,6 +58,7 @@ media-libs/opusfile
 net-ftp/proftpd
 
 #keyworded, remove when stable exists
+net-p2p/mktorrent-borg **
 media-sound/milkytracker
 x11-terms/alacritty
 games-fps/eduke32
