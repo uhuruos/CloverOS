@@ -357,15 +357,14 @@ dev-lang/tk truetype
 net-misc/curl curl_ssl_libressl -curl_ssl_openssl
 media-video/ffmpeg openssl
 net-libs/libssh -libressl mbedtls
-app-crypt/johntheripper minimal -openmp -opencl
 net-libs/nodejs bundled-ssl
+app-crypt/johntheripper minimal -openmp -opencl
 net-p2p/mktorrent -ssl
 net-misc/iputils -ssl
 net-ftp/gproftpd -ssl
 net-print/gtklp -ssl
 mail-client/nmh -ssl
 net-mail/isync -ssl -libressl
-media-libs/opusfile -ssl -libressl -http
 app-emulation/open-vm-tools -ssl -vgauth -grabbitmqproxy
 
 #wine

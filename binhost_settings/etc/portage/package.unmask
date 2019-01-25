@@ -19,7 +19,6 @@ dev-util/eclipse-sdk-bin::ssnb
 
 dev-qt/qtnetwork::libressl
 net-libs/nodejs::libressl
-media-video/ffmpeg::libressl
 
 games-fps/gzdoom::haarp
 

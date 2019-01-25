@@ -10,7 +10,7 @@ livecd_install.sh: uefi install, encryption
 --- packages that don't build ---
 
 #doesn't emerge
-eagle pitivi ungoogled-chromium stumpwm stumpwm-contrib netsurf gkrellm-plugins tauthon racket
+eagle pitivi ungoogled-chromium stumpwm stumpwm-contrib netsurf gkrellm-plugins tauthon racket cinelerra gpac kodi
 
 #doesn't emerge anymore
 rogue dolphin-libretro loudmouth ots quakeforge tiemu citra sbt xen sauerbraten supertuxkart telegram-cli tomahawk psensor opencolorio blender opentoonz

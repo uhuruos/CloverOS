@@ -25,13 +25,21 @@ dev-libs/glib # gimp
 sys-fs/zfs # kernel 4.19
 sys-fs/zfs-kmod # zfs
 sys-kernel/spl # zfs
+media-video/ffmpeg # old
+media-plugins/gst-plugins-libav # ffmpeg
+media-gfx/blender # ffmpeg
+media-sound/moc # ffmpeg
+media-plugins/vapoursynth-l-smash-works ** # ffmpeg
+media-libs/l-smash ** # vapoursynth-l-smash-works
+media-plugins/vapoursynth-d2vsource ** # ffmpeg
+media-video/mpv # old
+media-libs/shaderc # mpv
 dev-lisp/clisp # fixes build
 net-p2p/mldonkey # fixes build
 games-emulation/mgba # fixes build
 media-video/vdr # fixes build
 media-libs/vigra # fixes build
 media-libs/libsfml # fixes build
-media-video/pitivi # fixes build
 app-laptop/tp_smapi # requested
 dev-libs/beignet # old clang version
 media-fonts/vlgothic # old
@@ -40,7 +48,6 @@ games-emulation/pcsx2 ** # old
 media-libs/zimg # vapoursynth
 dev-python/cython # vapoursynth
 dev-libs/json-c # sway
-media-libs/opencv # waifu2x-converter-cpp
 x11-themes/terminology-themes ** # fixes conflict
 x11-themes/sddm-gentoo-black-theme ** # fix
 games-emulation/fbalpha-libretro ** # fix
@@ -48,7 +55,6 @@ games-emulation/citra-libretro ** # fix
 games-emulation/melonds-libretro ** # fix
 
 #libressl
-media-video/ffmpeg::libressl
 <net-libs/nodejs-10::libressl
 dev-qt/qtnetwork::libressl
 www-client/dillo
