@@ -52,3 +52,4 @@ dev-qt/qtnetwork::gentoo
 >app-emulation/vagrant-2.1.5
 >media-video/gpac-0.6.1-r2
 >x11-terms/alacritty-0.2.3
+>=dev-libs/libical-2.0.0

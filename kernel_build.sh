@@ -1,4 +1,4 @@
-kernelversion=4.19.17
+kernelversion=4.19.18
 kernelmajversion=4.19
 
 binutils-config --linker ld.bfd

@@ -64,6 +64,7 @@ media-libs/opusfile
 net-ftp/proftpd
 
 #keyworded, remove when stable exists
+media-libs/libaom
 net-p2p/mktorrent-borg **
 media-sound/milkytracker
 x11-terms/alacritty
