@@ -470,3 +470,5 @@ x11-libs/libxkbcommon abi_x86_32
 media-libs/libsdl abi_x86_32
 media-libs/audiofile abi_x86_32
 sys-fs/eudev abi_x86_32
+
+app-office/abiword -calendar # temporary: dev-libs/libical version
