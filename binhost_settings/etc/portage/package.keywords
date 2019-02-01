@@ -1,11 +1,24 @@
 #preference
 sys-devel/gcc
+sys-devel/llvm
+sys-devel/llvmgold # llvm
+sys-libs/libomp # llvm
+sys-devel/clang-runtime # llvm
+sys-devel/clang # llvm
+sys-libs/compiler-rt # llvm
+sys-libs/compiler-rt-sanitizers # llvm
+sys-devel/lld # llvm
 sys-kernel/gentoo-sources
 net-misc/youtube-dl
 x11-libs/gtk+:3::mv # removes dbus
 www-client/firefox
 dev-libs/nss # firefox
 dev-util/cbindgen # firefox
+media-libs/libvpx # firefox
+media-libs/libwebp # firefox
+virtual/rust # firefox
+virtual/cargo # firefox
+dev-lang/rust # firefox
 games-emulation/retroarch
 games-emulation/desmume-libretro # retroarch
 games-emulation/ppsspp-libretro # retroarch
@@ -64,6 +77,7 @@ media-libs/opusfile
 net-ftp/proftpd
 
 #keyworded, remove when stable exists
+www-client/ungoogled-chromium
 media-libs/libaom
 net-p2p/mktorrent-borg **
 media-sound/milkytracker

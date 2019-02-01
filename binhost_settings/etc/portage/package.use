@@ -128,7 +128,7 @@ x11-misc/synergy qt5
 media-plugins/audacious-plugins qt5 adplug alsa aac -ampache -aosd bs2b cdda cue ffmpeg flac fluidsynth gme -gnome -gtk -gtk3 -hotkeys http -jack lame -libav libsamplerate lirc mms modplug mp3 -nls -pulseaudio scrobbler sdl sid sndfile soxr speedpitch vorbis wavpack
 games-emulation/yabause qt5 pic
 games-emulation/citra sdl2 qt5
-games-emulation/dolphin qt5 ao lto portaudio ffmpeg bluetooth
+games-emulation/dolphin qt5 ffmpeg
 media-video/vlc qt5 xml projectm flac mp3
 app-i18n/scim gtk3
 x11-apps/xinput_calibrator gtk
@@ -195,6 +195,7 @@ dev-db/sqlite secure-delete
 media-libs/phonon -vlc
 app-crypt/hashcat custom-cflags
 media-libs/libsdl custom-cflags X
+www-client/ungoogled-chromium -atk custom-cflags system-harfbuzz optimize-thinlto new-tcmalloc gold libcxx
 www-client/chromium custom-cflags
 www-client/firefox custom-cflags custom-optimization -wifi system-harfbuzz system-icu system-jpeg system-libevent system-libvpx system-sqlite
 www-client/torbrowser custom-cflags custom-optimization system-cairo system-harfbuzz system-icu system-jpeg system-libevent system-libvpx system-sqlite
@@ -202,6 +203,7 @@ mail-client/thunderbird custom-cflags custom-optimization -crypt system-harfbuzz
 www-client/seamonkey custom-cflags custom-optimization -crypt -minimal system-harfbuzz system-icu system-jpeg system-libevent system-libvpx system-sqlite
 www-client/palemoon -official-branding -gconf system-cairo system-compress system-images system-libevent system-nss system-pixman system-sqlite system-vpx
 www-client/waterfox custom-cflags custom-optimization -pgo -wifi system-harfbuzz system-icu system-jpeg system-libevent system-libvpx system-sqlite
+dev-lang/rust system-llvm
 media-sound/sox alsa openmp encode flac id3tag ladspa mad ogg opus sndfile twolame wavpack
 net-analyzer/rrdtool perl graph
 media-sound/lmms alsa fluidsynth ogg portaudio sdl stk qt5
@@ -269,6 +271,7 @@ dev-libs/libsodium -minimal # required by qtox
 x11-drivers/nvidia-drivers compat # required by primus
 media-libs/leptonica tiff # required by tesseract, vapoursynth
 dev-lua/mpack luajit # required by neovim
+dev-python/pyyaml libyaml # required by qutebrowser
 x11-libs/gtk+ X
 x11-libs/libva X
 dev-cpp/gtkmm X

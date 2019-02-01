@@ -1,3 +1,5 @@
+www-client/ungoogled-chromium::pg_overlay
+
 sys-fs/exfat-nofuse::bobwya
 
 x11-misc/synergy::vifino-overlay
