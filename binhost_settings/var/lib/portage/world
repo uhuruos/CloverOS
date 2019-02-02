@@ -1335,6 +1335,7 @@ x11-plugins/wmwifi
 x11-plugins/wmwork
 x11-plugins/wmxkb
 x11-plugins/wmxres
+x11-terms/alacritty
 x11-terms/aterm
 x11-terms/kitty
 x11-terms/lilyterm

@@ -3,7 +3,7 @@ gnome-extra/gnome-color-manager raw
 x11-misc/colord scanner -gusb
 games-engines/openmw devtools
 dev-util/trace-cmd gtk udis86
-www-client/netsurf fbcon jpeg png gif truetype
+www-client/netsurf fbcon jpeg png gif truetype fbcon_frontend_sdl
 net-p2p/deluge console geoip gtk webinterface
 mail-mta/postfix dovecot-sasl
 media-video/gpac ffmpeg
