@@ -128,7 +128,6 @@ media-plugins/deadbeef-fb::deadbeef-overlay
 
 media-tv/plex-media-server::fkmclane
 x11-misc/lemonbar::fkmclane
-sci-electronics/eagle::fkmclane
 
 net-vpn/zeronet::raiagent
 
