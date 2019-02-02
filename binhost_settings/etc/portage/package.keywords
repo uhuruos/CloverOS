@@ -8,6 +8,8 @@ sys-devel/clang # llvm
 sys-libs/compiler-rt # llvm
 sys-libs/compiler-rt-sanitizers # llvm
 sys-devel/lld # llvm
+dev-libs/beignet ** # llvm
+www-plugins/lightspark ** # llvm
 sys-kernel/gentoo-sources
 net-misc/youtube-dl
 x11-libs/gtk+:3::mv # removes dbus
@@ -77,6 +79,7 @@ media-libs/opusfile
 net-ftp/proftpd
 
 #keyworded, remove when stable exists
+games-misc/katawa-shoujo
 www-client/ungoogled-chromium
 media-libs/libaom
 net-p2p/mktorrent-borg **
