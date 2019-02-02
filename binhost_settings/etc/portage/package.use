@@ -247,6 +247,7 @@ dev-python/PyQt5 webengine # required by anki qutebrowser (dbus)
 sys-auth/consolekit policykit # required by kde (dbus)
 mate-extra/mate-screensaver -pam # prevents gnome-keyring
 media-sound/bitwig-studio -jack # prevents jack2
+x11-plugins/gkrelltop X # fixes emerge
 media-sound/clementine dbus # fix: does not build without it
 media-sound/audacity jack # fix: always builds with jack if it's on the system, might as well add it as dependency
 media-sound/audacity -lv2 # fix: always builds wth lv2 if it's on the system, attempted fix
@@ -468,5 +469,3 @@ x11-libs/libxkbcommon abi_x86_32
 media-libs/libsdl abi_x86_32
 media-libs/audiofile abi_x86_32
 sys-fs/eudev abi_x86_32
-
-app-office/abiword -calendar # temporary: dev-libs/libical version

@@ -58,16 +58,16 @@ x11-themes/sddm-gentoo-black-theme ** # fix
 games-emulation/fbalpha-libretro ** # fix
 games-emulation/citra-libretro ** # fix
 games-emulation/melonds-libretro ** # fix
-sys-devel/llvm # firefox, rust, etc.
-sys-devel/llvmgold # llvm
-sys-devel/llvm-common # llvm
-sys-libs/libomp # llvm
-sys-devel/clang-common # llvm
-sys-devel/clang-runtime # llvm
-sys-devel/clang # llvm
-sys-libs/compiler-rt # llvm
-sys-libs/compiler-rt-sanitizers # llvm
-sys-devel/lld # llvm
+<sys-devel/llvm-8 # llvm7
+<sys-devel/llvmgold-8 # llvm
+<sys-devel/llvm-common-8 # llvm
+<sys-libs/libomp-8 # llvm
+<sys-devel/clang-common-8 # llvm
+<sys-devel/clang-runtime-8 # llvm
+<sys-devel/clang-8 # llvm
+<sys-libs/compiler-rt-8 # llvm
+<sys-libs/compiler-rt-sanitizers-8 # llvm
+<sys-devel/lld-8 # llvm
 dev-libs/beignet ** # llvm
 www-plugins/lightspark ** # llvm
 
@@ -81,6 +81,7 @@ media-libs/opusfile
 net-ftp/proftpd
 
 #keyworded, remove when stable exists
+x11-plugins/gkrellm-plugins **
 games-misc/katawa-shoujo
 www-client/ungoogled-chromium
 media-libs/libaom
