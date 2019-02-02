@@ -25,16 +25,6 @@ media-libs/gegl # gimp
 dev-util/gdbus-codegen # gimp
 dev-util/glib-utils # gimp
 dev-libs/glib # gimp
-sys-devel/llvm
-sys-devel/llvmgold # llvm
-sys-libs/libomp # llvm
-sys-devel/clang-runtime # llvm
-sys-devel/clang # llvm
-sys-libs/compiler-rt # llvm
-sys-libs/compiler-rt-sanitizers # llvm
-sys-devel/lld # llvm
-dev-libs/beignet ** # llvm
-www-plugins/lightspark ** # llvm
 
 #old, remove when stable is bumped up
 sys-fs/zfs # kernel 4.19
@@ -68,6 +58,18 @@ x11-themes/sddm-gentoo-black-theme ** # fix
 games-emulation/fbalpha-libretro ** # fix
 games-emulation/citra-libretro ** # fix
 games-emulation/melonds-libretro ** # fix
+sys-devel/llvm # firefox, rust, etc.
+sys-devel/llvmgold # llvm
+sys-devel/llvm-common # llvm
+sys-libs/libomp # llvm
+sys-devel/clang-common # llvm
+sys-devel/clang-runtime # llvm
+sys-devel/clang # llvm
+sys-libs/compiler-rt # llvm
+sys-libs/compiler-rt-sanitizers # llvm
+sys-devel/lld # llvm
+dev-libs/beignet ** # llvm
+www-plugins/lightspark ** # llvm
 
 #libressl
 <net-libs/nodejs-10::libressl
