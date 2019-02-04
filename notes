@@ -9,20 +9,17 @@ livecd_install.sh: uefi install, encryption
 
 --- packages that don't build ---
 
-#doesn't emerge
-pitivi stumpwm stumpwm-contrib tauthon racket cinelerra kodi eagle
-
-#doesn't emerge anymore
-rogue dolphin-libretro loudmouth ots quakeforge tiemu citra sbt xen sauerbraten supertuxkart telegram-cli psensor opentoonz abiword blender
-
-#libressl
-nxplayer murmur makemkv eiskaltdcpp retroshare acme-tiny spyder
-
 #requires AR="gcc-ar" commented out
 ftjam argyllcms
 
-#masked
-gpac
+#doesn't emerge
+pitivi stumpwm stumpwm-contrib tauthon racket cinelerra kodi eagle gpac
+
+#doesn't emerge anymore
+rogue dolphin-libretro loudmouth ots quakeforge tiemu sbt xen sauerbraten supertuxkart telegram-cli psensor opentoonz abiword blender
+
+#libressl
+nxplayer murmur makemkv eiskaltdcpp retroshare acme-tiny spyder
 
 #md2tool collision
 eduke32

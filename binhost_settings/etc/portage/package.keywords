@@ -46,13 +46,11 @@ media-video/vdr # fixes build
 media-libs/vigra # fixes build
 media-libs/libsfml # fixes build
 app-laptop/tp_smapi # requested
-dev-libs/beignet # old clang version
 media-fonts/vlgothic # old
 games-emulation/dolphin ** # old
 games-emulation/pcsx2 ** # old
 media-libs/zimg # vapoursynth
 dev-python/cython # vapoursynth
-dev-libs/json-c # sway
 x11-themes/terminology-themes ** # fixes conflict
 x11-themes/sddm-gentoo-black-theme ** # fix
 games-emulation/fbalpha-libretro ** # fix
@@ -351,7 +349,10 @@ sys-block/sas3flash
 app-crypt/kencfs-plasma
 games-emulation/citra **
 dev-libs/sway
+dev-libs/json-c # sway
 dev-libs/wlc # sway
+dev-libs/wlroots # sway
+app-text/scdoc # sway
 x11-terms/lilyterm
 games-emulation/vgba
 games-emulation/lxdream
@@ -389,6 +390,9 @@ app-emulation/qt-virt-manager **
 dev-lang/open-cobol
 net-misc/sgopherd
 app-emulation/vagrant
+dev-ruby/ed25519 # vagrant
+dev-ruby/vagrant_cloud # vagrant
+dev-ruby/i18n # vagrant
 dev-ruby/net-ssh # vagrant
 dev-ruby/hashicorp-checkpoint # vagrant
 dev-ruby/rake # vagrant
