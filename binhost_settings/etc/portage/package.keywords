@@ -27,15 +27,6 @@ media-gfx/mypaint # gimp
 sys-fs/zfs # kernel 4.19
 sys-fs/zfs-kmod # zfs
 sys-kernel/spl # zfs
-media-video/ffmpeg # old
-media-plugins/gst-plugins-libav # ffmpeg
-media-gfx/blender # ffmpeg
-media-sound/moc # ffmpeg
-media-plugins/vapoursynth-l-smash-works ** # ffmpeg
-media-libs/l-smash ** # vapoursynth-l-smash-works
-media-plugins/vapoursynth-d2vsource ** # ffmpeg
-media-video/mpv # old
-media-libs/shaderc # mpv
 dev-lisp/clisp # fixes build
 net-p2p/mldonkey # fixes build
 games-emulation/mgba # fixes build
@@ -53,6 +44,15 @@ x11-themes/sddm-gentoo-black-theme ** # fix
 games-emulation/fbalpha-libretro ** # fix
 games-emulation/citra-libretro ** # fix
 games-emulation/melonds-libretro ** # fix
+media-video/ffmpeg # old
+media-plugins/gst-plugins-libav # ffmpeg
+media-gfx/blender # ffmpeg
+media-sound/moc # ffmpeg
+media-plugins/vapoursynth-l-smash-works ** # ffmpeg
+media-libs/l-smash ** # vapoursynth-l-smash-works
+media-plugins/vapoursynth-d2vsource ** # ffmpeg
+media-video/mpv # old
+media-libs/shaderc # mpv
 <sys-devel/llvm-8 # llvm7
 <sys-devel/llvmgold-8 # llvm
 <sys-devel/llvm-common-8 # llvm
