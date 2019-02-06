@@ -1136,6 +1136,9 @@ www-client/google-chrome-unstable
 www-client/links
 www-client/lynx
 www-client/netsurf
+www-client/opera
+www-client/opera-beta
+www-client/opera-developer
 www-client/palemoon
 www-client/qutebrowser
 www-client/seamonkey

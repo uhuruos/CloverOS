@@ -37,6 +37,7 @@ app-laptop/tp_smapi # requested
 media-fonts/vlgothic # old
 games-emulation/dolphin ** # old
 games-emulation/pcsx2 ** # old
+www-client/opera # old
 media-libs/zimg # vapoursynth
 dev-python/cython # vapoursynth
 x11-themes/terminology-themes ** # fixes conflict
@@ -76,6 +77,8 @@ media-libs/opusfile
 net-ftp/proftpd
 
 #keyworded, remove when stable exists
+www-client/opera-beta
+www-client/opera-developer
 x11-plugins/gkrellm-plugins **
 games-misc/katawa-shoujo
 www-client/ungoogled-chromium
