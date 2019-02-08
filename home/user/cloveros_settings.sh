@@ -343,17 +343,16 @@ case "$choice" in
 		;;
 
 	i)
-		kernelversion=$(curl -s https://cloveros.ga/s/kernel.tar.lzma | lzma -d | strings | grep -aoPm1 "(?<=x86_64-).*(?=-gentoo)")
 		echo "Running the following:"
-		echo "./cloveros_settings.sh 4"
 		echo "sudo emerge virtualbox"
-		echo "sudo depmod $kernelversion-gentoo"
+		echo "sudo depmod"
+		echo "./cloveros_settings.sh 4"
 		echo "sudo useradd -a $USER vboxusers"
 		echo "sudo modprobe -a vboxdrv vboxnetadp vboxnetflt"
 		sleep 2
-		./cloveros_settings.sh 4
 		sudo emerge virtualbox
-		sudo depmod $kernelversion-gentoo
+		sudo depmod
+		./cloveros_settings.sh 4
 		sudo useradd -g $USER vboxusers
 		sudo modprobe -a vboxdrv vboxnetadp vboxnetflt
 		echo "Virtualbox installed, please reboot to update kernel."
@@ -389,7 +388,7 @@ case "$choice" in
 		echo 'sudo eselect kernel set linux-$(cut -d" " -f3 /proc/version)'
 		echo "sudo wget https://liquorix.net/sources/4.19/config.amd64 -O /usr/src/linux/.config"
 		echo "sudo emerge nvidia-drivers bumblebee"
-		echo "sudo depmod $kernelversion-gentoo"
+		echo "sudo depmod"
 		echo "sudo eselect opengl set nvidia"
 		echo "sudo eselect opencl set nvidia"
 		echo "sudo sh -c 'echo -e \"blacklist nouveau\nblacklist vga16fb\nblacklist rivafb\nblacklist nvidiafb\nblacklist rivatv\" >> /etc/modprobe.d/blacklist.conf'"

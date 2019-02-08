@@ -226,14 +226,17 @@ sudo eselect opencl set nvidia
 sudo sh -c 'echo -e "blacklist nouveau\nblacklist vga16fb\nblacklist rivafb\nblacklist nvidiafb\nblacklist rivatv" >> /etc/modprobe.d/blacklist.conf'
 ```
 
+Reboot or stop X, `sudo rmmod -f nouveau vga16fb rivafb nvidiafb rivatv && sudo modprobe nvidia` and restart X
+
 ### Installing Virtualbox
 ```
 sudo emerge virtualbox
+sudo depmod
 ./cloveros_settings.sh 4
-ls -1 /lib/modules/ | sudo xargs -I{} depmod
 sudo useradd -g $USER vboxusers
 sudo modprobe -a vboxdrv vboxnetadp vboxnetflt
 ```
+
 Reboot if your kernel isn't up to date.
 
 ### Steam stops working
