@@ -126,10 +126,10 @@ case "$choice" in
 
 	5)
 		if ! grep -q '#EMERGE_DEFAULT_OPTS=".* -G"' /etc/portage/make.conf; then
-			sudo sed -ri 's/(EMERGE_DEFAULT_OPTS|PORTAGE_BINHOST|ACCEPT_LICENSE|ACCEPT_KEYWORDS|binhost_mirrors|FETCHCOMMAND_HTTPS.*)/#\1/' /etc/portage/make.conf
+			sudo sed -ri 's/(PORTAGE_BINHOST|EMERGE_DEFAULT_OPTS|ACCEPT_KEYWORDS|ACCEPT_LICENSE|binhost_mirrors|FETCHCOMMAND_HTTPS.*)/#\1/' /etc/portage/make.conf
 			echo -e "\nemerge will now install from source. (/etc/portage/make.conf)\nUse ./cloveros_settings.sh c to copy binhost Portage configuration"
 		else
-			sudo sed -ri 's/#(EMERGE_DEFAULT_OPTS|PORTAGE_BINHOST|ACCEPT_LICENSE|ACCEPT_KEYWORDS|binhost_mirrors|FETCHCOMMAND_HTTPS.*)/\1/' /etc/portage/make.conf
+			sudo sed -ri 's/#(PORTAGE_BINHOST|EMERGE_DEFAULT_OPTS|ACCEPT_KEYWORDS|ACCEPT_LICENSE|binhost_mirrors|FETCHCOMMAND_HTTPS.*)/\1/' /etc/portage/make.conf
 			echo -e "\nemerge will now install from binary. (/etc/portage/make.conf)"
 		fi
 		;;
@@ -391,6 +391,7 @@ case "$choice" in
 		echo "sudo eselect opencl set nvidia"
 		echo "sudo sh -c 'echo -e \"blacklist nouveau\nblacklist vga16fb\nblacklist rivafb\nblacklist nvidiafb\nblacklist rivatv\" >> /etc/modprobe.d/blacklist.conf'"
 		sleep 2
+		sudo EMERGE_DEFAULT_OPTS="" emerge gentoo-sources-$(cut -d" " -f3 /proc/version)
 		sudo emerge nvidia-drivers bumblebee
 		sudo depmod $kernelversion-gentoo
 		sudo eselect opengl set nvidia

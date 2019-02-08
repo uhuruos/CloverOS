@@ -110,7 +110,7 @@ List of binaries (no dependencies): https://gitgud.io/cloveros/cloveros/blob/mas
 List of all binaries: https://cloveros.ga/s/packages.html
 
 ### Package isn't available
-Make an issue so I can add the package to binhost. In the meantime, install from source using `sudo EMERGE_DEFAULT_OPTS="" ACCEPT_KEYWORDS="" emerge [package]`
+Make an issue so I can add the package to binhost. In the meantime, install from source using `~/cloveros_settings.sh 5 ; sudo EMERGE_DEFAULT_OPTS="" emerge [package] ; ~/cloveros_settings.sh 5`
 
 ### Switching to source
 
