@@ -383,7 +383,6 @@ case "$choice" in
 		;;
 
 	n)
-		kernelversion=$(curl -s https://cloveros.ga/s/kernel.tar.lzma | lzma -d | strings | grep -aoPm1 "(?<=x86_64-).*(?=-gentoo)")
 		echo Running the following:
 		echo "./cloveros_settings.sh 4"
 		echo "sudo emerge nvidia-drivers bumblebee"
@@ -392,7 +391,6 @@ case "$choice" in
 		echo "sudo eselect opencl set nvidia"
 		echo "sudo sh -c 'echo -e \"blacklist nouveau\nblacklist vga16fb\nblacklist rivafb\nblacklist nvidiafb\nblacklist rivatv\" >> /etc/modprobe.d/blacklist.conf'"
 		sleep 2
-		./cloveros_settings.sh 4
 		sudo emerge nvidia-drivers bumblebee
 		sudo depmod $kernelversion-gentoo
 		sudo eselect opengl set nvidia

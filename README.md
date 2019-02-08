@@ -110,21 +110,18 @@ List of binaries (no dependencies): https://gitgud.io/cloveros/cloveros/blob/mas
 List of all binaries: https://cloveros.ga/s/packages.html
 
 ### Package isn't available
-Make an issue so I can add the package to binhost. In the meantime, switch to source by running `./cloveros_settings.sh 5`
+Make an issue so I can add the package to binhost. In the meantime, install from source using `sudo EMERGE_DEFAULT_OPTS="" ACCEPT_KEYWORDS="" emerge [package]`
+
+### Switching to source
+
+Switch to source by running `./cloveros_settings.sh 5`
 
 Or:
 
 Edit `/etc/portage/make.conf` and edit the following line:
 
-`EMERGE_DEFAULT_OPTS="--keep-going=y --autounmask-write=y --jobs=4 -G"`
-
-to
-
-`EMERGE_DEFAULT_OPTS="--keep-going=y --autounmask-write=y --jobs=4"`
-
-and comment out the following lines, eg:
-
 ```
+EMERGE_DEFAULT_OPTS="--keep-going=y --autounmask-write=y --jobs=4 -G"
 ACCEPT_KEYWORDS="**"
 FETCHCOMMAND_HTTPS="...
 ```
@@ -132,6 +129,7 @@ FETCHCOMMAND_HTTPS="...
 to
 
 ```
+#EMERGE_DEFAULT_OPTS="--keep-going=y --autounmask-write=y --jobs=4 -G"
 #ACCEPT_KEYWORDS="**"
 #FETCHCOMMAND_HTTPS="...
 ```
@@ -145,6 +143,7 @@ This disables the binhost and uses Portage's ebuilds for packages. Now you can e
 * [How do I install systemd/avahi/pulseaudio?](#how-do-i-install-systemdavahipulseaudio)
 * [It doesn't boot after installation](#it-doesnt-boot-after-installation)
 * [Nvidia card crashes on boot with a green screen](#nvidia-card-crashes-on-boot-with-a-green-screen)
+* [Using old Radeon card with new video drivers](#using-old-radeon-card-with-new-video-drivers)
 * [Installing proprietary Nvidia drivers](#installing-proprietary-nvidia-drivers)
 * [Installing Virtualbox](#installing-virtualbox)
 * [Steam stops working](#steam-stops-working)
@@ -210,16 +209,14 @@ blacklist rivatv
 linux   /boot/kernel-genkernel-x86_64-[ver]-gentoo root=UUID=[id] ro nomodeset nouveau.modeset=0
 ```
 
+### Using old Radeon card with new video drivers
+```
+sudo rmmod -f radeon && sudo modprobe amdgpu si_support=1
+```
+
 ### Installing proprietary Nvidia drivers
 ```
-sudo emerge nvidia-drivers
-./cloveros_settings.sh 4
-ls -1 /lib/modules/ | sudo xargs -I{} depmod
-sudo eselect opengl set nvidia
-sudo eselect opencl set nvidia
-sudo sh -c 'echo -e "blacklist nouveau\nblacklist vga16fb\nblacklist rivafb\nblacklist nvidiafb\nblacklist rivatv" >> /etc/modprobe.d/blacklist.conf'
 ```
-Reboot if your kernel isn't up to date.
 
 ### Installing Virtualbox
 ```
