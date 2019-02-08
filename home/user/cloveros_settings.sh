@@ -384,16 +384,21 @@ case "$choice" in
 
 	n)
 		echo Running the following:
-		echo "./cloveros_settings.sh 4"
+		echo './cloveros_settings.sh 5 ; emerge gentoo-sources-$(cut -d" " -f3 /proc/version) ; ./cloveros_settings.sh 5'
+		echo 'sudo EMERGE_DEFAULT_OPTS="" emerge \=gentoo-sources-$(cut -d" " -f3 /proc/version | sed "s/-.*//")'
+		echo 'sudo eselect kernel set linux-$(cut -d" " -f3 /proc/version)'
+		echo "sudo wget https://liquorix.net/sources/4.19/config.amd64 -O /usr/src/linux/.config"
 		echo "sudo emerge nvidia-drivers bumblebee"
 		echo "sudo depmod $kernelversion-gentoo"
 		echo "sudo eselect opengl set nvidia"
 		echo "sudo eselect opencl set nvidia"
 		echo "sudo sh -c 'echo -e \"blacklist nouveau\nblacklist vga16fb\nblacklist rivafb\nblacklist nvidiafb\nblacklist rivatv\" >> /etc/modprobe.d/blacklist.conf'"
 		sleep 2
-		sudo EMERGE_DEFAULT_OPTS="" emerge gentoo-sources-$(cut -d" " -f3 /proc/version)
+		sudo EMERGE_DEFAULT_OPTS="" emerge \=gentoo-sources-$(cut -d" " -f3 /proc/version | sed "s/-.*//")
+		sudo eselect kernel set linux-$(cut -d" " -f3 /proc/version)
+		sudo wget https://liquorix.net/sources/4.19/config.amd64 -O /usr/src/linux/.config
 		sudo emerge nvidia-drivers bumblebee
-		sudo depmod $kernelversion-gentoo
+		sudo depmod
 		sudo eselect opengl set nvidia
 		sudo eselect opencl set nvidia
 		sudo sh -c 'echo -e "blacklist nouveau\nblacklist vga16fb\nblacklist rivafb\nblacklist nvidiafb\nblacklist rivatv" >> /etc/modprobe.d/blacklist.conf'

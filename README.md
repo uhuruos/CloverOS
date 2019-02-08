@@ -110,7 +110,7 @@ List of binaries (no dependencies): https://gitgud.io/cloveros/cloveros/blob/mas
 List of all binaries: https://cloveros.ga/s/packages.html
 
 ### Package isn't available
-Make an issue so I can add the package to binhost. In the meantime, install from source using `~/cloveros_settings.sh 5 ; sudo EMERGE_DEFAULT_OPTS="" emerge [package] ; ~/cloveros_settings.sh 5`
+Make an issue so I can add the package to binhost. In the meantime, install from source using `~/cloveros_settings.sh 5 ; sudo emerge [package] ; ~/cloveros_settings.sh 5`
 
 ### Switching to source
 
@@ -216,6 +216,14 @@ sudo rmmod -f radeon && sudo modprobe amdgpu si_support=1
 
 ### Installing proprietary Nvidia drivers
 ```
+sudo EMERGE_DEFAULT_OPTS="" emerge \=gentoo-sources-$(cut -d" " -f3 /proc/version | sed "s/-.*//")
+sudo eselect kernel set linux-$(cut -d" " -f3 /proc/version)
+sudo wget https://liquorix.net/sources/4.19/config.amd64 -O /usr/src/linux/.config
+sudo emerge nvidia-drivers
+sudo depmod
+sudo eselect opengl set nvidia
+sudo eselect opencl set nvidia
+sudo sh -c 'echo -e "blacklist nouveau\nblacklist vga16fb\nblacklist rivafb\nblacklist nvidiafb\nblacklist rivatv" >> /etc/modprobe.d/blacklist.conf'
 ```
 
 ### Installing Virtualbox
