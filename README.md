@@ -118,7 +118,7 @@ Switch to source by running `./cloveros_settings.sh 5`
 
 Or:
 
-Edit `/etc/portage/make.conf` and edit the following line:
+Edit `/etc/portage/make.conf` and edit the following lines:
 
 ```
 EMERGE_DEFAULT_OPTS="--keep-going=y --autounmask-write=y --jobs=4 -G"
@@ -286,28 +286,23 @@ media-libs/mesa -bindist
 
 ### GPU passthrough example
 ```
-# fallocate -l 32GB drive
-
-# lspci
+# fallocate -l 32GB drive && lspci
 
 sudo sh -c '
-for devid in {0000:01:00.0,0000:01:00.1,0000:00:12.0,0000:00:00.2}; do
-	echo $devid > /sys/bus/pci/devices/$devid/driver/unbind
+devices=(01:00.0 01:00.1 00:12.0 00:12.2)
+
+for devid in ${devices[@]}; do devid=0000:$devid
 	echo $(</sys/bus/pci/devices/$devid/vendor) $(</sys/bus/pci/devices/$devid/device) > /sys/bus/pci/drivers/vfio-pci/new_id
+	echo $devid > /sys/bus/pci/devices/$devid/driver/unbind
+	echo $devid > /sys/bus/pci/drivers/vfio-pci/bind
+	echo $(</sys/bus/pci/devices/$devid/vendor) $(</sys/bus/pci/devices/$devid/device) > /sys/bus/pci/drivers/vfio-pci/remove_id
 done
 
-qemu-system-x86_64 -enable-kvm -m 4G -cpu host -smp cores=8,threads=1 -vga none -display none \
--drive if=pflash,format=raw,readonly,file=/usr/share/edk2-ovmf/OVMF_CODE.fd \
--drive if=pflash,format=raw,file=/usr/share/edk2-ovmf/OVMF_VARS.fd \
--drive file=drive,format=raw \
--device vfio-pci,host=01:00.0,multifunction=on,x-vga=on \
--device vfio-pci,host=01:00.1 \
--device vfio-pci,host=00:12.0 \
--device vfio-pci,host=00:12.2
+qemu-system-x86_64 -enable-kvm -m 4G -cpu host -smp cores=8,threads=1 -vga none -display none -cdrom windows.iso -drive if=pflash,format=raw,readonly,file=/usr/share/edk2-ovmf/OVMF_CODE.fd -drive if=pflash,format=raw,file=/usr/share/edk2-ovmf/OVMF_VARS.fd -drive file=drive,format=raw $(sed "s/ / -device vfio-pci,host=/g" <<< \ ${devices[@]})
 
-for devid in {0000:01:00.0,0000:01:00.1,0000:00:12.0,0000:00:00.2}; do
-	echo $devid > /sys/bus/pci/drivers/vfio-pci/unbind
-	echo $(</sys/bus/pci/devices/$devid/vendor) $(</sys/bus/pci/devices/$devid/device) > /sys/bus/pci/drivers/vfio-pci/remove_id	
+for devid in ${devices[@]}; do devid=0000:$devid
+	echo 1 > /sys/bus/pci/devices/$devid/remove
+	echo 1 > /sys/bus/pci/rescan
 done'
 ```
 
