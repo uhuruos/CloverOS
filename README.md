@@ -57,8 +57,6 @@ Volume control: Laptop (software) Volume up/down keys
 
 fvwm's settings are in `~/.fvwm2rc`
 
-Key bindings are in `~/.xbindkeysrc`
-
 ### Setting default sound device
 Run `./cloveros_settings.sh 3`
 
