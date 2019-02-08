@@ -86,9 +86,7 @@ Style * IconBackgroundColorset 2
 Style * DecorateTransient
 
 Style stats.sh !Title, Sticky, WindowListSkip, BorderWidth 0, HandleWidth 0
-Style wbar !Title, Sticky, WindowListSkip, BorderWidth 0, HandleWidth 0
 Style Plank !Title, StaysOnTop, Sticky, WindowListSkip, BorderWidth 0, HandleWidth 0
-Style ROX-Panel !Title, Sticky, WindowListSkip, BorderWidth 0, HandleWidth 0
 
 DestroyMenu FvwmWindowOpsMenu
 AddToMenu   FvwmWindowOpsMenu "Window Operations" Title

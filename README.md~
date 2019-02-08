@@ -152,6 +152,7 @@ This disables the binhost and uses Portage's ebuilds for packages. Now you can e
 * [What are keywording and unmasking?](#what-are-keywording-and-unmasking)
 * [Emerge error relating to openssl](#emerge-error-relating-to-openssl-fix-opengl-34-not-working)
 * [GPU passthrough example](#gpu-passthrough-example)
+* [Generate Wbar dock config from installed programs](#generate-wbar-dock-config-from-installed-programs)
 * [Change FVWM titlebar color](#change-fvwm-titlebar-color)
 * [KDE theme in qt5 programs without KDE](#kde-theme-in-qt5-programs-without-kde)
 * [Vertical tabs in Firefox 57+](#vertical-tabs-in-firefox-57)
@@ -286,28 +287,28 @@ media-libs/mesa -bindist
 
 ### GPU passthrough example
 ```
-# fallocate -l 32GB drive
-
 # lspci
 
-sudo sh -c 'for devid in {0000:01:00.0,0000:01:00.1,0000:00:12.0,0000:00:00.2}; do
-	echo $devid > /sys/bus/pci/devices/$devid/driver/unbind
+for devid in {0000:01:00.0,0000:01:00.1,0000:00:12.0,0000:00:00.2}; do
+	echo $devid /sys/bus/pci/devices/$devid/driver/unbind
 	echo $(</sys/bus/pci/devices/$devid/vendor) $(</sys/bus/pci/devices/$devid/device) > /sys/bus/pci/drivers/vfio-pci/new_id
-done'
+done
 
 sudo qemu-system-x86_64 -enable-kvm -m 4G -cpu host -smp cores=8,threads=1 -vga none -display none \
--drive if=pflash,format=raw,readonly,file=/usr/share/edk2-ovmf/OVMF_CODE.fd \
--drive if=pflash,format=raw,file=/usr/share/edk2-ovmf/OVMF_VARS.fd \
--drive file=drive,format=raw \
--device vfio-pci,host=01:00.0,multifunction=on,x-vga=on \
+-drive if=pflash,format=raw,readonly,file=OVMF_CODE-pure-efi.fd \
+-drive if=pflash,format=raw,file=OVMF_VARS-pure-efi.fd \
+-drive file=windows,format=raw \
+-device vfio-pci,host=01:00.0,romfile=XFX.R9390.8192.150603.rom \
 -device vfio-pci,host=01:00.1 \
 -device vfio-pci,host=00:12.0 \
 -device vfio-pci,host=00:12.2
+```
 
-sudo sh -c 'for devid in {0000:01:00.0,0000:01:00.1,0000:00:12.0,0000:00:00.2}; do
-	echo $devid > /sys/bus/pci/drivers/vfio-pci/unbind
-	echo $(</sys/bus/pci/devices/$devid/vendor) $(</sys/bus/pci/devices/$devid/device) > /sys/bus/pci/drivers/vfio-pci/remove_id	
-done'
+### Generate Wbar dock config from installed programs
+First: `sudo emerge imagemagick && mkdir ~/.wbaricons`
+
+```
+grep -hE '^Name=|^Icon=|^Exec=' $(grep -rl "^Icon=" --exclude={compton,brasero,steam,qmmp,gcr-viewer}.desktop /usr/share/applications/) | sed 's/Name=/t: /; s/Exec=/c: /; s/Icon=/i: /; s#\(i: \)\(.*\)#i: .wbaricons/\2.xpm#; 0~3 a\\' >> .wbar && ls -v1 /usr/share/pixmaps/*.{png,ico} /usr/share/icons/hicolor/*/apps/*.* /usr/share/pixmaps/*.{xpm,svg} | sed -r 's#(.*/)(.*)(\..*)#convert \1\2\3 ~/.wbaricons/\2.xpm#' | xargs -I{} sh -c {}
 ```
 
 ### Change FVWM titlebar color
