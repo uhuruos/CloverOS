@@ -186,7 +186,6 @@ net-im/pidgin spell
 net-irc/hexchat spell plugin-sysinfo
 x11-base/xorg-drivers input_devices_joystick
 dev-libs/weston xwayland
-x11-drivers/xf86-video-intel uxa sna dri3 tools
 www-servers/nginx nginx_modules_http_dav nginx_modules_http_realip rtmp
 media-libs/freetype infinality
 net-libs/webkit-gtk -webgl -introspection -geolocation
@@ -241,6 +240,7 @@ media-plugins/deadbeef-waveform-seekbar gtk3
 media-plugins/deadbeef-spectrogram gtk3
 media-plugins/deadbeef-musical-spectrum gtk3
 app-emulation/qemu sdl usb virgl virtfs gtk
+x11-drivers/xf86-video-intel tools # multi monitor
 dev-libs/glib dbus # required by mate baobab flatpak pitivi evince eog bluez-alsa gthumb gedit flowblade
 dev-qt/qtgui dbus # required by kde
 dev-python/PyQt5 webengine # required by anki qutebrowser (dbus)
@@ -272,6 +272,7 @@ x11-drivers/nvidia-drivers compat # required by primus
 media-libs/leptonica tiff # required by tesseract, vapoursynth
 dev-lua/mpack luajit # required by neovim
 dev-python/pyyaml libyaml # required by qutebrowser
+app-text/xmlto text # required by xdg-utils
 x11-libs/gtk+ X
 x11-libs/libva X
 dev-cpp/gtkmm X
@@ -299,7 +300,6 @@ dev-lang/luajit lua52compat
 dev-lang/python sqlite
 x11-libs/libxcb xkb
 x11-libs/cairo xcb
-app-text/xmlto text
 sys-libs/tevent python
 media-gfx/exiv2 xmp
 dev-python/PyQt5 gui widgets svg webkit network printsupport webchannel sql declarative multimedia
