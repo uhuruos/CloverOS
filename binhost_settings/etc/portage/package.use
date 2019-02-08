@@ -186,7 +186,7 @@ net-im/pidgin spell
 net-irc/hexchat spell plugin-sysinfo
 x11-base/xorg-drivers input_devices_joystick
 dev-libs/weston xwayland
-x11-drivers/xf86-video-intel uxa sna dri3
+x11-drivers/xf86-video-intel uxa sna dri3 tools
 www-servers/nginx nginx_modules_http_dav nginx_modules_http_realip rtmp
 media-libs/freetype infinality
 net-libs/webkit-gtk -webgl -introspection -geolocation
