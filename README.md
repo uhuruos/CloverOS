@@ -347,11 +347,7 @@ https://addons.mozilla.org/en-US/firefox/addon/vertical-tabs-reloaded/
 `xinput set-prop "SynPS/2 Synaptics TouchPad" "libinput Tapping Enabled" 1`
 
 ### Disable mouse acceleration
-```
-for i in {0..99}; do
-	xinput set-prop $i "libinput Accel Profile Enabled" 0 1 &> /dev/null
-done
-```
+`xinput list --id-only | xargs -I{} xinput set-prop {} "libinput Accel Profile Enabled" 0 1 &>/dev/null`
 
 ### Suspend when laptop lid is closed
 First run `emerge acpid && /etc/init.d/acpid start`
@@ -529,7 +525,8 @@ pcm.!default {
 ### Install Quake 3
 ```
 sudo emerge quake3
-sudo wget "https://github.com/nrempel/q3-server/blob/master/baseq3/pak0.pk3?raw=true" -O /usr/share/games/quake3/baseq3/pak0.pk3
+sudo wget https://github.com/nrempel/q3-server/raw/master/baseq3/pak{0..8}.pk3 -P /usr/share/games/quake3/baseq3/
+ioquake3
 ```
 
 ### What is Gentoo?
@@ -632,7 +629,7 @@ None, it comes with fvwm and a `~/.bash_profile` that can select/install a DE fo
 ### Installing a DE
 First, connect to wifi using wpa_gui ('wifi' in fvwm)
 
-Kill X and relog. After you log in and the "Start X?" dialog pops up, instead of y/n, type one of the WM options and hit y when it asks to install.
+Kill X and re-login. After you log in and the "Start X?" dialog pops up, instead of y/n, type one of the WM options and hit y when it asks to install.
 
 ### I want to donate/host a mirror
 Run `rsync -av --delete rsync://nl.cloveros.ga/cloveros /your/webserver/location/` and link me the https://

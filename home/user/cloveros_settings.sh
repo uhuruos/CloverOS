@@ -286,9 +286,7 @@ case "$choice" in
 		;;
 
 	d)
-		for i in {0..99}; do
-			xinput set-prop $i "libinput Accel Profile Enabled" 0 1 &> /dev/null
-		done
+		xinput list --id-only | xargs -I{} xinput set-prop {} "libinput Accel Profile Enabled" 0 1 &>/dev/null
 		echo -e "\nMouse acceleration disabled. (xinput set-prop \"Your Device\" \"libinput Accel Profile Enabled\" 0 1)"
 		;;
 
