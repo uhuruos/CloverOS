@@ -138,15 +138,15 @@ case "$choice" in
 		./cloveros_settings.sh 1 || exit 1;
 		backupdir=backup$(< /dev/urandom tr -dc 0-9 | head -c 8)
 		mkdir $backupdir
-		mv .bash_profile .zprofile .zshrc .fvwm2rc .Xdefaults wallpaper.png .xbindkeysrc screenfetch-dev cloveros_settings.sh stats.sh rotate_screen.sh .emacs .emacs.d/ .rtorrent.rc .mpv .config/nitrogen/ .config/spacefm/ .config/mimeapps.list .local/share/nomacs/ $backupdir/
+		mv .bash_profile .zprofile .zshrc .fvwm2rc .Xdefaults wallpaper.png .xbindkeysrc screenfetch-dev cloveros_settings.sh stats.sh rotate_screen.sh .emacs .emacs.d/ .rtorrent.rc .mpv .config/nitrogen/ .config/spacefm/ .config/mimeapps.list .config/nomacs/ $backupdir/
 		wget $gitprefix/home/user/{.bash_profile,.zprofile,.zshrc,.fvwm2rc,.Xdefaults,wallpaper.png,.xbindkeysrc,screenfetch-dev,cloveros_settings.sh,stats.sh,rotate_screen.sh,.emacs,.rtorrent.rc}
 		chmod +x screenfetch-dev cloveros_settings.sh stats.sh rotate_screen.sh
-		mkdir -p .emacs.d/backups/ .emacs.d/autosaves/ Downloads/ .rtorrent/ .mpv/ .config/spacefm/ .config/nitrogen/ .local/share/nomacs/ Desktop/
+		mkdir -p .emacs.d/backups/ .emacs.d/autosaves/ Downloads/ .rtorrent/ .mpv/ .config/spacefm/ .config/nitrogen/ .config/nomacs/ Desktop/
 		sed -i "s@/home/user/@/home/$USER/@" .rtorrent.rc
 		wget $gitprefix/home/user/.mpv/config -P .mpv/
 		wget $gitprefix/home/user/.config/nitrogen/nitrogen.cfg -P .config/nitrogen/
 		sed -i "s@/home/user/@/home/$USER/@" .config/nitrogen/nitrogen.cfg
-		wget $gitprefix/home/user/.local/share/nomacs/settings.ini -P .local/share/nomacs/
+		wget $gitprefix/home/user/.config/nomacs/Image\ Lounge.conf -P .config/nomacs/
 		wget $gitprefix/home/user/.config/spacefm/session -P .config/spacefm/
 		sed -i "s@/home/user/@/home/$USER/@" .config/spacefm/session
 		wget $gitprefix/home/user/.config/mimeapps.list -P .config/

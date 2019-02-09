@@ -87,12 +87,12 @@ cd /home/$username/
 rm .bash_profile
 wget $gitprefix/home/user/{.bash_profile,.zprofile,.zshrc,.fvwm2rc,.Xdefaults,wallpaper.png,.xbindkeysrc,screenfetch-dev,cloveros_settings.sh,stats.sh,rotate_screen.sh,.emacs,.rtorrent.rc}
 chmod +x screenfetch-dev cloveros_settings.sh stats.sh rotate_screen.sh
-mkdir -p .emacs.d/backups/ .emacs.d/autosaves/ Downloads/ .rtorrent/ .mpv/ .config/spacefm/ .config/nitrogen/ .local/share/nomacs Desktop/
+mkdir -p .emacs.d/backups/ .emacs.d/autosaves/ Downloads/ .rtorrent/ .mpv/ .config/spacefm/ .config/nitrogen/ .config/nomacs/ Desktop/
 sed -i "s@/home/user/@/home/$username/@" .rtorrent.rc
 wget $gitprefix/home/user/.mpv/config -P .mpv/
 wget $gitprefix/home/user/.config/nitrogen/nitrogen.cfg -P .config/nitrogen/
 sed -i "s@/home/user/@/home/$username/@" .config/nitrogen/nitrogen.cfg
-wget $gitprefix/home/user/.local/share/nomacs/settings.ini -P .local/share/nomacs/
+wget $gitprefix/home/user/.config/nomacs/Image\ Lounge.conf -P .config/nomacs/
 wget $gitprefix/home/user/.config/spacefm/session -P .config/spacefm/
 sed -i "s@/home/user/@/home/$username/@" .config/spacefm/session
 wget $gitprefix/home/user/.config/mimeapps.list -P .config/
