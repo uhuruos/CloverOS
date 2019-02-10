@@ -3,9 +3,11 @@
 
 <img src="https://gitgud.io/cloveros/cloveros/raw/master/artwork/desktop.png" alt="CloverOS GNU/Linux Desktop" width="250" />
 
-CloverOS GNU/Linux is scripts that creates a minimal (middleware-free), performance-optimized and out of the box Gentoo image (stage4) and a packages repo (Binhost)
+These scripts creates CloverOS GNU/Linux; a minimal (middleware-free) and default out-of-the-box Gentoo image (stage4) and a performance-optimized packages repo (Binhost)
 
 Mirrors and binary details: https://useast.cloveros.ga https://uswest.cloveros.ga https://ca.cloveros.ga https://fr.cloveros.ga https://nl.cloveros.ga https://au.cloveros.ga https://uk.cloveros.ga https://sg.cloveros.ga https://jp.cloveros.ga
+
+Objectives: Lowest RAM usage desktop, no changes to Gentoo and kept as default as possible, easily install any package in its ideal form with emerge, easy out-of-the-box desktop
 
 ## Cheat sheet
 ### Installing program
