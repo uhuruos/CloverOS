@@ -52,13 +52,12 @@ case "$choice" in
 	2|u)
 		echo "Running the following:"
 		echo "./cloveros_settings.sh 1"
-		echo "./cloveros_settings.sh 4"
 		echo "sudo emerge --sync"
 		echo "sudo emerge -uvD @world"
 		echo "sudo emerge --depclean"
+		echo "./cloveros_settings.sh 4"
 		echo "./cloveros_settings.sh 9"
 		sleep 2
-		./cloveros_settings.sh 1 || exit 1;
 		./cloveros_settings.sh zz
 		;;
 
@@ -67,6 +66,8 @@ case "$choice" in
 			echo "Please enable binaries."
 			exit 1
 		fi
+
+		./cloveros_settings.sh 1 || exit 1;
 
 		if [ -d /var/db/pkg/net-p2p/rtorrent-ps-9999/ ]; then
 			sudo emerge -C rtorrent-ps
@@ -80,6 +81,11 @@ case "$choice" in
 
 		sudo rm /usr/portage/packages/Packages &> /dev/null
 
+		sudo emerge --sync
+		sudo emerge -uvD @world
+		sudo emerge --depclean || sudo emerge -1O virtual/perl-ExtUtils-MakeMaker virtual/perl-File-Spec perl-core/File-Path:0 virtual/perl-File-Path:0 sys-apps/texinfo:0 dev-perl/libintl-perl:0 dev-perl/XML-Parser:0 dev-perl/Unicode-EastAsianWidth:0 dev-perl/Locale-gettext:0 dev-perl/Text-Unidecode:0 && sudo emerge --depclean
+
+
 		kernel=$(uname -r)
 		if [[ ${kernel: -3} == "gnu" ]]; then
 			./cloveros_settings.sh l
@@ -87,12 +93,9 @@ case "$choice" in
 			./cloveros_settings.sh 4
 		fi
 
-		sudo emerge --sync
-		sudo emerge -uvD @world
-		sudo emerge --depclean || sudo emerge -1O virtual/perl-ExtUtils-MakeMaker virtual/perl-File-Spec perl-core/File-Path:0 virtual/perl-File-Path:0 sys-apps/texinfo:0 dev-perl/libintl-perl:0 dev-perl/XML-Parser:0 dev-perl/Unicode-EastAsianWidth:0 dev-perl/Locale-gettext:0 dev-perl/Text-Unidecode:0 && sudo emerge --depclean
-		./cloveros_settings.sh 9
-
 		echo "glib|qtgui|PyQt5|thunar" | xargs -I{} -d\| sudo sh -c 'PORTAGE_BINHOST="https://cloveros.ga/s/nodbus" FETCHCOMMAND_HTTPS="wget -O \"\${DISTDIR}/\${FILE}\" \"\${URI}\"" emerge -1uD {}' &> /dev/null; sudo emerge --depclean
+
+		./cloveros_settings.sh 9
 
 		echo -e "\nSystem updated."
 		;;
@@ -286,7 +289,7 @@ case "$choice" in
 		;;
 
 	d)
-		xinput list --id-only | xargs -I{} xinput set-prop {} "libinput Accel Profile Enabled" 0 1 &> /dev/null
+		xinput list --name-only | sed "/Virtual core pointer/,/Virtual core keyboard/"\!"d;//d" | xargs -I{} xinput set-prop {} "libinput Accel Profile Enabled" 0 1 &> /dev/null
 		echo -e "\nMouse acceleration disabled. (xinput set-prop \"Your Device\" \"libinput Accel Profile Enabled\" 0 1)"
 		;;
 
