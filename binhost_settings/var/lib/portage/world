@@ -860,6 +860,7 @@ net-analyzer/dhcpdump
 net-analyzer/flent
 net-analyzer/iftop
 net-analyzer/iptraf-ng
+net-analyzer/masscan
 net-analyzer/mtr
 net-analyzer/nagios
 net-analyzer/nagstamon
@@ -871,6 +872,7 @@ net-analyzer/speedtest-cli
 net-analyzer/traceroute
 net-analyzer/vnstat
 net-analyzer/wireshark
+net-analyzer/zmap
 net-dialup/lrzsz
 net-dns/bind-tools
 net-dns/dnscrypt-proxy

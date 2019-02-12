@@ -10,7 +10,7 @@ virtual/rust # firefox
 virtual/cargo # firefox
 dev-lang/rust # firefox
 media-libs/libwebp # firefox
->=media-libs/libvpx-1.8.0 # firefox
+<media-libs/libvpx-1.8.0 # firefox
 games-emulation/retroarch
 games-emulation/desmume-libretro # retroarch
 games-emulation/ppsspp-libretro # retroarch
@@ -77,6 +77,8 @@ media-libs/opusfile
 net-ftp/proftpd
 
 #keyworded, remove when stable exists
+net-analyzer/masscan
+net-analyzer/zmap
 www-client/opera-beta
 www-client/opera-developer
 x11-plugins/gkrellm-plugins **
