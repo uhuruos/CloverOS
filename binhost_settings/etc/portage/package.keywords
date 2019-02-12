@@ -353,6 +353,8 @@ dev-libs/json-c # sway
 dev-libs/wlc # sway
 dev-libs/wlroots # sway
 app-text/scdoc # sway
+dev-libs/swayidle # sway
+dev-libs/swaylock # sway
 x11-terms/lilyterm
 games-emulation/vgba
 games-emulation/lxdream

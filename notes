@@ -13,7 +13,7 @@ livecd_install.sh: uefi install, encryption
 ftjam argyllcms
 
 #doesn't emerge
-pitivi stumpwm stumpwm-contrib tauthon racket cinelerra kodi eagle gpac
+pitivi stumpwm stumpwm-contrib tauthon racket cinelerra kodi eagle gpac sway
 
 #doesn't emerge anymore
 rogue dolphin-libretro loudmouth ots quakeforge tiemu sbt xen sauerbraten supertuxkart telegram-cli psensor opentoonz abiword blender

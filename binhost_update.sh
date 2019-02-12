@@ -1,13 +1,5 @@
 trap exit SIGINT
 
-emerge --sync
-layman -S
-emerge -uavDN --buildpkg --exclude=gentoo-sources @world
-emerge --buildpkg @preserved-rebuild
-emerge --depclean
-emerge -1 --buildpkg $(find /var/db/pkg/ -mindepth 2 -maxdepth 2 -name \*-9999 | grep -v MERGING | awk -F \/ '{printf "=%s/%s ", $5, $6}')
-eclean-pkg
-
 #mv /usr/portage/packages/s/ .
 #rm -Rf /usr/portage/packages/*
 #mv s/ /usr/portage/packages/
@@ -15,6 +7,14 @@ eclean-pkg
 #emerge --buildpkgonly sudo openssh postfix dcron vixie-cron cronie fcron anacron ungoogled-chromium
 #emerge -C hwinfo ntfs3g && emerge --buildpkg ntfs3g && emerge --buildpkg hwinfo
 #PKGDIR="/usr/portage/packages/s/nodbus/" USE="-dbus -webengine -trash-panel-plugin" emerge --buildpkgonly glib qtgui PyQt5 thunar
+
+emerge --sync
+layman -S
+emerge -uavDN --buildpkg --exclude=gentoo-sources @world
+emerge --buildpkg @preserved-rebuild
+emerge --depclean
+emerge -1 --buildpkg $(find /var/db/pkg/ -mindepth 2 -maxdepth 2 -name \*-9999 | grep -v MERGING | awk -F \/ '{printf "=%s/%s ", $5, $6}')
+eclean-pkg
 
 cd /usr/portage/packages/s/
 php website.php
