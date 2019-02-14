@@ -1,4 +1,4 @@
-kernelversion=4.19.20
+kernelversion=4.19.21
 kernelmajversion=4.19
 
 if [ ! -d '/usr/portage/packages/s/' ]; then

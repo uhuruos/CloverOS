@@ -1,6 +1,6 @@
 trap exit SIGINT
-if [ ! -d '/usr/portage/packages/s/' ]; then
-	mkdir -p /usr/portage/packages/s/
+if [ ! -d '/usr/portage/packages/s/signatures/' ]; then
+	mkdir -p /usr/portage/packages/s/signatures/
 fi
 
 #mv /usr/portage/packages/s/ .
@@ -23,8 +23,7 @@ php mirrors/index.php > /usr/portage/packages/index.html
 php mirrors/indexalt.php > /usr/portage/packages/indexalt.html
 EIX_LIMIT=0 eix -IF | grep -v "Available versions" | ansi2html > /usr/portage/packages/s/packages.html
 
-rm -Rf /usr/portage/packages/s/signatures/
-mkdir -p /usr/portage/packages/s/signatures/
+rm -Rf /usr/portage/packages/s/signatures/*
 cd /usr/portage/packages/s/signatures/
 find /usr/portage/packages/ -type d | sed 's#/usr/portage/packages/##' | grep -v "^s/signatures$" | xargs mkdir
 find /usr/portage/packages/ -type f | sed 's#/usr/portage/packages/##' | pv -qB 1G | xargs -I{} gpg --armor --detach-sign --output {}.asc --sign /usr/portage/packages/{}
