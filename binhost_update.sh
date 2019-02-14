@@ -16,9 +16,8 @@ emerge --depclean
 emerge -1 --buildpkg $(find /var/db/pkg/ -mindepth 2 -maxdepth 2 -name \*-9999 | grep -v MERGING | awk -F \/ '{printf "=%s/%s ", $5, $6}')
 eclean-pkg
 
-cd /usr/portage/packages/s/
-php website.php
-EIX_LIMIT=0 eix -IF | grep -v "Available versions" | ansi2html > packages.html
+(cd /usr/portage/packages/s/ && php website.php)
+EIX_LIMIT=0 eix -IF | grep -v "Available versions" | ansi2html > /usr/portage/packages/s/packages.html
 
 rm -Rf /usr/portage/packages/s/signatures/
 mkdir -p /usr/portage/packages/s/signatures/
@@ -27,5 +26,4 @@ find /usr/portage/packages/ -type d | sed 's#/usr/portage/packages/##' | grep -v
 find /usr/portage/packages/ -type f | sed 's#/usr/portage/packages/##' | pv -qB 1G | xargs -I{} gpg --armor --detach-sign --output {}.asc --sign /usr/portage/packages/{}
 
 chmod -R 755 /usr/portage/packages/
-
 rsync -a --delete /usr/portage/packages/ root@nl.cloveros.ga:/var/www/html/cloveros.ga/
