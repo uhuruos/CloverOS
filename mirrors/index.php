@@ -24,7 +24,7 @@ $git = 'https://gitgud.io/cloveros/cloveros/raw/master';
 $isoname = basename(glob('/usr/portage/packages/s/CloverOS-x86_64-*.iso')[0]);
 $libreisoname = basename(glob('/usr/portage/packages/s/CloverOS_Libre-x86_64-*.iso')[0]);
 
-$dir = '/usr/portage/packages/s/';
+$dir = '/usr/portage/packages/';
 $files = '<h1>Index of /</h1><hr><pre>';
 foreach (scandir($dir) as $line) {
 	if ($line == '.') {
