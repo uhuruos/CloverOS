@@ -1,19 +1,20 @@
 <?php
-unlink('../index.html');
-unlink('../indexalt.html');
-
-$git = 'https://gitgud.io/cloveros/cloveros/raw/master';
-
-$packageuse = file_get_contents("$git/binhost_settings/etc/portage/package.use");
-$packageenv = file_get_contents("$git/binhost_settings/etc/portage/package.env");
-$packagekeywords = file_get_contents("$git/binhost_settings/etc/portage/package.keywords");
-$makeconf = file_get_contents("$git/binhost_settings/etc/portage/make.conf");
-$worldtxt = file_get_contents("$git/binhost_settings/var/lib/portage/world");
-$installscriptsh = file_get_contents("$git/installscript.sh");
-$usermake = file_get_contents("$git/home/user/make.conf");
-$quickpkg = file_get_contents('quickpkg.txt');
+chdir(__DIR__);
+$packageuse = file_get_contents('../binhost_settings/etc/portage/package.use');
+$packageenv = file_get_contents('../binhost_settings/etc/portage/package.env');
+$packagekeywords = file_get_contents('../binhost_settings/etc/portage/package.keywords');
+$makeconf = file_get_contents('../binhost_settings/etc/portage/make.conf');
+$worldtxt = file_get_contents('../binhost_settings/var/lib/portage/world');
+$installscriptsh = file_get_contents('../installscript.sh');
+$usermake = file_get_contents('../home/user/make.conf');
+$quickpkg = file_get_contents('/usr/portage/packages/s/quickpkg.txt');
 $quickpkg = substr($quickpkg, strpos($quickpkg, '<pre class="ansi2html-content">')+strlen('<pre class="ansi2html-content">')+1);
 $quickpkg = rtrim($quickpkg, "</pre></body>\n</html>");
+
+$isoname = basename(glob('/usr/portage/packages/s/CloverOS-x86_64-*.iso')[0]);
+$libreisoname = basename(glob('/usr/portage/packages/s/CloverOS_Libre-x86_64-*.iso')[0]);
+$packagecount = substr_count($quickpkg, 'Building package for ');
+$git = 'https://gitgud.io/cloveros/cloveros/raw/master';
 
 $mirrors = substr($usermake, strpos($usermake, 'binhost_mirrors="$PORTAGE_BINHOST,') + 34);
 $mirrors = substr($mirrors, 0, strpos($mirrors, ',"'));
@@ -22,9 +23,6 @@ $mirrorlinks = '';
 foreach ($mirrors as $line) {
 	$mirrorlinks .= '<a target="_blank" href="'.$line.'">'.$line.'</a> ';
 }
-
-$isoname = glob('CloverOS-x86_64-*.iso')[0];
-$libreisoname = glob('CloverOS_Libre-x86_64-*.iso')[0];
 
 $files = '<h1>Index of /</h1><hr><pre>';
 $dir = '../';
@@ -39,7 +37,7 @@ foreach (scandir($dir) as $line) {
 }
 $files .= '</pre><hr>';
 
-$html = '<!DOCTYPE html>
+echo '<!DOCTYPE html>
 <html>
 <link rel="icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQAgMAAABinRfyAAAACVBMVEXKbt4AmQAAzAArTnekAAAAAXRSTlMAQObYZgAAADdJREFUeAFjYGARYGBgEA0BEqGhUIJLNGQBg1Zr0AqGVQu9VjFordBaASIgXLAEWAlcB8QAsFEAnzYQ4QKPcGQAAAAASUVORK5CYII=" type="image/x-ico" />
 <title>CloverOS GNU/Linux</title>
@@ -62,7 +60,7 @@ Libre ISO: <a href="s/'.$libreisoname.'">https://cloveros.ga/s/'.$libreisoname.'
 GPG: <a target="_blank" href="s/cloveros.gpg">78F5 AC55 A120 07F2 2DF9  A28A 78B9 3F76 B8E4 2805</a><br>
 IRC: <a target="_blank" href="irc://irc.rizon.net/cloveros">#cloveros</a> on irc.rizon.net<br>
 Twitter: <a target="_blank" href="https://twitter.com/cloveros_ga">https://twitter.com/cloveros_ga</a><br>
-Packages: <a target="_blank" href="s/packages.html">'.substr_count($quickpkg, 'Building package for ').' https://cloveros.ga/s/packages.html</a><br>
+Packages: <a target="_blank" href="s/packages.html">'.$packagecount.' https://cloveros.ga/s/packages.html</a><br>
 Rsync: rsync://nl.cloveros.ga/cloveros<br>
 License: WTFPL<br>
 Mirrors: '.$mirrorlinks.'<br>
@@ -92,12 +90,11 @@ gpg --verify '.$isoname.'.asc '.$isoname.'</pre>
 '.$files.'
 </html>';
 
-file_put_contents('../index.html', $html);
-
-$isos = '';
-foreach ($mirrors as $line) {
-	$isos .= '							<a href="'.$line.'/s/'.$isoname.'">'.$line.'/s/'.$isoname.'</a>'."\n";
-}
-$isos = rtrim($isos);
-file_put_contents('../indexalt.html', str_replace("{iso_links}", $isos, str_replace("{iso_link}", $isoname, file_get_contents('indexalt.txt'))));
+//$indexalt = file_get_contents('../mirrors/indexalt.html');
+//$isos = '';
+//foreach ($mirrors as $line) {
+//	$isos .= '							<a href="'.$line.'/s/'.$isoname.'">'.$line.'/s/'.$isoname.'</a>'."\n";
+//}
+//$isos = rtrim($isos);
+//file_put_contents('../indexalt.html', str_replace("{iso_links}", $isos, str_replace("{iso_link}", $isoname, file_get_contents($indexalt))));
 ?>

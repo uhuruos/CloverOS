@@ -1,4 +1,7 @@
 trap exit SIGINT
+if [ ! -d '/usr/portage/packages/s/' ]; then
+	mkdir -p /usr/portage/packages/s/
+fi
 
 #mv /usr/portage/packages/s/ .
 #rm -Rf /usr/portage/packages/*
@@ -16,7 +19,8 @@ emerge --depclean
 emerge -1 --buildpkg $(find /var/db/pkg/ -mindepth 2 -maxdepth 2 -name \*-9999 | grep -v MERGING | awk -F \/ '{printf "=%s/%s ", $5, $6}')
 eclean-pkg
 
-(cd /usr/portage/packages/s/ && php website.php)
+php mirrors/website.php > /usr/portage/packages/index.html
+php mirrors/website.php > /usr/portage/packages/index.html
 EIX_LIMIT=0 eix -IF | grep -v "Available versions" | ansi2html > /usr/portage/packages/s/packages.html
 
 rm -Rf /usr/portage/packages/s/signatures/
