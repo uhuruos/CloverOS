@@ -1,4 +1,11 @@
+#!/bin/bash
+if [ $(id -u) != "0" ]; then
+	echo "This script must be run as root" 1>&2
+	exit 1
+fi
+
 trap exit SIGINT
+
 if [ ! -d '/usr/portage/packages/s/signatures/' ]; then
 	mkdir -p /usr/portage/packages/s/signatures/
 fi
