@@ -11,11 +11,6 @@ $quickpkg = file_get_contents('/usr/portage/packages/s/quickpkg.txt');
 $quickpkg = substr($quickpkg, strpos($quickpkg, '<pre class="ansi2html-content">')+strlen('<pre class="ansi2html-content">')+1);
 $quickpkg = rtrim($quickpkg, "</pre></body>\n</html>");
 
-$isoname = basename(glob('/usr/portage/packages/s/CloverOS-x86_64-*.iso')[0]);
-$libreisoname = basename(glob('/usr/portage/packages/s/CloverOS_Libre-x86_64-*.iso')[0]);
-$packagecount = substr_count($quickpkg, 'Building package for ');
-$git = 'https://gitgud.io/cloveros/cloveros/raw/master';
-
 $mirrors = substr($usermake, strpos($usermake, 'binhost_mirrors="$PORTAGE_BINHOST,') + 34);
 $mirrors = substr($mirrors, 0, strpos($mirrors, ',"'));
 $mirrors = explode(',', $mirrors);
@@ -24,8 +19,13 @@ foreach ($mirrors as $line) {
 	$mirrorlinks .= '<a target="_blank" href="'.$line.'">'.$line.'</a> ';
 }
 
+$packagecount = substr_count($quickpkg, 'Building package for ');
+$git = 'https://gitgud.io/cloveros/cloveros/raw/master';
+$isoname = basename(glob('/usr/portage/packages/s/CloverOS-x86_64-*.iso')[0]);
+$libreisoname = basename(glob('/usr/portage/packages/s/CloverOS_Libre-x86_64-*.iso')[0]);
+
+$dir = '/usr/portage/packages/s/';
 $files = '<h1>Index of /</h1><hr><pre>';
-$dir = '../';
 foreach (scandir($dir) as $line) {
 	if ($line == '.') {
 		continue;
