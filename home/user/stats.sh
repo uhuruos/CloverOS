@@ -1,4 +1,4 @@
-gcc -Ofast -march=native -mfpmath=both -funroll-loops -floop-block -floop-interchange -floop-strip-mine -ftree-loop-distribution -o /tmp/stats -xc - <<READOC && exec /tmp/stats
+gcc -Ofast -march=native -mfpmath=both -funroll-loops -floop-block -floop-interchange -floop-strip-mine -ftree-loop-distribution -o /tmp/stats -xc - <<HEREDOC && exec /tmp/stats
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -254,4 +254,4 @@ void main(void) {
 		nanosleep((struct timespec[]){{2, 0}}, NULL);
 	}
 }
-READOC
+HEREDOC
