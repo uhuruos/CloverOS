@@ -89,12 +89,3 @@ gpg --verify '.$isoname.'.asc '.$isoname.'</pre>
 <pre class="mono fileinfo">'.$worldtxt.'</pre>
 '.$files.'
 </html>';
-
-//$indexalt = file_get_contents('../mirrors/indexalt.html');
-//$isos = '';
-//foreach ($mirrors as $line) {
-//	$isos .= '							<a href="'.$line.'/s/'.$isoname.'">'.$line.'/s/'.$isoname.'</a>'."\n";
-//}
-//$isos = rtrim($isos);
-//file_put_contents('../indexalt.html', str_replace("{iso_links}", $isos, str_replace("{iso_link}", $isoname, file_get_contents($indexalt))));
-?>

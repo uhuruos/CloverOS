@@ -7,20 +7,20 @@ fi
 #rm -Rf /usr/portage/packages/*
 #mv s/ /usr/portage/packages/
 #quickpkg --include-unmodified-config=y "*/*" 2>&1 | ansi2html > /usr/portage/packages/s/quickpkg.txt
-#emerge --buildpkgonly sudo openssh postfix dcron vixie-cron cronie fcron anacron ungoogled-chromium
-#emerge -C hwinfo ntfs3g && emerge --buildpkg ntfs3g && emerge --buildpkg hwinfo
-#PKGDIR="/usr/portage/packages/s/nodbus/" USE="-dbus -webengine -trash-panel-plugin" emerge --buildpkgonly glib qtgui PyQt5 thunar
+#emerge -B sudo openssh postfix dcron vixie-cron cronie fcron anacron ungoogled-chromium
+#emerge -C hwinfo ntfs3g && emerge -b ntfs3g && emerge -b hwinfo
+#PKGDIR="/usr/portage/packages/s/nodbus/" USE="-dbus -webengine -trash-panel-plugin" emerge -B glib qtgui PyQt5 thunar
 
 emerge --sync
 layman -S
-emerge -uavDN --buildpkg --exclude=gentoo-sources @world
-emerge --buildpkg @preserved-rebuild
+emerge -uavDNb --exclude=gentoo-sources @world
+emerge -b @preserved-rebuild
 emerge --depclean
-emerge -1 --buildpkg $(find /var/db/pkg/ -mindepth 2 -maxdepth 2 -name \*-9999 | grep -v MERGING | awk -F \/ '{printf "=%s/%s ", $5, $6}')
+emerge -1b $(find /var/db/pkg/ -mindepth 2 -maxdepth 2 -name \*-9999 | grep -v MERGING | awk -F \/ '{printf "=%s/%s ", $5, $6}')
 eclean-pkg
 
-php mirrors/website.php > /usr/portage/packages/index.html
-php mirrors/website.php > /usr/portage/packages/index.html
+php mirrors/index.php > /usr/portage/packages/index.html
+php mirrors/indexalt.php > /usr/portage/packages/indexalt.html
 EIX_LIMIT=0 eix -IF | grep -v "Available versions" | ansi2html > /usr/portage/packages/s/packages.html
 
 rm -Rf /usr/portage/packages/s/signatures/

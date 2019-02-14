@@ -36,6 +36,6 @@ make prepare
 make modules_prepare
 cd /usr/src/linux-$kernelversion-gentoo-gnu/
 make clean
-emerge --buildpkg @module-rebuild
+emerge -b @module-rebuild
 
 binutils-config --linker ld.gold
