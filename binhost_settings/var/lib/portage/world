@@ -366,6 +366,7 @@ games-emulation/openmsx
 games-emulation/pcsx2
 games-emulation/pcsxr
 games-emulation/ppsspp
+games-emulation/reicast
 games-emulation/retroarch
 games-emulation/rpcs3
 games-emulation/sdlmame
@@ -1179,6 +1180,7 @@ x11-base/xorg-server
 x11-base/xorg-x11
 x11-drivers/nvidia-drivers
 x11-drivers/xf86-input-wacom
+x11-drivers/xf86-video-sis671
 x11-drivers/xf86-video-vmware
 x11-misc/arandr
 x11-misc/autocutsel

@@ -13,6 +13,7 @@ games-util/vitamtp-fork::cloveros-overlay
 media-gfx/nip2::cloveros-overlay
 media-libs/vips::cloveros-overlay
 
+games-emulation/reicast::lanodanOverlay
 media-gfx/meh::lanodanOverlay
 
 x11-libs/gtk+:3::mv
@@ -147,6 +148,7 @@ www-servers/onionshare::torbrowser
 
 app-shells/fzf::rasdark
 www-client/palemoon::rasdark
+x11-drivers/xf86-video-sis671::rasdark
 
 x11-libs/bamf::elementary
 
