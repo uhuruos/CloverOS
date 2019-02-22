@@ -6,15 +6,15 @@ x11-misc/synergy::vifino-overlay
 
 x11-misc/bumblebee::seden
 
-games-emulation/pcsx2::cloveros-overlay # pcsx2-9999::gentoo with added src_configure() { local mycmakeargs=( -DDISABLE_ADVANCE_SIMD=ON ) }
-games-emulation/rpcs3::cloveros-overlay # rpcs3-0.0.5::jm-overlay archive exchanged with git and added src_configure() { local mycmakeargs=( -DUSE_NATIVE_INSTRUCTIONS=OFF ) }
-mate-base/mate::cloveros-overlay # mate-1.18::gentoo with removed extras? ( sys-apps/gnome-disk-utility:0 )
+games-emulation/pcsx2::cloveros-overlay # pcsx2-9999::gentoo with added "src_configure() { local mycmakeargs=( -DDISABLE_ADVANCE_SIMD=ON ) }"
+games-emulation/rpcs3::cloveros-overlay # rpcs3-0.0.5::jm-overlay turned into git and added "src_configure() { local mycmakeargs=( -DUSE_NATIVE_INSTRUCTIONS=OFF ) }"
+mate-base/mate::cloveros-overlay # mate-1.18::gentoo with removed "extras? ( sys-apps/gnome-disk-utility:0 )"
+media-gfx/meh::cloveros-overlay # taken from media-gfx/meh::lanodanOverlay
 games-util/vitamtp-fork::cloveros-overlay
 media-gfx/nip2::cloveros-overlay
 media-libs/vips::cloveros-overlay
 
 games-emulation/reicast::lanodanOverlay
-media-gfx/meh::lanodanOverlay
 
 x11-libs/gtk+:3::mv
 

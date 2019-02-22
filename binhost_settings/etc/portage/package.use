@@ -248,7 +248,7 @@ sys-auth/consolekit policykit # required by kde (dbus)
 mate-extra/mate-screensaver -pam # prevents gnome-keyring
 media-sound/bitwig-studio -jack # prevents jack2
 www-client/palemoon -system-sqlite # fix
-www-client/firefox -lto -pgo # fix
+www-client/firefox -pgo # fix
 dev-libs/sway -tray # fix: does not build without it
 x11-plugins/gkrelltop X # fix: does not build without it
 media-sound/clementine dbus # fix: does not build without it
