@@ -33,6 +33,7 @@ games-emulation/mgba # fixes build
 media-video/vdr # fixes build
 media-libs/vigra # fixes build
 media-libs/libsfml # fixes build
+media-gfx/darktable # fixes build
 app-laptop/tp_smapi # requested
 media-fonts/vlgothic # old
 games-emulation/dolphin ** # old
@@ -75,6 +76,9 @@ app-editors/xemacs
 www-client/elinks
 media-libs/opusfile
 net-ftp/proftpd
+www-servers/apache
+app-admin/apache-tools
+net-misc/spice-gtk
 
 #keyworded, remove when stable exists
 games-emulation/reicast

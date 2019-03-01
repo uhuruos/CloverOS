@@ -1,4 +1,5 @@
 games-fps/eduke32 -offensive flac fluidsynth gtk -hrp -opl -psx -sc-55 -sdk server -timidity tools vorbis -voxels vpx xmp
+media-gfx/darktable colord
 gnome-extra/gnome-color-manager raw
 x11-misc/colord scanner -gusb
 games-engines/openmw devtools
@@ -274,6 +275,7 @@ media-libs/leptonica tiff # required by tesseract, vapoursynth
 dev-lua/mpack luajit # required by neovim
 dev-python/pyyaml libyaml # required by qutebrowser
 app-text/xmlto text # required by xdg-utils
+media-gfx/blender -osl # temporary
 x11-libs/gtk+ X
 x11-libs/libva X
 dev-cpp/gtkmm X
