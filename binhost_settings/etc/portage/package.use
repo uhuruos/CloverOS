@@ -276,6 +276,7 @@ dev-lua/mpack luajit # required by neovim
 dev-python/pyyaml libyaml # required by qutebrowser
 app-text/xmlto text # required by xdg-utils
 media-gfx/blender -osl # temporary
+app-office/abiword -calendar # temporary
 x11-libs/gtk+ X
 x11-libs/libva X
 dev-cpp/gtkmm X

@@ -16,7 +16,7 @@ ftjam argyllcms
 pitivi stumpwm stumpwm-contrib tauthon racket cinelerra kodi eagle gpac sway
 
 #doesn't emerge anymore
-rogue dolphin-libretro loudmouth ots quakeforge tiemu sbt xen sauerbraten supertuxkart telegram-cli psensor opentoonz abiword blender
+rogue dolphin-libretro loudmouth ots quakeforge tiemu sbt xen sauerbraten supertuxkart telegram-cli psensor opentoonz darktable
 
 #libressl
 nxplayer murmur makemkv eiskaltdcpp retroshare acme-tiny spyder

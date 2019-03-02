@@ -33,7 +33,6 @@ games-emulation/mgba # fixes build
 media-video/vdr # fixes build
 media-libs/vigra # fixes build
 media-libs/libsfml # fixes build
-media-gfx/darktable # fixes build
 app-laptop/tp_smapi # requested
 media-fonts/vlgothic # old
 games-emulation/dolphin ** # old
@@ -70,7 +69,7 @@ www-plugins/lightspark ** # llvm
 
 #libressl
 <net-libs/nodejs-10::libressl
-dev-qt/qtnetwork::libressl
+<dev-qt/qtnetwork-5.12::libressl
 www-client/dillo
 app-editors/xemacs
 www-client/elinks
@@ -789,6 +788,7 @@ games-misc/fortune-mod-tao
 games-misc/fortune-mod-zx-error
 
 www-client/netsurf
+dev-util/netsurf-buildsystem # netsurf
 net-libs/libdom # netsurf
 media-libs/librosprite # netsurf
 media-libs/libnsgif # netsurf
