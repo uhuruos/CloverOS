@@ -4,7 +4,7 @@ if [ $(id -u) != "0" ]; then
 	exit 1
 fi
 
-kernelversion=4.19.21
+kernelversion=4.19.26
 kernelmajversion=4.19
 
 if [ ! -d '/usr/portage/packages/s/' ]; then
