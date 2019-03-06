@@ -48,3 +48,4 @@ x11-libs/vte:2.91::gentoo
 >dev-lang/tk-8.6.6
 >dev-lang/tcl-8.6.6
 >www-misc/profile-sync-daemon-6
+>games-util/lutris-0.5

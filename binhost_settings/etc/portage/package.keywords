@@ -32,7 +32,6 @@ net-p2p/mldonkey # fixes build
 games-emulation/mgba # fixes build
 media-video/vdr # fixes build
 media-libs/vigra # fixes build
-media-libs/libsfml # fixes build
 app-laptop/tp_smapi # requested
 media-fonts/vlgothic # old
 games-emulation/dolphin ** # old
