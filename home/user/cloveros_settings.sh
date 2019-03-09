@@ -58,6 +58,7 @@ case "$choice" in
 		echo "./cloveros_settings.sh 4"
 		echo "./cloveros_settings.sh 9"
 		sleep 2
+		./cloveros_settings.sh 1 || exit 1;
 		./cloveros_settings.sh zz
 		;;
 
@@ -68,7 +69,6 @@ case "$choice" in
 		fi
 
 		sudo rm /usr/portage/packages/Packages &> /dev/null
-		./cloveros_settings.sh 1 || exit 1;
 
 		if [ -d /var/db/pkg/net-p2p/rtorrent-ps-9999/ ]; then
 			sudo emerge -C rtorrent-ps
