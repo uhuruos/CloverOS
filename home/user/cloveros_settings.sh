@@ -67,6 +67,7 @@ case "$choice" in
 			exit 1
 		fi
 
+		sudo rm /usr/portage/packages/Packages &> /dev/null
 		./cloveros_settings.sh 1 || exit 1;
 
 		if [ -d /var/db/pkg/net-p2p/rtorrent-ps-9999/ ]; then
@@ -78,8 +79,6 @@ case "$choice" in
 			sudo emerge -C rfkill
 			sudo emerge -1 portage
 		fi
-
-		sudo rm /usr/portage/packages/Packages &> /dev/null
 
 		sudo emerge --sync
 		sudo emerge -uvD @world
