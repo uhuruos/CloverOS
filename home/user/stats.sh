@@ -164,14 +164,13 @@ void main(void) {
 			char soundfilename[50];
 			sprintf(soundfilename, "%s%s%s", "/home/", getenv("USER"), "/.asoundrc");
 			file = getfile(soundfilename, buffer);
-			if (file != 0) {
+			if (file) {
 				file = strstr(file, "defaults.pcm.card ");
 				if (file != NULL) {
-					file = file+18;
-					*strchr(file, '\n') = '\0';
+					*strchr(file+18, '\n') = '\0';
 				}
 			}
-			if (file >= '0' && file <= '9') {
+			if (file) {
 				sprintf(soundfilename, "%s%s%s", "/proc/asound/card", file, "/codec#0");
 			} else {
 				strcpy(soundfilename, "/proc/asound/card0/codec#0");
