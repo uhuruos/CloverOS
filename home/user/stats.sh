@@ -167,7 +167,8 @@ void main(void) {
 			if (file) {
 				file = strstr(file, "defaults.pcm.card ");
 				if (file != NULL) {
-					*strchr(file+18, '\n') = '\0';
+					file = file+18;
+					*strchr(file, '\n') = '\0';
 				}
 			}
 			if (file) {
