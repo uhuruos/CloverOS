@@ -78,6 +78,7 @@ app-crypt/kencfs-plasma
 app-crypt/keybase
 app-crypt/veracrypt
 app-doc/doxygen
+app-doc/eclass-manpages
 app-doc/gimp-help
 app-doc/linux-kernel-in-a-nutshell
 app-doc/phrack-all
@@ -182,7 +183,6 @@ app-office/texstudio
 app-portage/conf-update
 app-portage/cpuid2cpuflags
 app-portage/diffmask
-app-portage/eclass-manpages
 app-portage/eix
 app-portage/elogviewer
 app-portage/euscan
@@ -246,6 +246,7 @@ app-vim/editorconfig-vim
 app-vim/extra-syntax
 app-vim/vim-tmux
 dev-db/dbeaver-bin
+dev-db/mariadb
 dev-db/postgresql
 dev-db/redis
 dev-db/rethinkdb
@@ -864,6 +865,7 @@ net-analyzer/masscan
 net-analyzer/mtr
 net-analyzer/nagios
 net-analyzer/nagstamon
+net-analyzer/netcat
 net-analyzer/nethogs
 net-analyzer/nload
 net-analyzer/nmap
@@ -895,6 +897,7 @@ net-ftp/proftpd
 net-ftp/pure-ftpd
 net-ftp/vsftpd
 net-im/bitlbee
+net-im/choqok
 net-im/discord-bin
 net-im/mcabber
 net-im/pidgin

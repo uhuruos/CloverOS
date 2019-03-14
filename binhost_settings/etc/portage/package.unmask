@@ -98,6 +98,7 @@ media-plugins/gimp-paint-studio::jorgicio
 net-im/telegram-cli::jorgicio
 sys-apps/gtop::jorgicio
 media-video/shotcut::jorgicio
+net-im/corebird::jorgicio
 
 games-util/steam-launcher::steam-overlay
 

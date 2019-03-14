@@ -32,6 +32,8 @@ net-p2p/mldonkey # fixes build
 games-emulation/mgba # fixes build
 media-video/vdr # fixes build
 media-libs/vigra # fixes build
+dev-db/mariadb # fixes build
+app-emulation/libvirt # fix
 app-laptop/tp_smapi # requested
 media-fonts/vlgothic # old
 games-emulation/dolphin ** # old
@@ -53,6 +55,7 @@ media-libs/l-smash ** # vapoursynth-l-smash-works
 media-plugins/vapoursynth-d2vsource ** # ffmpeg
 media-video/mpv # old
 media-libs/shaderc # mpv
+=dev-lang/go-1.12 # fzf
 <sys-devel/llvm-8 # llvm7
 <sys-devel/llvmgold-8 # llvm
 <sys-devel/llvm-common-8 # llvm
@@ -79,6 +82,8 @@ app-admin/apache-tools
 net-misc/spice-gtk
 
 #keyworded, remove when stable exists
+#net-analyzer/openbsd-netcat
+net-im/corebird
 games-emulation/reicast
 net-analyzer/masscan
 net-analyzer/zmap
