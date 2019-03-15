@@ -105,7 +105,6 @@ app-emulation/e-uae
 app-emulation/fuse
 app-emulation/nemu
 app-emulation/open-vm-tools
-app-emulation/playonlinux
 app-emulation/q4wine
 app-emulation/qemu
 app-emulation/qt-virt-manager
@@ -865,7 +864,6 @@ net-analyzer/masscan
 net-analyzer/mtr
 net-analyzer/nagios
 net-analyzer/nagstamon
-net-analyzer/netcat
 net-analyzer/nethogs
 net-analyzer/nload
 net-analyzer/nmap
