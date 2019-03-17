@@ -4,8 +4,8 @@ if [ $(id -u) != "0" ]; then
 	exit 1
 fi
 
-mkdir iso-libre/
-cd iso-libre/
+mkdir libre_image/ libre_iso/
+cd libre_image/
 
 gitprefix="https://gitgud.io/cloveros/cloveros/raw/master"
 
@@ -124,19 +124,20 @@ exit
 EOF
 
 cd ..
-umount -l image/*
-wget $gitprefix/livecd_files.tar.xz
-tar xf livecd_files.tar.xz
-rm -R *aufs*
-mksquashfs image/ image.squashfs -b 1024k -comp xz -Xbcj x86 -Xdict-size 100%
-mv image.squashfs files
+umount -l libre_image/*
+if [ ! -f livecd_files.tar.xz ]; then
+	wget $gitprefix/livecd_files.tar.xz
+fi
+tar -C libre_image/lib/modules/ -xf livecd_files.tar.xz 4.5.2-aufs-r1/
+mksquashfs libre_image/ image.squashfs -b 1024k -comp xz -Xbcj x86 -Xdict-size 100%
+tar -C libre_iso/ xf livecd_files.tar.xz files/
+mv image.squashfs libre_iso/files/
+tar xkf livecd_files.tar.xz isohdpfx.bin
 xorriso -as mkisofs -r -J \
 	-joliet-long -l -cache-inodes \
 	-isohybrid-mbr isohdpfx.bin \
 	-partition_offset 16 -A "Gentoo Live" \
 	-b isolinux/isolinux.bin -c isolinux/boot.cat \
 	-no-emul-boot -boot-load-size 4 -boot-info-table  \
-	-o CloverOS_Libre-x86_64-$(date +"%Y%m%d").iso files
-mv CloverOS_Libre-x86_64-$(date +"%Y%m%d").iso ..
-cd ..
-rm -Rf iso-libre/
+	-o CloverOS-x86_64-$(date +"%Y%m%d").iso libre_iso/files/
+rm -Rf libre_image/ libre_iso/ isohdpfx.bin &

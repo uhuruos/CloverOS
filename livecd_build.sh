@@ -4,17 +4,14 @@ if [ $(id -u) != "0" ]; then
 	exit 1
 fi
 
-mkdir iso/
-cd iso/
+mkdir image/ iso/
+cd image/
 
 gitprefix="https://gitgud.io/cloveros/cloveros/raw/master"
 
 rootpassword=password
 username=livecd
 userpassword=password
-
-mkdir image/
-cd image/
 
 builddate=$(curl -s http://distfiles.gentoo.org/releases/amd64/autobuilds/current-stage3-amd64/ | sed -nr 's/.*href="stage3-amd64-([0-9].*).tar.xz">.*/\1/p')
 wget http://distfiles.gentoo.org/releases/amd64/autobuilds/current-stage3-amd64/stage3-amd64-$builddate.tar.xz
@@ -125,18 +122,19 @@ EOF
 
 cd ..
 umount -l image/*
-wget $gitprefix/livecd_files.tar.xz
-tar xf livecd_files.tar.xz
-mv *aufs* image/lib/modules/
+if [ ! -f livecd_files.tar.xz ]; then
+	wget $gitprefix/livecd_files.tar.xz
+fi
+tar -C image/lib/modules/ -xf livecd_files.tar.xz 4.5.2-aufs-r1/
 mksquashfs image/ image.squashfs -b 1024k -comp xz -Xbcj x86 -Xdict-size 100%
-mv image.squashfs files
+tar -C iso/ xf livecd_files.tar.xz files/
+mv image.squashfs iso/files/
+tar xkf livecd_files.tar.xz isohdpfx.bin
 xorriso -as mkisofs -r -J \
 	-joliet-long -l -cache-inodes \
 	-isohybrid-mbr isohdpfx.bin \
 	-partition_offset 16 -A "Gentoo Live" \
 	-b isolinux/isolinux.bin -c isolinux/boot.cat \
 	-no-emul-boot -boot-load-size 4 -boot-info-table  \
-	-o CloverOS-x86_64-$(date +"%Y%m%d").iso files
-mv CloverOS-x86_64-$(date +"%Y%m%d").iso ..
-cd ..
-rm -Rf iso/
+	-o CloverOS-x86_64-$(date +"%Y%m%d").iso iso/files/
+rm -Rf image/ iso/ isohdpfx.bin &
