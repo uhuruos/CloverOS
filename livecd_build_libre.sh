@@ -125,7 +125,7 @@ umount -l image/*
 [ ! -f livecd_files.tar.xz ] && wget $gitprefix/livecd_files.tar.xz
 tar -C libre_image/lib/modules/ -xf livecd_files.tar.xz 4.5.2-aufs-r1/
 mkdir -p libre_iso/files/
-mksquashfs image/ libre_iso/files/image.squashfs -b 1024k -comp xz -Xbcj x86 -Xdict-size 100%
+mksquashfs libre_image/ libre_iso/files/image.squashfs -b 1024k -comp xz -Xbcj x86 -Xdict-size 100%
 tar -C libre_iso/ -xf livecd_files.tar.xz files/
 xorriso -as mkisofs -r -J \
 	-joliet-long -l -cache-inodes \
