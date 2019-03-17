@@ -13,9 +13,6 @@ rootpassword=password
 username=livecd
 userpassword=password
 
-mkdir image/
-cd image/
-
 builddate=$(curl -s http://distfiles.gentoo.org/releases/amd64/autobuilds/current-stage3-amd64/ | sed -nr 's/.*href="stage3-amd64-([0-9].*).tar.xz">.*/\1/p')
 wget http://distfiles.gentoo.org/releases/amd64/autobuilds/current-stage3-amd64/stage3-amd64-$builddate.tar.xz
 tar pxf stage3*
@@ -41,7 +38,7 @@ PORTAGE_NICENESS=19
 PORTAGE_BINHOST="https://cloveros.ga"
 EMERGE_DEFAULT_OPTS="--keep-going=y --autounmask-write=y --jobs=4 -G"
 ACCEPT_KEYWORDS="**"
-ACCEPT_LICENSE="*"
+ACCEPT_LICENSE="-* @FREE"
 binhost_mirrors="\$PORTAGE_BINHOST,https://useast.cloveros.ga,https://uswest.cloveros.ga,https://ca.cloveros.ga,https://fr.cloveros.ga,https://nl.cloveros.ga,https://uk.cloveros.ga,https://au.cloveros.ga,https://sg.cloveros.ga,https://jp.cloveros.ga,"
 FETCHCOMMAND_HTTPS="sh -c \"aria2c -x2 -s99 -j99 -k1M -d \"\\\${DISTDIR}\" -o \"\\\${FILE}\" \\\\\\\$(sed -e \"s#,#\\\${DISTDIR}/\\\${FILE}\"\ \"#g\" -e \"s#\$PKGDIR##g\" -e \"s#.partial##g\" <<< \$binhost_mirrors) & aria2c --allow-overwrite -d \"\\\${DISTDIR}\" -o \"\\\${FILE}.asc\" \\\\\\\$(sed -e \"s#,#/s/signatures/\\\${DISTDIR}/\\\${FILE}.asc\"\ \"#g\" -e \"s#\$PKGDIR##g\" -e \"s#.partial##g\" <<< \$binhost_mirrors) && wait && gpg --verify \"\\\${DISTDIR}/\\\${FILE}.asc\" \"\\\${DISTDIR}/\\\${FILE}\" && rm \"\\\${DISTDIR}/\\\${FILE}.asc\"\""' >> /etc/portage/make.conf
 
@@ -128,7 +125,7 @@ umount -l image/*
 [ ! -f livecd_files.tar.xz ] && wget $gitprefix/livecd_files.tar.xz
 tar -C libre_image/lib/modules/ -xf livecd_files.tar.xz 4.5.2-aufs-r1/
 mkdir -p libre_iso/files/
-mksquashfs image/ iso/files/image.squashfs -b 1024k -comp xz -Xbcj x86 -Xdict-size 100%
+mksquashfs image/ libre_iso/files/image.squashfs -b 1024k -comp xz -Xbcj x86 -Xdict-size 100%
 tar -C libre_iso/ -xf livecd_files.tar.xz files/
 xorriso -as mkisofs -r -J \
 	-joliet-long -l -cache-inodes \
