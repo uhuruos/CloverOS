@@ -87,7 +87,7 @@ usermod -aG audio,video,games,input $username
 binutils-config --linker ld.gold
 cd /home/$username/
 rm .bash_profile
-wget $gitprefix/home/user/{.bash_profile,.zprofile,.zshrc,.fvwm2rc,.Xdefaults,wallpaper.png,.xbindkeysrc,screenfetch-dev,cloveros_settings.sh,stats.sh,rotate_screen.sh,.emacs,.rtorrent.rc}
+wget $gitprefix/home/user/{.bash_profile,.zprofile,.zshrc,.fvwm2rc,.Xdefaults,wallpaper.png,wallpaper43.png,wallpaper1610.png,.xbindkeysrc,screenfetch-dev,cloveros_settings.sh,stats.sh,rotate_screen.sh,.emacs,.rtorrent.rc}
 chmod +x screenfetch-dev cloveros_settings.sh stats.sh rotate_screen.sh
 mkdir -p .emacs.d/backups/ .emacs.d/autosaves/ Downloads/ .rtorrent/ .mpv/ .config/spacefm/ .config/nitrogen/ .config/nomacs/ Desktop/
 sed -i "s@/home/user/@/home/$username/@" .rtorrent.rc
@@ -114,7 +114,7 @@ fvwm&
 nitrogen --set-zoom wallpaper.png
 urxvt -e sudo ./livecd_install.sh
 fi' >> /home/$username/.bash_profile
-wget $gitprefix/{livecd_install.sh,home/user/wallpaper1610.png,home/user/wallpaper169.png,home/user/wallpaper43.png} -P /home/$username/
+wget $gitprefix/livecd_install.sh -P /home/$username/
 chmod +x /home/$username/livecd_install.sh
 
 rm -Rf /usr/portage/packages/* /etc/resolv.conf
