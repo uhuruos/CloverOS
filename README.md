@@ -175,7 +175,7 @@ This disables the binhost and uses Portage's ebuilds for packages. Now you can e
 * [Things preventing CloverOS Libre from being 100% free software:](#things-preventing-cloveros-libre-from-being-100-free-software)
 * [Does CloverOS have binaries?](#does-cloveros-have-binaries)
 * [How often is this updated?](#how-often-is-this-updated)
-* [Does everything build with CFLAGS="-Ofast -mmmx -mssse3 -mfpmath=both -pipe -funroll-loops -flto=8 -floop-block -floop-interchange -floop-strip-mine -ftree-loop-distribution" ?](#does-everything-build-with-cflags-ofast-mmmx-mssse3-mfpmath-both-pipe-funroll-loops-flto8-floop-block-floop-interchange-floop-strip-mine-ftree-loop-distribution-)
+* [Does everything build with CFLAGS="-Ofast -mmmx -mssse3 -mfpmath=both -pipe -funroll-loops -flto=8 -floop-block -floop-interchange -floop-strip-mine -ftree-loop-distribution" ?](#does-everything-build-with-cflags-ofast-mmmx-mssse3-mfpmathboth-pipe-funroll-loops-flto8-floop-block-floop-interchange-floop-strip-mine-ftree-loop-distribution-)
 * [The default shell is bash but fvwm launches urxvt -e zsh?](#the-default-shell-is-bash-but-fvwm-launches-urxvt-e-zsh)
 * [Which DE does this come with?](#which-de-does-this-come-with)
 * [Installing a DE](#installing-a-de)
