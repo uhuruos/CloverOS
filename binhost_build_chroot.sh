@@ -4,9 +4,9 @@ if [ $(id -u) != '0' ]; then
 	exit 1
 fi
 
-mkdir gentoo
+mkdir gentoo/
 
-cd gentoo
+cd gentoo/
 builddate=$(curl -s http://distfiles.gentoo.org/releases/amd64/autobuilds/current-stage3-amd64/ | sed -nr 's/.*href="stage3-amd64-([0-9].*).tar.xz">.*/\1/p')
 wget http://distfiles.gentoo.org/releases/amd64/autobuilds/current-stage3-amd64/stage3-amd64-$builddate.tar.xz
 tar pxf stage3*
@@ -35,7 +35,7 @@ USE="-vaapi" emerge -1 mesa
 USE="binary" emerge -1 scala
 emerge -1 netcat6
 emerge genkernel gentoo-sources
-wget https://liquorix.net/sources/4.14/config.amd64
+wget https://liquorix.net/sources/4.19/config.amd64
 binutils-config --linker ld.bfd ; genkernel --kernel-config=config.amd64 all ; binutils-config --linker ld.gold
 emerge layman
 layman -S

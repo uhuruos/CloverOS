@@ -4,9 +4,9 @@ if [ $(id -u) != '0' ]; then
 	exit 1
 fi
 
-mkdir gentoo
+mkdir gentoo/
 
-cd gentoo
+cd gentoo/
 builddate=$(curl -s http://distfiles.gentoo.org/releases/x86/autobuilds/current-stage3-i686/ | sed -nr 's/.*href="stage3-i686-([0-9].*).tar.xz">.*/\1/p')
 wget http://distfiles.gentoo.org/releases/x86/autobuilds/current-stage3-i686/stage3-i686-$builddate.tar.xz
 tar pxf stage3*
@@ -38,7 +38,7 @@ USE="-vaapi" emerge -1 mesa
 USE="binary" emerge -1 scala
 emerge -1 netcat6
 emerge genkernel gentoo-sources
-wget https://liquorix.net/sources/4.14/config.i386-pae
+wget https://liquorix.net/sources/4.19/config.i386-pae
 binutils-config --linker ld.bfd ; genkernel --kernel-config=config.i386-pae all ; binutils-config --linker ld.gold
 emerge layman
 layman -S
