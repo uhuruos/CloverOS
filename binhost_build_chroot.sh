@@ -26,7 +26,7 @@ rm /var/lib/portage/world
 rm -R /etc/portage/package.*
 wget https://gitgud.io/cloveros/cloveros/raw/master/binhost_settings/etc/portage/{make.conf,package.use,package.keywords,package.env,package.mask,package.unmask} -P /etc/portage/
 mkdir /etc/portage/env
-wget https://gitgud.io/cloveros/cloveros/raw/master/binhost_settings/etc/portage/env/{no-lto,no-lto-graphite,no-lto-graphite-ofast,no-lto-o3,no-lto-ofast,no-o3,no-ofast,no-gold,no-mfpmath,size,pcsx2} -P /etc/portage/env/
+wget https://gitgud.io/cloveros/cloveros/raw/master/binhost_settings/etc/portage/env/{no-lto,no-lto-graphite,no-lto-graphite-ofast,no-lto-o3,no-lto-ofast,no-o3,no-ofast,no-gold,no-mfpmath,no-avx,size,pcsx2} -P /etc/portage/env/
 wget https://gitgud.io/cloveros/cloveros/raw/master/binhost_settings/var/lib/portage/world -O /var/lib/portage/world
 
 CFLAGS="-Ofast -mmmx -mssse3 -pipe -flto=8 -funroll-loops" emerge gcc
