@@ -13,7 +13,7 @@ mkdir image/
 cd image/
 
 builddate=$(curl -sk https://distfiles.gentoo.org/releases/amd64/autobuilds/current-stage3-amd64/ | sed -nr 's/.*href="stage3-amd64-([0-9].*).tar.xz">.*/\1/p')
-wget --no-check-certificate http://distfiles.gentoo.org/releases/amd64/autobuilds/current-stage3-amd64/stage3-amd64-$builddate.tar.xz
+wget --no-check-certificate https://distfiles.gentoo.org/releases/amd64/autobuilds/current-stage3-amd64/stage3-amd64-$builddate.tar.xz
 tar pxf stage3*
 rm -f stage3*
 
