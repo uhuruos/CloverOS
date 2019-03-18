@@ -121,7 +121,7 @@ exit
 EOF
 
 cd ..
-umount -l image/*
+umount -l libre_image/*
 [ ! -f livecd_files.tar.xz ] && wget $gitprefix/livecd_files.tar.xz
 tar -C libre_image/lib/modules/ -xf livecd_files.tar.xz 4.5.2-aufs-r1/
 mkdir -p libre_iso/files/
