@@ -46,8 +46,7 @@ FETCHCOMMAND_HTTPS="sh -c \"aria2c -x2 -s99 -j99 -k1M -d \"\\\${DISTDIR}\" -o \"
 #wget http://liquorix.net/sources/4.19/config.amd64
 #genkernel --kernel-config=config.amd64 all
 wget https://cloveros.ga/s/kernel-libre.tar.lzma https://cloveros.ga/s/signatures/s/kernel-libre.tar.lzma.asc
-gpg --verify kernel-libre.tar.lzma.asc kernel-libre.tar.lzma
-tar xf kernel-libre.tar.lzma
+gpg --verify kernel-libre.tar.lzma.asc kernel-libre.tar.lzma && tar xf kernel-libre.tar.lzma
 rm kernel-libre.tar.lzma kernel-libre.tar.lzma.asc
 
 emerge grub dhcpcd
