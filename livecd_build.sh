@@ -26,12 +26,9 @@ cat << EOF | chroot .
 
 emerge-webrsync
 eselect profile set "default/linux/amd64/17.0/hardened"
-
-PORTAGE_BINHOST="https://cloveros.ga" ACCEPT_KEYWORDS="**" emerge -1G aria2 portage python:2.7 python:3.6 openssh iputils wget curl libcap
 while ! gpg --list-keys "CloverOS GNU/Linux (Package signing)"; do
 	gpg --keyserver hkp://pool.sks-keyservers.net --recv-key "78F5 AC55 A120 07F2 2DF9 A28A 78B9 3F76 B8E4 2805"
 done
-
 echo '
 CFLAGS="-O3 -march=native -mfpmath=both -pipe -funroll-loops -floop-block -floop-interchange -floop-strip-mine -ftree-loop-distribution"
 CXXFLAGS="\${CFLAGS}"
