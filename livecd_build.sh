@@ -4,14 +4,13 @@ if [ $(id -u) != "0" ]; then
 	exit 1
 fi
 
-mkdir image/
-cd image/
-
 gitprefix="https://gitgud.io/cloveros/cloveros/raw/master"
-
 rootpassword=password
 username=livecd
 userpassword=password
+
+mkdir image/
+cd image/
 
 builddate=$(curl -s http://distfiles.gentoo.org/releases/amd64/autobuilds/current-stage3-amd64/ | sed -nr 's/.*href="stage3-amd64-([0-9].*).tar.xz">.*/\1/p')
 wget http://distfiles.gentoo.org/releases/amd64/autobuilds/current-stage3-amd64/stage3-amd64-$builddate.tar.xz
@@ -27,7 +26,11 @@ cat << EOF | chroot .
 
 emerge-webrsync
 eselect profile set "default/linux/amd64/17.0/hardened"
+
 PORTAGE_BINHOST="https://cloveros.ga" ACCEPT_KEYWORDS="**" emerge -1G aria2 portage python:2.7 python:3.6 openssh iputils wget curl libcap
+while ! gpg --list-keys "CloverOS GNU/Linux (Package signing)"; do
+	gpg --keyserver hkp://pool.sks-keyservers.net --recv-key "78F5 AC55 A120 07F2 2DF9 A28A 78B9 3F76 B8E4 2805"
+done
 
 echo '
 CFLAGS="-O3 -march=native -mfpmath=both -pipe -funroll-loops -floop-block -floop-interchange -floop-strip-mine -ftree-loop-distribution"
@@ -42,10 +45,6 @@ ACCEPT_LICENSE="*"
 binhost_mirrors="\$PORTAGE_BINHOST,https://useast.cloveros.ga,https://uswest.cloveros.ga,https://ca.cloveros.ga,https://fr.cloveros.ga,https://nl.cloveros.ga,https://uk.cloveros.ga,https://au.cloveros.ga,https://sg.cloveros.ga,https://jp.cloveros.ga,"
 FETCHCOMMAND_HTTPS="sh -c \"aria2c -x2 -s99 -j99 -k1M -d \"\\\${DISTDIR}\" -o \"\\\${FILE}\" \\\\\\\$(sed -e \"s#,#\\\${DISTDIR}/\\\${FILE}\"\ \"#g\" -e \"s#\$PKGDIR##g\" -e \"s#.partial##g\" <<< \$binhost_mirrors) & aria2c --allow-overwrite -d \"\\\${DISTDIR}\" -o \"\\\${FILE}.asc\" \\\\\\\$(sed -e \"s#,#/s/signatures/\\\${DISTDIR}/\\\${FILE}.asc\"\ \"#g\" -e \"s#\$PKGDIR##g\" -e \"s#.partial##g\" <<< \$binhost_mirrors) && wait && gpg --verify \"\\\${DISTDIR}/\\\${FILE}.asc\" \"\\\${DISTDIR}/\\\${FILE}\" && rm \"\\\${DISTDIR}/\\\${FILE}.asc\"\""' >> /etc/portage/make.conf
 
-while ! gpg --list-keys "CloverOS GNU/Linux (Package signing)"; do
-	gpg --keyserver hkp://pool.sks-keyservers.net --recv-key "78F5 AC55 A120 07F2 2DF9 A28A 78B9 3F76 B8E4 2805"
-done
-
 #emerge gentoo-sources genkernel
 #wget http://liquorix.net/sources/4.19/config.amd64
 #genkernel --kernel-config=config.amd64 all
@@ -55,7 +54,6 @@ tar xf kernel.tar.lzma
 rm kernel.tar.lzma kernel.tar.lzma.asc
 
 emerge grub dhcpcd
-
 rc-update add dhcpcd default
 
 echo "root:$rootpassword" | chpasswd
