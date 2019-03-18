@@ -129,4 +129,4 @@ xorriso -as mkisofs -r -J \
 	-b isolinux/isolinux.bin -c isolinux/boot.cat \
 	-no-emul-boot -boot-load-size 4 -boot-info-table  \
 	-o CloverOS_Libre-x86_64-$(date +"%Y%m%d").iso libre_iso/files/
-rm -Rf libre_image/ libre_iso/ &
+rm -Rf libre_image/ libre_iso/
