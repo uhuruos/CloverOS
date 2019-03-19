@@ -119,14 +119,14 @@ cd ..
 umount -l libre_image/*
 [ ! -f livecd_files.tar.xz ] && wget $gitprefix/livecd_files.tar.xz
 tar -C libre_image/lib/modules/ -xf livecd_files.tar.xz 4.5.2-aufs-r1/
-mkdir -p libre_iso/files/
-mksquashfs libre_image/ libre_iso/files/image.squashfs -b 1024k -comp xz -Xbcj x86 -Xdict-size 100%
-tar -C libre_iso/ -xf livecd_files.tar.xz files/
+tar -C libre_image xf livecd_files.tar.xz files/
+mv libre_image/files/ libre_iso/
+mksquashfs libre_image/ libre_iso/image.squashfs -b 1024k -comp xz -Xbcj x86 -Xdict-size 100%
 xorriso -as mkisofs -r -J \
 	-joliet-long -l -cache-inodes \
 	-isohybrid-mbr /usr/share/syslinux/isohdpfx.bin \
 	-partition_offset 16 -A "Gentoo Live" \
 	-b isolinux/isolinux.bin -c isolinux/boot.cat \
 	-no-emul-boot -boot-load-size 4 -boot-info-table  \
-	-o CloverOS_Libre-x86_64-$(date +"%Y%m%d").iso libre_iso/files/
+	-o CloverOS_Libre-x86_64-$(date +"%Y%m%d").iso libre_iso/
 rm -Rf libre_image/ libre_iso/
