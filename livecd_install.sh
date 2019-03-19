@@ -92,4 +92,4 @@ exit
 
 EOF
 
-reboot
+echo Installed, you can reboot and remove install media now
