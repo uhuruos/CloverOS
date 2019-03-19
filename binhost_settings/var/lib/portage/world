@@ -314,7 +314,6 @@ dev-util/valgrind
 dev-util/visual-regexp
 dev-util/vmtouch
 dev-util/xxdiff
-dev-vcs/bzr-fastimport
 dev-vcs/bzrtools
 dev-vcs/cvs
 dev-vcs/git

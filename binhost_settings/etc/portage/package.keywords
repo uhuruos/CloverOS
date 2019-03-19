@@ -55,7 +55,8 @@ media-libs/l-smash ** # vapoursynth-l-smash-works
 media-plugins/vapoursynth-d2vsource ** # ffmpeg
 media-video/mpv # old
 media-libs/shaderc # mpv
-=dev-lang/go-1.12 # fzf
+dev-db/sqlite # avidemux
+dev-lang/go # fzf
 <sys-devel/llvm-8 # llvm7
 <sys-devel/llvmgold-8 # llvm
 <sys-devel/llvm-common-8 # llvm
