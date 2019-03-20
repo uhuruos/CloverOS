@@ -16,7 +16,7 @@ fi
 #quickpkg --include-unmodified-config=y "*/*" 2>&1 | ansi2html > /usr/portage/packages/s/quickpkg.txt
 #emerge -B sudo openssh postfix dcron vixie-cron cronie fcron anacron ungoogled-chromium
 #emerge -C hwinfo ntfs3g && emerge -b ntfs3g && emerge -b hwinfo
-#PKGDIR="/usr/portage/packages/s/nodbus/" USE="-dbus -webengine -trash-panel-plugin" emerge -B glib qtgui PyQt5 thunar
+#PKGDIR="/usr/portage/packages/s/nodbus/" USE="-dbus -webengine -trash-panel-plugin" emerge -B glib qtgui PyQt5 thunar glib-utils
 
 emerge --sync
 layman -S
