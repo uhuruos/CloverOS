@@ -161,13 +161,16 @@ void main(void) {
 		sprintf(buffer, "%ld", (time_t)time(NULL));
 		char volume[5];
 		if (atoll(buffer)%60 == 0 || volume[0] == '\0') {
+			strcpy(volume, "N/A");
 			char soundfilename[50];
 			sprintf(soundfilename, "%s%s%s", "/home/", getenv("USER"), "/.asoundrc");
 			file = getfile(soundfilename, buffer);
-			file = strstr(file, "defaults.pcm.card ");
-			if (file && file != NULL) {
-				file = file+18;
-				*strchr(file, '\n') = '\0';
+			if (file) {
+				file = strstr(file, "defaults.pcm.card ");
+				if (file != NULL) {
+					file = file+18;
+					*strchr(file, '\n') = '\0';
+				}
 			}
 			if (file) {
 				sprintf(soundfilename, "%s%s%s", "/proc/asound/card", file, "/codec#0");
@@ -175,13 +178,13 @@ void main(void) {
 				strcpy(soundfilename, "/proc/asound/card0/codec#0");
 			}
 			file = getfile(soundfilename, buffer);
-			file = strstr(file, "Amp-Out vals:  [0x");
-			if (file && file != NULL) {
-				file = file+18;
-				*strchr(file, ' ') = '\0';
-				sprintf(volume, "%lu%%", strtol(file, NULL, 16));
-			} else {
-				strcpy(volume, "N/A");
+			if (file) {
+				file = strstr(file, "Amp-Out vals:  [0x");
+				if (file != NULL) {
+					file = file+18;
+					*strchr(file, ' ') = '\0';
+					sprintf(volume, "%lu%%", strtol(file, NULL, 16));
+				}
 			}
 		}
 
