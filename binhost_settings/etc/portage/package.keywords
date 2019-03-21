@@ -68,6 +68,7 @@ dev-lang/go # fzf
 <sys-libs/compiler-rt-8 # llvm
 <sys-libs/compiler-rt-sanitizers-8 # llvm
 <sys-devel/lld-8 # llvm
+<dev-util/lldb-8
 dev-libs/beignet ** # llvm
 www-plugins/lightspark ** # llvm
 
@@ -125,7 +126,6 @@ net-vpn/wireguard
 x11-misc/xcalib
 media-gfx/displaycal
 dev-util/trace-cmd
-dev-util/lldb
 games-emulation/rpcs3 **
 www-client/google-chrome-unstable
 games-fps/ezquake-bin
