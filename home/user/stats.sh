@@ -178,7 +178,7 @@ void main(void) {
 			}
 			file = getfile(soundfilename, buffer);
 			file = strstr(file, "Amp-Out vals:  [0x");
-			if (file != NULL) {
+			if (file && file != NULL) {
 				file = file+18;
 				*strchr(file, ' ') = '\0';
 				sprintf(volume, "%lu%%", strtol(file, NULL, 16));
