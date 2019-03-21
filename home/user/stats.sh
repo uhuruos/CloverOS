@@ -177,8 +177,9 @@ void main(void) {
 				strcpy(soundfilename, "/proc/asound/card0/codec#0");
 			}
 			file = getfile(soundfilename, buffer);
-			if (file) {
-				file = strstr(file, "Amp-Out vals:  [0x")+18;
+			file = strstr(file, "Amp-Out vals:  [0x");
+			if (file != NULL) {
+				file = file+18;
 				*strchr(file, ' ') = '\0';
 				sprintf(volume, "%lu%%", strtol(file, NULL, 16));
 			} else {
