@@ -161,7 +161,6 @@ void main(void) {
 		sprintf(buffer, "%ld", (time_t)time(NULL));
 		char volume[5];
 		if (atoll(buffer)%60 == 0 || volume[0] == '\0') {
-			strcpy(volume, "N/A");
 			char soundfilename[50];
 			sprintf(soundfilename, "%s%s%s", "/home/", getenv("USER"), "/.asoundrc");
 			file = getfile(soundfilename, buffer);
@@ -177,6 +176,7 @@ void main(void) {
 			} else {
 				strcpy(soundfilename, "/proc/asound/card0/codec#0");
 			}
+			strcpy(volume, "N/A");
 			file = getfile(soundfilename, buffer);
 			if (file) {
 				file = strstr(file, "Amp-Out vals:  [0x");
