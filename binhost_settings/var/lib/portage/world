@@ -1150,7 +1150,6 @@ www-client/uget
 www-client/w3m
 www-client/waterfox
 www-misc/fcgiwrap
-www-misc/profile-sync-daemon
 www-misc/urlwatch
 www-plugins/adobe-flash
 www-plugins/chrome-binary-plugins

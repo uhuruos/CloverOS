@@ -42,10 +42,10 @@
 */*::vapoursynth
 */*::vifino-overlay
 
-net-libs/nodejs::gentoo
-dev-qt/qtnetwork::gentoo
-x11-libs/vte:2.91::gentoo
->dev-lang/tk-8.6.6
->dev-lang/tcl-8.6.6
->www-misc/profile-sync-daemon-6
->games-util/lutris-0.5
+net-libs/nodejs::gentoo # overlay
+dev-qt/qtnetwork::gentoo # overlay
+x11-libs/vte:2.91::gentoo # overlay
+
+>dev-lang/tk-8.6.6 # fixes build
+>dev-lang/tcl-8.6.6 # fixes build
+>games-util/lutris-0.5 # fixes build
