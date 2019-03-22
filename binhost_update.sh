@@ -10,7 +10,8 @@ if [ ! -d '/usr/portage/packages/s/signatures/' ]; then
 	mkdir -p /usr/portage/packages/s/signatures/
 fi
 
-#quickpkg --include-unmodified-config=y "*/*" 2>&1 | ansi2html > /usr/portage/packages/s/quickpkg.txt
+#quickpkg --include-unmodified-config=y "*/*" 2>&1 | ansi2html > /usr/portage/packages/s/quickpkg.html
+
 #emerge -C hwinfo ntfs3g && emerge ntfs3g && emerge hwinfo
 
 emerge --sync
@@ -20,13 +21,14 @@ emerge -b @preserved-rebuild
 emerge --depclean
 eclean -d distfiles
 
-eclean -d packages
-emerge -B sudo openssh postfix dcron vixie-cron cronie fcron anacron ungoogled-chromium
-PKGDIR="/usr/portage/packages/s/nodbus/" USE="-dbus -webengine -trash-panel-plugin" emerge -B glib qtgui PyQt5 thunar
+echo -e "app-admin/sudo\nnet-misc/openssh\nmail-mta/postfix\nwww-client/ungoogled-chromium\nsys-process/anacron\nsys-process/cronie\nsys-process/dcron\nsys-process/fcron\nsys-process/vixie-cron" > /tmp/exclude.txt
+eclean -d -e /tmp/exclude.txt packages
+#emerge -B sudo openssh postfix dcron vixie-cron cronie fcron anacron ungoogled-chromium
+#PKGDIR="/usr/portage/packages/s/nodbus/" USE="-dbus -webengine -trash-panel-plugin" emerge -B glib qtgui PyQt5 thunar
 
+EIX_LIMIT=0 eix -IF | grep -v "Available versions" | ansi2html > /usr/portage/packages/s/packages.html
 php mirrors/index.php > /usr/portage/packages/index.html
 php mirrors/indexalt.php > /usr/portage/packages/indexalt.html
-EIX_LIMIT=0 eix -IF | grep -v "Available versions" | ansi2html > /usr/portage/packages/s/packages.html
 
 rm -Rf /usr/portage/packages/s/signatures/*
 find /usr/portage/packages/ -type d | sed "s#/usr/portage/packages/##" | grep -v "^s/signatures$" | xargs -I{} mkdir /usr/portage/packages/s/signatures/{}

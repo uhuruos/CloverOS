@@ -46,6 +46,6 @@ net-libs/nodejs::gentoo # overlay
 dev-qt/qtnetwork::gentoo # overlay
 x11-libs/vte:2.91::gentoo # overlay
 
->dev-lang/tk-8.6.6 # fixes build
->dev-lang/tcl-8.6.6 # fixes build
+>dev-lang/tk-8.6 # fixes build
+>dev-lang/tcl-8.6 # fixes build
 >games-util/lutris-0.5 # fixes build

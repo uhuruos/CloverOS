@@ -7,7 +7,7 @@ $makeconf = file_get_contents('../binhost_settings/etc/portage/make.conf');
 $worldtxt = file_get_contents('../binhost_settings/var/lib/portage/world');
 $installscriptsh = file_get_contents('../installscript.sh');
 $usermake = file_get_contents('../home/user/make.conf');
-$quickpkg = file_get_contents('/usr/portage/packages/s/quickpkg.txt');
+$quickpkg = file_get_contents('/usr/portage/packages/s/quickpkg.html');
 $quickpkg = substr($quickpkg, strpos($quickpkg, '<pre class="ansi2html-content">')+strlen('<pre class="ansi2html-content">')+1);
 $quickpkg = rtrim($quickpkg, "</pre></body>\n</html>");
 
@@ -73,7 +73,7 @@ gpg --verify '.$isoname.'.asc '.$isoname.'</pre>
 <a target="_blank" href="'.$git.'/installscript.sh">CloverOS install script</a>
 <pre class="mono fileinfo">'.$installscriptsh.'</pre>
 <br>
-<a target="_blank" href="s/quickpkg.txt"><span class="mono">$ sudo quickpkg --include-unmodified-config=y "*/*"</span></a>
+<a target="_blank" href="s/quickpkg.html"><span class="mono">$ sudo quickpkg --include-unmodified-config=y "*/*"</span></a>
 <pre class="mono fileinfo">'.$quickpkg.'</pre>
 <br>
 <a href="'.$git.'/binhost_settings/etc/portage/make.conf" target="_blank">/etc/portage/make.conf</a>

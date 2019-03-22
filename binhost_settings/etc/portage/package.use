@@ -195,7 +195,7 @@ dev-db/sqlite secure-delete
 media-libs/phonon -vlc
 app-crypt/hashcat custom-cflags
 media-libs/libsdl custom-cflags X
-www-client/ungoogled-chromium -atk -lld gold custom-cflags -libcxx -new-tcmalloc optimize-thinlto optimize-webui
+www-client/ungoogled-chromium -lld gold custom-cflags optimize-thinlto optimize-webui
 www-client/chromium custom-cflags
 www-client/firefox custom-cflags custom-optimization -wifi
 www-client/torbrowser custom-cflags custom-optimization
