@@ -94,6 +94,8 @@ cp /usr/share/applications/{firefox.desktop,smplayer.desktop,emacs.desktop,zzz-g
 echo -e "~rows=0\n1=home.desktop\n2=applications.desktop\n3=firefox.desktop\n4=smplayer.desktop\n5=emacs.desktop\n6=porthole.desktop\n7=zzz-gimp.desktop\n8=xarchiver.desktop" > .config/spacefm/desktop0
 chown -R $username /home/$username/
 
+wget $gitprefix/livecd_install.sh -P /home/$username/
+chmod +x /home/$username/livecd_install.sh
 sed -i "s@c1:12345:respawn:/sbin/agetty --noclear 38400 tty1 linux@c1:12345:respawn:/sbin/agetty -a $username --noclear 38400 tty1 linux@" /etc/inittab
 sed -i 's/^/#/' /home/$username/.bash_profile
 echo -e 'if [ -z "\$DISPLAY" ]; then
@@ -104,8 +106,6 @@ fvwm&
 nitrogen --set-zoom wallpaper.png
 urxvt -e sudo ./livecd_install.sh
 fi' >> /home/$username/.bash_profile
-wget $gitprefix/livecd_install.sh -P /home/$username/
-chmod +x /home/$username/livecd_install.sh
 
 rm -Rf /usr/portage/packages/* /etc/resolv.conf
 
