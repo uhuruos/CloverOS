@@ -11,7 +11,7 @@ if [ ! -d '/usr/portage/packages/s/signatures/' ]; then
 fi
 
 #quickpkg --include-unmodified-config=y "*/*" 2>&1 | ansi2html > /usr/portage/packages/s/quickpkg.txt
-#emerge -C hwinfo ntfs3g && emerge -b ntfs3g && emerge -b hwinfo
+#emerge -C hwinfo ntfs3g && emerge ntfs3g && emerge hwinfo
 
 emerge --sync
 layman -S
