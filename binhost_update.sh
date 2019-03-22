@@ -12,11 +12,12 @@ fi
 
 #quickpkg --include-unmodified-config=y "*/*" 2>&1 | ansi2html > /usr/portage/packages/s/quickpkg.html
 #emerge -C hwinfo ntfs3g && emerge ntfs3g && emerge hwinfo
-#cp -R /etc/portage/package.* /etc/portage/env/ /etc/portage/make.conf binhost_settings/etc/portage/ && cp /var/lib/portage/world binhost_settings/var/lib/portage/ && git add . && git commit -m "binhost_settings: update" && git push
+#cp -R /etc/portage/package.* /etc/portage/make.conf /etc/portage/env/ binhost_settings/etc/portage/ && cp /var/lib/portage/world binhost_settings/var/lib/portage/ && git add . && git commit -m "binhost_settings: update" && git push
 
 emerge --sync
 layman -S
-emerge -uavDN -b1 --exclude=gentoo-sources @world $(find /var/db/pkg/ -mindepth 2 -maxdepth 2 -name \*-9999 | awk -F \/ '{printf "=%s/%s ", $5, $6}')
+emerge -uavDN --exclude=gentoo-sources @world
+emerge -b1 $(find /var/db/pkg/ -mindepth 2 -maxdepth 2 -name \*-9999 | awk -F \/ '{printf "=%s/%s ", $5, $6}')
 emerge -b @preserved-rebuild
 emerge --depclean
 eclean -d distfiles
