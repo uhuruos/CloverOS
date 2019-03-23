@@ -314,7 +314,6 @@ games-util/grfcodec # openttd
 games-util/nml # openttd
 games-arcade/blobby
 games-action/supertuxkart
-games-roguelike/rogue
 games-board/xboard
 games-strategy/freeciv
 games-fps/avp
