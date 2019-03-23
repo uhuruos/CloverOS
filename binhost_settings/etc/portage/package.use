@@ -180,7 +180,7 @@ media-video/ffmpeg X rubberband libass vorbis ogg network vpx rtmp x264 aac wavp
 virtual/ffmpeg X sdl x264
 www-servers/varnish jit jemalloc
 media-video/mpv rubberband lcms archive cdda bluray dvd encode libmpv cplugins v4l
-dev-lang/php curl gd fpm pdo recode fpm curl intl sqlite xmlwriter nls
+dev-lang/php curl gd fpm pdo fpm curl intl sqlite xmlwriter nls mysqli
 app-eselect/eselect-php fpm
 net-p2p/retroshare feedreader voip
 games-emulation/pcsxr -sdl # opengl or sdl
