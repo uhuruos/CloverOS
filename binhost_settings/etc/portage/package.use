@@ -202,7 +202,7 @@ www-client/torbrowser custom-cflags custom-optimization
 mail-client/thunderbird custom-cflags custom-optimization -crypt
 www-client/seamonkey custom-cflags custom-optimization -crypt -minimal
 www-client/palemoon -official-branding -gconf
-www-client/waterfox custom-cflags custom-optimization -pgo -wifi
+www-client/waterfox custom-cflags custom-optimization -wifi
 media-sound/sox alsa openmp encode flac id3tag ladspa mad ogg opus sndfile twolame wavpack
 net-analyzer/rrdtool perl graph
 media-sound/lmms alsa fluidsynth ogg portaudio sdl stk qt5
@@ -250,9 +250,10 @@ sys-auth/consolekit policykit # required by kde (dbus)
 mate-extra/mate-screensaver -pam # prevents gnome-keyring
 media-sound/bitwig-studio -jack # prevents jack2
 www-client/palemoon -system-sqlite # fix
-dev-libs/sway -tray # fix: does not build without it
-x11-plugins/gkrelltop X # fix: does not build without it
-media-sound/clementine dbus # fix: does not build without it
+dev-libs/sway -tray # fix: doesn't build without it
+x11-plugins/gkrelltop X # fix: doesn't build without it
+media-sound/clementine dbus # fix: doesn't build without it
+www-client/waterfox -pgo # fix: doesn't build without it
 media-sound/audacity jack -lv2 # fix: always builds with jack if it's on the system, might as well add it as dependency
 xfce-base/thunar dbus # required by xfce-base/xfdesktop
 sys-apps/shadow -pam # fix: login won't work (but su - user would)
