@@ -108,6 +108,13 @@ body {
 	transition: all 0.2s;
 	color: #ccc;
 }
+#buttons > ul > *:last-child li {
+	color: #3e9b4b;
+}
+#buttons > ul > *:last-child li:hover {
+	color: #7fb486;
+	transition: all 0.2s;
+}
 #buttons > a {
 	text-decoration: none;
 	color: #999;
