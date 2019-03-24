@@ -254,6 +254,7 @@ dev-libs/sway -tray # fix: doesn't build without it
 x11-plugins/gkrelltop X # fix: doesn't build without it
 media-sound/clementine dbus # fix: doesn't build without it
 www-client/waterfox -pgo # fix: doesn't build without it
+dev-libs/efl luajit # fix: doesn't build without it
 media-sound/audacity jack -lv2 # fix: always builds with jack if it's on the system, might as well add it as dependency
 xfce-base/thunar dbus # required by xfce-base/xfdesktop
 sys-apps/shadow -pam # fix: login won't work (but su - user would)
