@@ -45,8 +45,8 @@ echo '<!DOCTYPE html>
 	body { color: black; background: white; }
 	a { text-decoration: none; }
 	a:visited { color: blue; }
-	pre:first-of-type { margin: 0; }
 	.mono { font-family: monospace; }
+	.pre { white-space: pre; }
 	.fileinfo { height: 150px; width: 550px; margin: 0; overflow: auto; resize: both; border: 1px solid black; }
 	.ansi1 { font-weight: bold; }
 	.ansi32 { color: #00aa00; }
@@ -66,26 +66,26 @@ License: WTFPL<br>
 Mirrors: '.$mirrorlinks.'<br>
 CFLAGS: <span class="mono">CFLAGS="-Ofast -mssse3 -mfpmath=both -pipe -funroll-loops -flto=8 -floop-block -floop-interchange -floop-strip-mine -ftree-loop-distribution"</span><br>
 USE flags: <span class="mono">USE="-systemd -pulseaudio -avahi -dbus -consolekit -libnotify -udisks -zeroconf -nls -doc -gnome-keyring -gstreamer -libav -openal -kde -gnome -openssl libressl bindist ipv6 http2 cli minimal jpeg gif png offensive zsh-completion threads aio jit fftw lto graphite pgo numa alsa joystick xinerama wayland egl dga dri dri3 vulkan opengl opencl glamor vaapi vdpau system-ffmpeg system-icu system-libvpx system-harfbuzz system-jpeg system-libevent system-sqlite system-cairo system-compress system-images system-nss system-pixman system-vpx system-llvm system-lua system-cmark system-libyaml system-lcms system-lz4 system-uulib system-snappy system-jsoncpp system-binutils system-clang system-tbb system-renpy system-libs system-heimdal system-leveldb system-libmspack system-zlib system-av1"</span><br>
-Validate ISO: <pre class="mono">gpg --keyserver hkp://pool.sks-keyservers.net --recv-key "78F5 AC55 A120 07F2 2DF9 A28A 78B9 3F76 B8E4 2805"
-wget https://cloveros.ga/s/signatures/s/'.$isoname.'.asc
-gpg --verify '.$isoname.'.asc '.$isoname.'</pre>
-<br>
+DL & Validate ISO: <span class="mono pre">gpg --keyserver hkp://pool.sks-keyservers.net --recv-key "78F5 AC55 A120 07F2 2DF9 A28A 78B9 3F76 B8E4 2805"
+wget https://cloveros.ga/s/'.$isoname.' https://cloveros.ga/s/signatures/s/'.$isoname.'.asc
+gpg --verify '.$isoname.'.asc '.$isoname.'</span>
+<br><br>
 <a target="_blank" href="'.$git.'/installscript.sh">CloverOS install script</a>
-<pre class="mono fileinfo">'.$installscriptsh.'</pre>
+<div class="mono pre fileinfo">'.$installscriptsh.'</div>
 <br>
-<a target="_blank" href="s/quickpkg.html"><span class="mono">$ sudo quickpkg --include-unmodified-config=y "*/*"</span></a>
-<pre class="mono fileinfo">'.$quickpkg.'</pre>
+<a target="_blank" href="s/quickpkg.html"><span class="mono">$ sudo quickpkg --include-unmodified-config=y "*/*"</div></a>
+<div class="mono pre fileinfo">'.$quickpkg.'</div>
 <br>
 <a href="'.$git.'/binhost_settings/etc/portage/make.conf" target="_blank">/etc/portage/make.conf</a>
-<pre class="mono fileinfo">'.$makeconf.'</pre>
+<div class="mono pre fileinfo">'.$makeconf.'</div>
 <br>
 <a href="'.$git.'/binhost_settings/etc/portage/package.use" target="_blank">/etc/portage/package.use</a>
-<pre class="mono fileinfo">'.$packageuse.'</pre>
+<div class="mono pre fileinfo">'.$packageuse.'</div>
 <br>
 <a href="'.$git.'/binhost_settings/etc/portage/package.env" target="_blank">/etc/portage/package.env</a>
-<pre class="mono fileinfo">'.$packageenv.'</pre>
+<div class="mono pre fileinfo">'.$packageenv.'</div>
 <br>
 <a href="'.$git.'/binhost_settings/var/lib/portage/world" target="_blank">/var/lib/portage/world</a>
-<pre class="mono fileinfo">'.$worldtxt.'</pre>
+<div class="mono pre fileinfo">'.$worldtxt.'</div>
 '.$files.'
 </html>';
