@@ -100,7 +100,8 @@ body {
 	cursor: pointer;
 	z-index: 10;
 	color: #999;
-	margin-left: 20px;
+	padding-left: 10px;
+	padding-right: 10px;
 }
 #buttons li:hover {
 	border-bottom: 2px solid #3e9b4b;
@@ -114,6 +115,9 @@ body {
 .dropdown {
 	position: relative;
 	display: inline-block;
+}
+.dropdown:hover .dropdown-content {
+	display: block;
 }
 .dropdown-content {
 	display: none;
@@ -131,9 +135,6 @@ body {
 }
 .dropdown-content a:hover {
 	text-decoration: underline;
-}
-.dropdown:hover .dropdown-content {
-	display: block;
 }
 #news, #packages, #downloads {
 	top: 62px;
@@ -178,11 +179,10 @@ body {
 	color: rgba(255,255,255,0.9);
 }
 #details {
-	margin: 0 auto;
+	margin: 76px auto 0 auto;
 	padding-bottom: 40px;
 }
 #details h2 {
-	margin-top: 76px;
 	text-align: center;
 	color: #999;
 }
