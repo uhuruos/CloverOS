@@ -272,6 +272,10 @@ body {
 				<div class="dropdown">
 					<a href="https://twitter.com/cloveros_ga"><li>News</li></a>
 					<div class="dropdown-content" id="news">24-Mar-19
+binhost_update.sh: cleanup
+removed app-arch/par-1.1 due to ebuild mask
+mirrors/indexalt.txt: homepage change, add news and forums
+removed games-roguelike/rogue due to package mask
 mirrors/index.php: Made some subtle changes https://useast.cloveros.ga
 livecd_build.sh: cleanup/simplify
 
