@@ -69,7 +69,7 @@ body {
 	z-index: 99;
 }
 #buttons, #front p, #details {
-	width: 790px;
+	width: 800px;
 }
 #buttons {
 	margin-left: auto;
@@ -102,7 +102,7 @@ body {
 	transition: all 0.2s;
 	color: #ccc;
 }
-#buttons a {
+#buttons > a {
 	text-decoration: none;
 	color: #999;
 }
@@ -137,6 +137,7 @@ body {
 #isolist a {
 	color: black;
 	white-space: nowrap;
+	text-decoration: none;
 }
 #isolist a:hover {
 	text-decoration: underline;
@@ -149,6 +150,10 @@ body {
 	white-space: pre;
 	position: absolute;
 	color: black;
+}
+.infolist a {
+	color: black;
+	text-decoration: none;
 }
 .infolist a:hover {
 	text-decoration: underline;
@@ -953,15 +958,11 @@ CloverOS GNU/Linux
 CloverOS GNU/Linux (Package Signing) 78F5 AC55 A120 07F2 2DF9 A28A 78B9 3F76 B8E4 2805
 4096-bit https://cloveros.ga/s/cloveros.gpg 
 #pgp #fingerprint
-0 replies 2 retweets 1 like
-
-					</div>
+0 replies 2 retweets 1 like</div>
 				</div>
 				<div class="dropdown">
 					<a href="https://useast.cloveros.ga"><li>Packages</li></a>
-					<div class="dropdown-content infolist">
-{packages_list}
-					</div>
+					<div class="dropdown-content infolist">{packages_list}</div>
 				</div>
 				<a href="https://forums.cloveros.ga"><li>Forums</li></a>
 				<a href="https://gitgud.io/cloveros/cloveros#cloveros"><li>Documentation</li></a>
