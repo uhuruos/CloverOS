@@ -34,7 +34,9 @@ games-emulation/mgba # fixes build
 media-video/vdr # fixes build
 media-libs/vigra # fixes build
 dev-db/mariadb # fixes build
-app-emulation/libvirt # fix
+games-emulation/fbalpha-libretro # stable is 404
+games-emulation/citra-libretro # stable is 404
+x11-themes/terminology-themes ** # fixes conflict
 app-laptop/tp_smapi # requested
 media-fonts/vlgothic # old
 games-emulation/dolphin ** # old
@@ -42,22 +44,14 @@ games-emulation/pcsx2 ** # old
 www-client/opera # old
 media-libs/zimg # vapoursynth
 dev-python/cython # vapoursynth
-x11-themes/terminology-themes ** # fixes conflict
-x11-themes/sddm-gentoo-black-theme ** # fix
-games-emulation/fbalpha-libretro ** # fix
-games-emulation/citra-libretro ** # fix
-games-emulation/melonds-libretro ** # fix
 media-video/ffmpeg # old
 media-plugins/gst-plugins-libav # ffmpeg
-media-gfx/blender # ffmpeg
 media-sound/moc # ffmpeg
 media-plugins/vapoursynth-l-smash-works ** # ffmpeg
 media-libs/l-smash ** # vapoursynth-l-smash-works
 media-plugins/vapoursynth-d2vsource ** # ffmpeg
 media-video/mpv # old
 media-libs/shaderc # mpv
-dev-db/sqlite # avidemux
-dev-lang/go # fzf
 <sys-devel/llvm-8 # llvm7
 <sys-devel/llvmgold-8 # llvm
 <sys-devel/llvm-common-8 # llvm
@@ -78,14 +72,11 @@ www-plugins/lightspark ** # llvm
 www-client/dillo
 app-editors/xemacs
 www-client/elinks
-media-libs/opusfile
 net-ftp/proftpd
-www-servers/apache
-app-admin/apache-tools
 net-misc/spice-gtk
 
 #keyworded, remove when stable exists
-#net-analyzer/openbsd-netcat
+x11-themes/sddm-gentoo-black-theme ** # stable is 404
 games-roguelike/wrogue
 net-im/corebird
 games-emulation/reicast
