@@ -130,10 +130,13 @@ body {
 .dropdown:hover .dropdown-content {
 	display: block;
 }
+#news, #packages, #downloads {
+	top: 62px;
+}
 #news, #packages {
 	white-space: pre;
 	width: 500px;
-	left: -250px;
+	left: -210px;
 	height: 586px;
 }
 #downloads {
