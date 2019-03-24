@@ -22,8 +22,7 @@ mount -t proc none proc
 mount --rbind /dev dev
 mount --rbind /sys sys
 
-cat << EOF | chroot .
-
+cat <<HEREDOC | chroot .
 emerge-webrsync
 eselect profile set "default/linux/amd64/17.0/hardened"
 echo '
@@ -108,10 +107,8 @@ urxvt -e sudo ./livecd_install.sh
 fi' >> /home/$username/.bash_profile
 
 rm -Rf /usr/portage/packages/* /etc/resolv.conf
-
 exit
-
-EOF
+HEREDOC
 
 cd ..
 umount -l image/*
