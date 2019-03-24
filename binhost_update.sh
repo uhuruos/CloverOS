@@ -22,7 +22,7 @@ emerge -b @preserved-rebuild
 emerge --depclean
 eclean -d distfiles
 
-echo -e "app-admin/sudo\nnet-misc/openssh\nmail-mta/postfix\nwww-client/ungoogled-chromium\nsys-process/anacron\nsys-process/cronie\nsys-process/dcron\nsys-process/fcron\nsys-process/vixie-cron" | eclean -d -e /dev/stdin packages
+eclean -d -e /dev/stdin packages <<< $'app-admin/sudo\nnet-misc/openssh\nmail-mta/postfix\nwww-client/ungoogled-chromium\nsys-process/anacron\nsys-process/cronie\nsys-process/dcron\nsys-process/fcron\nsys-process/vixie-cron'
 #emerge -B sudo openssh postfix dcron vixie-cron cronie fcron anacron ungoogled-chromium
 #PKGDIR="/usr/portage/packages/s/nodbus/" USE="-dbus -webengine -trash-panel-plugin" emerge -B glib qtgui PyQt5 thunar
 

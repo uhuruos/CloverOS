@@ -28,14 +28,16 @@ media-gfx/mypaint # gimp
 sys-fs/zfs # kernel 4.19
 sys-fs/zfs-kmod # zfs
 sys-kernel/spl # zfs
+=media-libs/opencollada-1.6.63 # fixes libpcre update
 dev-lisp/clisp # fixes build
 net-p2p/mldonkey # fixes build
 games-emulation/mgba # fixes build
 media-video/vdr # fixes build
 media-libs/vigra # fixes build
 dev-db/mariadb # fixes build
-games-emulation/fbalpha-libretro # stable is 404
-games-emulation/citra-libretro # stable is 404
+games-emulation/melonds-libretro # stable is 404
+games-emulation/fbalpha-libretro ** # stable is 404
+games-emulation/citra-libretro ** # stable is 404
 x11-themes/terminology-themes ** # fixes conflict
 app-laptop/tp_smapi # requested
 media-fonts/vlgothic # old

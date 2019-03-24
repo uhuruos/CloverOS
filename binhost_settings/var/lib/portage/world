@@ -33,7 +33,6 @@ app-arch/lzop
 app-arch/makeself
 app-arch/mt-st
 app-arch/p7zip
-app-arch/par
 app-arch/pbzip2
 app-arch/pigz
 app-arch/pxz
