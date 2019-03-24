@@ -1,5 +1,9 @@
 <?php
 chdir(__DIR__);
+$git = 'https://gitgud.io/cloveros/cloveros/raw/master';
+$isoname = basename(glob('/usr/portage/packages/s/CloverOS-x86_64-*.iso')[0]);
+$libreisoname = basename(glob('/usr/portage/packages/s/CloverOS_Libre-x86_64-*.iso')[0]);
+
 $packageuse = file_get_contents('../binhost_settings/etc/portage/package.use');
 $packageenv = file_get_contents('../binhost_settings/etc/portage/package.env');
 $packagekeywords = file_get_contents('../binhost_settings/etc/portage/package.keywords');
@@ -10,6 +14,7 @@ $usermake = file_get_contents('../home/user/make.conf');
 $quickpkg = file_get_contents('/usr/portage/packages/s/quickpkg.html');
 $quickpkg = substr($quickpkg, strpos($quickpkg, '<pre class="ansi2html-content">')+strlen('<pre class="ansi2html-content">')+1);
 $quickpkg = rtrim($quickpkg, "</pre></body>\n</html>");
+$packagecount = substr_count($quickpkg, 'Building package for ');
 
 $mirrors = substr($usermake, strpos($usermake, 'binhost_mirrors="$PORTAGE_BINHOST,') + 34);
 $mirrors = substr($mirrors, 0, strpos($mirrors, ',"'));
@@ -18,11 +23,6 @@ $mirrorlinks = '';
 foreach ($mirrors as $line) {
 	$mirrorlinks .= '<a target="_blank" href="'.$line.'">'.$line.'</a> ';
 }
-
-$packagecount = substr_count($quickpkg, 'Building package for ');
-$git = 'https://gitgud.io/cloveros/cloveros/raw/master';
-$isoname = basename(glob('/usr/portage/packages/s/CloverOS-x86_64-*.iso')[0]);
-$libreisoname = basename(glob('/usr/portage/packages/s/CloverOS_Libre-x86_64-*.iso')[0]);
 
 $dir = '/usr/portage/packages/';
 $files = '<h1>Index of /</h1><hr><pre>';
@@ -60,10 +60,10 @@ Libre ISO: <a href="s/'.$libreisoname.'">https://cloveros.ga/s/'.$libreisoname.'
 GPG: <a target="_blank" href="s/cloveros.gpg">78F5 AC55 A120 07F2 2DF9  A28A 78B9 3F76 B8E4 2805</a><br>
 IRC: <a target="_blank" href="irc://irc.rizon.net/cloveros">#cloveros</a> on irc.rizon.net<br>
 Twitter: <a target="_blank" href="https://twitter.com/cloveros_ga">https://twitter.com/cloveros_ga</a><br>
-Packages: <a target="_blank" href="s/packages.html">'.$packagecount.' https://cloveros.ga/s/packages.html</a><br>
 Rsync: rsync://nl.cloveros.ga/cloveros<br>
 License: WTFPL<br>
 Mirrors: '.$mirrorlinks.'<br>
+Packages: <a target="_blank" href="s/packages.html">'.$packagecount.' https://cloveros.ga/s/packages.html</a><br>
 CFLAGS: <span class="mono">CFLAGS="-Ofast -mssse3 -mfpmath=both -pipe -funroll-loops -flto=8 -floop-block -floop-interchange -floop-strip-mine -ftree-loop-distribution"</span><br>
 USE flags: <span class="mono">USE="-systemd -pulseaudio -avahi -dbus -consolekit -libnotify -udisks -zeroconf -nls -doc -gnome-keyring -gstreamer -libav -openal -kde -gnome -openssl libressl bindist ipv6 http2 cli minimal jpeg gif png offensive zsh-completion threads aio jit fftw lto graphite pgo numa alsa joystick xinerama wayland egl dga dri dri3 vulkan opengl opencl glamor vaapi vdpau system-ffmpeg system-icu system-libvpx system-harfbuzz system-jpeg system-libevent system-sqlite system-cairo system-compress system-images system-nss system-pixman system-vpx system-llvm system-lua system-cmark system-libyaml system-lcms system-lz4 system-uulib system-snappy system-jsoncpp system-binutils system-clang system-tbb system-renpy system-libs system-heimdal system-leveldb system-libmspack system-zlib system-av1"</span><br>
 DL & Validate ISO: <span class="mono pre">gpg --keyserver hkp://pool.sks-keyservers.net --recv-key "78F5 AC55 A120 07F2 2DF9 A28A 78B9 3F76 B8E4 2805"
