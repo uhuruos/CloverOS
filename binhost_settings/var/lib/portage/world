@@ -413,6 +413,7 @@ games-misc/yadex
 games-puzzle/bastet
 games-roguelike/dwarf-fortress
 games-roguelike/nethack
+games-roguelike/wrogue
 games-rpg/freedink
 games-server/mednafen-server
 games-simulation/corsix-th

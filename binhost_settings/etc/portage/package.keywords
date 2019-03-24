@@ -86,6 +86,7 @@ net-misc/spice-gtk
 
 #keyworded, remove when stable exists
 #net-analyzer/openbsd-netcat
+games-roguelike/wrogue
 net-im/corebird
 games-emulation/reicast
 net-analyzer/masscan
