@@ -131,17 +131,17 @@ body {
 .dropdown:hover .dropdown-content {
 	display: block;
 }
-#isolinks {
+#isolist {
 	color: black;
 }
-#isolinks a {
+#isolist a {
 	color: black;
 	white-space: nowrap;
 }
-#isolinks a:hover {
+#isolist a:hover {
 	text-decoration: underline;
 }
-#news {
+.infolist {
 	width: 640px;
 	height: 480px;
 	left: -275px;
@@ -149,6 +149,9 @@ body {
 	white-space: pre;
 	position: absolute;
 	color: black;
+}
+.infolist a:hover {
+	text-decoration: underline;
 }
 #front {
 	width: 100%;
@@ -271,7 +274,7 @@ body {
 			<ul>
 				<div class="dropdown">
 					<li>News</li>
-					<div class="dropdown-content" id="news">24-Mar-19
+					<div class="dropdown-content infolist">24-Mar-19
 mirrors/index.php: Made some subtle changes https://useast.cloveros.ga 
 livecd_build.sh: cleanup/simplify
 
@@ -954,12 +957,18 @@ CloverOS GNU/Linux (Package Signing) 78F5 AC55 A120 07F2 2DF9 A28A 78B9 3F76 B8E
 
 					</div>
 				</div>
+				<div class="dropdown">
+					<a href="https://useast.cloveros.ga"><li>Packages</li></a>
+					<div class="dropdown-content infolist">
+{packages_list}
+					</div>
+				</div>
 				<a href="https://forums.cloveros.ga"><li>Forums</li></a>
 				<a href="https://gitgud.io/cloveros/cloveros#cloveros"><li>Documentation</li></a>
 				<div class="dropdown">
 					<a id="download" href="https://cloveros.ga/s/{iso_link}"><li>Download</li></a>
-					<div id="isolinks" class="dropdown-content">
-{iso_links}
+					<div id="isolist" class="dropdown-content">
+{iso_list}
 					</div>
 				</div>
 			</ul>

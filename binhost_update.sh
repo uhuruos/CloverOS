@@ -29,7 +29,7 @@ eclean -d -e /tmp/exclude.txt packages
 
 EIX_LIMIT=0 eix -IF | grep -v "Available versions" | ansi2html > /usr/portage/packages/s/packages.html
 php mirrors/index.php > /usr/portage/packages/index.html
-php mirrors/indexalt.php > /usr/portage/packages/indexalt.html
+./mirrors/indexalt.sh > /usr/portage/packages/indexalt.html
 
 rm -Rf /usr/portage/packages/s/signatures/*
 find /usr/portage/packages/ -type d | sed "s#/usr/portage/packages/##" | grep -v "^s/signatures$" | xargs -I{} mkdir /usr/portage/packages/s/signatures/{}
