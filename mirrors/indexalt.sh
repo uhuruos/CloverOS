@@ -1,10 +1,9 @@
 cd $( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )
-recentpackages=$(find /usr/portage/packages/ -type f -printf "%T+%p\n" | grep -Ev "(9999|html|Packages|/s/)" | sed 's@:[0-9]*\.[0-9]*/usr/portage/packages/@ @; s/\.tbz2//; s/+/ /; s/2019-//' | sort -r | sed 's@\(.*\) \(.*\) \(.*\)@\1 \2 <a href="\3.tbz2">\3</a>@' | head -n 1000 | awk '{print $0;}' RS='\n' ORS='\\n' | head -c -2)
+recentpackages=$(find /usr/portage/packages/ -iname \*.tbz2 -printf "%T+%p\n" | sort -r | sed 's@:[0-9]*\.[0-9]*/usr/portage/packages/@ @; s/\.tbz2//; s/+/ /; s/2019-//; s@\(.*\) \(.*\) \(.*\)@\1 \2 <a href="\3.tbz2">\3</a>@')
 isoname=(/usr/portage/packages/s/CloverOS-x86_64-*.iso)
 isoname=${isoname##*/}
-isolist=$(grep "binhost_mirrors=" ../home/user/make.conf | sed 's@,@/s/CloverOS-x86_64-20190322.iso\n@g' | sed 's@\(.*\)@						<a href="\1">\1</a>@g' | sed '1d;$d' | awk '{print $0;}' RS='\n' ORS='\\n' | head -c -2)
-sed "s@{iso_link}@$isoname@g; s@{packages_list}@$recentpackages@g; s@{iso_list}@$isolist@g" <<HEREDOC
-<!DOCTYPE html>
+isolist=$(grep "binhost_mirrors=" ../home/user/make.conf | sed 's@,@/s/CloverOS-x86_64-20190322.iso\n@g' | sed 's@\(.*\)@						<a href="\1">\1</a>@g' | sed '1d;$d')
+echo '<!DOCTYPE html>
 <html lang="en">
 <title>CloverOS GNU/Linux</title>
 <script>
@@ -427,7 +426,7 @@ CloverOS GNU/Linux
 
 There is a problem with app-eselect/eselect-infinality
 
-If fonts don't look right, run this to fix:
+If fonts don'\''t look right, run this to fix:
 sudo emerge -1 eselect-infinality && sudo eselect infinality set infinality
 
 Binhost now provides app-eselect/eselect-infinality::petkovich https://gpo.zugaina.org/app-eselect/eselect-infinality …
@@ -771,7 +770,7 @@ CloverOS GNU/Linux
 ‏ @cloveros_ga
 2 Feb 2018
 
-You don't have to switch to hardened profile to upgrade your system. You should anyway though.
+You don'\''t have to switch to hardened profile to upgrade your system. You should anyway though.
 0 replies 0 retweets 1 like
 CloverOS GNU/Linux
 ‏ @cloveros_ga
@@ -955,14 +954,14 @@ CloverOS GNU/Linux (Package Signing) 78F5 AC55 A120 07F2 2DF9 A28A 78B9 3F76 B8E
 				</div>
 				<div class="dropdown">
 					<a href="https://useast.cloveros.ga"><li>Packages</li></a>
-					<div class="dropdown-content" id="packages">{packages_list}</div>
+					<div class="dropdown-content" id="packages">'"$recentpackages"'</div>
 				</div>
 				<a href="https://forums.cloveros.ga"><li>Forums</li></a>
 				<a href="https://gitgud.io/cloveros/cloveros#cloveros"><li>Documentation</li></a>
 				<div class="dropdown">
-					<a href="https://cloveros.ga/s/{iso_link}"><li>Download</li></a>
+					<a href="https://cloveros.ga/s/'"$isoname"'"><li>Download</li></a>
 					<div class="dropdown-content" id="downloads">
-{iso_list}
+'"$isolist"'
 					</div>
 				</div>
 			</ul>
@@ -980,11 +979,11 @@ CloverOS GNU/Linux (Package Signing) 78F5 AC55 A120 07F2 2DF9 A28A 78B9 3F76 B8E
 		<h3>Gentoo Linux, untouched</h3>
 		<p>CloverOS is an as default as possible Gentoo install with all system configuration done in /etc/portage/make.conf</p>
 		<h3>No bloat and easy to use</h3>
-		<p>A CloverOS desktop has OpenRC, fvwm, udev, agetty, dhcpcd and wpa_supplicant. That's it. No hidden services.</p>
+		<p>A CloverOS desktop has OpenRC, fvwm, udev, agetty, dhcpcd and wpa_supplicant. That'\''s it. No hidden services.</p>
 		<h3>Easy and straightforward</h3>
 		<p>Simple desktop with a large variety of packages, just emerge and run.</p>
 		<h3>Pest-free</h3>
-		<p>Don't need systemd, pulseaudio, dbus, avahi or nls? Neither does CloverOS.</p>
+		<p>Don'\''t need systemd, pulseaudio, dbus, avahi or nls? Neither does CloverOS.</p>
 </div>
 <div id="linksbg">
 	<div id="links">
@@ -1003,5 +1002,4 @@ CloverOS GNU/Linux (Package Signing) 78F5 AC55 A120 07F2 2DF9 A28A 78B9 3F76 B8E
 	</div>
 </div>
 <div id="bottom"></div>
-</html>
-HEREDOC
+</html>'

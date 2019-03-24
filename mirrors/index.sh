@@ -14,7 +14,7 @@ $usermake = file_get_contents('../home/user/make.conf');
 $quickpkg = file_get_contents('/usr/portage/packages/s/quickpkg.html');
 $quickpkg = substr($quickpkg, strpos($quickpkg, '<pre class="ansi2html-content">')+strlen('<pre class="ansi2html-content">')+1);
 $quickpkg = rtrim($quickpkg, "</pre></body>\n</html>");
-$packagecount = substr_count($quickpkg, 'Building package for ');
+$packagecount = count(glob('/usr/portage/packages/*/*.tbz2'));
 
 $mirrors = substr($usermake, strpos($usermake, 'binhost_mirrors="$PORTAGE_BINHOST,') + 34);
 $mirrors = substr($mirrors, 0, strpos($mirrors, ',"'));
