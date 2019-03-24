@@ -272,7 +272,7 @@ body {
 				<div class="dropdown">
 					<a href="https://twitter.com/cloveros_ga"><li>News</li></a>
 					<div class="dropdown-content" id="news">24-Mar-19
-mirrors/index.php: Made some subtle changes https://useast.cloveros.ga 
+mirrors/index.php: Made some subtle changes https://useast.cloveros.ga
 livecd_build.sh: cleanup/simplify
 
 23-Mar-19
@@ -346,7 +346,7 @@ Packages updated
 5-Dec-2018
 Packages updated
 New ISO: https://cloveros.ga/s/CloverOS-x86_64-20181205.iso
-New website https://cloveros.ga 
+New website https://cloveros.ga
 
 26-Nov-18
 Packages updated
@@ -370,587 +370,276 @@ firefox-63.0.3
 mesa-18.2.5
 youtube-dl-2018.11.18
 
-CloverOS GNU/Linux
-‏ @cloveros_ga
-18 Oct 2018
-
+18-Oct-2018
 Packages updated
 Kernel updated to 4.18.14
-New ISO: https://cloveros.ga/s/CloverOS-x86_64-20181018.iso …
-
+New ISO: https://cloveros.ga/s/CloverOS-x86_64-20181018.iso
 - pcsx2, rpcs3, citra, dolphin are all git (-9999)
 - xvmc removed
 - xbindkeys replaced with fvwm (still in base install for other WMs)
 - wine 3.18 (staging, d3d9)
-1 reply 3 retweets 21 likes
-CloverOS GNU/Linux
-‏ @cloveros_ga
-5 Oct 2018
 
+5-Oct-2018
 Packages updated
 Kernel updated to 4.18.12
-New ISO https://cloveros.ga/s/CloverOS-x86_64-20181005.iso …
-0 replies 0 retweets 1 like
-CloverOS GNU/Linux
-‏ @cloveros_ga
-4 Oct 2018
+New ISO https://cloveros.ga/s/CloverOS-x86_64-20181005.iso
 
-New mirrors: https://sg.cloveros.ga  https://jp.cloveros.ga 
-0 replies 0 retweets 4 likes
-CloverOS GNU/Linux
-‏ @cloveros_ga
-29 Sep 2018
+4-Oct-2018
+New mirrors: https://sg.cloveros.ga https://jp.cloveros.ga
 
+29-Sep-2018
 Packages updated
 Kernel updated to 4.18.11
-0 replies 0 retweets 3 likes
-CloverOS GNU/Linux
-‏ @cloveros_ga
-20 Sep 2018
 
+20-Sep-2018
 Packages updated
 Kernel updated to 4.18.8
-New ISO https://cloveros.ga/s/CloverOS-x86_64-20180920.iso …
-0 replies 1 retweet 5 likes
-CloverOS GNU/Linux
-‏ @cloveros_ga
-6 Sep 2018
+New ISO https://cloveros.ga/s/CloverOS-x86_64-20180920.iso
 
+6-Sep-2018
 Packages updated
+New ISO: https://cloveros.ga/s/CloverOS-x86_64-20180906.iso
 
-New ISO: https://cloveros.ga/s/CloverOS-x86_64-20180906.iso …
-1 reply 1 retweet 8 likes
-CloverOS GNU/Linux
-‏ @cloveros_ga
-23 Aug 2018
-
+23-Aug-2018
 There is a problem with app-eselect/eselect-infinality
-
 If fonts don'\''t look right, run this to fix:
 sudo emerge -1 eselect-infinality && sudo eselect infinality set infinality
-
 Binhost now provides app-eselect/eselect-infinality::petkovich https://gpo.zugaina.org/app-eselect/eselect-infinality …
-0 replies 1 retweet 3 likes
-CloverOS GNU/Linux
-‏ @cloveros_ga
-23 Aug 2018
-
-New ISO https://cloveros.ga/s/CloverOS-x86_64-20180823.iso …
-0 replies 0 retweets 0 likes
-CloverOS GNU/Linux
-‏ @cloveros_ga
-23 Aug 2018
-
+New ISO https://cloveros.ga/s/CloverOS-x86_64-20180823.iso
 gcc 8 update
 Kernel updated to 4.17.18
 Packages update
-
 All packages rebuilt with gcc 8
-0 replies 1 retweet 5 likes
-CloverOS GNU/Linux
-‏ @cloveros_ga
-14 Aug 2018
 
+14-Aug-2018
 Packages updated
 Kernel updated to 4.17.14
-New ISO https://cloveros.ga/s/CloverOS-x86_64-20180815.iso …
-0 replies 0 retweets 5 likes
-CloverOS GNU/Linux
-‏ @cloveros_ga
-13 Aug 2018
+New ISO https://cloveros.ga/s/CloverOS-x86_64-20180815.iso
 
+13-Aug-2018
 Packages updated
 Kernel updated to 4.17.13
 ~/.bash_profile now has every WM available
+New ISO https://cloveros.ga/s/CloverOS-x86_64-20180813.iso
 
-New ISO https://cloveros.ga/s/CloverOS-x86_64-20180813.iso …
-2 replies 0 retweets 8 likes
-CloverOS GNU/Linux
-‏ @cloveros_ga
-5 Aug 2018
-
+5-Aug-2018
 Packages updated
 Kernel updated to 4.17.12
 rtorrent-ps replaced with rtorrent
-
-New ISO: https://cloveros.ga/s/CloverOS-x86_64-20180805.iso …
-0 replies 0 retweets 5 likes
-CloverOS GNU/Linux
-‏ @cloveros_ga
-5 Aug 2018
-
+New ISO: https://cloveros.ga/s/CloverOS-x86_64-20180805.iso
 README now explains how to do dnscrypt, ALSA bluetooth and fix "too many arguments" error
-0 replies 0 retweets 0 likes
-CloverOS GNU/Linux
-‏ @cloveros_ga
-30 May 2018
 
+30-May-2018
 Packages updated
 Kernel updated to 4.16.13
-0 replies 0 retweets 0 likes
-CloverOS GNU/Linux
-‏ @cloveros_ga
-28 May 2018
 
+28-May-2018
 Packages updated
 Kernel updated to 4.16.12
 wine 3.9 staging d3d9 pba
-0 replies 0 retweets 1 like
-CloverOS GNU/Linux
-‏ @cloveros_ga
-25 May 2018
 
+25-May-2018
 Packages updated
 Binhost Package count: 4100 ( see world file here https://gitgud.io/cloveros/cloveros/raw/master/binhost_settings/var/lib/portage/world … )
 New ISO: https://cloveros.ga/s/CloverOS-x86_64-20180525.iso …
 Base install now contains compton
-0 replies 1 retweet 6 likes
-CloverOS GNU/Linux
-‏ @cloveros_ga
-20 May 2018
 
-New mirror: https://cernet.mirrors.ustc.edu.cn/cloveros/ 
-
+20-May-2018
+New mirror: https://cernet.mirrors.ustc.edu.cn/cloveros/
 Thanks USTC!
-0 replies 0 retweets 1 like
-CloverOS GNU/Linux
-‏ @cloveros_ga
-20 May 2018
-
 Packages updated
 Mesa, Enlightenment updated
-0 replies 0 retweets 1 like
-CloverOS GNU/Linux
-‏ @cloveros_ga
-7 May 2018
 
+7-May-2018
 Packages updated
-New ISO https://cloveros.ga/s/CloverOS-x86_64-20180507.iso …
-0 replies 0 retweets 0 likes
-CloverOS GNU/Linux
-‏ @cloveros_ga
-29 Apr 2018
+New ISO https://cloveros.ga/s/CloverOS-x86_64-20180507.iso
 
+29-Apr-2018
 Packages updated
 wine updated to 3.6
-0 replies 1 retweet 2 likes
-CloverOS GNU/Linux
-‏ @cloveros_ga
-28 Apr 2018
 
+28-Apr-2018
 Packages updated
-New ISO https://cloveros.ga/s/CloverOS-x86_64-20180427.iso …
-0 replies 0 retweets 0 likes
-CloverOS GNU/Linux
-‏ @cloveros_ga
-19 Apr 2018
+New ISO https://cloveros.ga/s/CloverOS-x86_64-20180427.iso
 
+19-Apr-2018
 Packages updated
 Kernel updated to 4.16.3
-0 replies 0 retweets 3 likes
-CloverOS GNU/Linux
-‏ @cloveros_ga
-14 Apr 2018
 
+14-Apr-2018
 Packages updated, kernel upgraded to 4.16.2
-0 replies 0 retweets 0 likes
-CloverOS GNU/Linux
-‏ @cloveros_ga
-31 Mar 2018
 
+31-Mar-2018
 New ISO, xfe/xfi, wbar replaced with spacefm, nomacs
-0 replies 0 retweets 1 like
-CloverOS GNU/Linux
-‏ @cloveros_ga
-29 Mar 2018
 
+29-Mar-2018
 Packages updated
 Kernel updated to 4.15.14
-0 replies 0 retweets 1 like
-CloverOS GNU/Linux
-‏ @cloveros_ga
-23 Mar 2018
 
+23-Mar-2018
 CloverOS now uses LibreSSL instead of OpenSSL
-1 reply 1 retweet 2 likes
-CloverOS GNU/Linux
-‏ @cloveros_ga
-22 Mar 2018
 
+22-Mar-2018
 Back online.
-0 replies 0 retweets 3 likes
-CloverOS GNU/Linux
-‏ @cloveros_ga
-21 Mar 2018
 
+21-Mar-2018
 Packages updated
 Kernel updated to 4.15.12
-0 replies 0 retweets 0 likes
-CloverOS GNU/Linux
-‏ @cloveros_ga
-21 Mar 2018
-
 DNS currently down, should be up in a few hours
-1 reply 0 retweets 0 likes
-CloverOS GNU/Linux
-‏ @cloveros_ga
-19 Mar 2018
 
-https://www.youtube.com/watch?v=RPBxgbU3LI4 …
-0 replies 0 retweets 1 like
-CloverOS GNU/Linux
-‏ @cloveros_ga
-15 Mar 2018
+19-Mar-2018
+https://www.youtube.com/watch?v=RPBxgbU3LI4
 
+15-Mar-2018
 Packages updated
 Kernel updated to 4.15.10
 New mirrors
-0 replies 0 retweets 3 likes
-CloverOS GNU/Linux
-‏ @cloveros_ga
-11 Mar 2018
 
+11-Mar-2018
 Homepage in progress of being redone, new ISO
-0 replies 2 retweets 4 likes
-CloverOS GNU/Linux
-‏ @cloveros_ga
-10 Mar 2018
 
+10-Mar-2018
 Packages updated
 Kernel updated to 4.15.8
-0 replies 0 retweets 1 like
-CloverOS GNU/Linux
-‏ @cloveros_ga
-4 Mar 2018
 
+4-Mar-2018
 Packages updated
 
 New firefox package. Complete list: firefox firefox-kde-opensuse firefox-bin torbrowser waterfox-bin palemoon-bin seamonkey
-1 reply 2 retweets 3 likes
-CloverOS GNU/Linux
-‏ @cloveros_ga
-26 Feb 2018
 
+26-Feb-2018
 Packages updated
 Kernel updated to 4.15.6
-0 replies 1 retweet 3 likes
-CloverOS GNU/Linux
-‏ @cloveros_ga
-25 Feb 2018
 
+25-Feb-2018
 Packages updated
 Kernel updated to 4.15.5
-0 replies 0 retweets 3 likes
-CloverOS GNU/Linux
-‏ @cloveros_ga
-22 Feb 2018
 
+22-Feb-2018
 Packages updated
-0 replies 0 retweets 0 likes
-CloverOS GNU/Linux
-‏ @cloveros_ga
-19 Feb 2018
 
+19-Feb-2018
 New ISO
 ISO changes:
 Xarchiver instead of Engrampa
 feh, games-envd, wbarconf removed
 wbar is now built with wbar-config
 xfe opens images with xfi by default
-new http://ca2.cloveros.ga  mirror configured in make.conf
-https://cloveros.ga/s/CloverOS-x86_64-20180219.iso …
-0 replies 0 retweets 0 likes
-CloverOS GNU/Linux
-‏ @cloveros_ga
-18 Feb 2018
+new http://ca2.cloveros.ga mirror configured in make.conf
+https://cloveros.ga/s/CloverOS-x86_64-20180219.iso
 
+18-Feb-2018
 Packages updated
 New ISO
-0 replies 1 retweet 2 likes
-CloverOS GNU/Linux
-‏ @cloveros_ga
-18 Feb 2018
 
-New mirror: https://ca2.cloveros.ga 
-0 replies 0 retweets 1 like
-CloverOS GNU/Linux
-‏ @cloveros_ga
-18 Feb 2018
-
+18-Feb-2018
+New mirror: https://ca2.cloveros.ga
 Kernel updated to 4.15.4
 Packages updated
-0 replies 1 retweet 0 likes
-CloverOS GNU/Linux
-‏ @cloveros_ga
-15 Feb 2018
 
+15-Feb-2018
 New ISO, includes wbar (run it using right click menu)
+https://cloveros.ga/s/CloverOS-x86_64-20180215.iso
 
-https://cloveros.ga/s/CloverOS-x86_64-20180215.iso …
-0 replies 0 retweets 1 like
-CloverOS GNU/Linux
-‏ @cloveros_ga
-13 Feb 2018
-
+13-Feb-2018
 Kernel updated to 4.15.3
 Packages updated
-0 replies 0 retweets 1 like
-CloverOS GNU/Linux
-‏ @cloveros_ga
-9 Feb 2018
 
+9-Feb-2018
 Packages updated
 zfs 0.7.6
-0 replies 0 retweets 0 likes
-CloverOS GNU/Linux
-‏ @cloveros_ga
-8 Feb 2018
 
+8-Feb-2018
 Kernel updated to 4.15.2
 Packages updated
-0 replies 0 retweets 1 like
-CloverOS GNU/Linux
-‏ @cloveros_ga
-7 Feb 2018
 
-0 replies 1 retweet 1 like
-CloverOS GNU/Linux
-‏ @cloveros_ga
-7 Feb 2018
-
-New ISO: https://cloveros.ga/s/CloverOS-x86_64-20180207.iso …
-
+7-Feb-2018
+New ISO: https://cloveros.ga/s/CloverOS-x86_64-20180207.iso
 Packages download from all mirrors simultaneously
-0 replies 0 retweets 0 likes
-CloverOS GNU/Linux
-‏ @cloveros_ga
-5 Feb 2018
 
+5-Feb-2018
 Packages updated.
 Kernel updated to 4.15.1
-0 replies 1 retweet 1 like
-CloverOS GNU/Linux
-‏ @cloveros_ga
-5 Feb 2018
-
-New Mirror https://fr2.cloveros.ga 
-0 replies 0 retweets 0 likes
-CloverOS GNU/Linux
-‏ @cloveros_ga
-5 Feb 2018
-
+New Mirror https://fr2.cloveros.ga
 Packages updated
 New ISO
 Packages download from all mirrors by default
-https://cloveros.ga/s/CloverOS-x86_64-20180205.iso …
-0 replies 0 retweets 0 likes
-CloverOS GNU/Linux
-‏ @cloveros_ga
-5 Feb 2018
-
+https://cloveros.ga/s/CloverOS-x86_64-20180205.iso
 Latest commit allows you to download packages from all mirrors at once.
+https://gitgud.io/cloveros/cloveros/commit/f1513f783045e87c99091cc99db8b9bb22e9b8f7
 
-https://gitgud.io/cloveros/cloveros/commit/f1513f783045e87c99091cc99db8b9bb22e9b8f7 …
-0 replies 0 retweets 1 like
-CloverOS GNU/Linux
-‏ @cloveros_ga
-3 Feb 2018
-
+3-Feb-2018
 Gentoo flier with CloverOS on it @gentoo @fosdem @GentooHardened
-0 replies 8 retweets 15 likes
-CloverOS GNU/Linux
-‏ @cloveros_ga
-2 Feb 2018
 
+2-Feb-2018
 Packages updated
-
 sudo eselect profile set "default/linux/amd64/17.0/hardened"
-0 replies 0 retweets 1 like
-CloverOS GNU/Linux
-‏ @cloveros_ga
-2 Feb 2018
-
 You don'\''t have to switch to hardened profile to upgrade your system. You should anyway though.
-0 replies 0 retweets 1 like
-CloverOS GNU/Linux
-‏ @cloveros_ga
-2 Feb 2018
-
 Packages updated.
 New ISO. (Changes: Gentoo Hardened)
+https://cloveros.ga/s/CloverOS-x86_64-20180202.iso
 
-https://cloveros.ga/s/CloverOS-x86_64-20180202.iso …
-0 replies 1 retweet 1 like
-CloverOS GNU/Linux
-‏ @cloveros_ga
-1 Feb 2018
-
+1-Feb-2018
 New package: games-fps/gzdoom
-0 replies 0 retweets 1 like
-CloverOS GNU/Linux
-‏ @cloveros_ga
-1 Feb 2018
-
 Switch to Gentoo Hardened done
-0 replies 0 retweets 0 likes
-CloverOS GNU/Linux
-‏ @cloveros_ga
-31 Jan 2018
 
-http://ca.cloveros.ga  and http://uswest.cloveros.ga  are back online
-0 replies 0 retweets 0 likes
-CloverOS GNU/Linux
-‏ @cloveros_ga
-30 Jan 2018
+31-Jan-2018
+http://ca.cloveros.ga and http://uswest.cloveros.ga are back online
 
+30-Jan-2018
 All packages now emerged with wayland USE
-0 replies 0 retweets 2 likes
-CloverOS GNU/Linux
-‏ @cloveros_ga
-30 Jan 2018
-
 New ISO
 - Linux 4.15.0
 - GCC 7.3.0
 - Firefox 58
-https://cloveros.ga/s/CloverOS-x86_64-20180130.iso …
-0 replies 0 retweets 1 like
-CloverOS GNU/Linux
-‏ @cloveros_ga
-30 Jan 2018
-
+https://cloveros.ga/s/CloverOS-x86_64-20180130.iso
 More vapoursynth plugins.
-
 You can get all of them with emerge vapoursynth-plugins-meta
-0 replies 1 retweet 1 like
-CloverOS GNU/Linux
-‏ @cloveros_ga
-30 Jan 2018
-
-http://ca.cloveros.ga  & http://uswest.cloveros.ga  (donated servers) are currently offline
-
+http://ca.cloveros.ga & http://uswest.cloveros.ga  (donated servers) are currently offline
 If anyone wants to donate a mirror, run this on the directory your webserver is hosting and send me the url
 rsync -a --delete-first rsync://fr.cloveros.ga/cloveros /your/webserver/directory
-0 replies 0 retweets 1 like
-CloverOS GNU/Linux
-‏ @cloveros_ga
-30 Jan 2018
-
 Kernel updated to 4.15.0
-0 replies 1 retweet 1 like
-CloverOS GNU/Linux
-‏ @cloveros_ga
-29 Jan 2018
 
+29-Jan-2018
 Firefox 58 is in binhost
-Packages updated
-0 replies 1 retweet 0 likes
-CloverOS GNU/Linux
-‏ @cloveros_ga
-29 Jan 2018
-
 Upgraded to GCC7
 All packages rebuilt. Big update (sorry, emerge does it by default)
 Packages updated
-0 replies 1 retweet 0 likes
-CloverOS GNU/Linux
-‏ @cloveros_ga
-24 Jan 2018
 
+24-Jan-2018
 Kernel updated to 4.14.15
-0 replies 2 retweets 0 likes
-CloverOS GNU/Linux
-‏ @cloveros_ga
-24 Jan 2018
-
 Packages updated
-0 replies 1 retweet 1 like
-CloverOS GNU/Linux
-‏ @cloveros_ga
-18 Jan 2018
 
+18-Jan-2018
 Switch to fvwm done
-
-New ISO: https://cloveros.ga/s/CloverOS-x86_64-20180118.iso …
-1 reply 2 retweets 9 likes
-CloverOS GNU/Linux
-‏ @cloveros_ga
-18 Jan 2018
-
+New ISO: https://cloveros.ga/s/CloverOS-x86_64-20180118.iso
 Kernel updated to 4.14.14
 Packages updated
-1 reply 0 retweets 0 likes
-CloverOS GNU/Linux
-‏ @cloveros_ga
-16 Jan 2018
 
+16-Jan-2018
 Switch to fvwm started
-0 replies 0 retweets 1 like
-CloverOS GNU/Linux
-‏ @cloveros_ga
-16 Jan 2018
-
 cloveros_settings.sh accepts parameters now
-0 replies 0 retweets 1 like
-CloverOS GNU/Linux
-‏ @cloveros_ga
-16 Jan 2018
-
 Twm should show cursor on startup now
-0 replies 0 retweets 0 likes
-CloverOS GNU/Linux
-‏ @cloveros_ga
-16 Jan 2018
-
 Packages updated
-0 replies 0 retweets 0 likes
-CloverOS GNU/Linux
-‏ @cloveros_ga
-15 Jan 2018
 
+15-Jan-2018
 CFLAGS="-Ofast -mmmx -mssse3 -pipe -funroll-loops -flto=8 -floop-block -floop-interchange -floop-strip-mine -ftree-loop-distribution"
-0 replies 0 retweets 1 like
-CloverOS GNU/Linux
-‏ @cloveros_ga
-15 Jan 2018
-
 Added cloveros_settings.sh in twmrc and qasmixer volume control
-
 New ISO: https://cloveros.ga/s/CloverOS-x86_64-20180114.iso …
-1 reply 0 retweets 1 like
-CloverOS GNU/Linux
-‏ @cloveros_ga
-13 Jan 2018
 
-New ISO: https://cloveros.ga/s/CloverOS-x86_64-20180113.iso …
-0 replies 0 retweets 1 like
-CloverOS GNU/Linux
-‏ @cloveros_ga
-13 Jan 2018
-
+13-Jan-2018
+New ISO: https://cloveros.ga/s/CloverOS-x86_64-20180113.iso
 cloveros_settings.sh updated
-0 replies 0 retweets 0 likes
-CloverOS GNU/Linux
-‏ @cloveros_ga
-13 Jan 2018
-
 Packages updated
 Kernel updated to 4.14.13
-0 replies 0 retweets 0 likes
-CloverOS GNU/Linux
-‏ @cloveros_ga
-12 Jan 2018
 
+12-Jan-2018
 Kernel upgraded to 4.14.12
-0 replies 0 retweets 0 likes
-CloverOS GNU/Linux
-‏ @cloveros_ga
-12 Oct 2017
 
+12 Oct 2017
 CloverOS GNU/Linux (Package Signing) 78F5 AC55 A120 07F2 2DF9 A28A 78B9 3F76 B8E4 2805
-4096-bit https://cloveros.ga/s/cloveros.gpg 
-#pgp #fingerprint
-0 replies 2 retweets 1 like</div>
+4096-bit https://cloveros.ga/s/cloveros.gpg
+#pgp #fingerprint</div>
 				</div>
 				<div class="dropdown">
 					<a href="https://useast.cloveros.ga"><li>Packages</li></a>
