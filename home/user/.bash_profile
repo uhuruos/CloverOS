@@ -227,10 +227,10 @@ if [ -z "$DISPLAY" ] && [ -z "$SSH_CLIENT" ] && ! pgrep X > /dev/null; then
 					echo Desktop installed, starting...
 				else
 					echo Please connect to the Internet
-					exec bash
+					exec $SHELL
 				fi
 			else
-				exec bash
+				exec $SHELL
 			fi
 		fi
 		X &
