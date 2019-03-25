@@ -100,6 +100,7 @@ sed -i 's/^/#/' /home/$username/.bash_profile
 echo -e 'if [ -z "\$DISPLAY" ]; then
 export DISPLAY=:0
 X&
+sleep 1
 fvwm&
 nitrogen --set-zoom wallpaper.png
 urxvt -e sudo ./livecd_install.sh
