@@ -99,9 +99,9 @@ sed -i "s@c1:12345:respawn:/sbin/agetty --noclear 38400 tty1 linux@c1:12345:resp
 sed -i 's/^/#/' /home/$username/.bash_profile
 echo -e 'if [ -z "\$DISPLAY" ]; then
 export DISPLAY=:0
-X&
+X &
 sleep 1
-fvwm&
+fvwm &
 nitrogen --set-zoom wallpaper.png
 urxvt -e sudo ./livecd_install.sh
 fi' >> /home/$username/.bash_profile
