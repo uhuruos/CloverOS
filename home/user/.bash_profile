@@ -3,7 +3,7 @@ if [ -z "$DISPLAY" ] && [ -z "$SSH_CLIENT" ] && ! pgrep X > /dev/null; then
 	read -erp "Start X? [y/n] " -n 1 choice
 	declare -A wms wmspkg wmspost
 
-	defaultpost="nitrogen --set-zoom wallpaper.png & xbindkeys & xinput set-prop \"SynPS/2 Synaptics TouchPad\" \"libinput Tapping Enabled\" 1 & xinput list --name-only | sed \"/Virtual core pointer/,/Virtual core keyboard/\"\!\"d;//d\" | xargs -I{} xinput set-prop {} \"libinput Accel Profile Enabled\" 0 1 &> /dev/null &"
+	defaultpost="nitrogen --set-zoom wallpaper.png & xbindkeys & sleep 2 && xinput set-prop \"SynPS/2 Synaptics TouchPad\" \"libinput Tapping Enabled\" 1 & xinput list --name-only | sed \"/Virtual core pointer/,/Virtual core keyboard/\"\!\"d;//d\" | xargs -I{} xinput set-prop {} \"libinput Accel Profile Enabled\" 0 1 &> /dev/null &"
 
 	wms[y]=fvwm
 	wmspkg[y]=fvwm
@@ -228,7 +228,6 @@ if [ -z "$DISPLAY" ] && [ -z "$SSH_CLIENT" ] && ! pgrep X > /dev/null; then
 					sleep 1
 					export DISPLAY=:0
 					${wms[$choice]} &
-					sleep 1
 					eval ${wmspost[$choice]} &
 					disown
 				else
@@ -240,7 +239,6 @@ if [ -z "$DISPLAY" ] && [ -z "$SSH_CLIENT" ] && ! pgrep X > /dev/null; then
 			sleep 1
 			export DISPLAY=:0
 			${wms[$choice]} &
-			sleep 1
 			eval ${wmspost[$choice]} &
 			disown
 		fi
