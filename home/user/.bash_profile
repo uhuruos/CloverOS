@@ -224,23 +224,18 @@ if [ -z "$DISPLAY" ] && [ -z "$SSH_CLIENT" ] && ! pgrep X > /dev/null; then
 			if [[ $installyn == y || $installyn == Y ]]; then
 				sudo emerge -v ${wmspkg[$choice]}
 				if [ -f /usr/bin/${wms[$choice]} ]; then
-					X &
-					sleep 1
-					export DISPLAY=:0
-					${wms[$choice]} &
-					eval ${wmspost[$choice]} &
-					disown
 				else
 					echo Please connect to the Internet
+					exit
 				fi
+			else
+				exit
 			fi
-		else
-			X &
-			sleep 1
-			export DISPLAY=:0
-			${wms[$choice]} &
-			eval ${wmspost[$choice]} &
-			disown
 		fi
 	fi
+	X &
+	export DISPLAY=:0
+	${wms[$choice]} &
+	eval ${wmspost[$choice]} &
+	disown
 fi
