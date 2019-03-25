@@ -288,7 +288,7 @@ livecd_build.sh: cleanup/simplify
 
 23-Mar-19
 Packages updated
-http://forums.cloveros.ga made
+https://forums.cloveros.ga made
 ISO change: Wallpaper autoselect removed
 
 22-Mar-19
@@ -306,7 +306,7 @@ Kernel updated to 4.19.20
 New ISO https://cloveros.ga/s/CloverOS-x86_64-20190209.iso
 - Mouse acceleration disabled by default
 - Installer replaces wallpaper.png with 4:3 or 16:10 version if either is detected
-- http://README.md/FAQ  updated
+- README.md: FAQ updated
 - Added to CFLAGS: -mfpmath=both
 
 8-Feb-19
@@ -536,7 +536,7 @@ Xarchiver instead of Engrampa
 feh, games-envd, wbarconf removed
 wbar is now built with wbar-config
 xfe opens images with xfi by default
-new http://ca2.cloveros.ga mirror configured in make.conf
+new https://ca2.cloveros.ga mirror configured in make.conf
 https://cloveros.ga/s/CloverOS-x86_64-20180219.iso
 
 18-Feb-2018
@@ -595,7 +595,7 @@ New package: games-fps/gzdoom
 Switch to Gentoo Hardened done
 
 31-Jan-2018
-http://ca.cloveros.ga and http://uswest.cloveros.ga are back online
+https://ca.cloveros.ga and https://uswest.cloveros.ga are back online
 
 30-Jan-2018
 All packages now emerged with wayland USE
@@ -606,7 +606,7 @@ New ISO
 https://cloveros.ga/s/CloverOS-x86_64-20180130.iso
 More vapoursynth plugins.
 You can get all of them with emerge vapoursynth-plugins-meta
-http://ca.cloveros.ga & http://uswest.cloveros.ga  (donated servers) are currently offline
+https://ca.cloveros.ga & https://uswest.cloveros.ga  (donated servers) are currently offline
 If anyone wants to donate a mirror, run this on the directory your webserver is hosting and send me the url
 rsync -a --delete-first rsync://fr.cloveros.ga/cloveros /your/webserver/directory
 Kernel updated to 4.15.0
