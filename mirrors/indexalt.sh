@@ -2,7 +2,7 @@ cd $( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )
 recentpackages=$(find /usr/portage/packages/ -iname \*.tbz2 -printf "%T+%p\n" | sort -r | sed 's@:[0-9]*\.[0-9]*/usr/portage/packages/@ @; s/\.tbz2//; s/+/ /; s/2019-//; s@\(.*\) \(.*\) \(.*\)@\1 \2 <a href="\3.tbz2">\3</a>@')
 isoname=(/usr/portage/packages/s/CloverOS-x86_64-*.iso)
 isoname=${isoname##*/}
-isolist=$(grep "binhost_mirrors=" ../home/user/make.conf | sed 's@,@/s/CloverOS-x86_64-20190322.iso\n@g' | sed 's@\(.*\)@						<a href="\1">\1</a>@g' | sed '1d;$d')
+isolist=$(grep "binhost_mirrors=" ../home/user/make.conf | sed 's@,@/s/$isoname\n@g' | sed 's@\(.*\)@						<a href="\1">\1</a>@g' | sed '1d;$d')
 echo '<!DOCTYPE html>
 <html lang="en">
 <title>CloverOS GNU/Linux</title>
@@ -148,9 +148,15 @@ body {
 }
 #news, #packages {
 	white-space: pre;
+	height: 586px;
+}
+#news {
 	width: 500px;
 	left: -210px;
-	height: 586px;
+}
+#packages {
+	width: 400px;
+	left: -145px;
 }
 #downloads {
 	right: 0;
@@ -415,7 +421,7 @@ New ISO: https://cloveros.ga/s/CloverOS-x86_64-20180906.iso
 There is a problem with app-eselect/eselect-infinality
 If fonts don'\''t look right, run this to fix:
 sudo emerge -1 eselect-infinality && sudo eselect infinality set infinality
-Binhost now provides app-eselect/eselect-infinality::petkovich https://gpo.zugaina.org/app-eselect/eselect-infinality …
+Binhost now provides app-eselect/eselect-infinality::petkovich https://gpo.zugaina.org/app-eselect/eselect-infinality
 New ISO https://cloveros.ga/s/CloverOS-x86_64-20180823.iso
 gcc 8 update
 Kernel updated to 4.17.18
