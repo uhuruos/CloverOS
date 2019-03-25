@@ -132,6 +132,7 @@ body {
 	z-index: 1;
 	font-size: 12px;
 	overflow: auto;
+	resize: both;
 	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
 	background-color: #f9f9f9;
 	color: black;
@@ -696,8 +697,8 @@ CloverOS GNU/Linux (Package Signing) 78F5 AC55 A120 07F2 2DF9 A28A 78B9 3F76 B8E
 		<h3>Follow us:</h3>
 		<ul>
 			<li><a href="irc://irc.rizon.net/cloveros">IRC</a></li>
-			<li><a href="https://twitter.com/cloveros_ga">Twitter</a></li>
 			<li><a href="https://gitgud.io/cloveros/cloveros">Git</a></li>
+			<li><a href="https://twitter.com/cloveros_ga">Twitter</a></li>
 		</ul>
 		<h3>Shout-outs to:</h3>
 		<ul>
