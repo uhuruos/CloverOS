@@ -758,7 +758,6 @@ media-sound/darksnow
 media-sound/deadbeef
 media-sound/drumkv1
 media-sound/easytag
-media-sound/exaile
 media-sound/ezstream
 media-sound/flacon
 media-sound/gmpc
@@ -1106,7 +1105,7 @@ sys-kernel/bliss-initramfs
 sys-kernel/dkms
 sys-kernel/dracut
 sys-kernel/genkernel
-sys-kernel/gentoo-sources:4.19.29
+sys-kernel/gentoo-sources:4.19.31
 sys-kernel/linux-firmware
 sys-power/acpi_call
 sys-power/acpitool
