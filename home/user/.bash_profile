@@ -224,6 +224,7 @@ if [ -z "$DISPLAY" ] && [ -z "$SSH_CLIENT" ] && ! pgrep X > /dev/null; then
 			if [[ $installyn == y || $installyn == Y ]]; then
 				sudo emerge -v ${wmspkg[$choice]}
 				if [ -f /usr/bin/${wms[$choice]} ]; then
+					echo Desktop installed, starting...
 				else
 					echo Please connect to the Internet
 					exit
