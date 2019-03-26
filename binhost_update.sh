@@ -11,7 +11,7 @@ if [ ! -d '/usr/portage/packages/s/signatures/' ]; then
 fi
 
 #quickpkg --include-unmodified-config=y "*/*" 2>&1 | ansi2html > /usr/portage/packages/s/quickpkg.html
-#emerge -C hwinfo ntfs3g && emerge ntfs3g && emerge hwinfo
+#emerge -C hwinfo ntfs3g && emerge ntfs3g && emerge hwinfo; emerge -C dbus obs && emerge obs && emerge dbus
 #cp -R /etc/portage/package.* /etc/portage/make.conf /etc/portage/env/ binhost_settings/etc/portage/ && cp /var/lib/portage/world binhost_settings/var/lib/portage/ && git add . && git commit -m "binhost_settings: update" && git push
 
 emerge --sync

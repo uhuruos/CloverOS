@@ -27,9 +27,6 @@ eduke32
 #jack2
 cadence ladish
 
-#old gcrypt
-staruml-bin
-
 #clutter USE=gtk
 buzztrax
 #qtdeclarative USE=xml
