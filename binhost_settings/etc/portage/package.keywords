@@ -69,7 +69,7 @@ dev-libs/beignet ** # llvm
 www-plugins/lightspark ** # llvm
 
 #libressl
-<net-libs/nodejs-10::libressl
+net-libs/nodejs::libressl
 <dev-qt/qtnetwork-5.12::libressl
 www-client/dillo
 app-editors/xemacs

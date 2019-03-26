@@ -476,5 +476,3 @@ x11-libs/libxkbcommon abi_x86_32
 media-libs/libsdl abi_x86_32
 media-libs/audiofile abi_x86_32
 sys-fs/eudev abi_x86_32
-
-#>=dev-libs/gobject-introspection-1.56.1 python_single_target_python2_7 -python_single_target_python3_6
