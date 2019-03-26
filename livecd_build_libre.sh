@@ -103,9 +103,10 @@ sleep 1
 export DISPLAY=:0
 fvwm &
 sleep 2 && xinput set-prop "SynPS/2 Synaptics TouchPad" "libinput Tapping Enabled" 1 & xinput list --name-only | sed "/Virtual core pointer/,/Virtual core keyboard/"\!"d;//d" | xargs -I{} xinput set-prop {} "libinput Accel Profile Enabled" 0 1 &> /dev/null &
-urxvt -geometry 80x24+\$(xrandr | awk "NR==1{print \\\$8/2-283\"+\"\\\$10/2-191}") -e sudo ./livecd_install.sh &
-cp wallpaper.png wallpaper169.png && ratio=\$(xrandr | awk "NR==1{print substr(\\\$8/\\\$10, 0, 4)}"); [ \$ratio == 1.6 ] && cp wallpaper1610.png wallpaper.png; [ \$ratio == 1.33 ] && cp wallpaper43.png wallpaper.png;
+xrandroutput=\$(xrandr)
+urxvt -geometry 80x24+\$(awk "NR==1{print \\\$8/2-283\"+\"\\\$10/2-191}" <<<\$xrandroutput) -e sudo ./livecd_install.sh &
 nitrogen --set-zoom wallpaper.png
+ratio=\$(awk "NR==1{print substr(\\\$8/\\\$10, 0, 4)}" <<<\$xrandroutput); [ \$ratio == 1.6 ] && nitrogen --set-zoom wallpaper1610.png; [ \$ratio == 1.33 ] && nitrogen --set-zoom wallpaper43.png;
 fi' >> /home/$username/.bash_profile
 
 rm -Rf /usr/portage/packages/* /etc/resolv.conf
