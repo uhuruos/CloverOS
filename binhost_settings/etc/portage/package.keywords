@@ -38,6 +38,7 @@ dev-db/mariadb # fixes build
 games-emulation/melonds-libretro # stable is 404
 games-emulation/fbalpha-libretro ** # stable is 404
 games-emulation/citra-libretro ** # stable is 404
+x11-themes/sddm-gentoo-black-theme ** # stable is 404
 x11-themes/terminology-themes ** # fixes conflict
 app-laptop/tp_smapi # requested
 media-fonts/vlgothic # old
@@ -69,7 +70,7 @@ dev-libs/beignet ** # llvm
 www-plugins/lightspark ** # llvm
 
 #libressl
-net-libs/nodejs::libressl
+<net-libs/nodejs-10::libressl
 <dev-qt/qtnetwork-5.12::libressl
 www-client/dillo
 app-editors/xemacs
@@ -78,7 +79,6 @@ net-ftp/proftpd
 net-misc/spice-gtk
 
 #keyworded, remove when stable exists
-x11-themes/sddm-gentoo-black-theme ** # stable is 404
 games-roguelike/wrogue
 net-im/corebird
 games-emulation/reicast
