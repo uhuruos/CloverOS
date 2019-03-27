@@ -25,9 +25,13 @@ media-libs/gegl # gimp
 media-gfx/mypaint # gimp
 
 #old, remove when stable is bumped up
-sys-fs/zfs # kernel 4.19
+sys-fs/zfs # kernel 5.0
 sys-fs/zfs-kmod # zfs
 sys-kernel/spl # zfs
+app-emulation/virtualbox # kernel 5.0
+app-emulation/virtualbox-guest-additions # virtualbox
+app-emulation/virtualbox-additions # virtualbox
+app-emulation/virtualbox-modules # virtualbox
 =media-libs/opencollada-1.6.63 # fixes libpcre update
 dev-lisp/clisp # fixes build
 net-p2p/mldonkey # fixes build
