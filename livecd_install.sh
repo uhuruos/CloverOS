@@ -93,4 +93,4 @@ exit
 EOF
 
 echo Installed, you can reboot and remove install media now
-exec zsh
+exec sudo -u $USER zsh
