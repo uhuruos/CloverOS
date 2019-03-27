@@ -126,6 +126,7 @@ rm iso/*.iso
 mv image/image.squashfs iso/image.squashfs
 tar -xOf kernel-livecd.tar.lzma --wildcards ./initramfs-genkernel-x86_64-\* | xz -d | gzip > iso/isolinux/gentoo.igz
 tar -xOf kernel-livecd.tar.lzma --wildcards ./kernel-genkernel-x86_64-\* > iso/isolinux/gentoo
+sed -i "s@  append.*@  append root=/dev/ram0 init=/linuxrc looptype=squashfs loop=/image.squashfs aufs cdroot initrd=gentoo.igz@g" iso/isolinux/isolinux.cfg
 xorriso -as mkisofs -r -J \
 	-joliet-long -l -cache-inodes \
 	-isohybrid-mbr /usr/share/syslinux/isohdpfx.bin \
