@@ -97,7 +97,7 @@ wget $gitprefix/livecd_install.sh -P /home/$username/
 chmod +x /home/$username/livecd_install.sh
 sed -i "s@c1:12345:respawn:/sbin/agetty --noclear 38400 tty1 linux@c1:12345:respawn:/sbin/agetty -a $username --noclear 38400 tty1 linux@" /etc/inittab
 sed -i 's/^/#/' /home/$username/.bash_profile
-echo -e 'if [ -z "$DISPLAY" ] && [ -z "$SSH_CLIENT" ] && ! pgrep X > /dev/null; then
+echo -e 'if [ -z "\$DISPLAY" ] && [ -z "\$SSH_CLIENT" ] && ! pgrep X > /dev/null; then
 X &
 sleep 1
 export DISPLAY=:0
