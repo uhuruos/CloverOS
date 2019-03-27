@@ -124,7 +124,7 @@ wget http://distfiles.gentoo.org/releases/amd64/autobuilds/20190324T214503Z/inst
 xorriso -osirrox on -indev iso/*.iso -extract / iso/
 rm iso/*.iso
 mv image/image.squashfs iso/image.squashfs
-tar -xOf kernel-livecd.tar.lzma --wildcards ./initramfs-genkernel-x86_64-\* | gzip > iso/isolinux/gentoo.igz
+tar -xOf kernel-livecd.tar.lzma --wildcards ./initramfs-genkernel-x86_64-\* | xz -d | gzip > iso/isolinux/gentoo.igz
 tar -xOf kernel-livecd.tar.lzma --wildcards ./kernel-genkernel-x86_64-\* > iso/isolinux/gentoo
 xorriso -as mkisofs -r -J \
 	-joliet-long -l -cache-inodes \
