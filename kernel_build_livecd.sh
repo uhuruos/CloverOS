@@ -15,7 +15,7 @@ echo -e "CONFIG_AUFS_FS=y\nCONFIG_AUFS_BRANCH_MAX_127=y\nCONFIG_AUFS_BRANCH_MAX_
 echo -e "CONFIG_NUMA_BALANCING=y\nCONFIG_NUMA_BALANCING_DEFAULT_ENABLED=y\nCONFIG_FAIR_GROUP_SCHED=y\nCONFIG_CFS_BANDWIDTH=n\nCONFIG_RT_GROUP_SCHED=n\nCONFIG_CGROUP_CPUACCT=n\nCONFIG_SCHED_AUTOGROUP=n\nCONFIG_SCSI_MQ_DEFAULT=y\nCONFIG_GENTOO_LINUX=y\nCONFIG_GENTOO_LINUX_UDEV=y\nCONFIG_GENTOO_LINUX_PORTAGE=y\nCONFIG_GENTOO_LINUX_INIT_SCRIPT=y\nCONFIG_GENTOO_LINUX_INIT_SYSTEMD=n" >> config-aufs
 sed -i "s/CONFIG_ISO9660_FS=m/CONFIG_ISO9660_FS=y/" config-aufs
 mkdir /usr/src/linux-$kernelversion-aufs/build/
-genkernel --kernel-config=config-aufs --kerneldir=/usr/src/linux-$kernelversion-aufs/ --bootdir=/usr/src/linux-$kernelversion-aufs/build/ all
+genkernel --kernel-config=config-aufs --kerneldir=/usr/src/linux-$kernelversion-aufs/ --bootdir=/usr/src/linux-$kernelversion-aufs/build/ --module-prefix=/usr/src/linux-$kernelversion-aufs/build/ all
 XZ_OPT="--lzma1=preset=9e,dict=256MB,nice=273,depth=200,lc=4" tar --lzma -cf /usr/portage/packages/s/kernel-livecd.tar.lzma /usr/src/linux-$kernelversion-aufs/build/
 sudo emerge -C aufs-sources
 sudo rm -Rf /usr/src/linux-$kernelversion-aufs/ config-aufs
