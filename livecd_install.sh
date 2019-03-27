@@ -93,4 +93,4 @@ exit
 EOF
 
 echo Installed, you can reboot and remove install media now
-exec sudo -u $USER zsh
+exec sudo -u $livecduser zsh
