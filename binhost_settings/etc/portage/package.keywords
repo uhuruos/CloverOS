@@ -79,6 +79,8 @@ net-ftp/proftpd
 net-misc/spice-gtk
 
 #keyworded, remove when stable exists
+media-gfx/openscad
+media-gfx/opencsg # openscad
 games-roguelike/wrogue
 net-im/corebird
 games-emulation/reicast
