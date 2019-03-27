@@ -119,19 +119,18 @@ wget https://cloveros.ga/s/kernel-livecd.tar.lzma -O kernel-livecd-libre.tar.lzm
 tar -C libre_image/lib/modules/ -xf kernel-livecd-libre.tar.lzma --wildcards \*-aufs/\*
 mksquashfs libre_image/ libre_image/image.squashfs -b 1024k -comp xz -Xbcj x86 -Xdict-size 100%
 mkdir libre_iso/
-cd libre_iso/
 builddate=$(curl -s http://distfiles.gentoo.org/releases/amd64/autobuilds/current-install-amd64-minimal/ | sed -nr 's/.*href="install-amd64-minimal-([0-9].*).iso">.*/\1/p')
-wget http://distfiles.gentoo.org/releases/amd64/autobuilds/20190324T214503Z/install-amd64-minimal-$builddate.iso
-xorriso -osirrox on -indev *.iso -extract / .
-rm *.iso
-mv ../libre_image/image.squashfs image.squashfs
-tar -xOf ../kernel-livecd-libre.tar.lzma --wildcards initramfs-genkernel-x86_64-\* | gzip > isolinux/gentoo.igz
-tar -xOf ../kernel-livecd-libre.tar.lzma --wildcards kernel-genkernel-x86_64-\* > isolinux/gentoo
+wget http://distfiles.gentoo.org/releases/amd64/autobuilds/20190324T214503Z/install-amd64-minimal-$builddate.iso -P libre_iso/
+xorriso -osirrox on -indev libre_iso/*.iso -extract / libre_iso/
+rm libre_iso/*.iso
+mv libre_image/image.squashfs libre_iso/image.squashfs
+tar -xOf kernel-livecd-libre.tar.lzma --wildcards ./initramfs-genkernel-x86_64-\* | gzip > libre_iso/isolinux/gentoo.igz
+tar -xOf kernel-livecd-libre.tar.lzma --wildcards ./kernel-genkernel-x86_64-\* > libre_iso/isolinux/gentoo
 xorriso -as mkisofs -r -J \
 	-joliet-long -l -cache-inodes \
 	-isohybrid-mbr /usr/share/syslinux/isohdpfx.bin \
 	-partition_offset 16 -A "Gentoo Live" \
 	-b isolinux/isolinux.bin -c isolinux/boot.cat \
 	-no-emul-boot -boot-load-size 4 -boot-info-table  \
-	-o CloverOS_Libre-x86_64-$(date +"%Y%m%d").iso iso/
+	-o CloverOS_Libre-x86_64-$(date +"%Y%m%d").iso libre_iso/
 rm -Rf libre_image/ libre_iso/ kernel-livecd-libre.tar.lzma
