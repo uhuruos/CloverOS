@@ -29,7 +29,7 @@ games-emulation/rpcs3 joystick evdev
 sys-kernel/genkernel cryptsetup
 dev-libs/beignet ocl-icd ocl20
 x11-misc/nitrogen nls
-x11-misc/spacefm -startup-notification -gtk3 gtk2 # gtk3 is buggy
+x11-misc/spacefm -startup-notification -gtk3 gtk2 # gtk3 has drag and drop crash bug
 media-gfx/ahoviewer -libsecret -rar
 net-nntp/sabnzbd -rar
 www-servers/tomcat extra-webapps
