@@ -116,7 +116,7 @@ HEREDOC
 cd ..
 umount -l image/*
 wget https://cloveros.ga/s/kernel-livecd.tar.lzma
-tar -C image/lib/modules/ -xf kernel-livecd.tar.lzma *-aufs/
+tar -C image/lib/modules/ -xf kernel-livecd.tar.lzma --wildcards \*-aufs/
 mksquashfs image/ image/image.squashfs -b 1024k -comp xz -Xbcj x86 -Xdict-size 100%
 mkdir iso/
 cd iso/
