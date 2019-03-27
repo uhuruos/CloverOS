@@ -142,7 +142,6 @@ This disables the binhost and uses Portage's ebuilds for packages. Now you can e
 * [What is CloverOS?](#what-is-cloveros)
 * [How do I install systemd/avahi/pulseaudio?](#how-do-i-install-systemdavahipulseaudio)
 * [It hangs on boot in Virtualbox](#it-hangs-on-boot-in-virtualbox)
-* [It hangs after "Boot from first hard disk"](#it-hangs-after-boot-from-first-hard-disk)
 * [Nvidia card crashes on boot with a green screen](#nvidia-card-crashes-on-boot-with-a-green-screen)
 * [Using old Radeon card with new video drivers](#using-old-radeon-card-with-new-video-drivers)
 * [Installing proprietary Nvidia drivers](#installing-proprietary-nvidia-drivers)
@@ -191,9 +190,6 @@ Switch to source and then emerge
 
 ### It hangs on boot in Virtualbox
 In Virtualbox 6.x, change Graphics Controller to VBoxSVGA. This fixes the "Setting system clock using the hardware clock [UTC] ..." hang.
-
-### It hangs after "Boot from first hard disk"
-Remove the iso/usb/cd. The iso doesn't do it for some reason.
 
 ### Nvidia card crashes on boot with a green screen
 /etc/modprobe.d/blacklist.conf:
