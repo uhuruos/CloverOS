@@ -29,7 +29,7 @@ echo '
 CFLAGS="-O3 -march=native -mfpmath=both -pipe -funroll-loops -floop-block -floop-interchange -floop-strip-mine -ftree-loop-distribution"
 CXXFLAGS="\${CFLAGS}"
 CPU_FLAGS_X86="mmx mmxext sse sse2 ssse3 sse3"
-MAKEOPTS="-j \\\$(nproc)"
+MAKEOPTS="-j8"
 PORTAGE_NICENESS=19
 PORTAGE_BINHOST="https://cloveros.ga"
 EMERGE_DEFAULT_OPTS="--keep-going=y --autounmask-write=y --jobs=4 -G"
