@@ -285,7 +285,17 @@ body {
 			<ul>
 				<div class="dropdown">
 					<a href="https://twitter.com/cloveros_ga"><li>News</li></a>
-					<div class="dropdown-content" id="news">24-Mar-19
+					<div class="dropdown-content" id="news">26-Mar-19
+Packages updated
+Kernel updated to 5.0.4
+New ISO: https://cloveros.ga/s/CloverOS-x86_64-20190327.iso
+
+25-Mar-19
+Packages updated
+Kernel updated to 4.19.31
+New ISO: https://cloveros.ga/s/CloverOS-x86_64-20190325.iso
+
+24-Mar-19
 binhost_update.sh: cleanup
 removed app-arch/par-1.1 due to ebuild mask
 mirrors/indexalt.txt: homepage change, add news and forums
