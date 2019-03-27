@@ -40,6 +40,7 @@ make prepare
 make modules_prepare
 cd /usr/src/linux-$kernelversion-gentoo-gnu/
 make clean
+wait
 emerge -b @module-rebuild
 
 binutils-config --linker ld.gold
