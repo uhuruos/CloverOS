@@ -115,11 +115,18 @@ HEREDOC
 
 cd ..
 umount -l image/*
-[ ! -f livecd_files.tar.xz ] && wget $gitprefix/livecd_files.tar.xz
-tar -C image/lib/modules/ -xf livecd_files.tar.xz 4.5.2-aufs-r1/
-tar -C image/ -xf livecd_files.tar.xz files/
-mv image/files/ iso/
-mksquashfs image/ iso/image.squashfs -b 1024k -comp xz -Xbcj x86 -Xdict-size 100%
+wget https://cloveros.ga/s/kernel-livecd.tar.lzma
+tar -C image/lib/modules/ -xf kernel-livecd.tar.lzma *-aufs/
+mksquashfs image/ image/image.squashfs -b 1024k -comp xz -Xbcj x86 -Xdict-size 100%
+mkdir iso/
+cd iso/
+builddate=$(curl -s http://distfiles.gentoo.org/releases/amd64/autobuilds/current-install-amd64-minimal/ | sed -nr 's/.*href="install-amd64-minimal-([0-9].*).iso">.*/\1/p')
+wget http://distfiles.gentoo.org/releases/amd64/autobuilds/20190324T214503Z/install-amd64-minimal-$builddate.iso
+xorriso -osirrox on -indev *.iso -extract / .
+rm *.iso
+mv ../image/image.squashfs image.squashfs
+tar -xOf ../kernel-livecd.tar.lzma --wildcards initramfs-genkernel-x86_64-\* | gzip > isolinux/gentoo.igz
+tar -xOf ../kernel-livecd.tar.lzma --wildcards kernel-genkernel-x86_64-\* > isolinux/gentoo
 xorriso -as mkisofs -r -J \
 	-joliet-long -l -cache-inodes \
 	-isohybrid-mbr /usr/share/syslinux/isohdpfx.bin \
