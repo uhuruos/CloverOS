@@ -33,8 +33,6 @@ cd /usr/src/linux-$kernelversion-gentoo-gnu/ ; PYTHON="python2.7" /usr/src/linux
 genkernel --kernel-config=config --kerneldir=/usr/src/linux-$kernelversion-gentoo-gnu/ --luks --lvm all
 XZ_OPT="--lzma1=preset=9e,dict=256MB,nice=273,depth=200,lc=4" tar --lzma -cf /usr/portage/packages/s/kernel-libre.tar.lzma /boot/*$kernelversion-gentoo-gnu /lib/modules/$kernelversion-gentoo-gnu &
 
-wait
-
 rm config
 cd /usr/src/linux/
 make clean
