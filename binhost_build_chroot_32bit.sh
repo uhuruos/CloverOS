@@ -17,7 +17,7 @@ mount -t proc none proc
 mount --rbind /dev dev
 mount --rbind /sys sys
 
-cat << EOF | chroot .
+cat << HEREDOC | chroot .
 
 emerge-webrsync
 eselect profile set "default/linux/x86/17.0/hardened"
@@ -51,8 +51,7 @@ emerge -C hwinfo ntfs3g && emerge ntfs3g && emerge hwinfo
 quickpkg --include-unmodified-config=y "*/*"
 
 exit
-
-EOF
+HEREDOC
 
 umount -l gentoo/*
 

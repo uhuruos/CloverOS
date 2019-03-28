@@ -117,13 +117,13 @@ cd ..
 umount -l image/*
 wget https://cloveros.ga/s/kernel-livecd.tar.lzma
 tar -C image/lib/modules/ -xf kernel-livecd.tar.lzma --wildcards \*-aufs/\*
-mksquashfs image/ image/image.squashfs -b 1024k -comp xz -Xbcj x86 -Xdict-size 100%
+mksquashfs image/ image.squashfs -b 1024k -comp xz -Xbcj x86 -Xdict-size 100%
 mkdir iso/
 builddate=$(curl -s http://distfiles.gentoo.org/releases/amd64/autobuilds/current-install-amd64-minimal/ | sed -nr 's/.*href="install-amd64-minimal-([0-9].*).iso">.*/\1/p')
-wget http://distfiles.gentoo.org/releases/amd64/autobuilds/20190324T214503Z/install-amd64-minimal-$builddate.iso -P iso/
+wget http://distfiles.gentoo.org/releases/amd64/autobuilds/current-install-amd64-minimal/install-amd64-minimal-$builddate.iso -P iso/
 xorriso -osirrox on -indev iso/*.iso -extract / iso/
 rm iso/*.iso
-mv image/image.squashfs iso/image.squashfs
+mv image.squashfs iso/image.squashfs
 tar -xOf kernel-livecd.tar.lzma --wildcards ./initramfs-genkernel-x86_64-\* | xz -d | gzip > iso/isolinux/gentoo.igz
 tar -xOf kernel-livecd.tar.lzma --wildcards ./kernel-genkernel-x86_64-\* > iso/isolinux/gentoo
 sed -i "s@  append.*@  append root=/dev/ram0 init=/linuxrc looptype=squashfs loop=/image.squashfs aufs cdroot initrd=gentoo.igz@g" iso/isolinux/isolinux.cfg

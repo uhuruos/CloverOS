@@ -147,7 +147,6 @@ echo -e "~rows=0\n1=home.desktop\n2=applications.desktop\n3=firefox.desktop\n4=s
 chown -R $username /home/$username/
 
 rm -Rf /usr/portage/packages/* /etc/resolv.conf
-
 exit
 
 EOF
