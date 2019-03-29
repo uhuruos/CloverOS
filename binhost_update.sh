@@ -10,7 +10,7 @@ if [ ! -d '/usr/portage/packages/s/signatures/' ]; then
 	mkdir -p /usr/portage/packages/s/signatures/
 fi
 
-if [ $1 = deep ]; then
+if [ "$1" = 'deep' ]; then
 	quickpkg --include-unmodified-config=y "*/*" 2>&1 | ansi2html > /usr/portage/packages/s/quickpkg.html
 	emerge -C hwinfo ntfs3g && emerge ntfs3g && emerge hwinfo; emerge -C dbus obs && emerge obs && emerge dbus; emerge -C jack-audio-connection-kit audacity && emerge audacity && emerge jack-audio-connection-kit
 	emerge -B sudo openssh postfix dcron vixie-cron cronie fcron anacron ungoogled-chromium
