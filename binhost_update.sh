@@ -13,7 +13,7 @@ fi
 if [ "$1" = 'deep' ]; then
 	find /usr/portage/packages/ -mindepth 1 -maxdepth 1 ! -name s -exec rm -Rf {} \; ; rm -Rf /usr/portage/packages/s/nodbus/
 	emerge -C hwinfo ntfs3g ; emerge ntfs3g ; emerge hwinfo; emerge -C sys-apps/dbus obs-studio ; emerge obs ; emerge -1 sys-apps/dbus; emerge -C jack-audio-connection-kit audacity ; emerge audacity ; emerge jack-audio-connection-kit
-	XZ_OPT="-T0" BINPKG_COMPRESS="xz" quickpkg --include-unmodified-config=y "*/*" 2>&1 | ansi2html > /usr/portage/packages/s/quickpkg.html
+	BINPKG_COMPRESS="xz" XZ_OPT="-T 0 --block-size 32MB --lzma2=preset=9e,dict=32MB,nice=273,depth=200,lc=4" quickpkg --include-unmodified-config=y "*/*" 2>&1 | ansi2html > /usr/portage/packages/s/quickpkg.html
 	emerge -B sudo openssh postfix dcron vixie-cron cronie fcron anacron ungoogled-chromium
 	PKGDIR="/usr/portage/packages/s/nodbus/" USE="-dbus -webengine -trash-panel-plugin" emerge -B glib qtgui PyQt5 thunar
 fi
