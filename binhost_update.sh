@@ -11,11 +11,11 @@ if [ ! -d '/usr/portage/packages/s/signatures/' ]; then
 fi
 
 if [ "$1" = 'deep' ]; then
-	quickpkg --include-unmodified-config=y "*/*" 2>&1 | ansi2html > /usr/portage/packages/s/quickpkg.html
+	find /usr/portage/packages/ -mindepth 1 -maxdepth 1 ! -name s -exec rm -Rf {} \; ; rm -Rf /usr/portage/packages/s/nodbus/
 	emerge -C hwinfo ntfs3g && emerge ntfs3g && emerge hwinfo; emerge -C dbus obs && emerge obs && emerge dbus; emerge -C jack-audio-connection-kit audacity && emerge audacity && emerge jack-audio-connection-kit
+	quickpkg --include-unmodified-config=y "*/*" 2>&1 | ansi2html > /usr/portage/packages/s/quickpkg.html
 	emerge -B sudo openssh postfix dcron vixie-cron cronie fcron anacron ungoogled-chromium
 	PKGDIR="/usr/portage/packages/s/nodbus/" USE="-dbus -webengine -trash-panel-plugin" emerge -B glib qtgui PyQt5 thunar
-	cp -R /etc/portage/package.* /etc/portage/make.conf /etc/portage/env/ binhost_settings/etc/portage/ && cp /var/lib/portage/world binhost_settings/var/lib/portage/ && git add . && git commit -m "binhost_settings: update" && git push
 fi
 
 emerge --sync
@@ -35,3 +35,5 @@ find /usr/portage/packages/ -type f | sed "s#/usr/portage/packages/##" | pv -qB 
 
 chmod -R 755 /usr/portage/packages/
 rsync -a --delete /usr/portage/packages/ root@nl.cloveros.ga:/var/www/html/cloveros.ga/
+
+cp -R /etc/portage/package.* /etc/portage/make.conf /etc/portage/env/ binhost_settings/etc/portage/ && cp /var/lib/portage/world binhost_settings/var/lib/portage/ && git add . && git commit -m "binhost_settings: update" && git push
