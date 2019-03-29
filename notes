@@ -2,7 +2,6 @@
 
 spacefm drive/ssh/ftp mounting
 automatic ~/.asoundrc configuration. it gets the first audio device without hdmi in the name
-eject usb after livecd install
 livecd_install.sh: uefi install, encryption
 100% cloveros-libre
 
@@ -12,7 +11,7 @@ livecd_install.sh: uefi install, encryption
 ftjam argyllcms
 
 #doesn't emerge
-virtualbox-guest-additions pitivi stumpwm stumpwm-contrib tauthon racket cinelerra kodi eagle gpac sway
+pitivi stumpwm stumpwm-contrib tauthon racket cinelerra kodi eagle gpac sway
 
 #doesn't emerge anymore
 dolphin-libretro loudmouth ots quakeforge tiemu sbt xen sauerbraten supertuxkart telegram-cli psensor opentoonz darktable playonlinux

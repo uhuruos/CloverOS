@@ -95,6 +95,5 @@ EOF
 umount -l gentoo/*
 umount gentoo/
 sync
-
 echo Installed, you can reboot and remove install media now
 exec sudo -u $livecduser zsh
