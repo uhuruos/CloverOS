@@ -10,9 +10,13 @@ if [ ! -d '/usr/portage/packages/s/signatures/' ]; then
 	mkdir -p /usr/portage/packages/s/signatures/
 fi
 
-#quickpkg --include-unmodified-config=y "*/*" 2>&1 | ansi2html > /usr/portage/packages/s/quickpkg.html
-#emerge -C hwinfo ntfs3g && emerge ntfs3g && emerge hwinfo; emerge -C dbus obs && emerge obs && emerge dbus
-#cp -R /etc/portage/package.* /etc/portage/make.conf /etc/portage/env/ binhost_settings/etc/portage/ && cp /var/lib/portage/world binhost_settings/var/lib/portage/ && git add . && git commit -m "binhost_settings: update" && git push
+if [ $1 = deep ]; then
+	quickpkg --include-unmodified-config=y "*/*" 2>&1 | ansi2html > /usr/portage/packages/s/quickpkg.html
+	emerge -C hwinfo ntfs3g && emerge ntfs3g && emerge hwinfo; emerge -C dbus obs && emerge obs && emerge dbus; emerge -C jack-audio-connection-kit audacity && emerge audacity && emerge jack-audio-connection-kit
+	emerge -B sudo openssh postfix dcron vixie-cron cronie fcron anacron ungoogled-chromium
+	PKGDIR="/usr/portage/packages/s/nodbus/" USE="-dbus -webengine -trash-panel-plugin" emerge -B glib qtgui PyQt5 thunar
+	cp -R /etc/portage/package.* /etc/portage/make.conf /etc/portage/env/ binhost_settings/etc/portage/ && cp /var/lib/portage/world binhost_settings/var/lib/portage/ && git add . && git commit -m "binhost_settings: update" && git push
+fi
 
 emerge --sync
 layman -S
@@ -20,11 +24,6 @@ emerge -uavDN --exclude=gentoo-sources @world
 emerge -b1 $(find /var/db/pkg/ -mindepth 2 -maxdepth 2 -name \*-9999 | awk -F \/ '{printf "=%s/%s ", $5, $6}')
 emerge -b @preserved-rebuild
 emerge --depclean
-eclean -d distfiles
-
-eclean -i -d -e /dev/stdin packages <<< $'app-admin/sudo\nnet-misc/openssh\nmail-mta/postfix\nwww-client/ungoogled-chromium\nsys-process/anacron\nsys-process/cronie\nsys-process/dcron\nsys-process/fcron\nsys-process/vixie-cron'
-#emerge -B sudo openssh postfix dcron vixie-cron cronie fcron anacron ungoogled-chromium
-#PKGDIR="/usr/portage/packages/s/nodbus/" USE="-dbus -webengine -trash-panel-plugin" emerge -B glib qtgui PyQt5 thunar
 
 php mirrors/index.php > /usr/portage/packages/index.html
 ./mirrors/indexalt.sh > /usr/portage/packages/indexalt.html
