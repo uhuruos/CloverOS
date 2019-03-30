@@ -127,7 +127,7 @@ mv libre_image.squashfs libre_iso/image.squashfs
 tar -xOf kernel-livecd-libre.tar.lzma --wildcards ./kernel-genkernel-x86_64-\* > libre_iso/boot/gentoo
 tar -xOf kernel-livecd-libre.tar.lzma --wildcards ./initramfs-genkernel-x86_64-\* | xz -d | gzip > libre_iso/boot/gentoo.igz
 tar -xOf kernel-livecd-libre.tar.lzma --wildcards ./System.map-genkernel-x86_64-\* > libre_iso/boot/System-gentoo.map
-sed -i "s@ dokeymap@aufs@g" libre_iso/isolinux/isolinux.cfg
+sed -i "s@dokeymap@aufs@g" libre_iso/isolinux/isolinux.cfg
 xorriso -as mkisofs -r -J \
 	-joliet-long -l -cache-inodes \
 	-isohybrid-mbr /usr/share/syslinux/isohdpfx.bin \
