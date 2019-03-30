@@ -126,7 +126,7 @@ media-sound/samplv1 qt5 standalone
 media-sound/padthv1 qt5 standalone
 media-sound/drumkv1 qt5 standalone
 media-plugins/audacious-plugins qt5 adplug alsa aac -ampache -aosd bs2b cdda cue ffmpeg flac fluidsynth gme -gnome -gtk -gtk3 -hotkeys http -jack lame -libav libsamplerate lirc mms modplug mp3 -nls -pulseaudio scrobbler sdl sid sndfile soxr speedpitch vorbis wavpack
-games-emulation/yabause qt5 pic
+games-emulation/yabause qt5
 games-emulation/citra sdl2 qt5
 games-emulation/dolphin qt5 ffmpeg
 media-video/vlc qt5 xml projectm flac mp3
@@ -195,8 +195,8 @@ dev-db/sqlite secure-delete
 media-libs/phonon -vlc
 app-crypt/hashcat custom-cflags
 media-libs/libsdl custom-cflags X
-www-client/ungoogled-chromium -lld gold custom-cflags optimize-thinlto optimize-webui
-www-client/chromium custom-cflags
+www-client/ungoogled-chromium -lld gold custom-cflags optimize-thinlto optimize-webui jumbo-build
+www-client/chromium custom-cflags jumbo-build
 www-client/firefox custom-cflags custom-optimization -wifi
 www-client/torbrowser custom-cflags custom-optimization
 mail-client/thunderbird custom-cflags custom-optimization -crypt
@@ -256,7 +256,6 @@ x11-plugins/gkrelltop X # fix: doesn't build without it
 media-sound/clementine dbus # fix: doesn't build without it
 www-client/waterfox -pgo # fix: doesn't build without it
 dev-libs/efl luajit # fix: doesn't build without it
-media-sound/audacity jack -lv2 # fix: always builds with jack if it's on the system, might as well add it as dependency
 sys-apps/shadow -pam # fix: login won't work (but su - user would)
 sys-power/suspend -crypt -lzo # requires USE=static-libs dev-libs/libgcrypt dev-libs/lzo
 sys-libs/zlib minizip # required by many

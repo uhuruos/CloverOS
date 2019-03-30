@@ -2,6 +2,7 @@ app-admin/clsync
 app-admin/conky
 app-admin/consul
 app-admin/cpulimit
+app-admin/eclean-kernel
 app-admin/entr
 app-admin/gkrellm
 app-admin/go-updater
@@ -768,6 +769,7 @@ media-sound/gstreamripper
 media-sound/guayadeque
 media-sound/guitarix
 media-sound/herrie
+media-sound/jack-audio-connection-kit
 media-sound/jack-rack
 media-sound/jamin
 media-sound/lash
@@ -841,7 +843,6 @@ media-video/kaffeine
 media-video/mediainfo
 media-video/mkvtoolnix
 media-video/mpv
-media-video/obs-studio
 media-video/openshot
 media-video/rtmpdump
 media-video/shotcut

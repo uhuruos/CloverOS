@@ -124,9 +124,10 @@ wget http://distfiles.gentoo.org/releases/amd64/autobuilds/current-install-amd64
 xorriso -osirrox on -indev iso/*.iso -extract / iso/
 rm iso/*.iso
 mv image.squashfs iso/image.squashfs
-tar -xOf kernel-livecd.tar.lzma --wildcards ./initramfs-genkernel-x86_64-\* | xz -d | gzip > iso/isolinux/gentoo.igz
-tar -xOf kernel-livecd.tar.lzma --wildcards ./kernel-genkernel-x86_64-\* > iso/isolinux/gentoo
-sed -i "s@  append.*@  append root=/dev/ram0 init=/linuxrc looptype=squashfs loop=/image.squashfs aufs cdroot initrd=gentoo.igz@g" iso/isolinux/isolinux.cfg
+tar -xOf kernel-livecd.tar.lzma --wildcards ./kernel-genkernel-x86_64-\* > iso/boot/gentoo
+tar -xOf kernel-livecd.tar.lzma --wildcards ./initramfs-genkernel-x86_64-\* | xz -d | gzip > iso/boot/gentoo.igz
+tar -xOf kernel-livecd.tar.lzma --wildcards ./System.map-genkernel-x86_64-\* > iso/boot/System-gentoo.map
+sed -i "s@ dokeymap@aufs@g" iso/isolinux/isolinux.cfg
 xorriso -as mkisofs -r -J \
 	-joliet-long -l -cache-inodes \
 	-isohybrid-mbr /usr/share/syslinux/isohdpfx.bin \
