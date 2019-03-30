@@ -128,6 +128,7 @@ tar -xOf kernel-livecd.tar.lzma --wildcards ./kernel-genkernel-x86_64-\* > iso/b
 tar -xOf kernel-livecd.tar.lzma --wildcards ./initramfs-genkernel-x86_64-\* | xz -d | gzip > iso/boot/gentoo.igz
 tar -xOf kernel-livecd.tar.lzma --wildcards ./System.map-genkernel-x86_64-\* > iso/boot/System-gentoo.map
 sed -i "s@dokeymap@aufs@g" iso/isolinux/isolinux.cfg
+sed -i "s@dokeymap@aufs@g" iso/grub/grub.cfg
 xorriso -as mkisofs -r -J \
 	-joliet-long -l -cache-inodes \
 	-isohybrid-mbr /usr/share/syslinux/isohdpfx.bin \
