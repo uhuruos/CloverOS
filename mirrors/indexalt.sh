@@ -1,8 +1,8 @@
 cd $( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )
-recentpackages=$(find /usr/portage/packages/ -iname \*.tbz2 -printf "%T+%p\n" | sort -r | sed 's@:[0-9]*\.[0-9]*/usr/portage/packages/@ @; s/\.tbz2//; s/+/ /; s/2019-//; s@\(.*\) \(.*\) \(.*\)@\1 \2 <a href="\3.tbz2">\3</a>@')
+recentpackages=$(find /usr/portage/packages/ -iname \*.tbz2 -printf '%T+%p\n' | sort -r | sed 's@:[0-9]*\.[0-9]*/usr/portage/packages/@ @; s/\.tbz2//; s/+/ /; s/2019-//; s@\(.*\) \(.*\) \(.*\)@\1 \2 <a href="\3.tbz2">\3</a>@')
 isoname=(/usr/portage/packages/s/CloverOS-x86_64-*.iso)
 isoname=${isoname##*/}
-isolist=$(grep "binhost_mirrors=" ../home/user/make.conf | sed "s@,@/s/$isoname\n@g" | sed 's@\(.*\)@						<a href="\1">\1</a>@g' | sed '1d;$d')
+isolist=$(grep 'binhost_mirrors=' ../home/user/make.conf | sed "s@,@/s/$isoname\n@g" | sed 's@\(.*\)@						<a href="\1">\1</a>@g' | sed '1d;$d')
 echo '<!DOCTYPE html>
 <html lang="en">
 <title>CloverOS GNU/Linux</title>
