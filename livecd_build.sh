@@ -99,9 +99,9 @@ sed -i "s@c1:12345:respawn:/sbin/agetty --noclear 38400 tty1 linux@c1:12345:resp
 sed -i 's/^/#/' /home/$username/.bash_profile
 echo -e 'if [ -z "\$DISPLAY" ] && [ -z "\$SSH_CLIENT" ] && ! pgrep X > /dev/null; then
 X &
-sleep 1
 export DISPLAY=:0
 fvwm &
+while :; do if [ -d "/proc/\$!" ]; then break; else fvwm & fi; done
 nitrogen --set-zoom wallpaper.png &
 sleep 2
 xrandroutput=\$(xrandr)
