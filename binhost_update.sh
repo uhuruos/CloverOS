@@ -39,4 +39,4 @@ find /usr/portage/packages/ -type f | sed "s#/usr/portage/packages/##" | pv -qB 
 chmod -R 755 /usr/portage/packages/
 rsync -a --delete /usr/portage/packages/ root@nl.cloveros.ga:/var/www/html/cloveros.ga/
 
-cp -R /etc/portage/package.* /etc/portage/make.conf /etc/portage/env/ binhost_settings/etc/portage/ && cp /var/lib/portage/world binhost_settings/var/lib/portage/ && git add . && git commit -m "binhost_settings: update" && git push
+cp -R /etc/portage/package.* /etc/portage/make.conf /etc/portage/env/ binhost_settings/etc/portage/ && cp /var/lib/portage/world binhost_settings/var/lib/portage/ && git add binhost_settings/ && git commit -m "binhost_settings: update" && git push
