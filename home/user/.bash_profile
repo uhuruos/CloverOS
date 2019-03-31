@@ -236,7 +236,7 @@ if [ -z "$DISPLAY" ] && [ -z "$SSH_CLIENT" ] && ! pgrep X > /dev/null; then
 		X &
 		export DISPLAY=:0
 		${wms[$choice]} &
-		i=0; while sleep 0.2; do if [ -d /proc/$! ]; then ((i++)); [ "$i" -gt 3 ] && break; else i=0; ${wms[$choice]} & fi; done
+		while sleep 0.2; do if [ -d /proc/$! ]; then ((i++)); [ "$i" -gt 3 ] && break; else i=0; ${wms[$choice]} & fi; done
 		eval ${wmspost[$choice]} &
 		disown
 	fi
