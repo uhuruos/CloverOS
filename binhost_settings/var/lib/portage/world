@@ -53,6 +53,7 @@ app-benchmarks/bonnie
 app-benchmarks/bonnie++
 app-benchmarks/i7z
 app-benchmarks/iozone
+app-benchmarks/ramspeed
 app-benchmarks/stress
 app-benchmarks/sysbench
 app-cdr/bashburn
