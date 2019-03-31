@@ -101,7 +101,7 @@ echo -e 'if [ -z "\$DISPLAY" ] && [ -z "\$SSH_CLIENT" ] && ! pgrep X > /dev/null
 X &
 export DISPLAY=:0
 fvwm &
-while :; do if [ -d "/proc/\$!" ]; then break; else fvwm & fi; done
+while sleep 0.2; do if [ -d "/proc/\$!" ]; then break; else \${wms[\$choice]} & fi; done
 nitrogen --set-zoom wallpaper.png &
 sleep 2
 xrandroutput=\$(xrandr)
