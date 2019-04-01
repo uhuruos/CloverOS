@@ -384,7 +384,7 @@ case "$choice" in
 		echo './cloveros_settings.sh 5 ; emerge gentoo-sources-$(cut -d" " -f3 /proc/version) ; ./cloveros_settings.sh 5'
 		echo 'sudo EMERGE_DEFAULT_OPTS="" emerge =gentoo-sources-$(cut -d" " -f3 /proc/version | sed "s/-.*//")'
 		echo 'sudo eselect kernel set linux-$(cut -d" " -f3 /proc/version)'
-		echo "sudo wget https://liquorix.net/sources/4.19/config.amd64 -O /usr/src/linux/.config"
+		echo "sudo wget https://raw.githubusercontent.com/damentz/liquorix-package/5.0/linux-liquorix/debian/config/kernelarch-x86/config-arch-64  -O /usr/src/linux/.config"
 		echo "sudo emerge nvidia-drivers bumblebee"
 		echo "sudo depmod"
 		echo "sudo eselect opengl set nvidia"
@@ -393,7 +393,7 @@ case "$choice" in
 		sleep 2
 		sudo EMERGE_DEFAULT_OPTS="" emerge =gentoo-sources-$(cut -d" " -f3 /proc/version | sed "s/-.*//")
 		sudo eselect kernel set linux-$(cut -d" " -f3 /proc/version)
-		sudo wget https://liquorix.net/sources/4.19/config.amd64 -O /usr/src/linux/.config
+		sudo wget https://raw.githubusercontent.com/damentz/liquorix-package/5.0/linux-liquorix/debian/config/kernelarch-x86/config-arch-64  -O /usr/src/linux/.config
 		sudo emerge nvidia-drivers bumblebee
 		sudo depmod
 		sudo eselect opengl set nvidia
