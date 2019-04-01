@@ -380,19 +380,21 @@ case "$choice" in
 		;;
 
 	n)
+		kernelversion=$(cut -d" " -f3 /proc/version | sed "s/-.*//")
+		kernelminorversion=$(cut -d" " -f3 /proc/version | sed "s/-.*//" | sed "s/\.[^.]*$//")
 		echo Running the following:
-		echo 'sudo EMERGE_DEFAULT_OPTS="" emerge =gentoo-sources-5.0.4'
-		echo 'sudo eselect kernel set linux-5.0.4-gentoo'
-		echo "sudo wget https://raw.githubusercontent.com/damentz/liquorix-package/5.0/linux-liquorix/debian/config/kernelarch-x86/config-arch-64  -O /usr/src/linux/.config"
+		echo 'sudo EMERGE_DEFAULT_OPTS="" emerge =gentoo-sources-'$kernelversion
+		echo 'sudo eselect kernel set linux-'$kernelversion'-gentoo'
+		echo "sudo wget https://raw.githubusercontent.com/damentz/liquorix-package/$kernelminorversion/linux-liquorix/debian/config/kernelarch-x86/config-arch-64 -O /usr/src/linux/.config"
 		echo "sudo emerge nvidia-drivers bumblebee"
 		echo "sudo depmod"
 		echo "sudo eselect opengl set nvidia"
 		echo "sudo eselect opencl set nvidia"
 		echo "sudo sh -c 'echo -e \"blacklist nouveau\nblacklist vga16fb\nblacklist rivafb\nblacklist nvidiafb\nblacklist rivatv\" >> /etc/modprobe.d/blacklist.conf'"
 		sleep 2
-		sudo EMERGE_DEFAULT_OPTS="" emerge =gentoo-sources-5.0.4
-		sudo eselect kernel set linux-5.0.4-gentoo
-		sudo wget https://raw.githubusercontent.com/damentz/liquorix-package/5.0/linux-liquorix/debian/config/kernelarch-x86/config-arch-64  -O /usr/src/linux/.config
+		sudo EMERGE_DEFAULT_OPTS="" emerge =gentoo-sources-$kernelversion
+		sudo eselect kernel set linux-$kernelversion-gentoo
+		sudo wget https://raw.githubusercontent.com/damentz/liquorix-package/$kernelminorversion/linux-liquorix/debian/config/kernelarch-x86/config-arch-64 -O /usr/src/linux/.config
 		sudo emerge nvidia-drivers bumblebee
 		sudo depmod
 		sudo eselect opengl set nvidia
