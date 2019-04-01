@@ -15,6 +15,7 @@ media-gfx/nip2::cloveros-overlay
 media-libs/vips::cloveros-overlay
 
 games-emulation/reicast::lanodanOverlay
+x11-plugins/purple-discord::lanodanOverlay
 
 x11-libs/gtk+:3::mv
 
@@ -46,8 +47,6 @@ media-libs/zita-resampler::audio-overlay
 media-sound/synthv1::audio-overlay
 media-sound/serialosc::audio-overlay
 media-libs/libmonome::audio-overlay # serialosc
-
-x11-plugins/purple-discord::flussence
 
 net-misc/megatools::jm-overlay
 net-im/telegram-purple::jm-overlay
