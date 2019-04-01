@@ -381,8 +381,7 @@ case "$choice" in
 
 	n)
 		echo Running the following:
-		echo './cloveros_settings.sh 5 ; emerge gentoo-sources-$(cut -d" " -f3 /proc/version) ; ./cloveros_settings.sh 5'
-		echo 'sudo EMERGE_DEFAULT_OPTS="" emerge =gentoo-sources-$(cut -d" " -f3 /proc/version | sed "s/-.*//")'
+		echo 'sudo EMERGE_DEFAULT_OPTS="" emerge =gentoo-sources-5.0.4'
 		echo 'sudo eselect kernel set linux-$(cut -d" " -f3 /proc/version)'
 		echo "sudo wget https://raw.githubusercontent.com/damentz/liquorix-package/5.0/linux-liquorix/debian/config/kernelarch-x86/config-arch-64  -O /usr/src/linux/.config"
 		echo "sudo emerge nvidia-drivers bumblebee"
@@ -391,7 +390,7 @@ case "$choice" in
 		echo "sudo eselect opencl set nvidia"
 		echo "sudo sh -c 'echo -e \"blacklist nouveau\nblacklist vga16fb\nblacklist rivafb\nblacklist nvidiafb\nblacklist rivatv\" >> /etc/modprobe.d/blacklist.conf'"
 		sleep 2
-		sudo EMERGE_DEFAULT_OPTS="" emerge =gentoo-sources-$(cut -d" " -f3 /proc/version | sed "s/-.*//")
+		sudo EMERGE_DEFAULT_OPTS="" emerge =gentoo-sources-5.0.4
 		sudo eselect kernel set linux-$(cut -d" " -f3 /proc/version)
 		sudo wget https://raw.githubusercontent.com/damentz/liquorix-package/5.0/linux-liquorix/debian/config/kernelarch-x86/config-arch-64  -O /usr/src/linux/.config
 		sudo emerge nvidia-drivers bumblebee
