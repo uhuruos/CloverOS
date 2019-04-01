@@ -382,7 +382,7 @@ case "$choice" in
 	n)
 		echo Running the following:
 		echo 'sudo EMERGE_DEFAULT_OPTS="" emerge =gentoo-sources-5.0.4'
-		echo 'sudo eselect kernel set linux-$(cut -d" " -f3 /proc/version)'
+		echo 'sudo eselect kernel set linux-5.0.4-gentoo'
 		echo "sudo wget https://raw.githubusercontent.com/damentz/liquorix-package/5.0/linux-liquorix/debian/config/kernelarch-x86/config-arch-64  -O /usr/src/linux/.config"
 		echo "sudo emerge nvidia-drivers bumblebee"
 		echo "sudo depmod"
