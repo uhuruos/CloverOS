@@ -231,7 +231,7 @@ Reboot
 
 or
 
-Stop X, `sudo rmmod -f nouveau vga16fb rivafb nvidiafb rivatv && sudo modprobe nvidia` and restart X
+Kill X, `sudo rmmod -f nouveau vga16fb rivafb nvidiafb rivatv && sudo modprobe nvidia` and restart X
 
 ### Installing Virtualbox
 ```
