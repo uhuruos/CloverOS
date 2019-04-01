@@ -227,7 +227,11 @@ sudo eselect opencl set nvidia
 sudo sh -c 'echo -e "blacklist nouveau\nblacklist vga16fb\nblacklist rivafb\nblacklist nvidiafb\nblacklist rivatv" >> /etc/modprobe.d/blacklist.conf'
 ```
 
-Reboot or stop X, `sudo rmmod -f nouveau vga16fb rivafb nvidiafb rivatv && sudo modprobe nvidia` and restart X
+Reboot
+
+or
+
+Stop X, `sudo rmmod -f nouveau vga16fb rivafb nvidiafb rivatv && sudo modprobe nvidia` and restart X
 
 ### Installing Virtualbox
 ```
