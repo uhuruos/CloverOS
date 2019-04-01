@@ -391,7 +391,7 @@ case "$choice" in
 		echo "sudo sh -c 'echo -e \"blacklist nouveau\nblacklist vga16fb\nblacklist rivafb\nblacklist nvidiafb\nblacklist rivatv\" >> /etc/modprobe.d/blacklist.conf'"
 		sleep 2
 		sudo EMERGE_DEFAULT_OPTS="" emerge =gentoo-sources-5.0.4
-		sudo eselect kernel set linux-5.0.4
+		sudo eselect kernel set linux-5.0.4-gentoo
 		sudo wget https://raw.githubusercontent.com/damentz/liquorix-package/5.0/linux-liquorix/debian/config/kernelarch-x86/config-arch-64  -O /usr/src/linux/.config
 		sudo emerge nvidia-drivers bumblebee
 		sudo depmod
