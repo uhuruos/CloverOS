@@ -48,6 +48,7 @@ app-laptop/tp_smapi # requested
 media-fonts/vlgothic # old
 games-emulation/dolphin ** # old
 games-emulation/pcsx2 ** # old
+games-emulation/ppsspp ** # old
 www-client/opera # old
 media-libs/zimg # vapoursynth
 dev-python/cython # vapoursynth
@@ -83,6 +84,7 @@ net-ftp/proftpd
 net-misc/spice-gtk
 
 #keyworded, remove when stable exists
+games-emulation/rpcs3 **
 media-gfx/openscad
 media-gfx/opencsg # openscad
 games-roguelike/wrogue
@@ -99,7 +101,6 @@ media-libs/libaom
 net-p2p/mktorrent-borg **
 media-sound/milkytracker
 x11-terms/alacritty
-games-fps/eduke32
 media-plugins/refocus-it
 media-gfx/opentoonz
 net-wireless/iwd
@@ -126,7 +127,6 @@ net-vpn/wireguard
 x11-misc/xcalib
 media-gfx/displaycal
 dev-util/trace-cmd
-games-emulation/rpcs3 **
 www-client/google-chrome-unstable
 games-fps/ezquake-bin
 net-misc/megatools::jm-overlay
@@ -204,7 +204,6 @@ media-libs/suil # ardour
 media-video/avidemux
 media-libs/avidemux-plugins # avidemux
 media-libs/avidemux-core # avidemux
-games-emulation/ppsspp
 games-emulation/pcsxr
 media-sound/lmms
 media-libs/stk # lmms
