@@ -295,8 +295,8 @@ case "$choice" in
 		portageworkdir=portageworkdir$(< /dev/urandom tr -dc 0-9 | head -c 8)
 		mkdir -p $portageworkdir/env/
 		wget $gitprefix/binhost_settings/etc/portage/{package.use,package.keywords,package.env,package.mask,package.unmask} -P $portageworkdir/
-		wget $gitprefix/binhost_settings/etc/portage/env/{no-lto,no-lto-graphite,no-lto-graphite-ofast,no-lto-o3,no-lto-ofast,no-o3,no-ofast,no-gold,no-mfpmath,no-avx,size,pcsx2} -P $portageworkdir/env/
-		if [[ $(find $portageworkdir -type f | wc -l) == "17" ]]; then
+		wget $gitprefix/binhost_settings/etc/portage/env/{no-lto,no-lto-graphite,no-lto-graphite-ofast,no-lto-o3,no-lto-ofast,no-o3,no-ofast,no-gold,no-mfpmath,no-avx,size,pcsx2,gold} -P $portageworkdir/env/
+		if [[ $(find $portageworkdir -type f | wc -l) == "18" ]]; then
 			backupportagedir=backupportage$(< /dev/urandom tr -dc 0-9 | head -c 8)
 			mkdir $backupportagedir
 			sudo mv /etc/portage/package.use /etc/portage/package.mask /etc/portage/package.keywords /etc/portage/package.env /etc/portage/package.unmask /etc/portage/env/ $backupportagedir

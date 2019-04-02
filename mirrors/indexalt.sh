@@ -285,7 +285,10 @@ body {
 			<ul>
 				<div class="dropdown">
 					<a href="https://twitter.com/cloveros_ga"><li>News</li></a>
-					<div class="dropdown-content" id="news">1-Apr-19
+					<div class="dropdown-content" id="news">2-Apr-19
+CFLAGS changed to CFLAGS="-Ofast -mssse3 -mfpmath=both -pipe -funroll-loops -flto=8 -floop-block -floop-interchange -floop-strip-mine -ftree-loop-distribution -fgraphite-identity -floop-nest-optimize -malign-data=cacheline -mtls-dialect=gnu2 -Wl,--hash-style=gnu"
+
+1-Apr-19
 Packages updated
 New ISO: https://cloveros.ga/s/CloverOS-x86_64-20190401.iso
 Binhost Packages file now gets cached when emerge is ran. I had to add "if_modified_since before;" to the nginx server configs
