@@ -234,7 +234,7 @@ or
 
 Kill X, `sudo rmmod -f nouveau vga16fb rivafb nvidiafb rivatv && sudo modprobe nvidia` and restart X
 
-### Installing bumblebee for laptop
+### Installing bumblebee for laptops
 
 This is for laptops that have both Intel GPU and Nvidia GPU with Optimus
 
