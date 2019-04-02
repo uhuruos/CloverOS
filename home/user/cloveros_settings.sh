@@ -381,7 +381,7 @@ case "$choice" in
 
 	n)
 		kernelversion=$(cut -d" " -f3 /proc/version | sed "s/-.*//")
-		kernelminorversion=$(cut -d" " -f3 /proc/version | sed "s/-.*//" | sed "s/\.[^.]*$//")
+		kernelminorversion=$(sed "s/\.[^.]*$//" <<<$kernelversion)
 		echo Running the following:
 		echo 'sudo EMERGE_DEFAULT_OPTS="" emerge =gentoo-sources-'$kernelversion
 		echo 'sudo eselect kernel set linux-'$kernelversion'-gentoo'

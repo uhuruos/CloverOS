@@ -145,6 +145,7 @@ This disables the binhost and uses Portage's ebuilds for packages. Now you can e
 * [Nvidia card crashes on boot with a green screen](#nvidia-card-crashes-on-boot-with-a-green-screen)
 * [Using old Radeon card with new video drivers](#using-old-radeon-card-with-new-video-drivers)
 * [Installing proprietary Nvidia drivers](#installing-proprietary-nvidia-drivers)
+* [Installing bumblebee for laptops](#installing-bumblebee-for-laptops)
 * [Installing Virtualbox](#installing-virtualbox)
 * [Steam stops working](#steam-stops-working)
 * [Firefox and Pulseaudio](#firefox-and-pulseaudio)
@@ -232,6 +233,16 @@ Reboot
 or
 
 Kill X, `sudo rmmod -f nouveau vga16fb rivafb nvidiafb rivatv && sudo modprobe nvidia` and restart X
+
+### Installing bumblebee for laptop
+
+This is for laptops that have both Intel GPU and Nvidia GPU with Optimus
+
+```
+sudo emerge bumblebee
+sudo depmod
+sudo sed -i 's/^Driver=$/Driver=nvidia/; s/^Bridge=auto$/Bridge=primus/; s/^VGLTransport=proxy$/VGLTransport=rgb/; s/^KernelDriver=$/KernelDriver=nvidia/; s/^PMMethod=auto$/PMMethod=bbswitch/; s@^LibraryPath=$@LibraryPath=/usr/lib64/opengl/nvidia/lib:/usr/lib/opengl/nvidia/lib@; s@^XorgModulePath=$@XorgModulePath=/usr/lib64/opengl/nvidia/lib,/usr/lib64/opengl/nvidia/extensions,/usr/lib64/xorg/modules/drivers,/usr/lib64/xorg/modules@' /etc/bumblebee/bumblebee.conf
+```
 
 ### Installing Virtualbox
 ```

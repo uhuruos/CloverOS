@@ -285,7 +285,12 @@ body {
 			<ul>
 				<div class="dropdown">
 					<a href="https://twitter.com/cloveros_ga"><li>News</li></a>
-					<div class="dropdown-content" id="news">29-Mar-2019
+					<div class="dropdown-content" id="news">1-Apr-19
+Packages updated
+New ISO: https://cloveros.ga/s/CloverOS-x86_64-20190401.iso
+Binhost Packages file now gets cached when emerge is ran. I had to add "if_modified_since before;" to the nginx server configs
+
+29-Mar-19
 Packages updated
 Packages now use xz for compression instead of bzip2, major performance improvement in emerging packages expected
 
@@ -380,7 +385,7 @@ New ISO: https://cloveros.ga/s/CloverOS-x86_64-20181218.iso
 Kernel updated to 4.19.8
 Packages updated
 
-5-Dec-2018
+5-Dec-18
 Packages updated
 New ISO: https://cloveros.ga/s/CloverOS-x86_64-20181205.iso
 New website https://cloveros.ga
@@ -398,7 +403,7 @@ iso changes:
 - Filezilla removed
 - dbus no longer needed/included
 
-20-Nov-2018
+20-Nov-18
 Packages updated
 Kernel updated to 4.18.19
 New ISO: https://cloveros.ga/s/CloverOS-x86_64-20181120.iso
@@ -407,7 +412,7 @@ firefox-63.0.3
 mesa-18.2.5
 youtube-dl-2018.11.18
 
-18-Oct-2018
+18-Oct-18
 Packages updated
 Kernel updated to 4.18.14
 New ISO: https://cloveros.ga/s/CloverOS-x86_64-20181018.iso
@@ -416,28 +421,28 @@ New ISO: https://cloveros.ga/s/CloverOS-x86_64-20181018.iso
 - xbindkeys replaced with fvwm (still in base install for other WMs)
 - wine 3.18 (staging, d3d9)
 
-5-Oct-2018
+5-Oct-18
 Packages updated
 Kernel updated to 4.18.12
 New ISO https://cloveros.ga/s/CloverOS-x86_64-20181005.iso
 
-4-Oct-2018
+4-Oct-18
 New mirrors: https://sg.cloveros.ga https://jp.cloveros.ga
 
-29-Sep-2018
+29-Sep-18
 Packages updated
 Kernel updated to 4.18.11
 
-20-Sep-2018
+20-Sep-18
 Packages updated
 Kernel updated to 4.18.8
 New ISO https://cloveros.ga/s/CloverOS-x86_64-20180920.iso
 
-6-Sep-2018
+6-Sep-18
 Packages updated
 New ISO: https://cloveros.ga/s/CloverOS-x86_64-20180906.iso
 
-23-Aug-2018
+23-Aug-18
 There is a problem with app-eselect/eselect-infinality
 If fonts don'\''t look right, run this to fix:
 sudo emerge -1 eselect-infinality && sudo eselect infinality set infinality
@@ -448,114 +453,114 @@ Kernel updated to 4.17.18
 Packages update
 All packages rebuilt with gcc 8
 
-14-Aug-2018
+14-Aug-18
 Packages updated
 Kernel updated to 4.17.14
 New ISO https://cloveros.ga/s/CloverOS-x86_64-20180815.iso
 
-13-Aug-2018
+13-Aug-18
 Packages updated
 Kernel updated to 4.17.13
 ~/.bash_profile now has every WM available
 New ISO https://cloveros.ga/s/CloverOS-x86_64-20180813.iso
 
-5-Aug-2018
+5-Aug-18
 Packages updated
 Kernel updated to 4.17.12
 rtorrent-ps replaced with rtorrent
 New ISO: https://cloveros.ga/s/CloverOS-x86_64-20180805.iso
 README now explains how to do dnscrypt, ALSA bluetooth and fix "too many arguments" error
 
-30-May-2018
+30-May-18
 Packages updated
 Kernel updated to 4.16.13
 
-28-May-2018
+28-May-18
 Packages updated
 Kernel updated to 4.16.12
 wine 3.9 staging d3d9 pba
 
-25-May-2018
+25-May-18
 Packages updated
 Binhost Package count: 4100 ( see world file here https://gitgud.io/cloveros/cloveros/raw/master/binhost_settings/var/lib/portage/world … )
 New ISO: https://cloveros.ga/s/CloverOS-x86_64-20180525.iso …
 Base install now contains compton
 
-20-May-2018
+20-May-18
 New mirror: https://cernet.mirrors.ustc.edu.cn/cloveros/
 Thanks USTC!
 Packages updated
 Mesa, Enlightenment updated
 
-7-May-2018
+7-May-18
 Packages updated
 New ISO https://cloveros.ga/s/CloverOS-x86_64-20180507.iso
 
-29-Apr-2018
+29-Apr-18
 Packages updated
 wine updated to 3.6
 
-28-Apr-2018
+28-Apr-18
 Packages updated
 New ISO https://cloveros.ga/s/CloverOS-x86_64-20180427.iso
 
-19-Apr-2018
+19-Apr-18
 Packages updated
 Kernel updated to 4.16.3
 
-14-Apr-2018
+14-Apr-18
 Packages updated, kernel upgraded to 4.16.2
 
-31-Mar-2018
+31-Mar-18
 New ISO, xfe/xfi, wbar replaced with spacefm, nomacs
 
-29-Mar-2018
+29-Mar-18
 Packages updated
 Kernel updated to 4.15.14
 
-23-Mar-2018
+23-Mar-18
 CloverOS now uses LibreSSL instead of OpenSSL
 
-22-Mar-2018
+22-Mar-18
 Back online.
 
-21-Mar-2018
+21-Mar-18
 Packages updated
 Kernel updated to 4.15.12
 DNS currently down, should be up in a few hours
 
-19-Mar-2018
+19-Mar-18
 https://www.youtube.com/watch?v=RPBxgbU3LI4
 
-15-Mar-2018
+15-Mar-18
 Packages updated
 Kernel updated to 4.15.10
 New mirrors
 
-11-Mar-2018
+11-Mar-18
 Homepage in progress of being redone, new ISO
 
-10-Mar-2018
+10-Mar-18
 Packages updated
 Kernel updated to 4.15.8
 
-4-Mar-2018
+4-Mar-18
 Packages updated
 
 New firefox package. Complete list: firefox firefox-kde-opensuse firefox-bin torbrowser waterfox-bin palemoon-bin seamonkey
 
-26-Feb-2018
+26-Feb-18
 Packages updated
 Kernel updated to 4.15.6
 
-25-Feb-2018
+25-Feb-18
 Packages updated
 Kernel updated to 4.15.5
 
-22-Feb-2018
+22-Feb-18
 Packages updated
 
-19-Feb-2018
+19-Feb-18
 New ISO
 ISO changes:
 Xarchiver instead of Engrampa
@@ -565,36 +570,36 @@ xfe opens images with xfi by default
 new https://ca2.cloveros.ga mirror configured in make.conf
 https://cloveros.ga/s/CloverOS-x86_64-20180219.iso
 
-18-Feb-2018
+18-Feb-18
 Packages updated
 New ISO
 
-18-Feb-2018
+18-Feb-18
 New mirror: https://ca2.cloveros.ga
 Kernel updated to 4.15.4
 Packages updated
 
-15-Feb-2018
+15-Feb-18
 New ISO, includes wbar (run it using right click menu)
 https://cloveros.ga/s/CloverOS-x86_64-20180215.iso
 
-13-Feb-2018
+13-Feb-18
 Kernel updated to 4.15.3
 Packages updated
 
-9-Feb-2018
+9-Feb-18
 Packages updated
 zfs 0.7.6
 
-8-Feb-2018
+8-Feb-18
 Kernel updated to 4.15.2
 Packages updated
 
-7-Feb-2018
+7-Feb-18
 New ISO: https://cloveros.ga/s/CloverOS-x86_64-20180207.iso
 Packages download from all mirrors simultaneously
 
-5-Feb-2018
+5-Feb-18
 Packages updated.
 Kernel updated to 4.15.1
 New Mirror https://fr2.cloveros.ga
@@ -605,10 +610,10 @@ https://cloveros.ga/s/CloverOS-x86_64-20180205.iso
 Latest commit allows you to download packages from all mirrors at once.
 https://gitgud.io/cloveros/cloveros/commit/f1513f783045e87c99091cc99db8b9bb22e9b8f7
 
-3-Feb-2018
+3-Feb-18
 Gentoo flier with CloverOS on it @gentoo @fosdem @GentooHardened
 
-2-Feb-2018
+2-Feb-18
 Packages updated
 sudo eselect profile set "default/linux/amd64/17.0/hardened"
 You don'\''t have to switch to hardened profile to upgrade your system. You should anyway though.
@@ -616,14 +621,14 @@ Packages updated.
 New ISO. (Changes: Gentoo Hardened)
 https://cloveros.ga/s/CloverOS-x86_64-20180202.iso
 
-1-Feb-2018
+1-Feb-18
 New package: games-fps/gzdoom
 Switch to Gentoo Hardened done
 
-31-Jan-2018
+31-Jan-18
 https://ca.cloveros.ga and https://uswest.cloveros.ga are back online
 
-30-Jan-2018
+30-Jan-18
 All packages now emerged with wayland USE
 New ISO
 - Linux 4.15.0
@@ -637,43 +642,43 @@ If anyone wants to donate a mirror, run this on the directory your webserver is 
 rsync -a --delete-first rsync://fr.cloveros.ga/cloveros /your/webserver/directory
 Kernel updated to 4.15.0
 
-29-Jan-2018
+29-Jan-18
 Firefox 58 is in binhost
 Upgraded to GCC7
 All packages rebuilt. Big update (sorry, emerge does it by default)
 Packages updated
 
-24-Jan-2018
+24-Jan-18
 Kernel updated to 4.14.15
 Packages updated
 
-18-Jan-2018
+18-Jan-18
 Switch to fvwm done
 New ISO: https://cloveros.ga/s/CloverOS-x86_64-20180118.iso
 Kernel updated to 4.14.14
 Packages updated
 
-16-Jan-2018
+16-Jan-18
 Switch to fvwm started
 cloveros_settings.sh accepts parameters now
 Twm should show cursor on startup now
 Packages updated
 
-15-Jan-2018
+15-Jan-18
 CFLAGS="-Ofast -mmmx -mssse3 -pipe -funroll-loops -flto=8 -floop-block -floop-interchange -floop-strip-mine -ftree-loop-distribution"
 Added cloveros_settings.sh in twmrc and qasmixer volume control
 New ISO: https://cloveros.ga/s/CloverOS-x86_64-20180114.iso …
 
-13-Jan-2018
+13-Jan-18
 New ISO: https://cloveros.ga/s/CloverOS-x86_64-20180113.iso
 cloveros_settings.sh updated
 Packages updated
 Kernel updated to 4.14.13
 
-12-Jan-2018
+12-Jan-18
 Kernel upgraded to 4.14.12
 
-12 Oct 2017
+12-Oct-17
 CloverOS GNU/Linux (Package Signing) 78F5 AC55 A120 07F2 2DF9 A28A 78B9 3F76 B8E4 2805
 4096-bit https://cloveros.ga/s/cloveros.gpg
 #pgp #fingerprint</div>
