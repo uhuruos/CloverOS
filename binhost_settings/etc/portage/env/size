@@ -1,2 +1,2 @@
-CFLAGS="-Os -mssse3 -mfpmath=both -pipe -flto=8 -ffunction-sections -fdata-sections -floop-block -floop-interchange -floop-strip-mine -ftree-loop-distribution -fgraphite-identity -floop-nest-optimize -mtls-dialect=gnu2"
+CFLAGS="-Os -mssse3 -mfpmath=both -pipe -flto=8 -floop-block -floop-interchange -floop-strip-mine -ftree-loop-distribution -fgraphite-identity -floop-nest-optimize -mtls-dialect=gnu2 -ffunction-sections -fdata-sections -Wl,-s,--gc-sections,-z,--hash-style=gnu"
 CXXFLAGS="${CFLAGS}"
