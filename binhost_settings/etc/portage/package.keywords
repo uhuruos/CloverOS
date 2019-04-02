@@ -77,7 +77,7 @@ dev-libs/beignet ** # llvm
 www-plugins/lightspark ** # llvm
 
 #libressl
-net-libs/nodejs::libressl
+<net-libs/nodejs-10::libressl
 <dev-qt/qtnetwork-5.12::libressl
 www-client/dillo
 app-editors/xemacs
@@ -209,7 +209,6 @@ media-libs/avidemux-core # avidemux
 games-emulation/pcsxr
 media-sound/lmms
 media-libs/stk # lmms
-media-plugins/calf # lmms
 media-gfx/pngquant
 media-sound/yoshimi
 net-libs/tox
@@ -239,7 +238,6 @@ dev-libs/unibilium # neovim
 dev-libs/msgpack # neovim
 dev-libs/libvterm # neovim
 sys-fs/ecryptfs-utils
-sys-apps/keyutils # ecryptfs-utils
 media-gfx/maim
 x11-misc/slop # maim
 net-wireless/gnuradio
