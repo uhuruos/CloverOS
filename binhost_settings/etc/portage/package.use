@@ -194,7 +194,7 @@ media-libs/phonon -vlc
 app-crypt/hashcat custom-cflags
 media-libs/libsdl custom-cflags X
 www-client/ungoogled-chromium -lld gold custom-cflags optimize-thinlto optimize-webui jumbo-build
-www-client/chromium custom-cflags jumbo-build
+www-client/chromium custom-cflags jumbo-build -closure-compile
 www-client/firefox custom-cflags custom-optimization -wifi
 www-client/torbrowser custom-cflags custom-optimization
 mail-client/thunderbird custom-cflags custom-optimization -crypt

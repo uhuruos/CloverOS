@@ -913,6 +913,7 @@ net-irc/weechat
 net-libs/gtk-vnc
 net-libs/libotr
 net-libs/loudmouth
+net-libs/nodejs
 net-mail/dovecot
 net-mail/isync
 net-mail/mailman
