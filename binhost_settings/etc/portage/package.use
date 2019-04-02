@@ -188,7 +188,7 @@ x11-base/xorg-drivers input_devices_joystick
 dev-libs/weston xwayland
 www-servers/nginx nginx_modules_http_dav nginx_modules_http_realip rtmp
 media-libs/freetype infinality
-net-libs/webkit-gtk -webgl -introspection -geolocation
+net-libs/webkit-gtk -webgl -geolocation
 dev-db/sqlite secure-delete
 media-libs/phonon -vlc
 app-crypt/hashcat custom-cflags

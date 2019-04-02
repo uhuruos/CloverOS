@@ -95,7 +95,7 @@ media-video/flowblade::jorgicio
 media-video/vidcutter::jorgicio
 media-plugins/gimp-paint-studio::jorgicio
 net-im/telegram-cli::jorgicio
-sys-apps/gtop::jorgicio
+sys-process/gtop::jorgicio
 media-video/shotcut::jorgicio
 net-im/corebird::jorgicio
 

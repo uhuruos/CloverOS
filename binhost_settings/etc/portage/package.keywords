@@ -33,6 +33,8 @@ app-emulation/virtualbox-guest-additions # virtualbox
 app-emulation/virtualbox-additions # virtualbox
 app-emulation/virtualbox-modules # virtualbox
 =media-libs/opencollada-1.6.63 # fixes libpcre update
+=net-libs/http-parser-2.9.0-r1 # nodejs
+=dev-libs/libuv-1.27.0 # neovim
 dev-lisp/clisp # fixes build
 net-p2p/mldonkey # fixes build
 games-emulation/mgba # fixes build
@@ -75,7 +77,7 @@ dev-libs/beignet ** # llvm
 www-plugins/lightspark ** # llvm
 
 #libressl
-<net-libs/nodejs-10::libressl
+net-libs/nodejs::libressl
 <dev-qt/qtnetwork-5.12::libressl
 www-client/dillo
 app-editors/xemacs
@@ -107,7 +109,7 @@ net-wireless/iwd
 x11-themes/terminology-themes
 app-emulation/nemu
 app-crypt/johntheripper-jumbo
-sys-apps/gtop
+sys-process/gtop
 app-shells/mcfly
 app-portage/kuroo
 x11-misc/synergy
@@ -266,7 +268,7 @@ net-misc/pyhoca-gui
 net-misc/python-x2go # pyhoca-gui
 net-misc/pyhoca-cli
 net-analyzer/ntopng
-=net-libs/nDPI-2.0 # ntopng
+net-libs/nDPI # ntopng
 app-emulation/fuse
 app-emulation/libspectrum # fuse
 app-laptop/tlp

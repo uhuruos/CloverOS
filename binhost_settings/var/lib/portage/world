@@ -913,7 +913,6 @@ net-irc/weechat
 net-libs/gtk-vnc
 net-libs/libotr
 net-libs/loudmouth
-net-libs/nodejs
 net-mail/dovecot
 net-mail/isync
 net-mail/mailman
@@ -1036,7 +1035,6 @@ sys-apps/dmidecode
 sys-apps/fbset
 sys-apps/firejail
 sys-apps/flatpak
-sys-apps/gtop
 sys-apps/hprofile
 sys-apps/hwdata-redhat
 sys-apps/hwinfo
