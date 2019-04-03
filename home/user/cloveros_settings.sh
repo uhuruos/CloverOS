@@ -70,7 +70,10 @@ case "$choice" in
 
 		sudo rm /usr/portage/packages/Packages &> /dev/null
 
-		sudo FETCHCOMMAND_HTTPS="wget -O \"\${DISTDIR}/\${FILE}\" \"\${URI}\"" emerge -1 gnutls aria2
+		if [ ! -d /var/db/pkg/net-libs/gnutls-3.6.7/ ]; then
+			sudo FETCHCOMMAND_HTTPS="wget -O \"\${DISTDIR}/\${FILE}\" \"\${URI}\"" emerge -1 gnutls aria2
+		fi
+
 		if [ -d /var/db/pkg/net-p2p/rtorrent-ps-9999/ ]; then
 			sudo emerge -C rtorrent-ps
 			sudo emerge rtorrent
