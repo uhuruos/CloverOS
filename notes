@@ -8,7 +8,7 @@ livecd_install.sh: uefi install, encryption
 --- packages that don't build ---
 
 #doesn't emerge
-eduke32 ibus-sunpinyin pitivi stumpwm stumpwm-contrib tauthon racket cinelerra kodi eagle gpac darktable playonlinux
+eduke32 ibus-sunpinyin pitivi stumpwm stumpwm-contrib tauthon racket cinelerra kodi eagle gpac darktable
 
 #libressl
 nxplayer murmur makemkv eiskaltdcpp retroshare acme-tiny spyder johntheripper-jumbo
