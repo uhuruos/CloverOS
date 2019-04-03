@@ -92,7 +92,7 @@ app-editors/vim nls -minimal python
 app-editors/vim-core nls -minimal
 dev-util/google-perftools -minimal
 app-editors/nano -minimal
-x11-base/xorg-server -minimal xvfb suid
+x11-base/xorg-server -minimal
 net-p2p/eiskaltdcpp -minimal -emoticons -spell dht json gtk
 kde-plasma/libksysguard -minimal
 sci-libs/cholmod -minimal
@@ -274,6 +274,7 @@ media-libs/leptonica tiff # required by tesseract, vapoursynth
 dev-lua/mpack luajit # required by neovim
 dev-python/pyyaml libyaml # required by qutebrowser
 app-text/xmlto text # required by xdg-utils
+x11-base/xorg-server xvfb # required by firefox
 media-gfx/blender -osl # temporary
 app-office/abiword -calendar # temporary
 x11-libs/gtk+ X

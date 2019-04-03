@@ -1,0 +1,2 @@
+CFLAGS="${CFLAGS} -mtls-dialect=desc"
+CXXFLAGS="${CFLAGS}"
