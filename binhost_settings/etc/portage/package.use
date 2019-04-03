@@ -93,7 +93,7 @@ app-editors/vim-core nls -minimal
 dev-util/google-perftools -minimal
 app-editors/nano -minimal
 x11-base/xorg-server -minimal
-net-p2p/eiskaltdcpp -minimal -emoticons -spell dht json gtk
+net-p2p/eiskaltdcpp -minimal -emoticons dht json gtk
 kde-plasma/libksysguard -minimal
 sci-libs/cholmod -minimal
 dev-libs/libcdio -minimal
@@ -182,6 +182,7 @@ dev-lang/php curl gd fpm pdo fpm curl intl sqlite xmlwriter nls mysqli zip
 app-eselect/eselect-php fpm
 net-p2p/retroshare feedreader voip
 games-emulation/pcsxr -sdl # opengl or sdl
+x11-wm/e16 xcomposite # opengl
 net-im/pidgin spell
 net-irc/hexchat spell plugin-sysinfo
 x11-base/xorg-drivers input_devices_joystick
@@ -240,7 +241,7 @@ media-plugins/deadbeef-waveform-seekbar gtk3
 media-plugins/deadbeef-spectrogram gtk3
 media-plugins/deadbeef-musical-spectrum gtk3
 app-emulation/qemu sdl usb virgl virtfs gtk
-x11-drivers/xf86-video-intel tools # multi monitor
+x11-drivers/xf86-video-intel tools # multimonitor
 dev-libs/glib dbus # required by mate baobab flatpak pitivi evince eog bluez-alsa gthumb gedit flowblade
 dev-qt/qtgui dbus # required by kde
 dev-python/PyQt5 webengine # required by anki qutebrowser (dbus)

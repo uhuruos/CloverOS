@@ -86,6 +86,7 @@ net-ftp/proftpd
 net-misc/spice-gtk
 
 #keyworded, remove when stable exists
+x11-wm/e16
 games-emulation/rpcs3 **
 media-gfx/openscad
 media-gfx/opencsg # openscad
