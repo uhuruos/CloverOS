@@ -436,6 +436,7 @@ games-util/xboxdrv
 games-util/zdbsp
 gnome-extra/gnome-calculator
 gnome-extra/gnome-color-manager
+gui-wm/sway
 kde-apps/kamoso
 kde-apps/kbackup
 kde-apps/kde-meta
@@ -691,7 +692,6 @@ media-gfx/lximage-qt
 media-gfx/maim
 media-gfx/meh
 media-gfx/mirage
-media-gfx/mypaint
 media-gfx/nip2
 media-gfx/nomacs
 media-gfx/openexr_viewers
@@ -845,6 +845,7 @@ media-video/kaffeine
 media-video/mediainfo
 media-video/mkvtoolnix
 media-video/mpv
+media-video/obs-studio
 media-video/openshot
 media-video/rtmpdump
 media-video/shotcut
@@ -898,10 +899,12 @@ net-ftp/pure-ftpd
 net-ftp/vsftpd
 net-im/bitlbee
 net-im/choqok
+net-im/corebird
 net-im/discord-bin
 net-im/mcabber
 net-im/pidgin
 net-im/qtox
+net-im/telegram-cli
 net-im/telegram-desktop-bin
 net-im/telegram-purple
 net-im/ysm
@@ -1456,6 +1459,7 @@ x11-wm/bspwm
 x11-wm/ctwm
 x11-wm/cwm
 x11-wm/dwm
+x11-wm/e16
 x11-wm/echinus
 x11-wm/enlightenment:0.17
 x11-wm/evilwm

@@ -1,7 +1,6 @@
 #preference
 sys-devel/gcc
 sys-kernel/gentoo-sources
-net-misc/youtube-dl
 x11-libs/gtk+:3::mv # removes dbus
 www-client/firefox
 dev-libs/nss # firefox
@@ -12,17 +11,15 @@ dev-lang/rust # firefox
 media-libs/libwebp # firefox
 <media-libs/libvpx-1.8.0 # firefox
 media-libs/dav1d # firefox
+media-gfx/gimp
+media-libs/gegl # gimp
+media-gfx/mypaint-brushes # gimp
+media-libs/babl # gimp
 games-emulation/retroarch
 games-emulation/desmume-libretro # retroarch
 games-emulation/ppsspp-libretro # retroarch
 media-libs/vulkan-loader # retroarch
 dev-util/vulkan-headers # retroarch
-media-gfx/gimp
-media-gfx/mypaint-brushes # gimp
-media-libs/libmypaint # gimp
-media-libs/babl # gimp
-media-libs/gegl # gimp
-media-gfx/mypaint # gimp
 
 #old, remove when stable is bumped up
 sys-fs/zfs # kernel 5.0
@@ -46,12 +43,10 @@ games-emulation/fbalpha-libretro ** # stable is 404
 games-emulation/citra-libretro ** # stable is 404
 x11-themes/sddm-gentoo-black-theme ** # stable is 404
 x11-themes/terminology-themes ** # fixes conflict
-app-laptop/tp_smapi # requested
 media-fonts/vlgothic # old
 games-emulation/dolphin ** # old
 games-emulation/pcsx2 ** # old
 games-emulation/ppsspp ** # old
-www-client/opera # old
 media-libs/zimg # vapoursynth
 dev-python/cython # vapoursynth
 media-video/ffmpeg # old
@@ -87,6 +82,7 @@ net-misc/spice-gtk
 
 #keyworded, remove when stable exists
 x11-wm/e16
+x11-themes/e16-themes # e16
 games-emulation/rpcs3 **
 media-gfx/openscad
 media-gfx/opencsg # openscad
@@ -97,11 +93,11 @@ net-analyzer/masscan
 net-analyzer/zmap
 www-client/opera-beta
 www-client/opera-developer
-x11-plugins/gkrellm-plugins **
+x11-plugins/gkrellm-plugins ~*
 games-misc/katawa-shoujo
 www-client/ungoogled-chromium
 media-libs/libaom
-net-p2p/mktorrent-borg **
+net-p2p/mktorrent-borg ~*
 media-sound/milkytracker
 x11-terms/alacritty
 media-plugins/refocus-it
@@ -109,7 +105,6 @@ media-gfx/opentoonz
 net-wireless/iwd
 x11-themes/terminology-themes
 app-emulation/nemu
-app-crypt/johntheripper-jumbo
 sys-process/gtop
 app-shells/mcfly
 app-portage/kuroo
@@ -134,7 +129,6 @@ www-client/google-chrome-unstable
 games-fps/ezquake-bin
 net-misc/megatools::jm-overlay
 sys-auth/pam_yubico
-sys-auth/ykpers # pam_yubico
 sys-auth/ykclient # pam_yubico
 app-admin/keepassxc
 app-admin/passwordsafe
@@ -142,7 +136,6 @@ app-shells/zsh-syntax-highlighting
 app-crypt/kbfs
 app-crypt/keybase
 app-shells/loksh
-sys-apps/nvme-cli
 app-emulation/uae
 games-fps/quakeforge
 games-fps/qudos
@@ -164,15 +157,12 @@ games-fps/freedoom
 games-fps/zdoom
 games-engines/odamex
 games-simulation/corsix-th
-dev-lua/luasocket # corsix-th
 www-plugins/lightspark
 games-util/xboxdrv
 net-wireless/soapysdr
 net-wireless/sdrplay
 net-wireless/rtl-sdr
-dev-util/pycharm-community
 media-sound/guitarix **
-media-libs/zita-convolver # guitarix
 media-libs/libmonome # guitarix
 media-libs/zita-resampler # guitarix
 media-sound/pure-data
@@ -187,10 +177,8 @@ media-sound/samplv1
 x11-themes/wm-icons
 app-misc/anki
 media-sound/mumble **
-games-util/vitamtp-fork
 virtual/wine
 app-emulation/wine-any
-app-emulation/wine-mono # wine
 net-vpn/logmein-hamachi
 app-arch/zpaq-extras
 dev-util/bless
@@ -210,7 +198,6 @@ media-libs/avidemux-core # avidemux
 games-emulation/pcsxr
 media-sound/lmms
 media-libs/stk # lmms
-media-gfx/pngquant
 media-sound/yoshimi
 net-libs/tox
 net-im/qtox
@@ -278,7 +265,6 @@ dev-java/icedtea
 dev-util/staruml-bin
 media-gfx/w3mimgfb
 dev-libs/amdgpu-pro-opencl
-sys-apps/ripgrep
 sci-biology/foldingathome
 app-arch/brotli
 net-vpn/zeronet
@@ -359,13 +345,11 @@ games-emulation/sdlmame
 sys-block/sas3flash
 app-crypt/kencfs-plasma
 games-emulation/citra **
-dev-libs/sway
-dev-libs/json-c # sway
-dev-libs/wlc # sway
-dev-libs/wlroots # sway
+gui-wm/sway
+gui-apps/swaylock # sway
+gui-libs/wlroots # sway
+gui-apps/swayidle # sway
 app-text/scdoc # sway
-dev-libs/swayidle # sway
-dev-libs/swaylock # sway
 x11-terms/lilyterm
 games-emulation/vgba
 games-emulation/lxdream
@@ -388,7 +372,6 @@ sys-firmware/nvidia-firmware
 media-video/flowblade
 media-gfx/gmic # flowblade
 media-sound/sidplayfp
-media-libs/libsidplayfp # sidplayfp
 media-sound/audacious
 media-plugins/audacious-plugins
 media-sound/coquillo
@@ -468,7 +451,6 @@ dev-perl/URI-Find # extract_url
 dev-util/lxqt-build-tools
 dev-util/visual-regexp
 kde-misc/kio-locate
-kde-apps/kamoso
 kde-misc/kio-gopher
 kde-misc/kio-stash
 kde-plasma/plasma-applet-active-window-control
@@ -480,7 +462,6 @@ media-libs/fontconfig-ultimate
 media-plugins/gimp-resynthesizer
 media-sound/mps-youtube
 dev-python/pafy # mps-youtube
-media-video/gnome-mpv
 media-video/shotcut
 net-im/telegram-cli
 net-misc/gerbera
@@ -507,9 +488,6 @@ x11-terms/kitty
 x11-themes/sddm-gentoo-black-theme
 app-misc/ddccontrol-db
 app-i18n/ibus-kkc
-app-i18n/ibus-sunpinyin
-app-i18n/sunpinyin # ibus-sunpinyin
-app-i18n/sunpinyin-data # ibus-sunpinyin
 app-i18n/ibus-typing-booster
 app-i18n/ibus-input-pad
 dev-libs/input-pad
@@ -541,7 +519,6 @@ net-print/hplip
 net-print/hplip-plugin
 media-gfx/nip2
 media-libs/vips # nip2
-net-print/cnijfilter2
 net-print/pnm2ppa
 sci-libs/matio
 games-util/rejoystick
@@ -550,7 +527,6 @@ games-emulation/advancescan
 games-misc/ckmame
 x11-misc/enlightenment-extra
 sci-mathematics/rstudio
-dev-libs/mathjax # rstudio
 dev-php/composer
 dev-php/json-schema # composer
 dev-php/phar-utils # composer
@@ -588,7 +564,6 @@ media-fonts/montecarlo
 media-fonts/fantasque-sans-mono
 media-fonts/fifth-leg
 media-fonts/courier-prime
-media-fonts/alegreya-sans
 media-fonts/jomolhari
 media-fonts/inconsolata-hellenic
 media-fonts/heuristica
@@ -719,16 +694,13 @@ media-plugins/vapoursynth-motionmask
 media-plugins/vapoursynth-dedot
 media-sound/deadbeef
 media-plugins/deadbeef-plugins-meta
-media-plugins/deadbeef-gnome-mmkeys
 media-plugins/deadbeef-replaygain-control
 media-plugins/deadbeef-spectrogram
 media-plugins/deadbeef-musical-spectrum
 media-plugins/deadbeef-quick-search
-media-plugins/deadbeef-statusnotifier
 media-plugins/deadbeef-bookmark-manager
 media-plugins/deadbeef-bs2b
 media-plugins/deadbeef-waveform-seekbar
-media-plugins/deadbeef-vk
 media-plugins/deadbeef-vu-meter
 media-plugins/deadbeef-stereo-widener
 media-plugins/deadbeef-mpris
@@ -765,7 +737,6 @@ x11-plugins/wmacpiload-ac
 x11-plugins/wmbatteries *
 x11-plugins/wmping
 x11-plugins/wmamixer
-xfce-extra/xfce4-composite-editor
 games-misc/fortune-mod-all
 games-misc/fortune-mod-bofh-excuses
 games-misc/fortune-mod-calvin
