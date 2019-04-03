@@ -66,18 +66,11 @@ mount -t proc none proc
 mount --rbind /dev dev
 mount --rbind /sys sys
 
-cat << EOF | chroot .
-
+cat <<HEREDOC | chroot .
 emerge-webrsync
 eselect profile set "default/linux/amd64/17.0/hardened"
-
-PORTAGE_BINHOST="https://cloveros.ga" ACCEPT_KEYWORDS="**" emerge -1G aria2 portage python:2.7 python:3.6 openssh iputils wget curl libcap
-while ! gpg --list-keys "CloverOS GNU/Linux (Package signing)"; do
-	gpg --keyserver hkp://pool.sks-keyservers.net --recv-key "78F5 AC55 A120 07F2 2DF9 A28A 78B9 3F76 B8E4 2805"
-done
-
 echo '
-CFLAGS="-O3 -march=native -mfpmath=both -pipe -funroll-loops -floop-block -floop-interchange -floop-strip-mine -ftree-loop-distribution"
+CFLAGS="-O3 -march=native -mfpmath=both -pipe -funroll-loops -floop-block -floop-interchange -floop-strip-mine -ftree-loop-distribution -fgraphite-identity -floop-nest-optimize -malign-data=cacheline -mtls-dialect=gnu2 -Wl,--hash-style=gnu"
 CXXFLAGS="\${CFLAGS}"
 CPU_FLAGS_X86="mmx mmxext sse sse2 ssse3 sse3"
 MAKEOPTS="-j8"
@@ -88,14 +81,15 @@ ACCEPT_KEYWORDS="**"
 ACCEPT_LICENSE="*"
 binhost_mirrors="\$PORTAGE_BINHOST,https://useast.cloveros.ga,https://uswest.cloveros.ga,https://ca.cloveros.ga,https://fr.cloveros.ga,https://nl.cloveros.ga,https://uk.cloveros.ga,https://au.cloveros.ga,https://sg.cloveros.ga,https://jp.cloveros.ga,"
 FETCHCOMMAND_HTTPS="sh -c \"aria2c -x2 -s99 -j99 -k1M -d \"\\\${DISTDIR}\" -o \"\\\${FILE}\" \\\\\\\$(sed -e \"s#,#\\\${DISTDIR}/\\\${FILE}\"\ \"#g\" -e \"s#\$PKGDIR##g\" -e \"s#.partial##g\" <<< \$binhost_mirrors) & aria2c --allow-overwrite -d \"\\\${DISTDIR}\" -o \"\\\${FILE}.asc\" \\\\\\\$(sed -e \"s#,#/s/signatures/\\\${DISTDIR}/\\\${FILE}.asc\"\ \"#g\" -e \"s#\$PKGDIR##g\" -e \"s#.partial##g\" <<< \$binhost_mirrors) && wait && gpg --verify \"\\\${DISTDIR}/\\\${FILE}.asc\" \"\\\${DISTDIR}/\\\${FILE}\" && rm \"\\\${DISTDIR}/\\\${FILE}.asc\"\""' >> /etc/portage/make.conf
+while ! gpg --list-keys "CloverOS GNU/Linux (Package signing)"; do gpg --keyserver hkp://pool.sks-keyservers.net --recv-key "78F5 AC55 A120 07F2 2DF9 A28A 78B9 3F76 B8E4 2805"; done
+FETCHCOMMAND_HTTPS="wget -O \"\\\${DISTDIR}/\\\${FILE}\" \"\\\${URI}\"" emerge aria2
 
 #emerge gentoo-sources genkernel
-#wget http://liquorix.net/sources/4.19/config.amd64
-#genkernel --kernel-config=config.amd64 all
-wget https://cloveros.ga/s/kernel.tar.xz https://cloveros.ga/s/signatures/s/kernel.tar.xz.asc
-gpg --verify kernel.tar.xz.asc kernel.tar.xz
-tar xf kernel.tar.xz
-rm kernel.tar.xz kernel.tar.xz.asc
+#wget https://raw.githubusercontent.com/damentz/liquorix-package/4.19/linux-liquorix/debian/config/kernelarch-x86/config-arch-64
+#genkernel --kernel-config=config-arch-64 all
+wget https://cloveros.ga/s/kernel.tar.lzma https://cloveros.ga/s/signatures/s/kernel.tar.lzma.asc
+gpg --verify kernel.tar.lzma.asc kernel.tar.lzma && tar xf kernel.tar.lzma
+rm kernel.tar.lzma kernel.tar.lzma.asc
 
 emerge grub dhcpcd
 grub-install --target=i386-pc /dev/$drive &> /dev/null
@@ -108,7 +102,7 @@ useradd $username
 echo "$username:$userpassword" | chpasswd
 gpasswd -a $username wheel
 
-emerge -eD @world aria2 xorg-server fvwm spacefm rxvt-unicode nitrogen compton nomacs sudo wpa_supplicant porthole firefox emacs gimp mpv smplayer rtorrent weechat linux-firmware alsa-utils zsh zsh-completions gentoo-zsh-completions vlgothic hack liberation-fonts nano scrot xbindkeys xinput arandr qastools slock xarchiver p7zip games-envd gparted squashfs-tools os-prober exfat-nofuse sshfs curlftpfs
+emerge -eD @world xorg-server fvwm spacefm rxvt-unicode nitrogen compton nomacs sudo wpa_supplicant porthole firefox emacs gimp mpv smplayer rtorrent weechat linux-firmware alsa-utils zsh zsh-completions gentoo-zsh-completions vlgothic hack liberation-fonts nano scrot xbindkeys xinput arandr qastools slock xarchiver p7zip games-envd gparted squashfs-tools os-prober exfat-nofuse sshfs curlftpfs
 PORTAGE_BINHOST="https://cloveros.ga/s/nodbus" FETCHCOMMAND_HTTPS="wget -O \"\\\${DISTDIR}/\\\${FILE}\" \"\\\${URI}\"" emerge -1 glib qtgui
 emerge --depclean
 echo 'frozen-files="/etc/sudoers"' >> /etc/dispatch-conf.conf
@@ -148,7 +142,6 @@ chown -R $username /home/$username/
 
 rm -Rf /usr/portage/packages/* /etc/resolv.conf
 exit
-
-EOF
+HEREDOC
 
 reboot
