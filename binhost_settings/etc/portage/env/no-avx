@@ -1,3 +1,0 @@
-CFLAGS="${CFLAGS} -mno-sse4 -mno-avx"
-CXXFLAGS="${CFLAGS}"
-

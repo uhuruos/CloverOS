@@ -14,7 +14,6 @@
 */*::farmboy0
 */*::fkmclane
 */*::flatpak-overlay
-*/*::flussence
 */*::gamerlay
 */*::genthree
 */*::haarp

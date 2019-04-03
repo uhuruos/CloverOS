@@ -101,11 +101,9 @@ net-p2p/mktorrent-borg ~*
 media-sound/milkytracker
 x11-terms/alacritty
 media-plugins/refocus-it
-media-gfx/opentoonz
 net-wireless/iwd
 x11-themes/terminology-themes
 app-emulation/nemu
-sys-process/gtop
 app-shells/mcfly
 app-portage/kuroo
 x11-misc/synergy
