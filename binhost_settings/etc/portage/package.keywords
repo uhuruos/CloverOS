@@ -9,7 +9,7 @@ virtual/rust # firefox
 virtual/cargo # firefox
 dev-lang/rust # firefox
 media-libs/libwebp # firefox
-<media-libs/libvpx-1.8.0 # firefox
+media-libs/libvpx # firefox
 media-libs/dav1d # firefox
 media-gfx/gimp
 media-libs/gegl # gimp

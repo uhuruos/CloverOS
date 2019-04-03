@@ -106,6 +106,7 @@ app-emulation/e-uae
 app-emulation/fuse
 app-emulation/nemu
 app-emulation/open-vm-tools
+app-emulation/playonlinux
 app-emulation/q4wine
 app-emulation/qemu
 app-emulation/qt-virt-manager
