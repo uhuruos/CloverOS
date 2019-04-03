@@ -20,9 +20,6 @@ sudo emerge -uavD @world
 sudo emerge --depclean
 ```
 
-### "Argument too long" error when emerging
-Run `sudo rm /usr/portage/packages/Packages` (currently looking for causes/other fix)
-
 ### Updating config files after upgrading system (Optional)
 `sudo dispatch-conf`
 

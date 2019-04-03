@@ -100,8 +100,8 @@ body {
 	cursor: pointer;
 	z-index: 10;
 	color: #999;
-	padding-left: 10px;
-	padding-right: 10px;
+	padding-left: 8px;
+	padding-right: 8px;
 }
 #buttons li:hover {
 	border-bottom: 2px solid #3e9b4b;
@@ -690,8 +690,11 @@ CloverOS GNU/Linux (Package Signing) 78F5 AC55 A120 07F2 2DF9 A28A 78B9 3F76 B8E
 					<a href="https://useast.cloveros.ga"><li>Packages</li></a>
 					<div class="dropdown-content" id="packages">'"$recentpackages"'</div>
 				</div>
+				<a href="https://gitgud.io/cloveros/cloveros/issues"><li>Bugs</li></a>
+				<a href="https://wiki.cloveros.ga"><li>Wiki</li></a>
 				<a href="https://forums.cloveros.ga"><li>Forums</li></a>
-				<a href="https://gitgud.io/cloveros/cloveros#cloveros"><li>Documentation</li></a>
+				<a href="irc://irc.rizon.net/cloveros"><li>IRC</li></a>
+				<a href="https://gitgud.io/cloveros/cloveros#cloveros"><li>Docs</li></a>
 				<div class="dropdown">
 					<a href="https://cloveros.ga/s/'"$isoname"'"><li>Download</li></a>
 					<div class="dropdown-content" id="downloads">
