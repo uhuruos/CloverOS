@@ -148,16 +148,17 @@ body {
 	top: 62px;
 }
 #news, #packages {
-	white-space: pre;
 	height: 586px;
 }
 #news {
 	width: 500px;
 	left: -210px;
+	white-space: pre-wrap;
 }
 #packages {
 	width: 400px;
 	left: -145px;
+	white-space: pre;
 }
 #downloads {
 	right: 0;
