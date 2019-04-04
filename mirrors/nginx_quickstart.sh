@@ -8,7 +8,7 @@ cd nginx-*/
 git clone https://github.com/eustas/ngx_brotli
 git clone https://github.com/arut/nginx-rtmp-module
 cd ngx_brotli && git submodule update --init && cd ..
-CFLAGS="-Ofast -march=native -flto=4 -pipe -funroll-loops -floop-block -floop-interchange -floop-strip-mine -ftree-loop-distribution" CXXFLAGS="${CFLAGS}" AR="gcc-ar" NM="gcc-nm" RANLIB="gcc-ranlib" ./configure --with-http_v2_module --with-http_realip_module --with-http_ssl_module --add-module=ngx_brotli --add-module=nginx-rtmp-module --with-file-aio --with-threads
+CFLAGS="-Ofast -mssse3 -mfpmath=both -pipe -funroll-loops -flto=8 -floop-block -floop-interchange -floop-strip-mine -ftree-loop-distribution -fgraphite-identity -floop-nest-optimize -malign-data=cacheline -mtls-dialect=gnu2 -Wl,--hash-style=gnu" CXXFLAGS="${CFLAGS}" AR="gcc-ar" NM="gcc-nm" RANLIB="gcc-ranlib" ./configure --with-http_v2_module --with-http_realip_module --with-http_ssl_module --add-module=ngx_brotli --add-module=nginx-rtmp-module --with-file-aio --with-threads
 make -j8
 cp -R conf ../nginx/
 cd ..
