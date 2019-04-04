@@ -7,7 +7,7 @@ These scripts creates CloverOS GNU/Linux; a minimal (middleware-free) and defaul
 
 Mirrors and binary details: https://useast.cloveros.ga https://uswest.cloveros.ga https://ca.cloveros.ga https://fr.cloveros.ga https://nl.cloveros.ga https://au.cloveros.ga https://uk.cloveros.ga https://sg.cloveros.ga https://jp.cloveros.ga
 
-Objectives: Lowest RAM usage desktop, no changes to Gentoo and kept as default as possible, easily install any package in its ideal form with emerge, easy out-of-the-box desktop
+Objectives: Lowest RAM usage desktop, no changes to Gentoo and kept as default as possible, easily install any package in its ideal form with emerge, easy out-of-the-box desktop, best CFLAGS
 
 ## Cheat sheet
 ### Installing program
