@@ -5,7 +5,7 @@ wget http://nginx.org/download/nginx-1.15.10.tar.gz
 tar xvf nginx-*.tar.gz
 rm nginx-*.tar.gz
 cd nginx-*/
-git clone https://github.com/google/ngx_brotli
+git clone https://github.com/eustas/ngx_brotli
 git clone https://github.com/arut/nginx-rtmp-module
 cd ngx_brotli && git submodule update --init && cd ..
 CFLAGS="-Ofast -march=native -flto=4 -pipe -funroll-loops -floop-block -floop-interchange -floop-strip-mine -ftree-loop-distribution" CXXFLAGS="${CFLAGS}" AR="gcc-ar" NM="gcc-nm" RANLIB="gcc-ranlib" ./configure --with-http_v2_module --with-http_realip_module --with-http_ssl_module --add-module=ngx_brotli --add-module=nginx-rtmp-module --with-file-aio --with-threads
