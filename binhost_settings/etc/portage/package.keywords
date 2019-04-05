@@ -83,6 +83,7 @@ net-misc/spice-gtk
 #keyworded, remove when stable exists
 x11-wm/e16
 x11-themes/e16-themes # e16
+x11-plugins/e16-epplets
 games-emulation/rpcs3 **
 media-gfx/openscad
 media-gfx/opencsg # openscad

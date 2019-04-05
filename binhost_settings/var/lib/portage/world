@@ -1248,6 +1248,7 @@ x11-plugins/asapm
 x11-plugins/asclock
 x11-plugins/asmon
 x11-plugins/astime
+x11-plugins/e16-epplets
 x11-plugins/fsviewer
 x11-plugins/gkrellm-plugins
 x11-plugins/pidgin-otr
