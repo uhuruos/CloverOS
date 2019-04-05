@@ -86,7 +86,7 @@ chown -R $username /home/$username/
 if [[ $username != $livecduser ]]; then
 	userdel $livecduser
 fi
-usermod -aG audio,video,games,input,kvm $username
+usermod -aG audio,video,games,input $username
 
 exit
 
