@@ -156,12 +156,13 @@ x11-libs/vte::eroen # termite
 dev-db/dbeaver-bin::erayd
 
 kde-plasma/plasma-applet-active-window-control::abendbrot
+dev-lang/rgbds::abendbrot
 games-emulation/2048-libretro::abendbrot
 games-emulation/4do-libretro::abendbrot
 games-emulation/beetle-psx-libretro::abendbrot
 games-emulation/bnes-libretro::abendbrot
 games-emulation/bsnes-libretro::abendbrot
-games-emulation/bsnes-libretro-cplusplus98::abendbrot
+#games-emulation/bsnes-libretro-cplusplus98::abendbrot
 games-emulation/common-overlays::abendbrot
 games-emulation/craft-libretro::abendbrot
 games-emulation/citra-libretro::abendbrot

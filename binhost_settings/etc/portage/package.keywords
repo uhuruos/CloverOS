@@ -15,11 +15,6 @@ media-gfx/gimp
 media-libs/gegl # gimp
 media-gfx/mypaint-brushes # gimp
 media-libs/babl # gimp
-games-emulation/retroarch
-games-emulation/desmume-libretro # retroarch
-games-emulation/ppsspp-libretro # retroarch
-media-libs/vulkan-loader # retroarch
-dev-util/vulkan-headers # retroarch
 
 #old, remove when stable is bumped up
 sys-fs/zfs # kernel 5.0
@@ -38,9 +33,6 @@ games-emulation/mgba # fixes build
 media-video/vdr # fixes build
 media-libs/vigra # fixes build
 dev-db/mariadb # fixes build
-games-emulation/melonds-libretro # stable is 404
-games-emulation/fbalpha-libretro ** # stable is 404
-games-emulation/citra-libretro ** # stable is 404
 x11-themes/sddm-gentoo-black-theme ** # stable is 404
 x11-themes/terminology-themes ** # fixes conflict
 media-fonts/vlgothic # old
@@ -81,9 +73,6 @@ net-ftp/proftpd
 net-misc/spice-gtk
 
 #keyworded, remove when stable exists
-x11-wm/e16
-x11-themes/e16-themes # e16
-x11-plugins/e16-epplets
 games-emulation/rpcs3 **
 media-gfx/openscad
 media-gfx/opencsg # openscad
@@ -175,7 +164,7 @@ media-sound/drumkv1
 media-sound/samplv1
 x11-themes/wm-icons
 app-misc/anki
-media-sound/mumble **
+media-sound/mumble
 virtual/wine
 app-emulation/wine-any
 net-vpn/logmein-hamachi
@@ -399,7 +388,7 @@ x11-themes/arc-theme
 sys-libs/libixp # wmii
 media-gfx/qiv
 sys-fs/go-mtpfs **
-dev-libs/go-fuse # go-mtpfs
+dev-libs/go-fuse ** # go-mtpfs
 dev-libs/go-usb ** # go-mtpfs
 sys-fs/jmtpfs
 net-nntp/sabnzbd
@@ -526,6 +515,17 @@ games-emulation/advancescan
 games-misc/ckmame
 x11-misc/enlightenment-extra
 sci-mathematics/rstudio
+www-client/netsurf
+dev-util/netsurf-buildsystem # netsurf
+net-libs/libdom # netsurf
+media-libs/librosprite # netsurf
+media-libs/libnsgif # netsurf
+dev-libs/libcss # netsurf
+media-libs/libnsbmp # netsurf
+dev-libs/nsgenbind # netsurf
+media-libs/libnspsl # netsurf
+media-libs/libsvgtiny # netsurf
+dev-libs/libnsfb # netsurf
 dev-php/composer
 dev-php/json-schema # composer
 dev-php/phar-utils # composer
@@ -542,6 +542,9 @@ dev-php/xdebug-handler  # composer
 dev-php/symfony-process  # composer
 dev-php/spdx-licenses  # composer
 dev-php/jsonlint # composer
+x11-wm/e16
+x11-themes/e16-themes # e16
+x11-plugins/e16-epplets
 x11-wm/bspwm
 x11-misc/sxhkd # bspwm
 x11-wm/treewm *
@@ -762,14 +765,65 @@ games-misc/fortune-mod-strangelove
 games-misc/fortune-mod-tao
 games-misc/fortune-mod-zx-error
 
-www-client/netsurf
-dev-util/netsurf-buildsystem # netsurf
-net-libs/libdom # netsurf
-media-libs/librosprite # netsurf
-media-libs/libnsgif # netsurf
-dev-libs/libcss # netsurf
-media-libs/libnsbmp # netsurf
-dev-libs/nsgenbind # netsurf
-media-libs/libnspsl # netsurf
-media-libs/libsvgtiny # netsurf
-dev-libs/libnsfb # netsurf
+games-emulation/retroarch **
+games-emulation/libretro-meta **
+games-emulation/2048-libretro **
+games-emulation/4do-libretro **
+games-emulation/beetle-psx-libretro **
+games-emulation/bnes-libretro **
+games-emulation/bsnes-libretro **
+#games-emulation/bsnes-libretro-cplusplus98 **
+games-emulation/craft-libretro **
+games-emulation/citra-libretro **
+games-emulation/desmume-libretro **
+games-emulation/dolphin-libretro **
+games-emulation/easyrpg-libretro **
+games-emulation/fbalpha2012-libretro **
+games-emulation/fbalpha-libretro **
+games-emulation/fceumm-libretro **
+games-emulation/gambatte-libretro **
+games-emulation/genplus-libretro **
+games-emulation/handy-libretro **
+games-emulation/mame2016-libretro **
+games-emulation/mame-libretro **
+games-emulation/mednafen-gba-libretro **
+games-emulation/mednafen-ngp-libretro **
+games-emulation/mednafen-pce-fast-libretro **
+games-emulation/mednafen-saturn-libretro **
+games-emulation/mednafen-snes-libretro **
+games-emulation/mednafen-supergrafx-libretro **
+games-emulation/mednafen-vb-libretro **
+games-emulation/mednafen-wswan-libretro **
+games-emulation/melonds-libretro **
+games-emulation/meowpc98-libretro **
+games-emulation/meteor-libretro **
+games-emulation/mgba-libretro **
+games-emulation/mrboom-libretro **
+games-emulation/mupen64plus-libretro **
+games-emulation/mame2000-libretro **
+games-emulation/mame2003-libretro **
+games-emulation/nestopia-libretro **
+games-emulation/nxengine-libretro **
+games-emulation/openlara-libretro **
+games-emulation/parallel-n64-libretro **
+games-emulation/pcsx-rearmed-libretro **
+games-emulation/picodrive-libretro **
+games-emulation/ppsspp-libretro **
+games-emulation/prboom-libretro **
+games-emulation/prosystem-libretro **
+games-emulation/px68k-libretro **
+games-emulation/quicknes-libretro **
+games-emulation/redream-libretro **
+games-emulation/reicast-libretro **
+games-emulation/sameboy-libretro **
+games-emulation/scummvm-libretro **
+games-emulation/slang-shaders **
+games-emulation/snes9x2002-libretro **
+games-emulation/snes9x2010-libretro **
+games-emulation/snes9x-libretro **
+games-emulation/stella-libretro **
+games-emulation/tgbdual-libretro **
+games-emulation/tyrquake-libretro **
+games-emulation/vbam-libretro **
+games-emulation/vba-next-libretro **
+games-emulation/yabause-libretro **
