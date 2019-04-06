@@ -30,4 +30,4 @@ sudo nginx/objs/nginx -p $(pwd)/conf/ -c nginx.conf -s reload
 sudo pkill nginx
 sed -ri 's/#(ssl_certificate.*;)/\1/; s/#(listen 443 ssl http2;)/\1/' conf/nginx.conf
 sleep 1
-sudo nginx/objs/nginx -p $(pwd)/nginx -c nginx.conf
+sudo nginx/objs/nginx -p $(pwd)/conf/ -c nginx.conf
