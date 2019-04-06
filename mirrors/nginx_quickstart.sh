@@ -1,14 +1,12 @@
 #apt update && apt -y install gcc make git sudo libpcre3-dev libssl-dev zlib1g-dev
 domains='DNS:YourDomain.com,DNS:www.YourDomain.com'
 useradd www-data
-wget http://nginx.org/download/nginx-1.15.10.tar.gz
-tar xvf nginx-*.tar.gz
-rm nginx-*.tar.gz
-cd nginx-*/
-git clone https://github.com/eustas/ngx_brotli
-git clone https://github.com/arut/nginx-rtmp-module
-cd ngx_brotli && git submodule update --init && cd ..
-CFLAGS="-Ofast -mssse3 -mfpmath=both -pipe -funroll-loops -flto=8 -floop-block -floop-interchange -floop-strip-mine -ftree-loop-distribution -fgraphite-identity -floop-nest-optimize -malign-data=cacheline -mtls-dialect=gnu2 -Wl,--hash-style=gnu" CXXFLAGS="${CFLAGS}" AR="gcc-ar" NM="gcc-nm" RANLIB="gcc-ranlib" ./configure --with-http_v2_module --with-http_realip_module --with-http_ssl_module --add-module=ngx_brotli --add-module=nginx-rtmp-module --with-file-aio --with-threads
+git clone --depth 1 https://github.com/nginx/nginx
+cd nginx/
+git clone --depth 1 https://github.com/eustas/ngx_brotli
+git clone --depth 1 https://github.com/arut/nginx-rtmp-module
+cd ngx_brotli ; git submodule update --init ; cd ..
+CFLAGS="-Ofast -march=native -mfpmath=both -pipe -funroll-loops -flto=8 -floop-block -floop-interchange -floop-strip-mine -ftree-loop-distribution -fgraphite-identity -floop-nest-optimize -malign-data=cacheline -mtls-dialect=gnu2 -Wl,--hash-style=gnu" CXXFLAGS="${CFLAGS}" AR="gcc-ar" NM="gcc-nm" RANLIB="gcc-ranlib" auto/configure --with-http_v2_module --with-http_realip_module --with-http_ssl_module --add-module=ngx_brotli --add-module=nginx-rtmp-module --with-file-aio --with-threads
 make -j8
 cp -R conf ../nginx/
 cd ..
@@ -17,7 +15,7 @@ openssl dhparam -out nginx/dhparam.pem 4096
 mkdir nginx/ssl/
 mkdir nginx/logs/
 sed -ri 's/(ssl_certificate.*;)/#\1/; s/(listen 443 ssl http2;)/#\1/' nginx/nginx.conf
-sudo nginx-*/objs/nginx -p nginx -c nginx.conf
+sudo nginx/objs/nginx -p nginx -c nginx.conf
 mkdir -p /var/www/html/.well-known/acme-challenge/
 openssl genrsa 4096 > nginx/ssl/account.key
 openssl genrsa 4096 > nginx/ssl/certificate.key
@@ -27,9 +25,9 @@ wget https://raw.githubusercontent.com/diafygi/acme-tiny/master/acme_tiny.py
 chmod +x acme_tiny.py
 ./acme_tiny.py --account-key nginx/ssl/account.key --csr nginx/ssl/certificate.csr --acme-dir /var/www/html/.well-known/acme-challenge/ > nginx/ssl/certificate.crt
 rm acme_tiny.py
-sudo nginx-*/objs/nginx -p $(pwd)/nginx -c nginx.conf -s reload
+sudo nginx/objs/nginx -p $(pwd)/nginx -c nginx.conf -s reload
 #renew certificate end
 sudo pkill nginx
 sed -ri 's/#(ssl_certificate.*;)/\1/; s/#(listen 443 ssl http2;)/\1/' nginx/nginx.conf
 sleep 1
-sudo nginx-*/objs/nginx -p $(pwd)/nginx -c nginx.conf
+sudo nginx/objs/nginx -p $(pwd)/nginx -c nginx.conf
