@@ -1,3 +1,10 @@
+app-emulation/wine-any -custom-cflags
+app-emulation/xen -custom-cflags
+app-emulation/xen-tools -custom-cflags
+sys-boot/syslinux -custom-cflags
+sys-fs/zfs -custom-cflags
+sys-fs/zfs-kmod -custom-cflags
+sys-kernel/spl -custom-cflags
 media-gfx/darktable colord
 gnome-extra/gnome-color-manager raw
 x11-misc/colord scanner -gusb
@@ -152,7 +159,6 @@ media-libs/gst-plugins-bad X gtk
 media-gfx/graphviz X gtk qt5 pdf svg python perl
 app-crypt/veracrypt X
 sci-chemistry/gromacs X
-games-emulation/retroarch X
 app-misc/neofetch X
 sys-apps/psensor X
 app-emulation/virtualbox-guest-additions X
@@ -191,16 +197,14 @@ media-libs/freetype infinality
 net-libs/webkit-gtk -webgl -geolocation
 dev-db/sqlite secure-delete
 media-libs/phonon -vlc
-app-crypt/hashcat custom-cflags
-media-libs/libsdl custom-cflags X
-www-client/ungoogled-chromium -lld gold custom-cflags optimize-thinlto optimize-webui jumbo-build
-www-client/chromium custom-cflags jumbo-build
-www-client/firefox custom-cflags custom-optimization -wifi
-www-client/torbrowser custom-cflags custom-optimization
-mail-client/thunderbird custom-cflags custom-optimization -crypt
-www-client/seamonkey custom-cflags custom-optimization -crypt -minimal
+media-libs/libsdl X
+www-client/ungoogled-chromium -lld gold optimize-thinlto optimize-webui jumbo-build
+www-client/chromium jumbo-build
+www-client/firefox -wifi
+mail-client/thunderbird -crypt
+www-client/seamonkey -crypt -minimal
 www-client/palemoon -official-branding -gconf
-www-client/waterfox custom-cflags custom-optimization -wifi
+www-client/waterfox -wifi
 media-sound/sox alsa openmp encode flac id3tag ladspa mad ogg opus sndfile twolame wavpack
 net-analyzer/rrdtool perl graph
 media-sound/lmms alsa fluidsynth ogg portaudio sdl stk qt5
@@ -239,6 +243,7 @@ media-plugins/deadbeef-waveform-seekbar gtk3
 media-plugins/deadbeef-spectrogram gtk3
 media-plugins/deadbeef-musical-spectrum gtk3
 app-emulation/qemu sdl usb virgl virtfs gtk
+games-emulation/retroarch X # required by USE=xinerama
 x11-drivers/xf86-video-intel tools # multimonitor
 dev-libs/glib dbus # required by mate baobab flatpak pitivi evince eog bluez-alsa gthumb gedit flowblade
 dev-qt/qtgui dbus # required by kde
@@ -253,7 +258,7 @@ media-sound/clementine dbus # fix: doesn't build without it
 www-client/waterfox -pgo # fix: doesn't build without it
 dev-libs/efl luajit # fix: doesn't build without it
 sys-apps/shadow -pam # fix: login won't work (but su - user would)
-sys-power/suspend -crypt -lzo # requires USE=static-libs dev-libs/libgcrypt dev-libs/lzo
+sys-power/suspend -crypt -lzo # otherwise requires USE=static-libs dev-libs/libgcrypt dev-libs/lzo
 sys-libs/zlib minizip # required by many
 sys-apps/util-linux static-libs # required by genkernel
 sys-devel/gcc fortran # required by octave
