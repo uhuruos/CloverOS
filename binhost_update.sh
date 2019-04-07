@@ -18,6 +18,7 @@ if [ "$1" = 'deep' ]; then
 	quickpkg --include-unmodified-config=y "*/*" 2>&1 | ansi2html > /usr/portage/packages/s/quickpkg.html &
 	emerge -B sudo openssh postfix dcron vixie-cron cronie fcron anacron ungoogled-chromium &
 	PKGDIR="/usr/portage/packages/s/nodbus/" USE="-dbus -webengine -trash-panel-plugin" emerge -B glib qtgui PyQt5 thunar &
+	wait
 fi
 
 emerge --sync
