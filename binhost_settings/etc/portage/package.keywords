@@ -9,7 +9,7 @@ virtual/rust # firefox
 virtual/cargo # firefox
 dev-lang/rust # firefox
 media-libs/libwebp # firefox
-media-libs/libvpx # firefox
+media-libs/libvpx:0/5 # firefox
 media-libs/dav1d # firefox
 media-gfx/gimp
 media-libs/gegl # gimp
@@ -817,7 +817,6 @@ games-emulation/redream-libretro **
 games-emulation/reicast-libretro **
 games-emulation/sameboy-libretro **
 games-emulation/scummvm-libretro **
-games-emulation/slang-shaders **
 games-emulation/snes9x2002-libretro **
 games-emulation/snes9x2010-libretro **
 games-emulation/snes9x-libretro **
