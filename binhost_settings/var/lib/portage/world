@@ -304,7 +304,6 @@ dev-util/jenkins-bin
 dev-util/kdevelop
 dev-util/lldb
 dev-util/lxqt-build-tools
-dev-util/monodevelop
 dev-util/patchutils
 dev-util/plan9port
 dev-util/pycharm-community
