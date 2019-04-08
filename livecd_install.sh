@@ -62,8 +62,7 @@ mount -t proc none proc
 mount --rbind /dev dev
 mount --rbind /sys sys
 
-cat << EOF | chroot .
-
+cat <<HEREDOC | chroot .
 echo "root:$rootpassword" | chpasswd
 useradd -M $username
 echo "$username:$userpassword" | chpasswd
@@ -89,8 +88,7 @@ fi
 usermod -aG audio,video,games,input $username
 
 exit
-
-EOF
+HEREDOC
 
 umount -l gentoo/*
 umount gentoo/

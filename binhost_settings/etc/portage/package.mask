@@ -48,3 +48,5 @@ x11-libs/vte:2.91::gentoo # ::eroen, x11-terms/termite
 
 >dev-lang/tk-8.6 # fixes build
 >dev-lang/tcl-8.6 # fixes build
+
+>x11-terms/rxvt-unicode-9.21 # newest ebuild is missing USE flags/patches
