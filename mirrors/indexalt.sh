@@ -286,7 +286,14 @@ body {
 			<ul>
 				<div class="dropdown">
 					<a href="https://twitter.com/cloveros_ga"><li>News</li></a>
-					<div class="dropdown-content" id="news">2-Apr-19
+					<div class="dropdown-content" id="news">8-Apr-19
+Packages updated
+Kernel updated to 5.0.7
+New ISO: https://cloveros.ga/s/CloverOS-x86_64-20190408.iso
+wiki.cloveros.ga made
+retroarch bumped up to git: retroarch-9999/libretro-9999
+
+2-Apr-19
 CFLAGS changed to CFLAGS="-Ofast -mssse3 -mfpmath=both -pipe -funroll-loops -flto=8 -floop-block -floop-interchange -floop-strip-mine -ftree-loop-distribution -fgraphite-identity -floop-nest-optimize -malign-data=cacheline -mtls-dialect=gnu2 -Wl,--hash-style=gnu"
 
 1-Apr-19
