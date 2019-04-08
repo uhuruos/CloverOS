@@ -75,7 +75,7 @@ net-ftp/proftpd
 net-misc/spice-gtk
 
 #keyworded, remove when stable exists
-games-emulation/rpcs3 **
+app-i18n/zhcon
 media-gfx/openscad
 media-gfx/opencsg # openscad
 games-roguelike/wrogue
@@ -85,11 +85,9 @@ net-analyzer/masscan
 net-analyzer/zmap
 www-client/opera-beta
 www-client/opera-developer
-x11-plugins/gkrellm-plugins ~*
 games-misc/katawa-shoujo
 www-client/ungoogled-chromium
 media-libs/libaom
-net-p2p/mktorrent-borg ~*
 media-sound/milkytracker
 x11-terms/alacritty
 media-plugins/refocus-it
@@ -99,7 +97,6 @@ app-emulation/nemu
 app-shells/mcfly
 app-portage/kuroo
 x11-misc/synergy
-x11-misc/bumblebee **
 x11-misc/primus
 sys-auth/fingerprint-gui
 dev-lang/tcc
@@ -131,12 +128,10 @@ games-fps/quakeforge
 games-fps/qudos
 games-fps/quake2-textures # qudos
 media-sound/teamspeak-server
-games-fps/chocolate-doom **
 net-wireless/cubicsdr
 net-libs/liquid-dsp # cubicsdr
 games-util/acc
 games-util/zdbsp
-games-util/udmf-convert **
 games-fps/dhewm3
 games-fps/prboom
 games-fps/doom-data
@@ -152,9 +147,6 @@ games-util/xboxdrv
 net-wireless/soapysdr
 net-wireless/sdrplay
 net-wireless/rtl-sdr
-media-sound/guitarix **
-media-libs/libmonome # guitarix
-media-libs/zita-resampler # guitarix
 media-sound/pure-data
 media-sound/bitwig-studio
 media-sound/mididings
@@ -203,7 +195,6 @@ net-im/discord-bin
 media-gfx/opentoonz
 media-sound/mp3splt
 games-roguelike/dwarf-fortress
-games-fps/wolfgl ~*
 www-client/qutebrowser
 dev-python/pypeg2 # qutebrowser
 x11-terms/termite
@@ -227,7 +218,6 @@ media-video/obs-studio
 app-emulation/open-vm-tools
 sci-calculators/calcoo
 net-p2p/soulseek-qt
-sys-fs/exfat-nofuse **
 www-servers/onionshare
 net-libs/stem # onionshare
 app-emacs/emms
@@ -261,7 +251,6 @@ net-vpn/zeronet
 dev-db/rethinkdb
 dev-libs/jemalloc # rethinkdb
 www-client/waterfox-bin
-www-client/palemoon **
 net-p2p/go-ipfs-bin
 media-sound/beets
 dev-python/discogs-client # beets
@@ -334,7 +323,6 @@ dev-python/PySDL2 # m64py
 games-emulation/sdlmame
 sys-block/sas3flash
 app-crypt/kencfs-plasma
-games-emulation/citra **
 gui-wm/sway
 gui-apps/swaylock # sway
 gui-libs/wlroots # sway
@@ -348,7 +336,6 @@ games-emulation/nestopia
 games-emulation/gngb
 games-emulation/hatari
 dev-libs/spsdeclib # hatari
-games-emulation/mekanix ~*
 games-emulation/gens
 games-emulation/stella
 games-emulation/gambatte
@@ -372,7 +359,6 @@ net-wireless/broadcom-sta
 x11-plugins/gkrellm-countdown
 games-fps/gzdoom
 games-fps/redeclipse
-app-emulation/qt-virt-manager **
 dev-lang/open-cobol
 net-misc/sgopherd
 app-emulation/vagrant
@@ -389,9 +375,6 @@ media-sound/ezstream
 x11-themes/arc-theme
 sys-libs/libixp # wmii
 media-gfx/qiv
-sys-fs/go-mtpfs **
-dev-libs/go-usb ** # go-mtpfs
-dev-libs/go-fuse # go-mtpfs
 sys-fs/jmtpfs
 net-nntp/sabnzbd
 dev-python/sabyenc # sabnzbd
@@ -435,7 +418,6 @@ dev-python/editorconfig-core-py # editorconfig-vim
 app-shells/thefuck
 dev-java/android-util
 app-shells/rust-zshcomp
-app-shells/tmux-bash-completion **
 app-text/extract_url
 dev-perl/URI-Find # extract_url
 dev-util/lxqt-build-tools
@@ -484,11 +466,7 @@ dev-libs/input-pad
 app-i18n/ibus-unikey
 app-i18n/ibus-chewing
 app-i18n/libkkc
-games-fps/openjk-outcast **
-games-fps/openjk-academy **
-games-fps/openjk-academy-mp **
 media-plugins/gimp-refocus
-net-im/telegram-purple **
 net-p2p/nicotine+
 sys-fs/zfs-auto-snapshot
 x11-plugins/purple-discord
@@ -517,6 +495,29 @@ games-emulation/advancescan
 games-misc/ckmame
 x11-misc/enlightenment-extra
 sci-mathematics/rstudio
+games-fps/wolfgl ~*
+x11-plugins/gkrellm-plugins ~*
+net-p2p/mktorrent-borg ~*
+games-emulation/rpcs3 **
+x11-misc/bumblebee **
+games-fps/chocolate-doom **
+games-util/udmf-convert **
+sys-fs/exfat-nofuse **
+www-client/palemoon **
+games-emulation/citra **
+games-emulation/mekanix ~*
+app-emulation/qt-virt-manager **
+app-shells/tmux-bash-completion **
+games-fps/openjk-outcast **
+games-fps/openjk-academy **
+games-fps/openjk-academy-mp **
+net-im/telegram-purple **
+media-sound/guitarix **
+media-libs/libmonome # guitarix
+media-libs/zita-resampler # guitarix
+sys-fs/go-mtpfs **
+dev-libs/go-usb ** # go-mtpfs
+dev-libs/go-fuse # go-mtpfs
 www-client/netsurf
 dev-util/netsurf-buildsystem # netsurf
 net-libs/libdom # netsurf
@@ -766,7 +767,6 @@ games-misc/fortune-mod-starwars
 games-misc/fortune-mod-strangelove
 games-misc/fortune-mod-tao
 games-misc/fortune-mod-zx-error
-
 games-emulation/retroarch **
 games-emulation/libretro-meta
 games-emulation/2048-libretro **
