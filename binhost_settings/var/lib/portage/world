@@ -121,6 +121,7 @@ app-emulation/winetricks
 app-emulation/xen
 app-eselect/eselect-repository
 app-forensics/aide
+app-i18n/fbterm
 app-i18n/fcitx-anthy
 app-i18n/fcitx-qt5
 app-i18n/ibus
@@ -130,9 +131,11 @@ app-i18n/ibus-handwrite
 app-i18n/ibus-input-pad
 app-i18n/ibus-typing-booster
 app-i18n/ibus-unikey
+app-i18n/jfbterm
 app-i18n/scim
 app-i18n/scim-anthy
 app-i18n/scim-m17n
+app-i18n/zhcon
 app-laptop/laptop-mode-tools
 app-laptop/thinkfan
 app-laptop/tlp
@@ -1048,6 +1051,7 @@ sys-apps/init-system-helpers
 sys-apps/iproute2
 sys-apps/iucode_tool
 sys-apps/kexec-tools
+sys-apps/kmscon
 sys-apps/lm_sensors
 sys-apps/lshw
 sys-apps/mlocate
@@ -1187,6 +1191,7 @@ x11-misc/arandr
 x11-misc/autocutsel
 x11-misc/bumblebee
 x11-misc/compton
+x11-misc/cvt12
 x11-misc/dmenu
 x11-misc/enlightenment-extra
 x11-misc/fbdesk
@@ -1523,13 +1528,9 @@ xfce-extra/xfce4-equake-plugin
 xfce-extra/xfce4-eyes-plugin
 xfce-extra/xfce4-fsguard-plugin
 xfce-extra/xfce4-genmon-plugin
-xfce-extra/xfce4-gvfs-mount
 xfce-extra/xfce4-hdaps
 xfce-extra/xfce4-kbdleds-plugin
-xfce-extra/xfce4-linelight-plugin
 xfce-extra/xfce4-mailwatch-plugin
-xfce-extra/xfce4-messenger-plugin
-xfce-extra/xfce4-modemlights-plugin
 xfce-extra/xfce4-mount-plugin
 xfce-extra/xfce4-mpc-plugin
 xfce-extra/xfce4-netload-plugin

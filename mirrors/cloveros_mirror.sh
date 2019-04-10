@@ -1,5 +1,9 @@
+if [ $(id -u) != "0" ]; then
+	echo "This script must be run as root" 1>&2
+	exit 1
+fi
 #apt update && apt -y install gcc make git sudo libpcre3-dev libssl-dev zlib1g-dev
-domains='DNS:YourDomain.com,DNS:www.YourDomain.com'
+domains="DNS:$1"
 useradd www-data
 git clone --depth 1 https://github.com/nginx/nginx
 cd nginx/
@@ -14,7 +18,7 @@ wget https://gitgud.io/cloveros/cloveros/raw/master/mirrors/nginxtemplate.conf -
 openssl dhparam -out conf/dhparam.pem 4096
 mkdir conf/ssl/
 mkdir conf/logs/
-sed -ri 's/(ssl_certificate.*;)/#\1/; s/(listen 443 ssl http2;)/#\1/' conf/nginx.conf
+sed -ri "s/(ssl_certificate.*;)/#\1/; s/(listen 443 ssl http2;)/#\1/" conf/nginx.conf
 sudo nginx/objs/nginx -p conf/ -c nginx.conf
 mkdir -p /var/www/html/.well-known/acme-challenge/
 openssl genrsa 4096 > conf/ssl/account.key
@@ -28,6 +32,6 @@ rm acme_tiny.py
 sudo nginx/objs/nginx -p $(pwd)/conf/ -c nginx.conf -s reload
 #renew certificate end
 sudo pkill nginx
-sed -ri 's/#(ssl_certificate.*;)/\1/; s/#(listen 443 ssl http2;)/\1/' conf/nginx.conf
+sed -ri "s/#(ssl_certificate.*;)/\1/; s/#(listen 443 ssl http2;)/\1/" conf/nginx.conf
 sleep 1
 sudo nginx/objs/nginx -p $(pwd)/conf/ -c nginx.conf

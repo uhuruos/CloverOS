@@ -24,6 +24,7 @@ dev-qt/qtnetwork::libressl
 net-libs/nodejs::libressl
 
 games-fps/gzdoom::haarp
+x11-misc/cvt12::haarp
 
 games-util/zdbsp::jacendi-overlay
 games-util/acc::jacendi-overlay
@@ -60,9 +61,9 @@ dev-lang/tauthon::stefantalpalaru
 media-plugins/gimp-refocus::stefantalpalaru
 media-plugins/refocus-it::stefantalpalaru
 
+dev-util/monodevelop::dotnet
 dev-dotnet/nuget::dotnet
 dev-dotnet/xdt-for-monodevelop::dotnet
-dev-util/monodevelop::dotnet
 dev-dotnet/referenceassemblies-pcl::dotnet
 
 www-client/waterfox::poly-c

@@ -34,7 +34,6 @@ media-video/vdr # fixes build
 media-libs/vigra # fixes build
 dev-db/mariadb # fixes build
 media-libs/openimageio # fixes build
-media-libs/ctl # fixes build
 x11-themes/sddm-gentoo-black-theme ** # stable is 404
 x11-themes/terminology-themes ** # fixes conflict
 media-fonts/vlgothic # old
@@ -75,6 +74,10 @@ net-ftp/proftpd
 net-misc/spice-gtk
 
 #keyworded, remove when stable exists
+x11-misc/cvt12
+app-i18n/fbterm
+sys-apps/kmscon
+dev-libs/libtsm # kmscon
 app-i18n/zhcon
 media-gfx/openscad
 media-gfx/opencsg # openscad
@@ -472,7 +475,7 @@ sys-fs/zfs-auto-snapshot
 x11-plugins/purple-discord
 games-server/mednafen-server
 dev-util/monodevelop
-dev-dotnet/nuget
+dev-dotnet/nuget # monodevelop
 dev-dotnet/xdt-for-monodevelop # monodevelop
 dev-dotnet/referenceassemblies-pcl # monodevelop
 www-servers/xsp # monodevelop
