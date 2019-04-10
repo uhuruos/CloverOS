@@ -3,12 +3,12 @@ gitprefix="https://gitgud.io/cloveros/cloveros/raw/master"
 
 cd $( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )
 
+if [[ -n "$2" ]]; then
+	exit 1
+fi
+
 if [[ -n "$1" ]]; then
-	if [[ -z "$2" ]]; then
-		choice=$1
-	else
-		exit 1
-	fi
+	choice=$1
 else
 	echo "1) Update cloveros_settings.sh
 2) Update system
