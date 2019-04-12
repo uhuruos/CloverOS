@@ -359,9 +359,9 @@ case "$choice" in
 
 	v)
 		echo "Running the following:"
-		echo "sudo emerge xf86-video-vmware virtualbox-guest-additions"
+		echo "sudo emerge open-vm-tools virtualbox-guest-additions"
 		sleep 2
-		sudo emerge xf86-video-vmware virtualbox-guest-additions
+		sudo emerge open-vm-tools virtualbox-guest-additions
 		echo -e "\nRestart X to load driver."
 		;;
 
