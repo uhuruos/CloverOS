@@ -217,7 +217,6 @@ app-shells/loksh
 app-shells/mcfly
 app-shells/mksh
 app-shells/mpv-bash-completion
-app-shells/rust-zshcomp
 app-shells/thefuck
 app-shells/tmux-bash-completion
 app-shells/zsh

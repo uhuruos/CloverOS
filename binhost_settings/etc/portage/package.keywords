@@ -420,7 +420,6 @@ app-vim/editorconfig-vim
 dev-python/editorconfig-core-py # editorconfig-vim
 app-shells/thefuck
 dev-java/android-util
-app-shells/rust-zshcomp
 app-text/extract_url
 dev-perl/URI-Find # extract_url
 dev-util/lxqt-build-tools

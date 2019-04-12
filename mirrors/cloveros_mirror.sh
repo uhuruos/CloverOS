@@ -1,62 +1,30 @@
-#unfinished
 if [ $(id -u) != "0" ]; then
 	echo "This script must be run as root" 1>&2
 	exit 1
 fi
+if [ "$(dig +short $1)" != "$(curl -s ifconfig.co)" ]; then
+	echo "Usage: cloveros_mirror.sh domain.com
+Domain name is required and must point to current IP.
+Required dependencies for build: gcc make, git, pcre/zlib/openssl includes
+Debian: apt update && apt -y install gcc make git libpcre3-dev libssl-dev zlib1g-dev
+Gentoo: emerge --sync && emerge git
+CentOS/Fedora: yum update && yum install gcc make git libpcre-devel openssl-devel zlib-devel"
+	exit 1
+fi
+domains="DNS:$1"
 if [ ! -d "nginx/" ] || [ ! -d "conf/" ]; then
-	if [ -z "$1" ]; then
-		echo "Domain name missing"
-	fi
-	if [ ! -z "$1" ] && [[ "$(dig +short $1)" != "$(curl ifconfig.co)" ]]; then
-		echo "Domain $1 is not pointed to $(curl ifconfig.co)"
-		errors=true
-	fi
-	if [ ! -f "/usr/bin/git" ]; then
-		echo "git not found"
-		errors=true
-	fi
-	if [ ! -f "/usr/bin/gcc" ]; then
-		echo "gcc not found"
-		errors=true
-	fi
-	if [ ! -f "/usr/bin/make" ]; then
-		echo "make not found"
-		errors=true
-	fi
-	if [ ! -f "/usr/include/pcre.h" ]; then
-		echo "/usr/include/pcre.h not found"
-		errors=true
-	fi
-	if [ ! -f "/usr/include/zlib.h" ]; then
-		echo "/usr/include/zlib.h not found"
-		errors=true
-	fi
-	if [ ! -d "/usr/include/openssl/" ]; then
-		echo "/usr/include/openssl/ not found"
-		errors=true
-	fi
-	if [ "$errors" = true ]; then
+	echo "nginx build not found. building..."
+	if [ ! -f "/usr/bin/git" ] || [ ! -f "/usr/bin/gcc" ] || [ ! -f "/usr/bin/make" ] || [ ! -f "/usr/include/pcre.h" ] || [ ! -f "/usr/include/zlib.h" ] || [ ! -d "/usr/include/openssl/" ]; then
 		if [ -f "/usr/bin/dpkg" ]; then
 			apt update && apt -y install gcc make git libpcre3-dev libssl-dev zlib1g-dev
-			exec cloveros_mirror.sh
 		fi
 		if [ -f "/usr/bin/emerge" ]; then
 			emerge --sync && emerge git
-			exec cloveros_mirror.sh
 		fi
 		if [ -f "/usr/bin/yum" ]; then
 			yum update && yum install gcc make git libpcre-devel openssl-devel zlib-devel
-			exec cloveros_mirror.sh
 		fi
-		echo "Usage: cloveros_mirror.sh domain.com"
-		echo "Domain name is required and must point to current IP."
-		echo "Required dependencies: gcc make, git, pcre/zlib/openssl includes"
-		echo "Debian: apt update && apt -y install gcc make git libpcre3-dev libssl-dev zlib1g-dev"
-		echo "Gentoo: emerge --sync && emerge git"
-		echo "CentOS/Fedora: yum update && yum install gcc make git libpcre-devel openssl-devel zlib-devel"
-		exit 1
 	fi
-	domains="DNS:$1"
 	useradd www-data
 	git clone --depth 1 https://github.com/nginx/nginx
 	cd nginx/
@@ -77,26 +45,30 @@ if [ ! -d "nginx/" ] || [ ! -d "conf/" ]; then
 	openssl genrsa 4096 > conf/ssl/account.key
 	openssl genrsa 4096 > conf/ssl/certificate.key
 	openssl req -new -sha256 -key conf/ssl/certificate.key -subj "/" -reqexts SAN -config <(cat /etc/ssl/openssl.cnf <(printf "[SAN]\nsubjectAltName=$domains")) > conf/ssl/certificate.csr
-	wget https://raw.githubusercontent.com/diafygi/acme-tiny/master/acme_tiny.py
-	chmod +x acme_tiny.py
-	./acme_tiny.py --account-key conf/ssl/account.key --csr conf/ssl/certificate.csr --acme-dir /var/www/html/.well-known/acme-challenge/ > conf/ssl/certificate.crt
-	rm acme_tiny.py
+	curl -s https://raw.githubusercontent.com/diafygi/acme-tiny/master/acme_tiny.py | python - --account-key conf/ssl/account.key --csr conf/ssl/certificate.csr --acme-dir /var/www/html/.well-known/acme-challenge/ > conf/ssl/certificate.crt
 	pkill nginx
 	sed -ri "s/#(ssl_certificate.*;)/\1/; s/#(listen 443 ssl http2;)/\1/" conf/nginx.conf
+        sed 's@^}$@\
+	server {\
+		server_name '"$1"';\
+		listen 443 ssl http2;\
+		add_header Strict-Transport-Security "max-age=31536000; includeSubDomains; preload";\
+		add_header X-Content-Type-Options nosniff;\
+		root /var/www/html/cloveros.ga/;\
+	}\
+}@' conf/nginx.conf
 	sleep 1
 	nginx/objs/nginx -p $(pwd)/conf/ -c nginx.conf
 fi
 
-while sleep 3600; do
+while sleep 600; do
+	rsync -a --delete rsync://nl.cloveros.ga/cloveros /var/www/html/cloveros.ga/;
 	if ! $(pidof nginx); then
 		nginx/objs/nginx -p $(pwd)/conf/ -c nginx.conf
 	fi
-	if [ $(($(date -d "$(echo | openssl s_client -servername $1 -connect $1:443 2>/dev/null | openssl x509 -noout -enddate | sed "s/notAfter=//")" +%s) - $(date +%s))) -lt "2592000" ]; then
+	if [ $(($(date -d "$(echo | openssl s_client -servername $1 -connect $1:443 2>/dev/null | openssl x509 -noout -enddate | sed \"s/notAfter=//\")" +%s) - $(date +%s)))" -lt "2592000" ]; then
 		openssl req -new -sha256 -key conf/ssl/certificate.key -subj "/" -reqexts SAN -config <(cat /etc/ssl/openssl.cnf <(printf "[SAN]\nsubjectAltName=$domains")) > conf/ssl/certificate.csr
-		wget https://raw.githubusercontent.com/diafygi/acme-tiny/master/acme_tiny.py
-		chmod +x acme_tiny.py
-		./acme_tiny.py --account-key conf/ssl/account.key --csr conf/ssl/certificate.csr --acme-dir /var/www/html/.well-known/acme-challenge/ > conf/ssl/certificate.crt
-		rm acme_tiny.py
+		curl -s https://raw.githubusercontent.com/diafygi/acme-tiny/master/acme_tiny.py | python - --account-key conf/ssl/account.key --csr conf/ssl/certificate.csr --acme-dir /var/www/html/.well-known/acme-challenge/ > conf/ssl/certificate.crt
 		nginx/objs/nginx -p $(pwd)/conf/ -c nginx.conf -s reload
 	fi
 done
