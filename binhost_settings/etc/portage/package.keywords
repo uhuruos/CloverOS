@@ -5,9 +5,9 @@ x11-libs/gtk+:3::mv # removes dbus
 www-client/firefox
 dev-libs/nss # firefox
 dev-util/cbindgen # firefox
-virtual/rust # firefox
-virtual/cargo # firefox
-dev-lang/rust # firefox
+<virtual/rust-1.34 # firefox
+<virtual/cargo-1.34 # firefox
+<dev-lang/rust-1.34 # firefox
 media-libs/libwebp # firefox
 media-libs/libvpx:0/5 # firefox
 media-libs/dav1d # firefox

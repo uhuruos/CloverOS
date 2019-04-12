@@ -25,7 +25,7 @@ wget https://raw.githubusercontent.com/diafygi/acme-tiny/master/acme_tiny.py
 chmod +x acme_tiny.py
 ./acme_tiny.py --account-key conf/ssl/account.key --csr conf/ssl/certificate.csr --acme-dir /var/www/html/.well-known/acme-challenge/ > conf/ssl/certificate.crt
 rm acme_tiny.py
-sudo nginx/objs/nginx -p $(pwd)/conf/ -c nginx.conf -s reload
+#sudo nginx/objs/nginx -p $(pwd)/conf/ -c nginx.conf -s reload
 #renew certificate end
 sudo pkill nginx
 sed -ri "s/#(ssl_certificate.*;)/\1/; s/#(listen 443 ssl http2;)/\1/" conf/nginx.conf

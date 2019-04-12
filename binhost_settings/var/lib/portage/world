@@ -1515,7 +1515,6 @@ xfce-extra/transd
 xfce-extra/tumbler
 xfce-extra/xfce4-alsa-plugin
 xfce-extra/xfce4-battery-plugin
-xfce-extra/xfce4-cellmodem-plugin
 xfce-extra/xfce4-clipman-plugin
 xfce-extra/xfce4-composite-editor
 xfce-extra/xfce4-cpufreq-plugin
@@ -1534,13 +1533,10 @@ xfce-extra/xfce4-mailwatch-plugin
 xfce-extra/xfce4-mount-plugin
 xfce-extra/xfce4-mpc-plugin
 xfce-extra/xfce4-netload-plugin
-xfce-extra/xfce4-netspeed-plugin
 xfce-extra/xfce4-notes-plugin
 xfce-extra/xfce4-notifyd
 xfce-extra/xfce4-places-plugin
-xfce-extra/xfce4-playercontrol-plugin
 xfce-extra/xfce4-power-manager
-xfce-extra/xfce4-quicklauncher-plugin
 xfce-extra/xfce4-screenshooter
 xfce-extra/xfce4-sensors-plugin
 xfce-extra/xfce4-smartbookmark-plugin
@@ -1554,6 +1550,5 @@ xfce-extra/xfce4-wavelan-plugin
 xfce-extra/xfce4-weather-plugin
 xfce-extra/xfce4-whiskermenu-plugin
 xfce-extra/xfce4-windowck-plugin
-xfce-extra/xfce4-wmdock-plugin
 xfce-extra/xfce4-xkb-plugin
 xfce-extra/xfdashboard
