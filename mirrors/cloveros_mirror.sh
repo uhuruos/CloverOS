@@ -61,7 +61,7 @@ if [ ! -d "nginx/" ] || [ ! -d "conf/" ]; then
 	nginx/objs/nginx -p $(pwd)/conf/ -c nginx.conf
 fi
 
-while sleep 600; do
+while :; do
 	rsync -a --delete rsync://nl.cloveros.ga/cloveros /var/www/html/cloveros.ga/;
 	if ! $(pidof nginx); then
 		nginx/objs/nginx -p $(pwd)/conf/ -c nginx.conf
@@ -71,4 +71,5 @@ while sleep 600; do
 		curl -s https://raw.githubusercontent.com/diafygi/acme-tiny/master/acme_tiny.py | python - --account-key conf/ssl/account.key --csr conf/ssl/certificate.csr --acme-dir /var/www/html/.well-known/acme-challenge/ > conf/ssl/certificate.crt
 		nginx/objs/nginx -p $(pwd)/conf/ -c nginx.conf -s reload
 	fi
+	sleep 600
 done
