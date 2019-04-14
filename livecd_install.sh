@@ -90,6 +90,7 @@ usermod -aG audio,video,games,input $username
 exit
 HEREDOC
 
+cd ..
 umount -l gentoo/*
 umount gentoo/
 sync
