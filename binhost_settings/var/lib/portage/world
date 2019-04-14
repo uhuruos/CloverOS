@@ -40,6 +40,7 @@ app-arch/pxz
 app-arch/sharutils
 app-arch/tardelta
 app-arch/tarsync
+app-arch/unace
 app-arch/unmakeself
 app-arch/unp
 app-arch/wimlib
