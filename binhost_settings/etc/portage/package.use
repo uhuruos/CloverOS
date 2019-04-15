@@ -252,7 +252,8 @@ sys-auth/consolekit policykit # required by kde (dbus)
 xfce-base/thunar dbus # required by xfce-base/xfdesktop
 mate-extra/mate-screensaver -pam # prevents gnome-keyring
 media-sound/bitwig-studio -jack # prevents jack2
-www-client/palemoon -system-sqlite # fix
+www-client/palemoon -system-sqlite # fix: doesn't work without it
+mate-base/mate-panel X # fix: doesn't build without it
 x11-plugins/gkrelltop X # fix: doesn't build without it
 media-sound/clementine dbus # fix: doesn't build without it
 www-client/waterfox -pgo # fix: doesn't build without it
