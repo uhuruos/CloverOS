@@ -61,7 +61,7 @@ wget http://distfiles.gentoo.org/releases/amd64/autobuilds/current-stage3-amd64/
 tar pxf stage3*
 rm -f stage3*
 
-cp /etc/resolv.conf etc
+cp /etc/resolv.conf etc/
 mount -t proc none proc
 mount --rbind /dev dev
 mount --rbind /sys sys
