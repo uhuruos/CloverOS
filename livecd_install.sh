@@ -47,7 +47,7 @@ done
 
 livecduser=livecd
 
-mkdir gentoo
+mkdir gentoo/
 
 if [[ $partitioning = "a" ]]; then
 	echo -e "o\nn\np\n1\n\n\nw" | fdisk /dev/$drive
@@ -57,7 +57,7 @@ mount /dev/$partition gentoo
 
 unsquashfs -f -d gentoo /mnt/cdrom/image.squashfs
 
-cd gentoo
+cd gentoo/
 mount -t proc none proc
 mount --rbind /dev dev
 mount --rbind /sys sys
