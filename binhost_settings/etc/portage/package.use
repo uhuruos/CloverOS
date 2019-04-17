@@ -50,7 +50,6 @@ x11-misc/polybar mpd i3wm
 x11-misc/rofi windowmode
 media-sound/jack-audio-connection-kit cpudetection
 sys-devel/llvm gold
-media-libs/mesa video_cards_virgl
 mate-base/mate extras
 kde-plasma/plasma-meta grub gtk
 kde-plasma/plasma-desktop gtk3 gtk2 legacy-systray
@@ -241,7 +240,7 @@ media-plugins/deadbeef-infobar gtk3
 media-plugins/deadbeef-waveform-seekbar gtk3
 media-plugins/deadbeef-spectrogram gtk3
 media-plugins/deadbeef-musical-spectrum gtk3
-app-emulation/qemu sdl usb virgl virtfs gtk
+app-emulation/qemu sdl usb virtfs gtk
 games-emulation/retroarch X # required by USE=xinerama
 x11-drivers/xf86-video-intel tools # multimonitor
 dev-libs/glib dbus # required by mate baobab flatpak pitivi evince eog bluez-alsa gthumb gedit flowblade
@@ -279,6 +278,8 @@ dev-python/pyyaml libyaml # required by qutebrowser
 app-text/xmlto text # required by xdg-utils
 x11-base/xorg-server xvfb # required by firefox
 media-libs/libsdl2 gles # required by wayland
+x11-libs/libdrm video_cards_vmware # required by open-vm-tools
+media-libs/mesa video_cards_vmware # required by open-vm-tools
 media-gfx/blender -osl # temporary
 app-office/abiword -calendar # temporary
 x11-libs/gtk+ X
