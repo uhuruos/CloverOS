@@ -83,7 +83,7 @@ media-sound/darkice vorbis mp3
 games-fps/urbanterror server
 media-gfx/krita color-management
 virtual/wine staging
-app-emulation/wine-staging vkd3d
+app-emulation/wine-staging -custom-cflags vkd3d
 x11-wm/xmonad -default-term
 sys-block/gparted btrfs dmraid f2fs fat -hfs jfs mdadm ntfs reiserfs reiser4 xfs cryptsetup udf
 app-admin/keepassxc yubikey
