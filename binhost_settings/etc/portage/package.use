@@ -1,4 +1,3 @@
-app-emulation/wine-any -custom-cflags
 app-emulation/xen -custom-cflags
 app-emulation/xen-tools -custom-cflags
 sys-boot/syslinux -custom-cflags
@@ -17,7 +16,7 @@ media-video/gpac ffmpeg
 x11-terms/kitty -wayland
 net-vpn/tor tor-hardening lzma
 app-doc/gimp-help l10n_en
-www-plugins/lightspark ppapi nsplugin ffmpeg curl gles rtmp
+www-plugins/lightspark ppapi nsplugin ffmpeg curl rtmp
 app-misc/anki -sound
 media-gfx/nomacs zip
 app-crypt/kbfs git
@@ -41,7 +40,7 @@ www-servers/tomcat extra-webapps
 media-sound/mp3blaster vorbis
 xfce-base/thunar udisks
 xfce-extra/tumbler ffmpeg
-media-plugins/gst-plugins-meta ffmpeg theora v4l vorbis ogg
+media-plugins/gst-plugins-meta ffmpeg theora vorbis ogg
 media-libs/gst-plugins-base theora
 media-libs/libbluray aacs bdplus
 www-apache/mod_perl ithreads
@@ -51,7 +50,7 @@ x11-misc/polybar mpd i3wm
 x11-misc/rofi windowmode
 media-sound/jack-audio-connection-kit cpudetection
 sys-devel/llvm gold
-media-libs/mesa -bindist d3d9 llvm gallium gles1 gles2 openmax xa video_cards_vmware video_cards_virgl
+media-libs/mesa video_cards_virgl
 mate-base/mate extras
 kde-plasma/plasma-meta grub gtk
 kde-plasma/plasma-desktop gtk3 gtk2 legacy-systray
@@ -84,8 +83,8 @@ media-sound/audacity id3tag ffmpeg
 media-sound/darkice vorbis mp3
 games-fps/urbanterror server
 media-gfx/krita color-management
-virtual/wine d3d9 staging
-app-emulation/wine-any staging d3d9 pba
+virtual/wine staging
+app-emulation/wine-staging vkd3d
 x11-wm/xmonad -default-term
 sys-block/gparted btrfs dmraid f2fs fat -hfs jfs mdadm ntfs reiserfs reiser4 xfs cryptsetup udf
 app-admin/keepassxc yubikey
@@ -165,7 +164,7 @@ app-emulation/virtualbox-guest-additions X
 media-video/xine-ui curl X
 sci-mathematics/octave X gui fftw curl gnuplot postscript jit
 media-libs/clutter X
-dev-libs/efl X sound harfbuzz physics tslib xpm drm gles gles2 -opengl
+dev-libs/efl X sound harfbuzz physics tslib xpm drm gles2 -opengl
 app-text/mupdf X
 games-emulation/sdlmame X
 net-im/qtox X
@@ -179,7 +178,7 @@ app-editors/emacs X gtk toolkit-scroll-bars xft sound games alsa libxml2 dynamic
 app-emacs/emacs-common-gentoo X games
 app-admin/gkrellm X hddtemp lm_sensors
 app-text/texlive X cjk context detex dvi2tty dvipdfm epspdf extra games graphics humanities jadetex luatex metapost music omega png pstricks publishers science tex4ht texi2html truetype xetex xindy xml pdfannotextractor
-media-video/ffmpeg X rubberband libass vorbis ogg network vpx rtmp x264 aac wavpack opus mp3 sdl gme v4l webp theora xvid xcb cpudetection x265 libaom
+media-video/ffmpeg X bluray cdio rubberband libass vorbis ogg network vpx rtmp x264 aac wavpack opus mp3 sdl gme v4l webp theora xvid xcb cpudetection x265 libaom
 virtual/ffmpeg X sdl x264
 www-servers/varnish jit jemalloc
 media-video/mpv rubberband lcms archive cdda bluray dvd encode libmpv cplugins v4l
@@ -279,6 +278,7 @@ dev-lua/mpack luajit # required by neovim
 dev-python/pyyaml libyaml # required by qutebrowser
 app-text/xmlto text # required by xdg-utils
 x11-base/xorg-server xvfb # required by firefox
+media-libs/libsdl2 gles # required by wayland
 media-gfx/blender -osl # temporary
 app-office/abiword -calendar # temporary
 x11-libs/gtk+ X
@@ -347,7 +347,7 @@ dev-libs/libxml2 python
 dev-libs/libxslt python
 dev-python/numpy lapack
 x11-libs/qscintilla qt5
-x11-libs/libdrm libkms video_cards_vmware
+x11-libs/libdrm libkms
 media-gfx/gmic X ffmpeg cli
 x11-libs/gdk-pixbuf tiff
 dev-libs/libxml2 icu
@@ -361,7 +361,7 @@ dev-python/QtPy gui
 dev-libs/marisa python
 sys-devel/clang xml
 dev-libs/xmlsec nss
-media-libs/libsdl2 X gles haptic
+media-libs/libsdl2 X haptic
 dev-lang/tk truetype
 
 #libressl
@@ -447,6 +447,13 @@ x11-libs/libva-intel-driver abi_x86_32
 media-libs/glu abi_x86_32
 virtual/opencl abi_x86_32
 dev-libs/ocl-icd abi_x86_32
+app-emulation/vkd3d abi_x86_32
+x11-libs/xcb-util abi_x86_32
+x11-libs/xcb-util-keysyms abi_x86_32
+x11-libs/xcb-util-wm abi_x86_32
+x11-libs/xcb-util-cursor abi_x86_32
+x11-libs/xcb-util-image abi_x86_32
+x11-libs/xcb-util-renderutil abi_x86_32
 
 #pcsx2
 app-arch/xz-utils abi_x86_32

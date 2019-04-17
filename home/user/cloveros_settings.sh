@@ -29,7 +29,6 @@ c) Update Portage config from binhost
 m) Revert to default /etc/portage/make.conf
 b) Install Bluetooth manager
 i) Install VirtualBox
-v) Install Virtualbox/VMWare drivers
 s) Install and add dnscrypt-proxy to startup
 n) Install proprietary Nvidia drivers"
 	read -erp "Select option: " -n 1 choice
@@ -355,14 +354,6 @@ case "$choice" in
 		sudo useradd -g $USER vboxusers
 		sudo modprobe -a vboxdrv vboxnetadp vboxnetflt
 		echo "Virtualbox installed, please reboot to update kernel."
-		;;
-
-	v)
-		echo "Running the following:"
-		echo "sudo emerge open-vm-tools virtualbox-guest-additions"
-		sleep 2
-		sudo emerge open-vm-tools virtualbox-guest-additions
-		echo -e "\nRestart X to load driver."
 		;;
 
 	s)

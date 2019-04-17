@@ -117,7 +117,7 @@ app-emulation/virt-manager
 app-emulation/virtualbox
 app-emulation/virtualbox-additions
 app-emulation/virtualbox-guest-additions
-app-emulation/wine-any
+app-emulation/wine-staging
 app-emulation/winetricks
 app-emulation/xen
 app-eselect/eselect-repository
@@ -1187,7 +1187,6 @@ x11-base/xorg-x11
 x11-drivers/nvidia-drivers
 x11-drivers/xf86-input-wacom
 x11-drivers/xf86-video-sis671
-x11-drivers/xf86-video-vmware
 x11-misc/arandr
 x11-misc/autocutsel
 x11-misc/bumblebee
