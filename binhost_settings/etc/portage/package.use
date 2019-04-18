@@ -1,3 +1,5 @@
+virtual/wine staging
+app-emulation/wine-staging -custom-cflags vkd3d
 app-emulation/xen -custom-cflags
 app-emulation/xen-tools -custom-cflags
 sys-boot/syslinux -custom-cflags
@@ -82,8 +84,6 @@ media-sound/audacity id3tag ffmpeg
 media-sound/darkice vorbis mp3
 games-fps/urbanterror server
 media-gfx/krita color-management
-virtual/wine staging
-app-emulation/wine-staging -custom-cflags vkd3d
 x11-wm/xmonad -default-term
 sys-block/gparted btrfs dmraid f2fs fat -hfs jfs mdadm ntfs reiserfs reiser4 xfs cryptsetup udf
 app-admin/keepassxc yubikey
@@ -308,7 +308,6 @@ dev-games/mygui -opengl
 dev-lang/luajit lua52compat
 dev-lang/python sqlite
 x11-libs/libxcb xkb
-x11-libs/cairo xcb
 sys-libs/tevent python
 media-gfx/exiv2 xmp
 dev-python/PyQt5 gui widgets svg webkit network printsupport webchannel sql declarative multimedia
@@ -328,7 +327,7 @@ kde-apps/ktp-common-internals otr
 kde-apps/artikulate qtmedia
 app-text/poppler qt5 cairo
 x11-libs/libva-intel-driver X
-x11-libs/cairo X
+x11-libs/cairo X xcb
 dev-cpp/cairomm X
 x11-libs/libxkbcommon X
 x11-libs/pango X
@@ -344,14 +343,13 @@ sys-libs/libselinux python
 sys-libs/libsemanage python
 net-wireless/lorcon python
 sys-libs/tdb python
-dev-libs/libxml2 python
+dev-libs/libxml2 python icu
 dev-libs/libxslt python
 dev-python/numpy lapack
 x11-libs/qscintilla qt5
 x11-libs/libdrm libkms
 media-gfx/gmic X ffmpeg cli
 x11-libs/gdk-pixbuf tiff
-dev-libs/libxml2 icu
 x11-libs/wxGTK tiff
 net-libs/libdom xml
 dev-java/swt cairo
