@@ -1163,7 +1163,6 @@ www-misc/urlwatch
 www-plugins/adobe-flash
 www-plugins/chrome-binary-plugins
 www-plugins/freshplayerplugin
-www-plugins/lightspark
 www-servers/apache
 www-servers/lighttpd
 www-servers/nginx

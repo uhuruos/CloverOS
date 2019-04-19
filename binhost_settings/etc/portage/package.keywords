@@ -50,17 +50,17 @@ media-libs/l-smash ** # vapoursynth-l-smash-works
 media-plugins/vapoursynth-d2vsource ** # ffmpeg
 media-video/mpv # old
 media-libs/shaderc # mpv
-<sys-devel/llvm-8 # llvm7
-<sys-devel/llvmgold-8 # llvm
-<sys-devel/llvm-common-8 # llvm
-<sys-libs/libomp-8 # llvm
-<sys-devel/clang-common-8 # llvm
-<sys-devel/clang-runtime-8 # llvm
-<sys-devel/clang-8 # llvm
-<sys-libs/compiler-rt-8 # llvm
-<sys-libs/compiler-rt-sanitizers-8 # llvm
-<sys-devel/lld-8 # llvm
-<dev-util/lldb-8
+=sys-devel/llvm-7.0.1 # llvm7
+=sys-devel/llvmgold-7.0.1 # llvm
+=sys-devel/llvm-common-7.0.1 # llvm
+=sys-devel/clang-common-7.0.1 # llvm
+=sys-devel/clang-runtime-7.0.1 # llvm
+=sys-devel/clang-7.0.1 # llvm
+=sys-libs/compiler-rt-7.0.1 # llvm
+=sys-libs/compiler-rt-sanitizers-7.0.1 # llvm
+=sys-devel/lld-7.0.1 # llvm
+=sys-libs/libomp-7.0.1 # llvm
+=dev-util/lldb-7.0.1
 dev-libs/beignet ** # llvm
 www-plugins/lightspark ** # llvm
 
