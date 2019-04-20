@@ -103,7 +103,7 @@ app-emacs/org-mode
 app-emacs/slime
 app-emulation/diskimage-builder
 app-emulation/docker
-app-emulation/e-uae
+app-emulation/fs-uae
 app-emulation/fuse
 app-emulation/nemu
 app-emulation/open-vm-tools
@@ -111,7 +111,6 @@ app-emulation/playonlinux
 app-emulation/q4wine
 app-emulation/qemu
 app-emulation/qt-virt-manager
-app-emulation/uae
 app-emulation/vagrant
 app-emulation/virt-manager
 app-emulation/virtualbox
@@ -734,16 +733,7 @@ media-plugins/gimp-resynthesizer
 media-plugins/gkrellmpc
 media-plugins/gst-plugins-oss
 media-plugins/refocus-it
-media-plugins/vapoursynth-adjust
-media-plugins/vapoursynth-finesharp
-media-plugins/vapoursynth-mvsfunc
-media-plugins/vapoursynth-mvtools
-media-plugins/vapoursynth-nnedi3_resample
 media-plugins/vapoursynth-plugins-meta
-media-plugins/vapoursynth-scenechange
-media-plugins/vapoursynth-templinearapproximate
-media-plugins/vapoursynth-vautodeint
-media-plugins/vapoursynth-vs-maskdetail
 media-sound/alsa-tools
 media-sound/alsa-utils
 media-sound/amsynth
@@ -1117,7 +1107,7 @@ sys-kernel/bliss-initramfs
 sys-kernel/dkms
 sys-kernel/dracut
 sys-kernel/genkernel
-sys-kernel/gentoo-sources:5.0.7
+sys-kernel/gentoo-sources:5.0.8
 sys-kernel/linux-firmware
 sys-power/acpi_call
 sys-power/acpitool
@@ -1164,6 +1154,7 @@ www-misc/urlwatch
 www-plugins/adobe-flash
 www-plugins/chrome-binary-plugins
 www-plugins/freshplayerplugin
+www-plugins/lightspark
 www-servers/apache
 www-servers/lighttpd
 www-servers/nginx

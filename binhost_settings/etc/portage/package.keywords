@@ -33,6 +33,7 @@ dev-db/mariadb # fixes build
 media-libs/openimageio # fixes build
 x11-themes/sddm-gentoo-black-theme ** # fixes build
 x11-themes/terminology-themes ** # fixes build
+media-plugins/vapoursynth-d2vsource ** # fixes build
 media-fonts/vlgothic # old
 games-emulation/dolphin ** # old
 games-emulation/pcsx2 ** # old
@@ -68,6 +69,7 @@ net-ftp/proftpd
 net-misc/spice-gtk
 
 #keyworded, remove when stable exists
+app-emulation/fs-uae
 virtual/wine
 app-emulation/wine-staging # wine
 app-emulation/wine-mono # wine
@@ -597,7 +599,7 @@ media-fonts/gohufont
 media-fonts/fontawesome
 media-libs/vapoursynth
 media-libs/waifu2x-converter-cpp
-media-libs/l-smash
+media-libs/l-smash **
 media-plugins/vapoursynth-vaguedenoiser
 media-plugins/vapoursynth-finesharp
 media-plugins/vapoursynth-bifrost
@@ -608,7 +610,7 @@ media-plugins/vapoursynth-d2vsource
 media-plugins/vapoursynth-vcfreq
 media-plugins/vapoursynth-ctmf
 media-plugins/vapoursynth-vcmove
-media-plugins/vapoursynth-l-smash-works
+media-plugins/vapoursynth-l-smash-works **
 media-plugins/vapoursynth-combmask
 media-plugins/vapoursynth-ssiq
 media-plugins/vapoursynth-oyster
@@ -642,7 +644,7 @@ media-plugins/vapoursynth-inpaint
 media-plugins/vapoursynth-adjust
 media-plugins/vapoursynth-removedirt
 media-plugins/vapoursynth-genericfilters
-media-plugins/vapoursynth-scenechange
+#media-plugins/vapoursynth-scenechange
 media-plugins/vapoursynth-addgrain
 media-plugins/vapoursynth-mvtools
 media-plugins/vapoursynth-wwxd
@@ -695,6 +697,17 @@ media-plugins/vapoursynth-warpsharpsupport
 media-plugins/vapoursynth-decross
 media-plugins/vapoursynth-motionmask
 media-plugins/vapoursynth-dedot
+media-plugins/vapoursynth-dfmderainbow
+media-plugins/vapoursynth-astdr
+media-plugins/vapoursynth-curve
+media-plugins/vapoursynth-hysteria
+#media-plugins/vapoursynth-kagefunc **
+media-plugins/vapoursynth-nnedi3_rpow2
+#media-plugins/vapoursynth-qrcodesource
+media-plugins/vapoursynth-fvsfunc
+media-plugins/vapoursynth-xaa
+media-plugins/vapoursynth-temporalsoften2
+media-plugins/vapoursynth-tedgemask
 media-sound/deadbeef
 media-plugins/deadbeef-plugins-meta
 media-plugins/deadbeef-replaygain-control
@@ -707,10 +720,18 @@ media-plugins/deadbeef-waveform-seekbar
 media-plugins/deadbeef-vu-meter
 media-plugins/deadbeef-stereo-widener
 media-plugins/deadbeef-mpris
-media-plugins/deadbeef-jack
+#media-plugins/deadbeef-jack
 media-plugins/deadbeef-infobar
 media-plugins/deadbeef-decast
 media-plugins/deadbeef-fb
+#media-plugins/deadbeef-statusnotifier
+media-plugins/deadbeef-vk
+media-plugins/deadbeef-soxr
+media-plugins/deadbeef-opus
+#media-plugins/deadbeef-librarybrowser
+#media-plugins/deadbeef-gnome-mmkeys
+#media-plugins/deadbeef-archive-reader
+
 x11-plugins/wmmand
 x11-plugins/wmhdplop
 x11-plugins/wmbio
@@ -772,7 +793,7 @@ games-emulation/4do-libretro **
 games-emulation/beetle-psx-libretro **
 games-emulation/bnes-libretro **
 games-emulation/bsnes-libretro **
-#games-emulation/bsnes-libretro-cplusplus98 **
+games-emulation/bsnes-libretro-cplusplus98 **
 games-emulation/craft-libretro **
 games-emulation/citra-libretro **
 games-emulation/desmume-libretro **

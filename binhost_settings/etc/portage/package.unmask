@@ -107,12 +107,12 @@ app-shells/zsh-syntax-highlighting::4nykey
 
 media-sound/deadbeef::deadbeef-overlay
 media-plugins/deadbeef-plugins-meta::deadbeef-overlay
-media-plugins/deadbeef-gnome-mmkeys::deadbeef-overlay
+#media-plugins/deadbeef-gnome-mmkeys::deadbeef-overlay
 media-plugins/deadbeef-replaygain-control::deadbeef-overlay
 media-plugins/deadbeef-spectrogram::deadbeef-overlay
 media-plugins/deadbeef-musical-spectrum::deadbeef-overlay
 media-plugins/deadbeef-quick-search::deadbeef-overlay
-media-plugins/deadbeef-statusnotifier::deadbeef-overlay
+#media-plugins/deadbeef-statusnotifier::deadbeef-overlay
 media-plugins/deadbeef-bookmark-manager::deadbeef-overlay
 media-plugins/deadbeef-bs2b::deadbeef-overlay
 media-plugins/deadbeef-waveform-seekbar::deadbeef-overlay
@@ -120,11 +120,14 @@ media-plugins/deadbeef-vk::deadbeef-overlay
 media-plugins/deadbeef-vu-meter::deadbeef-overlay
 media-plugins/deadbeef-stereo-widener::deadbeef-overlay
 media-plugins/deadbeef-mpris::deadbeef-overlay
-media-plugins/deadbeef-jack::deadbeef-overlay
+#media-plugins/deadbeef-jack::deadbeef-overlay
 media-plugins/deadbeef-infobar::deadbeef-overlay
-media-plugins/deadbeef-librarybrowser::deadbeef-overlay
+#media-plugins/deadbeef-librarybrowser::deadbeef-overlay
 media-plugins/deadbeef-decast::deadbeef-overlay
 media-plugins/deadbeef-fb::deadbeef-overlay
+media-plugins/deadbeef-opus::deadbeef-overlay
+#media-plugins/deadbeef-archive-reader::deadbeef-overlay
+media-plugins/deadbeef-soxr::deadbeef-overlay
 
 media-tv/plex-media-server::fkmclane
 x11-misc/lemonbar::fkmclane
@@ -163,7 +166,7 @@ games-emulation/4do-libretro::abendbrot
 games-emulation/beetle-psx-libretro::abendbrot
 games-emulation/bnes-libretro::abendbrot
 games-emulation/bsnes-libretro::abendbrot
-#games-emulation/bsnes-libretro-cplusplus98::abendbrot
+games-emulation/bsnes-libretro-cplusplus98::abendbrot
 games-emulation/common-overlays::abendbrot
 games-emulation/craft-libretro::abendbrot
 games-emulation/citra-libretro::abendbrot
@@ -284,7 +287,7 @@ media-plugins/vapoursynth-remapframes::vapoursynth
 media-plugins/vapoursynth-removedirt::vapoursynth
 media-plugins/vapoursynth-retinex::vapoursynth
 media-plugins/vapoursynth-sangnom::vapoursynth
-media-plugins/vapoursynth-scenechange::vapoursynth
+#media-plugins/vapoursynth-scenechange::vapoursynth
 media-plugins/vapoursynth-scxvid::vapoursynth
 media-plugins/vapoursynth-ssiq::vapoursynth
 media-plugins/vapoursynth-surfaceblur::vapoursynth
@@ -328,3 +331,14 @@ media-plugins/vapoursynth-ttempsmooth::vapoursynth
 media-plugins/vapoursynth-motionmask::vapoursynth
 media-plugins/vapoursynth-minideen::vapoursynth
 media-plugins/vapoursynth-timecube::vapoursynth
+media-plugins/vapoursynth-dfmderainbow::vapoursynth
+media-plugins/vapoursynth-nnedi3_rpow2::vapoursynth
+media-plugins/vapoursynth-tedgemask::vapoursynth
+media-plugins/vapoursynth-temporalsoften2::vapoursynth
+media-plugins/vapoursynth-fvsfunc::vapoursynth
+media-plugins/vapoursynth-xaa::vapoursynth
+#media-plugins/vapoursynth-qrcodesource::vapoursynth
+media-plugins/vapoursynth-astdr::vapoursynth
+#media-plugins/vapoursynth-kagefunc::vapoursynth
+media-plugins/vapoursynth-hysteria::vapoursynth
+media-plugins/vapoursynth-curve::vapoursynth
