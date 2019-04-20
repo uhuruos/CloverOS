@@ -561,24 +561,12 @@ No systemd, maximized CFLAGS, lower RAM usage, it's Gentoo, package versions are
 ### What is CloverOS Libre?
 CloverOS Libre doesn't have the `sys-kernel/linux-firmware` package.
 
-The kernel is the same gentoo-sources with Liquorix config but with https://linux-libre.fsfla.org/pub/linux-libre/releases/4.12.12-gnu/deblob-4.12 ran on it.
-
-```
-emerge -C linux-firmware
-emerge gentoo-sources genkernel lz4
-cd /usr/src/linux/
-wget https://linux-libre.fsfla.org/pub/linux-libre/releases/4.14.1-gnu/deblob-4.14
-chmod +x deblob-4.14
-PYTHON="python2.7" ./deblob-4.14
-wget https://liquorix.net/sources/4.14/config.amd64
-genkernel --kernel-config=config.amd64 all
-grub-mkconfig -o /boot/grub/grub.cfg
-```
+The kernel is the same gentoo-sources with Liquorix config but with https://linux-libre.fsfla.org/pub/linux-libre/releases/5.0.8-gnu/deblob-5.0 ran on it.
 
 ### Turning CloverOS into CloverOS Libre
 `emerge -C linux-firmware`
 
-`./cloveros_settings.sh` l) Update/Install Libre kernel
+`./cloveros_settings.sh` l) Update libre kernel
 
 Reboot; Advanced options, select -gnu kernel
 
@@ -587,7 +575,7 @@ Reboot; Advanced options, select -gnu kernel
 
 `./cloveros_settings.sh` 4) Update kernel
 
-Reboot; Advanced options, select non -gnu kernel
+Reboot; Advanced options, select -gentoo kernel
 
 ### Starting X automatically after login
 Edit `~/.bash_profile`
@@ -661,7 +649,7 @@ Run `rsync -av --delete rsync://nl.cloveros.ga/cloveros /your/webserver/location
 sudo emerge -aveD -j4 --keep-going=y --exclude=nodejs --exclude=qtnetwork world
 ./cloveros_settings.sh 5
 
-sudo emerge gentoo-sources genkernel
+sudo emerge gentoo-sources genkernel lz4
 sudo eselect kernel 1
 wget https://raw.githubusercontent.com/damentz/liquorix-package/5.0/linux-liquorix/debian/config/kernelarch-x86/config-arch-64
 sed -i "s/CONFIG_CRYPTO_CRC32C=m/CONFIG_CRYPTO_CRC32C=y/; s/CONFIG_FW_LOADER_USER_HELPER=y/CONFIG_FW_LOADER_USER_HELPER=n/; s/CONFIG_I2C_NVIDIA_GPU=/#CONFIG_I2C_NVIDIA_GPU=/" config-arch-64
