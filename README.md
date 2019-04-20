@@ -658,8 +658,8 @@ Run `rsync -av --delete rsync://nl.cloveros.ga/cloveros /your/webserver/location
 ```
 ./cloveros_settings.sh 5
 ./cloveros_settings.sh c
-sudo sed -i "s/-mssse3/-march=native/" /etc/portage/package.env /etc/portage/env/*
-sudo emerge -uavD world
+sudo emerge -aveD --keep-going=y -j4 world
+./cloveros_settings.sh 5
 
 sudo emerge gentoo-sources genkernel
 sudo eselect kernel 1
