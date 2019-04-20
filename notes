@@ -30,3 +30,6 @@ net-analyzer/munin
 android-ndk android-studio
 #libusb USE=udev
 colorhug-client
+
+#doesn't work
+zsnes

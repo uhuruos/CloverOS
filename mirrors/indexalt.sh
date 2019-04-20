@@ -286,7 +286,12 @@ body {
 			<ul>
 				<div class="dropdown">
 					<a href="https://twitter.com/cloveros_ga"><li>News</li></a>
-					<div class="dropdown-content" id="news">12-Apr-19
+					<div class="dropdown-content" id="news">20-Apr-19
+Packages updated
+Kernel updated to 5.0.8
+New ISO: https://cloveros.ga/s/CloverOS-x86_64-20190420.iso
+
+12-Apr-19
 Packages updated
 New ISO: https://cloveros.ga/s/CloverOS-x86_64-20190412.iso
 mirrors/cloveros_mirror.sh added, it'\''s a script that turns a fresh VPS into a cloveros mirror
