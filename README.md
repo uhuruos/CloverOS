@@ -181,6 +181,7 @@ This disables the binhost and uses Portage's ebuilds for packages. Now you can e
 * [Which DE does this come with?](#which-de-does-this-come-with)
 * [Installing a DE](#installing-a-de)
 * [I want to host a mirror](#i-want-to-host-a-mirror)
+* [Recompiling all packages for increased performance](#recompiling-all-packages-for-increased-performance)
 * [What if CloverOS dies? Will my install become useless?](#what-if-cloveros-dies-will-my-install-become-useless)
 
 ### What is CloverOS?
@@ -652,6 +653,25 @@ Kill X and re-login. After you log in and the "Start X?" dialog pops up, instead
 
 ### I want to donate/host a mirror
 Run `rsync -av --delete rsync://nl.cloveros.ga/cloveros /your/webserver/location/` and link me the https://
+
+### Recompiling all packages for increased performance
+```
+./cloveros_settings.sh 5
+./cloveros_settings.sh c
+sudo sed -i "s/-mssse3/-march=native/" /etc/portage/package.env /etc/portage/env/*
+sudo emerge -uavD world
+
+sudo emerge gentoo-sources genkernel
+sudo eselect kernel 1
+wget https://raw.githubusercontent.com/damentz/liquorix-package/5.0/linux-liquorix/debian/config/kernelarch-x86/config-arch-64
+sed -i "s/CONFIG_CRYPTO_CRC32C=m/CONFIG_CRYPTO_CRC32C=y/; s/CONFIG_FW_LOADER_USER_HELPER=y/CONFIG_FW_LOADER_USER_HELPER=n/; s/CONFIG_I2C_NVIDIA_GPU=/#CONFIG_I2C_NVIDIA_GPU=/" config-arch-64
+echo -e "CONFIG_SND_HDA_INPUT_BEEP=y\nCONFIG_SND_HDA_INPUT_BEEP_MODE=0" >> config-arch-64
+wget https://raw.githubusercontent.com/graysky2/kernel_gcc_patch/master/enable_additional_cpu_optimizations_for_gcc_v8.1%2B_kernel_v4.13%2B.patch
+sudo sh -c "patch -d /usr/src/linux/ -p1 < enable_additional_cpu_optimizations_for_gcc_v8.1+_kernel_v4.13+.patch" 
+sed -i "s/CONFIG_GENERIC_CPU=y/CONFIG_MNATIVE=y/;" config-arch-64
+sudo genkernel --kernel-config=config-arch-64 all
+sudo GRUB_CMDLINE_LINUX_DEFAULT="pti=off ibrs=off retp=off ibpb=off spectre_v2=off l1tf=off nospec_store_bypass_disable no_stf_barrier" grub-mkconfig -o /boot/grub/grub.cfg
+```
 
 ### What if CloverOS dies? Will my install become useless?
 No. Switch to source by running `./cloveros_settings.sh 5`
