@@ -565,7 +565,7 @@ The kernel is the same gentoo-sources with Liquorix config but with https://linu
 
 ```
 emerge -C linux-firmware
-emerge gentoo-sources genkernel
+emerge gentoo-sources genkernel lz4
 cd /usr/src/linux/
 wget https://linux-libre.fsfla.org/pub/linux-libre/releases/4.14.1-gnu/deblob-4.14
 chmod +x deblob-4.14
