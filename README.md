@@ -650,14 +650,16 @@ sudo emerge -aveD -j4 --keep-going=y --exclude=nodejs --exclude=qtnetwork world
 ./cloveros_settings.sh 5
 
 sudo emerge gentoo-sources genkernel lz4
-sudo eselect kernel 1
+sudo eselect kernel set 1
 wget https://raw.githubusercontent.com/damentz/liquorix-package/5.0/linux-liquorix/debian/config/kernelarch-x86/config-arch-64
 sed -i "s/CONFIG_CRYPTO_CRC32C=m/CONFIG_CRYPTO_CRC32C=y/; s/CONFIG_FW_LOADER_USER_HELPER=y/CONFIG_FW_LOADER_USER_HELPER=n/; s/CONFIG_I2C_NVIDIA_GPU=/#CONFIG_I2C_NVIDIA_GPU=/" config-arch-64
 echo -e "CONFIG_SND_HDA_INPUT_BEEP=y\nCONFIG_SND_HDA_INPUT_BEEP_MODE=0" >> config-arch-64
 wget https://raw.githubusercontent.com/graysky2/kernel_gcc_patch/master/enable_additional_cpu_optimizations_for_gcc_v8.1%2B_kernel_v4.13%2B.patch
 sudo sh -c "patch -d /usr/src/linux/ -p1 < enable_additional_cpu_optimizations_for_gcc_v8.1+_kernel_v4.13+.patch" 
 sed -i "s/CONFIG_GENERIC_CPU=y/CONFIG_MNATIVE=y/;" config-arch-64
+sudo binutils-config --linker ld.bfd
 sudo genkernel --kernel-config=config-arch-64 all
+sudo binutils-config --linker ld.gold
 sudo GRUB_CMDLINE_LINUX_DEFAULT="pti=off ibrs=off retp=off ibpb=off spectre_v2=off l1tf=off nospec_store_bypass_disable no_stf_barrier" grub-mkconfig -o /boot/grub/grub.cfg
 ```
 

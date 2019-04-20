@@ -313,6 +313,7 @@ case "$choice" in
 				sudo sed -i "s/^USE=\".*/$useflags/" /etc/portage/make.conf
 			fi
 			sudo sed -i "s/^CFLAGS=\".*/CFLAGS=\"-Ofast -march=native -mfpmath=both -pipe -funroll-loops -flto=8 -floop-block -floop-interchange -floop-strip-mine -ftree-loop-distribution -fgraphite-identity -floop-nest-optimize -malign-data=cacheline -mtls-dialect=gnu2 -Wl,--hash-style=gnu\"/" /etc/portage/make.conf
+			sudo binutils-config --linker ld.gold
 			echo -e "\nPortage configuration now mirrors binhost Portage configuration. Previous Portage config stored in ~/$backupportagedir"
 		else
 			echo -e "\nCould not retrieve file. Please connect to the Internet or try again."
