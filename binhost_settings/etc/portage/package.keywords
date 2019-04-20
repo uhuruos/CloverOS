@@ -23,8 +23,10 @@ app-emulation/virtualbox-modules # virtualbox
 =media-libs/opencollada-1.6.63 # libpcre
 =dev-libs/libuv-1.27.0 # neovim
 net-libs/http-parser # nodejs
+media-plugins/gst-plugins-libav # ffmpeg
 media-libs/zimg # vapoursynth
 dev-lisp/clisp # fixes build
+media-video/vdr # fixes build
 net-p2p/mldonkey # fixes build
 games-emulation/mgba # fixes build
 dev-db/mariadb # fixes build
