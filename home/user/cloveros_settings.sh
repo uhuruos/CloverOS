@@ -302,13 +302,17 @@ case "$choice" in
 		wget $gitprefix/binhost_settings/etc/portage/env/{no-lto,no-lto-graphite,no-lto-graphite-ofast,no-lto-o3,no-lto-ofast,no-ofast,no-gold,no-mfpmath,size,pcsx2,gold,no-gnu2,rethinkdb,no-hashgnu} -P $portageworkdir/env/
 		if [[ $(find $portageworkdir -type f | wc -l) == "19" ]]; then
 			backupportagedir=backupportage$(< /dev/urandom tr -dc 0-9 | head -c 8)
-			mkdir $backupportagedir
-			sudo mv /etc/portage/package.use /etc/portage/package.mask /etc/portage/package.keywords /etc/portage/package.env /etc/portage/package.unmask /etc/portage/env/ $backupportagedir
+			mkdir $backupportagedir/
+			sudo mv /etc/portage/package.use /etc/portage/package.mask /etc/portage/package.keywords /etc/portage/package.env /etc/portage/package.unmask /etc/portage/env/ $backupportagedir/
+			sudo cp /etc/portage/make.conf $backupportagedir/
 			sudo mv $portageworkdir/* /etc/portage/
 			useflags=$(curl -s $gitprefix/binhost_settings/etc/portage/make.conf | grep "^USE=")
 			if ! grep -q "$useflags" /etc/portage/make.conf; then
 				echo $useflags | sudo tee --append /etc/portage/make.conf > /dev/null
+			else
+				sudo sed -i "s/^USE=\".*/$useflags/" /etc/portage/make.conf
 			fi
+			sudo sed -i "s/^CFLAGS=\".*/CFLAGS=\"-Ofast -march=native -mfpmath=both -pipe -funroll-loops -flto=8 -floop-block -floop-interchange -floop-strip-mine -ftree-loop-distribution -fgraphite-identity -floop-nest-optimize -malign-data=cacheline -mtls-dialect=gnu2 -Wl,--hash-style=gnu\"/" /etc/portage/make.conf
 			echo -e "\nPortage configuration now mirrors binhost Portage configuration. Previous Portage config stored in ~/$backupportagedir"
 		else
 			echo -e "\nCould not retrieve file. Please connect to the Internet or try again."
