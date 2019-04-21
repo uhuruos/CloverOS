@@ -664,6 +664,8 @@ sudo binutils-config --linker ld.gold
 sudo GRUB_CMDLINE_LINUX_DEFAULT="pti=off ibrs=off retp=off ibpb=off spectre_v2=off l1tf=off nospec_store_bypass_disable no_stf_barrier" grub-mkconfig -o /boot/grub/grub.cfg
 ```
 
+To update the system using source: `./cloveros_settings.sh c && sudo emerge -uvDN world`
+
 ### What if CloverOS dies? Will my install become useless?
 No. Switch to source by running `./cloveros_settings.sh 5`
 

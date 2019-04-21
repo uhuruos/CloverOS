@@ -290,6 +290,8 @@ body {
 Packages updated
 Kernel updated to 5.0.8
 New ISO: https://cloveros.ga/s/CloverOS-x86_64-20190420.iso
+For wine, wine-any-4.1::gentoo is replaced with wine-staging-9999::bobwya, pba and esync enabled
+Guide for recompiling all packages and kernel with -march=native: https://gitgud.io/cloveros/cloveros/#recompiling-all-packages-and-kernel-with-marchnative-for-increased-performance
 
 12-Apr-19
 Packages updated
