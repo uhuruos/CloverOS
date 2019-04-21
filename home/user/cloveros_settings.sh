@@ -313,6 +313,9 @@ case "$choice" in
 			fi
 			sudo sed -i "s/^CFLAGS=\".*/CFLAGS=\"-Ofast -march=native -mfpmath=both -pipe -funroll-loops -flto=8 -floop-block -floop-interchange -floop-strip-mine -ftree-loop-distribution -fgraphite-identity -floop-nest-optimize -malign-data=cacheline -mtls-dialect=gnu2 -Wl,--hash-style=gnu\"/" /etc/portage/make.conf
 			sudo sed -i "s/-mssse3/-march=native/" /etc/portage/make.conf /etc/portage/package.env /etc/portage/env/*
+			if grep -qi "intel" /proc/cpuinfo; then
+				sudo sed -i "s/-march=native/-march=native -falign-functions=32/" /etc/portage/make.conf /etc/portage/env/*
+			fi
 			sudo binutils-config --linker ld.gold
 			echo -e "\nPortage configuration now mirrors binhost Portage configuration. Previous Portage config stored in ~/$backupportagedir"
 		else

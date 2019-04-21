@@ -646,7 +646,6 @@ Run `rsync -av --delete rsync://nl.cloveros.ga/cloveros /your/webserver/location
 ```
 ./cloveros_settings.sh 5
 ./cloveros_settings.sh c
-# sudo sed -i "s/-march=native/-march=native -falign-functions=32/" /etc/portage/make.conf /etc/portage/env/* # Performance increase only if Intel CPU
 sudo emerge -eDv --jobs=4 --keep-going=y --exclude=nodejs --exclude=qtnetwork @world
 
 sudo emerge gentoo-sources genkernel lz4
