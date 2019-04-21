@@ -1,6 +1,11 @@
 www-client/ungoogled-chromium::pg_overlay
 
 sys-fs/exfat-nofuse::bobwya
+app-emulation/wine-staging::bobwya
+app-eselect/eselect-wine::bobwya # wine-staging
+app-emulation/wine-desktop-common::bobwya # wine-staging
+
+games-fps/dhewm3::bobwya
 
 x11-misc/synergy::vifino-overlay
 
@@ -68,7 +73,6 @@ dev-dotnet/referenceassemblies-pcl::dotnet
 
 www-client/waterfox::poly-c
 x11-themes/sddm-gentoo-black-theme::poly-c
-games-fps/dhewm3::poly-c
 
 games-misc/ckmame::linxon
 net-misc/youtube-dl-gui::linxon

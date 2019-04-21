@@ -1,7 +1,7 @@
 sys-auth/polkit consolekit
 
 virtual/wine staging
-app-emulation/wine-staging -custom-cflags vkd3d
+app-emulation/wine-staging -custom-cflags vkd3d pba esync
 app-emulation/xen -custom-cflags
 app-emulation/xen-tools -custom-cflags
 sys-boot/syslinux -custom-cflags
@@ -113,6 +113,7 @@ games-fps/enemy-territory dedicated
 games-simulation/openttd dedicated
 games-fps/nexuiz dedicated
 games-fps/darkplaces dedicated
+games-fps/dhewm3 curl
 games-fps/quake3 dedicated curl
 games-fps/quake3-cpma dedicated
 app-mobilephone/heimdall qt5
