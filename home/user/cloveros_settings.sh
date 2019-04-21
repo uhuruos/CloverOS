@@ -62,7 +62,7 @@ case "$choice" in
 		;;
 
 	zz)
-		if ! grep -q 'EMERGE_DEFAULT_OPTS=".* -G"' /etc/portage/make.conf; then
+		if ! grep -q '^EMERGE_DEFAULT_OPTS=".* -G"' /etc/portage/make.conf; then
 			echo "Please enable binaries."
 			exit 1
 		fi
