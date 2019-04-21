@@ -667,11 +667,12 @@ Remove the above GRUB_CMDLINE_LINUX_DEFAULT="" var if security is important.
 
 To update the system using source: `./cloveros_settings.sh c && sudo emerge -uvDN world`
 
-Certain packages may be from an overlay. To install, add the overlay:
+Certain packages may be from an overlay. To install, add overlays:
 ```
-sudo emerge layman
-sudo layman -S
-sudo layman -a [overlay]
+sudo emerge eselect-repository
+sudo mkdir /etc/portage/repos.conf
+sudo eselect repository enable 0x4d4c 4nykey abendbrot audio-overlay bobwya brother-overlay calculate cloveros-overlay deadbeef-overlay dotnet elementary erayd eroen farmboy0 fkmclane flatpak-overlay gamerlay genthree haarp jacendi-overlay jm-overlay jorgicio lanodanOverlay libressl linxon lua luke-jr mv pg_overlay poly-c raiagent rasdark science seden sk-overlay ssnb steam-overlay stefantalpalaru tlp torbrowser vampire vapoursynth vifino-overlay
+sudo emerge --sync
 ```
 
 ### What if CloverOS dies? Will my install become useless?
