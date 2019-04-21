@@ -107,7 +107,6 @@ app-emulation/fs-uae
 app-emulation/fuse
 app-emulation/nemu
 app-emulation/open-vm-tools
-app-emulation/playonlinux
 app-emulation/q4wine
 app-emulation/qemu
 app-emulation/qt-virt-manager
@@ -116,8 +115,6 @@ app-emulation/virt-manager
 app-emulation/virtualbox
 app-emulation/virtualbox-additions
 app-emulation/virtualbox-guest-additions
-app-emulation/wine-staging
-app-emulation/winetricks
 app-emulation/xen
 app-eselect/eselect-repository
 app-forensics/aide
@@ -289,7 +286,6 @@ dev-python/yolk
 dev-python/yolk-portage
 dev-qt/qt-creator
 dev-ruby/nokogiri
-dev-util/android-sdk-update-manager
 dev-util/android-tools
 dev-util/android-udev-rules
 dev-util/bless
@@ -352,7 +348,6 @@ games-emulation/fakenes
 games-emulation/fceux
 games-emulation/gambatte
 games-emulation/generator
-games-emulation/gens
 games-emulation/gngb
 games-emulation/gngeo
 games-emulation/hatari
@@ -364,9 +359,7 @@ games-emulation/mekanix
 games-emulation/mgba
 games-emulation/mupen64plus
 games-emulation/nestopia
-games-emulation/nestra
 games-emulation/openmsx
-games-emulation/pcsx2
 games-emulation/pcsxr
 games-emulation/ppsspp
 games-emulation/reicast
@@ -378,8 +371,6 @@ games-emulation/stella
 games-emulation/vbam
 games-emulation/vgba
 games-emulation/yabause
-games-emulation/zinc
-games-emulation/zsnes
 games-engines/odamex
 games-engines/openmw
 games-engines/openxcom
@@ -432,7 +423,6 @@ games-util/joystick
 games-util/lutris
 games-util/qjoypad
 games-util/rejoystick
-games-util/steam-launcher
 games-util/udmf-convert
 games-util/xboxdrv
 games-util/zdbsp
@@ -719,7 +709,6 @@ media-libs/alsa-oss
 media-libs/fontconfig-ultimate
 media-libs/glyr
 media-libs/libtxc_dxtn
-media-libs/vapoursynth
 media-libs/vips
 media-libs/vulkan-loader
 media-libs/waifu2x-converter-cpp
@@ -733,7 +722,6 @@ media-plugins/gimp-resynthesizer
 media-plugins/gkrellmpc
 media-plugins/gst-plugins-oss
 media-plugins/refocus-it
-media-plugins/vapoursynth-plugins-meta
 media-sound/alsa-tools
 media-sound/alsa-utils
 media-sound/amsynth
@@ -755,7 +743,6 @@ media-sound/darksnow
 media-sound/deadbeef
 media-sound/drumkv1
 media-sound/easytag
-media-sound/exaile
 media-sound/ezstream
 media-sound/flacon
 media-sound/gmpc
@@ -1122,7 +1109,6 @@ sys-process/htop
 sys-process/iotop
 sys-process/lsof
 sys-process/parallel
-virtual/wine
 www-apps/otrs
 www-apps/trac
 www-client/chromium
@@ -1175,7 +1161,6 @@ x11-apps/xrandr
 x11-apps/xwininfo
 x11-base/xorg-server
 x11-base/xorg-x11
-x11-drivers/nvidia-drivers
 x11-drivers/xf86-input-wacom
 x11-drivers/xf86-video-sis671
 x11-misc/arandr
@@ -1204,7 +1189,6 @@ x11-misc/obmenu
 x11-misc/parcellite
 x11-misc/pcmanfm
 x11-misc/polybar
-x11-misc/primus
 x11-misc/qt5ct
 x11-misc/redshift
 x11-misc/rofi
