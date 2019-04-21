@@ -35,6 +35,7 @@ x11-themes/sddm-gentoo-black-theme ** # fixes build
 x11-themes/terminology-themes ** # fixes build
 media-plugins/vapoursynth-d2vsource ** # fixes build
 media-fonts/vlgothic # old
+app-emulation/winetricks # old
 games-emulation/dolphin ** # old
 games-emulation/pcsx2 ** # old
 games-emulation/ppsspp ** # old

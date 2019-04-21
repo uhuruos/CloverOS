@@ -1,6 +1,7 @@
 www-client/ungoogled-chromium::pg_overlay
 
 sys-fs/exfat-nofuse::bobwya
+virtual/wine::bobwya
 app-emulation/wine-staging::bobwya
 app-eselect/eselect-wine::bobwya # wine-staging
 app-emulation/wine-desktop-common::bobwya # wine-staging
