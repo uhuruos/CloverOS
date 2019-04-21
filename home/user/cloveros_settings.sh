@@ -85,7 +85,7 @@ case "$choice" in
 		fi
 
 		sudo emerge --sync
-		sudo emerge -uvD @world
+		sudo emerge -uvD --rebuilt-binaries=n @world
 		sudo emerge --depclean || sudo emerge -1O rhash m2crypto virtual/perl-ExtUtils-MakeMaker virtual/perl-File-Spec perl-core/File-Path:0 virtual/perl-File-Path:0 sys-apps/texinfo:0 dev-perl/libintl-perl:0 dev-perl/XML-Parser:0 dev-perl/Unicode-EastAsianWidth:0 dev-perl/Text-Unidecode:0 && sudo emerge --depclean
 
 		kernel=$(uname -r)
