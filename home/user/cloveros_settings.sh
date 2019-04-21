@@ -49,6 +49,10 @@ case "$choice" in
 		;;
 
 	2|u)
+		if ! grep -q '^EMERGE_DEFAULT_OPTS=".* -G"' /etc/portage/make.conf; then
+			echo "Please enable binaries."
+			exit 1
+		fi
 		echo "Running the following:"
 		echo "./cloveros_settings.sh 1"
 		echo "sudo emerge --sync"
@@ -62,11 +66,6 @@ case "$choice" in
 		;;
 
 	zz)
-		if ! grep -q '^EMERGE_DEFAULT_OPTS=".* -G"' /etc/portage/make.conf; then
-			echo "Please enable binaries."
-			exit 1
-		fi
-
 		if [ ! -d /var/db/pkg/net-libs/gnutls-3.6.7/ ]; then
 			sudo FETCHCOMMAND_HTTPS="wget -O \"\${DISTDIR}/\${FILE}\" \"\${URI}\"" emerge -1 gnutls aria2
 		fi
