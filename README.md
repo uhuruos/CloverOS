@@ -181,7 +181,7 @@ This disables the binhost and uses Portage's ebuilds for packages. Now you can e
 * [Which DE does this come with?](#which-de-does-this-come-with)
 * [Installing a DE](#installing-a-de)
 * [I want to host a mirror](#i-want-to-host-a-mirror)
-* [Recompiling all packages and kernel with -march=native for increased performance](#recompiling-all-packages-for-increased-performance)
+* [Recompiling all packages and kernel with -march=native for increased performance](#recompiling-all-packages-and-kernel-with-marchnative-for-increased-performance)
 * [What if CloverOS dies? Will my install become useless?](#what-if-cloveros-dies-will-my-install-become-useless)
 
 ### What is CloverOS?
