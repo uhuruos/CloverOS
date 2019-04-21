@@ -8,6 +8,7 @@ sys-boot/syslinux -custom-cflags
 sys-fs/zfs -custom-cflags
 sys-fs/zfs-kmod -custom-cflags
 sys-kernel/spl -custom-cflags
+games-emulation/zsnes -custom-cflags
 media-gfx/darktable colord
 gnome-extra/gnome-color-manager raw
 x11-misc/colord scanner -gusb
