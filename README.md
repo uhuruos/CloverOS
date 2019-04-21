@@ -665,7 +665,7 @@ sudo GRUB_CMDLINE_LINUX_DEFAULT="pti=off ibrs=off retp=off ibpb=off spectre_v2=o
 
 Remove the above GRUB_CMDLINE_LINUX_DEFAULT="" var if security is important.
 
-To update the system using source: `./cloveros_settings.sh c && sudo emerge -uvDN world`
+To update the system using source: `./cloveros_settings.sh c && sudo emerge --sync && sudo emerge -uavDN world`
 
 Certain packages may be from an overlay. To install, add overlays:
 ```
