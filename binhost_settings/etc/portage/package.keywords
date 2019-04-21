@@ -787,7 +787,7 @@ games-misc/fortune-mod-starwars
 games-misc/fortune-mod-strangelove
 games-misc/fortune-mod-tao
 games-misc/fortune-mod-zx-error
-games-emulation/retroarch **
+games-emulation/retroarch
 games-emulation/libretro-meta
 games-emulation/2048-libretro **
 games-emulation/4do-libretro **
@@ -798,7 +798,7 @@ games-emulation/bsnes-libretro-cplusplus98 **
 games-emulation/craft-libretro **
 games-emulation/citra-libretro **
 games-emulation/desmume-libretro
-games-emulation/dolphin-libretro **
+#games-emulation/dolphin-libretro **
 games-emulation/easyrpg-libretro
 games-emulation/fbalpha2012-libretro **
 games-emulation/fbalpha-libretro **
@@ -835,9 +835,9 @@ games-emulation/prboom-libretro **
 games-emulation/prosystem-libretro **
 games-emulation/px68k-libretro **
 games-emulation/quicknes-libretro **
-games-emulation/redream-libretro
+#games-emulation/redream-libretro **
 games-emulation/reicast-libretro **
-games-emulation/sameboy-libretro
+#games-emulation/sameboy-libretro **
 games-emulation/scummvm-libretro **
 games-emulation/snes9x2002-libretro **
 games-emulation/snes9x2010-libretro **
