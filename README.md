@@ -646,7 +646,7 @@ Run `rsync -av --delete rsync://nl.cloveros.ga/cloveros /your/webserver/location
 ```
 ./cloveros_settings.sh 5
 ./cloveros_settings.sh c
-sudo emerge -aveD -j4 --keep-going=y --exclude=nodejs --exclude=qtnetwork world
+sudo emerge -aveD --jobs=4 --keep-going=y --exclude=nodejs --exclude=qtnetwork world
 ./cloveros_settings.sh 5
 
 sudo emerge gentoo-sources genkernel lz4
