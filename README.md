@@ -658,6 +658,7 @@ sudo sh -c "patch -d /usr/src/linux/ -p1 < enable_additional_cpu_optimizations_f
 sed -i "s/CONFIG_GENERIC_CPU=y/CONFIG_MNATIVE=y/;" config-arch-64
 sudo binutils-config --linker ld.bfd
 sudo genkernel --kernel-config=config-arch-64 all
+sudo emerge -b @module-rebuild
 sudo binutils-config --linker ld.gold
 sudo GRUB_CMDLINE_LINUX_DEFAULT="pti=off ibrs=off retp=off ibpb=off spectre_v2=off l1tf=off nospec_store_bypass_disable no_stf_barrier" grub-mkconfig -o /boot/grub/grub.cfg
 ```
