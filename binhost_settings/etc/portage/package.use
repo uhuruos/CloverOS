@@ -490,3 +490,4 @@ virtual/libiconv abi_x86_32
 media-libs/audiofile abi_x86_32
 media-libs/libsdl abi_x86_32
 sys-fs/eudev abi_x86_32
+virtual/libudev abi_x86_32
