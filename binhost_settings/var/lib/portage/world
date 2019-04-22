@@ -107,6 +107,7 @@ app-emulation/fs-uae
 app-emulation/fuse
 app-emulation/nemu
 app-emulation/open-vm-tools
+app-emulation/playonlinux
 app-emulation/q4wine
 app-emulation/qemu
 app-emulation/qt-virt-manager
@@ -115,6 +116,8 @@ app-emulation/virt-manager
 app-emulation/virtualbox
 app-emulation/virtualbox-additions
 app-emulation/virtualbox-guest-additions
+app-emulation/wine-staging
+app-emulation/winetricks
 app-emulation/xen
 app-eselect/eselect-repository
 app-forensics/aide
@@ -359,6 +362,7 @@ games-emulation/mekanix
 games-emulation/mgba
 games-emulation/mupen64plus
 games-emulation/nestopia
+games-emulation/nestra
 games-emulation/openmsx
 games-emulation/pcsxr
 games-emulation/ppsspp
@@ -371,6 +375,7 @@ games-emulation/stella
 games-emulation/vbam
 games-emulation/vgba
 games-emulation/yabause
+games-emulation/zinc
 games-engines/odamex
 games-engines/openmw
 games-engines/openxcom
@@ -423,6 +428,7 @@ games-util/joystick
 games-util/lutris
 games-util/qjoypad
 games-util/rejoystick
+games-util/steam-launcher
 games-util/udmf-convert
 games-util/xboxdrv
 games-util/zdbsp
@@ -708,7 +714,7 @@ media-gfx/xzgv
 media-libs/alsa-oss
 media-libs/fontconfig-ultimate
 media-libs/glyr
-media-libs/libtxc_dxtn
+media-libs/vapoursynth
 media-libs/vips
 media-libs/vulkan-loader
 media-libs/waifu2x-converter-cpp
@@ -722,6 +728,7 @@ media-plugins/gimp-resynthesizer
 media-plugins/gkrellmpc
 media-plugins/gst-plugins-oss
 media-plugins/refocus-it
+media-plugins/vapoursynth-plugins-meta
 media-sound/alsa-tools
 media-sound/alsa-utils
 media-sound/amsynth
@@ -743,6 +750,7 @@ media-sound/darksnow
 media-sound/deadbeef
 media-sound/drumkv1
 media-sound/easytag
+media-sound/exaile
 media-sound/ezstream
 media-sound/flacon
 media-sound/gmpc
@@ -1109,6 +1117,7 @@ sys-process/htop
 sys-process/iotop
 sys-process/lsof
 sys-process/parallel
+virtual/wine
 www-apps/otrs
 www-apps/trac
 www-client/chromium
