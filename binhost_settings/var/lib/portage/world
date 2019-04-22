@@ -1032,6 +1032,7 @@ sys-apps/firejail
 sys-apps/flatpak
 sys-apps/hprofile
 sys-apps/hwdata-redhat
+sys-apps/hwinfo
 sys-apps/hwloc
 sys-apps/i2c-tools
 sys-apps/idle3-tools
@@ -1104,7 +1105,7 @@ sys-kernel/bliss-initramfs
 sys-kernel/dkms
 sys-kernel/dracut
 sys-kernel/genkernel
-sys-kernel/gentoo-sources:5.0.8
+sys-kernel/gentoo-sources:5.0.9
 sys-kernel/linux-firmware
 sys-power/acpi_call
 sys-power/acpitool
