@@ -40,6 +40,7 @@ make modules_prepare
 cd /usr/src/linux-$kernelversion-gentoo-gnu/
 make clean
 wait
+export BINPKG_COMPRESS="xz" XZ_OPT="--x86 --lzma2=preset=9e,dict=256MB,nice=273,depth=200,lc=4"
 emerge -b @module-rebuild
 
 binutils-config --linker ld.gold
