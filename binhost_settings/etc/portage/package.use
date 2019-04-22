@@ -250,8 +250,9 @@ dev-libs/glib dbus # required by mate baobab flatpak pitivi evince eog bluez-als
 dev-qt/qtgui dbus # required by kde
 dev-python/PyQt5 webengine # required by anki qutebrowser (dbus)
 sys-auth/consolekit policykit # required by kde (dbus)
-sys-auth/polkit consolekit # required by kde/mate
 xfce-base/thunar dbus # required by xfce-base/xfdesktop
+sys-auth/polkit consolekit # required by kde/mate
+sys-apps/accountsservice consolekit # required by kde/mate
 mate-extra/mate-screensaver -pam # prevents gnome-keyring
 media-sound/bitwig-studio -jack # prevents jack2
 www-client/palemoon -system-sqlite # fix: doesn't work without it
