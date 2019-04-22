@@ -312,7 +312,7 @@ case "$choice" in
 				sudo sed -i "s/^USE=.*/$useflags/" /etc/portage/make.conf
 			fi
 			cflags=$(curl -s $gitprefix/binhost_settings/etc/portage/make.conf | grep "^CFLAGS=\"-Ofast")
-			sudo sed -i "/CFLAGS=\"-O2 -pipe\"/\! s/^CFLAGS=.*/$cflags/" /etc/portage/make.conf
+			sudo sed -i "/CFLAGS=\"-O2 -pipe\"/! s/^CFLAGS=.*/$cflags/" /etc/portage/make.conf
 			sudo sed -i "s/-mssse3/-march=native/" /etc/portage/make.conf /etc/portage/package.env /etc/portage/env/*
 			if grep -qi "intel" /proc/cpuinfo; then
 				sudo sed -i "s/-march=native/-march=native -falign-functions=32/" /etc/portage/make.conf /etc/portage/package.env /etc/portage/env/*
