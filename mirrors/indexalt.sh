@@ -289,7 +289,7 @@ body {
 					<div class="dropdown-content" id="news">22-Apr-19
 Packages updated
 Kernel updated to 5.0.9
-pba patches for wine doesn't actually apply on 4.0+. wine-staging-9999 replaced with wine-staging-4.6
+pba patches for wine doesn'\''t actually apply on 4.0+. wine-staging-9999 replaced with wine-staging-4.6
 
 20-Apr-19
 Packages updated
