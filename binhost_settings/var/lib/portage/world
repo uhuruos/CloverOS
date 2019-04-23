@@ -116,7 +116,6 @@ app-emulation/virt-manager
 app-emulation/virtualbox
 app-emulation/virtualbox-additions
 app-emulation/virtualbox-guest-additions
-app-emulation/wine-staging
 app-emulation/winetricks
 app-emulation/xen
 app-eselect/eselect-repository

@@ -72,7 +72,7 @@ net-misc/spice-gtk
 #keyworded, remove when stable exists
 app-emulation/fs-uae
 virtual/wine
-app-emulation/wine-staging **
+app-emulation/wine-staging
 app-emulation/wine-mono # wine-staging
 app-eselect/eselect-wine # wine-staging
 x11-misc/cvt12
