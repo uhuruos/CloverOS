@@ -251,7 +251,6 @@ dev-db/dbeaver-bin
 dev-db/mariadb
 dev-db/postgresql
 dev-db/redis
-dev-db/rethinkdb
 dev-games/ogre
 dev-games/openscenegraph
 dev-haskell/haskell-platform

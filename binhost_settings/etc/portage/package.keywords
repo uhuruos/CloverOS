@@ -20,6 +20,7 @@ app-emulation/virtualbox # kernel 5.0
 app-emulation/virtualbox-guest-additions # virtualbox
 app-emulation/virtualbox-additions # virtualbox
 app-emulation/virtualbox-modules # virtualbox
+net-misc/youtube-dl # stable never works
 =media-libs/opencollada-1.6.63 # libpcre
 =dev-libs/libuv-1.27.0 # neovim
 net-libs/http-parser # nodejs
@@ -250,8 +251,6 @@ dev-libs/amdgpu-pro-opencl
 sci-biology/foldingathome
 app-arch/brotli
 net-vpn/zeronet
-dev-db/rethinkdb
-dev-libs/jemalloc # rethinkdb
 www-client/waterfox-bin
 net-p2p/go-ipfs-bin
 media-sound/beets
