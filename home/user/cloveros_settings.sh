@@ -87,14 +87,14 @@ case "$choice" in
 		sudo emerge -uvD --rebuilt-binaries=n @world
 		sudo emerge --depclean || sudo emerge -1O rhash m2crypto virtual/perl-ExtUtils-MakeMaker virtual/perl-File-Spec perl-core/File-Path:0 virtual/perl-File-Path:0 sys-apps/texinfo:0 dev-perl/libintl-perl:0 dev-perl/XML-Parser:0 dev-perl/Unicode-EastAsianWidth:0 dev-perl/Text-Unidecode:0 && sudo emerge --depclean
 
+		echo "glib|qtgui|PyQt5|thunar" | xargs -I{} -d\| sudo sh -c 'PORTAGE_BINHOST="https://cloveros.ga/s/nodbus" FETCHCOMMAND_HTTPS="wget -O \"\${DISTDIR}/\${FILE}\" \"\${URI}\"" emerge -1uD {}' &> /dev/null; sudo emerge --depclean
+
 		kernel=$(uname -r)
 		if [[ ${kernel: -3} == "gnu" ]]; then
 			./cloveros_settings.sh l
 		else
 			./cloveros_settings.sh 4
 		fi
-
-		echo "glib|qtgui|PyQt5|thunar" | xargs -I{} -d\| sudo sh -c 'PORTAGE_BINHOST="https://cloveros.ga/s/nodbus" FETCHCOMMAND_HTTPS="wget -O \"\${DISTDIR}/\${FILE}\" \"\${URI}\"" emerge -1uD {}' &> /dev/null; sudo emerge --depclean
 
 		./cloveros_settings.sh 9
 
@@ -299,7 +299,7 @@ case "$choice" in
 		mkdir -p $portageworkdir/env/
 		wget $gitprefix/binhost_settings/etc/portage/{package.use,package.keywords,package.env,package.mask,package.unmask} -P $portageworkdir/
 		wget $gitprefix/binhost_settings/etc/portage/env/{no-lto,no-lto-graphite,no-lto-graphite-ofast,no-lto-o3,no-lto-ofast,no-ofast,no-gold,no-mfpmath,size,gold,no-gnu2,no-hashgnu} -P $portageworkdir/env/
-		if [[ $(find $portageworkdir -type f | wc -l) == "18" ]]; then
+		if [[ $(find $portageworkdir -type f | wc -l) == "17" ]]; then
 			backupportagedir=backupportage$(< /dev/urandom tr -dc 0-9 | head -c 8)
 			mkdir $backupportagedir/
 			sudo mv /etc/portage/package.use /etc/portage/package.mask /etc/portage/package.keywords /etc/portage/package.env /etc/portage/package.unmask /etc/portage/env/ $backupportagedir/
