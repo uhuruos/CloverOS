@@ -660,7 +660,7 @@ sudo binutils-config --linker ld.bfd
 sudo genkernel --kernel-config=config-arch-64 all
 sudo emerge -b @module-rebuild
 sudo binutils-config --linker ld.gold
-sudo GRUB_CMDLINE_LINUX_DEFAULT="pti=off ibrs=off retp=off ibpb=off spectre_v2=off l1tf=off nospec_store_bypass_disable no_stf_barrier" grub-mkconfig -o /boot/grub/grub.cfg
+sudo GRUB_CMDLINE_LINUX_DEFAULT="kpti=0 l1tf=off pti=off spectre_v2=off spectre_v2_user=off spec_store_bypass_disable=off ssbd=force-off" grub-mkconfig -o /boot/grub/grub.cfg
 ```
 
 Remove the above GRUB_CMDLINE_LINUX_DEFAULT="" var if security is important.
