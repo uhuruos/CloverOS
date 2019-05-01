@@ -172,7 +172,7 @@ net-im/qtox X
 dev-util/plan9port X
 net-misc/freerdp X
 app-editors/xemacs X
-www-client/w3m X imlib gpm
+www-client/w3m X imlib
 net-p2p/amule X geoip stats
 media-libs/imlib2 X bzip2 jpeg zlib mp3 tiff
 app-editors/emacs X gtk toolkit-scroll-bars xft sound games alsa libxml2 dynamic-loading gsettings
