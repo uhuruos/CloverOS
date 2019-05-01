@@ -69,11 +69,12 @@ app-editors/xemacs
 www-client/elinks
 net-ftp/proftpd
 net-misc/spice-gtk
+net-misc/megatools::jm-overlay
 
 #keyworded, remove when stable exists
 app-emulation/fs-uae
-virtual/wine
 app-emulation/wine-staging
+virtual/wine # wine-staging
 app-emulation/wine-mono # wine-staging
 app-eselect/eselect-wine # wine-staging
 x11-misc/cvt12
@@ -119,7 +120,6 @@ media-gfx/displaycal
 dev-util/trace-cmd
 www-client/google-chrome-unstable
 games-fps/ezquake-bin
-net-misc/megatools::jm-overlay
 sys-auth/pam_yubico
 sys-auth/ykclient # pam_yubico
 app-admin/keepassxc

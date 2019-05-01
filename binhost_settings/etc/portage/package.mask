@@ -44,8 +44,10 @@
 
 net-libs/nodejs::gentoo # libressl
 dev-qt/qtnetwork::gentoo # libressl
+
 x11-libs/vte:2.91::gentoo # ::eroen, x11-terms/termite
 virtual/wine::gentoo # bobwya
+app-emulation/wine-staging::gentoo # bobwya
 
 >dev-lang/tk-8.6 # fixes build
 >dev-lang/tcl-8.6 # fixes build

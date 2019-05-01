@@ -1,5 +1,5 @@
-virtual/wine staging
 app-emulation/wine-staging -custom-cflags vkd3d esync
+virtual/wine staging
 app-emulation/xen -custom-cflags
 app-emulation/xen-tools -custom-cflags
 sys-boot/syslinux -custom-cflags
