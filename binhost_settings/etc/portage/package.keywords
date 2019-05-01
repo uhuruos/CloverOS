@@ -565,6 +565,7 @@ x11-wm/wmfs
 x11-wm/xoat **
 x11-wm/subtle
 x11-wm/wmii
+media-fonts/ibm-plex
 media-fonts/montecarlo
 media-fonts/fantasque-sans-mono
 media-fonts/fifth-leg
@@ -597,6 +598,28 @@ media-fonts/viga
 media-fonts/tewi-font
 media-fonts/gohufont
 media-fonts/fontawesome
+media-fonts/lohit-telugu
+media-fonts/iosevka
+media-fonts/lohit-nepali
+media-fonts/crosextrafonts-caladea
+media-fonts/inconsolata-lgc
+media-fonts/lohit-marathi
+media-fonts/lohit-bengali
+media-fonts/hkscs-ming
+media-fonts/lohit-assamese
+media-fonts/lohit-devanagari
+media-fonts/lohit-gujarati
+media-fonts/lohit-kannada
+media-fonts/lohit-gurmukhi
+media-fonts/lohit-malayalam
+media-fonts/crosextrafonts-carlito
+media-fonts/lohit-tamil-classical
+media-fonts/lohit-odia
+media-fonts/lohit-tamil
+media-fonts/jsmath-extra-light
+media-fonts/polarsys-b612-fonts
+media-fonts/solarize
+media-fonts/paratype-astra
 media-libs/vapoursynth
 media-libs/waifu2x-converter-cpp
 media-libs/l-smash **

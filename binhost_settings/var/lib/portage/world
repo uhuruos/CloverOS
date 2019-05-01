@@ -475,6 +475,7 @@ media-fonts/Humor-Sans
 media-fonts/ahem
 media-fonts/alee-fonts
 media-fonts/alegreya-sans
+media-fonts/alegreya-serif
 media-fonts/andika
 media-fonts/anonymous-pro
 media-fonts/aquafont
@@ -496,6 +497,8 @@ media-fonts/corefonts
 media-fonts/courier-prime
 media-fonts/cronyx-fonts
 media-fonts/croscorefonts
+media-fonts/crosextrafonts-caladea
+media-fonts/crosextrafonts-carlito
 media-fonts/culmus
 media-fonts/dejavu
 media-fonts/dina
@@ -511,6 +514,7 @@ media-fonts/fantasque-sans-mono
 media-fonts/farsi-fonts
 media-fonts/fgdc-emergency
 media-fonts/fifth-leg
+media-fonts/fira-code
 media-fonts/fira-mono
 media-fonts/fira-sans
 media-fonts/font-adobe-100dpi
@@ -556,14 +560,18 @@ media-fonts/freefont
 media-fonts/freefonts
 media-fonts/fs-fonts
 media-fonts/gidole
+media-fonts/glass-tty-vt220
 media-fonts/gohufont
 media-fonts/hack
 media-fonts/hermit
 media-fonts/heuristica
 media-fonts/hunkyfonts
+media-fonts/ibm-plex
 media-fonts/inconsolata
 media-fonts/inconsolata-hellenic
+media-fonts/inconsolata-lgc
 media-fonts/intlfonts
+media-fonts/iosevka
 media-fonts/ipaex
 media-fonts/ipamonafont
 media-fonts/ja-ipafonts
@@ -599,15 +607,20 @@ media-fonts/nanumfont
 media-fonts/nepali-fonts
 media-fonts/noto
 media-fonts/noto-cjk
+media-fonts/noto-emoji
 media-fonts/nunito
 media-fonts/nuosu-sil
 media-fonts/ohsnap
 media-fonts/oldstandard
 media-fonts/open-sans
+media-fonts/opendesktop-fonts
 media-fonts/oto
+media-fonts/oxygen-fonts
 media-fonts/paratype
+media-fonts/paratype-astra
 media-fonts/pcf2bdf
 media-fonts/pigiarniq
+media-fonts/polarsys-b612-fonts
 media-fonts/pothana2k
 media-fonts/powerline-symbols
 media-fonts/proggy-fonts
@@ -627,6 +640,7 @@ media-fonts/sil-ezra
 media-fonts/sil-galatia
 media-fonts/sil-gentium
 media-fonts/sil-padauk
+media-fonts/solarize
 media-fonts/sophia-nubian
 media-fonts/source-han-sans
 media-fonts/source-pro
@@ -641,6 +655,7 @@ media-fonts/tex-gyre
 media-fonts/texcm-ttf
 media-fonts/thaifonts-scalable
 media-fonts/tibetan-machine-font
+media-fonts/ttf-bitstream-vera
 media-fonts/ubuntu-font-family
 media-fonts/umeplus-fonts
 media-fonts/unfonts
@@ -656,6 +671,7 @@ media-fonts/vollkorn
 media-fonts/webby-fonts
 media-fonts/wqy-bitmapfont
 media-fonts/wqy-microhei
+media-fonts/wqy-unibit
 media-fonts/wqy-zenhei
 media-fonts/x11fonts-jmk
 media-fonts/zh-kcfonts
@@ -713,7 +729,6 @@ media-gfx/w3mimgfb
 media-gfx/xsane
 media-gfx/xzgv
 media-libs/alsa-oss
-media-libs/fontconfig-ultimate
 media-libs/glyr
 media-libs/vapoursynth
 media-libs/vips
@@ -1103,7 +1118,7 @@ sys-kernel/bliss-initramfs
 sys-kernel/dkms
 sys-kernel/dracut
 sys-kernel/genkernel
-sys-kernel/gentoo-sources:5.0.9
+sys-kernel/gentoo-sources:5.0.10
 sys-kernel/linux-firmware
 sys-power/acpi_call
 sys-power/acpitool
@@ -1491,6 +1506,7 @@ x11-wm/wmii
 x11-wm/xmonad
 x11-wm/xmonad-contrib
 x11-wm/xoat
+xfce-base/exo
 xfce-base/xfce4-meta
 xfce-extra/multiload-nandhp
 xfce-extra/thunar-archive-plugin
