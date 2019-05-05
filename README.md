@@ -137,7 +137,6 @@ to
 This disables the binhost and uses Portage's ebuilds for packages. Now you can emerge from source.
 
 ## FAQ
-
 ### Table of contents
 * [What is CloverOS?](#what-is-cloveros)
 * [How do I install systemd/avahi/pulseaudio?](#how-do-i-install-systemdavahipulseaudio)
@@ -236,7 +235,6 @@ or
 Kill X, `sudo rmmod -f nouveau vga16fb rivafb nvidiafb rivatv && sudo modprobe nvidia` and restart X
 
 ### Installing bumblebee for laptops
-
 This is for laptops that have both Intel GPU and Nvidia GPU with Optimus
 
 ```
@@ -621,7 +619,7 @@ XDG_RUNTIME_DIR=. weston-launch
 Yes. It's a pre-setup Gentoo image with `PORTAGE_BINHOST="https://cloveros.ga" emerge -G package` preset in /etc/portage/make.conf. It uses Gentoo for everything (versions, ebuilds, etc.) and gets packages from cloveros.ga instead of building
 
 ### How often is this updated?
-It's stable rolling release (Gentoo Stable). It's updated about once a week: http://twitter.com/cloveros_ga
+It's stable rolling release (Gentoo Stable). The binaries reflect current Portage (amd64) about once a week: http://twitter.com/cloveros_ga
 
 ### Does everything build with CFLAGS="-Ofast -mssse3 -mfpmath=both -pipe -funroll-loops -flto=8 -floop-block -floop-interchange -floop-strip-mine -ftree-loop-distribution -fgraphite-identity -floop-nest-optimize -malign-data=cacheline -mtls-dialect=gnu2 -Wl,--hash-style=gnu" ?
 These are all the packages that don't build with the full CFLAGS: https://gitgud.io/cloveros/cloveros/blob/master/binhost_settings/etc/portage/package.env
@@ -673,7 +671,7 @@ Certain packages may be from an overlay. To install, add overlays:
 ```
 sudo emerge eselect-repository
 sudo mkdir /etc/portage/repos.conf
-sudo eselect repository enable 0x4d4c 4nykey abendbrot audio-overlay bobwya brother-overlay calculate cloveros-overlay deadbeef-overlay dotnet elementary erayd eroen farmboy0 fkmclane flatpak-overlay gamerlay genthree haarp jacendi-overlay jm-overlay jorgicio lanodanOverlay libressl linxon lua luke-jr mv pg_overlay poly-c raiagent rasdark science seden sk-overlay ssnb steam-overlay stefantalpalaru tlp torbrowser vampire vapoursynth vifino-overlay
+sudo eselect repository enable $(grep -Po "(?<=\*/\*::).*" /etc/portage/package.mask | tr "\n" " ")
 sudo emerge --sync
 ```
 
