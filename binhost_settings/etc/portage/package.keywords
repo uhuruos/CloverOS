@@ -36,7 +36,7 @@ x11-themes/sddm-gentoo-black-theme ** # fixes build
 x11-themes/terminology-themes ** # fixes build
 media-plugins/vapoursynth-d2vsource ** # fixes build
 media-fonts/vlgothic # old
-app-emulation/winetricks # old
+app-emulation/winetricks ** # old
 games-emulation/dolphin ** # old
 games-emulation/pcsx2 ** # old
 games-emulation/ppsspp ** # old
@@ -328,6 +328,7 @@ gui-wm/sway
 gui-apps/swaylock # sway
 gui-libs/wlroots # sway
 gui-apps/swayidle # sway
+gui-apps/swaybg # sway
 app-text/scdoc # sway
 x11-terms/lilyterm
 games-emulation/vgba

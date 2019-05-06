@@ -5,6 +5,7 @@
 */*::bobwya
 */*::brother-overlay
 */*::calculate
+*/*::chaoslab
 */*::cloveros-overlay
 */*::deadbeef-overlay
 */*::dotnet
@@ -26,7 +27,7 @@
 */*::lua
 */*::luke-jr
 */*::mv
-*/*::pg_overlay
+*/*::pixlra
 */*::poly-c
 */*::raiagent
 */*::rasdark

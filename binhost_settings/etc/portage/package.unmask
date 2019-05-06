@@ -1,10 +1,11 @@
-www-client/ungoogled-chromium::pg_overlay
+www-client/ungoogled-chromium::chaoslab
 
 sys-fs/exfat-nofuse::bobwya
 virtual/wine::bobwya
 app-emulation/wine-staging::bobwya
 app-eselect/eselect-wine::bobwya # wine-staging
 app-emulation/wine-desktop-common::bobwya # wine-staging
+app-emulation/wine-mono::bobwya # wine-staging
 
 games-fps/dhewm3::bobwya
 
@@ -13,7 +14,8 @@ x11-misc/synergy::vifino-overlay
 x11-misc/bumblebee::seden
 
 games-emulation/pcsx2::cloveros-overlay # pcsx2-9999::gentoo with added "src_configure() { local mycmakeargs=( -DDISABLE_ADVANCE_SIMD=ON ) }"
-games-emulation/rpcs3::cloveros-overlay # rpcs3-0.0.5::jm-overlay turned into git and added "src_configure() { local mycmakeargs=( -DUSE_NATIVE_INSTRUCTIONS=OFF ) }"
+games-emulation/rpcs3::cloveros-overlay # rpcs3-0.0.5::jm-overlay with added "src_configure() { local mycmakeargs=( -DUSE_NATIVE_INSTRUCTIONS=OFF ) }" and turned into git
+app-emulation/winetricks::cloveros-overlay # winetricks-9999::gentoo with removed RDEPEND="x11-misc/xdg-utils"
 mate-base/mate::cloveros-overlay # mate-1.22::gentoo with removed "extras? ( sys-apps/gnome-disk-utility:0 )"
 media-gfx/meh::cloveros-overlay # taken from media-gfx/meh::lanodanOverlay
 media-gfx/nip2::cloveros-overlay
