@@ -189,8 +189,10 @@ It's a default Gentoo install with a binary packages repo. I made it to make my 
 ### How do I install systemd/avahi/pulseaudio?
 Switch to source and then emerge
 
-### It hangs on boot in Virtualbox
-In Virtualbox 6.x, change Graphics Controller to VBoxSVGA. This fixes the "Setting system clock using the hardware clock [UTC] ..." hang.
+### It hangs on boot in VirtualBox
+In VirtualBox 6.x, change Graphics Controller to VBoxSVGA. This fixes the "Setting system clock using the hardware clock [UTC] ..." hang.
+
+![VirtualBox graphics adapters](https://i.imgur.com/pTtWptS.png)
 
 ### Nvidia card crashes on boot with a green screen
 /etc/modprobe.d/blacklist.conf:
