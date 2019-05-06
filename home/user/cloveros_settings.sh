@@ -386,11 +386,11 @@ case "$choice" in
 
 	n)
 		kernelversion=$(cut -d" " -f3 /proc/version | sed "s/-.*//")
-		kernelminorversion=$(sed "s/\.[^.]*$//" <<<$kernelversion)
+		kernelmajversion=$(sed "s/\.[^.]*$//" <<<$kernelversion)
 		echo Running the following:
 		echo 'sudo EMERGE_DEFAULT_OPTS="" emerge =gentoo-sources-'$kernelversion
 		echo 'sudo eselect kernel set linux-'$kernelversion'-gentoo'
-		echo "sudo wget https://raw.githubusercontent.com/damentz/liquorix-package/$kernelminorversion/linux-liquorix/debian/config/kernelarch-x86/config-arch-64 -O /usr/src/linux/.config"
+		echo "sudo wget https://raw.githubusercontent.com/damentz/liquorix-package/$kernelmajversion/linux-liquorix/debian/config/kernelarch-x86/config-arch-64 -O /usr/src/linux/.config"
 		echo "sudo emerge nvidia-drivers bumblebee"
 		echo "sudo depmod"
 		echo "sudo eselect opengl set nvidia"
@@ -399,7 +399,7 @@ case "$choice" in
 		sleep 2
 		sudo EMERGE_DEFAULT_OPTS="" emerge =gentoo-sources-$kernelversion
 		sudo eselect kernel set linux-$kernelversion-gentoo
-		sudo wget https://raw.githubusercontent.com/damentz/liquorix-package/$kernelminorversion/linux-liquorix/debian/config/kernelarch-x86/config-arch-64 -O /usr/src/linux/.config
+		sudo wget https://raw.githubusercontent.com/damentz/liquorix-package/$kernelmajversion/linux-liquorix/debian/config/kernelarch-x86/config-arch-64 -O /usr/src/linux/.config
 		sudo emerge nvidia-drivers bumblebee
 		sudo depmod
 		sudo eselect opengl set nvidia

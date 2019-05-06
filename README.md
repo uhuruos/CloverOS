@@ -219,10 +219,10 @@ sudo rmmod -f radeon && sudo modprobe amdgpu si_support=1
 ### Installing proprietary Nvidia drivers
 ```
 kernelversion=$(cut -d" " -f3 /proc/version | sed "s/-.*//")
-kernelminorversion=$(sed "s/\.[^.]*$//" <<<$kernelversion)
+kernelmajversion=$(sed "s/\.[^.]*$//" <<<$kernelversion)
 sudo EMERGE_DEFAULT_OPTS="" emerge \=gentoo-sources-$kernelversion
 sudo eselect kernel set linux-$kernelversion-gentoo
-sudo wget https://raw.githubusercontent.com/damentz/liquorix-package/$kernelminorversion/linux-liquorix/debian/config/kernelarch-x86/config-arch-64 -O /usr/src/linux/.config
+sudo wget https://raw.githubusercontent.com/damentz/liquorix-package/$kernelmajversion/linux-liquorix/debian/config/kernelarch-x86/config-arch-64 -O /usr/src/linux/.config
 sudo emerge nvidia-drivers
 sudo depmod
 sudo eselect opengl set nvidia
