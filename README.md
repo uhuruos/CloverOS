@@ -155,6 +155,7 @@ This disables the binhost and uses Portage's ebuilds for packages. Now you can e
 * [Change FVWM titlebar color](#change-fvwm-titlebar-color)
 * [KDE theme in qt5 programs without KDE](#kde-theme-in-qt5-programs-without-kde)
 * [Vertical tabs in Firefox 57+](#vertical-tabs-in-firefox-57)
+* [Firefox configuration hardening](#firefox-configuration-hardening)
 * [Enable tap to click on touchpads](#enable-tap-to-click-on-touchpads)
 * [Disable mouse acceleration](#disable-mouse-acceleration)
 * [Suspend when laptop lid is closed](#suspend-when-laptop-lid-is-closed)
@@ -362,6 +363,26 @@ https://addons.mozilla.org/en-US/firefox/addon/vertical-tabs-reloaded/
 ```
 
 ![Firefox](https://i.imgur.com/z6NaM5a.png)
+
+To have built-in tab list button available at all times:
+
+`~/.mozilla/firefox/*.default/chrome/userChrome.css`
+```
+#alltabs-button {
+    visibility: visible !important;
+}
+```
+
+### Firefox configuration hardening
+
+```
+wget https://raw.githubusercontent.com/pyllyukko/user.js/master/user.js -P ~/.mozilla/firefox/*.default/
+sed -i "s@\(.*\"browser.pr.*\)@//\1@; s@\(.*\"privacy.sanitize.s.*\)@//\1@; s@\(.*\"privacy.clearOnShutdown.s.*\)@//\1@; s@\(.*\"signon.r.*\)@//\1@" /home/user/.mozilla/firefox/*.default/user.js # if you require passwords/sessions to work
+```
+
+More information here: https://github.com/pyllyukko/user.js/
+
+![Firefox user.js](https://i.imgur.com/3jopDjI.png)
 
 ### Enable tap to click on touchpads
 `xinput set-prop "SynPS/2 Synaptics TouchPad" "libinput Tapping Enabled" 1`
