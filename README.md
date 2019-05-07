@@ -147,13 +147,13 @@ This disables the binhost and uses Portage's ebuilds for packages. Now you can e
 * [Installing bumblebee for laptops](#installing-bumblebee-for-laptops)
 * [Installing VirtualBox](#installing-virtualbox)
 * [Steam stops working](#steam-stops-working)
-* [Firefox and Pulseaudio](#firefox-and-pulseaudio)
 * [What are USE flags?](#what-are-use-flags)
 * [What are keywording and unmasking?](#what-are-keywording-and-unmasking)
 * [Emerge error relating to openssl](#emerge-error-relating-to-openssl-fix-opengl-34-not-working)
 * [GPU passthrough example](#gpu-passthrough-example)
 * [Change FVWM titlebar color](#change-fvwm-titlebar-color)
 * [KDE theme in qt5 programs without KDE](#kde-theme-in-qt5-programs-without-kde)
+* [Firefox and Pulseaudio](#firefox-and-pulseaudio)
 * [Vertical tabs in Firefox 57+](#vertical-tabs-in-firefox-57)
 * [Firefox configuration hardening](#firefox-configuration-hardening)
 * [Enable tap to click on touchpads](#enable-tap-to-click-on-touchpads)
@@ -260,9 +260,6 @@ Reboot if your kernel isn't up to date.
 ### Steam stops working
 Start steam with `rm -R ~/.steam/ && steam &`
 
-### Firefox and Pulseaudio
-Firefox 57+ still works with ALSA. If this changes, it will be built with apulse.
-
 ### What are USE flags?
 `/etc/portage/package.use` generally determines what your Gentoo install will look like. The first thing new Gentoo users should do is read the USE flags for their packages.
 
@@ -342,6 +339,9 @@ QT_QPA_PLATFORMTHEME="qt5ct" your_program
 Open qt5ct and switch the style and the icon theme to Breeze.
 
 ![Breeze theme](https://i.imgur.com/WZLQTV0.png)
+
+### Firefox and Pulseaudio
+Firefox 57+ still works with ALSA. If this changes, it will be built with apulse.
 
 ### Vertical tabs in Firefox 57+
 https://addons.mozilla.org/en-US/firefox/addon/vertical-tabs-reloaded/
