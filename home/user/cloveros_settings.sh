@@ -162,7 +162,7 @@ case "$choice" in
 		;;
 
 	7)
-
+		sudo date +%s -s @"$(curl -s http://www.4webhelp.net/us/timestamp.php | grep -oP '(?<=p" value=").*(?=" s)')";
 		echo -e "\nTime set."
 		;;
 
