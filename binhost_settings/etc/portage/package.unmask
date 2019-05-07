@@ -104,6 +104,7 @@ net-im/telegram-cli::jorgicio
 sys-process/gtop::jorgicio
 media-video/shotcut::jorgicio
 net-im/corebird::jorgicio
+x11-misc/clipit::jorgicio
 
 games-util/steam-launcher::steam-overlay
 
@@ -138,6 +139,7 @@ media-plugins/deadbeef-soxr::deadbeef-overlay
 
 media-tv/plex-media-server::fkmclane
 x11-misc/lemonbar::fkmclane
+x11-misc/clipster::fkmclane
 
 net-vpn/zeronet::raiagent
 

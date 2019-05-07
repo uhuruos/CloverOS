@@ -72,6 +72,11 @@ net-misc/spice-gtk
 net-misc/megatools::jm-overlay
 
 #keyworded, remove when stable exists
+x11-misc/gpaste
+x11-misc/clipit
+x11-apps/copyq
+x11-misc/clipster
+games-emulation/libretro-dosbox
 app-emulation/fs-uae
 app-emulation/wine-staging
 virtual/wine # wine-staging

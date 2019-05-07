@@ -355,6 +355,7 @@ games-emulation/gngb
 games-emulation/gngeo
 games-emulation/hatari
 games-emulation/higan
+games-emulation/libretro-dosbox
 games-emulation/lxdream
 games-emulation/mednafen
 games-emulation/mednaffe
@@ -1172,9 +1173,11 @@ www-servers/onionshare
 www-servers/thttpd
 www-servers/tomcat
 www-servers/varnish
+x11-apps/copyq
 x11-apps/igt-gpu-tools
 x11-apps/mesa-progs
 x11-apps/xbacklight
+x11-apps/xclipboard
 x11-apps/xev
 x11-apps/xhost
 x11-apps/xinput
@@ -1191,12 +1194,14 @@ x11-drivers/xf86-video-sis671
 x11-misc/arandr
 x11-misc/autocutsel
 x11-misc/bumblebee
+x11-misc/clipster
 x11-misc/compton
 x11-misc/cvt12
 x11-misc/dmenu
 x11-misc/enlightenment-extra
 x11-misc/fbdesk
 x11-misc/fbpanel
+x11-misc/gpaste
 x11-misc/grabc
 x11-misc/hsetroot
 x11-misc/i3blocks-gaps
@@ -1215,6 +1220,7 @@ x11-misc/parcellite
 x11-misc/pcmanfm
 x11-misc/polybar
 x11-misc/primus
+x11-misc/qlipper
 x11-misc/qt5ct
 x11-misc/redshift
 x11-misc/rofi
