@@ -377,7 +377,7 @@ To have built-in tab list button available at all times:
 
 ```
 wget https://raw.githubusercontent.com/pyllyukko/user.js/master/user.js -P ~/.mozilla/firefox/*.default/
-sed -i "s@\(.*\"browser.pr.*\)@//\1@; s@\(.*\"privacy.sanitize.s.*\)@//\1@; s@\(.*\"privacy.clearOnShutdown.s.*\)@//\1@; s@\(.*\"signon.r.*\)@//\1@" /home/user/.mozilla/firefox/*.default/user.js # if you require passwords/sessions to work
+sed -i "s@\(.*\"browser.pr.*\)@//\1@; s@\(.*\"privacy.sanitize.s.*\)@//\1@; s@\(.*\"privacy.clearOnShutdown.s.*\)@//\1@; s@\(.*\"signon.r.*\)@//\1@; s@\(.*\"cl.*\)@//\1@" /home/user/.mozilla/firefox/*.default/user.js # if you require passwords/sessions/clipboard to work
 ```
 
 More information here: https://github.com/pyllyukko/user.js/
