@@ -286,7 +286,12 @@ body {
 			<ul>
 				<div class="dropdown">
 					<a href="https://twitter.com/cloveros_ga"><li>News</li></a>
-					<div class="dropdown-content" id="news">07-May-19
+					<div class="dropdown-content" id="news">08-May-19 Packages updated
+Kernel updated to 5.0.13
+New ISO: https://cloveros.ga/s/CloverOS-x86_64-20190508.iso
+Package updates: www-client/firefox-66.0.5 sys-devel/gcc-9.1.0 app-emulation/wine-staging-4.7
+
+07-May-19
 Packages updated
 www-client/firefox updated to 66.0.4
 

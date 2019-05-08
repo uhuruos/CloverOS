@@ -18,6 +18,7 @@ games-emulation/rpcs3::cloveros-overlay # rpcs3-0.0.5::jm-overlay with added "sr
 app-emulation/winetricks::cloveros-overlay # winetricks-9999::gentoo with removed RDEPEND="x11-misc/xdg-utils"
 mate-base/mate::cloveros-overlay # mate-1.22::gentoo with removed "extras? ( sys-apps/gnome-disk-utility:0 )"
 media-gfx/meh::cloveros-overlay # taken from media-gfx/meh::lanodanOverlay
+media-video/vidcutter::cloveros-overlay # media-video/vidcutter::jorgicio with removed RDEPEND=">=dev-python/PyQt5-5.7[dbus]"
 media-gfx/nip2::cloveros-overlay
 media-libs/vips::cloveros-overlay
 
@@ -89,7 +90,7 @@ net-irc/hexchat-otr::sk-overlay
 
 x11-misc/i3blocks-gaps::0x4d4c
 
-<app-laptop/tlp-9999::tlp
+app-laptop/tlp::tlp
 sys-power/linux-x86-power-tools::tlp
 
 games-fps/chocolate-doom::vampire
@@ -98,13 +99,14 @@ games-emulation/citra::vampire
 games-emulation/sdlmame::jorgicio
 media-gfx/flameshot::jorgicio
 media-video/flowblade::jorgicio
-media-video/vidcutter::jorgicio
 media-plugins/gimp-paint-studio::jorgicio
 net-im/telegram-cli::jorgicio
 sys-process/gtop::jorgicio
 media-video/shotcut::jorgicio
 net-im/corebird::jorgicio
 x11-misc/clipit::jorgicio
+media-fonts/emojione-color-font::jorgicio
+media-fonts/twemoji-color-font::jorgicio
 
 games-util/steam-launcher::steam-overlay
 

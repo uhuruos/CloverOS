@@ -508,6 +508,7 @@ media-fonts/dzongkha-fonts
 media-fonts/eb-garamond
 media-fonts/efont-unicode
 media-fonts/ekushey-bangla-fonts
+media-fonts/emojione-color-font
 media-fonts/encodings
 media-fonts/essays1743
 media-fonts/exljbris-free
@@ -657,6 +658,7 @@ media-fonts/texcm-ttf
 media-fonts/thaifonts-scalable
 media-fonts/tibetan-machine-font
 media-fonts/ttf-bitstream-vera
+media-fonts/twemoji-color-font
 media-fonts/ubuntu-font-family
 media-fonts/umeplus-fonts
 media-fonts/unfonts
@@ -1119,7 +1121,7 @@ sys-kernel/bliss-initramfs
 sys-kernel/dkms
 sys-kernel/dracut
 sys-kernel/genkernel
-sys-kernel/gentoo-sources:5.0.10
+sys-kernel/gentoo-sources:5.0.13
 sys-kernel/linux-firmware
 sys-power/acpi_call
 sys-power/acpitool
