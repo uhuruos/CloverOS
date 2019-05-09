@@ -67,7 +67,7 @@ if [ ! -d "nginx/" ] || [ ! -d "conf/" ]; then
 fi
 
 while :; do
-	if ! $(pidof nginx); then
+	if ! pidof nginx; then
 		nginx/objs/nginx -p $(pwd)/conf/ -c nginx.conf
 	fi
 	if [ $(($(date +%s -d "$(openssl x509 -enddate -noout -in conf/ssl/certificate.crt | sed s/notAfter=//)") - $(date +%s))) -lt "2592000" ]; then
