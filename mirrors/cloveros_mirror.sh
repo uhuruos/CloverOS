@@ -18,7 +18,6 @@ for domain in "$@"; do
 done
 domains="${domains%?}"
 if [ ! -d "nginx/" ] || [ ! -d "conf/" ]; then
-	echo "nginx build not found. building..."
 	if [ ! -f "/usr/bin/gcc" ] || [ ! -f "/usr/bin/make" ] || [ ! -f "/usr/bin/git" ] || [ ! -f "/usr/bin/wget" ] || [ ! -f "/usr/include/pcre.h" ] || [ ! -f "/usr/include/zlib.h" ] || [ ! -d "/usr/include/openssl/" ]; then
 		if [ -f "/usr/bin/dpkg" ]; then
 			apt update && apt -y install gcc make git libpcre3-dev libssl-dev zlib1g-dev
@@ -172,4 +171,4 @@ http {
 	echo "$config"
 }
 
-main
+main $@
