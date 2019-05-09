@@ -176,7 +176,7 @@ This disables the binhost and uses Portage's ebuilds for packages. Now you can e
 * [Things preventing CloverOS Libre from being 100% free software:](#things-preventing-cloveros-libre-from-being-100-free-software)
 * [Does CloverOS have binaries?](#does-cloveros-have-binaries)
 * [How often is this updated?](#how-often-is-this-updated)
-* [Does everything build with CFLAGS="-Ofast -mssse3 -mfpmath=both -pipe -funroll-loops -flto=8 -floop-block -floop-interchange -floop-strip-mine -ftree-loop-distribution -fgraphite-identity -floop-nest-optimize -malign-data=cacheline -mtls-dialect=gnu2 -Wl,--hash-style=gnu" ?](#does-everything-build-with-cflags-ofast-mssse3-mfpmathboth-pipe-funroll-loops-flto8-floop-block-floop-interchange-floop-strip-mine-ftree-loop-distribution-fgraphite-identity-floop-nest-optimize-malign-datacacheline-mtls-dialectgnu2-wl-hash-stylegnu-)
+* [Does everything build with CFLAGS="-Ofast -mssse3 -mfpmath=both -pipe -funroll-loops -flto=8 -fgraphite-identity -floop-nest-optimize -malign-data=cacheline -mtls-dialect=gnu2 -Wl,--hash-style=gnu")
 * [The default shell is bash but fvwm launches urxvt -e zsh?](#the-default-shell-is-bash-but-fvwm-launches-urxvt-e-zsh)
 * [Which DE does this come with?](#which-de-does-this-come-with)
 * [Installing a DE](#installing-a-de)
@@ -643,7 +643,7 @@ Yes. It's a pre-setup Gentoo image with `PORTAGE_BINHOST="https://cloveros.ga" e
 ### How often is this updated?
 It's stable rolling release (Gentoo Stable). The binaries reflect current Portage (amd64) about once a week: http://twitter.com/cloveros_ga
 
-### Does everything build with CFLAGS="-Ofast -mssse3 -mfpmath=both -pipe -funroll-loops -flto=8 -floop-block -floop-interchange -floop-strip-mine -ftree-loop-distribution -fgraphite-identity -floop-nest-optimize -malign-data=cacheline -mtls-dialect=gnu2 -Wl,--hash-style=gnu" ?
+### Does everything build with CFLAGS="-Ofast -mssse3 -mfpmath=both -pipe -funroll-loops -flto=8 -fgraphite-identity -floop-nest-optimize -malign-data=cacheline -mtls-dialect=gnu2 -Wl,--hash-style=gnu"
 These are all the packages that don't build with the full CFLAGS: https://gitgud.io/cloveros/cloveros/blob/master/binhost_settings/etc/portage/package.env
 
 ### The default shell is bash but fvwm launches urxvt -e zsh?
