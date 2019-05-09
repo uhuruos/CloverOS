@@ -71,7 +71,7 @@ while :; do
 	if ! $(pidof nginx); then
 		nginx/objs/nginx -p $(pwd)/conf/ -c nginx.conf
 	fi
-	if [ $(($(date -d "$(echo | openssl s_client -servername $1 -connect $1:443 2>/dev/null | openssl x509 -noout -enddate | sed \"s/notAfter=//\")" +%s) - $(date +%s)))" -lt "2592000" ]; then
+	if [ $(($(date +%s -d "$(openssl x509 -enddate -noout -in conf/ssl/certificate.crt | sed s/notAfter=//)") - $(date +%s))) -lt "2592000" ]; then
 		openssl req -new -sha256 -key conf/ssl/certificate.key -subj "/" -reqexts SAN -config <(cat /etc/ssl/openssl.cnf <(printf "[SAN]\nsubjectAltName=$domains")) > conf/ssl/certificate.csr
 		wget -qO - https://raw.githubusercontent.com/diafygi/acme-tiny/master/acme_tiny.py | python - --account-key conf/ssl/account.key --csr conf/ssl/certificate.csr --acme-dir /var/www/html/.well-known/acme-challenge/ > conf/ssl/certificate.crt
 		nginx/objs/nginx -p $(pwd)/conf/ -c nginx.conf -s reload
