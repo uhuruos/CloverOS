@@ -1,3 +1,4 @@
+main() {
 if [ $(id -u) != "0" ]; then
 	echo "This script must be run as root" 1>&2
 	exit 1
@@ -15,7 +16,7 @@ fi
 for domain in "$@"; do
 	domains+="DNS:$domain,"
 done
-domains=${domains%?}
+domains="${domains%?}"
 if [ ! -d "nginx/" ] || [ ! -d "conf/" ]; then
 	echo "nginx build not found. building..."
 	if [ ! -f "/usr/bin/gcc" ] || [ ! -f "/usr/bin/make" ] || [ ! -f "/usr/bin/git" ] || [ ! -f "/usr/bin/wget" ] || [ ! -f "/usr/include/pcre.h" ] || [ ! -f "/usr/include/zlib.h" ] || [ ! -d "/usr/include/openssl/" ]; then
@@ -39,7 +40,7 @@ if [ ! -d "nginx/" ] || [ ! -d "conf/" ]; then
 	make -j8
 	cp -R conf ..
 	cd ..
-	wget https://gitgud.io/cloveros/cloveros/raw/master/mirrors/nginxtemplate.conf -O conf/nginx.conf
+	echo "$(nginxconfigtemplatefn)" > conf/nginx.conf
 	openssl dhparam -out conf/dhparam.pem 4096
 	mkdir conf/ssl/
 	mkdir conf/logs/
@@ -52,15 +53,15 @@ if [ ! -d "nginx/" ] || [ ! -d "conf/" ]; then
 	wget -qO - https://raw.githubusercontent.com/diafygi/acme-tiny/master/acme_tiny.py | python - --account-key conf/ssl/account.key --csr conf/ssl/certificate.csr --acme-dir /var/www/html/.well-known/acme-challenge/ > conf/ssl/certificate.crt
 	pkill nginx
 	sed -ri "s/#(ssl_certificate.*;)/\1/; s/#(listen 443 ssl http2;)/\1/" conf/nginx.conf
-	sed -i 's@^}$@\
-	server {\
-		server_name '"$1"';\
-		listen 443 ssl http2;\
-		add_header Strict-Transport-Security "max-age=31536000; includeSubDomains; preload";\
-		add_header X-Content-Type-Options nosniff;\
-		root /var/www/html/cloveros.ga/;\
-	}\
-}@' conf/nginx.conf
+	sed -i "s@^}\$@\n\
+	server {\n\
+		server_name \"$1\";\n\
+		listen 443 ssl http2;\n\
+		add_header Strict-Transport-Security \"max-age=31536000; includeSubDomains; preload\";\n\
+		add_header X-Content-Type-Options nosniff;\n\
+		root /var/www/html/cloveros.ga/;\n\
+	}\n\
+}@" conf/nginx.conf
 	mkdir /var/www/html/cloveros.ga/
 	sleep 1
 	nginx/objs/nginx -p $(pwd)/conf/ -c nginx.conf
@@ -78,3 +79,97 @@ while :; do
 	rsync -a --delete rsync://nl.cloveros.ga/cloveros /var/www/html/cloveros.ga/;
 	sleep 600
 done
+}
+
+nginxconfigtemplatefn() {
+	local config='
+user www-data;
+worker_processes auto;
+
+events {
+	worker_connections 8096;
+	use epoll;
+	multi_accept on;
+}
+
+http {
+	default_type application/octet-stream;
+	include mime.types;
+	client_max_body_size 9999m;
+	charset utf-8;
+	index index.php index.html index.htm;
+	autoindex off;
+	autoindex_exact_size off;
+	if_modified_since before;
+	server_tokens off;
+	access_log off;
+
+	ssl_certificate ssl/certificate.crt;
+	ssl_certificate_key ssl/certificate.key;
+	ssl_dhparam dhparam.pem;
+	ssl_protocols TLSv1.2 TLSv1.3;
+	ssl_prefer_server_ciphers on;
+	ssl_ciphers ECDHE-RSA-AES256-GCM-SHA512:DHE-RSA-AES256-GCM-SHA512:ECDHE-RSA-AES256-GCM-SHA384:DHE-RSA-AES256-GCM-SHA384:ECDHE-RSA-AES256-SHA384:ECDHE-RSA-AES256-SHA:DHE-RSA-AES256-SHA;
+	ssl_ecdh_curve secp384r1;
+	ssl_session_timeout 10m;
+	ssl_session_cache shared:SSL:10m;
+	ssl_session_tickets off;
+	ssl_stapling on;
+	ssl_stapling_verify on;
+	resolver 128.52.130.209 52.174.55.168 valid=300s;
+	resolver_timeout 5s;
+	add_header Strict-Transport-Security "max-age=63072000; includeSubDomains; preload";
+	add_header X-Content-Type-Options nosniff;
+
+	sendfile on;
+	aio threads;
+	directio 512;
+	tcp_nopush on;
+	tcp_nodelay on;
+
+	ssl_buffer_size 4k;
+	keepalive_timeout 65;
+	keepalive_requests 100000;
+	client_body_buffer_size 128k;
+	client_header_buffer_size 1k;
+	large_client_header_buffers  4 4k;
+	output_buffers 1 32k;
+	postpone_output 0;
+
+	brotli on;
+	brotli_types text/richtext text/plain text/css text/x-script text/x-component text/x-java-source application/javascript application/x-javascript text/javascript text/js image/x-icon application/x-perl application/x-httpd-cgi text/xml application/xml application/xml+rss application/json multipart/bag multipart/mixed application/xhtml+xml font/ttf font/otf font/x-woff image/svg+xml application/vnd.ms-fontobject application/ttf application/x-ttf application/otf application/x-otf application/truetype application/opentype application/x-opentype application/woff application/eot application/font application/font-woff application/font-sfnt application/atom+xml application/rss+xml application/x-font-ttf application/x-web-app-manifest+json font/opentype image/bmp;
+	gzip on;
+	gzip_proxied any;
+	gzip_types text/richtext text/plain text/css text/x-script text/x-component text/x-java-source application/javascript application/x-javascript text/javascript text/js image/x-icon application/x-perl application/x-httpd-cgi text/xml application/xml application/xml+rss application/json multipart/bag multipart/mixed application/xhtml+xml font/ttf font/otf font/x-woff image/svg+xml application/vnd.ms-fontobject application/ttf application/x-ttf application/otf application/x-otf application/truetype application/opentype application/x-opentype application/woff application/eot application/font application/font-woff application/font-sfnt application/atom+xml application/rss+xml application/x-font-ttf application/x-web-app-manifest+json font/opentype image/bmp;
+
+#	open_file_cache inactive=5s max=1000;
+#	open_file_cache_valid 5s;
+
+#	fastcgi_cache_path /dev/shm/phpcache levels=1:2 keys_zone=phpcache:100m;
+#	fastcgi_cache_key "$scheme$request_method$host$request_uri";
+
+#	limit_conn_zone $binary_remote_addr zone=addr:10m;
+
+	server {
+		location /.well-known/acme-challenge/ {
+			root /var/www/html/;
+		}
+		location / {
+			return 301 https://$host$request_uri;
+		}
+	}
+
+	server {
+		listen 443 ssl http2;
+		root /var/www/html/;
+		add_header Strict-Transport-Security "max-age=31536000; includeSubDomains; preload";
+		add_header X-Content-Type-Options nosniff;
+	}
+}
+'
+	config="${config:1}"
+	config="${config%?}"
+	echo "$config"
+}
+
+main
