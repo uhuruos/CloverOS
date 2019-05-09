@@ -52,7 +52,7 @@ if [ ! -d "nginx/" ] || [ ! -d "conf/" ]; then
 	wget -qO - https://raw.githubusercontent.com/diafygi/acme-tiny/master/acme_tiny.py | python - --account-key conf/ssl/account.key --csr conf/ssl/certificate.csr --acme-dir /var/www/html/.well-known/acme-challenge/ > conf/ssl/certificate.crt
 	pkill nginx
 	sed -ri "s/#(ssl_certificate.*;)/\1/; s/#(listen 443 ssl http2;)/\1/" conf/nginx.conf
-	sed -i "s@^}\$@\n\
+	sed -i "$ s@}@\n\
 	server {\n\
 		server_name \"$1\";\n\
 		listen 443 ssl http2;\n\
