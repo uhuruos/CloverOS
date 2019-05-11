@@ -1,4 +1,4 @@
-gcc -Ofast -march=native -mfpmath=both -funroll-loops -floop-block -floop-interchange -floop-strip-mine -ftree-loop-distribution -fgraphite-identity -floop-nest-optimize -malign-data=cacheline -mtls-dialect=gnu2 -o /tmp/stats -xc - <<HEREDOC && exec /tmp/stats
+gcc -Ofast -march=native -mfpmath=both -funroll-loops -fgraphite-identity -floop-nest-optimize -malign-data=cacheline -mtls-dialect=gnu2 -o /tmp/stats -xc - <<HEREDOC && exec /tmp/stats
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>

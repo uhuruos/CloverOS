@@ -22,7 +22,7 @@ fi
 
 emerge --sync
 layman -S
-emerge -uavDNb --exclude=gentoo-sources @world
+emerge -uavDNb @world
 emerge --exclude=palemoon -b1 $(find /var/db/pkg/ -mindepth 2 -maxdepth 2 -name \*-9999\* | awk -F \/ '{printf "=%s/%s ", $5, $6}')
 emerge -b @preserved-rebuild
 emerge --depclean
