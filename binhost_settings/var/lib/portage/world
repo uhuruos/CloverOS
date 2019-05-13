@@ -465,6 +465,7 @@ lxde-base/lxterminal
 lxqt-base/lxqt-meta
 mail-client/alpine
 mail-client/mutt
+mail-client/neomutt
 mail-client/thunderbird
 mate-base/mate
 mate-extra/caja-extensions
@@ -1121,7 +1122,7 @@ sys-kernel/bliss-initramfs
 sys-kernel/dkms
 sys-kernel/dracut
 sys-kernel/genkernel
-sys-kernel/gentoo-sources:5.0.14
+sys-kernel/gentoo-sources:5.0.15
 sys-kernel/linux-firmware
 sys-power/acpi_call
 sys-power/acpitool
