@@ -465,6 +465,7 @@ lxde-base/lxterminal
 lxqt-base/lxqt-meta
 mail-client/alpine
 mail-client/mutt
+mail-client/neomutt
 mail-client/thunderbird
 mate-base/mate
 mate-extra/caja-extensions
