@@ -159,6 +159,7 @@ app-misc/icdiff
 app-misc/mc
 app-misc/neofetch
 app-misc/nnn
+app-misc/powerline
 app-misc/radeontop
 app-misc/ranger
 app-misc/recoll
@@ -266,7 +267,6 @@ dev-lang/rust
 dev-lang/scala
 dev-lang/tcc
 dev-libs/amdgpu-pro-opencl
-dev-libs/beignet
 dev-libs/input-pad
 dev-libs/libisoburn
 dev-libs/weston
@@ -1122,7 +1122,7 @@ sys-kernel/bliss-initramfs
 sys-kernel/dkms
 sys-kernel/dracut
 sys-kernel/genkernel
-sys-kernel/gentoo-sources:5.0.15
+sys-kernel/gentoo-sources:5.0.14
 sys-kernel/linux-firmware
 sys-power/acpi_call
 sys-power/acpitool
@@ -1168,7 +1168,6 @@ www-misc/urlwatch
 www-plugins/adobe-flash
 www-plugins/chrome-binary-plugins
 www-plugins/freshplayerplugin
-www-plugins/lightspark
 www-servers/apache
 www-servers/lighttpd
 www-servers/nginx

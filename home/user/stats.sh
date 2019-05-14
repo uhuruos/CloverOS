@@ -158,8 +158,8 @@ void main(void) {
 			strcpy(temperature, "N/A");
 		}
 
-		sprintf(buffer, "%ld", (time_t)time(NULL));
 		char volume[5];
+		sprintf(buffer, "%ld", (time_t)time(NULL));
 		if (atoll(buffer)%60 == 0 || volume[0] == '\0') {
 			char soundfilename[50];
 			sprintf(soundfilename, "%s%s%s", "/home/", getenv("USER"), "/.asoundrc");

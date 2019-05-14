@@ -144,6 +144,7 @@ x11-misc/lemonbar::fkmclane
 x11-misc/clipster::fkmclane
 
 net-vpn/zeronet::raiagent
+app-misc/powerline::raiagent
 
 pantheon-base/plank::elementary
 x11-themes/plank-theme-pantheon::elementary

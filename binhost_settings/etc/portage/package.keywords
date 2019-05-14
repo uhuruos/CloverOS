@@ -21,9 +21,14 @@ app-emulation/virtualbox-guest-additions # virtualbox
 app-emulation/virtualbox-additions # virtualbox
 app-emulation/virtualbox-modules # virtualbox
 net-misc/youtube-dl # stable never works
+xfce-base/xfdesktop # remove dbus requirement for thunar
+xfce-base/thunar # xfdesktop
+xfce-extra/thunar-shares-plugin # xfdesktop
+xfce-extra/thunar-vcs-plugin # xfdesktop
+xfce-extra/thunar-media-tags-plugin # xfdesktop
+xfce-extra/thunar-archive-plugin # xfdesktop
 =media-libs/opencollada-1.6.63 # libpcre
 =dev-libs/libuv-1.27.0 # neovim
-net-libs/http-parser # nodejs
 media-plugins/gst-plugins-libav # ffmpeg
 media-libs/zimg # vapoursynth
 dev-lisp/clisp # fixes build
@@ -47,31 +52,21 @@ media-gfx/gimp # old
 media-libs/gegl # gimp
 media-gfx/mypaint-brushes # gimp
 media-libs/babl # gimp
-=sys-devel/llvm-7.0.1 # firefox, rpcs3, rust
-=sys-devel/llvmgold-7.0.1 # llvm
-=sys-devel/llvm-common-7.0.1 # llvm
-=sys-devel/clang-common-7.0.1 # llvm
-=sys-devel/clang-runtime-7.0.1 # llvm
-=sys-devel/clang-7.0.1 # llvm
-=sys-libs/compiler-rt-7.0.1 # llvm
-=sys-libs/compiler-rt-sanitizers-7.0.1 # llvm
-=sys-devel/lld-7.0.1 # llvm
-=sys-libs/libomp-7.0.1 # llvm
-=dev-util/lldb-7.0.1
-dev-libs/beignet ** # llvm
-www-plugins/lightspark ** # llvm
+#dev-libs/beignet # llvm
+www-plugins/lightspark # llvm
 
-#libressl
+#libressl, remove when stable supports libressl
 <net-libs/nodejs-10::libressl
+net-libs/http-parser # nodejs
 <dev-qt/qtnetwork-5.12::libressl
 www-client/dillo
 app-editors/xemacs
 www-client/elinks
-net-ftp/proftpd
-net-misc/spice-gtk
 net-misc/megatools::jm-overlay
 
 #keyworded, remove when stable exists
+=dev-util/lldb-7.1.0
+app-misc/powerline
 media-video/vidcutter **
 x11-misc/gpaste
 x11-misc/clipit
@@ -286,6 +281,7 @@ games-util/grfcodec # openttd
 games-util/nml # openttd
 games-arcade/blobby
 games-action/supertuxkart
+dev-libs/angelscript # supertuxkart
 games-board/xboard
 games-strategy/freeciv
 games-fps/avp
