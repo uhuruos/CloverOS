@@ -26,6 +26,7 @@ k) Delete all kernels except for $(uname -r)
 t) Enable tap to click on touchpad
 d) Disable mouse acceleration
 c) Update Portage config from binhost
+o) Update overlays config from binhost
 m) Revert to default /etc/portage/make.conf
 b) Install Bluetooth manager
 i) Install VirtualBox
@@ -323,6 +324,16 @@ case "$choice" in
 			echo -e "\nCould not retrieve file. Please connect to the Internet or try again."
 		fi
 		rm -R $portageworkdir
+		;;
+
+	o)
+		overlays=$(curl -s $gitprefix/binhost_settings/etc/portage/package.mask | grep -Po "(?<=\*/\*::).*" | tr "\n" " ")
+		echo "Adding the following overlays: $overlays"
+		sleep 2
+		sudo emerge eselect-repository
+		sudo mkdir /etc/portage/repos.conf
+		sudo eselect repository enable "$overlays"
+		sudo emerge --sync
 		;;
 
 	m)
