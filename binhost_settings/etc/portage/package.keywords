@@ -1,3 +1,4 @@
+media-libs/mesa
 #preference
 sys-devel/gcc
 sys-kernel/gentoo-sources
@@ -52,8 +53,8 @@ media-gfx/gimp # old
 media-libs/gegl # gimp
 media-gfx/mypaint-brushes # gimp
 media-libs/babl # gimp
-#dev-libs/beignet # llvm
-www-plugins/lightspark # llvm
+dev-libs/beignet ** # llvm
+www-plugins/lightspark ** # llvm
 
 #libressl, remove when stable supports libressl
 <net-libs/nodejs-10::libressl
@@ -65,6 +66,8 @@ www-client/elinks
 net-misc/megatools::jm-overlay
 
 #keyworded, remove when stable exists
+app-misc/mat2
+net-misc/onioncircuits
 =dev-util/lldb-7.1.0
 app-misc/powerline
 media-video/vidcutter **
@@ -258,7 +261,6 @@ media-sound/beets
 dev-python/discogs-client # beets
 dev-python/jellyfish # beets
 dev-python/munkres # beets
-www-client/torbrowser-launcher
 games-action/extreme-tuxracer
 games-emulation/vbam
 games-util/lutris
