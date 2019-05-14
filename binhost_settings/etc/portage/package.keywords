@@ -1,7 +1,7 @@
-media-libs/mesa
 #preference
 sys-devel/gcc
 sys-kernel/gentoo-sources
+media-libs/mesa
 x11-libs/gtk+:3::mv # removes dbus
 www-client/firefox
 dev-libs/nss # firefox
@@ -49,10 +49,6 @@ games-emulation/ppsspp ** # old
 media-video/ffmpeg # old
 media-video/mpv # old
 media-libs/shaderc # mpv
-media-gfx/gimp # old
-media-libs/gegl # gimp
-media-gfx/mypaint-brushes # gimp
-media-libs/babl # gimp
 dev-libs/beignet ** # llvm
 www-plugins/lightspark ** # llvm
 
