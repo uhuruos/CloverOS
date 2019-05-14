@@ -333,7 +333,7 @@ case "$choice" in
 		sleep 2
 		sudo emerge eselect-repository
 		sudo mkdir /etc/portage/repos.conf
-		sudo xargs -I{} eselect repository enable {} <<< "$overlays"
+		sudo xargs -I{} eselect repository enable "{}" <<< "$overlays"
 		sudo emerge --sync
                 ;;
 
