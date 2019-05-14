@@ -693,7 +693,7 @@ Certain packages may be from an overlay. To install, add overlays:
 ```
 sudo emerge eselect-repository
 sudo mkdir /etc/portage/repos.conf
-sudo xargs -I{} eselect repository enable <<< $(grep -Po "(?<=\*/\*::).*" /etc/portage/package.mask)
+grep -Po "(?<=\*/\*::).*" /etc/portage/package.mask | sudo xargs eselect repository enable
 sudo emerge --sync
 ```
 
