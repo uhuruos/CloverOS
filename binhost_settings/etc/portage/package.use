@@ -222,7 +222,6 @@ net-ftp/lftp verify-file
 app-misc/recoll inotify
 sys-power/cpupower cpufreq_bench
 media-sound/ncmpcpp iconv unicode clock curl fftw outputs taglib visualizer
-sci-mathematics/maxima clisp gcl
 media-sound/mixxx shout aac ffmpeg hid mp3 mp4 wavpack
 app-office/texstudio video
 www-client/links fbcon gpm
