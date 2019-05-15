@@ -683,7 +683,6 @@ media-fonts/zh-kcfonts
 media-gfx/apngasm
 media-gfx/apngdis
 media-gfx/argyllcms
-media-gfx/blender
 media-gfx/cropgui
 media-gfx/digikam
 media-gfx/displaycal
@@ -1125,7 +1124,7 @@ sys-kernel/bliss-initramfs
 sys-kernel/dkms
 sys-kernel/dracut
 sys-kernel/genkernel
-sys-kernel/gentoo-sources:5.0.14
+sys-kernel/gentoo-sources:5.0.16
 sys-kernel/linux-firmware
 sys-power/acpi_call
 sys-power/acpitool
