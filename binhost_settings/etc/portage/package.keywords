@@ -6,10 +6,6 @@ x11-libs/gtk+:3::mv # removes dbus
 www-client/firefox
 dev-libs/nss # firefox
 dev-util/cbindgen # firefox
-<virtual/rust-1.34 # firefox
-<virtual/cargo-1.34 # firefox
-<dev-lang/rust-1.34 # firefox
-media-libs/libwebp # firefox
 media-libs/libvpx:0/5 # firefox
 media-libs/dav1d # firefox
 
@@ -21,13 +17,7 @@ app-emulation/virtualbox # kernel 5.0
 app-emulation/virtualbox-guest-additions # virtualbox
 app-emulation/virtualbox-additions # virtualbox
 app-emulation/virtualbox-modules # virtualbox
-net-misc/youtube-dl # stable never works
-xfce-base/xfdesktop # remove dbus requirement for thunar
-xfce-base/thunar # xfdesktop
-xfce-extra/thunar-shares-plugin # xfdesktop
-xfce-extra/thunar-vcs-plugin # xfdesktop
-xfce-extra/thunar-media-tags-plugin # xfdesktop
-xfce-extra/thunar-archive-plugin # xfdesktop
+net-misc/youtube-dl # stable always outdated/never works
 =media-libs/opencollada-1.6.63 # libpcre
 =dev-libs/libuv-1.27.0 # neovim
 media-plugins/gst-plugins-libav # ffmpeg
@@ -51,9 +41,16 @@ media-video/mpv # old
 media-libs/shaderc # mpv
 dev-libs/beignet ** # llvm
 www-plugins/lightspark ** # llvm
+xfce-base/xfdesktop # remove dbus requirement for thunar
+xfce-base/thunar # xfdesktop
+xfce-extra/thunar-shares-plugin # xfdesktop
+xfce-extra/thunar-vcs-plugin # xfdesktop
+xfce-extra/thunar-media-tags-plugin # xfdesktop
+xfce-extra/thunar-archive-plugin # xfdesktop
 
 #libressl, remove when stable supports libressl
-<net-libs/nodejs-10::libressl
+#<net-libs/nodejs-10::libressl
+net-libs/nodejs::libressl
 net-libs/http-parser # nodejs
 <dev-qt/qtnetwork-5.12::libressl
 www-client/dillo
