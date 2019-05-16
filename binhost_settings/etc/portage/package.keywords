@@ -49,8 +49,7 @@ xfce-extra/thunar-media-tags-plugin # xfdesktop
 xfce-extra/thunar-archive-plugin # xfdesktop
 
 #libressl, remove when stable supports libressl
-#<net-libs/nodejs-10::libressl
-net-libs/nodejs::libressl
+<net-libs/nodejs-10::libressl
 net-libs/http-parser # nodejs
 <dev-qt/qtnetwork-5.12::libressl
 www-client/dillo
