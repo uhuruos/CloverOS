@@ -1,4 +1,4 @@
-profile=opengl-hq
+profile=gpu-hq
 video-sync=display-resample
 dscale=bilinear
 sigmoid-slope=10.0
