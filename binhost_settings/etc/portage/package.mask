@@ -45,15 +45,11 @@
 
 net-libs/nodejs::gentoo # libressl
 dev-qt/qtnetwork::gentoo # libressl
-
-x11-libs/vte:2.91::gentoo # ::eroen, x11-terms/termite
+x11-libs/vte:2.91::gentoo # ::eroen, termite
 virtual/wine::gentoo # bobwya
 app-emulation/wine-staging::gentoo # bobwya
 
 >dev-lang/tk-8.6 # fixes build
 >dev-lang/tcl-8.6 # fixes build
 
->x11-terms/rxvt-unicode-9.21 # newest ebuild is missing USE flags/patches
->net-wireless/iwd-0.16 # requires keyworded dev-libs/ell
 >x11-misc/xdg-utils-1.1.1-r1 # dbus dependency
->x11-apps/igt-gpu-tools-1.23

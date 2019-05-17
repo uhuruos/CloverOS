@@ -19,6 +19,7 @@ app-emulation/virtualbox-additions # virtualbox
 app-emulation/virtualbox-modules # virtualbox
 net-misc/youtube-dl # stable always outdated/never works
 =media-libs/opencollada-1.6.63 # libpcre
+=dev-libs/ell-0.20 # iwd
 =dev-libs/libuv-1.27.0 # neovim
 media-plugins/gst-plugins-libav # ffmpeg
 media-libs/zimg # vapoursynth

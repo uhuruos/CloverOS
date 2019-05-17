@@ -99,6 +99,7 @@ app-editors/vis
 app-editors/wxhexeditor
 app-editors/xemacs
 app-emacs/emms
+app-emacs/haskell-mode
 app-emacs/org-mode
 app-emacs/slime
 app-emulation/diskimage-builder
