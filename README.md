@@ -689,8 +689,6 @@ sudo emerge -b @module-rebuild
 sudo binutils-config --linker ld.gold
 ```
 
-Remove the above GRUB_CMDLINE_LINUX_DEFAULT="" var if security is important.
-
 To update the system using source: `./cloveros_settings.sh c && sudo emerge --sync && sudo emerge -uavDN world`
 
 To remove dbus: `sudo USE="-dbus" emerge -1 glib qtgui && sudo emerge --depclean`
