@@ -227,7 +227,7 @@ app-office/texstudio video
 www-client/links fbcon gpm
 media-gfx/imagemagick hdri fftw lqr
 media-gfx/feh exif curl
-x11-terms/rxvt-unicode -vanilla alt-font-width xft 256-color blink unicode3 secondary-wheel fading-colors wcwidth
+x11-terms/rxvt-unicode 256-color blink fading-colors unicode3 xft
 net-analyzer/vnstat gd
 net-p2p/rtorrent xmlrpc
 media-sound/deadbeef aac adplug alac alsa cdda converter cover cover-imlib2 cover-network curl dts dumb equalizer ffmpeg flac hotkeys lastfm libsamplerate m3u mad midi mms mono2stereo mp3 musepack nullout psf shn sid sndfile tta vorbis vtx wavpack wma zip cdparanoia gme gtk3 -libav mac mpg123 -nls playlist-browser -pulseaudio sc68 -shell-exec -unity
