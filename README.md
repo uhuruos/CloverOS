@@ -181,6 +181,7 @@ This disables the binhost and uses Portage's ebuilds for packages. Now you can e
 * [Which DE does this come with?](#which-de-does-this-come-with)
 * [Installing a DE](#installing-a-de)
 * [I want to host a mirror](#i-want-to-host-a-mirror)
+* [Disabling Intel mitigations for performance](#disabling-intel-mitigations-for-performance)
 * [Recompiling all packages and kernel with -march=native for increased performance](#recompiling-all-packages-and-kernel-with-marchnative-for-increased-performance)
 * [What if CloverOS dies? Will my install become useless?](#what-if-cloveros-dies-will-my-install-become-useless)
 
@@ -660,6 +661,13 @@ Kill X and re-login. After you log in and the "Start X?" dialog pops up, instead
 ### I want to donate/host a mirror
 Run `rsync -av --delete rsync://nl.cloveros.ga/cloveros /your/webserver/location/` and link me the https://
 
+### Disabling Intel mitigations for performance
+```
+sudo GRUB_CMDLINE_LINUX_DEFAULT="kpti=0 l1tf=off pti=off spectre_v2=off spectre_v2_user=off spec_store_bypass_disable=off ssbd=force-off" grub-mkconfig -o /boot/grub/grub.cfg
+```
+
+Make sure the computer you run this on has nothing important on it. (Dedicated gaming machines, etc.)
+
 ### Recompiling all packages and kernel with -march=native for increased performance
 ```
 ./cloveros_settings.sh 5
@@ -676,9 +684,9 @@ sudo sh -c "patch -d /usr/src/linux/ -p1 < enable_additional_cpu_optimizations_f
 sed -i "s/CONFIG_GENERIC_CPU=y/CONFIG_MNATIVE=y/;" config-arch-64
 sudo binutils-config --linker ld.bfd
 sudo genkernel --kernel-config=config-arch-64 all
+sudo grub-mkconfig -o /boot/grub/grub.cfg
 sudo emerge -b @module-rebuild
 sudo binutils-config --linker ld.gold
-sudo GRUB_CMDLINE_LINUX_DEFAULT="kpti=0 l1tf=off pti=off spectre_v2=off spectre_v2_user=off spec_store_bypass_disable=off ssbd=force-off" grub-mkconfig -o /boot/grub/grub.cfg
 ```
 
 Remove the above GRUB_CMDLINE_LINUX_DEFAULT="" var if security is important.
