@@ -1052,6 +1052,7 @@ sys-apps/firejail
 sys-apps/flatpak
 sys-apps/hprofile
 sys-apps/hwdata-redhat
+sys-apps/hwinfo
 sys-apps/hwloc
 sys-apps/i2c-tools
 sys-apps/idle3-tools

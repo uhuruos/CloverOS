@@ -28,6 +28,7 @@ media-video/vdr # fixes build
 net-p2p/mldonkey # fixes build
 games-emulation/mgba # fixes build
 dev-db/mariadb # fixes build
+net-misc/spice-gtk # fixes build
 media-libs/openimageio # fixes build
 x11-themes/sddm-gentoo-black-theme ** # fixes build
 x11-themes/terminology-themes ** # fixes build
