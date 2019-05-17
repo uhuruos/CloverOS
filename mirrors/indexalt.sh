@@ -286,7 +286,13 @@ body {
 			<ul>
 				<div class="dropdown">
 					<a href="https://twitter.com/cloveros_ga"><li>News</li></a>
-					<div class="dropdown-content" id="news">08-May-19
+					<div class="dropdown-content" id="news">17-May-19
+Packages updated
+Kernel updated to 5.0.17
+New ISO: https://cloveros.ga/s/CloverOS-x86_64-20190517.iso
+Package updates: x11-terms/rxvt-unicode-9.22-r1 (add "URxvt.letterSpace: -1" to ~/.Xdefaults), media-libs/mesa-19.1.0_rc2 (switched to keyworded mesa for quicker graphics updates)
+
+08-May-19
 Packages updated
 Kernel updated to 5.0.13
 New ISO: https://cloveros.ga/s/CloverOS-x86_64-20190508.iso
