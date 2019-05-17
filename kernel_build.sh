@@ -4,12 +4,14 @@ if [ $(id -u) != "0" ]; then
 	exit 1
 fi
 
-kernelversion=5.0.16
+kernelversion=5.0.17
 kernelmajversion=5.0
 
 if [ ! -d '/usr/portage/packages/s/' ]; then
 	mkdir -p /usr/portage/packages/s/
 fi
+
+export BINPKG_COMPRESS="xz" XZ_OPT="--x86 --lzma2=preset=9e,dict=1024MB,nice=273,depth=200,lc=4"
 
 binutils-config --linker ld.bfd
 
@@ -17,7 +19,7 @@ emerge -C gentoo-sources
 rm -Rf /usr/src/*-gentoo*
 find /boot/ /lib/modules/ -mindepth 1 -maxdepth 1 -name \*gentoo\* ! -name \*$(uname -r) -exec rm -R {} \;
 
-emerge =gentoo-sources-$kernelversion
+emerge -b =gentoo-sources-$kernelversion
 eselect kernel set linux-$kernelversion-gentoo
 wget https://raw.githubusercontent.com/damentz/liquorix-package/$kernelmajversion/linux-liquorix/debian/config/kernelarch-x86/config-arch-64
 sed -i "s/CONFIG_CRYPTO_CRC32C=m/CONFIG_CRYPTO_CRC32C=y/; s/CONFIG_FW_LOADER_USER_HELPER=y/CONFIG_FW_LOADER_USER_HELPER=n/; s/CONFIG_I2C_NVIDIA_GPU=/#CONFIG_I2C_NVIDIA_GPU=/" config-arch-64
@@ -40,7 +42,6 @@ make modules_prepare
 cd /usr/src/linux-$kernelversion-gentoo-gnu/
 make clean
 wait
-export BINPKG_COMPRESS="xz" XZ_OPT="--x86 --lzma2=preset=9e,dict=1024MB,nice=273,depth=200,lc=4"
 emerge -b @module-rebuild
 
 binutils-config --linker ld.gold
