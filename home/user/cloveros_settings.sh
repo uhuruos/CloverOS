@@ -67,6 +67,7 @@ case "$choice" in
 		;;
 
 	zz)
+		sed -i "s/profile=opengl-hq/profile=gpu-hq/" ~/.mpv/config
 		if ! grep -q "URxvt.letterSpace: -1" ~/.Xdefaults; then
 			echo "URxvt.letterSpace: -1" >> ~/.Xdefaults
 		fi
