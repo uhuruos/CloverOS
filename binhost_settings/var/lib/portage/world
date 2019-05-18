@@ -1082,7 +1082,9 @@ sys-apps/usermode-utilities
 sys-apps/vbetool
 sys-auth/fingerprint-gui
 sys-auth/pam_yubico
+sys-block/buffer
 sys-block/gparted
+sys-block/mbuffer
 sys-block/open-iscsi
 sys-block/sas3flash
 sys-block/zram-init

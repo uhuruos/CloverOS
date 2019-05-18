@@ -380,6 +380,7 @@ net-misc/iputils -ssl
 net-ftp/gproftpd -ssl
 net-print/gtklp -ssl
 mail-client/nmh -ssl
+sys-block/mbuffer -ssl
 net-mail/isync -ssl -libressl
 app-emulation/open-vm-tools -ssl -vgauth -grabbitmqproxy
 
