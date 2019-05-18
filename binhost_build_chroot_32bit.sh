@@ -23,7 +23,7 @@ emerge-webrsync
 eselect profile set "default/linux/x86/17.0/hardened"
 
 rm /var/lib/portage/world
-rm -R /etc/portage/package.* /etc/make.conf
+rm -R /etc/portage/package.* /etc/portage/make.conf
 wget https://gitgud.io/cloveros/cloveros/raw/master/binhost_settings/etc/portage/{make.conf,package.use,package.keywords,package.env,package.mask,package.unmask} -P /etc/portage/
 mkdir /etc/portage/env
 wget https://gitgud.io/cloveros/cloveros/raw/master/binhost_settings/etc/portage/env/{gold,no-gnu2,no-gold,no-hashgnu,no-lto,no-lto-graphite,no-lto-graphite-ofast,no-lto-o3,no-lto-ofast,no-ofast,pcsx2,size} -P /etc/portage/env/
