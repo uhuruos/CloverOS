@@ -17,6 +17,7 @@ char *getfile(char *filename, char *buffer) {
 }
 void main(void) {
 	char buffer[3000], *file;
+	int firstrun = 1;
 	for (;;) {
 		file = getfile("/proc/version", buffer);
 		file = file+14;
@@ -59,16 +60,17 @@ void main(void) {
 		file = getfile("/proc/stat", buffer);
 		*strchr(file, '\n') = '\0';
 		file = file+3;
-		unsigned long long int cputotal = 0, cpuidle = 0, cpulasttotal, cpulastidle;
-		cputotal += atoll(strtok(file, " "));
+		unsigned long long int cputotal, cpuidle, cpulasttotal, cpulastidle;
+		cputotal = atoll(strtok(file, " "));
 		for (int i = 0; i < 2; i++, cputotal += atoll(strtok(NULL, " ")));
-		char *cputoken = strtok(NULL, " ");
-		cpuidle += atoll(cputoken);
-		cputotal += atoll(cputoken);
+		cpuidle = atoll(strtok(NULL, " "));
+		cputotal += cpuidle;
 		for (int i = 0; i < 6; i++, cputotal += atoll(strtok(NULL, " ")));
-		char cpu[20];
-		if (cputotal-cpulasttotal != 0) {
+		char cpu[5];
+		if (!firstrun) {
 			sprintf(cpu, "%llu%%", (1000*((cputotal-cpulasttotal)-(cpuidle-cpulastidle))/(cputotal-cpulasttotal)+5)/10);
+		} else {
+			sprintf(cpu, "0%%");
 		}
 		cpulasttotal = cputotal;
 		cpulastidle = cpuidle;
@@ -113,15 +115,23 @@ void main(void) {
 			token = strtok(NULL, "\n");
 		}
 		char totalin[20], totalout[20];
-		sprintf(totalin, "%lluMiB", totalint/1048576);
-		sprintf(totalout, "%lluMiB", totaloutt/1048576);
+		if (totalint >= 104858) {
+			sprintf(totalin, "%lluMiB", totalint/1048576);
+		} else {
+			sprintf(totalin, "0MiB");
+		}
+		if (totaloutt >= 104858) {
+			sprintf(totalout, "%lluMiB", totaloutt/1048576);
+		} else {
+			sprintf(totalout, "0MiB");
+		}
 		char netin[20], netout[20];
-		if (totalint-totallastint >= 104858) {
+		if (totalint-totallastint >= 104858 && !firstrun) {
 			sprintf(netin, "%.1fMiB/s", (float)(totalint-totallastint)/1048576/2);
 		} else {
 			sprintf(netin, "0MiB/s");
 		}
-		if (totaloutt-totallastoutt >= 104858) {
+		if (totaloutt-totallastoutt >= 104858 && !firstrun) {
 			sprintf(netout, "%.1fMiB/s", (float)(totaloutt-totallastoutt)/1048576/2);
 		} else {
 			sprintf(netout, "0MiB/s");
@@ -160,7 +170,7 @@ void main(void) {
 
 		char volume[5];
 		sprintf(buffer, "%ld", (time_t)time(NULL));
-		if (atoll(buffer)%60 == 0 || volume[0] == '\0') {
+		if (atoll(buffer)%60 == 0 || firstrun) {
 			char soundfilename[50];
 			sprintf(soundfilename, "%s%s%s", "/home/", getenv("USER"), "/.asoundrc");
 			file = getfile(soundfilename, buffer);
@@ -259,6 +269,7 @@ void main(void) {
 		printf("\e[?25l\e[37m%s Up: \e[32m%s\e[37m Proc: \e[32m%s\e[37m Active: \e[32m%s\e[37m Cpu: \e[32m%s\e[37m Mem: \e[32m%s\e[37m Net In: \e[32m%s (%s)\e[37m Net Out: \e[32m%s (%s)\e[37m Temp: \e[32m%s\e[37m Volume: \e[32m%s\e[37m AC: \e[32m%s\e[37m Battery: \e[32m%s\e[37m Brightness: \e[32m%s\e[37m Wifi: \e[32m%s\e[37m %s             \e[0m\r", uname, uptime, processes, active, cpu, memory, netin, totalin, netout, totalout, temperature, volume, ac, battery, brightness, wifi, date);
 		fflush(stdout);
 		nanosleep((struct timespec[]){{2, 0}}, NULL);
+		firstrun = 0;
 	}
 }
 HEREDOC
