@@ -375,7 +375,7 @@ To have built-in tab list button available at all times:
 ### Firefox configuration hardening
 ```
 wget https://raw.githubusercontent.com/pyllyukko/user.js/master/user.js -P ~/.mozilla/firefox/*.default/
-sed -i "s@\(.*\"browser.pr.*\)@//\1@; s@\(.*\"privacy.sanitize.s.*\)@//\1@; s@\(.*\"signon.r.*\)@//\1@; s@\(.*\"cl.*\)@//\1@; s@\(.*\"browser.disp.*\)@//\1@; s@\(.*\"places.*\)@//\1@;" /home/user/.mozilla/firefox/*.default/user.js # if you require password manager/session manager/clipboard/fonts/history to work
+sed -i "s@\(.*\(\"browser.privatebrowsing.autostart\|\"privacy.sanitize.sanitizeOnShutdown\|\"privacy.clearOnShutdown.*\|\"signon.rememberSignons\|\"clipboard.autocopy\|\"browser.display.use_document_fonts\|\"places.history.enabled\).*\)@//commented out: \1@g" ~/.mozilla/firefox/*.default/user.js # re-enables passwordmanager/sessionmanager/history/clipboard/fonts/history
 ```
 
 More information here: https://github.com/pyllyukko/user.js/
