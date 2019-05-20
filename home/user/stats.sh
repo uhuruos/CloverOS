@@ -115,23 +115,23 @@ void main(void) {
 			token = strtok(NULL, "\n");
 		}
 		char totalin[20], totalout[20];
-		if (totalint >= 104858) {
+		if (totalint > 1048576) {
 			sprintf(totalin, "%lluMiB", totalint/1048576);
 		} else {
 			sprintf(totalin, "0MiB");
 		}
-		if (totaloutt >= 104858) {
+		if (totaloutt > 1048576) {
 			sprintf(totalout, "%lluMiB", totaloutt/1048576);
 		} else {
 			sprintf(totalout, "0MiB");
 		}
 		char netin[20], netout[20];
-		if (totalint-totallastint >= 104858 && !firstrun) {
+		if (totalint-totallastint > 104857 && !firstrun) {
 			sprintf(netin, "%.1fMiB/s", (float)(totalint-totallastint)/1048576/2);
 		} else {
 			sprintf(netin, "0MiB/s");
 		}
-		if (totaloutt-totallastoutt >= 104858 && !firstrun) {
+		if (totaloutt-totallastoutt > 104857 && !firstrun) {
 			sprintf(netout, "%.1fMiB/s", (float)(totaloutt-totallastoutt)/1048576/2);
 		} else {
 			sprintf(netout, "0MiB/s");
