@@ -13,7 +13,7 @@ mkdir image/
 cd image/
 
 builddate=$(curl -s http://distfiles.gentoo.org/releases/amd64/autobuilds/current-stage3-amd64/ | sed -nr 's/.*href="stage3-amd64-([0-9].*).tar.xz">.*/\1/p')
-wget http://distfiles.gentoo.org/releases/amd64/autobuilds/current-stage3-amd64/stage3-amd64-$builddate.tar.xz
+wget http://distfiles.gentoo.org/releases/amd64/autobuilds/current-stage3-amd64/stage3-amd64-"$builddate".tar.xz
 tar pxf stage3*
 rm -f stage3*
 
@@ -41,7 +41,7 @@ while ! gpg --list-keys "CloverOS GNU/Linux (Package signing)"; do gpg --keyserv
 FETCHCOMMAND_HTTPS="wget -O \"\\\${DISTDIR}/\\\${FILE}\" \"\\\${URI}\"" emerge aria2
 
 #emerge gentoo-sources genkernel
-#wget https://raw.githubusercontent.com/damentz/liquorix-package/4.19/linux-liquorix/debian/config/kernelarch-x86/config-arch-64
+#wget https://raw.githubusercontent.com/damentz/liquorix-package/5.0/linux-liquorix/debian/config/kernelarch-x86/config-arch-64
 #genkernel --kernel-config=config-arch-64 all
 wget https://cloveros.ga/s/kernel.tar.lzma https://cloveros.ga/s/signatures/s/kernel.tar.lzma.asc
 gpg --verify kernel.tar.lzma.asc kernel.tar.lzma && tar xf kernel.tar.lzma
