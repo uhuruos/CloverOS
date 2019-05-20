@@ -41,11 +41,14 @@ layman -S
 yes | layman -a $(grep -Po "(?<=\*/\*::).*" /etc/portage/package.mask | tr "\n" " ")
 
 USE="-vaapi binary" emerge -1 gcc mesa scala netcat6
+emerge --depclean
 emerge -veD @world
+emerge @preserved-rebuild
+emerge --depclean
 
 emerge -C hwinfo ntfs3g ; emerge ntfs3g ; emerge hwinfo ; emerge -C sys-apps/dbus obs-studio ; emerge obs-studio ; emerge -1 sys-apps/dbus ; emerge -C jack-audio-connection-kit audacity ; emerge audacity ; emerge jack-audio-connection-kit
 
-quickpkg --include-unmodified-config=y "*/*"
+BINPKG_COMPRESS="xz" XZ_OPT="--x86 --lzma2=preset=9e,dict=1024MB,nice=273,depth=200,lc=4" quickpkg --include-unmodified-config=y "*/*"
 
 exit
 HEREDOC
