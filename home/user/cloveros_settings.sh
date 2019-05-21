@@ -91,9 +91,9 @@ case "$choice" in
 
 		sudo emerge --sync
 		sudo emerge -uvD --rebuilt-binaries=n @world
-		sudo emerge --depclean || sudo emerge -1O rhash m2crypto virtual/perl-ExtUtils-MakeMaker virtual/perl-File-Spec perl-core/File-Path:0 virtual/perl-File-Path:0 sys-apps/texinfo:0 dev-perl/libintl-perl:0 dev-perl/XML-Parser:0 dev-perl/Unicode-EastAsianWidth:0 dev-perl/Text-Unidecode:0 && sudo emerge --depclean
+		sudo emerge --depclean || sudo emerge -1O virtual/perl-ExtUtils-MakeMaker virtual/perl-File-Spec perl-core/File-Path:0 virtual/perl-File-Path:0 sys-apps/texinfo:0 dev-perl/libintl-perl:0 dev-perl/XML-Parser:0 dev-perl/Unicode-EastAsianWidth:0 dev-perl/Text-Unidecode:0 && sudo emerge --depclean
 
-		echo Removing dbus if possible...; for i in {glib,qtgui,PyQt5,thunar}; do sudo PORTAGE_BINHOST="https://cloveros.ga/s/nodbus" FETCHCOMMAND_HTTPS="wget -O \"\${DISTDIR}/\${FILE}\" \"\${URI}\"" emerge -1uD $i; done; sudo sudo emerge --depclean
+		echo Removing dbus if possible...; for i in {dev-libs/glib,dev-qt/qtgui,dev-python/PyQt5,xfce-base/thunar}; do [ -d /var/db/pkg/$i* ] && sudo PORTAGE_BINHOST="https://cloveros.ga/s/nodbus" FETCHCOMMAND_HTTPS="wget -O \"\${DISTDIR}/\${FILE}\" \"\${URI}\"" emerge -1uD $i; done; sudo sudo emerge --depclean
 
 		kernel=$(uname -r)
 		if [[ ${kernel: -3} == "gnu" ]]; then
@@ -103,6 +103,7 @@ case "$choice" in
 		fi
 
 		./cloveros_settings.sh 9
+
 		sudo eselect wine set 1
 
 		echo -e "\nSystem updated."
