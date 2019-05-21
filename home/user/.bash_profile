@@ -14,7 +14,7 @@ if [ -z "$DISPLAY" ] && [ -z "$SSH_CLIENT" ] && [ -z "$TMUX" ] && ! pgrep X > /d
 	wmspost[Y]=wmspost[y]
 
 	wms[i]=i3
-	wmspkg[i]="i3-gaps i3status"
+	wmspkg[i]="i3-gaps i3blocks-gaps i3status"
 	wmspost[i]=$defaultpost
 
 	wms[a]=awesome

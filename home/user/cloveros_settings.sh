@@ -288,11 +288,17 @@ case "$choice" in
 		;;
 
 	t)
+		if [ ! -d /var/db/pkg/x11-apps/xinput-*/ ]; then
+			sudo emerge setxkbmap
+		fi
 		xinput set-prop "SynPS/2 Synaptics TouchPad" "libinput Tapping Enabled" 1
 		echo "Tap to click enabled. (xinput set-prop \"SynPS/2 Synaptics TouchPad\" \"libinput Tapping Enabled\" 0)"
 		;;
 
 	d)
+		if [ ! -d /var/db/pkg/x11-apps/xinput-*/ ]; then
+			sudo emerge setxkbmap
+		fi
 		xinput list --name-only | sed "/Virtual core pointer/,/Virtual core keyboard/"\!"d;//d" | xargs -I{} xinput set-prop {} "libinput Accel Profile Enabled" 0 1 &> /dev/null
 		echo -e "\nMouse acceleration disabled. (xinput set-prop \"Your Device\" \"libinput Accel Profile Enabled\" 0 1)"
 		;;
