@@ -79,11 +79,6 @@ case "$choice" in
 			sudo emerge -C wine wine-any
 			sudo emerge wine
 		fi
-		if [ -d /var/db/pkg/net-p2p/rtorrent-ps-9999/ ]; then
-			sudo emerge -C rtorrent-ps
-			sudo emerge rtorrent
-			sudo emerge -1 portage
-		fi
 		if [ -d /var/db/pkg/net-wireless/rfkill-*/ ]; then
 			sudo emerge -C rfkill
 			sudo emerge -1 portage
