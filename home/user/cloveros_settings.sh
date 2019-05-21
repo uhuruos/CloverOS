@@ -93,7 +93,7 @@ case "$choice" in
 		sudo emerge -uvD --rebuilt-binaries=n @world
 		sudo emerge --depclean || sudo emerge -1O rhash m2crypto virtual/perl-ExtUtils-MakeMaker virtual/perl-File-Spec perl-core/File-Path:0 virtual/perl-File-Path:0 sys-apps/texinfo:0 dev-perl/libintl-perl:0 dev-perl/XML-Parser:0 dev-perl/Unicode-EastAsianWidth:0 dev-perl/Text-Unidecode:0 && sudo emerge --depclean
 
-		echo "glib|qtgui|PyQt5|thunar" | xargs -I{} -d\| sudo sh -c 'PORTAGE_BINHOST="https://cloveros.ga/s/nodbus" FETCHCOMMAND_HTTPS="wget -O \"\${DISTDIR}/\${FILE}\" \"\${URI}\"" emerge -1uD {}' &> /dev/null; sudo emerge --depclean
+		echo Removing dbus if possible...; for i in {glib,qtgui,PyQt5,thunar}; do sudo PORTAGE_BINHOST="https://cloveros.ga/s/nodbus" FETCHCOMMAND_HTTPS="wget -O \"\${DISTDIR}/\${FILE}\" \"\${URI}\"" emerge -1uD $i; done; sudo sudo emerge --depclean
 
 		kernel=$(uname -r)
 		if [[ ${kernel: -3} == "gnu" ]]; then
