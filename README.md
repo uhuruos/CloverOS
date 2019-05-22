@@ -375,10 +375,10 @@ To have built-in tab list button available at all times:
 ### Firefox configuration hardening
 ```
 wget https://raw.githubusercontent.com/pyllyukko/user.js/master/user.js -P ~/.mozilla/firefox/*.default/
-sed -i "s@\(.*\"\(browser.privatebrowsing.autostart\|privacy.sanitize.sanitizeOnShutdown\|privacy.clearOnShutdown.*\|network.cookie.lifetimePolicy\|signon.rememberSignons\|clipboard.autocopy\|browser.display.use_document_fonts\|places.history.enabled\)\".*\)@//commented out: \1@g" ~/.mozilla/firefox/*.default/user.js
+sed -i "s@\(.*\"\(browser.privatebrowsing.autostart\|privacy.sanitize.sanitizeOnShutdown\|privacy.clearOnShutdown.*\|network.cookie.lifetimePolicy\|signon.rememberSignons\|clipboard.autocopy\|browser.display.use_document_fonts\|places.history.enabled\|pdfjs.disabled\)\".*\)@//commented out: \1@g" ~/.mozilla/firefox/*.default/user.js
 ```
 
-The sed commend re-enables passwordmanager/sessionmanager/history/clipboard/fonts/history and lets you choose whether data is cleared on shutdown
+The sed commend re-enables passwordmanager/sessionmanager/history/clipboard/fonts/history/pdf and lets you choose whether data is cleared on shutdown
 
 More information here: https://github.com/pyllyukko/user.js/
 
