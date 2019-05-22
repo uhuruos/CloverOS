@@ -61,6 +61,8 @@ net-misc/megatools::jm-overlay
 
 #keyworded, remove when stable exists
 app-misc/mat2
+games-fps/duke3d-demodata # eduke32
+games-fps/eduke32
 net-misc/onioncircuits
 =dev-util/lldb-7.1.0
 app-misc/powerline

@@ -1,3 +1,4 @@
+games-fps/eduke32 demo
 x11-misc/xdg-utils -perl
 app-emulation/wine-staging -custom-cflags vkd3d esync
 virtual/wine staging
@@ -55,8 +56,7 @@ x11-misc/rofi windowmode
 media-sound/jack-audio-connection-kit cpudetection
 sys-devel/llvm gold
 mate-base/mate extras
-kde-plasma/plasma-meta grub gtk
-kde-plasma/plasma-desktop gtk3 gtk2 legacy-systray
+kde-plasma/plasma-meta grub gtk desktop-portal
 kde-apps/kde-apps-meta accessibility sdk pim
 kde-plasma/powerdevil -wireless
 media-gfx/graphicsmagick modules
@@ -246,7 +246,7 @@ media-plugins/deadbeef-vk gtk3
 app-emulation/qemu sdl usb virtfs gtk
 games-emulation/retroarch X # required by USE=xinerama
 x11-drivers/xf86-video-intel tools # multimonitor
-dev-libs/glib dbus # required by mate baobab flatpak pitivi evince eog bluez-alsa gthumb gedit flowblade
+dev-libs/glib dbus # required by mate flatpak pitivi evince eog bluez-alsa gthumb gedit flowblade
 dev-qt/qtgui dbus # required by kde
 dev-python/PyQt5 webengine # required by anki qutebrowser (dbus)
 sys-auth/consolekit policykit # required by kde (dbus)

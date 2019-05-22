@@ -49,7 +49,7 @@ case "$choice" in
 		fi
 		;;
 
-	2|u)
+	2)
 		if ! grep -q '^EMERGE_DEFAULT_OPTS=".* -G"' /etc/portage/make.conf; then
 			echo "Please enable binaries."
 			exit 1
@@ -78,10 +78,6 @@ case "$choice" in
 		if [ -d /var/db/pkg/app-emulation/wine-any-*/ ]; then
 			sudo emerge -C wine wine-any
 			sudo emerge wine
-		fi
-		if [ -d /var/db/pkg/net-wireless/rfkill-*/ ]; then
-			sudo emerge -C rfkill
-			sudo emerge -1 portage
 		fi
 
 		sudo emerge --sync

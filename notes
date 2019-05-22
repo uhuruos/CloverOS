@@ -8,7 +8,7 @@ livecd_install.sh: uefi install, encryption
 --- packages that don't build ---
 
 #doesn't emerge
-eduke32 ibus-sunpinyin stumpwm stumpwm-contrib tauthon racket cinelerra kodi eagle darktable bsnes-libretro-cplusplus98 monodevelop openexr_viewers
+eduke32 ibus-sunpinyin stumpwm stumpwm-contrib racket cinelerra kodi eagle darktable bsnes-libretro-cplusplus98 monodevelop openexr_viewers
 
 #libressl
 nxplayer murmur makemkv eiskaltdcpp retroshare acme-tiny spyder johntheripper-jumbo
