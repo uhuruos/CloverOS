@@ -75,7 +75,7 @@ case "$choice" in
 		if [ ! -d /var/db/pkg/net-libs/gnutls-3.6.7/ ]; then
 			sudo FETCHCOMMAND_HTTPS="wget -O \"\${DISTDIR}/\${FILE}\" \"\${URI}\"" emerge -1 gnutls aria2
 		fi
-		if [ -d /var/db/pkg/app-emulation/wine-any-4.1/ ]; then
+		if [ -d /var/db/pkg/app-emulation/wine-any-*/ ]; then
 			sudo emerge -C wine wine-any
 			sudo emerge wine
 		fi
@@ -88,7 +88,7 @@ case "$choice" in
 		sudo emerge -uvD --rebuilt-binaries=n @world
 		sudo emerge --depclean || sudo emerge -1O virtual/perl-ExtUtils-MakeMaker virtual/perl-File-Spec perl-core/File-Path:0 virtual/perl-File-Path:0 sys-apps/texinfo:0 dev-perl/libintl-perl:0 dev-perl/XML-Parser:0 dev-perl/Unicode-EastAsianWidth:0 dev-perl/Text-Unidecode:0 && sudo emerge --depclean
 
-		echo Removing dbus if possible...; for i in {dev-libs/glib,dev-qt/qtgui,dev-python/PyQt5,xfce-base/thunar}; do [ -d /var/db/pkg/$i* ] && sudo PORTAGE_BINHOST="https://cloveros.ga/s/nodbus" FETCHCOMMAND_HTTPS="wget -O \"\${DISTDIR}/\${FILE}\" \"\${URI}\"" emerge -1uD $i; done; sudo sudo emerge --depclean
+		echo Removing dbus if possible...; for i in {dev-libs/glib,dev-qt/qtgui,dev-python/PyQt5,xfce-base/thunar}; do [ -d /var/db/pkg/$i* ] && sudo PORTAGE_BINHOST="https://cloveros.ga/s/nodbus" FETCHCOMMAND_HTTPS="wget -O \"\${DISTDIR}/\${FILE}\" \"\${URI}\"" emerge -1uD $i; done; sudo emerge --depclean
 
 		kernel=$(uname -r)
 		if [[ ${kernel: -3} == "gnu" ]]; then
