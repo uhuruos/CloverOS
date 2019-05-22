@@ -343,6 +343,8 @@ case "$choice" in
 		sudo mkdir /etc/portage/repos.conf
 		sudo xargs eselect repository enable "{}" <<< "$overlays"
 		sudo emerge --sync
+		echo -e "\nOverlays have been synced. (/var/db/repos/, eselect repository)"
+
                 ;;
 
 	m)
