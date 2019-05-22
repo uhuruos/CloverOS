@@ -32,7 +32,7 @@ wget https://linux-libre.fsfla.org/pub/linux-libre/releases/$kernelversion-gnu/d
 chmod +x /usr/src/linux-$kernelversion-gentoo-gnu/deblob-$kernelmajversion /usr/src/linux-$kernelversion-gentoo-gnu/deblob-check
 cd /usr/src/linux-$kernelversion-gentoo-gnu/ ; PYTHON="python2.7" /usr/src/linux-$kernelversion-gentoo-gnu/deblob-$kernelmajversion ; cd -
 genkernel --kernel-config=config-arch-64 --kerneldir=/usr/src/linux-$kernelversion-gentoo-gnu/ --luks --lvm all
-XZ_OPT="--lzma1 preset=9e,dict=1024MB,nice=273,depth=200,lc=4" tar --lzma -cf /usr/portage/packages/s/kernel-libre.tar.lzma /boot/*$kernelversion-gentoo-gnu /lib/modules/$kernelversion-gentoo-gnu &
+XZ_OPT="--lzma1=preset=9e,dict=1024MB,nice=273,depth=200,lc=4" tar --lzma -cf /usr/portage/packages/s/kernel-libre.tar.lzma /boot/*$kernelversion-gentoo-gnu /lib/modules/$kernelversion-gentoo-gnu &
 
 rm config-arch-64
 cd /usr/src/linux/
