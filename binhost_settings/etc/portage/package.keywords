@@ -21,6 +21,7 @@ net-misc/youtube-dl # stable always outdated/never works
 =media-libs/opencollada-1.6.63 # libpcre
 =dev-libs/ell-0.20 # iwd
 =dev-libs/libuv-1.27.0 # neovim
+=dev-libs/nspr-4.21 # chromium
 media-plugins/gst-plugins-libav # ffmpeg
 media-libs/zimg # vapoursynth
 dev-lisp/clisp # fixes build
@@ -53,7 +54,7 @@ xfce-extra/thunar-archive-plugin # xfdesktop
 #libressl, remove when stable supports libressl
 <net-libs/nodejs-10::libressl
 net-libs/http-parser # nodejs
-<dev-qt/qtnetwork-5.12::libressl
+=dev-qt/qtnetwork-5.12.3::libressl
 www-client/dillo
 app-editors/xemacs
 www-client/elinks

@@ -56,7 +56,7 @@ x11-misc/rofi windowmode
 media-sound/jack-audio-connection-kit cpudetection
 sys-devel/llvm gold
 mate-base/mate extras
-kde-plasma/plasma-meta grub gtk desktop-portal
+kde-plasma/plasma-meta grub gtk -desktop-portal
 kde-apps/kde-apps-meta accessibility sdk pim
 kde-plasma/powerdevil -wireless
 media-gfx/graphicsmagick modules
