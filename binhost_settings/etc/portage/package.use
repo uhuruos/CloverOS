@@ -201,6 +201,7 @@ media-libs/phonon -vlc
 media-libs/libsdl X
 www-client/ungoogled-chromium -lld gold optimize-thinlto optimize-webui jumbo-build
 www-client/chromium jumbo-build
+dev-qt/qtwebengine jumbo-build
 www-client/firefox -wifi
 mail-client/thunderbird -crypt
 www-client/seamonkey -crypt -minimal
