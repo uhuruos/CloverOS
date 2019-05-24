@@ -27,9 +27,9 @@ void main(void) {
 
 		file = getfile("/proc/uptime", buffer);
 		*strchr(file, '.') = '\0';
-		int days = atoll(file)/86400;
-		int hours = atoll(file)/3600%24;
-		int minutes = atoll(file)/60%60;
+		int days = atoi(file)/86400;
+		int hours = atoi(file)/3600%24;
+		int minutes = atoi(file)/60%60;
 		char uptime[20];
 		if (days > 0) {
 			sprintf(uptime, "%dd %dh %dm", days, hours, minutes);
@@ -60,15 +60,15 @@ void main(void) {
 		file = getfile("/proc/stat", buffer);
 		*strchr(file, '\n') = '\0';
 		file = file+3;
-		unsigned long long int cputotal, cpuidle, cpulasttotal, cpulastidle;
-		cputotal = atoll(strtok(file, " "));
-		for (int i = 0; i < 2; i++, cputotal += atoll(strtok(NULL, " ")));
-		cpuidle = atoll(strtok(NULL, " "));
+		unsigned long int cputotal, cpuidle, cpulasttotal, cpulastidle;
+		cputotal = atol(strtok(file, " "));
+		for (int i = 0; i < 2; i++, cputotal += atol(strtok(NULL, " ")));
+		cpuidle = atol(strtok(NULL, " "));
 		cputotal += cpuidle;
-		for (int i = 0; i < 6; i++, cputotal += atoll(strtok(NULL, " ")));
+		for (int i = 0; i < 6; i++, cputotal += atol(strtok(NULL, " ")));
 		char cpu[5];
 		if (!firstrun) {
-			sprintf(cpu, "%llu%%", (1000*((cputotal-cpulasttotal)-(cpuidle-cpulastidle))/(cputotal-cpulasttotal)+5)/10);
+			sprintf(cpu, "%lu%%", (1000*((cputotal-cpulasttotal)-(cpuidle-cpulastidle))/(cputotal-cpulasttotal)+5)/10);
 		} else {
 			sprintf(cpu, "0%%");
 		}
@@ -78,18 +78,18 @@ void main(void) {
 		file = getfile("/proc/meminfo", buffer);
 		char memory[50];
 		strncpy(memory, strstr(file, "MemTotal: ")+10, 50); *strstr(memory, " kB") = '\0'; *strrchr(memory, ' ')+1;
-		unsigned long long int memtotal = atoll(memory);
+		unsigned long int memtotal = atol(memory);
 		strncpy(memory, strstr(file, "MemFree: ")+9, 50); *strstr(memory, " kB") = '\0'; *strrchr(memory, ' ')+1;
-		unsigned long long int memfree = atoll(memory);
+		unsigned long int memfree = atol(memory);
 		strncpy(memory, strstr(file, "Buffers: ")+9, 50); *strstr(memory, " kB") = '\0'; *strrchr(memory, ' ')+1;
-		unsigned long long int buffers = atoll(memory);
+		unsigned long int buffers = atol(memory);
 		strncpy(memory, strstr(file, "Cached: ")+8, 50); *strstr(memory, " kB") = '\0'; *strrchr(memory, ' ')+1;
-		unsigned long long int cached = atoll(memory);
+		unsigned long int cached = atol(memory);
 		strncpy(memory, strstr(file, "Shmem: ")+7, 50); *strstr(memory, " kB") = '\0'; *strrchr(memory, ' ')+1;
-		unsigned long long int shmem = atoll(memory);
+		unsigned long int shmem = atol(memory);
 		strncpy(memory, strstr(file, "SReclaimable: ")+14, 50); *strstr(memory, " kB") = '\0'; *strrchr(memory, ' ')+1;
-		unsigned long long int sreclaimable = atoll(memory);
-		sprintf(memory, "%lluMiB %lluMiB %.0f%%", (memtotal+shmem-memfree-buffers-cached-sreclaimable)/1024, memtotal/1024, (float)(memtotal+shmem-memfree-buffers-cached-sreclaimable)/memtotal*100);
+		unsigned long int sreclaimable = atol(memory);
+		sprintf(memory, "%luMiB %luMiB %.0f%%", (memtotal+shmem-memfree-buffers-cached-sreclaimable)/1024, memtotal/1024, (float)(memtotal+shmem-memfree-buffers-cached-sreclaimable)/memtotal*100);
 
 		file = getfile("/proc/net/dev", buffer);
 		file = strchr(file, '\n')+1;
@@ -101,7 +101,7 @@ void main(void) {
 			}
 		}
 		file[x] = '\0';
-		unsigned long long int totalint = 0, totaloutt = 0, totallastint, totallastoutt;
+		unsigned long int totalint = 0, totaloutt = 0, totallastint, totallastoutt;
 		char *token;
 		token = strtok(file, "\n");
 		while (token != NULL) {
@@ -109,19 +109,19 @@ void main(void) {
 			token = token+1;
 			char *buf;
 			strtok_r(token, " ", &buf);
-			totalint += atoll(token);
+			totalint += atol(token);
 			for (int i = 0; i < 8; i++, token = strtok_r(NULL, " ", &buf));
-			totaloutt += atoll(token);
+			totaloutt += atol(token);
 			token = strtok(NULL, "\n");
 		}
 		char totalin[20], totalout[20];
 		if (totalint > 1048576) {
-			sprintf(totalin, "%lluMiB", totalint/1048576);
+			sprintf(totalin, "%luMiB", totalint/1048576);
 		} else {
 			sprintf(totalin, "0MiB");
 		}
 		if (totaloutt > 1048576) {
-			sprintf(totalout, "%lluMiB", totaloutt/1048576);
+			sprintf(totalout, "%luMiB", totaloutt/1048576);
 		} else {
 			sprintf(totalout, "0MiB");
 		}
@@ -139,10 +139,10 @@ void main(void) {
 		totallastint = totalint;
 		totallastoutt = totaloutt;
 
-		char tempfilename[40];
+		char temperature[40];
 		for (int i = 0; i < 5; i++) {
-			sprintf(tempfilename, "%s%d%s", "/sys/class/hwmon/hwmon", i, "/name");
-			file = getfile(tempfilename, buffer);
+			sprintf(temperature, "%s%d%s", "/sys/class/hwmon/hwmon", i, "/name");
+			file = getfile(temperature, buffer);
 			if (!file) {
 				break;
 			}
@@ -151,15 +151,14 @@ void main(void) {
 				break;
 			}
 		}
-		tempfilename[strlen(tempfilename)-4] = '\0';
-		strcat(tempfilename, "temp1_input");
-		file = getfile(tempfilename, buffer);
+		temperature[strlen(temperature)-4] = '\0';
+		strcat(temperature, "temp1_input");
+		file = getfile(temperature, buffer);
 		if (!file) {
-			tempfilename[strlen(tempfilename)-11] = '\0';
-			strcat(tempfilename, "temp2_input");
-			file = getfile(tempfilename, buffer);
+			temperature[strlen(temperature)-11] = '\0';
+			strcat(temperature, "temp2_input");
+			file = getfile(temperature, buffer);
 		}
-		char temperature[5];
 		if (file) {
 			file[strlen(file)-4] = 'C';
 			file[strlen(file)-3] = '\0';
@@ -168,12 +167,11 @@ void main(void) {
 			strcpy(temperature, "N/A");
 		}
 
-		char volume[5];
+		char volume[50];
 		sprintf(buffer, "%ld", (time_t)time(NULL));
-		if (atoll(buffer)%60 == 0 || firstrun) {
-			char soundfilename[50];
-			sprintf(soundfilename, "%s%s%s", "/home/", getenv("USER"), "/.asoundrc");
-			file = getfile(soundfilename, buffer);
+		if (atol(buffer)%60 == 0 || firstrun) {
+			sprintf(volume, "%s%s%s", "/home/", getenv("USER"), "/.asoundrc");
+			file = getfile(volume, buffer);
 			if (file) {
 				file = strstr(file, "defaults.pcm.card ");
 				if (file != NULL) {
@@ -182,19 +180,22 @@ void main(void) {
 				}
 			}
 			if (file) {
-				sprintf(soundfilename, "%s%s%s", "/proc/asound/card", file, "/codec#0");
+				sprintf(volume, "%s%s%s", "/proc/asound/card", file, "/codec#0");
 			} else {
-				strcpy(soundfilename, "/proc/asound/card0/codec#0");
+				strcpy(volume, "/proc/asound/card0/codec#0");
 			}
-			strcpy(volume, "N/A");
-			file = getfile(soundfilename, buffer);
+			file = getfile(volume, buffer);
 			if (file) {
 				file = strstr(file, "Amp-Out vals:  [0x");
 				if (file != NULL) {
 					file = file+18;
 					*strchr(file, ' ') = '\0';
 					sprintf(volume, "%lu%%", strtol(file, NULL, 16));
+				} else {
+					strcpy(volume, "N/A");
 				}
+			} else {
+				strcpy(volume, "N/A");
 			}
 		}
 
@@ -228,8 +229,8 @@ void main(void) {
 		char brightness[5];
 		dp = opendir("/sys/class/backlight/");
 		if (dp) {
-			char brightnessfilename[70];
-			char brightnessmaxfilename[70];
+			char brightnessfilename[60];
+			char brightnessmaxfilename[60];
 			while ((dir = readdir(dp)) != NULL) {
 				sprintf(brightnessmaxfilename, "%s%s%s", "/sys/class/backlight/", dir->d_name, "/max_brightness");
 				sprintf(brightnessfilename, "%s%s%s", "/sys/class/backlight/", dir->d_name, "/actual_brightness");
@@ -268,8 +269,8 @@ void main(void) {
 
 		printf("\e[?25l\e[37m%s Up: \e[32m%s\e[37m Proc: \e[32m%s\e[37m Active: \e[32m%s\e[37m Cpu: \e[32m%s\e[37m Mem: \e[32m%s\e[37m Net In: \e[32m%s (%s)\e[37m Net Out: \e[32m%s (%s)\e[37m Temp: \e[32m%s\e[37m Volume: \e[32m%s\e[37m AC: \e[32m%s\e[37m Battery: \e[32m%s\e[37m Brightness: \e[32m%s\e[37m Wifi: \e[32m%s\e[37m %s             \e[0m\r", uname, uptime, processes, active, cpu, memory, netin, totalin, netout, totalout, temperature, volume, ac, battery, brightness, wifi, date);
 		fflush(stdout);
-		nanosleep((struct timespec[]){{2, 0}}, NULL);
 		firstrun = 0;
+		nanosleep((struct timespec[]){{2, 0}}, NULL);
 	}
 }
 HEREDOC
