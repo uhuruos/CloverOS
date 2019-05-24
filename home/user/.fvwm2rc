@@ -41,8 +41,8 @@ Key XF86MonBrightnessUp A N Exec sudo sh -c 'for f in /sys/class/backlight/*; do
 Key XF86AudioLowerVolume A N Exec amixer set Master 5%- > /dev/null
 Key XF86AudioRaiseVolume A N Exec amixer set Master 5%+ > /dev/null
 Key XF86AudioMute A N Exec amixer set Master toggle > /dev/null
-Key Print A N Exec scrot -e "nomacs \$f"
-Key Print A M Exec scrot -ue "nomacs \$f"
+Key Print A N Exec scrot -e nomacs\ \$f
+Key Print A M Exec scrot -ue nomacs\ \$f
 Key L A 4 Exec slock
 
 OpaqueMoveSize unlimited

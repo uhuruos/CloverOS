@@ -13,10 +13,10 @@
 "amixer set Master toggle"
   c:121
 
-"scrot && nomacs ~/$(ls -1t ~ | grep scrot | head -n1)"
+"scrot -e nomacs\ \$f"
   m:0x0 + c:107
 
-"scrot -u && nomacs ~/$(ls -1t ~ | grep scrot | head -n1)"
+"scrot -ue nomacs\ \$f"
   m:0x8 + c:107
 
 "slock"
