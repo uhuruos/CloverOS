@@ -1,5 +1,9 @@
+x11-plugins/telegram-purple::mva
+
 dev-qt/qtnetwork::libressl
 net-libs/nodejs::libressl
+dev-perl/Net-SSLeay::libressl
+app-crypt/qca::libressl
 
 games-emulation/pcsx2::cloveros-overlay # pcsx2-9999::gentoo with added "src_configure() { local mycmakeargs=( -DDISABLE_ADVANCE_SIMD=ON ) }"
 games-emulation/rpcs3::cloveros-overlay # rpcs3-0.0.5::jm-overlay with added "src_configure() { local mycmakeargs=( -DUSE_NATIVE_INSTRUCTIONS=OFF ) }" and turned into git
@@ -58,7 +62,6 @@ media-sound/serialosc::audio-overlay
 media-libs/libmonome::audio-overlay # serialosc
 
 net-misc/megatools::jm-overlay
-net-im/telegram-purple::jm-overlay
 
 games-fps/openjk-academy::luke-jr
 games-fps/openjk-academy-mp::luke-jr

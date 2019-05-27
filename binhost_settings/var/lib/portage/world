@@ -373,7 +373,6 @@ games-emulation/pcsxr
 games-emulation/ppsspp
 games-emulation/reicast
 games-emulation/retroarch
-games-emulation/rpcs3
 games-emulation/sdlmame
 games-emulation/snes9x
 games-emulation/stella
@@ -906,7 +905,6 @@ net-ftp/filezilla
 net-ftp/gftp
 net-ftp/gproftpd
 net-ftp/lftp
-net-ftp/proftpd
 net-ftp/pure-ftpd
 net-ftp/vsftpd
 net-im/bitlbee
@@ -918,7 +916,6 @@ net-im/pidgin
 net-im/qtox
 net-im/telegram-cli
 net-im/telegram-desktop-bin
-net-im/telegram-purple
 net-im/ysm
 net-irc/hexchat
 net-irc/hexchat-otr
@@ -1130,7 +1127,7 @@ sys-kernel/bliss-initramfs
 sys-kernel/dkms
 sys-kernel/dracut
 sys-kernel/genkernel
-sys-kernel/gentoo-sources:5.0.17
+sys-kernel/gentoo-sources:5.0.18
 sys-kernel/linux-firmware
 sys-power/acpi_call
 sys-power/acpitool
@@ -1152,7 +1149,6 @@ www-client/chromium
 www-client/dillo
 www-client/elinks
 www-client/falkon
-www-client/firefox
 www-client/google-chrome
 www-client/google-chrome-beta
 www-client/google-chrome-unstable
@@ -1164,7 +1160,6 @@ www-client/opera-beta
 www-client/opera-developer
 www-client/palemoon
 www-client/qutebrowser
-www-client/seamonkey
 www-client/surf
 www-client/surfraw
 www-client/torbrowser

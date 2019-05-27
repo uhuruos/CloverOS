@@ -13,6 +13,7 @@ media-libs/dav1d # firefox
 sys-fs/zfs # kernel 5.0
 sys-fs/zfs-kmod # zfs
 sys-kernel/spl # zfs
+=virtual/linux-sources-3-r1 # zfs
 app-emulation/virtualbox # kernel 5.0
 app-emulation/virtualbox-guest-additions # virtualbox
 app-emulation/virtualbox-additions # virtualbox
@@ -20,7 +21,6 @@ app-emulation/virtualbox-modules # virtualbox
 net-misc/youtube-dl # stable always outdated/never works
 =media-libs/opencollada-1.6.63 # libpcre
 =dev-libs/ell-0.20 # iwd
-=dev-libs/libuv-1.27.0 # neovim
 =dev-libs/nspr-4.21 # chromium
 =sys-auth/polkit-0.115-r4 # spidermonkey 52 won't build
 media-plugins/gst-plugins-libav # ffmpeg
@@ -32,6 +32,7 @@ games-emulation/mgba # fixes build
 dev-db/mariadb # fixes build
 net-misc/spice-gtk # fixes build
 media-libs/openimageio # fixes build
+media-sound/mpd # fixes build
 x11-themes/sddm-gentoo-black-theme ** # fixes build
 x11-themes/terminology-themes ** # fixes build
 media-plugins/vapoursynth-d2vsource ** # fixes build
@@ -53,9 +54,15 @@ xfce-extra/thunar-media-tags-plugin # xfdesktop
 xfce-extra/thunar-archive-plugin # xfdesktop
 
 #libressl, remove when stable supports libressl
-<net-libs/nodejs-10::libressl
-net-libs/http-parser # nodejs
+<net-libs/nodejs-11::libressl
+=net-libs/nghttp2-1.38.0 # nodejs
+=net-dns/c-ares-1.15.0 # nodejs
+=dev-libs/libuv-1.23.2 # nodejs
+dev-libs/icu # nodejs
 dev-qt/qtnetwork::libressl
+dev-perl/Net-SSLeay::libressl
+app-crypt/qca::libressl
+app-crypt/mit-krb5
 www-client/dillo
 app-editors/xemacs
 www-client/elinks
@@ -513,7 +520,7 @@ app-shells/tmux-bash-completion **
 games-fps/openjk-outcast **
 games-fps/openjk-academy **
 games-fps/openjk-academy-mp **
-net-im/telegram-purple **
+x11-plugins/telegram-purple **
 media-sound/guitarix **
 media-libs/libmonome # guitarix
 media-libs/zita-resampler # guitarix

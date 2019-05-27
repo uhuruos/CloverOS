@@ -27,6 +27,7 @@
 */*::lua
 */*::luke-jr
 */*::mv
+*/*::mva
 */*::pixlra
 */*::poly-c
 */*::raiagent
@@ -45,6 +46,9 @@
 
 net-libs/nodejs::gentoo # libressl
 dev-qt/qtnetwork::gentoo # libressl
+dev-perl/Net-SSLeay::gentoo # libressl
+app-crypt/qca::gentoo # libressl
+
 x11-libs/vte:2.91::gentoo # ::eroen, termite
 virtual/wine::gentoo # bobwya
 app-emulation/wine-staging::gentoo # bobwya
