@@ -4,8 +4,8 @@ if [ $(id -u) != "0" ]; then
 	exit 1
 fi
 
-kernelversion=5.0.18
-kernelmajversion=5.0
+kernelversion=5.1.5
+kernelmajversion=5.1
 
 if [ ! -d '/usr/portage/packages/s/' ]; then
 	mkdir -p /usr/portage/packages/s/
@@ -21,7 +21,8 @@ find /boot/ /lib/modules/ -mindepth 1 -maxdepth 1 -name \*gentoo\* ! -name \*$(u
 
 emerge -b =gentoo-sources-$kernelversion
 eselect kernel set linux-$kernelversion-gentoo
-wget https://raw.githubusercontent.com/damentz/liquorix-package/$kernelmajversion/linux-liquorix/debian/config/kernelarch-x86/config-arch-64
+#wget https://raw.githubusercontent.com/damentz/liquorix-package/$kernelmajversion/linux-liquorix/debian/config/kernelarch-x86/config-arch-64
+wget https://raw.githubusercontent.com/damentz/liquorix-package/master/linux-liquorix/debian/config/kernelarch-x86/config-arch-64
 sed -i "s/CONFIG_CRYPTO_CRC32C=m/CONFIG_CRYPTO_CRC32C=y/; s/CONFIG_FW_LOADER_USER_HELPER=y/CONFIG_FW_LOADER_USER_HELPER=n/; s/CONFIG_I2C_NVIDIA_GPU=/#CONFIG_I2C_NVIDIA_GPU=/" config-arch-64
 echo -e "CONFIG_SND_HDA_INPUT_BEEP=y\nCONFIG_SND_HDA_INPUT_BEEP_MODE=0" >> config-arch-64
 genkernel --kernel-config=config-arch-64 --luks --lvm all

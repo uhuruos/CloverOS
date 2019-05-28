@@ -40,8 +40,8 @@ while ! gpg --list-keys "CloverOS GNU/Linux (Package signing)"; do gpg --keyserv
 FETCHCOMMAND_HTTPS="wget -O \"\\\${DISTDIR}/\\\${FILE}\" \"\\\${URI}\"" emerge aria2
 
 #emerge gentoo-sources genkernel
-#wget http://liquorix.net/sources/5.0/config.amd64
-#genkernel --kernel-config=config.amd64 all
+#wget https://raw.githubusercontent.com/damentz/liquorix-package/master/linux-liquorix/debian/config/kernelarch-x86/config-arch-64
+#genkernel --kernel-config=config-arch-64 all
 wget https://cloveros.ga/s/kernel-libre.tar.lzma https://cloveros.ga/s/signatures/s/kernel-libre.tar.lzma.asc
 gpg --verify kernel-libre.tar.lzma.asc kernel-libre.tar.lzma && tar xf kernel-libre.tar.lzma
 rm kernel-libre.tar.lzma kernel-libre.tar.lzma.asc
