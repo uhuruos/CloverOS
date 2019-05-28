@@ -75,10 +75,6 @@ case "$choice" in
 		if [ ! -d /var/db/pkg/net-libs/gnutls-3.6.7/ ]; then
 			sudo FETCHCOMMAND_HTTPS="wget -O \"\${DISTDIR}/\${FILE}\" \"\${URI}\"" emerge -1 gnutls aria2
 		fi
-		if [ -d /var/db/pkg/app-emulation/wine-any-*/ ]; then
-			sudo emerge -C wine wine-any
-			sudo emerge wine
-		fi
 
 		sudo emerge --sync
 		sudo emerge -uvD --rebuilt-binaries=n @world
@@ -94,8 +90,6 @@ case "$choice" in
 		fi
 
 		./cloveros_settings.sh 9
-
-		sudo eselect wine set 1 &> /dev/null
 
 		echo -e "\nSystem updated."
 		;;
