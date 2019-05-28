@@ -77,12 +77,13 @@ case "$choice" in
 		if [ ! -d /var/db/pkg/net-libs/gnutls-3.6.7/ ]; then
 			sudo FETCHCOMMAND_HTTPS="wget -O \"\${DISTDIR}/\${FILE}\" \"\${URI}\"" emerge -1 gnutls aria2
 		fi
+		sudo emerge -1 libpsl
 
 		echo Removing dbus if possible...; for i in {dev-libs/glib,dev-qt/qtgui,dev-python/PyQt5}; do [ -d /var/db/pkg/$i* ] && sudo PORTAGE_BINHOST="https://cloveros.ga/s/nodbus" FETCHCOMMAND_HTTPS="wget -O \"\${DISTDIR}/\${FILE}\" \"\${URI}\"" emerge -1uD $i; done; sudo emerge --depclean
 
 		sudo emerge --sync
 		sudo emerge -uvD @world
-		sudo emerge --depclean
+		sudo emerge --depclean || sudo emerge -1 rhash m2crypto virtual/perl-ExtUtils-MakeMaker virtual/perl-File-Spec perl-core/File-Path virtual/perl-File-Path sys-apps/texinfo dev-perl/libintl-perl dev-perl/XML-Parser dev-perl/Unicode-EastAsianWidth dev-perl/Text-Unidecode && sudo emerge --depclean
 
 		echo Removing dbus if possible...; for i in {dev-libs/glib,dev-qt/qtgui,dev-python/PyQt5}; do [ -d /var/db/pkg/$i* ] && sudo PORTAGE_BINHOST="https://cloveros.ga/s/nodbus" FETCHCOMMAND_HTTPS="wget -O \"\${DISTDIR}/\${FILE}\" \"\${URI}\"" emerge -1uD $i; done; sudo emerge --depclean
 
