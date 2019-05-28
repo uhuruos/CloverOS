@@ -686,6 +686,7 @@ media-gfx/apngasm
 media-gfx/apngdis
 media-gfx/argyllcms
 media-gfx/cropgui
+media-gfx/darktable
 media-gfx/digikam
 media-gfx/displaycal
 media-gfx/eog
@@ -716,6 +717,7 @@ media-gfx/mirage
 media-gfx/mypaint
 media-gfx/nip2
 media-gfx/nomacs
+media-gfx/openexr_viewers
 media-gfx/openscad
 media-gfx/opentoonz
 media-gfx/optipng
@@ -840,10 +842,12 @@ media-sound/umurmur
 media-sound/xmms2
 media-sound/xwax
 media-sound/yoshimi
+media-tv/kodi
 media-tv/plex-media-server
 media-video/aegisub
 media-video/avidemux
 media-video/baka-mplayer
+media-video/cinelerra
 media-video/dvdbackup
 media-video/ffcast
 media-video/ffmpeg
@@ -1130,6 +1134,7 @@ sys-kernel/bliss-initramfs
 sys-kernel/dkms
 sys-kernel/dracut
 sys-kernel/genkernel
+sys-kernel/gentoo-sources:5.1.5
 sys-kernel/linux-firmware
 sys-power/acpi_call
 sys-power/acpitool

@@ -8,7 +8,6 @@ sys-boot/syslinux -custom-cflags
 sys-fs/zfs -custom-cflags
 sys-fs/zfs-kmod -custom-cflags
 sys-kernel/spl -custom-cflags
-games-emulation/zsnes -custom-cflags
 media-gfx/darktable colord
 gnome-extra/gnome-color-manager raw
 x11-misc/colord scanner -gusb
@@ -285,6 +284,7 @@ media-libs/libsdl2 gles # required by wayland
 x11-libs/libdrm video_cards_vmware # required by open-vm-tools
 media-libs/mesa video_cards_vmware # required by open-vm-tools
 media-plugins/gst-plugins-meta v4l # required by kamoso
+www-client/firefox -pgo # temporary
 media-gfx/blender -osl # temporary
 app-office/abiword -calendar # temporary
 dev-libs/gobject-introspection python_single_target_python2_7 -python_single_target_python3_6 # exaile
@@ -380,8 +380,7 @@ net-print/gtklp -ssl
 mail-client/nmh -ssl
 sys-block/mbuffer -ssl
 net-ftp/proftpd -ssl -libressl
-x11-misc/x11vnc -ssl libressl
-pp-emulation/open-vm-tools -ssl -vgauth -grabbitmqproxy
+app-emulation/open-vm-tools -ssl -vgauth -grabbitmqproxy
 
 #wine
 sys-apps/attr abi_x86_32

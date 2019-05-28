@@ -1,3 +1,16 @@
+=x11-wm/stumpwm-contrib-20180128 ~amd64
+# required by x11-wm/stumpwm-18.05::gentoo
+# required by x11-wm/stumpwm-contrib-20180128::gentoo
+# required by stumpwm-contrib (argument)
+=dev-lisp/alexandria-20171029 ~amd64                                                                                                               
+# required by x11-wm/stumpwm-18.05::gentoo
+# required by x11-wm/stumpwm-contrib-20180128::gentoo
+# required by stumpwm-contrib (argument)
+=dev-lisp/clx-0.7.5 ~amd64
+# required by x11-wm/stumpwm-contrib-20180128::gentoo
+# required by stumpwm-contrib (argument)
+=x11-wm/stumpwm-18.05 ~amd64
+
 #preference
 sys-devel/gcc
 sys-kernel/gentoo-sources
@@ -32,6 +45,7 @@ dev-db/mariadb # fixes build
 net-misc/spice-gtk # fixes build
 media-libs/openimageio # fixes build
 media-sound/mpd # fixes build
+media-gfx/openexr_viewers # fixes build
 x11-themes/sddm-gentoo-black-theme ** # fixes build
 x11-themes/terminology-themes ** # fixes build
 media-plugins/vapoursynth-d2vsource ** # fixes build
@@ -52,6 +66,8 @@ xfce-extra/thunar-shares-plugin # xfdesktop
 xfce-extra/thunar-vcs-plugin # xfdesktop
 xfce-extra/thunar-media-tags-plugin # xfdesktop
 xfce-extra/thunar-archive-plugin # xfdesktop
+<dev-libs/amdgpu-pro-opencl-19 # doesn't work for some reason
+=dev-util/lldb-7.1.0
 
 #libressl, remove when stable supports libressl
 <net-libs/nodejs-11::libressl
@@ -76,7 +92,6 @@ app-misc/mat2
 games-fps/duke3d-demodata # eduke32
 games-fps/eduke32
 net-misc/onioncircuits
-=dev-util/lldb-7.1.0
 app-misc/powerline
 media-video/vidcutter **
 x11-misc/gpaste
@@ -259,7 +274,6 @@ dev-util/eclipse-sdk-bin
 dev-java/icedtea
 dev-util/staruml-bin
 media-gfx/w3mimgfb
-dev-libs/amdgpu-pro-opencl
 sci-biology/foldingathome
 app-arch/brotli
 net-vpn/zeronet
@@ -308,7 +322,6 @@ games-board/pouetchess
 games-emulation/openmsx
 games-emulation/yabause
 games-emulation/desmume
-games-emulation/zsnes
 games-engines/openxcom
 games-fps/darkplaces
 games-fps/quake3-cpma

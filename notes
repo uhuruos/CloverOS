@@ -7,13 +7,11 @@ livecd_install.sh: uefi install, encryption
 
 packages that don't build:
 
-openshot 
-
 #doesn't emerge
-eduke32 ibus-sunpinyin stumpwm stumpwm-contrib racket cinelerra kodi eagle darktable bsnes-libretro-cplusplus98 monodevelop openexr_viewers
+eduke32 stumpwm stumpwm-contrib racket bsnes-libretro-cplusplus98 monodevelop
 
 #libressl
-nxplayer murmur makemkv eiskaltdcpp retroshare acme-tiny spyder johntheripper-jumbo
+nxplayer murmur makemkv eiskaltdcpp retroshare acme-tiny spyder johntheripper-jumbo eagle
 
 #requires AR="gcc-ar" commented out
 ftjam argyllcms
