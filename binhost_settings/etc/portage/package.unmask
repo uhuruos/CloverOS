@@ -1,6 +1,5 @@
 net-im/profanity::optmzr
-
-x11-plugins/telegram-purple::mva
+dev-libs/libmesode::optmzr # profanity
 
 dev-qt/qtnetwork::libressl
 net-libs/nodejs::libressl

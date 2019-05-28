@@ -1,4 +1,3 @@
-www-client/firefox -pgo # temporary
 games-fps/eduke32 demo
 x11-misc/xdg-utils -perl
 app-emulation/wine-staging -custom-cflags vkd3d esync

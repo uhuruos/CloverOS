@@ -1,11 +1,13 @@
---- todo ---
+todo:
 
 spacefm drive/ssh/ftp mounting
 automatic ~/.asoundrc configuration. it gets the first audio device without hdmi in the name
 livecd_install.sh: uefi install, encryption
 100% cloveros-libre
 
---- packages that don't build ---
+packages that don't build:
+
+openshot 
 
 #doesn't emerge
 eduke32 ibus-sunpinyin stumpwm stumpwm-contrib racket cinelerra kodi eagle darktable bsnes-libretro-cplusplus98 monodevelop openexr_viewers
