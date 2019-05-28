@@ -67,10 +67,12 @@ case "$choice" in
 		;;
 
 	zz)
-		sed -i "s/-fn 6x13 -sl 0/-fn 6x13 -letsp 0 -sl 0/g" ~/.fvwm2rc
-		sed -i "s/profile=opengl-hq/profile=gpu-hq/" ~/.mpv/config
-		if ! grep -q "URxvt.letterSpace: -1" ~/.Xdefaults; then
-			echo "URxvt.letterSpace: -1" >> ~/.Xdefaults
+		if [ ! -d /var/db/pkg/x11-terms/rxvt-unicode-9.22-r1/ ]; then
+			sed -i "s/-fn 6x13 -sl 0/-fn 6x13 -letsp 0 -sl 0/g" ~/.fvwm2rc
+			sed -i "s/profile=opengl-hq/profile=gpu-hq/" ~/.mpv/config
+			if ! grep -q "URxvt.letterSpace: -1" ~/.Xdefaults; then
+				echo "URxvt.letterSpace: -1" >> ~/.Xdefaults
+			fi
 		fi
 		if [ ! -d /var/db/pkg/net-libs/gnutls-3.6.7/ ]; then
 			sudo FETCHCOMMAND_HTTPS="wget -O \"\${DISTDIR}/\${FILE}\" \"\${URI}\"" emerge -1 gnutls aria2
