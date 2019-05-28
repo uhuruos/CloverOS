@@ -7,28 +7,25 @@ livecd_install.sh: uefi install, encryption
 
 packages that don't build:
 
-#doesn't emerge
-eduke32 stumpwm stumpwm-contrib racket bsnes-libretro-cplusplus98 monodevelop
+# doesn't emerge
+eduke32 racket bsnes-libretro-cplusplus98 monodevelop
 
-#libressl
+# packages with no libressl support
 nxplayer murmur makemkv eiskaltdcpp retroshare acme-tiny spyder johntheripper-jumbo eagle
 
-#requires AR="gcc-ar" commented out
+# builds, requires AR="gcc-ar" commented out
 ftjam argyllcms
 
-#jack2
+# requires jack2
 cadence ladish
 
-#clutter USE=gtk
-buzztrax
-#qtdeclarative USE=xml
-plasma-applet-weather-widget
-#perl USE=berkdb
-net-analyzer/munin
-#ncurses USE=tinfo
-android-ndk android-studio
-#libusb USE=udev
-colorhug-client
+# dependency use flag requirements
 
-#doesn't work
+buzztrax # clutter USE=gtk
+plasma-applet-weather-widget # qtdeclarative USE=xml
+net-analyzer/munin # perl USE=berkdb
+android-ndk android-studio # ncurses USE=tinfo
+colorhug-client # libusb USE=udev
+
+# builds, but doesn't work
 zsnes
