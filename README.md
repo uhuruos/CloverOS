@@ -20,7 +20,7 @@ x86_64 CPU that supports SSSE3 (Core 2 Duo, AMD FX and higher), 5GB of disk spac
 ```
 sudo emerge --sync
 sudo emerge -uavD @world
-sudo emerge --depclean
+sudo emerge --depclean || sudo emerge -u1 virtual/perl-File-Spec dev-perl/Locale-gettext dev-perl/libintl-perl virtual/perl-ExtUtils-MakeMaker dev-libs/icu dev-libs/boost dev-perl/Unicode-EastAsianWidth sys-apps/texinfo virtual/perl-ExtUtils-MakeMaker dev-perl/Text-Unidecode dev-perl/XML-Parser && sudo emerge --depclean
 ```
 
 ### Updating config files after upgrading system (Optional)
