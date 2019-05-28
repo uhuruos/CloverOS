@@ -19,6 +19,9 @@ ftjam argyllcms
 # requires jack2
 cadence ladish
 
+# requires llvm 6
+beignet
+
 # dependency use flag requirements
 
 buzztrax # clutter USE=gtk

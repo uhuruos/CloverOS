@@ -78,7 +78,7 @@ case "$choice" in
 
 		sudo emerge --sync
 		sudo emerge -uvD --rebuilt-binaries=n @world
-		sudo emerge --depclean || sudo emerge -1O virtual/perl-ExtUtils-MakeMaker virtual/perl-File-Spec perl-core/File-Path:0 virtual/perl-File-Path:0 sys-apps/texinfo:0 dev-perl/libintl-perl:0 dev-perl/XML-Parser:0 dev-perl/Unicode-EastAsianWidth:0 dev-perl/Text-Unidecode:0 && sudo emerge --depclean
+		sudo emerge --depclean
 
 		echo Removing dbus if possible...; for i in {dev-libs/glib,dev-qt/qtgui,dev-python/PyQt5}; do [ -d /var/db/pkg/$i* ] && sudo PORTAGE_BINHOST="https://cloveros.ga/s/nodbus" FETCHCOMMAND_HTTPS="wget -O \"\${DISTDIR}/\${FILE}\" \"\${URI}\"" emerge -1uD $i; done; sudo emerge --depclean
 
@@ -107,7 +107,7 @@ case "$choice" in
 			echo "Kernel up to date."
 		else
 			rm kernel.tar.lzma kernel.tar.lzma.asc &> /dev/null
-			wget https://cloveros.ga/s/kernel.tar.lzma https://cloveros.ga/s/signatures/s/kernel.tar.lzma.asc
+			wget -o /dev/null https://cloveros.ga/s/kernel.tar.lzma https://cloveros.ga/s/signatures/s/kernel.tar.lzma.asc
 			if sudo gpg --verify kernel.tar.lzma.asc kernel.tar.lzma; then
 				sudo tar -C / -xf kernel.tar.lzma
 				sudo grub-mkconfig -o /boot/grub/grub.cfg
