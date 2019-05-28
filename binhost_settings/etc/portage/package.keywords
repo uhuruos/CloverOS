@@ -23,7 +23,6 @@ net-misc/youtube-dl # stable always outdated/never works
 =dev-libs/ell-0.20 # iwd
 =dev-libs/nspr-4.21 # chromium
 =sys-auth/polkit-0.115-r4 # spidermonkey 52 won't build
-media-plugins/gst-plugins-libav # ffmpeg
 media-libs/zimg # vapoursynth
 dev-lisp/clisp # fixes build
 media-video/vdr # fixes build
@@ -36,6 +35,7 @@ media-sound/mpd # fixes build
 x11-themes/sddm-gentoo-black-theme ** # fixes build
 x11-themes/terminology-themes ** # fixes build
 media-plugins/vapoursynth-d2vsource ** # fixes build
+net-misc/freerdp ** # fixes build
 media-fonts/vlgothic # old
 app-emulation/winetricks ** # old
 games-emulation/dolphin ** # old
