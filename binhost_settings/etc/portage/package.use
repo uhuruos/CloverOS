@@ -44,7 +44,6 @@ media-gfx/ahoviewer -libsecret -rar
 net-nntp/sabnzbd -rar
 www-servers/tomcat extra-webapps
 media-sound/mp3blaster vorbis
-xfce-base/thunar udisks -trash-panel-plugin
 xfce-extra/tumbler ffmpeg
 media-plugins/gst-plugins-meta ffmpeg theora vorbis ogg
 media-libs/gst-plugins-base theora
@@ -296,7 +295,6 @@ dev-cpp/gtkmm X
 x11-libs/gdk-pixbuf X
 media-libs/flac ogg
 sys-boot/grub mount
-gnome-base/gvfs udisks
 net-misc/spice-gtk gtk3 usbredir
 app-crypt/gpgme qt5
 media-libs/cogl gles2
