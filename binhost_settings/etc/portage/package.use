@@ -251,6 +251,7 @@ dev-python/PyQt5 webengine # required by anki qutebrowser (dbus)
 sys-auth/consolekit policykit # required by kde (dbus)
 sys-auth/polkit consolekit # required by kde/mate (dbus)
 sys-apps/accountsservice consolekit # required by kde/mate (dbus)
+gnome-base/gvfs udisks # required by caja
 mate-extra/mate-screensaver -pam # prevents gnome-keyring
 media-sound/bitwig-studio -jack # prevents jack2
 www-client/palemoon -system-sqlite # fix: doesn't work without it

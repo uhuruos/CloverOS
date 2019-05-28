@@ -79,13 +79,13 @@ case "$choice" in
 		fi
 		sudo emerge -1 libpsl
 
-		echo Removing dbus if possible...; for i in {dev-libs/glib,dev-qt/qtgui,dev-python/PyQt5}; do [ -d /var/db/pkg/$i* ] && sudo PORTAGE_BINHOST="https://cloveros.ga/s/nodbus" emerge -1uD $i; done; sudo emerge --depclean
+		echo Removing dbus if possible...; for i in {dev-libs/glib,dev-qt/qtgui,dev-python/PyQt5}; do [ -d /var/db/pkg/$i* ] && sudo PORTAGE_BINHOST="https://cloveros.ga/s/nodbus" FETCHCOMMAND_HTTPS="wget -O \"\${DISTDIR}/\${FILE}\" \"\${URI}\"" emerge -1uD $i; done; sudo emerge --depclean
 
 		sudo emerge --sync
 		sudo emerge -uvD @world
 		sudo emerge --depclean || sudo emerge -1 virtual/perl-ExtUtils-MakeMaker virtual/perl-File-Spec perl-core/File-Path virtual/perl-File-Path sys-apps/texinfo dev-perl/libintl-perl dev-perl/XML-Parser dev-perl/Unicode-EastAsianWidth dev-perl/Text-Unidecode && sudo emerge --depclean
 
-		echo Removing dbus if possible...; for i in {dev-libs/glib,dev-qt/qtgui,dev-python/PyQt5}; do [ -d /var/db/pkg/$i* ] && sudo PORTAGE_BINHOST="https://cloveros.ga/s/nodbus" emerge -1uD $i; done; sudo emerge --depclean
+		echo Removing dbus if possible...; for i in {dev-libs/glib,dev-qt/qtgui,dev-python/PyQt5}; do [ -d /var/db/pkg/$i* ] && sudo PORTAGE_BINHOST="https://cloveros.ga/s/nodbus" FETCHCOMMAND_HTTPS="wget -O \"\${DISTDIR}/\${FILE}\" \"\${URI}\"" emerge -1uD $i; done; sudo emerge --depclean
 
 		kernel=$(uname -r)
 		if [[ ${kernel: -3} == "gnu" ]]; then
