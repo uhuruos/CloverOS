@@ -1,3 +1,4 @@
+www-client/firefox -pgo # temporary
 games-fps/eduke32 demo
 x11-misc/xdg-utils -perl
 app-emulation/wine-staging -custom-cflags vkd3d esync
@@ -373,7 +374,6 @@ dev-lang/tk truetype
 #libressl
 net-misc/curl curl_ssl_libressl -curl_ssl_openssl
 media-video/ffmpeg openssl
-net-libs/libssh -libressl mbedtls
 net-libs/nodejs bundled-ssl
 app-crypt/johntheripper minimal -openmp -opencl
 net-p2p/mktorrent -ssl
@@ -382,8 +382,9 @@ net-ftp/gproftpd -ssl
 net-print/gtklp -ssl
 mail-client/nmh -ssl
 sys-block/mbuffer -ssl
-net-mail/isync -ssl -libressl
-app-emulation/open-vm-tools -ssl -vgauth -grabbitmqproxy
+net-ftp/proftpd -ssl -libressl
+x11-misc/x11vnc -ssl libressl
+pp-emulation/open-vm-tools -ssl -vgauth -grabbitmqproxy
 
 #wine
 sys-apps/attr abi_x86_32

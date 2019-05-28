@@ -1,3 +1,5 @@
+net-im/profanity::optmzr
+
 x11-plugins/telegram-purple::mva
 
 dev-qt/qtnetwork::libressl

@@ -58,6 +58,7 @@ xfce-extra/thunar-archive-plugin # xfdesktop
 =net-libs/nghttp2-1.38.0 # nodejs
 =net-dns/c-ares-1.15.0 # nodejs
 =dev-libs/libuv-1.23.2 # nodejs
+=net-libs/http-parser-2.9.2
 dev-libs/icu # nodejs
 dev-qt/qtnetwork::libressl
 dev-perl/Net-SSLeay::libressl
@@ -69,6 +70,8 @@ www-client/elinks
 net-misc/megatools::jm-overlay
 
 #keyworded, remove when stable exists
+net-im/profanity
+dev-libs/libmesode # profanity
 app-misc/mat2
 games-fps/duke3d-demodata # eduke32
 games-fps/eduke32
