@@ -59,3 +59,5 @@ app-emulation/wine-staging::gentoo # bobwya
 >dev-lang/tcl-8.6 # fixes build
 
 >x11-misc/xdg-utils-1.1.1-r1 # dbus dependency
+
+>net-libs/libsoup-2.6
