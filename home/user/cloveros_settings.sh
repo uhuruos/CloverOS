@@ -334,7 +334,7 @@ case "$choice" in
 		echo "Running the following:"
 		echo "sudo emerge eselect-repository"
 		echo "sudo mkdir /etc/portage/repos.conf"
-		echo 'sudo xargs eselect repository enable "{}" <<< "'.$overlays.'"'
+		echo 'sudo xargs eselect repository enable "{}" <<< "'$overlays'"'
 		echo "sudo emerge --sync"
 		sleep 2
 		sudo emerge eselect-repository
