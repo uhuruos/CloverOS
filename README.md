@@ -672,9 +672,10 @@ Make sure the computer you run this on has nothing important on it. (Dedicated g
 
 ### Recompiling all packages and kernel with -march=native for increased performance
 ```
-./cloveros_settings.sh 5
 ./cloveros_settings.sh c
-sudo emerge -eDv --jobs=4 --keep-going=y --exclude=nodejs --exclude=qtnetwork @world
+./cloveros_settings.sh o
+./cloveros_settings.sh 5
+sudo emerge -eDv --jobs=4 --keep-going=y @world
 
 sudo emerge gentoo-sources genkernel lz4
 sudo eselect kernel set 1
@@ -694,14 +695,6 @@ sudo binutils-config --linker ld.gold
 To update the system using source: `./cloveros_settings.sh c && sudo emerge --sync && sudo emerge -uavDN world`
 
 To remove dbus: `sudo USE="-dbus" emerge -1 glib qtgui && sudo emerge --depclean`
-
-Certain packages may be from an overlay. To install, add overlays:
-```
-sudo emerge eselect-repository
-sudo mkdir /etc/portage/repos.conf
-grep -Po "(?<=\*/\*::).*" /etc/portage/package.mask | sudo xargs eselect repository enable
-sudo emerge --sync
-```
 
 ### What if CloverOS dies? Will my install become useless?
 No. Switch to source by running `./cloveros_settings.sh 5`

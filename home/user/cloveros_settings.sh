@@ -331,7 +331,11 @@ case "$choice" in
 	o)
 		overlays=$(curl -s $gitprefix/binhost_settings/etc/portage/package.mask | grep -Po "(?<=\*/\*::).*")
 		overlaysspaced="${overlays//$'\n'/ }"
-		echo "Adding the following overlays: $overlaysspaced"
+		echo "Running the following:"
+		echo "sudo emerge eselect-repository"
+		echo "sudo mkdir /etc/portage/repos.conf"
+		echo 'sudo xargs eselect repository enable "{}" <<< "'.$overlays.'"'
+		echo "sudo emerge --sync"
 		sleep 2
 		sudo emerge eselect-repository
 		sudo mkdir /etc/portage/repos.conf
