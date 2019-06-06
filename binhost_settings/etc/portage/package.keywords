@@ -15,7 +15,6 @@ media-libs/dav1d # firefox
 #old, remove when stable is bumped up
 sys-fs/zfs # kernel 5.0
 sys-fs/zfs-kmod # zfs
-sys-kernel/spl # zfs
 =virtual/linux-sources-3-r1 # zfs
 app-emulation/virtualbox # kernel 5.0
 app-emulation/virtualbox-guest-additions # virtualbox

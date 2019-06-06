@@ -48,6 +48,7 @@
 net-libs/nodejs::gentoo # libressl
 dev-qt/qtnetwork::gentoo # libressl
 >media-gfx/argyllcms-1.9.2 # libressl
+>net-libs/libvncserver-0.9.11-r1
 
 x11-libs/vte:2.91::gentoo # ::eroen, termite
 virtual/wine::gentoo # bobwya
