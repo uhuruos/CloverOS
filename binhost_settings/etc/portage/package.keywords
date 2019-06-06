@@ -66,6 +66,7 @@ net-libs/nodejs::libressl
 =net-dns/c-ares-1.15.0 # nodejs
 =net-libs/http-parser-2.9.2 # nodejs
 net-misc/megatools::jm-overlay
+app-crypt/mit-krb5
 www-client/dillo
 app-editors/xemacs
 www-client/elinks
