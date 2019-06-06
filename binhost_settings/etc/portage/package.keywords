@@ -2,7 +2,10 @@
 sys-devel/gcc
 sys-kernel/gentoo-sources
 media-libs/mesa
+media-video/mpv
+media-libs/shaderc # mpv
 x11-libs/gtk+:3::mv # removes dbus
+app-emulation/winetricks::cloveros-overlay ** # overlay
 www-client/firefox
 dev-libs/nss # firefox
 dev-util/cbindgen # firefox
@@ -38,13 +41,9 @@ x11-themes/terminology-themes ** # fixes build
 media-plugins/vapoursynth-d2vsource ** # fixes build
 net-misc/freerdp ** # fixes build
 media-fonts/vlgothic # old
-app-emulation/winetricks ** # old
 games-emulation/dolphin ** # old
 games-emulation/pcsx2 ** # old
 games-emulation/ppsspp ** # old
-media-video/ffmpeg # old
-media-video/mpv # old
-media-libs/shaderc # mpv
 dev-libs/beignet # llvm
 www-plugins/lightspark ** # llvm
 xfce-base/xfdesktop # remove dbus requirement for thunar
@@ -60,20 +59,17 @@ dev-lisp/alexandria # stumpwm
 dev-lisp/clx # stumpwm
 
 #libressl, remove when stable supports libressl
-<net-libs/nodejs-11::libressl
-=net-libs/nghttp2-1.38.0 # nodejs
-=net-dns/c-ares-1.15.0 # nodejs
-=dev-libs/libuv-1.23.2 # nodejs
-=net-libs/http-parser-2.9.2
-dev-libs/icu # nodejs
+app-crypt/qca::libressl
 dev-qt/qtnetwork::libressl
 dev-perl/Net-SSLeay::libressl
-app-crypt/qca::libressl
-app-crypt/mit-krb5
+net-libs/nodejs::libressl
+=net-libs/nghttp2-1.38.0 # nodejs
+=net-dns/c-ares-1.15.0 # nodejs
+=net-libs/http-parser-2.9.2 # nodejs
+net-misc/megatools::jm-overlay
 www-client/dillo
 app-editors/xemacs
 www-client/elinks
-net-misc/megatools::jm-overlay
 
 #keyworded, remove when stable exists
 x11-wm/stumpwm-contrib

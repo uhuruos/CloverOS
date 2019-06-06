@@ -47,9 +47,7 @@
 
 net-libs/nodejs::gentoo # libressl
 dev-qt/qtnetwork::gentoo # libressl
-dev-perl/Net-SSLeay::gentoo # libressl
-app-crypt/qca::gentoo # libressl
->net-libs/libvncserver-0.9.11-r1 # libressl
+>media-gfx/argyllcms-1.9.2 # libressl
 
 x11-libs/vte:2.91::gentoo # ::eroen, termite
 virtual/wine::gentoo # bobwya
@@ -59,5 +57,3 @@ app-emulation/wine-staging::gentoo # bobwya
 >dev-lang/tcl-8.6 # fixes build
 
 >x11-misc/xdg-utils-1.1.1-r1 # dbus dependency
-
->net-libs/libsoup-2.60
