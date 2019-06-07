@@ -378,6 +378,7 @@ net-print/gtklp -ssl
 mail-client/nmh -ssl
 sys-block/mbuffer -ssl
 net-ftp/gproftpd -ssl
+net-ftp/proftpd -ssl -libressl
 app-emulation/open-vm-tools -ssl -vgauth -grabbitmqproxy
 
 #wine
