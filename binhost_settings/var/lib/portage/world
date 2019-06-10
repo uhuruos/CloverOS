@@ -1017,7 +1017,6 @@ net-vpn/wireguard
 net-vpn/zeronet
 net-wireless/aircrack-ng
 net-wireless/blueman
-net-wireless/broadcom-sta
 net-wireless/cubicsdr
 net-wireless/gnuradio
 net-wireless/iw
