@@ -223,7 +223,7 @@ media-sound/ncmpcpp iconv unicode clock curl fftw outputs taglib visualizer
 media-sound/mixxx shout aac ffmpeg hid mp3 mp4 wavpack
 app-office/texstudio video
 www-client/links fbcon gpm
-media-gfx/imagemagick hdri fftw lqr
+media-gfx/imagemagick hdri fftw lqr q32
 media-gfx/feh exif curl
 x11-terms/rxvt-unicode 256-color blink fading-colors unicode3 xft gdk-pixbuf
 net-analyzer/vnstat gd
