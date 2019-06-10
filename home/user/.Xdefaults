@@ -1,4 +1,4 @@
-URxvt.font: xft:Hack:pixelsize=12,xft:Liberation\ Mono
+URxvt.font: xft:Hack:pixelsize=12
 URxvt.letterSpace: -1
 URxvt.scrollBar: false
 URxvt.cursorBlink: true
