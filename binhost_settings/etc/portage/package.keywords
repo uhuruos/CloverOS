@@ -4,7 +4,6 @@ sys-kernel/gentoo-sources
 media-libs/mesa
 media-video/mpv
 media-libs/shaderc # mpv
-media-fonts/unifont
 x11-libs/gtk+:3::mv # removes dbus
 app-emulation/winetricks::cloveros-overlay ** # overlay
 www-client/firefox
