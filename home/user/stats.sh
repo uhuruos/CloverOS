@@ -267,7 +267,7 @@ void main(void) {
 		char date[30];
 		strftime(date, 30, "%a %d %b %Y %H:%M:%S %Z", info);
 
-		printf("\e[?25l%s Up: \e[32m%s\e[0m Proc: \e[32m%s\e[0m Active: \e[32m%s\e[0m Cpu: \e[32m%s\e[0m Mem: \e[32m%s\e[0m Net In: \e[32m%s (%s)\e[0m Net Out: \e[32m%s (%s)\e[0m Temp: \e[32m%s\e[0m Vol: \e[32m%s\e[0m AC: \e[32m%s\e[0m Batt: \e[32m%s\e[0m Bright: \e[32m%s\e[0m Wifi: \e[32m%s\e[0m %s             \r", uname, uptime, processes, active, cpu, memory, netin, totalin, netout, totalout, temperature, volume, ac, battery, brightness, wifi, date);
+		printf("%s Up: \e[32m%s\e[0m Proc: \e[32m%s\e[0m Active: \e[32m%s\e[0m Cpu: \e[32m%s\e[0m Mem: \e[32m%s\e[0m Net In: \e[32m%s (%s)\e[0m Net Out: \e[32m%s (%s)\e[0m Temp: \e[32m%s\e[0m Vol: \e[32m%s\e[0m AC: \e[32m%s\e[0m Batt: \e[32m%s\e[0m Bright: \e[32m%s\e[0m Wifi: \e[32m%s\e[0m %s             \e[?25l\r", uname, uptime, processes, active, cpu, memory, netin, totalin, netout, totalout, temperature, volume, ac, battery, brightness, wifi, date);
 		fflush(stdout);
 		firstrun = 0;
 		nanosleep((struct timespec[]){{2, 0}}, NULL);
