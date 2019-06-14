@@ -72,6 +72,9 @@ app-editors/xemacs
 www-client/elinks
 
 #keyworded, remove when stable exists
+media-gfx/lsix
+media-gfx/zgv **
+media-libs/svgalib ** # zgv
 x11-wm/stumpwm-contrib
 net-im/profanity
 dev-libs/libmesode # profanity

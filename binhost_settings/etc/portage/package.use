@@ -307,7 +307,7 @@ dev-games/ogre gl3plus -gles3 -gles2
 dev-libs/boost icu nls context python
 media-libs/sdl-mixer vorbis flac mikmod mod midi fluidsynth
 net-nds/openldap sasl
-sci-libs/hdf5 -threads
+sci-libs/hdf5 -threads # required for USE cxx/hl
 dev-games/mygui -opengl
 dev-lang/luajit lua52compat
 dev-lang/python sqlite
