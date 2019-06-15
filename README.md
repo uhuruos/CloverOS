@@ -146,6 +146,7 @@ This disables the binhost and uses Portage's ebuilds for packages. Now you can e
 * [Installing proprietary Nvidia drivers](#installing-proprietary-nvidia-drivers)
 * [Installing bumblebee for laptops](#installing-bumblebee-for-laptops)
 * [Installing VirtualBox](#installing-virtualbox)
+* [Wine with esync](#wine-with-esync)
 * [Steam stops working](#steam-stops-working)
 * [What are USE flags?](#what-are-use-flags)
 * [What are keywording and unmasking?](#what-are-keywording-and-unmasking)
@@ -255,6 +256,14 @@ sudo modprobe -a vboxdrv vboxnetadp vboxnetflt
 ```
 
 Reboot if your kernel isn't up to date.
+
+### Wine with esync
+First run:
+```
+sudo sh -c "echo $USER\ N524288 >> /etc/limits"
+```
+
+To enable esync, use environment variable `export WINEESYNC=1` This can be added to `~/.zshrc` or `~/.bashrc`
 
 ### Steam stops working
 Start steam with `rm -R ~/.steam/ && steam &`
