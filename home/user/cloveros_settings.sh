@@ -412,6 +412,7 @@ case "$choice" in
 		echo 'sudo EMERGE_DEFAULT_OPTS="" emerge \=gentoo-sources-'$(uname -r | sed 's/-.*//')
 		echo 'sudo eselect kernel set linux-'$(uname -r)
 		echo "sudo wget https://raw.githubusercontent.com/damentz/liquorix-package/$(uname -r | sed 's/\.[^.]*$//')/linux-liquorix/debian/config/kernelarch-x86/config-arch-64 -O /usr/src/linux/.config"
+		echo 'sed -i "s/CONFIG_CRYPTO_CRC32C=m/CONFIG_CRYPTO_CRC32C=y/; s/CONFIG_FW_LOADER_USER_HELPER=y/CONFIG_FW_LOADER_USER_HELPER=n/; s/CONFIG_I2C_NVIDIA_GPU=/#CONFIG_I2C_NVIDIA_GPU=/" /usr/src/linux/.config'
 		echo "sudo emerge nvidia-drivers bumblebee"
 		echo "sudo depmod"
 		echo "sudo eselect opengl set nvidia"
@@ -421,6 +422,7 @@ case "$choice" in
 		sudo EMERGE_DEFAULT_OPTS="" emerge \=gentoo-sources-$(uname -r | sed 's/-.*//')
 		sudo eselect kernel set linux-$(uname -r)
 		sudo wget https://raw.githubusercontent.com/damentz/liquorix-package/$(uname -r | sed 's/\.[^.]*$//')/linux-liquorix/debian/config/kernelarch-x86/config-arch-64 -O /usr/src/linux/.config
+		sed -i "s/CONFIG_CRYPTO_CRC32C=m/CONFIG_CRYPTO_CRC32C=y/; s/CONFIG_FW_LOADER_USER_HELPER=y/CONFIG_FW_LOADER_USER_HELPER=n/; s/CONFIG_I2C_NVIDIA_GPU=/#CONFIG_I2C_NVIDIA_GPU=/" /usr/src/linux/.config
 		sudo emerge nvidia-drivers bumblebee
 		sudo depmod
 		sudo eselect opengl set nvidia
