@@ -12,7 +12,7 @@ userpassword=password
 mkdir libre_image/
 cd libre_image/
 
-builddate=$(curl -s http://distfiles.gentoo.org/releases/amd64/autobuilds/current-stage3-amd64/ | sed -nr 's/.*href="stage3-amd64-([0-9].*).tar.xz">.*/\1/p')
+builddate=$(curl -s http://distfiles.gentoo.org/releases/amd64/autobuilds/current-stage3-amd64/ | sed -nr "s/.*href=\"stage3-amd64-([0-9].*).tar.xz\">.*/\1/p")
 wget http://distfiles.gentoo.org/releases/amd64/autobuilds/current-stage3-amd64/stage3-amd64-"$builddate".tar.xz
 tar pxf stage3*
 rm -f stage3*
@@ -57,7 +57,7 @@ gpasswd -a $username wheel
 emerge -eDv @world xorg-server fvwm spacefm rxvt-unicode nitrogen compton nomacs sudo wpa_supplicant porthole firefox emacs gimp mpv smplayer rtorrent weechat alsa-utils zsh zsh-completions gentoo-zsh-completions liberation-fonts hack vlgothic nano scrot xbindkeys xinput arandr qastools slock xarchiver p7zip games-envd gparted squashfs-tools os-prober exfat-nofuse sshfs curlftpfs
 PORTAGE_BINHOST="https://cloveros.ga/s/nodbus" FETCHCOMMAND_HTTPS="wget -O \"\\\${DISTDIR}/\\\${FILE}\" \"\\\${URI}\"" emerge -1 glib qtgui
 emerge --depclean
-echo 'frozen-files="/etc/sudoers"' >> /etc/dispatch-conf.conf
+echo "frozen-files=\"/etc/sudoers\"" >> /etc/dispatch-conf.conf
 sed -i "s/# %wheel ALL=(ALL) NOPASSWD: ALL/%wheel ALL=(ALL) NOPASSWD: ALL/" /etc/sudoers
 sed -Ei "s@c([2-6]):2345:respawn:/sbin/agetty 38400 tty@#\0@" /etc/inittab
 sed -i "s@c1:12345:respawn:/sbin/agetty 38400 tty1 linux@c1:12345:respawn:/sbin/agetty --noclear 38400 tty1 linux@" /etc/inittab
@@ -86,7 +86,7 @@ wget $gitprefix/home/user/.config/nomacs/Image\ Lounge.conf -P .config/nomacs/
 mkdir -p ~/.mozilla/firefox/default/
 echo -e "[Profile0]\nName=default\nIsRelative=1\nPath=default\nDefault=1" > ~/.mozilla/firefox/profiles.ini
 echo -e "[11457493C5A56847]\nDefault=default" > ~/.mozilla/firefox/installs.ini
-curl https://spyware.neocities.org/guides/firefox.html | sed "/user_pref/,\\\$\!d; s/<br>//; /devtools.webide.autoinstallADBHelper/q;" > ~/.mozilla/firefox/default/user.js
+wget -O - https://spyware.neocities.org/guides/firefox.html | sed '/user_pref/,\\\$!d; s/<br>//; /devtools.webide.autoinstallADBHelper/q' > ~/.mozilla/firefox/default/user.js
 wget $gitprefix/home/user/.config/spacefm/session -P .config/spacefm/
 sed -i "s@/home/user/@/home/$username/@" .config/spacefm/session
 wget $gitprefix/home/user/.config/mimeapps.list -P .config/
@@ -99,7 +99,7 @@ chown -R $username /home/$username/
 wget $gitprefix/livecd_install.sh -P /home/$username/
 chmod +x /home/$username/livecd_install.sh
 sed -i "s@c1:12345:respawn:/sbin/agetty --noclear 38400 tty1 linux@c1:12345:respawn:/sbin/agetty -a $username --noclear 38400 tty1 linux@" /etc/inittab
-sed -i 's/^/#/' /home/$username/.bash_profile
+sed -i "s/\^/#/" /home/$username/.bash_profile
 echo -e 'if [ -z "\$DISPLAY" ] && [ -z "\$SSH_CLIENT" ] && ! pgrep X > /dev/null; then
 X &
 export DISPLAY=:0
@@ -123,7 +123,7 @@ wget https://cloveros.ga/s/kernel-livecd.tar.lzma -O kernel-livecd-libre.tar.lzm
 tar -C libre_image/lib/modules/ -xf kernel-livecd-libre.tar.lzma --wildcards \*-aufs/\*
 mksquashfs libre_image/ libre_image.squashfs -b 1024k -comp xz -Xbcj x86 -Xdict-size 100%
 mkdir libre_iso/
-builddate=$(curl -s http://distfiles.gentoo.org/releases/amd64/autobuilds/current-install-amd64-minimal/ | sed -nr 's/.*href="install-amd64-minimal-([0-9].*).iso">.*/\1/p')
+builddate=$(curl -s http://distfiles.gentoo.org/releases/amd64/autobuilds/current-install-amd64-minimal/ | sed -nr "s/.*href=\"install-amd64-minimal-([0-9].*).iso\">.*/\1/p")
 wget http://distfiles.gentoo.org/releases/amd64/autobuilds/current-install-amd64-minimal/install-amd64-minimal-$builddate.iso -P libre_iso/
 xorriso -osirrox on -indev libre_iso/*.iso -extract / libre_iso/
 rm libre_iso/*.iso
