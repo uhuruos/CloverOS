@@ -134,8 +134,7 @@ wget $gitprefix/home/user/.config/nomacs/Image\ Lounge.conf -P .config/nomacs/
 mkdir -p ~/.mozilla/firefox/default/
 echo -e "[Profile0]\nName=default\nIsRelative=1\nPath=default\nDefault=1" > ~/.mozilla/firefox/profiles.ini
 echo -e "[11457493C5A56847]\nDefault=default" > ~/.mozilla/firefox/installs.ini
-wget https://raw.githubusercontent.com/pyllyukko/user.js/master/user.js -P ~/.mozilla/firefox/default/
-sed -i "s@\(.*\"\(browser.privatebrowsing.autostart\|privacy.sanitize.sanitizeOnShutdown\|privacy.clearOnShutdown.*\|network.cookie.lifetimePolicy\|signon.rememberSignons\|clipboard.autocopy\|browser.display.use_document_fonts\|places.history.enabled\|pdfjs.disabled\)\".*\)@//commented out: \1@g" ~/.mozilla/firefox/default/user.js
+curl https://spyware.neocities.org/guides/firefox.html | sed "/user_pref/,\$\!d; s/<br>//; /devtools.webide.autoinstallADBHelper/q;" > ~/.mozilla/firefox/default/user.js
 wget $gitprefix/home/user/.config/spacefm/session -P .config/spacefm/
 sed -i "s@/home/user/@/home/$username/@" .config/spacefm/session
 wget $gitprefix/home/user/.config/mimeapps.list -P .config/
