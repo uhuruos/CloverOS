@@ -109,12 +109,12 @@ case "$choice" in
 		;;
 
 	4)
-		kernelversion=$(curl -s https://cloveros.ga/s/kernel.tar.lzma | lzma -d | strings | grep -aoPm1 "(?<=x86_64-).*(?=-gentoo)")
+		kernelversion=$(wget -qO - https://cloveros.ga/s/kernel.tar.lzma | lzma -d | strings | grep -aoPm1 "(?<=x86_64-).*(?=-gentoo)")
 		if ls /boot/ | grep -q $kernelversion; then
 			echo "Kernel up to date."
 		else
 			rm kernel.tar.lzma kernel.tar.lzma.asc &> /dev/null
-			wget -o /dev/null https://cloveros.ga/s/kernel.tar.lzma https://cloveros.ga/s/signatures/s/kernel.tar.lzma.asc
+			wget https://cloveros.ga/s/kernel.tar.lzma https://cloveros.ga/s/signatures/s/kernel.tar.lzma.asc
 			if sudo gpg --verify kernel.tar.lzma.asc kernel.tar.lzma; then
 				sudo tar -C / -xf kernel.tar.lzma
 				sudo grub-mkconfig -o /boot/grub/grub.cfg
@@ -162,7 +162,7 @@ case "$choice" in
 		;;
 
 	7)
-		sudo date +%s -s @"$(curl -s http://www.4webhelp.net/us/timestamp.php | grep -oP '(?<=p" value=").*(?=" s)')"
+		sudo date +%s -s @"$(wget -qO - http://www.4webhelp.net/us/timestamp.php | grep -oP '(?<=p" value=").*(?=" s)')"
 		echo -e "\nTime set."
 		;;
 
@@ -248,7 +248,7 @@ case "$choice" in
 		;;
 
 	l)
-		kernelversion=$(curl -s https://cloveros.ga/s/kernel-libre.tar.lzma | lzma -d | strings | grep -aoPm1 "(?<=x86_64-).*(?=-gentoo)")
+		kernelversion=$(wget -qO - https://cloveros.ga/s/kernel-libre.tar.lzma | lzma -d | strings | grep -aoPm1 "(?<=x86_64-).*(?=-gentoo)")
 		if ls /boot/ | grep -q $kernelversion-gentoo-gnu; then
 			echo "Kernel up to date."
 		else
@@ -311,13 +311,13 @@ case "$choice" in
 			sudo mv /etc/portage/package.use /etc/portage/package.mask /etc/portage/package.keywords /etc/portage/package.env /etc/portage/package.unmask /etc/portage/env/ $backupportagedir/
 			sudo cp /etc/portage/make.conf $backupportagedir/
 			sudo mv $portageworkdir/* /etc/portage/
-			useflags=$(curl -s $gitprefix/binhost_settings/etc/portage/make.conf | grep "^USE=")
+			useflags=$(wget -qO - $gitprefix/binhost_settings/etc/portage/make.conf | grep "^USE=")
 			if ! grep -q "$useflags" /etc/portage/make.conf; then
 				echo $useflags | sudo tee --append /etc/portage/make.conf > /dev/null
 			else
 				sudo sed -i "s/^USE=.*/$useflags/" /etc/portage/make.conf
 			fi
-			cflags=$(curl -s $gitprefix/binhost_settings/etc/portage/make.conf | grep "^CFLAGS=\"-Ofast")
+			cflags=$(wget -qO - $gitprefix/binhost_settings/etc/portage/make.conf | grep "^CFLAGS=\"-Ofast")
 			sudo sed -i "/CFLAGS=\"-O2 -pipe\"/! s/^CFLAGS=.*/$cflags/" /etc/portage/make.conf
 			sudo sed -i "s/-mssse3/-march=native/" /etc/portage/make.conf /etc/portage/package.env /etc/portage/env/*
 			if grep -qi "intel" /proc/cpuinfo; then
@@ -332,7 +332,7 @@ case "$choice" in
 		;;
 
 	o)
-		overlays=$(curl -s $gitprefix/binhost_settings/etc/portage/package.mask | grep -Po "(?<=\*/\*::).*")
+		overlays=$(wget -qO - $gitprefix/binhost_settings/etc/portage/package.mask | grep -Po "(?<=\*/\*::).*")
 		overlaysspaced="${overlays//$'\n'/ }"
 		echo "Running the following:"
 		echo "sudo emerge eselect-repository"
