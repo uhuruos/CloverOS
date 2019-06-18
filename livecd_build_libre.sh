@@ -12,7 +12,7 @@ userpassword=password
 mkdir libre_image/
 cd libre_image/
 
-builddate=$(curl -s http://distfiles.gentoo.org/releases/amd64/autobuilds/current-stage3-amd64/ | sed -nr "s/.*href=\"stage3-amd64-([0-9].*).tar.xz\">.*/\1/p")
+builddate=$(wget -O - http://distfiles.gentoo.org/releases/amd64/autobuilds/current-stage3-amd64/ | sed -nr "s/.*href=\"stage3-amd64-([0-9].*).tar.xz\">.*/\1/p")
 wget http://distfiles.gentoo.org/releases/amd64/autobuilds/current-stage3-amd64/stage3-amd64-"$builddate".tar.xz
 tar pxf stage3*
 rm -f stage3*
@@ -123,7 +123,7 @@ wget https://cloveros.ga/s/kernel-livecd.tar.lzma -O kernel-livecd-libre.tar.lzm
 tar -C libre_image/lib/modules/ -xf kernel-livecd-libre.tar.lzma --wildcards \*-aufs/\*
 mksquashfs libre_image/ libre_image.squashfs -b 1024k -comp xz -Xbcj x86 -Xdict-size 100%
 mkdir libre_iso/
-builddate=$(curl -s http://distfiles.gentoo.org/releases/amd64/autobuilds/current-install-amd64-minimal/ | sed -nr "s/.*href=\"install-amd64-minimal-([0-9].*).iso\">.*/\1/p")
+builddate=$(wget -O - http://distfiles.gentoo.org/releases/amd64/autobuilds/current-install-amd64-minimal/ | sed -nr "s/.*href=\"install-amd64-minimal-([0-9].*).iso\">.*/\1/p")
 wget http://distfiles.gentoo.org/releases/amd64/autobuilds/current-install-amd64-minimal/install-amd64-minimal-$builddate.iso -P libre_iso/
 xorriso -osirrox on -indev libre_iso/*.iso -extract / libre_iso/
 rm libre_iso/*.iso
