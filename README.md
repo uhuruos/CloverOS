@@ -156,7 +156,6 @@ This disables the binhost and uses Portage's ebuilds for packages. Now you can e
 * [KDE theme in qt5 programs without KDE](#kde-theme-in-qt5-programs-without-kde)
 * [Firefox and Pulseaudio](#firefox-and-pulseaudio)
 * [Vertical tabs in Firefox 57+](#vertical-tabs-in-firefox-57)
-* [Firefox configuration hardening](#firefox-configuration-hardening)
 * [Enable tap to click on touchpads](#enable-tap-to-click-on-touchpads)
 * [Disable mouse acceleration](#disable-mouse-acceleration)
 * [Suspend when laptop lid is closed](#suspend-when-laptop-lid-is-closed)
@@ -381,18 +380,6 @@ To have built-in tab list button available at all times:
     visibility: visible !important;
 }
 ```
-
-### Firefox configuration hardening
-```
-wget https://raw.githubusercontent.com/pyllyukko/user.js/master/user.js -P ~/.mozilla/firefox/*.default/
-sed -i "s@\(.*\"\(browser.privatebrowsing.autostart\|privacy.sanitize.sanitizeOnShutdown\|privacy.clearOnShutdown.*\|network.cookie.lifetimePolicy\|signon.rememberSignons\|clipboard.autocopy\|browser.display.use_document_fonts\|places.history.enabled\|pdfjs.disabled\)\".*\)@//commented out: \1@g" ~/.mozilla/firefox/*.default/user.js
-```
-
-The sed commend re-enables passwordmanager/sessionmanager/history/clipboard/fonts/history/pdf and lets you choose whether data is cleared on shutdown
-
-More information here: https://github.com/pyllyukko/user.js/
-
-![Firefox user.js](https://i.imgur.com/3jopDjI.png)
 
 ### Enable tap to click on touchpads
 `xinput set-prop "SynPS/2 Synaptics TouchPad" "libinput Tapping Enabled" 1`

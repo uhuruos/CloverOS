@@ -72,6 +72,8 @@ app-editors/xemacs
 www-client/elinks
 
 #keyworded, remove when stable exists
+x11-misc/easystroke
+x11-misc/xplanetFX
 media-gfx/lsix
 media-gfx/zgv **
 media-libs/svgalib ** # zgv
@@ -843,7 +845,7 @@ games-emulation/bsnes-libretro-cplusplus98 **
 games-emulation/craft-libretro **
 games-emulation/citra-libretro **
 games-emulation/desmume-libretro
-#games-emulation/dolphin-libretro **
+#games-emulation/dolphin-libretro
 games-emulation/easyrpg-libretro
 games-emulation/fbalpha2012-libretro **
 games-emulation/fbalpha-libretro **
@@ -880,9 +882,9 @@ games-emulation/prboom-libretro **
 games-emulation/prosystem-libretro **
 games-emulation/px68k-libretro **
 games-emulation/quicknes-libretro **
-#games-emulation/redream-libretro **
+#games-emulation/redream-libretro
 games-emulation/reicast-libretro **
-#games-emulation/sameboy-libretro **
+#games-emulation/sameboy-libretro
 games-emulation/scummvm-libretro **
 games-emulation/snes9x2002-libretro **
 games-emulation/snes9x2010-libretro **
