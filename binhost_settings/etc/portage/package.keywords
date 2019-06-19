@@ -72,6 +72,7 @@ app-editors/xemacs
 www-client/elinks
 
 #keyworded, remove when stable exists
+media-video/syncplay
 x11-misc/easystroke
 x11-misc/xplanetFX
 media-gfx/lsix

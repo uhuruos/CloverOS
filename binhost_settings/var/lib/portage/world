@@ -870,6 +870,7 @@ media-video/shotcut
 media-video/smplayer
 media-video/smtube
 media-video/subtitleripper
+media-video/syncplay
 media-video/vdr
 media-video/vidcutter
 media-video/vlc
@@ -1135,7 +1136,6 @@ sys-kernel/bliss-initramfs
 sys-kernel/dkms
 sys-kernel/dracut
 sys-kernel/genkernel
-sys-kernel/gentoo-sources:5.1.8
 sys-kernel/linux-firmware
 sys-power/acpi_call
 sys-power/acpitool
