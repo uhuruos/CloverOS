@@ -286,7 +286,14 @@ body {
 			<ul>
 				<div class="dropdown">
 					<a href="https://twitter.com/cloveros_ga"><li>News</li></a>
-					<div class="dropdown-content" id="news">10-Jun-19
+					<div class="dropdown-content" id="news">19-Jun-19
+Packages updated
+Kernel updated to 5.1.12
+ISO: https://cloveros.ga/s/CloverOS-x86_64-20190610.iso
+Firefox now uses privacy-respecting user.js
+Added to livecd_build.sh: https://spyware.neocities.org/guides/firefox.html
+
+10-Jun-19
 Packages updated
 Kernel updated to 5.1.8
 New ISO: https://cloveros.ga/s/CloverOS-x86_64-20190610.iso
