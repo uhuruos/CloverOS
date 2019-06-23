@@ -39,6 +39,9 @@ x11-themes/sddm-gentoo-black-theme ** # fixes build
 x11-themes/terminology-themes ** # fixes build
 media-plugins/vapoursynth-d2vsource ** # fixes build
 net-misc/freerdp ** # fixes build
+media-video/openshot # fixes build
+media-libs/libopenshot # openshot
+media-libs/libopenshot-audio # openshot
 media-fonts/vlgothic # old
 games-emulation/dolphin ** # old
 games-emulation/pcsx2 ** # old
@@ -72,6 +75,7 @@ app-editors/xemacs
 www-client/elinks
 
 #keyworded, remove when stable exists
+app-laptop/tpacpi-bat
 media-video/syncplay
 x11-misc/easystroke
 x11-misc/xplanetFX
@@ -164,6 +168,7 @@ games-util/glbsp
 games-misc/yadex
 games-util/deutex
 games-fps/freedoom
+games-fps/freedoom-data # freedoom
 games-fps/zdoom
 games-engines/odamex
 games-simulation/corsix-th

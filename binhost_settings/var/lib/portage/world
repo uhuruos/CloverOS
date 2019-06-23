@@ -141,6 +141,7 @@ app-laptop/laptop-mode-tools
 app-laptop/thinkfan
 app-laptop/tlp
 app-laptop/tp_smapi
+app-laptop/tpacpi-bat
 app-misc/abduco
 app-misc/anki
 app-misc/byobu
@@ -415,7 +416,6 @@ games-misc/ckmame
 games-misc/cowsay
 games-misc/fortune-mod-all
 games-misc/xcowsay
-games-misc/yadex
 games-puzzle/bastet
 games-roguelike/dwarf-fortress
 games-roguelike/nethack
@@ -1061,7 +1061,6 @@ sys-apps/firejail
 sys-apps/flatpak
 sys-apps/hprofile
 sys-apps/hwdata-redhat
-sys-apps/hwinfo
 sys-apps/hwloc
 sys-apps/i2c-tools
 sys-apps/idle3-tools
@@ -1125,7 +1124,6 @@ sys-fs/jmtpfs
 sys-fs/mtpfs
 sys-fs/multipath-tools
 sys-fs/ncdu
-sys-fs/ntfs3g
 sys-fs/safecopy
 sys-fs/simple-mtpfs
 sys-fs/squashfs-tools
@@ -1136,6 +1134,7 @@ sys-kernel/bliss-initramfs
 sys-kernel/dkms
 sys-kernel/dracut
 sys-kernel/genkernel
+sys-kernel/gentoo-sources:5.1.12
 sys-kernel/linux-firmware
 sys-power/acpi_call
 sys-power/acpitool
