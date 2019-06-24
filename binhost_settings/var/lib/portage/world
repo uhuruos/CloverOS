@@ -897,6 +897,8 @@ net-analyzer/wireshark
 net-analyzer/zmap
 net-dialup/diald
 net-dialup/lrzsz
+net-dialup/minicom
+net-dialup/pppconfig
 net-dns/bind-tools
 net-dns/dnscrypt-proxy
 net-dns/dnsmasq
@@ -1085,6 +1087,7 @@ sys-apps/qdirstat
 sys-apps/qingy
 sys-apps/ripgrep
 sys-apps/rng-tools
+sys-apps/setserial
 sys-apps/sg3_utils
 sys-apps/smartmontools
 sys-apps/udevil
