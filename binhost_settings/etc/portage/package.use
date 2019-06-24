@@ -286,6 +286,7 @@ x11-libs/libdrm video_cards_vmware # required by open-vm-tools
 media-libs/mesa video_cards_vmware # required by open-vm-tools
 media-plugins/gst-plugins-meta v4l # required by kamoso
 dev-libs/gobject-introspection python_single_target_python2_7 -python_single_target_python3_6 # exaile
+www-client/firefox -pgo # temporary
 x11-libs/gtk+ X
 x11-libs/libva X
 dev-cpp/gtkmm X

@@ -75,6 +75,7 @@ app-editors/xemacs
 www-client/elinks
 
 #keyworded, remove when stable exists
+net-dialup/diald
 app-laptop/tpacpi-bat
 media-video/syncplay
 x11-misc/easystroke

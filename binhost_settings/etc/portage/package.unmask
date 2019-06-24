@@ -15,8 +15,6 @@ media-video/vidcutter::cloveros-overlay # media-video/vidcutter::jorgicio with r
 media-gfx/nip2::cloveros-overlay
 media-libs/vips::cloveros-overlay
 
-www-client/ungoogled-chromium::chaoslab
-
 sys-fs/exfat-nofuse::bobwya
 virtual/wine::bobwya
 app-emulation/wine-staging::bobwya

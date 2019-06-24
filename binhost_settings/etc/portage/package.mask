@@ -5,7 +5,6 @@
 */*::bobwya
 */*::brother-overlay
 */*::calculate
-*/*::chaoslab
 */*::cloveros-overlay
 */*::deadbeef-overlay
 */*::dotnet
