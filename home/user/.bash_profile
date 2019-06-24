@@ -233,6 +233,7 @@ if [ -z "$DISPLAY" ] && [ -z "$SSH_CLIENT" ] && [ -z "$TMUX" ] && ! pgrep X > /d
 				exec $SHELL
 			fi
 		fi
+		sudo rc-config start wpa_supplicant &
 		X &
 		export DISPLAY=:0
 		${wms[$choice]} &
