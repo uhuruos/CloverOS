@@ -24,7 +24,7 @@ mount --rbind /sys sys
 
 cat <<HEREDOC | chroot .
 emerge-webrsync
-eselect profile set "default/linux/amd64/17.0/hardened"
+eselect profile set "default/linux/amd64/17.1/hardened"
 echo '
 CFLAGS="-O3 -march=native -mfpmath=both -pipe -funroll-loops -fgraphite-identity -floop-nest-optimize -malign-data=cacheline -Wl,--hash-style=gnu"
 CXXFLAGS="\${CFLAGS}"
