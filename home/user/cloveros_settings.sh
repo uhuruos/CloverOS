@@ -84,7 +84,15 @@ case "$choice" in
 			sudo emerge --depclean
 		fi
 		if [[ $(eselect profile show | tail -n1) == "  default/linux/amd64/17.0/hardened" ]]; then
+			echo "Updating profile to 17.1..."
+			if [ ! -d /usr/local/lib/ ]; then
+				sudo mkdir -p /usr/local/lib64/
+				cd /usr/local/
+				sudo ln -s lib64 lib
+				cd -
+			fi
 			sudo emerge -1 unsymlink-lib
+			sudo unsymlink-lib --analyze
 			sudo unsymlink-lib --migrate
 			sudo unsymlink-lib --finish
 			sudo eselect profile set default/linux/amd64/17.1/hardened
