@@ -84,10 +84,10 @@ case "$choice" in
 			sudo emerge --depclean
 		fi
 		if [[ $(eselect profile show | tail -n1) == "  default/linux/amd64/17.0/hardened" ]]; then
-			emerge -1 unsymlink-lib
-			unsymlink-lib --migrate
-			unsymlink-lib --finish
-			eselect profile set default/linux/amd64/17.1/hardened
+			sudo emerge -1 unsymlink-lib
+			sudo unsymlink-lib --migrate
+			sudo unsymlink-lib --finish
+			sudo eselect profile set default/linux/amd64/17.1/hardened
 		fi
 
 		echo Removing dbus if possible...; for i in {dev-libs/glib,dev-qt/qtgui,dev-python/PyQt5}; do [ -d /var/db/pkg/$i* ] && sudo PORTAGE_BINHOST="https://cloveros.ga/s/nodbus" FETCHCOMMAND_HTTPS="wget -O \"\${DISTDIR}/\${FILE}\" \"\${URI}\"" emerge -1uD $i; done; sudo emerge --depclean
