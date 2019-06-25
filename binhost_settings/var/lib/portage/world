@@ -402,7 +402,7 @@ games-fps/openarena
 games-fps/openjk-academy
 games-fps/openjk-academy-mp
 games-fps/openjk-outcast
-games-fps/prboom
+games-fps/prboom-plus
 games-fps/quake3
 games-fps/quake3-cpma
 games-fps/quakeforge
@@ -825,7 +825,6 @@ media-sound/schismtracker
 media-sound/serialosc
 media-sound/setbfree
 media-sound/sexypsf
-media-sound/sfc
 media-sound/sidplay
 media-sound/sidplayfp
 media-sound/solfege
