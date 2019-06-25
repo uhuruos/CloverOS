@@ -24,6 +24,10 @@ mount --rbind /sys sys
 
 cat <<HEREDOC | chroot .
 emerge-webrsync
+sudo emerge -1 unsymlink-lib
+sudo unsymlink-lib --analyze
+sudo unsymlink-lib --migrate
+sudo unsymlink-lib --finish
 eselect profile set "default/linux/amd64/17.1/hardened"
 echo '
 CFLAGS="-O3 -march=native -mfpmath=both -pipe -funroll-loops -fgraphite-identity -floop-nest-optimize -malign-data=cacheline -Wl,--hash-style=gnu"
