@@ -30,6 +30,7 @@ x11-misc/bumblebee::seden
 
 games-emulation/reicast::lanodanOverlay
 x11-plugins/purple-discord::lanodanOverlay
+gui-wm/waymonad::lanodanOverlay
 
 x11-libs/gtk+:3::mv
 

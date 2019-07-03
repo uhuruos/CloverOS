@@ -25,7 +25,7 @@ net-misc/youtube-dl # stable always outdated/never works
 =dev-libs/ell-0.20 # iwd
 =dev-libs/nspr-4.21 # chromium
 =sys-auth/polkit-0.115-r4 # spidermonkey 52 won't build
-media-libs/zimg # vapoursynth
+media-libs/zimg ** # vapoursynth
 dev-lisp/clisp # fixes build
 media-video/vdr # fixes build
 net-p2p/mldonkey # fixes build

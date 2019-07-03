@@ -116,7 +116,7 @@ games-fps/quake3 dedicated curl
 games-fps/quake3-cpma dedicated
 app-mobilephone/heimdall qt5
 games-emulation/mgba qt5
-media-sound/supercollider qt5
+media-sound/supercollider qt5 X
 app-benchmarks/i7z qt5
 net-p2p/bitcoin-qt qt5
 media-video/avidemux qt5
