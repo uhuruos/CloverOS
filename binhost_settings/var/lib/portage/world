@@ -117,6 +117,7 @@ app-emulation/vagrant
 app-emulation/virt-manager
 app-emulation/virtualbox
 app-emulation/virtualbox-additions
+app-emulation/virtualbox-extpack-oracle
 app-emulation/virtualbox-guest-additions
 app-emulation/winetricks
 app-emulation/xen
@@ -745,7 +746,6 @@ media-libs/vips
 media-libs/vulkan-loader
 media-libs/waifu2x-converter-cpp
 media-plugins/alsa-plugins
-media-plugins/gimp-lensfun
 media-plugins/gimp-lqr
 media-plugins/gimp-paint-studio
 media-plugins/gimp-plugin-bimp
@@ -1021,6 +1021,7 @@ net-vpn/wireguard
 net-vpn/zeronet
 net-wireless/aircrack-ng
 net-wireless/blueman
+net-wireless/bluez
 net-wireless/cubicsdr
 net-wireless/gnuradio
 net-wireless/iw
@@ -1111,6 +1112,7 @@ sys-devel/distcc
 sys-devel/gdb
 sys-devel/lld
 sys-firmware/nvidia-firmware
+sys-fs/archivemount
 sys-fs/bashmount
 sys-fs/bcache-tools
 sys-fs/cachefilesd
@@ -1139,7 +1141,7 @@ sys-kernel/bliss-initramfs
 sys-kernel/dkms
 sys-kernel/dracut
 sys-kernel/genkernel
-sys-kernel/gentoo-sources:5.1.15
+sys-kernel/gentoo-sources:5.1.16
 sys-kernel/linux-firmware
 sys-power/acpi_call
 sys-power/acpitool

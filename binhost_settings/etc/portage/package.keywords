@@ -20,6 +20,7 @@ app-emulation/virtualbox # kernel 5.0
 app-emulation/virtualbox-guest-additions # virtualbox
 app-emulation/virtualbox-additions # virtualbox
 app-emulation/virtualbox-modules # virtualbox
+app-emulation/virtualbox-extpack-oracle
 net-misc/youtube-dl # stable always outdated/never works
 =media-libs/opencollada-1.6.63 # libpcre
 =dev-libs/ell-0.20 # iwd
@@ -56,9 +57,9 @@ xfce-extra/thunar-media-tags-plugin # xfdesktop
 xfce-extra/thunar-archive-plugin # xfdesktop
 <dev-libs/amdgpu-pro-opencl-19 # doesn't work for some reason
 =dev-util/lldb-7.1.0 # limit version
-=x11-wm/stumpwm-1.0.1_rc # limit version
-dev-lisp/alexandria # stumpwm
-dev-lisp/clx # stumpwm
+dev-python/xcffib # qtile
+dev-python/cairocffi # qtile
+media-libs/mlt # shotcut
 
 #libressl, remove when stable supports libressl
 app-crypt/qca::libressl
@@ -75,6 +76,11 @@ app-editors/xemacs
 www-client/elinks
 
 #keyworded, remove when stable exists
+sys-fs/squashfuse
+sys-fs/archivemount
+x11-wm/stumpwm
+dev-lisp/alexandria # stumpwm
+dev-lisp/clx # stumpwm
 net-dialup/diald
 app-laptop/tpacpi-bat
 media-video/syncplay
