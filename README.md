@@ -313,6 +313,7 @@ media-libs/mesa -bindist
 # fallocate -l 32GB drive && lspci
 
 sudo sh -c '
+modprobe vfio-pci
 devices=(01:00.0 01:00.1 00:12.0 00:12.2)
 
 for devid in ${devices[@]}; do devid=0000:$devid
@@ -327,7 +328,8 @@ qemu-system-x86_64 -enable-kvm -m 4G -cpu host -smp cores=8,threads=1 -vga none 
 for devid in ${devices[@]}; do devid=0000:$devid
 	echo 1 > /sys/bus/pci/devices/$devid/remove
 	echo 1 > /sys/bus/pci/rescan
-done'
+done
+'
 ```
 
 ### Change FVWM titlebar color
