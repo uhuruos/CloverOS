@@ -17,7 +17,6 @@ if [ "$1" = 'deep' ]; then
 	emerge -C hwinfo ntfs3g ; emerge ntfs3g ; emerge hwinfo ; emerge -C sys-apps/dbus obs-studio ; emerge obs-studio ; emerge -1 sys-apps/dbus ; emerge -C jack-audio-connection-kit audacity ; emerge audacity ; emerge jack-audio-connection-kit
 	quickpkg --include-unmodified-config=y "*/*" 2>&1 | ansi2html > /usr/portage/packages/s/quickpkg.html
 	emerge -B sudo openssh postfix dcron vixie-cron cronie fcron anacron
-	PKGDIR="/usr/portage/packages/s/nodbus/" USE="-dbus -webengine" emerge -B glib qtgui PyQt5
 fi
 
 emerge --sync
@@ -26,6 +25,8 @@ emerge -uavDNb --exclude=gentoo-sources @world
 emerge -1b --exclude=palemoon $(find /var/db/pkg/ -mindepth 2 -maxdepth 2 -name \*-9999\* | awk -F \/ '{printf "=%s/%s ", $5, $6}')
 emerge -b @preserved-rebuild
 emerge --depclean
+
+PKGDIR="/usr/portage/packages/s/nodbus/" USE="-dbus -webengine" emerge -B glib qtgui PyQt5
 
 php mirrors/index.php > /usr/portage/packages/index.html
 ./mirrors/indexalt.sh > /usr/portage/packages/indexalt.html

@@ -3,8 +3,8 @@ dev-libs/libmesode::optmzr # profanity
 
 dev-qt/qtnetwork::libressl
 net-libs/nodejs::libressl
-dev-perl/Net-SSLeay::libressl
 app-crypt/qca::libressl
+dev-perl/Net-SSLeay::libressl
 
 games-emulation/pcsx2::cloveros-overlay # pcsx2-9999::gentoo with added "src_configure() { local mycmakeargs=( -DDISABLE_ADVANCE_SIMD=ON ) }"
 games-emulation/rpcs3::cloveros-overlay # rpcs3-0.0.5::jm-overlay with added "src_configure() { local mycmakeargs=( -DUSE_NATIVE_INSTRUCTIONS=OFF ) }" and turned into git

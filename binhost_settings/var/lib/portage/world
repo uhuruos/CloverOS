@@ -144,7 +144,6 @@ app-laptop/tlp
 app-laptop/tp_smapi
 app-laptop/tpacpi-bat
 app-misc/abduco
-app-misc/anki
 app-misc/byobu
 app-misc/ckermit
 app-misc/cmatrix
@@ -293,7 +292,9 @@ dev-python/yolk
 dev-python/yolk-portage
 dev-qt/qt-creator
 dev-ruby/nokogiri
+dev-util/android-ndk
 dev-util/android-sdk-update-manager
+dev-util/android-studio
 dev-util/android-tools
 dev-util/android-udev-rules
 dev-util/bless
@@ -448,6 +449,7 @@ kde-apps/kde-meta
 kde-apps/kdebase-meta
 kde-apps/kdenlive
 kde-apps/konqueror
+kde-apps/yakuake
 kde-frameworks/breeze-icons-rcc
 kde-misc/basket
 kde-misc/kdeconnect
@@ -460,7 +462,6 @@ kde-misc/krusader
 kde-misc/kshutdown
 kde-misc/kwebkitpart
 kde-misc/plasma-applet-network-monitor
-kde-misc/yakuake
 kde-plasma/bluedevil
 kde-plasma/plasma-applet-active-window-control
 lxde-base/lxappearance

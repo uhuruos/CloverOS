@@ -2,17 +2,18 @@
 sys-devel/gcc
 sys-kernel/gentoo-sources
 media-libs/mesa
-media-video/mpv
-media-libs/shaderc # mpv
 x11-libs/gtk+:3::mv # removes dbus
 app-emulation/winetricks::cloveros-overlay ** # overlay
 www-client/firefox
 dev-libs/nss # firefox
 dev-util/cbindgen # firefox
 media-libs/libvpx:0/5 # firefox
-media-libs/dav1d # firefox
+media-video/mpv
+media-libs/shaderc # mpv
 
 #old, remove when stable is bumped up
+=media-libs/harfbuzz-2.5.3
+=media-libs/mlt-6.16.0-r2 # shotcut
 sys-fs/zfs # kernel 5.0
 sys-fs/zfs-kmod # zfs
 =virtual/linux-sources-3-r1 # zfs
@@ -25,9 +26,7 @@ net-misc/youtube-dl # stable always outdated/never works
 =media-libs/opencollada-1.6.63 # libpcre
 =dev-libs/ell-0.20 # iwd
 =dev-libs/nspr-4.21 # chromium
-=sys-auth/polkit-0.115-r4 # spidermonkey 52 won't build
 media-libs/zimg ** # vapoursynth
-dev-lisp/clisp # fixes build
 media-video/vdr # fixes build
 net-p2p/mldonkey # fixes build
 games-emulation/mgba # fixes build
@@ -35,7 +34,6 @@ dev-db/mariadb # fixes build
 net-misc/spice-gtk # fixes build
 media-libs/openimageio # fixes build
 media-sound/mpd # fixes build
-media-gfx/openexr_viewers # fixes build
 x11-themes/sddm-gentoo-black-theme ** # fixes build
 x11-themes/terminology-themes ** # fixes build
 media-plugins/vapoursynth-d2vsource ** # fixes build
@@ -47,7 +45,6 @@ media-fonts/vlgothic # old
 games-emulation/dolphin ** # old
 games-emulation/pcsx2 ** # old
 games-emulation/ppsspp ** # old
-dev-libs/beignet # llvm
 www-plugins/lightspark ** # llvm
 xfce-base/xfdesktop # remove dbus requirement for thunar
 xfce-base/thunar # xfdesktop
@@ -59,14 +56,12 @@ xfce-extra/thunar-archive-plugin # xfdesktop
 =dev-util/lldb-7.1.0 # limit version
 dev-python/xcffib # qtile
 dev-python/cairocffi # qtile
-media-libs/mlt # shotcut
 
 #libressl, remove when stable supports libressl
-app-crypt/qca::libressl
 dev-qt/qtnetwork::libressl
+app-crypt/qca::libressl
 dev-perl/Net-SSLeay::libressl
 net-libs/nodejs::libressl
-=net-libs/nghttp2-1.38.0 # nodejs
 =net-dns/c-ares-1.15.0 # nodejs
 =net-libs/http-parser-2.9.2 # nodejs
 net-misc/megatools::jm-overlay
@@ -76,6 +71,9 @@ app-editors/xemacs
 www-client/elinks
 
 #keyworded, remove when stable exists
+media-gfx/openexr_viewers
+dev-util/android-ndk
+app-misc/anki
 sys-fs/squashfuse
 sys-fs/archivemount
 x11-wm/stumpwm
@@ -194,7 +192,6 @@ media-sound/padthv1
 media-sound/drumkv1
 media-sound/samplv1
 x11-themes/wm-icons
-app-misc/anki
 media-sound/mumble
 net-vpn/logmein-hamachi
 app-arch/zpaq-extras

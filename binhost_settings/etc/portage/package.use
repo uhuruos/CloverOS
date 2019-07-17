@@ -22,7 +22,6 @@ x11-terms/kitty -wayland
 net-vpn/tor tor-hardening lzma
 app-doc/gimp-help l10n_en
 www-plugins/lightspark ppapi nsplugin ffmpeg curl rtmp
-app-misc/anki -sound
 media-gfx/nomacs zip
 app-crypt/kbfs git
 media-libs/vips imagemagick fftw fits tiff lcms matio

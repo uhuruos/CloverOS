@@ -23,11 +23,9 @@ cadence ladish
 beignet
 
 # dependency use flag requirements
-
 buzztrax # clutter USE=gtk
 plasma-applet-weather-widget # qtdeclarative USE=xml
 net-analyzer/munin # perl USE=berkdb
-android-ndk android-studio # ncurses USE=tinfo
 colorhug-client # libusb USE=udev
 
 # builds, but doesn't work
