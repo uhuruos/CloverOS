@@ -272,6 +272,7 @@ dev-lang/scala
 dev-lang/tauthon
 dev-lang/tcc
 dev-libs/amdgpu-pro-opencl
+dev-libs/beignet
 dev-libs/input-pad
 dev-libs/libisoburn
 dev-libs/weston
@@ -1142,7 +1143,7 @@ sys-kernel/bliss-initramfs
 sys-kernel/dkms
 sys-kernel/dracut
 sys-kernel/genkernel
-sys-kernel/gentoo-sources:5.1.16
+sys-kernel/gentoo-sources:5.1.18
 sys-kernel/linux-firmware
 sys-power/acpi_call
 sys-power/acpitool
