@@ -98,11 +98,11 @@ case "$choice" in
 			sudo eselect profile set default/linux/amd64/17.1/hardened
 		fi
 
-		for i in {dev-libs/glib,dev-qt/qtgui,dev-python/PyQt5}; do [ -d /var/db/pkg/$i* ] && sudo PORTAGE_BINHOST="https://cloveros.ga/s/nodbus" FETCHCOMMAND_HTTPS="wget -O \"\${DISTDIR}/\${FILE}\" \"\${URI}\"" emerge -1uD $i; done; sudo emerge --depclean
-
 		sudo emerge --sync
 		sudo emerge -uvD @world
 		sudo emerge --depclean
+
+		echo Removing dbus if possible; for i in {dev-libs/glib,dev-qt/qtgui,dev-python/PyQt5}; do [ -d /var/db/pkg/$i* ] && sudo PORTAGE_BINHOST="https://cloveros.ga/s/nodbus" FETCHCOMMAND_HTTPS="wget -O \"\${DISTDIR}/\${FILE}\" \"\${URI}\"" emerge -1uD $i; done; sudo emerge --depclean
 
 		kernel=$(uname -r)
 		if [[ ${kernel: -3} == "gnu" ]]; then
@@ -112,8 +112,6 @@ case "$choice" in
 		fi
 
 		./cloveros_settings.sh 9
-
-		sudo eselect wine set 1 &> /dev/null
 
 		echo -e "\nSystem updated."
 		;;
