@@ -214,16 +214,27 @@ void main(void) {
 		ac[1] = '\0';
 
 		file = getfile("/sys/class/power_supply/BAT0/capacity", buffer);
-		if (!file) {
-			file = getfile("/sys/class/power_supply/BAT1/capacity", buffer);
-		}
-		char battery[10];
+		char battery[20];
 		if (file) {
 			*strchr(file, '\n') = '\0';
 			strcat(file, "%");
 			strcpy(battery, file);
+			file = getfile("/sys/class/power_supply/BAT1/capacity", buffer);
+			if (file) {
+				*strchr(file, '\n') = '\0';
+				strcat(file, "%");
+				strcat(battery, " ");
+				strcat(battery, file);
+			}
 		} else {
-			strcpy(battery, "N/A");
+			file = getfile("/sys/class/power_supply/BAT1/capacity", buffer);
+			if (file) {
+				*strchr(file, '\n') = '\0';
+				strcat(file, "%");
+				strcpy(battery, file);
+			} else {
+				strcpy(battery, "N/A");
+			}
 		}
 
 		char brightness[5];
