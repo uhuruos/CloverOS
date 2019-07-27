@@ -71,6 +71,7 @@ app-editors/xemacs
 www-client/elinks
 
 #keyworded, remove when stable exists
+media-gfx/wkhtmltopdf
 media-gfx/openexr_viewers
 dev-util/android-ndk
 app-misc/anki

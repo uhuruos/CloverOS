@@ -739,6 +739,7 @@ media-gfx/scrot
 media-gfx/sxiv
 media-gfx/viewnior
 media-gfx/w3mimgfb
+media-gfx/wkhtmltopdf
 media-gfx/xsane
 media-gfx/xzgv
 media-libs/alsa-oss
@@ -1457,7 +1458,6 @@ x11-themes/haematite-xcursors
 x11-themes/hicolor-icon-theme
 x11-themes/iceicons
 x11-themes/kfaenza
-x11-themes/korilla
 x11-themes/kvantum
 x11-themes/larry-backgrounds
 x11-themes/laughlin-backgrounds
@@ -1467,11 +1467,9 @@ x11-themes/lovelock-backgrounds
 x11-themes/murrine-themes
 x11-themes/neutral-xcursors
 x11-themes/nimbus
-x11-themes/noia
 x11-themes/nuvox
 x11-themes/obsidian-xcursors
 x11-themes/oxygen-gtk
-x11-themes/oxygen-molecule
 x11-themes/pearlgrey-xcursors
 x11-themes/qtcurve
 x11-themes/redhat-artwork
