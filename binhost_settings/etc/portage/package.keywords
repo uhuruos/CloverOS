@@ -3,7 +3,7 @@ sys-devel/gcc
 sys-kernel/gentoo-sources
 media-libs/mesa
 x11-libs/gtk+:3::mv # removes dbus
-app-emulation/winetricks::cloveros-overlay ** # overlay
+app-emulation/winetricks::cloveros ** # overlay
 www-client/firefox
 dev-libs/nss # firefox
 dev-util/cbindgen # firefox
@@ -839,7 +839,7 @@ games-misc/fortune-mod-starwars
 games-misc/fortune-mod-strangelove
 games-misc/fortune-mod-tao
 games-misc/fortune-mod-zx-error
-games-emulation/retroarch
+games-emulation/retroarch **
 games-emulation/retroarch-assets **
 games-emulation/retroarch-joypad-autoconfig **
 games-emulation/slang-shaders **

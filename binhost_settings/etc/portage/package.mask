@@ -5,7 +5,7 @@
 */*::bobwya
 */*::brother-overlay
 */*::calculate
-*/*::cloveros-overlay
+*/*::cloveros
 */*::deadbeef-overlay
 */*::dotnet
 */*::elementary
