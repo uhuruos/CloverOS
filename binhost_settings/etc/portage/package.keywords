@@ -32,6 +32,7 @@ net-p2p/mldonkey # fixes build
 games-emulation/mgba # fixes build
 dev-db/mariadb # fixes build
 net-misc/spice-gtk # fixes build
+=app-emulation/spice-protocol-0.14.0 # spice-gtk
 media-libs/openimageio # fixes build
 media-sound/mpd # fixes build
 x11-themes/sddm-gentoo-black-theme ** # fixes build
@@ -839,7 +840,7 @@ games-misc/fortune-mod-starwars
 games-misc/fortune-mod-strangelove
 games-misc/fortune-mod-tao
 games-misc/fortune-mod-zx-error
-games-emulation/retroarch **
+games-emulation/retroarch
 games-emulation/retroarch-assets **
 games-emulation/retroarch-joypad-autoconfig **
 games-emulation/slang-shaders **
@@ -857,7 +858,7 @@ games-emulation/craft-libretro **
 games-emulation/citra-libretro **
 games-emulation/desmume-libretro
 #games-emulation/dolphin-libretro
-games-emulation/easyrpg-libretro
+#games-emulation/easyrpg-libretro
 games-emulation/fbalpha2012-libretro **
 games-emulation/fbalpha-libretro **
 games-emulation/fceumm-libretro **
@@ -886,7 +887,7 @@ games-emulation/nestopia-libretro **
 games-emulation/nxengine-libretro **
 games-emulation/openlara-libretro **
 games-emulation/parallel-n64-libretro **
-games-emulation/pcsx-rearmed-libretro **
+games-emulation/pcsx-rearmed-libretro
 games-emulation/picodrive-libretro **
 games-emulation/ppsspp-libretro **
 games-emulation/prboom-libretro **
@@ -895,7 +896,7 @@ games-emulation/px68k-libretro **
 games-emulation/quicknes-libretro **
 #games-emulation/redream-libretro
 games-emulation/reicast-libretro **
-#games-emulation/sameboy-libretro
+games-emulation/sameboy-libretro **
 games-emulation/scummvm-libretro **
 games-emulation/snes9x2002-libretro **
 games-emulation/snes9x2010-libretro **

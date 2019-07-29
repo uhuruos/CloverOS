@@ -27,7 +27,6 @@ emerge -b @preserved-rebuild
 emerge --depclean
 
 [ $(find /usr/portage/packages/dev-libs/ -iname glib\* | wc -l) -gt 1 ] || [ $(find /usr/portage/packages/dev-libs/ -iname glib\* | wc -l) -lt 1 ] && PKGDIR="/usr/portage/packages/s/nodbus/" USE="-dbus -webengine" emerge -B glib qtgui PyQt5
-echo -e "app-admin/sudo\nnet-misc/openssh\nmail-mta/postfix\nsys-process/dcron\nsys-process/vixie-cron\nsys-process/cronie\nsys-process/fcron\nsys-process/anacron" | eclean -d -e /dev/stdin packages
 
 php mirrors/index.php > /usr/portage/packages/index.html
 ./mirrors/indexalt.sh > /usr/portage/packages/indexalt.html
