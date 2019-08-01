@@ -442,7 +442,7 @@ case "$choice" in
 		sudo eselect opengl set nvidia
 		sudo eselect opencl set nvidia
 		sudo sh -c 'echo -e "blacklist nouveau\nblacklist vga16fb\nblacklist rivafb\nblacklist nvidiafb\nblacklist rivatv" >> /etc/modprobe.d/blacklist.conf'
-		sudo sed -i 's/^Driver=$/Driver=nvidia/; s/^Bridge=auto$/Bridge=primus/; s/^VGLTransport=proxy$/VGLTransport=rgb/; s/^KernelDriver=$/KernelDriver=nvidia/; s/^PMMethod=auto$/PMMethod=bbswitch/; s@^LibraryPath=$@LibraryPath=/usr/lib64/opengl/nvidia/lib:/usr/lib/opengl/nvidia/lib@; s@^XorgModulePath=$@XorgModulePath=/usr/lib64/opengl/nvidia/lib,/usr/lib64/opengl/nvidia/extensions,/usr/lib64/xorg/modules/drivers,/usr/lib64/xorg/modules@' /etc/bumblebee/bumblebee.conf
+		sudo sed -i 's/^Driver=$/Driver=nvidia/; s/^Bridge=auto$/Bridge=primus/; s/^VGLTransport=proxy$/VGLTransport=rgb/; s/^PrimusLibraryPath=/usr/lib/primus:/usr/lib32/primus$/PrimusLibraryPath=/usr/lib/primus:/usr/lib32/primus:/usr/lib64/primus/; s/^KernelDriver=$/KernelDriver=nvidia/; s/^PMMethod=auto$/PMMethod=bbswitch/; s@^LibraryPath=$@LibraryPath=/usr/lib64/opengl/nvidia/lib:/usr/lib/opengl/nvidia/lib@; s@^XorgModulePath=$@XorgModulePath=/usr/lib64/opengl/nvidia/lib,/usr/lib64/opengl/nvidia/extensions,/usr/lib64/xorg/modules/drivers,/usr/lib64/xorg/modules@' /etc/bumblebee/bumblebee.conf
 		echo -e "\nNvidia drivers installed, please reboot.\nCheck https://wiki.gentoo.org/wiki/NVidia/nvidia-drivers for more info"
 		;;
 
