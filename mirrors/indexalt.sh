@@ -286,7 +286,12 @@ body {
 			<ul>
 				<div class="dropdown">
 					<a href="https://twitter.com/cloveros_ga"><li>News</li></a>
-					<div class="dropdown-content" id="news">18-Jul-19
+					<div class="dropdown-content" id="news">01-Aug-19
+Packages updated
+Kernel updated to 5.1.21
+ISO: https://cloveros.ga/s/CloverOS-x86_64-20190731.iso
+
+18-Jul-19
 Packages updated
 Kernel updated to 5.1.18
 ISO: https://cloveros.ga/s/CloverOS-x86_64-20190718.iso
