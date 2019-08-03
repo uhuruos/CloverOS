@@ -272,7 +272,6 @@ dev-lang/scala
 dev-lang/tauthon
 dev-lang/tcc
 dev-libs/amdgpu-pro-opencl
-dev-libs/beignet
 dev-libs/input-pad
 dev-libs/libisoburn
 dev-libs/weston
@@ -689,7 +688,6 @@ media-fonts/zh-kcfonts
 media-gfx/apngasm
 media-gfx/apngdis
 media-gfx/argyllcms
-media-gfx/blender
 media-gfx/cropgui
 media-gfx/darktable
 media-gfx/digikam
@@ -849,7 +847,6 @@ media-sound/yoshimi
 media-tv/kodi
 media-tv/plex-media-server
 media-video/aegisub
-media-video/avidemux
 media-video/baka-mplayer
 media-video/cinelerra
 media-video/dvdbackup
@@ -1162,7 +1159,6 @@ sys-process/parallel
 virtual/wine
 www-apps/otrs
 www-apps/trac
-www-client/chromium
 www-client/dillo
 www-client/elinks
 www-client/falkon
@@ -1183,6 +1179,7 @@ www-client/surf
 www-client/surfraw
 www-client/torbrowser
 www-client/uget
+www-client/ungoogled-chromium
 www-client/w3m
 www-client/waterfox
 www-misc/fcgiwrap

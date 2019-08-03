@@ -4,6 +4,7 @@ sys-kernel/gentoo-sources
 media-libs/mesa
 x11-libs/gtk+:3::mv # removes dbus
 app-emulation/winetricks::cloveros ** # overlay
+games-emulation/pcsx2 ** # overlay
 www-client/firefox
 dev-libs/nss # firefox
 dev-util/cbindgen # firefox
@@ -26,6 +27,8 @@ net-misc/youtube-dl # stable always outdated/never works
 =media-libs/opencollada-1.6.63 # libpcre
 =dev-libs/ell-0.20 # iwd
 =dev-libs/nspr-4.21 # chromium
+>x11-libs/libva-2 # ungoogled-chromium
+>x11-libs/libva-intel-driver-2 # libva
 media-libs/zimg ** # vapoursynth
 media-video/vdr # fixes build
 net-p2p/mldonkey # fixes build
@@ -33,8 +36,6 @@ games-emulation/mgba # fixes build
 dev-db/mariadb # fixes build
 net-misc/spice-gtk # fixes build
 =app-emulation/spice-protocol-0.14.0 # spice-gtk
-media-libs/openimageio # fixes build
-media-sound/mpd # fixes build
 x11-themes/sddm-gentoo-black-theme ** # fixes build
 x11-themes/terminology-themes ** # fixes build
 media-plugins/vapoursynth-d2vsource ** # fixes build
@@ -44,7 +45,6 @@ media-libs/libopenshot # openshot
 media-libs/libopenshot-audio # openshot
 media-fonts/vlgothic # old
 games-emulation/dolphin ** # old
-games-emulation/pcsx2 ** # old
 games-emulation/ppsspp ** # old
 www-plugins/lightspark ** # llvm
 xfce-base/xfdesktop # remove dbus requirement for thunar
@@ -53,10 +53,18 @@ xfce-extra/thunar-shares-plugin # xfdesktop
 xfce-extra/thunar-vcs-plugin # xfdesktop
 xfce-extra/thunar-media-tags-plugin # xfdesktop
 xfce-extra/thunar-archive-plugin # xfdesktop
-<dev-libs/amdgpu-pro-opencl-19 # doesn't work for some reason
-=dev-util/lldb-7.1.0 # limit version
 dev-python/xcffib # qtile
 dev-python/cairocffi # qtile
+<dev-libs/amdgpu-pro-opencl-19 # doesn't work for some reason
+=dev-util/lldb-8.0.1 # clang 8
+=sys-devel/lld-8.0.1
+=sys-devel/clang-runtime-8.0.1
+=sys-libs/compiler-rt-sanitizers-8.0.1
+=sys-libs/compiler-rt-8.0.1
+=sys-devel/clang-8.0.1
+=sys-devel/llvmgold-8
+=sys-libs/libomp-8.0.1
+=sys-devel/llvm-8.0.1
 
 #libressl, remove when stable supports libressl
 dev-qt/qtnetwork::libressl

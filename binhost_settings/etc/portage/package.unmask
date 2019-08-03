@@ -1,3 +1,5 @@
+www-client/ungoogled-chromium::pg_overlay
+
 net-im/profanity::optmzr
 dev-libs/libmesode::optmzr # profanity
 

@@ -8,19 +8,13 @@ livecd_install.sh: uefi install, encryption
 packages that don't build:
 
 # doesn't emerge
-eduke32 racket bsnes-libretro-cplusplus98 monodevelop
+beignet eduke32 racket bsnes-libretro-cplusplus98 monodevelop
 
 # packages with no libressl support
 nxplayer murmur makemkv eiskaltdcpp retroshare acme-tiny spyder johntheripper-jumbo eagle
 
-# builds, requires AR="gcc-ar" commented out
-ftjam argyllcms
-
 # requires jack2
 cadence ladish
-
-# requires llvm 6
-beignet
 
 # dependency use flag requirements
 buzztrax # clutter USE=gtk
@@ -30,3 +24,6 @@ colorhug-client # libusb USE=udev
 
 # builds, but doesn't work
 zsnes
+
+# builds, requires AR="gcc-ar" commented out
+ftjam argyllcms
