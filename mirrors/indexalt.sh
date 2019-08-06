@@ -73,10 +73,10 @@ body {
 	box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
 	z-index: 99;
 }
-#buttons, #front p, #details {
+#buttons, #front h1, #front p, #details {
 	width: 800px;
 }
-#buttons {
+#buttons, #front h1, #front p {
 	margin-left: auto;
 	margin-right: auto;
 }
@@ -182,20 +182,16 @@ body {
 	text-align: center;
 	padding-top: 275px;
 	font-size: 28px;
-	width: 100%;
 	color: rgba(255,255,255,0.9);
 }
 #front p {
 	margin-top: 50px;
-	margin-left: auto;
-	margin-right: auto;
 	text-align: center;
 	font-size: 18px;
 	color: rgba(255,255,255,0.9);
 }
 #details {
-	margin: 76px auto 0 auto;
-	padding-bottom: 40px;
+	margin: 40px auto 40px auto;
 }
 #details h2 {
 	text-align: center;
@@ -226,6 +222,7 @@ body {
 	margin-bottom: 100px;
 }
 #linksbg {
+	clear: both;
 	width: 100%;
 	background: #eee;
 }
@@ -286,7 +283,11 @@ body {
 			<ul>
 				<div class="dropdown">
 					<a href="https://twitter.com/cloveros_ga"><li>News</li></a>
-					<div class="dropdown-content" id="news">01-Aug-19
+					<div class="dropdown-content" id="news">03-Aug-19
+Packages updated
+Package updated: www-client/ungoogled-chromium-75.0.3770.144_p1::pg_overlay
+
+01-Aug-19
 Packages updated
 Kernel updated to 5.1.21
 ISO: https://cloveros.ga/s/CloverOS-x86_64-20190731.iso

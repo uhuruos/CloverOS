@@ -35,6 +35,7 @@ net-p2p/mldonkey # fixes build
 games-emulation/mgba # fixes build
 dev-db/mariadb # fixes build
 net-misc/spice-gtk # fixes build
+media-libs/osl # fixes build
 =app-emulation/spice-protocol-0.14.0 # spice-gtk
 x11-themes/sddm-gentoo-black-theme ** # fixes build
 x11-themes/terminology-themes ** # fixes build

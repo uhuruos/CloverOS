@@ -73,6 +73,9 @@ dev-util/android-udev-rules::genthree
 dev-lang/tauthon::stefantalpalaru
 media-plugins/gimp-refocus::stefantalpalaru
 media-plugins/refocus-it::stefantalpalaru
+media-video/avidemux::stefantalpalaru
+media-libs/avidemux-core::stefantalpalaru # avidemux
+media-libs/avidemux-plugins::stefantalpalaru # avidemux
 
 dev-util/monodevelop::dotnet
 dev-dotnet/nuget::dotnet

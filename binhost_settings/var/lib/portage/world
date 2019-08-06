@@ -742,6 +742,7 @@ media-gfx/xsane
 media-gfx/xzgv
 media-libs/alsa-oss
 media-libs/glyr
+media-libs/osl
 media-libs/vapoursynth
 media-libs/vips
 media-libs/vulkan-loader
@@ -847,6 +848,7 @@ media-sound/yoshimi
 media-tv/kodi
 media-tv/plex-media-server
 media-video/aegisub
+media-video/avidemux
 media-video/baka-mplayer
 media-video/cinelerra
 media-video/dvdbackup
