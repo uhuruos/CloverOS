@@ -2,7 +2,7 @@ cd $( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )
 recentpackages=$(find /usr/portage/packages/ -iname \*.tbz2 -printf '%T+%p\n' | sort -r | sed 's@:[0-9]*\.[0-9]*/usr/portage/packages/@ @; s/\.tbz2//; s/+/ /; s/2019-//; s@\(.*\) \(.*\) \(.*\)@\1 \2 <a href="\3.tbz2">\3</a>@')
 isoname=(/usr/portage/packages/s/CloverOS-x86_64-*.iso)
 isoname=${isoname##*/}
-isolist=$(grep 'binhost_mirrors=' ../home/user/make.conf | sed "s@,@/s/$isoname\n@g" | sed 's@\(.*\)@						<a href="\1">\1</a>@g' | sed '1d;$d')
+isolist=$(grep 'binhost_mirrors=' ../home/user/make.conf | sed "s@,@/s/$isoname\n@g" | sed 's@\(.*\)@<a href="\1">\1</a>@g' | sed '1d;$d')
 echo '<!DOCTYPE html>
 <html lang="en">
 <title>CloverOS GNU/Linux</title>
@@ -75,49 +75,40 @@ body {
 }
 #buttons, #front h1, #front p, #details {
 	width: 800px;
-}
-#buttons, #front h1, #front p {
 	margin-left: auto;
 	margin-right: auto;
 }
-#buttons #logo {
-	float: left;
-	width: 170px;
-	height: 40px;
-	margin-top: 10px;
-	background-repeat: no-repeat;
-	background-position: center;
-	background-size: contain;
+#buttons {
+	text-align: center;
 }
-#buttons ul {
-	font-size: 0;
-	float: right;
-}
-#buttons li {
+#buttons > a, #buttons > .dropdown > a {
 	display: inline-block;
-	font-size: 20px;
 	line-height: 60px;
+	font-size: 20px;
 	cursor: pointer;
-	z-index: 10;
 	color: #999;
 	padding-left: 8px;
 	padding-right: 8px;
+	text-decoration: none;
 }
-#buttons li:hover {
+#buttons > a:hover, #buttons > .dropdown > a:hover {
 	border-bottom: 2px solid #3e9b4b;
 	transition: all 0.2s;
 	color: #ccc;
 }
-#buttons > ul > *:last-child li {
+#buttons > .dropdown:last-child > a {
 	color: #3e9b4b;
 }
-#buttons > ul > *:last-child li:hover {
+#buttons > .dropdown:last-child > a:hover {
 	color: #7fb486;
 	transition: all 0.2s;
 }
-#buttons > a {
-	text-decoration: none;
-	color: #999;
+#logo {
+	width: 160px;
+	margin-right: 8px;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: contain;
 }
 .dropdown {
 	position: relative;
@@ -136,7 +127,10 @@ body {
 	box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
 	background-color: #f9f9f9;
 	color: black;
+	text-align: left;
+	white-space: pre-wrap;
 }
+
 .dropdown-content a {
 	color: black;
 	text-decoration: none;
@@ -144,21 +138,16 @@ body {
 .dropdown-content a:hover {
 	text-decoration: underline;
 }
-#news, #packages, #downloads {
-	top: 62px;
-}
 #news, #packages {
 	height: 586px;
 }
 #news {
 	width: 500px;
 	left: -210px;
-	white-space: pre-wrap;
 }
 #packages {
 	width: 400px;
 	left: -145px;
-	white-space: pre;
 }
 #downloads {
 	right: 0;
@@ -170,7 +159,7 @@ body {
 	width: 100%;
 	height: 630px;
 	background-repeat: no-repeat;
-	background-position: center center;
+	background-position: center;
 	background-size: cover;
 }
 #front div {
@@ -209,13 +198,13 @@ body {
 	padding-bottom: 10px;
 	margin: 0;
 }
-#details span {
-	float: left;
+#clover {
 	width: 275px;
 	height: 275px;
+	float: left;
 	background-color: #eee;
 	background-repeat: no-repeat;
-	background-position: left center;
+	background-position: center;
 	background-size: cover;
 	border-radius: 320px;
 	margin-right: 50px;
@@ -278,12 +267,11 @@ body {
 }
 </style>
 <div id="top">
-		<div id="buttons">
-			<a id="logo" href="#"></a>
-			<ul>
-				<div class="dropdown">
-					<a href="https://twitter.com/cloveros_ga"><li>News</li></a>
-					<div class="dropdown-content" id="news">03-Aug-19
+	<div id="buttons">
+		<a id="logo" href="#">&zwnj;</a>
+		<div class="dropdown">
+			<a href="https://twitter.com/cloveros_ga">News</a>
+			<div class="dropdown-content" id="news">03-Aug-19
 Packages updated
 Package updated: www-client/ungoogled-chromium-75.0.3770.144_p1::pg_overlay
 
@@ -764,23 +752,20 @@ Kernel upgraded to 4.14.12
 CloverOS GNU/Linux (Package Signing) 78F5 AC55 A120 07F2 2DF9 A28A 78B9 3F76 B8E4 2805
 4096-bit https://cloveros.ga/s/cloveros.gpg
 #pgp #fingerprint</div>
-				</div>
-				<div class="dropdown">
-					<a href="https://useast.cloveros.ga"><li>Packages</li></a>
-					<div class="dropdown-content" id="packages">'"$recentpackages"'</div>
-				</div>
-				<a href="https://gitgud.io/cloveros/cloveros/issues"><li>Bugs</li></a>
-				<a href="https://wiki.cloveros.ga"><li>Wiki</li></a>
-				<a href="https://forums.cloveros.ga"><li>Forums</li></a>
-				<a href="irc://irc.rizon.net/cloveros"><li>IRC</li></a>
-				<a href="https://gitgud.io/cloveros/cloveros#cloveros"><li>Docs</li></a>
-				<div class="dropdown">
-					<a href="https://cloveros.ga/s/'"$isoname"'"><li>Download</li></a>
-					<div class="dropdown-content" id="downloads">
-'"$isolist"'
-					</div>
-				</div>
-			</ul>
+			</div>
+			<div class="dropdown">
+				<a href="https://useast.cloveros.ga">Packages</a>
+				<div class="dropdown-content" id="packages">'"$recentpackages"'</div>
+			</div>
+			<a href="https://gitgud.io/cloveros/cloveros/issues">Bugs</a>
+			<a href="https://wiki.cloveros.ga">Wiki</a>
+			<a href="https://forums.cloveros.ga">Forums</a>
+			<a href="irc://irc.rizon.net/cloveros">IRC</a>
+			<a href="https://gitgud.io/cloveros/cloveros#cloveros">Docs</a>
+			<div class="dropdown">
+				<a href="https://cloveros.ga/s/'"$isoname"'">Download</a>
+				<div class="dropdown-content" id="downloads">'"$isolist"'</div>
+			</div>
 		</div>
 </div>
 <div id="front">
@@ -791,7 +776,7 @@ CloverOS GNU/Linux (Package Signing) 78F5 AC55 A120 07F2 2DF9 A28A 78B9 3F76 B8E
 </div>
 <div id="details">
 		<h2>Why CloverOS?</h2>
-		<span id="clover"></span>
+		<div id="clover"></div>
 		<h3>Gentoo Linux, untouched</h3>
 		<p>CloverOS is an as default as possible Gentoo install with all system configuration done in /etc/portage/make.conf</p>
 		<h3>No bloat and easy to use</h3>

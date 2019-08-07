@@ -25,7 +25,7 @@ app-emulation/virtualbox-modules # virtualbox
 app-emulation/virtualbox-extpack-oracle
 net-misc/youtube-dl # stable always outdated/never works
 =media-libs/opencollada-1.6.63 # libpcre
-=dev-libs/ell-0.20 # iwd
+=dev-libs/ell-0.21 # iwd
 =dev-libs/nspr-4.21 # chromium
 >x11-libs/libva-2 # ungoogled-chromium
 >x11-libs/libva-intel-driver-2 # libva
@@ -33,7 +33,6 @@ media-libs/zimg ** # vapoursynth
 media-video/vdr # fixes build
 net-p2p/mldonkey # fixes build
 games-emulation/mgba # fixes build
-dev-db/mariadb # fixes build
 net-misc/spice-gtk # fixes build
 media-libs/osl # fixes build
 =app-emulation/spice-protocol-0.14.0 # spice-gtk

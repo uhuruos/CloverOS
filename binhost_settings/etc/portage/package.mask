@@ -62,3 +62,5 @@ app-emulation/wine-staging::gentoo # bobwya
 >media-sound/supercollider-3.9.3-r1 # boost
 >media-video/shotcut-19.01.24 # mlt/flowblade
 >x11-wm/stumpwm-1.0.1_rc # doesn't build
+>=dev-python/dnspython-1.16.0 # dependency, pycryptodome version too high
+>dev-python/libvirt-python-5.2.0 # dependency
