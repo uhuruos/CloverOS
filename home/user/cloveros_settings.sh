@@ -115,6 +115,8 @@ case "$choice" in
 
 		./cloveros_settings.sh 9
 
+		sudo eselect wine set 1
+
 		echo -e "\nSystem updated."
 		;;
 
