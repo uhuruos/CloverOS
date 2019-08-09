@@ -13,7 +13,9 @@ media-video/mpv
 media-libs/shaderc # mpv
 
 #old, remove when stable is bumped up
-=media-libs/harfbuzz-2.5.3
+#=x11-libs/libva-1.8.3 # required by wine-staging
+#=x11-libs/libva-intel-driver-1.8.3 # required by wine-staging
+=media-libs/harfbuzz-2.5.3 # dependencies
 =media-libs/mlt-6.16.0-r2 # shotcut
 sys-fs/zfs # kernel 5.0
 sys-fs/zfs-kmod # zfs
@@ -22,13 +24,11 @@ app-emulation/virtualbox # kernel 5.0
 app-emulation/virtualbox-guest-additions # virtualbox
 app-emulation/virtualbox-additions # virtualbox
 app-emulation/virtualbox-modules # virtualbox
-app-emulation/virtualbox-extpack-oracle
+app-emulation/virtualbox-extpack-oracle # virtualbox
 net-misc/youtube-dl # stable always outdated/never works
 =media-libs/opencollada-1.6.63 # libpcre
 =dev-libs/ell-0.21 # iwd
 =dev-libs/nspr-4.21 # chromium
->x11-libs/libva-2 # ungoogled-chromium
->x11-libs/libva-intel-driver-2 # libva
 media-libs/zimg ** # vapoursynth
 media-video/vdr # fixes build
 net-p2p/mldonkey # fixes build
@@ -80,6 +80,7 @@ app-editors/xemacs
 www-client/elinks
 
 #keyworded, remove when stable exists
+games-fps/alienarena
 media-gfx/wkhtmltopdf
 media-gfx/openexr_viewers
 dev-util/android-ndk
