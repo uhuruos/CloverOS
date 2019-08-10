@@ -271,7 +271,11 @@ body {
 		<a id="logo" href="#">&zwnj;</a>
 		<div class="dropdown">
 			<a href="https://twitter.com/cloveros_ga">News</a>
-			<div class="dropdown-content" id="news">03-Aug-19
+			<div class="dropdown-content" id="news">10-Aug-19
+Packages updated
+ISO: https://cloveros.ga/s/CloverOS-x86_64-20190810.iso
+
+03-Aug-19
 Packages updated
 Package updated: www-client/ungoogled-chromium-75.0.3770.144_p1::pg_overlay
 
