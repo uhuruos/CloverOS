@@ -13,8 +13,6 @@ media-video/mpv
 media-libs/shaderc # mpv
 
 #old, remove when stable is bumped up
-#=x11-libs/libva-1.8.3 # required by wine-staging
-#=x11-libs/libva-intel-driver-1.8.3 # required by wine-staging
 =media-libs/harfbuzz-2.5.3 # dependencies
 =media-libs/mlt-6.16.0-r2 # shotcut
 sys-fs/zfs # kernel 5.0
