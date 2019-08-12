@@ -115,7 +115,9 @@ case "$choice" in
 
 		./cloveros_settings.sh 9
 
-		sudo eselect wine set 1 &> /dev/null
+		if [ -d /var/db/pkg/app-emulation/wine-staging* ]; then
+			sudo eselect wine set 1 &> /dev/null
+		fi
 
 		echo -e "\nSystem updated."
 		;;
