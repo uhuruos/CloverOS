@@ -102,8 +102,8 @@ case "$choice" in
 		fi
 
 		sudo emerge --sync
-		for i in {dev-libs/glib,dev-qt/qtgui,dev-python/PyQt5}; do [ -d /var/db/pkg/$i* ] && sudo PORTAGE_BINHOST="https://cloveros.ga/s/nodbus" FETCHCOMMAND_HTTPS="wget -O \"\${DISTDIR}/\${FILE}\" \"\${URI}\"" emerge -1uD $i; done; sudo emerge --depclean
 		sudo emerge -uvD @world
+		for i in {dev-libs/glib,dev-qt/qtgui,dev-python/PyQt5}; do [ -d /var/db/pkg/$i* ] && sudo PORTAGE_BINHOST="https://cloveros.ga/s/nodbus" FETCHCOMMAND_HTTPS="wget -O \"\${DISTDIR}/\${FILE}\" \"\${URI}\"" emerge -1uD $i; done
 		sudo emerge --depclean
 
 		kernel=$(uname -r)
