@@ -25,5 +25,8 @@ colorhug-client # libusb USE=udev
 # builds, but doesn't work
 zsnes
 
+# builds, requires FEATURES=userpriv
+firefox
+
 # builds, requires AR="gcc-ar" commented out
 ftjam argyllcms

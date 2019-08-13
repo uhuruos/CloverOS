@@ -199,7 +199,7 @@ media-libs/phonon -vlc
 media-libs/libsdl X
 www-client/chromium jumbo-build
 www-client/ungoogled-chromium -lld gold optimize-thinlto optimize-webui new-tcmalloc jumbo-build -system-libvpx
-www-client/firefox -wifi
+www-client/firefox -wifi -wayland
 mail-client/thunderbird -crypt
 www-client/seamonkey -crypt -minimal
 www-client/palemoon -official-branding -gconf
@@ -285,7 +285,6 @@ media-libs/libsdl2 gles # required by wayland
 x11-libs/libdrm video_cards_vmware # required by open-vm-tools
 media-libs/mesa video_cards_vmware # required by open-vm-tools
 media-plugins/gst-plugins-meta v4l # required by kamoso
-www-client/firefox -pgo # temporary
 www-client/ungoogled-chromium -vaapi # requires libva 2.x
 x11-libs/gtk+ X
 x11-libs/libva X

@@ -1182,6 +1182,7 @@ www-client/surf
 www-client/surfraw
 www-client/torbrowser
 www-client/uget
+www-client/ungoogled-chromium
 www-client/w3m
 www-client/waterfox
 www-misc/fcgiwrap
