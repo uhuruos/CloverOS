@@ -271,7 +271,12 @@ body {
 		<a id="logo" href="#">&zwnj;</a>
 		<div class="dropdown">
 			<a href="https://twitter.com/cloveros_ga">News</a>
-			<div class="dropdown-content" id="news">10-Aug-19
+			<div class="dropdown-content" id="news">14-Aug-19
+Packages updated
+ISO: https://cloveros.ga/s/CloverOS-x86_64-20190814.iso
+GCC updated to 9.2
+
+10-Aug-19
 Packages updated
 ISO: https://cloveros.ga/s/CloverOS-x86_64-20190810.iso
 
