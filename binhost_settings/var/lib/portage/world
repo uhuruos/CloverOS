@@ -1140,7 +1140,6 @@ sys-fs/squashfs-tools
 sys-fs/udiskie
 sys-fs/zfs
 sys-fs/zfs-auto-snapshot
-sys-kernel/bliss-initramfs
 sys-kernel/dkms
 sys-kernel/dracut
 sys-kernel/genkernel
