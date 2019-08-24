@@ -10,7 +10,7 @@ if [ ! -d '/usr/portage/packages/s/signatures/' ]; then
 	mkdir -p /usr/portage/packages/s/signatures/
 fi
 
-export BINPKG_COMPRESS="xz" XZ_OPT="--x86 --lzma2=preset=9e,dict=256MB,nice=273,depth=200,lc=4"
+export BINPKG_COMPRESS="xz" XZ_OPT="--x86 --lzma2=preset=9e,dict=128MB,nice=273,depth=200,lc=4"
 
 if [ "$1" = 'deep' ]; then
 	find /usr/portage/packages/ -mindepth 1 -maxdepth 1 ! -name s -exec rm -Rf {} \;
