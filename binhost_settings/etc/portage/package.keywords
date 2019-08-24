@@ -13,8 +13,9 @@ media-video/mpv
 media-libs/shaderc # mpv
 
 #old, remove when stable is bumped up
-=media-libs/harfbuzz-2.5.3 # dependencies
-=dev-libs/libuv-1.31.0 # dependencies
+#=media-libs/harfbuzz-2.5.3 # dependencies
+#=dev-libs/libuv-1.31.0 # dependencies
+#=x11-libs/libdrm-2.4.99 # dependencies
 =media-libs/mlt-6.16.0-r2 # shotcut
 sys-fs/zfs # kernel 5.0
 sys-fs/zfs-kmod # zfs
@@ -35,6 +36,7 @@ games-emulation/mgba # fixes build
 net-misc/spice-gtk # fixes build
 media-libs/osl # fixes build
 =app-emulation/spice-protocol-0.14.0 # spice-gtk
+=x11-misc/x11vnc-0.9.16-r3 # fixes build
 x11-themes/sddm-gentoo-black-theme ** # fixes build
 x11-themes/terminology-themes ** # fixes build
 media-plugins/vapoursynth-d2vsource ** # fixes build
@@ -66,7 +68,7 @@ dev-python/cairocffi # qtile
 =sys-devel/llvm-8.0.1
 
 #libressl, remove when stable supports libressl
-dev-qt/qtnetwork::libressl
+=dev-qt/qtnetwork-5.12.3::libressl
 net-libs/nodejs::libressl
 app-crypt/qca::libressl
 dev-perl/Net-SSLeay
