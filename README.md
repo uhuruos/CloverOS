@@ -12,6 +12,8 @@ Objectives: Lowest RAM usage desktop, no changes to Gentoo and kept as default a
 ## System Requirements
 x86_64 CPU that supports SSSE3 (Core 2 Duo, AMD FX and higher), 5GB of disk space, 64-128MB RAM depending on video driver
 
+Copying iso to usb drive: `dd if=CloverOS-x86_64-date.iso of=/dev/sdx bs=4M`
+
 ## Cheat sheet
 ### Installing program
 `sudo emerge filezilla`

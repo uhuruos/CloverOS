@@ -60,5 +60,6 @@ dev-qt/qtnetwork::gentoo # libressl
 
 # version dependency
 =media-sound/supercollider-3.10.2
-=sys-apps/pkgcore-0.10.0
+>=sys-apps/pkgcore-0.10.0
 =dev-python/dnspython-1.16.0
+=net-wireless/iwd-0.20

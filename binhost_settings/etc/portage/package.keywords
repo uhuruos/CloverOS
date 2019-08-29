@@ -771,6 +771,7 @@ media-plugins/vapoursynth-fvsfunc
 media-plugins/vapoursynth-xaa
 media-plugins/vapoursynth-temporalsoften2
 media-plugins/vapoursynth-tedgemask
+media-plugins/vapoursynth-median
 media-sound/deadbeef
 media-plugins/deadbeef-plugins-meta
 media-plugins/deadbeef-replaygain-control

@@ -13,6 +13,7 @@ app-admin/lastpass-cli
 app-admin/logrotate
 app-admin/mcelog
 app-admin/metalog
+app-admin/mongo-tools
 app-admin/pass
 app-admin/passwordsafe
 app-admin/sshguard

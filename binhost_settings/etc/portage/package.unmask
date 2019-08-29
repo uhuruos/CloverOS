@@ -155,6 +155,8 @@ pantheon-base/plank::elementary
 x11-themes/plank-theme-pantheon::elementary
 
 sys-apps/flatpak::flatpak-overlay
+acct-user/flatpak::flatpak-overlay # flatpak
+acct-group/flatpak::flatpak-overlay # flatpak
 sys-apps/xdg-desktop-portal::flatpak-overlay
 sys-apps/xdg-desktop-portal-gtk::flatpak-overlay
 sys-fs/libostree::flatpak-overlay
@@ -360,3 +362,4 @@ media-plugins/vapoursynth-astdr::vapoursynth
 #media-plugins/vapoursynth-kagefunc::vapoursynth
 media-plugins/vapoursynth-hysteria::vapoursynth
 media-plugins/vapoursynth-curve::vapoursynth
+media-plugins/vapoursynth-median::vapoursynth
