@@ -4,8 +4,8 @@ if [ $(id -u) != "0" ]; then
 	exit 1
 fi
 
-kernelversion=4.20.7
-kernelmajversion=4.20
+kernelversion=5.2.1
+kernelmajversion=5.2
 
 binutils-config --linker ld.bfd
 
