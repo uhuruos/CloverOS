@@ -122,7 +122,7 @@ cd ..
 umount -l image/*
 wget https://cloveros.ga/s/kernel-livecd.tar.lzma
 tar -C image/lib/modules/ -xf kernel-livecd.tar.lzma --wildcards \*-aufs/\*
-mksquashfs image/ image.squashfs -b 1024k -comp xz -Xbcj x86 -Xdict-size 100%
+mksquashfs image/ image.squashfs -b 1M -comp xz -Xbcj x86 -Xdict-size 1M
 mkdir iso/
 builddate=$(wget -O - http://distfiles.gentoo.org/releases/amd64/autobuilds/current-install-amd64-minimal/ | sed -nr "s/.*href=\"install-amd64-minimal-([0-9].*).iso\">.*/\1/p")
 wget http://distfiles.gentoo.org/releases/amd64/autobuilds/current-install-amd64-minimal/install-amd64-minimal-$builddate.iso -P iso/
