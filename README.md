@@ -10,7 +10,7 @@ Mirrors and binary details: https://useast.cloveros.ga https://uswest.cloveros.g
 Objectives: Lowest RAM usage desktop, no changes to Gentoo and kept as default as possible, easily install any package in its ideal form with emerge, easy out-of-the-box desktop, best CFLAGS
 
 ## System Requirements
-x86_64 CPU that supports SSSE3 (Core 2 Duo, AMD FX and higher), 5GB of disk space, 64-128MB RAM depending on video driver
+x86_64 CPU that supports SSSE3 (Core 2 Duo, AMD FX and higher), 5GB of disk space
 
 Copying iso to usb drive: `dd if=CloverOS-x86_64-date.iso of=/dev/sdx bs=4M`
 
