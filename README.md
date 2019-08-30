@@ -355,36 +355,6 @@ Open qt5ct and switch the style and the icon theme to Breeze.
 ### Firefox and Pulseaudio
 Firefox 57+ still works with ALSA. If this changes, it will be built with apulse.
 
-### Vertical tabs in Firefox 57+
-https://addons.mozilla.org/en-US/firefox/addon/vertical-tabs-reloaded/
-
-`mkdir ~/.mozilla/firefox/*.default/chrome/`
-
-`nano ~/.mozilla/firefox/*.default/chrome/userChrome.css`
-
-```
-@namespace url("http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul"); /* set default namespace to XUL */
-/* Hide Horizontal TAB Bar */
-#TabsToolbar {
- visibility: collapse !important;
-}
-/* Hide White Header Tab Tree */
-#sidebar-header {
- display: none;
-}
-```
-
-![Firefox](https://i.imgur.com/z6NaM5a.png)
-
-To have built-in tab list button available at all times:
-
-`~/.mozilla/firefox/*.default/chrome/userChrome.css`
-```
-#alltabs-button {
-    visibility: visible !important;
-}
-```
-
 ### Enable tap to click on touchpads
 `xinput set-prop "SynPS/2 Synaptics TouchPad" "libinput Tapping Enabled" 1`
 
@@ -666,7 +636,7 @@ Run `rsync -av --delete rsync://nl.cloveros.ga/cloveros /your/webserver/location
 
 ### Disabling Intel mitigations for performance
 ```
-sudo GRUB_CMDLINE_LINUX_DEFAULT="kpti=0 l1tf=off pti=off spectre_v2=off spectre_v2_user=off spec_store_bypass_disable=off ssbd=force-off" grub-mkconfig -o /boot/grub/grub.cfg
+sudo GRUB_CMDLINE_LINUX_DEFAULT="kpti=0 l1tf=off pti=off spectre_v2=off spectre_v2_user=off spec_store_bypass_disable=off ssbd=force-off intel_iommu=on" grub-mkconfig -o /boot/grub/grub.cfg
 ```
 
 Make sure the computer you run this on has nothing important on it. (Dedicated gaming machines, etc.)
