@@ -22,7 +22,7 @@ Copying iso to usb drive: `dd if=CloverOS-x86_64-date.iso of=/dev/sdx bs=4M`
 ```
 sudo emerge --sync
 sudo emerge -uavD @world
-sudo emerge --depclean || sudo emerge -u1 virtual/perl-File-Spec dev-perl/Locale-gettext dev-perl/libintl-perl virtual/perl-ExtUtils-MakeMaker dev-libs/icu dev-libs/boost dev-perl/Unicode-EastAsianWidth sys-apps/texinfo virtual/perl-ExtUtils-MakeMaker dev-perl/Text-Unidecode dev-perl/XML-Parser && sudo emerge --depclean
+sudo emerge --depclean
 ```
 
 ### Updating config files after upgrading system (Optional)
