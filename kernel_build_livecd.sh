@@ -25,7 +25,7 @@ wget https://linux-libre.fsfla.org/pub/linux-libre/releases/$kernelversion-gnu/d
 chmod +x /usr/src/linux-$kernelversion-aufs-gnu/deblob-$kernelmajversion /usr/src/linux-$kernelversion-aufs-gnu/deblob-check
 cd /usr/src/linux-$kernelversion-aufs-gnu/ ; PYTHON="python2.7" /usr/src/linux-$kernelversion-aufs-gnu/deblob-$kernelmajversion ; cd -
 genkernel --kernel-config=config-aufs --kerneldir=/usr/src/linux-$kernelversion-aufs-gnu/ --luks --lvm all
-XZ_OPT="--lzma1=preset=9e,dict=128MB,nice=273,depth=200,lc=4" tar --lzma -cf /usr/portage/packages/s/kernel-livecd-libre.tar.lzma /boot/*$kernelversion-aufs-gnu /lib/modules/$kernelversion-aufs-gnu &
+XZ_OPT="--lzma1=preset=9e,dict=128MB,nice=273,depth=200,lc=4" tar --lzma -cf /usr/portage/packages/s/kernel-livecd-libre.tar.lzma -C /usr/src/linux-$kernelversion-aufs-gnu/build/kernel/ . -C /usr/src/linux-$kernelversion-aufs-gnu/build/modules/lib/modules/ .
 
 sudo emerge -C aufs-sources
 sudo rm -Rf /usr/src/linux-$kernelversion-aufs/ /usr/src/linux-$kernelversion-aufs-gnu/ config-aufs
