@@ -247,6 +247,11 @@ sudo emerge bumblebee
 sudo depmod
 sudo sed -i 's/^Driver=$/Driver=nvidia/; s/^Bridge=auto$/Bridge=primus/; s/^VGLTransport=proxy$/VGLTransport=rgb/; s@^PrimusLibraryPath=/usr/lib/primus:/usr/lib32/primus$@PrimusLibraryPath=/usr/lib/primus:/usr/lib32/primus:/usr/lib64/primus@; s/^KernelDriver=$/KernelDriver=nvidia/; s/^PMMethod=auto$/PMMethod=bbswitch/; s@^LibraryPath=$@LibraryPath=/usr/lib64/opengl/nvidia/lib:/usr/lib/opengl/nvidia/lib@; s@^XorgModulePath=$@XorgModulePath=/usr/lib64/opengl/nvidia/lib,/usr/lib64/opengl/nvidia/extensions,/usr/lib64/xorg/modules/drivers,/usr/lib64/xorg/modules@' /etc/bumblebee/bumblebee.conf
 ```
+Depending on how new your laptop is, you will need to enable
+```
+GRUB_CMDLINE_LINUX_DEFAULT="acpi_osi=Linux nogpumanager"
+```
+in `/etc/default/grub` and use `sudo grub-mkconfig -o /boot/grub/grub.cfg` to have bbswitch manage your gpu on the next reboot
 
 ### Installing VirtualBox
 ```
