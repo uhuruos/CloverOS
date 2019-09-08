@@ -1,3 +1,5 @@
+x11-terms/tilix dmd-2_086
+dev-libs/gtkd vte dmd-2_086 # tilix
 net-vpn/zeronet tor
 sys-fs/lvm2 -thin
 games-fps/eduke32 demo

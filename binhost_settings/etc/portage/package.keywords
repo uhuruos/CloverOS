@@ -9,13 +9,16 @@ www-client/firefox
 dev-libs/nss # firefox
 dev-util/cbindgen # firefox
 media-libs/libvpx:0/5 # firefox
+=dev-lang/rust-1.37.0 # firefox
+=virtual/rust-1.37.0 # firefox
+=virtual/cargo-1.37.0 # firefox
 media-video/mpv
 media-libs/shaderc # mpv
 
 #old, remove when stable is bumped up
 =media-libs/mlt-6.16.0-r2 # shotcut
-sys-fs/zfs # kernel 5.0
-sys-fs/zfs-kmod # zfs
+sys-fs/zfs ** # kernel 5.0
+sys-fs/zfs-kmod ** # zfs
 =virtual/linux-sources-3-r1 # zfs
 app-emulation/virtualbox # kernel 5.0
 app-emulation/virtualbox-guest-additions # virtualbox
@@ -78,6 +81,7 @@ app-editors/xemacs
 www-client/elinks
 
 #keyworded, remove when stable exists
+sys-devel/autofdo
 games-fps/alienarena
 media-gfx/wkhtmltopdf
 media-gfx/openexr_viewers
@@ -547,9 +551,7 @@ games-fps/openjk-outcast **
 games-fps/openjk-academy **
 games-fps/openjk-academy-mp **
 x11-plugins/telegram-purple **
-media-sound/guitarix **
-media-libs/libmonome # guitarix
-media-libs/zita-resampler # guitarix
+media-sound/guitarix
 sys-fs/go-mtpfs **
 dev-libs/go-usb ** # go-mtpfs
 dev-libs/go-fuse # go-mtpfs

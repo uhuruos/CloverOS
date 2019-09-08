@@ -585,6 +585,20 @@ And add in
 
 `choice=y`
 
+Or any other WM option. You can also set up automatic login by editing `/etc/inittab/`:
+
+Replace
+
+`c1:12345:respawn:/sbin/agetty --noclear 38400 tty1 linux`
+
+with
+
+`c1:12345:respawn:/sbin/agetty --autologin <username> --noclear 38400 tty1 linux`
+
+Automatic grub choice:
+
+`sudo sed -i 's/timeout=5/timeout=0/' /boot/grub/grub.cfg`
+
 ### I want to bypass the mixer to play >48KHz audio / DSD
 Edit ~/.asoundrc:
 

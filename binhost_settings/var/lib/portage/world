@@ -265,6 +265,7 @@ dev-java/icedtea
 dev-java/junit
 dev-java/maven-bin
 dev-lang/R
+dev-lang/dmd
 dev-lang/go
 dev-lang/open-cobol
 dev-lang/php
@@ -1111,6 +1112,7 @@ sys-boot/plymouth
 sys-boot/syslinux
 sys-boot/unetbootin
 sys-boot/woeusb
+sys-devel/autofdo
 sys-devel/crossdev
 sys-devel/distcc
 sys-devel/gdb
@@ -1144,7 +1146,7 @@ sys-fs/zfs-auto-snapshot
 sys-kernel/dkms
 sys-kernel/dracut
 sys-kernel/genkernel
-sys-kernel/gentoo-sources:5.1.21
+sys-kernel/gentoo-sources:5.2.13
 sys-kernel/linux-firmware
 sys-power/acpi_call
 sys-power/acpitool
@@ -1405,6 +1407,7 @@ x11-terms/st
 x11-terms/terminator
 x11-terms/terminology
 x11-terms/termite
+x11-terms/tilix
 x11-terms/xfce4-terminal
 x11-themes/adwaita-icon-theme
 x11-themes/arc-icon-theme

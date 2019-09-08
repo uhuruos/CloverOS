@@ -1,3 +1,5 @@
+sys-devel/autofdo::pentoo
+
 net-im/profanity::optmzr
 dev-libs/libmesode::optmzr # profanity
 
@@ -48,7 +50,6 @@ net-print/brother-genml1-bin::brother-overlay
 
 media-sound/pure-data::audio-overlay
 media-sound/bitwig-studio::audio-overlay
-media-sound/guitarix::audio-overlay
 media-sound/mididings::audio-overlay
 media-sound/drumkv1::audio-overlay
 media-sound/padthv1::audio-overlay
