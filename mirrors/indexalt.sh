@@ -271,7 +271,11 @@ body {
 		<a id="logo" href="#">&zwnj;</a>
 		<div class="dropdown">
 			<a href="https://twitter.com/cloveros_ga">News</a>
-			<div class="dropdown-content" id="news">03-Sep-19
+			<div class="dropdown-content" id="news">09-Sep-19
+Packages updated
+Kernel updated to 5.2.13
+
+03-Sep-19
 Packages updated
 ISO: https://cloveros.ga/s/CloverOS-x86_64-20190903.iso
 LiveCD kernel now uses 5.2.1-aufs
