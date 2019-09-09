@@ -138,6 +138,8 @@ to
 
 This disables the binhost and uses Portage's ebuilds for packages. Now you can emerge from source.
 
+Run `./cloveros_settings.sh c` to get the CloverOS Portage configuration.
+
 ## FAQ
 ### Table of contents
 * [What is CloverOS?](#what-is-cloveros)
@@ -687,36 +689,6 @@ To update the system using source: `./cloveros_settings.sh c && sudo emerge --sy
 To remove dbus: `sudo USE="-dbus" emerge -1 glib qtgui && sudo emerge --depclean`
 
 ### What if CloverOS dies? Will my install become useless?
-No. Switch to source by running `./cloveros_settings.sh 5`
+No. Just switch to source and manage it like any other Gentoo install. See <a href="#switching-to-source">Switching to source</a>.
 
-Or:
-
-Edit `/etc/portage/make.conf` and edit the following line:
-
-`EMERGE_DEFAULT_OPTS="--keep-going=y --autounmask-write=y --jobs=4 -G"`
-
-to
-
-`EMERGE_DEFAULT_OPTS="--keep-going=y --autounmask-write=y --jobs=4"`
-
-and comment out the following lines, eg:
-
-```
-ACCEPT_KEYWORDS="**"
-FETCHCOMMAND_HTTPS="...
-```
-
-to
-
-```
-#ACCEPT_KEYWORDS="**"    
-#FETCHCOMMAND_HTTPS="...
-```
-
-Your system is now Gentoo Linux.
-
-After emerge determines what it needs to install and checks dependencies, the -G switch tells emerge to check the binhost before it starts building source. Removing -G reverts to regular emerge operation. It's exactly the same as running `PORTAGE_BINHOST="https://cloveros.ga" emerge -G package` on any Gentoo install. Because it still uses Gentoo repo (versions, ebuilds), and only uses CloverOS as a binhost, you still need to run `emerge --sync`.
-
-CloverOS is a default Gentoo install with programs and with the above defaulted in `/etc/portage/make.conf`. There's also some configuration files and scripts in the user's home directory for making things easier. With those files removed, CloverOS becomes a default Gentoo install.
-
-You can see exactly what's done here: https://gitgud.io/cloveros/cloveros/blob/master/livecd_build.sh
+You can see what CloverOS adds to a default Gentoo install here: https://gitgud.io/cloveros/cloveros/blob/master/livecd_build.sh
