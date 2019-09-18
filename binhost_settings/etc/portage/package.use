@@ -381,6 +381,7 @@ net-ftp/gproftpd -ssl
 app-admin/mongo-tools -ssl
 net-ftp/proftpd -ssl -libressl
 app-emulation/open-vm-tools -ssl -vgauth -grabbitmqproxy
+sys-fs/cryptsetup openssl
 
 #wine
 sys-apps/attr abi_x86_32
@@ -460,9 +461,7 @@ dev-libs/libaio abi_x86_32
 media-libs/libsdl2 abi_x86_32
 media-libs/libsoundtouch abi_x86_32
 media-libs/portaudio abi_x86_32
-x11-libs/gtk+:2 abi_x86_32
 x11-libs/libICE abi_x86_32
-x11-libs/wxGTK:3.0 abi_x86_32
 dev-libs/glib abi_x86_32
 x11-libs/gdk-pixbuf abi_x86_32
 x11-libs/libSM abi_x86_32
@@ -489,3 +488,8 @@ media-libs/audiofile abi_x86_32
 media-libs/libsdl abi_x86_32
 sys-fs/eudev abi_x86_32
 virtual/libudev abi_x86_32
+net-libs/libpcap abi_x86_32
+x11-libs/wxGTK:3.0-gtk3 abi_x86_32
+x11-libs/gtk+:2 abi_x86_32
+x11-libs/gtk+:3 abi_x86_32
+media-libs/libepoxy abi_x86_32

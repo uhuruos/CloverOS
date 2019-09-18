@@ -21,6 +21,7 @@ app-admin/sudo
 app-admin/sysklogd
 app-admin/syslog-ng
 app-admin/testdisk
+app-antivirus/clamav
 app-arch/advancecomp
 app-arch/brotli
 app-arch/cabextract
@@ -724,7 +725,6 @@ media-gfx/nip2
 media-gfx/nomacs
 media-gfx/openexr_viewers
 media-gfx/openscad
-media-gfx/opentoonz
 media-gfx/optipng
 media-gfx/photoqt
 media-gfx/phototonic
@@ -996,7 +996,6 @@ net-p2p/freenet
 net-p2p/go-ipfs-bin
 net-p2p/ktorrent
 net-p2p/mktorrent
-net-p2p/mktorrent-borg
 net-p2p/mldonkey
 net-p2p/ncdc
 net-p2p/nicotine+
@@ -1026,6 +1025,7 @@ net-vpn/zeronet
 net-wireless/aircrack-ng
 net-wireless/blueman
 net-wireless/bluez
+net-wireless/chirp
 net-wireless/cubicsdr
 net-wireless/gnuradio
 net-wireless/iw
@@ -1077,7 +1077,7 @@ sys-apps/iproute2
 sys-apps/iucode_tool
 sys-apps/kexec-tools
 sys-apps/kmscon
-sys-apps/lm_sensors
+sys-apps/lm-sensors
 sys-apps/lshw
 sys-apps/mlocate
 sys-apps/moreutils
@@ -1085,7 +1085,6 @@ sys-apps/msr-tools
 sys-apps/nvme-cli
 sys-apps/pkgcore
 sys-apps/pmount
-sys-apps/psensor
 sys-apps/pv
 sys-apps/qdirstat
 sys-apps/qingy
@@ -1151,6 +1150,7 @@ sys-power/acpi_call
 sys-power/acpitool
 sys-power/cpupower
 sys-power/hibernate-script
+sys-power/intel-undervolt
 sys-power/pm-utils
 sys-power/powertop
 sys-power/suspend

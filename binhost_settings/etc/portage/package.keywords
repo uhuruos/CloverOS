@@ -27,7 +27,6 @@ app-emulation/virtualbox-modules # virtualbox
 app-emulation/virtualbox-extpack-oracle # virtualbox
 net-misc/youtube-dl # stable always outdated/never works
 =media-libs/opencollada-1.6.63 # libpcre
-=dev-libs/ell-0.21 # iwd
 =dev-libs/nspr-4.22 # chromium
 media-libs/zimg ** # vapoursynth
 media-video/vdr # fixes build
@@ -81,6 +80,8 @@ app-editors/xemacs
 www-client/elinks
 
 #keyworded, remove when stable exists
+sys-power/intel-undervolt
+net-wireless/chirp
 sys-devel/autofdo
 games-fps/alienarena
 media-gfx/wkhtmltopdf
@@ -139,6 +140,7 @@ media-sound/milkytracker
 x11-terms/alacritty
 media-plugins/refocus-it
 net-wireless/iwd
+dev-libs/ell # iwd
 x11-themes/terminology-themes
 app-emulation/nemu
 app-shells/mcfly
