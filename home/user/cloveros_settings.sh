@@ -67,20 +67,20 @@ case "$choice" in
 		;;
 
 	zz)
-		if [ ! -d /var/db/pkg/x11-terms/rxvt-unicode-9.22-r1/ ]; then
+		if [ -d /var/db/pkg/x11-terms/rxvt-unicode-9.21*/ ]; then
 			sed -i "s/-fn 6x13 -sl 0/-fn 6x13 -letsp 0 -sl 0/g" ~/.fvwm2rc
 			sed -i "s/profile=opengl-hq/profile=gpu-hq/" ~/.mpv/config
 			if ! grep -q "URxvt.letterSpace: -1" ~/.Xdefaults; then
 				echo "URxvt.letterSpace: -1" >> ~/.Xdefaults
 			fi
 		fi
-		if [ -d /var/db/pkg/sys-devel/gcc-8* ]; then
+		if [ -d /var/db/pkg/sys-devel/gcc-8*/ ]; then
 			sudo FETCHCOMMAND_HTTPS="wget -O \"\${DISTDIR}/\${FILE}\" \"\${URI}\"" emerge -1 gcc glibc
 		fi
 		if [ ! -d /var/db/pkg/net-libs/gnutls-3.6.7/ ]; then
 			sudo FETCHCOMMAND_HTTPS="wget -O \"\${DISTDIR}/\${FILE}\" \"\${URI}\"" emerge -1 gnutls aria2
 		fi
-		if [ -d /var/db/pkg/dev-perl/Locale-gettext* ]; then
+		if [ -d /var/db/pkg/dev-perl/Locale-gettext*/ ]; then
 			sudo emerge -C dev-perl/Locale-gettext
 			sudo emerge -v @preserved-rebuild
 			sudo emerge -1 app-crypt/rhash dev-python/m2crypto sys-apps/help2man dev-perl/libintl-perl dev-perl/Text-Unidecode dev-perl/XML-Parser dev-perl/Unicode-EastAsianWidth virtual/perl-CPAN-Meta virtual/perl-CPAN-Meta-YAML virtual/perl-Carp virtual/perl-Compress-Raw-Bzip2 virtual/perl-Compress-Raw-Zlib virtual/perl-Data-Dumper virtual/perl-Digest virtual/perl-Digest-MD5 virtual/perl-Digest-SHA virtual/perl-Encode virtual/perl-Exporter virtual/perl-ExtUtils-CBuilder virtual/perl-ExtUtils-Install virtual/perl-ExtUtils-MakeMaker virtual/perl-ExtUtils-Manifest virtual/perl-ExtUtils-ParseXS virtual/perl-File-Path virtual/perl-File-Spec virtual/perl-File-Temp virtual/perl-Getopt-Long virtual/perl-IO virtual/perl-IO-Compress virtual/perl-IPC-Cmd virtual/perl-JSON-PP virtual/perl-MIME-Base64 virtual/perl-Math-Complex virtual/perl-Memoize virtual/perl-Module-Metadata virtual/perl-Parse-CPAN-Meta virtual/perl-Perl-OSType virtual/perl-Pod-Parser virtual/perl-Scalar-List-Utils virtual/perl-Storable virtual/perl-Sys-Syslog virtual/perl-Term-ANSIColor virtual/perl-Term-ReadLine virtual/perl-Test-Harness virtual/perl-Text-Balanced virtual/perl-Text-ParseWords virtual/perl-Text-Tabs+Wrap virtual/perl-Time-HiRes virtual/perl-Time-Local virtual/perl-Time-Piece virtual/perl-XSLoader virtual/perl-if virtual/perl-libnet virtual/perl-parent virtual/perl-podlators virtual/perl-version dev-perl/TimeDate dev-perl/MailTools dev-perl/Digest-HMAC dev-perl/Module-Build dev-perl/Authen-SASL dev-perl/Error dev-perl/Net-SSLeay
@@ -358,11 +358,15 @@ case "$choice" in
 		echo "Running the following:"
 		echo "sudo emerge eselect-repository"
 		echo "sudo mkdir /etc/portage/repos.conf"
+		echo 'sudo eselect repository remove {1..500}'
 		echo 'sudo xargs eselect repository enable "{}" <<< "'$overlays'"'
 		echo "sudo emerge --sync"
 		sleep 2
-		sudo emerge eselect-repository
-		sudo mkdir /etc/portage/repos.conf
+		if [ ! -d /var/db/pkg/app-eselect/eselect-repository-*/ ]; then
+			sudo emerge eselect-repository
+			sudo mkdir /etc/portage/repos.conf
+		fi
+		sudo eselect repository remove {1..500}
 		sudo xargs eselect repository enable "{}" <<< "$overlays"
 		sudo emerge --sync
 		echo -e "\nOverlays have been synced. (/var/db/repos/, eselect repository)"
