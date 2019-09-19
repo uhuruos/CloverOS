@@ -26,7 +26,6 @@ k) Delete all kernels except for $(uname -r)
 t) Enable tap to click on touchpad
 d) Disable mouse acceleration
 c) Update Portage config from binhost
-o) Update overlays config from binhost
 m) Revert to default /etc/portage/make.conf
 b) Install Bluetooth manager
 i) Install VirtualBox
@@ -324,54 +323,38 @@ case "$choice" in
 	c)
 		portageworkdir=portageworkdir$(< /dev/urandom tr -dc 0-9 | head -c 8)
 		mkdir -p $portageworkdir/env/
-		wget $gitprefix/binhost_settings/etc/portage/{package.use,package.keywords,package.env,package.mask,package.unmask} -P $portageworkdir/
+		wget $gitprefix/binhost_settings/etc/portage/{package.use,package.keywords,package.env,package.mask,package.unmask,make.conf} -P $portageworkdir/
 		wget $gitprefix/binhost_settings/etc/portage/env/{gold,no-gnu2,no-gold,no-hashgnu,no-lto,no-lto-graphite,no-lto-graphite-ofast,no-lto-o3,no-lto-ofast,no-ofast,pcsx2,size} -P $portageworkdir/env/
-		if [[ $(find $portageworkdir -type f | wc -l) == "17" ]]; then
+		if [[ $(find $portageworkdir -type f | wc -l) == "18" ]]; then
 			backupportagedir=backupportage$(< /dev/urandom tr -dc 0-9 | head -c 8)
 			mkdir $backupportagedir/
-			sudo mv /etc/portage/package.use /etc/portage/package.mask /etc/portage/package.keywords /etc/portage/package.env /etc/portage/package.unmask /etc/portage/env/ $backupportagedir/
-			sudo cp /etc/portage/make.conf $backupportagedir/
-			sudo mv $portageworkdir/* /etc/portage/
-			useflags=$(wget -qO - $gitprefix/binhost_settings/etc/portage/make.conf | grep "^USE=")
+			sudo mv /etc/portage/{package.use,package.keywords,package.env,package.mask,package.unmask} /etc/portage/env/ $backupportagedir/ && cp /etc/portage/make.conf $backupportagedir/
+			sudo mv $portageworkdir/{package.use,package.keywords,package.env,package.mask,package.unmask} $portageworkdir/env/ /etc/portage/
+			useflags=$(grep "^USE=" $portageworkdir/make.conf)
 			if ! grep -q "$useflags" /etc/portage/make.conf; then
 				echo $useflags | sudo tee --append /etc/portage/make.conf > /dev/null
 			else
 				sudo sed -i "s/^USE=.*/$useflags/" /etc/portage/make.conf
 			fi
-			cflags=$(wget -qO - $gitprefix/binhost_settings/etc/portage/make.conf | grep "^CFLAGS=\"-Ofast")
+			cflags=$(grep "^CFLAGS=\"-Ofast" $portageworkdir/make.conf)
 			sudo sed -i "/CFLAGS=\"-O2 -pipe\"/! s/^CFLAGS=.*/$cflags/" /etc/portage/make.conf
 			sudo sed -i "s/-mssse3/-march=native/" /etc/portage/make.conf /etc/portage/package.env /etc/portage/env/*
 			if grep -qi "intel" /proc/cpuinfo; then
 				sudo sed -i "s/-march=native/-march=native -falign-functions=32/" /etc/portage/make.conf /etc/portage/package.env /etc/portage/env/*
 			fi
 			sudo binutils-config --linker ld.gold
-			echo -e "\nPortage configuration now mirrors binhost Portage configuration. Previous Portage config stored in ~/$backupportagedir"
+			if [ ! -d /var/db/pkg/app-eselect/eselect-repository-*/ ]; then
+				sudo emerge eselect-repository
+				sudo mkdir /etc/portage/repos.conf
+			fi
+			sudo eselect repository remove {1..500} &> /dev/null && sudo rm -R /var/db/repos/* && sudo rm /etc/portage/repos.conf/*
+			sudo xargs eselect repository enable "{}" <<< $(grep -Po "(?<=\*/\*::).*" /etc/portage/package.mask)
+			echo -e "\nPortage configuration now mirrors binhost Portage configuration. (/etc/portage/package.*, /etc/portage/env/, /etc/portage/repos.conf/) Previous Portage config stored in ~/$backupportagedir"
 		else
 			echo -e "\nCould not retrieve file. Please connect to the Internet or try again."
 		fi
 		rm -R $portageworkdir
 		;;
-
-	o)
-		overlays=$(wget -qO - $gitprefix/binhost_settings/etc/portage/package.mask | grep -Po "(?<=\*/\*::).*")
-		overlaysspaced="${overlays//$'\n'/ }"
-		echo "Running the following:"
-		echo "sudo emerge eselect-repository"
-		echo "sudo mkdir /etc/portage/repos.conf"
-		echo 'sudo eselect repository remove {1..500}'
-		echo 'sudo xargs eselect repository enable "{}" <<< "'$overlays'"'
-		echo "sudo emerge --sync"
-		sleep 2
-		if [ ! -d /var/db/pkg/app-eselect/eselect-repository-*/ ]; then
-			sudo emerge eselect-repository
-			sudo mkdir /etc/portage/repos.conf
-		fi
-		sudo eselect repository remove {1..500}
-		sudo xargs eselect repository enable "{}" <<< "$overlays"
-		sudo emerge --sync
-		echo -e "\nOverlays have been synced. (/var/db/repos/, eselect repository)"
-
-                ;;
 
 	m)
 		sudo wget -q $gitprefix/home/user/make.conf -O make.conf.new
