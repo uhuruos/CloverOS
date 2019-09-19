@@ -201,7 +201,7 @@ media-libs/phonon -vlc
 media-libs/libsdl X
 www-client/chromium jumbo-build
 www-client/ungoogled-chromium -lld gold optimize-thinlto optimize-webui new-tcmalloc jumbo-build -system-libvpx
-www-client/firefox -wifi -wayland
+www-client/firefox -wifi -wayland -pgo
 mail-client/thunderbird -crypt
 www-client/seamonkey -crypt -minimal
 www-client/palemoon -official-branding -gconf
