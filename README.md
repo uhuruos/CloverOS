@@ -186,7 +186,7 @@ Run `./cloveros_settings.sh c` to get the CloverOS Portage configuration.
 * [Installing a DE](#installing-a-de)
 * [I want to host a mirror](#i-want-to-host-a-mirror)
 * [Disabling Intel mitigations for performance](#disabling-intel-mitigations-for-performance)
-* [Recompiling all packages and kernel with -march=native for increased performance](#recompiling-all-packages-and-kernel-with-marchnative-for-increased-performance)
+* [Recompiling all packages and kernel with -march=native for performance](#recompiling-all-packages-and-kernel-with-marchnative-for-performance)
 * [What if CloverOS dies? Will my install become useless?](#what-if-cloveros-dies-will-my-install-become-useless)
 
 ### What is CloverOS?
@@ -662,7 +662,7 @@ sudo GRUB_CMDLINE_LINUX_DEFAULT="kpti=0 l1tf=off pti=off spectre_v2=off spectre_
 
 Make sure the computer you run this on has nothing important on it. (Dedicated gaming machines, etc.)
 
-### Recompiling all packages and kernel with -march=native for increased performance
+### Recompiling all packages and kernel with -march=native for performance
 ```
 ./cloveros_settings.sh c
 ./cloveros_settings.sh 5
