@@ -665,7 +665,6 @@ Make sure the computer you run this on has nothing important on it. (Dedicated g
 ### Recompiling all packages and kernel with -march=native for increased performance
 ```
 ./cloveros_settings.sh c
-./cloveros_settings.sh o
 ./cloveros_settings.sh 5
 sudo emerge -eDv --jobs=4 --keep-going=y @world
 
