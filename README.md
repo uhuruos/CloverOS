@@ -687,6 +687,13 @@ To update the system using source: `./cloveros_settings.sh c && sudo emerge --sy
 
 To remove dbus: `sudo USE="-dbus" emerge -1 glib qtgui && sudo emerge --depclean`
 
+### Backing up CloverOS binary host example
+```
+sudo mount /dev/sdb1 /mnt/usb/
+rsync -av --delete rsync://cloveros.ga/cloveros /mnt/usb/binhost/
+PKGDIR="/mnt/usb/binhost/" emerge -K [package]
+```
+
 ### What if CloverOS dies? Will my install become useless?
 No. Just switch to source and manage it like any other Gentoo install. See <a href="#switching-to-source">Switching to source</a>.
 
