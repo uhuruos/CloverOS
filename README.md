@@ -625,8 +625,6 @@ XDG_RUNTIME_DIR=. weston-launch
 ```
 
 ### Things preventing CloverOS Libre from being 100% free software:
-- LiveCD kernel is taken from Gentoo, it needs to be made from scratch
-
 - /usr/portage/ needs to be filtered to not include the .ebuilds of proprietary software, also requiring a separate Portage mirror
 
 - It needs a cloveros.ga mirror that doesn't host the non-free software packages
