@@ -1144,7 +1144,7 @@ sys-fs/zfs-auto-snapshot
 sys-kernel/dkms
 sys-kernel/dracut
 sys-kernel/genkernel
-sys-kernel/gentoo-sources:5.2.13
+sys-kernel/gentoo-sources:5.2.16
 sys-kernel/linux-firmware
 sys-power/acpi_call
 sys-power/acpitool
