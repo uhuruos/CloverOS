@@ -80,6 +80,7 @@ app-editors/xemacs
 www-client/elinks
 
 #keyworded, remove when stable exists
+www-client/luakit
 sys-power/intel-undervolt
 net-wireless/chirp
 sys-devel/autofdo
