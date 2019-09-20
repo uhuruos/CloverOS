@@ -187,6 +187,7 @@ Run `./cloveros_settings.sh c` to get the CloverOS Portage configuration.
 * [I want to host a mirror](#i-want-to-host-a-mirror)
 * [Disabling Intel mitigations for performance](#disabling-intel-mitigations-for-performance)
 * [Recompiling all packages and kernel with -march=native for performance](#recompiling-all-packages-and-kernel-with-marchnative-for-performance)
+* [Backing up CloverOS binary host example](#backing-up-cloveros-binhost-example)
 * [What if CloverOS dies? Will my install become useless?](#what-if-cloveros-dies-will-my-install-become-useless)
 
 ### What is CloverOS?
@@ -687,7 +688,7 @@ To update the system using source: `./cloveros_settings.sh c && sudo emerge --sy
 
 To remove dbus: `sudo USE="-dbus" emerge -1 glib qtgui && sudo emerge --depclean`
 
-### Backing up CloverOS binary host example
+### Backing up CloverOS binhost example
 ```
 sudo mount /dev/sdb1 /mnt/usb/
 rsync -av --delete rsync://cloveros.ga/cloveros /mnt/usb/binhost/
