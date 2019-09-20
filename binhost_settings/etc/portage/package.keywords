@@ -80,6 +80,10 @@ app-editors/xemacs
 www-client/elinks
 
 #keyworded, remove when stable exists
+www-client/vivaldi-snapshot
+www-client/weboob
+www-client/otter
+www-client/jd
 www-client/luakit
 sys-power/intel-undervolt
 net-wireless/chirp

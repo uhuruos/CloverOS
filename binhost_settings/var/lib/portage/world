@@ -1171,6 +1171,7 @@ www-client/firefox
 www-client/google-chrome
 www-client/google-chrome-beta
 www-client/google-chrome-unstable
+www-client/jd
 www-client/links
 www-client/luakit
 www-client/lynx
@@ -1180,9 +1181,11 @@ www-client/netsurf
 www-client/opera
 www-client/opera-beta
 www-client/opera-developer
+www-client/otter
 www-client/palemoon
 www-client/pybugz
 www-client/qutebrowser
+www-client/ripe-atlas-cousteau
 www-client/seamonkey
 www-client/surf
 www-client/surfraw
@@ -1190,8 +1193,10 @@ www-client/torbrowser
 www-client/uget
 www-client/ungoogled-chromium
 www-client/vivaldi
+www-client/vivaldi-snapshot
 www-client/w3m
 www-client/waterfox
+www-client/weboob
 www-misc/fcgiwrap
 www-misc/urlwatch
 www-plugins/adobe-flash
