@@ -116,7 +116,7 @@ urxvtc -geometry 80x24+\$(awk "NR==1{print \\\$8/2-283\"+\"\\\$10/2-191}" <<<\$x
 ratio=\$(awk "NR==1{print substr(\\\$8/\\\$10, 0, 4)}" <<<\$xrandroutput); [ \$ratio == 1.6 ] && nitrogen --set-zoom wallpaper1610.png; [ \$ratio == 1.33 ] && nitrogen --set-zoom wallpaper43.png;
 fi' >> /home/$username/.bash_profile
 
-rm -Rf /usr/portage/packages/* /var/cache/binpkgs/* /etc/resolv.conf
+rm -Rf /var/cache/binpkgs/* /etc/resolv.conf
 exit
 HEREDOC
 
