@@ -761,6 +761,8 @@ media-plugins/refocus-it
 media-plugins/vapoursynth-plugins-meta
 media-sound/alsa-tools
 media-sound/alsa-utils
+media-sound/alsamixer-app
+media-sound/alsamixergui
 media-sound/amsynth
 media-sound/apulse
 media-sound/aqualung
@@ -812,6 +814,7 @@ media-sound/mpdas
 media-sound/mpg321
 media-sound/mps-youtube
 media-sound/mumble
+media-sound/muse
 media-sound/ncmpc
 media-sound/ncmpcpp
 media-sound/padthv1
@@ -923,12 +926,18 @@ net-ftp/proftpd
 net-ftp/pure-ftpd
 net-ftp/vsftpd
 net-im/bitlbee
+net-im/centerim
 net-im/choqok
 net-im/corebird
+net-im/dianara
 net-im/discord-bin
+net-im/librvp
 net-im/mcabber
+net-im/minbif
+net-im/openfire
 net-im/pidgin
 net-im/profanity
+net-im/prosody
 net-im/qtox
 net-im/telegram-cli
 net-im/telegram-desktop-bin
@@ -953,6 +962,7 @@ net-misc/bridge-utils
 net-misc/connman
 net-misc/dhcp
 net-misc/dhcpcd
+net-misc/dhcpcd-ui
 net-misc/electron-cash
 net-misc/electrum
 net-misc/freerdp
@@ -1025,6 +1035,7 @@ net-vpn/zeronet
 net-wireless/aircrack-ng
 net-wireless/blueman
 net-wireless/bluez
+net-wireless/broadcom-sta
 net-wireless/chirp
 net-wireless/cubicsdr
 net-wireless/gnuradio
@@ -1115,6 +1126,8 @@ sys-devel/crossdev
 sys-devel/distcc
 sys-devel/gdb
 sys-devel/lld
+sys-firmware/b43-firmware
+sys-firmware/ipw2200-firmware
 sys-firmware/nvidia-firmware
 sys-fs/archivemount
 sys-fs/bashmount

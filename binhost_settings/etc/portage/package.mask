@@ -28,6 +28,7 @@
 */*::luke-jr
 */*::mv
 */*::optmzr
+*/*::palemoon
 */*::pentoo
 */*::pixlra
 */*::poly-c

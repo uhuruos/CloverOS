@@ -80,6 +80,8 @@ app-editors/xemacs
 www-client/elinks
 
 #keyworded, remove when stable exists
+media-sound/muse
+media-sound/alsamixer-app
 www-client/vivaldi-snapshot
 www-client/weboob
 www-client/otter
@@ -549,7 +551,7 @@ x11-misc/bumblebee **
 games-fps/chocolate-doom **
 games-util/udmf-convert **
 sys-fs/exfat-nofuse **
-www-client/palemoon **
+www-client/palemoon
 games-emulation/citra **
 games-emulation/mekanix ~*
 app-emulation/qt-virt-manager **

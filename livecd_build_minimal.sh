@@ -5,56 +5,12 @@ if [ $(id -u) != "0" ]; then
 fi
 
 gitprefix="https://gitgud.io/cloveros/cloveros/raw/master"
+rootpassword=password
+username=livecd
+userpassword=password
 
-while :; do
-	echo
-	read -erp "Automatic partitioning (a) or manual partitioning? (m) [a/m] " -n 1 partitioning
-	if [[ $partitioning = "a" ]]; then
-		read -erp "Enter drive for CloverOS installation: " -i "/dev/sda" drive
-		partition=${drive}1
-	elif [[ $partitioning = "m" ]]; then
-		read -erp "Enter partition for CloverOS installation: " -i "/dev/sda1" partition
-		read -erp "Enter drive that contains install partition: " -i ${partition%${partition##*[!0-9]}} drive
-	else
-		echo "Invalid option"
-	fi
-	drive=${drive#*/dev/}
-	partition=${partition#*/dev/}
-	read -erp "Partitioning: $partitioning
-Drive: /dev/$drive
-Partition: /dev/$partition
-Is this correct? [y/n] " -n 1 yn
-	if [[ $yn == "y" ]]; then
-		break
-	fi
-done
-
-while :; do
-	echo
-	read -erp "Enter preferred root password " rootpassword
-	read -erp "Enter preferred username " username
-	newuser=$(echo "$username" | tr A-Z a-z | tr -cd "[:alpha:][:digit:]" | sed "s/^[0-9]\+//" | cut -c -31)
-	if [[ "$newuser" != "$username" ]]; then
-		username=$newuser
-		echo username changed to $username
-	fi
-	read -erp "Enter preferred user password " userpassword
-	read -erp "Is this correct? [y/n] " -n 1 yn
-	if [[ $yn == "y" ]]; then
-		break
-	fi
-done
-
-mkdir gentoo/
-
-if [[ $partitioning = "a" ]]; then
-	echo -e "o\nn\np\n1\n\n\nw" | fdisk /dev/$drive
-	mkfs.ext4 -F /dev/$partition
-fi
-tune2fs -O ^metadata_csum /dev/$partition
-mount /dev/$partition gentoo
-
-cd gentoo/
+mkdir mini_image/
+cd mini_image/
 
 builddate=$(wget -O - http://distfiles.gentoo.org/releases/amd64/autobuilds/current-stage3-amd64/ | sed -nr "s/.*href=\"stage3-amd64-([0-9].*).tar.xz\">.*/\1/p")
 wget http://distfiles.gentoo.org/releases/amd64/autobuilds/current-stage3-amd64/stage3-amd64-"$builddate".tar.xz
@@ -87,17 +43,7 @@ binutils-config --linker ld.gold
 
 FETCHCOMMAND_HTTPS="wget -O \"\\\${DISTDIR}/\\\${FILE}\" \"\\\${URI}\"" emerge -1 gcc glibc acct-group/input acct-group/kvm acct-group/render
 
-#emerge gentoo-sources genkernel
-#wget https://raw.githubusercontent.com/damentz/liquorix-package/master/linux-liquorix/debian/config/kernelarch-x86/config-arch-64
-#genkernel --kernel-config=config-arch-64 all
-wget https://cloveros.ga/s/kernel.tar.lzma https://cloveros.ga/s/signatures/s/kernel.tar.lzma.asc
-gpg --verify kernel.tar.lzma.asc kernel.tar.lzma && tar xf kernel.tar.lzma
-rm kernel.tar.lzma kernel.tar.lzma.asc
-
 emerge grub dhcpcd
-grub-install --target=i386-pc /dev/$drive &> /dev/null
-grub-mkconfig -o /boot/grub/grub.cfg &> /dev/null
-sed -i "s/set timeout=5/set timeout=0/" /boot/grub/grub.cfg
 rc-update add dhcpcd default
 
 echo "root:$rootpassword" | chpasswd
@@ -105,8 +51,13 @@ useradd $username
 echo "$username:$userpassword" | chpasswd
 gpasswd -a $username wheel
 
-emerge -eDv @world xorg-server fvwm spacefm rxvt-unicode nitrogen compton nomacs sudo wpa_supplicant porthole firefox emacs gimp mpv smplayer rtorrent weechat linux-firmware alsa-utils zsh zsh-completions gentoo-zsh-completions liberation-fonts hack vlgothic nano scrot xbindkeys xinput arandr qastools slock xarchiver p7zip games-envd gparted squashfs-tools os-prober exfat-nofuse sshfs curlftpfs
+emerge -eDv @world palemoon xorg-server fvwm spacefm rxvt-unicode nitrogen compton sudo wpa_supplicant porthole emacs gimp rtorrent weechat alsa-utils zsh zsh-completions gentoo-zsh-completions liberation-fonts hack vlgothic nano scrot xbindkeys xinput arandr slock p7zip games-envd gparted squashfs-tools os-prober exfat-nofuse sshfs curlftpfs
+sed -ri 's/(PORTAGE_BINHOST|EMERGE_DEFAULT_OPTS|ACCEPT_KEYWORDS|binhost_mirrors|FETCHCOMMAND_HTTPS.*)/#\1/' /etc/portage/make.conf
+gcc-config 2
+USE="-dbus -video-thumbnails -qt5 -startup-notification -gtk3 gtk gtk2 X toolkit-scroll-bars xft sound games alsa libxml2 dynamic-loading gsettings libressl bindist gif jpeg png cairo" emerge -1 dev-perl/XML-Parser poppler wpa_supplicant emacs poppler spacefm
+sed -ri 's/#(PORTAGE_BINHOST|EMERGE_DEFAULT_OPTS|ACCEPT_KEYWORDS|binhost_mirrors|FETCHCOMMAND_HTTPS.*)/\1/' /etc/portage/make.conf
 PORTAGE_BINHOST="https://cloveros.ga/s/nodbus" FETCHCOMMAND_HTTPS="wget -O \"\\\${DISTDIR}/\\\${FILE}\" \"\\\${URI}\"" emerge -1 glib qtgui
+emerge -C gtk+:3
 emerge --depclean
 echo "frozen-files=\"/etc/sudoers\"" >> /etc/dispatch-conf.conf
 sed -i "s/# %wheel ALL=(ALL) NOPASSWD: ALL/%wheel ALL=(ALL) NOPASSWD: ALL/" /etc/sudoers
@@ -141,12 +92,54 @@ sed -i "s@/home/user/@/home/$username/@" .config/spacefm/session
 wget $gitprefix/home/user/.config/mimeapps.list -P .config/
 echo -e "[Desktop Entry]\nEncoding=UTF-8\nType=Link\nName=Home\nIcon=user-home\nExec=spacefm ~/" > Desktop/home.desktop
 echo -e "[Desktop Entry]\nEncoding=UTF-8\nType=Link\nName=Applications\nIcon=folder\nExec=spacefm /usr/share/applications/" > Desktop/applications.desktop
-cp /usr/share/applications/{firefox.desktop,smplayer.desktop,emacs.desktop,zzz-gimp.desktop,porthole.desktop,xarchiver.desktop} Desktop/
-echo -e "~rows=0\n1=home.desktop\n2=applications.desktop\n3=firefox.desktop\n4=smplayer.desktop\n5=emacs.desktop\n6=porthole.desktop\n7=zzz-gimp.desktop\n8=xarchiver.desktop" > .config/spacefm/desktop0
+cp /usr/share/applications/{palemoon.desktop,emacs.desktop,zzz-gimp.desktop,porthole.desktop} Desktop/
+echo -e "~rows=0\n1=home.desktop\n2=applications.desktop\n3=palemoon.desktop\n4=emacs.desktop\n5=porthole.desktop\n6=zzz-gimp.desktop" > .config/spacefm/desktop0
 chown -R $username /home/$username/
 
-rm -Rf /usr/portage/packages/* /var/cache/binpkgs/* /etc/resolv.conf
+wget $gitprefix/livecd_install.sh -P /home/$username/
+chmod +x /home/$username/livecd_install.sh
+sed -i "s@unsquashfs\(.*\)@unsquashfs\1\ncp /mnt/cdrom/boot/gentoo gentoo/boot/kernel-genkernel-x86_64-\$(uname -r)\ncat /mnt/cdrom/boot/gentoo.igz | gzip -d | xz > gentoo/boot/initramfs-genkernel-x86_64-\$(uname -r)\ncp /mnt/cdrom/boot/System-gentoo.map gentoo/boot/System.map-genkernel-x86_64-\$(uname -r)@" livecd_install.sh
+sed -i "s@c1:12345:respawn:/sbin/agetty --noclear 38400 tty1 linux@c1:12345:respawn:/sbin/agetty -a $username --noclear 38400 tty1 linux@" /etc/inittab
+sed -i "s/^/#/" /home/$username/.bash_profile
+echo -e 'if [ -z "\$DISPLAY" ] && [ -z "\$SSH_CLIENT" ] && ! pgrep X > /dev/null; then
+X &
+export DISPLAY=:0
+fvwm &
+while sleep 0.2; do if [ -d /proc/\$! ]; then ((i++)); [ "\$i" -gt 6 ] && break; else i=0; fvwm & fi; done
+nitrogen --set-zoom wallpaper.png &
+spacefm --desktop & urxvtd -o -f && urxvtc -geometry 1000x1+0+0 -fn 6x13 -letsp 0 -sl 0 -e ~/stats.sh
+sleep 2
+xinput set-prop "SynPS/2 Synaptics TouchPad" "libinput Tapping Enabled" 1 & xinput list --name-only | sed "/Virtual core pointer/,/Virtual core keyboard/"\!"d;//d" | xargs -I{} xinput set-prop {} "libinput Accel Profile Enabled" 0 1 &> /dev/null &
+xrandroutput=\$(xrandr)
+urxvtc -geometry 80x24+\$(awk "NR==1{print \\\$8/2-283\"+\"\\\$10/2-191}" <<<\$xrandroutput) -e sudo ./livecd_install.sh &
+ratio=\$(awk "NR==1{print substr(\\\$8/\\\$10, 0, 4)}" <<<\$xrandroutput); [ \$ratio == 1.6 ] && nitrogen --set-zoom wallpaper1610.png; [ \$ratio == 1.33 ] && nitrogen --set-zoom wallpaper43.png;
+fi' >> /home/$username/.bash_profile
+
+rm -Rf /usr/portage/* /var/cache/binpkgs/* /etc/resolv.conf
 exit
 HEREDOC
 
-reboot
+cd ..
+umount -l mini_image/*
+wget https://cloveros.ga/s/kernel-livecd.tar.lzma
+tar -C mini_image/lib/modules/ -xf kernel-livecd.tar.lzma --wildcards \*-aufs/\*
+mksquashfs mini_image/ mini_image.squashfs -b 1M -comp xz -Xbcj x86 -Xdict-size 1M
+mkdir mini_iso/
+builddate=$(wget -O - http://distfiles.gentoo.org/releases/amd64/autobuilds/current-install-amd64-minimal/ | sed -nr "s/.*href=\"install-amd64-minimal-([0-9].*).iso\">.*/\1/p")
+wget http://distfiles.gentoo.org/releases/amd64/autobuilds/current-install-amd64-minimal/install-amd64-minimal-$builddate.iso -P mini_iso/
+xorriso -osirrox on -indev mini_iso/*.iso -extract / mini_iso/
+rm mini_iso/*.iso
+mv mini_image.squashfs mini_iso/image.squashfs
+tar -xOf kernel-livecd.tar.lzma --wildcards ./kernel-genkernel-x86_64-\* > mini_iso/boot/gentoo
+tar -xOf kernel-livecd.tar.lzma --wildcards ./initramfs-genkernel-x86_64-\* | xz -d | gzip > mini_iso/boot/gentoo.igz
+tar -xOf kernel-livecd.tar.lzma --wildcards ./System.map-genkernel-x86_64-\* > mini_iso/boot/System-gentoo.map
+sed -i "s@dokeymap@aufs@g" mini_iso/isolinux/isolinux.cfg
+sed -i "s@dokeymap@aufs@g" mini_iso/grub/grub.cfg
+xorriso -as mkisofs -r -J \
+	-joliet-long -l -cache-inodes \
+	-isohybrid-mbr /usr/share/syslinux/isohdpfx.bin \
+	-partition_offset 16 -A "Gentoo Live" \
+	-b isolinux/isolinux.bin -c isolinux/boot.cat \
+	-no-emul-boot -boot-load-size 4 -boot-info-table  \
+	-o CloverOS_Minimal-x86_64-$(date +"%Y%m%d").iso mini_iso/
+rm -Rf mini_image/ mini_iso/ kernel-livecd.tar.lzma

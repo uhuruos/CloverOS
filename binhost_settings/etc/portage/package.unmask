@@ -1,3 +1,10 @@
+dev-lang/dmd::dlang
+app-eselect/eselect-dlang::dlang
+x11-terms/tilix::dlang
+dev-libs/gtkd::dlang
+
+www-client/palemoon::palemoon
+
 sys-devel/autofdo::pentoo
 
 net-im/profanity::optmzr
@@ -170,7 +177,6 @@ app-misc/mat2::torbrowser
 net-misc/onioncircuits::torbrowser
 
 app-shells/fzf::rasdark
-www-client/palemoon::rasdark
 x11-drivers/xf86-video-sis671::rasdark
 
 x11-libs/bamf::elementary
