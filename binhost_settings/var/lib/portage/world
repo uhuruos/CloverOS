@@ -51,6 +51,7 @@ app-arch/zopfli
 app-arch/zpaq
 app-arch/zpaq-extras
 app-arch/zstd
+app-backup/dar
 app-backup/rsnapshot
 app-benchmarks/bonnie
 app-benchmarks/bonnie++
@@ -707,6 +708,7 @@ media-gfx/gifsicle
 media-gfx/gimp
 media-gfx/gimp-arrow-brushes
 media-gfx/gphotofs
+media-gfx/gqview
 media-gfx/graphicsmagick
 media-gfx/graphviz
 media-gfx/gthumb
@@ -732,6 +734,7 @@ media-gfx/pinta
 media-gfx/pngcrush
 media-gfx/pngnq
 media-gfx/pngquant
+media-gfx/pqiv
 media-gfx/qimgv
 media-gfx/qiv
 media-gfx/sane-frontends
@@ -988,6 +991,7 @@ net-misc/telnet-bsd
 net-misc/throttle
 net-misc/tigervnc
 net-misc/whois
+net-misc/wicd
 net-misc/x2goclient
 net-misc/youtube-comment-downloader
 net-misc/youtube-dl

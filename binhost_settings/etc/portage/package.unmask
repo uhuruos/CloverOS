@@ -1,3 +1,6 @@
+www-client/firefox::pg_overlay
+www-client/ungoogled-chromium::pg_overlay
+
 dev-lang/dmd::dlang
 app-eselect/eselect-dlang::dlang
 x11-terms/tilix::dlang

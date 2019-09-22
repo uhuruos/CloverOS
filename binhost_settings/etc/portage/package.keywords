@@ -80,6 +80,7 @@ app-editors/xemacs
 www-client/elinks
 
 #keyworded, remove when stable exists
+www-client/ungoogled-chromium
 media-sound/muse
 media-sound/alsamixer-app
 www-client/vivaldi-snapshot

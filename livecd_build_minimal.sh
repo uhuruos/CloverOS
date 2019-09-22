@@ -53,7 +53,7 @@ gpasswd -a $username wheel
 
 PORTAGE_BINHOST="https://cloveros.ga/s/nodbus" FETCHCOMMAND_HTTPS="wget -O \"\\\${DISTDIR}/\\\${FILE}\" \"\\\${URI}\"" emerge -1O glib wpa_supplicant spacefm linux-firmware mesa
 emerge --noreplace wpa_supplicant spacefm linux-firmware
-emerge -eDv --exclude "glib wpa_supplicant spacefm linux-firmware mesa" @world xorg-server fvwm rxvt-unicode nitrogen compton sudo porthole rtorrent weechat alsa-utils zsh zsh-completions gentoo-zsh-completions liberation-fonts hack vlgothic scrot xbindkeys xinput arandr slock p7zip games-envd gparted squashfs-tools os-prober exfat-nofuse sshfs curlftpfs
+emerge -eDv --exclude "glib wpa_supplicant spacefm linux-firmware mesa" @world xorg-server fvwm rxvt-unicode nitrogen compton sudo porthole rtorrent weechat alsa-utils zsh zsh-completions gentoo-zsh-completions liberation-fonts hack vlgothic scrot xbindkeys xinput arandr slock p7zip games-envd gparted squashfs-tools os-prober exfat-nofuse sshfs curlftpfs geeqie
 emerge -1O mesa
 emerge --depclean
 echo "frozen-files=\"/etc/sudoers\"" >> /etc/dispatch-conf.conf
@@ -95,7 +95,6 @@ chown -R $username /home/$username/
 
 wget $gitprefix/livecd_install.sh -P /home/$username/
 chmod +x /home/$username/livecd_install.sh
-sed -i "s@unsquashfs\(.*\)@unsquashfs\1\ncp /mnt/cdrom/boot/gentoo gentoo/boot/kernel-genkernel-x86_64-\$(uname -r)\ncat /mnt/cdrom/boot/gentoo.igz | gzip -d | xz > gentoo/boot/initramfs-genkernel-x86_64-\$(uname -r)\ncp /mnt/cdrom/boot/System-gentoo.map gentoo/boot/System.map-genkernel-x86_64-\$(uname -r)@" livecd_install.sh
 sed -i "s@c1:12345:respawn:/sbin/agetty --noclear 38400 tty1 linux@c1:12345:respawn:/sbin/agetty -a $username --noclear 38400 tty1 linux@" /etc/inittab
 sed -i "s/^/#/" /home/$username/.bash_profile
 echo -e 'if [ -z "\$DISPLAY" ] && [ -z "\$SSH_CLIENT" ] && ! pgrep X > /dev/null; then
@@ -112,7 +111,15 @@ urxvtc -geometry 80x24+\$(awk "NR==1{print \\\$8/2-283\"+\"\\\$10/2-191}" <<<\$x
 ratio=\$(awk "NR==1{print substr(\\\$8/\\\$10, 0, 4)}" <<<\$xrandroutput); [ \$ratio == 1.6 ] && nitrogen --set-zoom wallpaper1610.png; [ \$ratio == 1.33 ] && nitrogen --set-zoom wallpaper43.png;
 fi' >> /home/$username/.bash_profile
 
-rm -Rf /var/cache/binpkgs/* /etc/resolv.conf /var/db/repos/* /var/cache/distfiles/*
+sed -i "s@unsquashfs\(.*\)@unsquashfs\1\ncp /mnt/cdrom/boot/gentoo gentoo/boot/kernel-genkernel-x86_64-\$(uname -r)\ncat /mnt/cdrom/boot/gentoo.igz | gzip -d | xz > gentoo/boot/initramfs-genkernel-x86_64-\$(uname -r)\ncp /mnt/cdrom/boot/System-gentoo.map gentoo/boot/System.map-genkernel-x86_64-\$(uname -r)@" livecd_install.sh
+sed -i "s/nomacs/geeqie/g" .fvwm2rc .config/mimeapps.list
+sed -i "s/qasmixer/if pgrep urxvtd; then urxvtc -e alsamixer; else urxvtd -o -f \&\& urxvtc -e alsamixer; fi/" .fvwm2rc
+mkdir .config/geeqie/
+wget $gitprefix/home/user/.config/geeqie/geeqierc.xml -P .config/geeqie
+chown -R $username /home/$username/
+rm -Rf /var/db/repos/* /var/cache/distfiles/*
+
+rm -Rf /var/cache/binpkgs/* /etc/resolv.conf
 exit
 HEREDOC
 
