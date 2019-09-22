@@ -21,6 +21,7 @@ buzztrax # clutter USE=gtk
 plasma-applet-weather-widget # qtdeclarative USE=xml
 net-analyzer/munin # perl USE=berkdb
 colorhug-client # libusb USE=udev
+picard # qtgui USE=accessibility
 
 # builds, but doesn't work
 zsnes

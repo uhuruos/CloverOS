@@ -51,13 +51,9 @@ useradd $username
 echo "$username:$userpassword" | chpasswd
 gpasswd -a $username wheel
 
-emerge -eDv @world xorg-server fvwm spacefm rxvt-unicode nitrogen compton sudo wpa_supplicant porthole rtorrent weechat alsa-utils zsh zsh-completions gentoo-zsh-completions liberation-fonts hack scrot xbindkeys xinput arandr slock games-envd gparted squashfs-tools os-prober sshfs curlftpfs
-sed -ri 's/(PORTAGE_BINHOST|EMERGE_DEFAULT_OPTS|ACCEPT_KEYWORDS|binhost_mirrors|FETCHCOMMAND_HTTPS.*)/#\1/' /etc/portage/make.conf
-gcc-config 2
-USE="-dbus -video-thumbnails -qt5 -startup-notification -gtk3 gtk gtk2 X toolkit-scroll-bars xft sound games alsa libxml2 dynamic-loading gsettings libressl bindist gif jpeg png cairo" emerge -1 dev-perl/XML-Parser wpa_supplicant spacefm
-sed -ri 's/#(PORTAGE_BINHOST|EMERGE_DEFAULT_OPTS|ACCEPT_KEYWORDS|binhost_mirrors|FETCHCOMMAND_HTTPS.*)/\1/' /etc/portage/make.conf
-PORTAGE_BINHOST="https://cloveros.ga/s/nodbus" FETCHCOMMAND_HTTPS="wget -O \"\\\${DISTDIR}/\\\${FILE}\" \"\\\${URI}\"" emerge -1 glib qtgui
-emerge -C gtk+:3
+emerge -eDv @world xorg-server fvwm spacefm rxvt-unicode nitrogen compton sudo wpa_supplicant porthole rtorrent weechat alsa-utils zsh zsh-completions gentoo-zsh-completions liberation-fonts hack vlgothic scrot xbindkeys xinput arandr slock p7zip games-envd gparted squashfs-tools os-prober exfat-nofuse sshfs curlftpfs
+PORTAGE_BINHOST="https://cloveros.ga/s/nodbus" FETCHCOMMAND_HTTPS="wget -O \"\\\${DISTDIR}/\\\${FILE}\" \"\\\${URI}\"" emerge glib wpa_supplicant spacefm
+emerge --deselect glib
 emerge --depclean
 echo "frozen-files=\"/etc/sudoers\"" >> /etc/dispatch-conf.conf
 sed -i "s/# %wheel ALL=(ALL) NOPASSWD: ALL/%wheel ALL=(ALL) NOPASSWD: ALL/" /etc/sudoers

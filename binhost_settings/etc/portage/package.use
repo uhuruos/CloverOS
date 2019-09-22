@@ -1,3 +1,5 @@
+x11-wm/enlightenment acpi connman wifi
+dev-libs/efl X sound harfbuzz physics xpm drm gles2 -opengl connman
 net-misc/dhcpcd-ui gtk
 media-sound/muse gtk
 x11-terms/tilix dmd-2_086
@@ -168,7 +170,6 @@ app-emulation/virtualbox-guest-additions X
 media-video/xine-ui curl X
 sci-mathematics/octave X gui fftw curl gnuplot postscript jit
 media-libs/clutter X
-dev-libs/efl X sound harfbuzz physics tslib xpm drm gles2 -opengl
 app-text/mupdf X
 games-emulation/sdlmame X
 net-im/qtox X
@@ -255,7 +256,6 @@ sys-auth/consolekit policykit # required by kde (dbus)
 sys-auth/polkit consolekit # required by kde/mate (dbus)
 sys-apps/accountsservice consolekit # required by kde/mate (dbus)
 gnome-base/gvfs udisks # required by caja (dbus)
-xfce-base/thunar udisks # adding, xfce requires dbus anyway (dbus)
 mate-extra/mate-screensaver -pam # prevents gnome-keyring
 media-sound/bitwig-studio -jack # prevents jack2
 mate-base/mate-panel X # fix: doesn't build without it
