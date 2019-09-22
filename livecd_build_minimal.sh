@@ -55,6 +55,7 @@ emerge -eDv @world xorg-server fvwm rxvt-unicode nitrogen compton sudo porthole 
 PORTAGE_BINHOST="https://cloveros.ga/s/nodbus" FETCHCOMMAND_HTTPS="wget -O \"\\\${DISTDIR}/\\\${FILE}\" \"\\\${URI}\"" emerge glib wpa_supplicant spacefm linux-firmware
 emerge --deselect glib
 emerge --depclean
+emerge -C llvm clang llvmgold llvm-common clang-runtime clang-common lld lldb compiler-rt compiler-rt-sanitizers libomp
 echo "frozen-files=\"/etc/sudoers\"" >> /etc/dispatch-conf.conf
 sed -i "s/# %wheel ALL=(ALL) NOPASSWD: ALL/%wheel ALL=(ALL) NOPASSWD: ALL/" /etc/sudoers
 sed -Ei "s@c([2-6]):2345:respawn:/sbin/agetty 38400 tty@#\0@" /etc/inittab
