@@ -1,3 +1,7 @@
+media-libs/mesa video_cards_i915 video_cards_i965 video_cards_vmware
+x11-base/xorg-drivers video_cards_i915 video_cards_i965 video_cards_virtualbox input_devices_vmmouse video_cards_vmware input_devices_joystick
+x11-libs/libva video_cards_i965
+virtual/opencl video_cards_i965
 x11-wm/enlightenment acpi connman wifi
 dev-libs/efl X sound harfbuzz physics xpm drm gles2 -opengl connman
 net-misc/dhcpcd-ui gtk
@@ -194,7 +198,6 @@ games-emulation/pcsxr -sdl # opengl or sdl
 x11-wm/e16 xcomposite # opengl
 net-im/pidgin spell
 net-irc/hexchat spell plugin-sysinfo
-x11-base/xorg-drivers input_devices_joystick
 dev-libs/weston xwayland
 www-servers/nginx nginx_modules_http_dav nginx_modules_http_realip rtmp
 media-libs/freetype infinality -bindist
@@ -285,8 +288,7 @@ dev-python/pyyaml libyaml # required by qutebrowser
 app-text/xmlto text # required by xdg-utils
 x11-base/xorg-server xvfb # required by firefox
 media-libs/libsdl2 gles # required by wayland
-x11-libs/libdrm video_cards_vmware # required by open-vm-tools
-media-libs/mesa video_cards_vmware # required by open-vm-tools
+x11-libs/libdrm video_cards_vmware # required by mesa
 media-plugins/gst-plugins-meta v4l # required by kamoso
 app-text/poppler cairo # required by gimp
 app-text/poppler qt5 # required by calligra

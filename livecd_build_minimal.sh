@@ -52,8 +52,8 @@ echo "$username:$userpassword" | chpasswd
 gpasswd -a $username wheel
 
 emerge -eDv @world xorg-server fvwm rxvt-unicode nitrogen compton sudo porthole rtorrent weechat alsa-utils zsh zsh-completions gentoo-zsh-completions liberation-fonts hack vlgothic scrot xbindkeys xinput arandr slock p7zip games-envd gparted squashfs-tools os-prober exfat-nofuse sshfs curlftpfs
-PORTAGE_BINHOST="https://cloveros.ga/s/nodbus" FETCHCOMMAND_HTTPS="wget -O \"\\\${DISTDIR}/\\\${FILE}\" \"\\\${URI}\"" emerge glib wpa_supplicant spacefm linux-firmware
-emerge --deselect glib
+PORTAGE_BINHOST="https://cloveros.ga/s/nodbus" FETCHCOMMAND_HTTPS="wget -O \"\\\${DISTDIR}/\\\${FILE}\" \"\\\${URI}\"" emerge glib wpa_supplicant spacefm linux-firmware mesa
+emerge --deselect glib mesa
 emerge --depclean
 emerge -C llvm clang llvmgold llvm-common clang-runtime clang-common lld lldb compiler-rt compiler-rt-sanitizers libomp
 echo "frozen-files=\"/etc/sudoers\"" >> /etc/dispatch-conf.conf
