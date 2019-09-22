@@ -115,7 +115,7 @@ sed -i "s@unsquashfs\(.*\)@unsquashfs\1\ncp /mnt/cdrom/boot/gentoo gentoo/boot/k
 sed -i "s/nomacs/geeqie/g" .fvwm2rc .config/mimeapps.list
 sed -i "s/qasmixer/if pgrep urxvtd; then urxvtc -e alsamixer; else urxvtd -o -f \&\& urxvtc -e alsamixer; fi/" .fvwm2rc
 mkdir .config/geeqie/
-wget $gitprefix/home/user/.config/geeqie/geeqierc.xml -P .config/geeqie
+wget $gitprefix/home/user/.config/geeqie/geeqierc.xml -P .config/geeqie/
 chown -R $username /home/$username/
 rm -Rf /var/db/repos/* /var/cache/distfiles/*
 
