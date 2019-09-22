@@ -51,10 +51,10 @@ useradd $username
 echo "$username:$userpassword" | chpasswd
 gpasswd -a $username wheel
 
-emerge -eDv @world palemoon xorg-server fvwm spacefm rxvt-unicode nitrogen compton sudo wpa_supplicant porthole emacs gimp rtorrent weechat alsa-utils zsh zsh-completions gentoo-zsh-completions liberation-fonts hack vlgothic nano scrot xbindkeys xinput arandr slock p7zip games-envd gparted squashfs-tools os-prober exfat-nofuse sshfs curlftpfs
+emerge -eDv @world xorg-server fvwm spacefm rxvt-unicode nitrogen compton sudo wpa_supplicant porthole rtorrent weechat alsa-utils zsh zsh-completions gentoo-zsh-completions liberation-fonts hack vlgothic nano scrot xbindkeys xinput arandr slock p7zip games-envd gparted squashfs-tools os-prober exfat-nofuse sshfs curlftpfs
 sed -ri 's/(PORTAGE_BINHOST|EMERGE_DEFAULT_OPTS|ACCEPT_KEYWORDS|binhost_mirrors|FETCHCOMMAND_HTTPS.*)/#\1/' /etc/portage/make.conf
 gcc-config 2
-USE="-dbus -video-thumbnails -qt5 -startup-notification -gtk3 gtk gtk2 X toolkit-scroll-bars xft sound games alsa libxml2 dynamic-loading gsettings libressl bindist gif jpeg png cairo" emerge -1 dev-perl/XML-Parser poppler wpa_supplicant emacs poppler spacefm
+USE="-dbus -video-thumbnails -qt5 -startup-notification -gtk3 gtk gtk2 X toolkit-scroll-bars xft sound games alsa libxml2 dynamic-loading gsettings libressl bindist gif jpeg png cairo" emerge -1 dev-perl/XML-Parser poppler wpa_supplicant spacefm
 sed -ri 's/#(PORTAGE_BINHOST|EMERGE_DEFAULT_OPTS|ACCEPT_KEYWORDS|binhost_mirrors|FETCHCOMMAND_HTTPS.*)/\1/' /etc/portage/make.conf
 PORTAGE_BINHOST="https://cloveros.ga/s/nodbus" FETCHCOMMAND_HTTPS="wget -O \"\\\${DISTDIR}/\\\${FILE}\" \"\\\${URI}\"" emerge -1 glib qtgui
 emerge -C gtk+:3
@@ -92,8 +92,8 @@ sed -i "s@/home/user/@/home/$username/@" .config/spacefm/session
 wget $gitprefix/home/user/.config/mimeapps.list -P .config/
 echo -e "[Desktop Entry]\nEncoding=UTF-8\nType=Link\nName=Home\nIcon=user-home\nExec=spacefm ~/" > Desktop/home.desktop
 echo -e "[Desktop Entry]\nEncoding=UTF-8\nType=Link\nName=Applications\nIcon=folder\nExec=spacefm /usr/share/applications/" > Desktop/applications.desktop
-cp /usr/share/applications/{palemoon.desktop,emacs.desktop,zzz-gimp.desktop,porthole.desktop} Desktop/
-echo -e "~rows=0\n1=home.desktop\n2=applications.desktop\n3=palemoon.desktop\n4=emacs.desktop\n5=porthole.desktop\n6=zzz-gimp.desktop" > .config/spacefm/desktop0
+cp /usr/share/applications/{porthole.desktop} Desktop/
+echo -e "~rows=0\n1=home.desktop\n2=applications.desktop\n3=porthole.desktop" > .config/spacefm/desktop0
 chown -R $username /home/$username/
 
 wget $gitprefix/livecd_install.sh -P /home/$username/

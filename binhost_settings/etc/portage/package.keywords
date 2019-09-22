@@ -275,7 +275,6 @@ www-servers/onionshare
 net-libs/stem # onionshare
 app-emacs/emms
 games-roguelike/nethack
-www-client/midori
 sys-apps/qdirstat
 www-client/torbrowser
 app-emulation/playonlinux
