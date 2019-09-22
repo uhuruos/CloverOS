@@ -383,6 +383,7 @@ mail-client/nmh -ssl
 sys-block/mbuffer -ssl
 net-ftp/gproftpd -ssl
 app-admin/mongo-tools -ssl
+www-client/jd gnutls
 net-ftp/proftpd -ssl -libressl
 www-client/w3mmee -ssl -libressl
 app-emulation/open-vm-tools -ssl -vgauth -grabbitmqproxy
