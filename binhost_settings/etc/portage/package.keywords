@@ -4,19 +4,11 @@ sys-kernel/gentoo-sources
 media-libs/mesa
 x11-libs/gtk+:3::mv # removes dbus
 app-emulation/winetricks::cloveros ** # overlay
-games-emulation/pcsx2 ** # overlay
-www-client/firefox
-dev-libs/nss # firefox
-dev-util/cbindgen # firefox
-media-libs/libvpx:0/5 # firefox
-=dev-lang/rust-1.37.0 # firefox
-=virtual/rust-1.37.0 # firefox
-=virtual/cargo-1.37.0 # firefox
+games-emulation/pcsx2::cloveros ** # overlay
 media-video/mpv
 media-libs/shaderc # mpv
 
 #old, remove when stable is bumped up
-=media-libs/mlt-6.16.0-r2 # shotcut
 sys-fs/zfs ** # kernel 5.0
 sys-fs/zfs-kmod ** # zfs
 =virtual/linux-sources-3-r1 # zfs
@@ -26,14 +18,11 @@ app-emulation/virtualbox-additions # virtualbox
 app-emulation/virtualbox-modules # virtualbox
 app-emulation/virtualbox-extpack-oracle # virtualbox
 net-misc/youtube-dl # stable always outdated/never works
-=media-libs/opencollada-1.6.63 # libpcre
-=dev-libs/nspr-4.22 # chromium
 media-libs/zimg ** # vapoursynth
-media-video/vdr # fixes build
 net-p2p/mldonkey # fixes build
 games-emulation/mgba # fixes build
-net-misc/spice-gtk # fixes build
 media-libs/osl # fixes build
+net-misc/spice-gtk # fixes build
 =app-emulation/spice-protocol-0.14.0 # spice-gtk
 =x11-misc/x11vnc-0.9.16-r3 # fixes build
 x11-themes/sddm-gentoo-black-theme ** # fixes build
@@ -56,15 +45,6 @@ xfce-extra/thunar-archive-plugin # xfdesktop
 dev-python/xcffib # qtile
 dev-python/cairocffi # qtile
 <dev-libs/amdgpu-pro-opencl-19 # doesn't work for some reason
-=dev-util/lldb-8.0.1 # clang 8
-=sys-devel/lld-8.0.1
-=sys-devel/clang-runtime-8.0.1
-=sys-libs/compiler-rt-sanitizers-8.0.1
-=sys-libs/compiler-rt-8.0.1
-=sys-devel/clang-8.0.1
-=sys-devel/llvmgold-8
-=sys-libs/libomp-8.0.1
-=sys-devel/llvm-8.0.1
 
 #libressl, remove when stable supports libressl
 =dev-qt/qtnetwork-5.12.3::libressl
@@ -551,7 +531,6 @@ x11-misc/bumblebee **
 games-fps/chocolate-doom **
 games-util/udmf-convert **
 sys-fs/exfat-nofuse **
-www-client/palemoon
 games-emulation/citra **
 games-emulation/mekanix ~*
 app-emulation/qt-virt-manager **
