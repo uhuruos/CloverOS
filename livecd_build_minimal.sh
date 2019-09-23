@@ -111,7 +111,7 @@ ratio=\$(awk "NR==1{print substr(\\\$8/\\\$10, 0, 4)}" <<<\$xrandroutput); [ \$r
 xinput set-prop "SynPS/2 Synaptics TouchPad" "libinput Tapping Enabled" 1 & xinput list --name-only | sed "/Virtual core pointer/,/Virtual core keyboard/"\!"d;//d" | xargs -I{} xinput set-prop {} "libinput Accel Profile Enabled" 0 1 &> /dev/null &
 fi' >> /home/$username/.bash_profile
 
-sed -i "s@unsquashfs\(.*\)@unsquashfs\1\ncp /mnt/cdrom/boot/gentoo gentoo/boot/kernel-genkernel-x86_64-\$(uname -r)\ncat /mnt/cdrom/boot/gentoo.igz | gzip -d | xz > gentoo/boot/initramfs-genkernel-x86_64-\$(uname -r)\ncp /mnt/cdrom/boot/System-gentoo.map gentoo/boot/System.map-genkernel-x86_64-\$(uname -r)@" livecd_install.sh
+sed -i "s@unsquashfs\(.*\)@unsquashfs\1\ncp /mnt/cdrom/boot/gentoo gentoo/boot/kernel-genkernel-x86_64-\\\$(uname -r)\ncat /mnt/cdrom/boot/gentoo.igz | gzip -d | xz --format=lzma > gentoo/boot/initramfs-genkernel-x86_64-\\\$(uname -r)\ncp /mnt/cdrom/boot/System-gentoo.map gentoo/boot/System.map-genkernel-x86_64-\\\$(uname -r)@" livecd_install.sh
 sed -i "s/nomacs/geeqie/g" .fvwm2rc .config/mimeapps.list
 sed -i "s/qasmixer/if pgrep urxvtd; then urxvtc -e alsamixer; else urxvtd -o -f \&\& urxvtc -e alsamixer; fi/" .fvwm2rc
 mkdir .config/geeqie/

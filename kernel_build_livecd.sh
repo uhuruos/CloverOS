@@ -17,7 +17,7 @@ echo -e "CONFIG_AUFS_FS=y\nCONFIG_AUFS_BRANCH_MAX_127=y\nCONFIG_AUFS_BRANCH_MAX_
 echo -e "CONFIG_NUMA_BALANCING=y\nCONFIG_NUMA_BALANCING_DEFAULT_ENABLED=y\nCONFIG_FAIR_GROUP_SCHED=y\nCONFIG_CFS_BANDWIDTH=n\nCONFIG_RT_GROUP_SCHED=n\nCONFIG_CGROUP_CPUACCT=n\nCONFIG_SCHED_AUTOGROUP=n\nCONFIG_SCSI_MQ_DEFAULT=y\nCONFIG_GENTOO_LINUX=y\nCONFIG_GENTOO_LINUX_UDEV=y\nCONFIG_GENTOO_LINUX_PORTAGE=y\nCONFIG_GENTOO_LINUX_INIT_SCRIPT=y\nCONFIG_GENTOO_LINUX_INIT_SYSTEMD=n" >> config-aufs
 sed -i "s/CONFIG_ISO9660_FS=m/CONFIG_ISO9660_FS=y/" config-aufs
 mkdir -p /usr/src/linux-$kernelversion-aufs/build/kernel/ /usr/src/linux-$kernelversion-aufs/build/modules/
-genkernel --kernel-config=config-aufs --kerneldir=/usr/src/linux-$kernelversion-aufs/ --bootdir=/usr/src/linux-$kernelversion-aufs/build/kernel/ --module-prefix=/usr/src/linux-$kernelversion-aufs/build/modules/ all
+genkernel --kernel-config=config-aufs --luks --lvm --kerneldir=/usr/src/linux-$kernelversion-aufs/ --bootdir=/usr/src/linux-$kernelversion-aufs/build/kernel/ --module-prefix=/usr/src/linux-$kernelversion-aufs/build/modules/ all
 XZ_OPT="--lzma1=preset=9e,dict=128MB,nice=273,depth=200,lc=4" tar --lzma -cf /usr/portage/packages/s/kernel-livecd.tar.lzma -C /usr/src/linux-$kernelversion-aufs/build/kernel/ . -C /usr/src/linux-$kernelversion-aufs/build/modules/lib/modules/ .
 
 cp -R /usr/src/linux-$kernelversion-aufs/ /usr/src/linux-$kernelversion-aufs-gnu/
@@ -25,7 +25,7 @@ rm -R /usr/src/linux-$kernelversion-aufs-gnu/build/*/*
 wget https://linux-libre.fsfla.org/pub/linux-libre/releases/$kernelversion-gnu/deblob-$kernelmajversion https://linux-libre.fsfla.org/pub/linux-libre/releases/$kernelversion-gnu/deblob-check -P /usr/src/linux-$kernelversion-aufs-gnu/
 chmod +x /usr/src/linux-$kernelversion-aufs-gnu/deblob-$kernelmajversion /usr/src/linux-$kernelversion-aufs-gnu/deblob-check
 cd /usr/src/linux-$kernelversion-aufs-gnu/ ; PYTHON="python2.7" /usr/src/linux-$kernelversion-aufs-gnu/deblob-$kernelmajversion ; cd -
-genkernel --kernel-config=config-aufs --kerneldir=/usr/src/linux-$kernelversion-aufs-gnu/ --bootdir=/usr/src/linux-$kernelversion-aufs-gnu/build/kernel/ --module-prefix=/usr/src/linux-$kernelversion-aufs-gnu/build/modules/ all
+genkernel --kernel-config=config-aufs --luks --lvm --kerneldir=/usr/src/linux-$kernelversion-aufs-gnu/ --bootdir=/usr/src/linux-$kernelversion-aufs-gnu/build/kernel/ --module-prefix=/usr/src/linux-$kernelversion-aufs-gnu/build/modules/ all
 XZ_OPT="--lzma1=preset=9e,dict=128MB,nice=273,depth=200,lc=4" tar --lzma -cf /usr/portage/packages/s/kernel-livecd-libre.tar.lzma -C /usr/src/linux-$kernelversion-aufs-gnu/build/kernel/ . -C /usr/src/linux-$kernelversion-aufs-gnu/build/modules/lib/modules/ .
 
 sudo emerge -C aufs-sources
