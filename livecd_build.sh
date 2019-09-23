@@ -110,10 +110,10 @@ while sleep 0.2; do if [ -d /proc/\$! ]; then ((i++)); [ "\$i" -gt 6 ] && break;
 nitrogen --set-zoom wallpaper.png &
 spacefm --desktop & urxvtd -o -f && urxvtc -geometry 1000x1+0+0 -fn 6x13 -letsp 0 -sl 0 -e ~/stats.sh & rc-config start wpa_supplicant &> /dev/null &
 sleep 2
-xinput set-prop "SynPS/2 Synaptics TouchPad" "libinput Tapping Enabled" 1 & xinput list --name-only | sed "/Virtual core pointer/,/Virtual core keyboard/"\!"d;//d" | xargs -I{} xinput set-prop {} "libinput Accel Profile Enabled" 0 1 &> /dev/null &
 xrandroutput=\$(xrandr)
 urxvtc -geometry 80x24+\$(awk "NR==1{print \\\$8/2-283\"+\"\\\$10/2-191}" <<<\$xrandroutput) -e sudo ./livecd_install.sh &
 ratio=\$(awk "NR==1{print substr(\\\$8/\\\$10, 0, 4)}" <<<\$xrandroutput); [ \$ratio == 1.6 ] && nitrogen --set-zoom wallpaper1610.png; [ \$ratio == 1.33 ] && nitrogen --set-zoom wallpaper43.png;
+xinput set-prop "SynPS/2 Synaptics TouchPad" "libinput Tapping Enabled" 1 & xinput list --name-only | sed "/Virtual core pointer/,/Virtual core keyboard/"\!"d;//d" | xargs -I{} xinput set-prop {} "libinput Accel Profile Enabled" 0 1 &> /dev/null &
 fi' >> /home/$username/.bash_profile
 
 rm -Rf /var/cache/binpkgs/* /etc/resolv.conf
