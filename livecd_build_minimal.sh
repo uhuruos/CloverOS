@@ -1,3 +1,4 @@
+#PKGDIR="/usr/portage/packages/s/nodbus/" USE="-qt5 -video-thumbnails savedconfig -video_cards_radeon -video_cards_radeonsi -llvm -opencl" emerge -B spacefm wpa_supplicant poppler mesa linux-firmware desktop-file-utils freedesktop-icon-theme
 #!/bin/bash
 if [ $(id -u) != "0" ]; then
 	echo "This script must be run as root" 1>&2

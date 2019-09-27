@@ -16,7 +16,7 @@ if [ "$1" = 'deep' ]; then
 	find /usr/portage/packages/ -mindepth 1 -maxdepth 1 ! -name s -exec rm -Rf {} \;
 	emerge -C hwinfo ntfs3g ; emerge ntfs3g ; emerge hwinfo ; emerge -C sys-apps/dbus obs-studio ; emerge obs-studio ; emerge -1 sys-apps/dbus ; emerge -C jack-audio-connection-kit audacity ; emerge audacity ; emerge jack-audio-connection-kit
 	quickpkg --include-unmodified-config=y "*/*" 2>&1 | ansi2html > /usr/portage/packages/s/quickpkg.html
-	emerge -B sudo openssh postfix dcron vixie-cron cronie fcron anacron chromium
+	emerge -B sudo openssh dcron cronie fcron anacron chromium mail-mta/postfix acct-user/postfix acct-group/postfix
 fi
 
 emerge --sync
@@ -27,7 +27,6 @@ emerge -b @preserved-rebuild
 emerge --depclean
 
 rm -R /usr/portage/packages/s/nodbus/ ; mkdir /usr/portage/packages/s/nodbus/ && PKGDIR="/usr/portage/packages/s/nodbus/" USE="-dbus -webengine" emerge -B glib qtgui PyQt5
-PKGDIR="/usr/portage/packages/s/nodbus/" USE="-qt5 -video-thumbnails savedconfig -video_cards_radeon -video_cards_radeonsi -llvm -opencl" emerge -B spacefm wpa_supplicant poppler mesa linux-firmware desktop-file-utils freedesktop-icon-theme
 
 php mirrors/index.php > /usr/portage/packages/index.html
 ./mirrors/indexalt.sh > /usr/portage/packages/indexalt.html
