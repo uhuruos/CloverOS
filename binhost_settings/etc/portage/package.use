@@ -254,7 +254,6 @@ games-emulation/retroarch X # required by USE=xinerama
 x11-drivers/xf86-video-intel tools # multimonitor
 dev-libs/glib dbus # required by mate flatpak pitivi evince eog bluez-alsa gthumb gedit flowblade
 dev-qt/qtgui dbus # required by kde
-dev-python/PyQt5 webengine # required by anki qutebrowser (dbus)
 sys-auth/consolekit policykit # required by kde (dbus)
 sys-auth/polkit consolekit # required by kde/mate (dbus)
 sys-apps/accountsservice consolekit # required by kde/mate (dbus)

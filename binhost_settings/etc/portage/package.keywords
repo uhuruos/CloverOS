@@ -9,9 +9,8 @@ media-video/mpv
 media-libs/shaderc # mpv
 
 #old, remove when stable is bumped up
-sys-fs/zfs ** # kernel 5.0
-sys-fs/zfs-kmod ** # zfs
-=virtual/linux-sources-3-r1 # zfs
+sys-fs/zfs # kernel 5.3
+sys-fs/zfs-kmod # zfs
 app-emulation/virtualbox # kernel 5.0
 app-emulation/virtualbox-guest-additions # virtualbox
 app-emulation/virtualbox-additions # virtualbox
@@ -24,8 +23,8 @@ games-emulation/mgba # fixes build
 media-libs/osl # fixes build
 net-misc/spice-gtk # fixes build
 x11-misc/polybar # fixes build
-=app-emulation/spice-protocol-0.14.0 # spice-gtk
-=x11-misc/x11vnc-0.9.16-r3 # fixes build
+app-emulation/spice-protocol # spice-gtk
+x11-misc/x11vnc # fixes build
 x11-themes/sddm-gentoo-black-theme ** # fixes build
 x11-themes/terminology-themes ** # fixes build
 media-plugins/vapoursynth-d2vsource ** # fixes build
