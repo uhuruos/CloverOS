@@ -338,6 +338,7 @@ games-action/extreme-tuxracer
 games-action/supertuxkart
 games-action/violetland
 games-arcade/blobby
+games-arcade/supertux
 games-arcade/tecnoballz
 games-board/crafty
 games-board/eboard
@@ -1257,7 +1258,6 @@ x11-misc/dmenu
 x11-misc/dunst
 x11-misc/dzen
 x11-misc/easystroke
-x11-misc/enlightenment-extra
 x11-misc/fbdesk
 x11-misc/fbpanel
 x11-misc/gpaste
@@ -1585,7 +1585,6 @@ xfce-extra/thunar-archive-plugin
 xfce-extra/thunar-media-tags-plugin
 xfce-extra/thunar-shares-plugin
 xfce-extra/thunar-vcs-plugin
-xfce-extra/thunar-volman
 xfce-extra/transd
 xfce-extra/tumbler
 xfce-extra/xfce4-alsa-plugin

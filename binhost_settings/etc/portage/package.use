@@ -187,7 +187,7 @@ app-editors/emacs X gtk toolkit-scroll-bars xft sound games alsa libxml2 dynamic
 app-emacs/emacs-common-gentoo X games
 app-admin/gkrellm X hddtemp lm_sensors
 app-text/texlive X cjk context detex dvi2tty dvipdfm epspdf extra games graphics humanities jadetex luatex metapost music omega png pstricks publishers science tex4ht texi2html truetype xetex xindy xml pdfannotextractor
-media-video/ffmpeg X bluray cdio rubberband libass vorbis ogg network vpx rtmp x264 aac wavpack opus mp3 sdl gme v4l webp theora xvid xcb cpudetection x265 libaom
+media-video/ffmpeg X bluray cdio rubberband libass vorbis ogg network vpx rtmp x264 aac wavpack opus mp3 sdl gme v4l webp theora xvid xcb cpudetection x265 libaom truetype
 virtual/ffmpeg X sdl x264
 www-servers/varnish jit jemalloc
 media-video/mpv rubberband lcms archive cdda bluray dvd encode libmpv cplugins v4l
@@ -207,7 +207,7 @@ media-libs/phonon -vlc
 media-libs/libsdl X
 www-client/chromium jumbo-build
 www-client/ungoogled-chromium optimize-thinlto optimize-webui new-tcmalloc jumbo-build -system-openjpeg
-www-client/firefox -wifi -wayland
+www-client/firefox -wifi -wayland -pgo
 mail-client/thunderbird -crypt
 www-client/seamonkey -crypt -minimal
 www-client/waterfox -wifi
@@ -261,11 +261,13 @@ sys-apps/accountsservice consolekit # required by kde/mate (dbus)
 gnome-base/gvfs udisks # required by caja (dbus)
 mate-extra/mate-screensaver -pam # prevents gnome-keyring
 media-sound/bitwig-studio -jack # prevents jack2
-mate-base/mate-panel X # fix: doesn't build without it
-x11-plugins/gkrelltop X # fix: doesn't build without it
-media-sound/clementine dbus # fix: doesn't build without it
-www-client/waterfox -pgo # fix: doesn't build without it
-dev-libs/efl luajit # fix: doesn't build without it
+mate-base/mate-panel X # fix: fixes build
+x11-plugins/gkrelltop X # fix: fixes build
+media-sound/clementine dbus # fix: fixes build
+www-client/waterfox -pgo # fix: fixes build
+dev-libs/efl luajit # fix: fixes build
+app-emulation/q4wine dbus # fix: fixes build
+games-emulation/dolphin-libretro -custom-cflags # fix: fixes build
 sys-apps/shadow -pam # fix: login won't work (but su - user would)
 sys-power/suspend -crypt -lzo # otherwise requires USE=static-libs dev-libs/libgcrypt dev-libs/lzo
 sys-libs/zlib minizip # required by many
@@ -292,6 +294,8 @@ x11-libs/libdrm video_cards_vmware # required by mesa
 media-plugins/gst-plugins-meta v4l # required by kamoso
 app-text/poppler cairo # required by gimp
 app-text/poppler qt5 # required by calligra
+kde-plasma/kde-cli-tools kdesu # required by kuroo
+kde-plasma/kde-cli-tools X # required by bluedevil
 x11-libs/gtk+ X
 x11-libs/libva X
 dev-cpp/gtkmm X

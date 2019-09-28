@@ -23,6 +23,7 @@ net-p2p/mldonkey # fixes build
 games-emulation/mgba # fixes build
 media-libs/osl # fixes build
 net-misc/spice-gtk # fixes build
+x11-misc/polybar # fixes build
 =app-emulation/spice-protocol-0.14.0 # spice-gtk
 =x11-misc/x11vnc-0.9.16-r3 # fixes build
 x11-themes/sddm-gentoo-black-theme ** # fixes build
@@ -60,6 +61,8 @@ app-editors/xemacs
 www-client/elinks
 
 #keyworded, remove when stable exists
+sys-apps/guix
+games-arcade/supertux
 www-client/ungoogled-chromium
 media-sound/muse
 media-sound/alsamixer-app
@@ -521,7 +524,6 @@ games-util/rejoystick
 games-emulation/advancemame
 games-emulation/advancescan
 games-misc/ckmame
-x11-misc/enlightenment-extra
 sci-mathematics/rstudio
 games-fps/wolfgl ~*
 x11-plugins/gkrellm-plugins ~*
@@ -855,7 +857,7 @@ games-emulation/craft-libretro **
 games-emulation/citra-libretro **
 games-emulation/desmume-libretro
 #games-emulation/dolphin-libretro
-#games-emulation/easyrpg-libretro
+games-emulation/easyrpg-libretro **
 games-emulation/fbalpha2012-libretro **
 games-emulation/fbalpha-libretro **
 games-emulation/fceumm-libretro **
@@ -884,7 +886,7 @@ games-emulation/nestopia-libretro **
 games-emulation/nxengine-libretro **
 games-emulation/openlara-libretro **
 games-emulation/parallel-n64-libretro **
-games-emulation/pcsx-rearmed-libretro
+games-emulation/pcsx-rearmed-libretro **
 games-emulation/picodrive-libretro **
 games-emulation/ppsspp-libretro **
 games-emulation/prboom-libretro **
