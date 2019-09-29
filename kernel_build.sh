@@ -4,8 +4,8 @@ if [ $(id -u) != "0" ]; then
 	exit 1
 fi
 
-kernelversion=5.3.1
-kernelmajversion=5.3
+kernelversion=5.2.17
+kernelmajversion=5.2
 
 if [ ! -d '/usr/portage/packages/s/' ]; then
 	mkdir -p /usr/portage/packages/s/

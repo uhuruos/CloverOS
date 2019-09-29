@@ -68,3 +68,4 @@ dev-qt/qtnetwork::gentoo # libressl
 =dev-python/dnspython-1.16.0
 =net-wireless/iwd-0.20
 =media-tv/kodi-18.4
+>app-editors/neovim-0.3.8
