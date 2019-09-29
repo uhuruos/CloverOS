@@ -3,10 +3,10 @@ sys-devel/gcc
 sys-kernel/gentoo-sources
 media-libs/mesa
 x11-libs/gtk+:3::mv # removes dbus
-app-emulation/winetricks::cloveros ** # overlay
-games-emulation/pcsx2::cloveros ** # overlay
 media-video/mpv
 media-libs/shaderc # mpv
+app-emulation/winetricks::cloveros ** # overlay
+games-emulation/pcsx2::cloveros ** # overlay
 
 #old, remove when stable is bumped up
 sys-fs/zfs # kernel 5.3
