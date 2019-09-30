@@ -123,7 +123,6 @@ app-emulation/virtualbox-additions
 app-emulation/virtualbox-extpack-oracle
 app-emulation/virtualbox-guest-additions
 app-emulation/winetricks
-app-emulation/xen
 app-eselect/eselect-repository
 app-forensics/aide
 app-i18n/fbterm

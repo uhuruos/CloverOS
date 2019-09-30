@@ -18,6 +18,7 @@ app-emulation/virtualbox-modules # virtualbox
 app-emulation/virtualbox-extpack-oracle # virtualbox
 net-misc/youtube-dl # stable always outdated/never works
 media-libs/zimg ** # vapoursynth
+media-fonts/opendesktop-fonts # fixes bug
 net-p2p/mldonkey # fixes build
 games-emulation/mgba # fixes build
 media-libs/osl # fixes build
@@ -856,7 +857,7 @@ games-emulation/craft-libretro **
 games-emulation/citra-libretro **
 games-emulation/desmume-libretro
 #games-emulation/dolphin-libretro
-games-emulation/easyrpg-libretro **
+#games-emulation/easyrpg-libretro
 games-emulation/fbalpha2012-libretro **
 games-emulation/fbalpha-libretro **
 games-emulation/fceumm-libretro **
