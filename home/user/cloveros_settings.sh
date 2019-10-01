@@ -347,7 +347,7 @@ case "$choice" in
 			fi
 			sudo eselect repository remove {1..500} &> /dev/null && sudo rm -R /var/db/repos/* && sudo rm /etc/portage/repos.conf/*
 			sudo xargs eselect repository enable "{}" <<< $(grep -Po "(?<=\*/\*::).*" /etc/portage/package.mask)
-			echo -e "\nPortage configuration now mirrors binhost Portage configuration. (/etc/portage/package.*, /etc/portage/env/, /etc/portage/repos.conf/) Previous Portage config stored in ~/$backupportagedir"
+			echo -e "\nPortage configuration now mirrors binhost Portage configuration. emerge --sync to retrieve overlays (/etc/portage/package.*, /etc/portage/env/, /etc/portage/repos.conf/) Previous Portage config stored in ~/$backupportagedir"
 		else
 			echo -e "\nCould not retrieve file. Please connect to the Internet or try again."
 		fi
