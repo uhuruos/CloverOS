@@ -1,5 +1,3 @@
-app-emulation/xen
-app-emulation/xen-tools
 #preference
 sys-devel/gcc
 sys-kernel/gentoo-sources
@@ -35,6 +33,8 @@ net-misc/freerdp ** # fixes build
 media-video/openshot # fixes build
 media-libs/libopenshot # openshot
 media-libs/libopenshot-audio # openshot
+app-emulation/xen # fixes build
+app-emulation/xen-tools # xen
 media-fonts/vlgothic # old
 games-emulation/dolphin ** # old
 games-emulation/ppsspp ** # old
