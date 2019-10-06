@@ -110,9 +110,9 @@ while sleep 0.2; do if [ -d /proc/\$! ]; then ((i++)); [ "\$i" -gt 6 ] && break;
 nitrogen --set-zoom wallpaper.png &
 spacefm --desktop &
 urxvtd -o -f
-urxvtc -geometry 80x24+100+100 -geometry 1000x1+0+0 -fn 6x13 -letsp 0 -sl 0 -e ~/stats.sh
+urxvtc -geometry 1000x1+0+0 -fn 6x13 -letsp 0 -sl 0 -e ~/stats.sh
 rc-config start wpa_supplicant &> /dev/null &
-urxvtc -e sudo ./livecd_install.sh
+urxvtc -geometry 80x24+100+100 -e sudo ./livecd_install.sh
 xinput set-prop "SynPS/2 Synaptics TouchPad" "libinput Tapping Enabled" 1 & xinput list --name-only | sed "/Virtual core pointer/,/Virtual core keyboard/"\!"d;//d" | xargs -I{} xinput set-prop {} "libinput Accel Profile Enabled" 0 1 &> /dev/null &
 fi' >> /home/$username/.bash_profile
 
