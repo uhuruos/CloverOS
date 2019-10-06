@@ -1,4 +1,4 @@
-www-client/ungoogled-chromium::pg_overlay
+www-client/ungoogled-chromium::pf4public
 
 dev-lang/dmd::dlang
 app-eselect/eselect-dlang::dlang
@@ -99,6 +99,7 @@ net-misc/youtube-comment-downloader::linxon
 net-misc/ripme::linxon
 dev-python/twodict::linxon
 app-misc/fsearch::linxon
+app-misc/doublecmd-bin::linxon
 
 net-irc/hexchat-otr::sk-overlay
 

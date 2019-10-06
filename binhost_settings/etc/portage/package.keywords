@@ -1,3 +1,4 @@
+media-sound/gtkguitune
 #preference
 sys-devel/gcc
 sys-kernel/gentoo-sources
@@ -63,6 +64,16 @@ app-editors/xemacs
 www-client/elinks
 
 #keyworded, remove when stable exists
+media-sound/gtklick
+media-sound/klick # gtklick
+media-libs/pyliblo # gtklick
+media-sound/yarock
+dev-cpp/htmlcxx # yarock
+media-sound/qtgain
+media-sound/qtagger
+media-sound/bempc
+media-sound/mp3diags
+app-misc/doublecmd-bin
 sys-apps/guix
 games-arcade/supertux
 www-client/ungoogled-chromium
