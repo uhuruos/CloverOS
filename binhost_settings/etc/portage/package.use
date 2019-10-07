@@ -1,7 +1,7 @@
 media-libs/mesa xa video_cards_i915 video_cards_i965 video_cards_vmware
 x11-base/xorg-drivers video_cards_i915 video_cards_i965 video_cards_virtualbox input_devices_vmmouse video_cards_vmware input_devices_joystick
 x11-libs/libva video_cards_i965
-virtual/opencl video_cards_i965
+virtual/opencl -video_cards_i965 -video_cards_amdgpu
 x11-wm/enlightenment acpi wifi
 dev-libs/efl X sound harfbuzz physics xpm drm gles2 -opengl
 net-misc/dhcpcd-ui gtk

@@ -276,7 +276,6 @@ dev-lang/rust
 dev-lang/scala
 dev-lang/tauthon
 dev-lang/tcc
-dev-libs/amdgpu-pro-opencl
 dev-libs/input-pad
 dev-libs/libisoburn
 dev-libs/weston
@@ -792,13 +791,16 @@ media-sound/easytag
 media-sound/exaile
 media-sound/ezstream
 media-sound/flacon
+media-sound/gimmix
 media-sound/glurp
 media-sound/gmpc
 media-sound/gmusicbrowser
 media-sound/gnomad
 media-sound/gstreamripper
+media-sound/gtkguitune
 media-sound/gtklick
 media-sound/guayadeque
+media-sound/guimup
 media-sound/guitarix
 media-sound/herrie
 media-sound/jack-audio-connection-kit
@@ -856,6 +858,7 @@ media-sound/sexypsf
 media-sound/sidplay
 media-sound/sidplayfp
 media-sound/solfege
+media-sound/sonata
 media-sound/sox
 media-sound/spek
 media-sound/split2flac
@@ -868,7 +871,10 @@ media-sound/timidity++
 media-sound/tomahawk
 media-sound/ttaenc
 media-sound/umurmur
+media-sound/volti
+media-sound/wavbreaker
 media-sound/xmms2
+media-sound/xnoise
 media-sound/xwax
 media-sound/yarock
 media-sound/yoshimi
