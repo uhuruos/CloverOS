@@ -277,7 +277,9 @@ dev-lang/scala
 dev-lang/tauthon
 dev-lang/tcc
 dev-libs/input-pad
+dev-libs/intel-neo
 dev-libs/libisoburn
+dev-libs/rocm-opencl-runtime
 dev-libs/weston
 dev-perl/LWP-UserAgent-Cached
 dev-perl/Mozilla-CA
