@@ -249,8 +249,6 @@ media-plugins/deadbeef-spectrogram gtk3
 media-plugins/deadbeef-musical-spectrum gtk3
 media-plugins/deadbeef-vk gtk3
 app-emulation/qemu sdl usb virtfs gtk
-games-emulation/retroarch X # required by USE=xinerama
-x11-drivers/xf86-video-intel tools # multi-monitor
 dev-libs/glib dbus # required by mate flatpak pitivi evince eog bluez-alsa gthumb gedit flowblade
 dev-qt/qtgui dbus # required by kde
 sys-auth/consolekit policykit # required by kde (dbus)
@@ -268,6 +266,7 @@ app-emulation/q4wine dbus # fix: fixes build
 games-emulation/dolphin-libretro -custom-cflags # fix: fixes build
 sys-apps/shadow -pam # fix: login won't work (but su - user would)
 sys-power/suspend -crypt -lzo # otherwise requires USE=static-libs dev-libs/libgcrypt dev-libs/lzo
+x11-drivers/xf86-video-intel tools # multi-monitor
 sys-libs/zlib minizip # required by many
 sys-apps/util-linux static-libs # genkernel
 sys-devel/gcc fortran # octave
@@ -291,10 +290,12 @@ media-libs/libsdl2 gles # wayland
 x11-libs/libdrm video_cards_vmware # mesa
 media-plugins/gst-plugins-meta v4l # kamoso
 app-text/poppler cairo # gimp
-app-text/poppler qt5 # calligra
+app-text/poppler qt5 # calligra texmaker okular texstudio calibre
 kde-plasma/kde-cli-tools kdesu # kuroo
 kde-plasma/kde-cli-tools X # bluedevil
 media-sound/klick osc # gtklick
+app-crypt/gpgme qt5 # messagelib libkleo kleopatra kmail kopete kaddressbook
+games-emulation/retroarch X # USE=xinerama
 x11-libs/gtk+ X
 x11-libs/libva X
 dev-cpp/gtkmm X
@@ -302,7 +303,6 @@ x11-libs/gdk-pixbuf X
 media-libs/flac ogg
 sys-boot/grub mount
 net-misc/spice-gtk gtk3 usbredir
-app-crypt/gpgme qt5
 media-libs/cogl gles2
 media-libs/mlt qt5 kdenlive xml sdl sdl2 melt python gtk ffmpeg frei0r
 media-libs/gegl cairo

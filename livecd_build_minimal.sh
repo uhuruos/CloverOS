@@ -1,4 +1,3 @@
-#PKGDIR="/usr/portage/packages/s/nodbus/" USE="-qt5 -video-thumbnails savedconfig -video_cards_radeon -video_cards_radeonsi -llvm -opencl" emerge -B spacefm wpa_supplicant poppler mesa linux-firmware desktop-file-utils freedesktop-icon-theme
 #!/bin/bash
 if [ $(id -u) != "0" ]; then
 	echo "This script must be run as root" 1>&2
@@ -52,10 +51,10 @@ useradd $username
 echo "$username:$userpassword" | chpasswd
 gpasswd -a $username wheel
 
-PORTAGE_BINHOST="https://cloveros.ga/s/nodbus" FETCHCOMMAND_HTTPS="wget -O \"\\\${DISTDIR}/\\\${FILE}\" \"\\\${URI}\"" emerge -1O glib wpa_supplicant spacefm linux-firmware mesa
+PORTAGE_BINHOST="https://cloveros.ga/s/nodbus" FETCHCOMMAND_HTTPS="wget -O \"\\\${DISTDIR}/\\\${FILE}\" \"\\\${URI}\"" emerge -1O glib wpa_supplicant gpgme spacefm linux-firmware mesa
 rm -Rf /var/cache/binpkgs/*
 emerge --noreplace wpa_supplicant spacefm linux-firmware
-emerge -eDv --exclude "glib wpa_supplicant spacefm linux-firmware mesa" @world xorg-server fvwm rxvt-unicode nitrogen compton sudo porthole rtorrent weechat alsa-utils zsh zsh-completions gentoo-zsh-completions liberation-fonts hack vlgothic scrot xbindkeys xinput arandr slock p7zip games-envd gparted squashfs-tools os-prober exfat-nofuse sshfs curlftpfs geeqie
+emerge -eDv --exclude "glib wpa_supplicant gpgme spacefm linux-firmware mesa" @world xorg-server fvwm rxvt-unicode nitrogen compton sudo porthole rtorrent weechat alsa-utils zsh zsh-completions gentoo-zsh-completions liberation-fonts hack vlgothic scrot xbindkeys xinput arandr slock p7zip games-envd gparted squashfs-tools os-prober exfat-nofuse sshfs curlftpfs geeqie
 emerge --depclean
 emerge -1O mesa
 echo "frozen-files=\"/etc/sudoers\"" >> /etc/dispatch-conf.conf
