@@ -276,6 +276,7 @@ dev-lang/rust
 dev-lang/scala
 dev-lang/tauthon
 dev-lang/tcc
+dev-libs/beignet
 dev-libs/input-pad
 dev-libs/intel-neo
 dev-libs/libisoburn
