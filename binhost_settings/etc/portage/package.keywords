@@ -19,6 +19,7 @@ app-emulation/virtualbox-extpack-oracle # virtualbox
 net-misc/youtube-dl # stable always outdated/never works
 media-libs/zimg ** # vapoursynth
 media-fonts/opendesktop-fonts # fixes bug
+media-gfx/ufraw # fixes build
 net-p2p/mldonkey # fixes build
 games-emulation/mgba # fixes build
 media-libs/osl # fixes build
@@ -60,6 +61,7 @@ app-crypt/mit-krb5
 www-client/dillo
 app-editors/xemacs
 www-client/elinks
+media-gfx/argyllcms
 
 #keyworded, remove when stable exists
 dev-libs/intel-neo

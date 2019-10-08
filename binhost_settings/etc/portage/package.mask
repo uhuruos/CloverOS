@@ -53,8 +53,6 @@ app-emulation/wine-staging::gentoo # ::bobwya
 
 net-libs/nodejs::gentoo # libressl
 dev-qt/qtnetwork::gentoo # libressl
->media-gfx/argyllcms-1.9.2 # libressl
->net-libs/libvncserver-0.9.11-r1 # libressl
 
 >dev-lang/tk-8.6 # doesn't build
 >dev-lang/tcl-8.6 # doesn't build
@@ -66,6 +64,5 @@ dev-qt/qtnetwork::gentoo # libressl
 =media-sound/supercollider-3.10.2
 >=sys-apps/pkgcore-0.10.0
 =dev-python/dnspython-1.16.0
-=net-wireless/iwd-0.20
-=media-tv/kodi-18.4
+#=media-tv/kodi-18.4
 >app-editors/neovim-0.3.8

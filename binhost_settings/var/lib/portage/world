@@ -711,6 +711,7 @@ media-gfx/geeqie
 media-gfx/gifsicle
 media-gfx/gimp
 media-gfx/gimp-arrow-brushes
+media-gfx/gphoto2
 media-gfx/gphotofs
 media-gfx/gqview
 media-gfx/graphicsmagick
@@ -744,6 +745,7 @@ media-gfx/qiv
 media-gfx/sane-frontends
 media-gfx/scrot
 media-gfx/sxiv
+media-gfx/ufraw
 media-gfx/viewnior
 media-gfx/w3mimgfb
 media-gfx/wkhtmltopdf
@@ -858,7 +860,6 @@ media-sound/schismtracker
 media-sound/serialosc
 media-sound/setbfree
 media-sound/sexypsf
-media-sound/sidplay
 media-sound/sidplayfp
 media-sound/solfege
 media-sound/sonata
