@@ -377,7 +377,6 @@ dev-lang/tk truetype
 
 #libressl
 net-misc/curl curl_ssl_libressl -curl_ssl_openssl
-#media-video/ffmpeg openssl
 net-libs/nodejs bundled-ssl
 app-crypt/johntheripper minimal -openmp -opencl
 net-p2p/mktorrent -ssl
