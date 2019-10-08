@@ -300,7 +300,6 @@ dev-python/yolk-portage
 dev-qt/qt-creator
 dev-ruby/nokogiri
 dev-util/android-ndk
-dev-util/android-sdk-update-manager
 dev-util/android-studio
 dev-util/android-tools
 dev-util/android-udev-rules
