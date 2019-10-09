@@ -259,7 +259,6 @@ media-sound/bitwig-studio -jack # removes dependency jack2
 app-portage/portage-utils -qmanifest # removes dependency gpgme
 mate-base/mate-panel X # fix: fixes build
 x11-plugins/gkrelltop X # fix: fixes build
-media-sound/clementine dbus # fix: fixes build
 www-client/waterfox -pgo # fix: fixes build
 dev-libs/efl luajit # fix: fixes build
 app-emulation/q4wine dbus # fix: fixes build
@@ -269,6 +268,12 @@ sys-power/suspend -crypt -lzo # otherwise requires USE=static-libs dev-libs/libg
 x11-drivers/xf86-video-intel tools # multi-monitor
 sys-libs/zlib minizip # required by many
 sys-apps/util-linux static-libs # genkernel
+app-crypt/gpgme qt5 # messagelib libkleo kleopatra kmail kopete kaddressbook
+app-text/poppler qt5 # calligra texmaker okular texstudio calibre
+media-libs/libmygpo-qt qt5
+dev-qt/qtlockedfile qt5
+dev-qt/qtsingleapplication qt5 X
+x11-libs/qscintilla qt5
 sys-devel/gcc fortran # octave
 net-libs/libtorrent-rasterbar python # deluge
 media-libs/libpng apng # firefox
@@ -290,12 +295,10 @@ media-libs/libsdl2 gles # wayland
 x11-libs/libdrm video_cards_vmware # mesa
 media-plugins/gst-plugins-meta v4l # kamoso
 app-text/poppler cairo # gimp
-app-text/poppler qt5 # calligra texmaker okular texstudio calibre
 kde-plasma/kde-cli-tools kdesu # kuroo
 kde-plasma/kde-cli-tools X # bluedevil
 media-sound/klick osc # gtklick
 media-video/vlc mp3 flac # tomahawk
-app-crypt/gpgme qt5 # messagelib libkleo kleopatra kmail kopete kaddressbook
 net-misc/curl http2 # kodi
 games-emulation/retroarch X # USE=xinerama
 sci-libs/hdf5 -threads # USE=cxx hl
@@ -324,14 +327,11 @@ x11-libs/libxcb xkb
 sys-libs/tevent python
 media-gfx/exiv2 xmp
 dev-python/PyQt5 gui widgets svg webkit network printsupport webchannel sql declarative multimedia
-media-libs/libmygpo-qt qt5
 dev-qt/qtwebengine widgets
 dev-qt/qtscript scripttools
 dev-qt/qtmultimedia widgets qml
 dev-qt/qtcore icu
 dev-qt/qtwebkit printsupport
-dev-qt/qtlockedfile qt5
-dev-qt/qtsingleapplication qt5 X
 kde-frameworks/kwindowsystem X
 kde-frameworks/kdelibs4support X
 dev-qt/qtwebchannel qml
@@ -358,7 +358,6 @@ sys-libs/tdb python
 dev-libs/libxml2 python icu
 dev-libs/libxslt python
 dev-python/numpy lapack
-x11-libs/qscintilla qt5
 x11-libs/libdrm libkms
 media-gfx/gmic X ffmpeg cli
 x11-libs/gdk-pixbuf tiff

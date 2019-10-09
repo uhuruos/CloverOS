@@ -116,7 +116,7 @@ urxvtc -geometry 80x24+100+100 -e sudo ./livecd_install.sh
 xinput set-prop "SynPS/2 Synaptics TouchPad" "libinput Tapping Enabled" 1 & xinput list --name-only | sed "/Virtual core pointer/,/Virtual core keyboard/"\!"d;//d" | xargs -I{} xinput set-prop {} "libinput Accel Profile Enabled" 0 1 &> /dev/null &
 fi' >> /home/$username/.bash_profile
 
-rm -Rf /var/cache/binpkgs/* /etc/resolv.conf
+rm -Rf /var/cache/binpkgs/* /var/cache/edb/binhost/* /etc/resolv.conf
 exit
 HEREDOC
 

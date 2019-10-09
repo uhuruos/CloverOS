@@ -120,7 +120,7 @@ wget $gitprefix/home/user/.config/geeqie/geeqierc.xml -P .config/geeqie/
 chown -R $username /home/$username/
 rm -Rf /var/db/repos/* /var/cache/distfiles/*
 
-rm -Rf /var/cache/binpkgs/* /etc/resolv.conf
+rm -Rf /var/cache/binpkgs/* /var/cache/edb/binhost/* /etc/resolv.conf
 exit
 HEREDOC
 
