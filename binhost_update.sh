@@ -26,8 +26,8 @@ emerge -1b --exclude=palemoon $(find /var/db/pkg/ -mindepth 2 -maxdepth 2 -name 
 emerge -b @preserved-rebuild
 emerge --depclean
 
-rm -R /usr/portage/packages/s/nodbus/ ; mkdir /usr/portage/packages/s/nodbus/ && PKGDIR="/usr/portage/packages/s/nodbus/" USE="-qt5 -video-thumbnails -video_cards_radeon -video_cards_radeonsi -llvm -opencl -udisks -trash-panel-plugin -dbus" emerge -B glib qtgui thunar spacefm wpa_supplicant poppler gpgme gvfs mesa desktop-file-utils freedesktop-icon-theme lcms openjpeg
-sed -ie "/^RTL|rtl|ar|ath|brcm|iwlwifi|rt/p" /etc/portage/savedconfig/sys-kernel/$(ls -1 /etc/portage/savedconfig/sys-kernel/ | tail -n1) && PKGDIR="/usr/portage/packages/s/nodbus/" USE="savedconfig" emerge -B linux-firmware
+sed -i -n "/^\(RTL\|rtl\|ar\|ath\|brcm\|iwlwifi\|rt\)/p" /etc/portage/savedconfig/sys-kernel/$(ls -1 /etc/portage/savedconfig/sys-kernel/ | tail -n1)
+rm -R /usr/portage/packages/s/nodbus/ ; mkdir /usr/portage/packages/s/nodbus/ && PKGDIR="/usr/portage/packages/s/nodbus/" USE="-dbus -qt5 -udisks -trash-panel-plugin -video-thumbnails -video_cards_radeon -video_cards_radeonsi -llvm -opencl savedconfig" emerge -B glib qtgui thunar spacefm wpa_supplicant poppler gpgme gvfs mesa linux-firmware desktop-file-utils freedesktop-icon-theme lcms openjpeg
 
 php mirrors/index.php > /usr/portage/packages/index.html
 ./mirrors/indexalt.sh > /usr/portage/packages/indexalt.html
