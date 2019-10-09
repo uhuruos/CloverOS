@@ -271,7 +271,12 @@ body {
 		<a id="logo" href="#">&zwnj;</a>
 		<div class="dropdown">
 			<a href="https://twitter.com/cloveros_ga">News</a>
-			<div class="dropdown-content" id="news">23-Sep-19
+			<div class="dropdown-content" id="news">08-Oct-19
+Packages updated
+Kernel updated to 5.2.20
+ISO: https://cloveros.ga/s/CloverOS-x86_64-20191008.iso
+
+23-Sep-19
 Packages updated
 Minimal ISO: https://cloveros.ga/s/CloverOS_Minimal-x86_64-20190923.iso
 Limited edition ISO without: portage tree, non-aufs kernel, llvm/clang, qt5, gtk3, wpa_gui, firefox, nomacs, gimp, emacs, smplayer/mpv, qasmixer, xarchiver and linux-firmware only has wifi
