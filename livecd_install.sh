@@ -8,11 +8,11 @@ while :; do
 	echo
 	read -erp "Automatic partitioning (a) or manual partitioning? (m) [a/m] " -n 1 partitioning
 	if [[ $partitioning = "a" ]]; then
-		read -erp "Enter drive for CloverOS installation: " -i "/dev/sda" drive
+		read -erp "Enter drive to be formatted for CloverOS installation: " -i "/dev/sda" drive
 		partition=${drive}1
 	elif [[ $partitioning = "m" ]]; then
 		gparted &> /dev/null &
-		read -erp "Enter partition for CloverOS installation: " -i "/dev/sda1" partition
+		read -erp "Enter formatted partition for CloverOS installation: " -i "/dev/sda1" partition
 		read -erp "Enter drive that contains install partition: " -i ${partition%${partition##*[!0-9]}} drive
 	else
 		echo "Invalid option"
