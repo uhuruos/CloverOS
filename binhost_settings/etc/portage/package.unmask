@@ -64,7 +64,6 @@ media-sound/drumkv1::audio-overlay
 media-sound/padthv1::audio-overlay
 media-sound/setbfree::audio-overlay
 media-sound/samplv1::audio-overlay
-media-libs/zita-resampler::audio-overlay
 media-sound/synthv1::audio-overlay
 media-sound/serialosc::audio-overlay
 media-libs/libmonome::audio-overlay # serialosc
@@ -80,14 +79,6 @@ dev-util/android-udev-rules::genthree
 dev-lang/tauthon::stefantalpalaru
 media-plugins/gimp-refocus::stefantalpalaru
 media-plugins/refocus-it::stefantalpalaru
-media-video/avidemux::stefantalpalaru
-media-libs/avidemux-core::stefantalpalaru # avidemux
-media-libs/avidemux-plugins::stefantalpalaru # avidemux
-
-dev-util/monodevelop::dotnet
-dev-dotnet/nuget::dotnet
-dev-dotnet/xdt-for-monodevelop::dotnet
-dev-dotnet/referenceassemblies-pcl::dotnet
 
 www-client/waterfox::poly-c
 x11-themes/sddm-gentoo-black-theme::poly-c
@@ -117,8 +108,6 @@ media-video/flowblade::jorgicio
 media-plugins/gimp-paint-studio::jorgicio
 net-im/telegram-cli::jorgicio
 sys-process/gtop::jorgicio
-media-video/shotcut::jorgicio
-net-im/corebird::jorgicio
 x11-misc/clipit::jorgicio
 media-fonts/emojione-color-font::jorgicio
 media-fonts/twemoji-color-font::jorgicio
@@ -199,13 +188,12 @@ games-emulation/common-overlays::abendbrot
 games-emulation/libretro-database::abendbrot
 games-emulation/libretro-info::abendbrot
 games-emulation/libretro-meta::abendbrot
-games-emulation/psp-assets::abendbrot
 games-emulation/2048-libretro::abendbrot
 games-emulation/4do-libretro::abendbrot
 games-emulation/beetle-psx-libretro::abendbrot
 games-emulation/bnes-libretro::abendbrot
 games-emulation/bsnes-libretro::abendbrot
-games-emulation/bsnes-libretro-cplusplus98::abendbrot
+#games-emulation/bsnes-libretro-cplusplus98::abendbrot
 games-emulation/craft-libretro::abendbrot
 games-emulation/citra-libretro::abendbrot
 games-emulation/desmume-libretro::abendbrot
@@ -263,6 +251,7 @@ games-emulation/yabause-libretro::abendbrot
 media-libs/vapoursynth::vapoursynth
 media-libs/waifu2x-converter-cpp::vapoursynth
 media-libs/l-smash::vapoursynth
+media-plugins/vsutil::vapoursynth
 media-plugins/vapoursynth-addgrain::vapoursynth
 media-plugins/vapoursynth-adjust::vapoursynth
 media-plugins/vapoursynth-autocrop::vapoursynth
@@ -317,7 +306,6 @@ media-plugins/vapoursynth-remapframes::vapoursynth
 media-plugins/vapoursynth-removedirt::vapoursynth
 media-plugins/vapoursynth-retinex::vapoursynth
 media-plugins/vapoursynth-sangnom::vapoursynth
-#media-plugins/vapoursynth-scenechange::vapoursynth
 media-plugins/vapoursynth-scxvid::vapoursynth
 media-plugins/vapoursynth-ssiq::vapoursynth
 media-plugins/vapoursynth-surfaceblur::vapoursynth
@@ -367,9 +355,13 @@ media-plugins/vapoursynth-tedgemask::vapoursynth
 media-plugins/vapoursynth-temporalsoften2::vapoursynth
 media-plugins/vapoursynth-fvsfunc::vapoursynth
 media-plugins/vapoursynth-xaa::vapoursynth
-#media-plugins/vapoursynth-qrcodesource::vapoursynth
 media-plugins/vapoursynth-astdr::vapoursynth
-#media-plugins/vapoursynth-kagefunc::vapoursynth
 media-plugins/vapoursynth-hysteria::vapoursynth
 media-plugins/vapoursynth-curve::vapoursynth
 media-plugins/vapoursynth-median::vapoursynth
+media-plugins/vapoursynth-colorbars::vapoursynth
+media-plugins/vapoursynth-fftspectrum::vapoursynth
+media-plugins/vapoursynth-kagefunc::vapoursynth
+media-plugins/vapoursynth-matchhistogram::vapoursynth
+media-plugins/vapoursynth-readmpls::vapoursynth
+media-plugins/vapoursynth-tbilateral::vapoursynth

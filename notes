@@ -8,7 +8,7 @@ livecd_install.sh: uefi install, encryption
 packages that don't build:
 
 # doesn't emerge
-beignet eduke32 racket bsnes-libretro-cplusplus98 monodevelop
+telegram-purple edbrowse fingerprint-gui opentoonz eduke32 racket bsnes-libretro-cplusplus98 monodevelop
 
 # packages with no libressl support
 nxplayer murmur makemkv eiskaltdcpp retroshare acme-tiny spyder johntheripper-jumbo eagle

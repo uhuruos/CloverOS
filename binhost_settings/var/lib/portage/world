@@ -242,6 +242,7 @@ app-text/extract_url
 app-text/highlight
 app-text/kchmviewer
 app-text/lesspipe
+app-text/master-pdf-editor
 app-text/mupdf
 app-text/ots
 app-text/pandoc
@@ -282,8 +283,6 @@ dev-libs/intel-neo
 dev-libs/libisoburn
 dev-libs/rocm-opencl-runtime
 dev-libs/weston
-dev-perl/LWP-UserAgent-Cached
-dev-perl/Mozilla-CA
 dev-perl/rename
 dev-php/composer
 dev-python/ansi2html
@@ -416,6 +415,7 @@ games-fps/quake3
 games-fps/quake3-cpma
 games-fps/quakeforge
 games-fps/qudos
+games-fps/redeclipse
 games-fps/sauerbraten
 games-fps/urbanterror
 games-fps/wolfgl
@@ -424,6 +424,7 @@ games-fps/zdoom
 games-misc/ckmame
 games-misc/cowsay
 games-misc/fortune-mod-all
+games-misc/katawa-shoujo
 games-misc/xcowsay
 games-puzzle/bastet
 games-roguelike/dwarf-fortress
@@ -997,6 +998,7 @@ net-misc/dhcpcd
 net-misc/dhcpcd-ui
 net-misc/electron-cash
 net-misc/electrum
+net-misc/electrum-ltc
 net-misc/freerdp
 net-misc/geoipupdate
 net-misc/gerbera
@@ -1139,7 +1141,6 @@ sys-apps/smartmontools
 sys-apps/udevil
 sys-apps/usermode-utilities
 sys-apps/vbetool
-sys-auth/fingerprint-gui
 sys-auth/pam_yubico
 sys-block/buffer
 sys-block/gparted
@@ -1183,6 +1184,7 @@ sys-fs/ntfs3g
 sys-fs/safecopy
 sys-fs/simple-mtpfs
 sys-fs/squashfs-tools
+sys-fs/squashfuse
 sys-fs/udiskie
 sys-fs/zfs
 sys-fs/zfs-auto-snapshot
@@ -1278,6 +1280,7 @@ x11-drivers/xf86-video-sis671
 x11-misc/arandr
 x11-misc/autocutsel
 x11-misc/bumblebee
+x11-misc/clipit
 x11-misc/clipster
 x11-misc/compton
 x11-misc/cvt12
