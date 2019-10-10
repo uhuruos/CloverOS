@@ -40,12 +40,6 @@ x11-misc/bumblebee::seden
 
 games-emulation/reicast::lanodanOverlay
 x11-plugins/purple-discord::lanodanOverlay
-gui-wm/waymonad::lanodanOverlay
-dev-haskell/libinput::lanodanOverlay # waymonad
-dev-haskell/waymonad-scanner::lanodanOverlay # waymonad
-dev-haskell/hfuse::lanodanOverlay # waymonad
-dev-haskell/hsroots::lanodanOverlay # waymonad
-dev-haskell/xkbcommon::lanodanOverlay # waymonad
 
 x11-libs/gtk+:3::mv
 
