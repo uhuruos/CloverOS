@@ -59,8 +59,33 @@ www-client/elinks
 media-gfx/argyllcms
 
 #keyworded, remove when stable exists
-sys-process/gtop
+sys-apps/psensor
 gui-wm/waymonad **
+dev-haskell/kan-extensions # waymonad
+dev-haskell/waymonad-scanner ** # waymonad
+dev-haskell/unliftio-core # waymonad
+dev-haskell/profunctors # waymonad
+dev-haskell/hsroots ** # waymonad
+dev-haskell/storable-record # waymonad
+dev-haskell/unliftio # waymonad
+dev-haskell/data-flags # waymonad
+dev-haskell/formatting # waymonad
+dev-haskell/config-schema # waymonad
+dev-haskell/composition # waymonad
+dev-haskell/async # waymonad
+dev-haskell/utility-ht # waymonad
+dev-haskell/hayland # waymonad
+dev-haskell/th-abstraction # waymonad
+dev-haskell/config-value # waymonad
+dev-haskell/libinput ** # waymonad
+dev-haskell/xdg-basedir # waymonad
+dev-haskell/invariant # waymonad
+dev-haskell/stm # waymonad
+dev-haskell/libinput # waymonad
+dev-haskell/waymonad-sc # waymonad
+dev-haskell/hfuse # waymonad
+dev-haskell/hsroots # waymonad
+dev-haskell/xkbcommon # waymonad
 dev-libs/intel-neo
 media-libs/gmmlib # intel-neo
 dev-util/spirv-llvm-translator # intel-neo

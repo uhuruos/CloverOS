@@ -966,7 +966,6 @@ net-im/discord-bin
 net-im/librvp
 net-im/mcabber
 net-im/minbif
-net-im/openfire
 net-im/pidgin
 net-im/profanity
 net-im/prosody
@@ -1081,6 +1080,7 @@ net-wireless/soapysdr
 net-wireless/wavemon
 net-wireless/wpa_supplicant
 pantheon-base/plank
+sci-biology/foldingathome
 sci-calculators/calcoo
 sci-calculators/qalculate-gtk
 sci-calculators/tiemu
@@ -1130,6 +1130,7 @@ sys-apps/msr-tools
 sys-apps/nvme-cli
 sys-apps/pkgcore
 sys-apps/pmount
+sys-apps/psensor
 sys-apps/pv
 sys-apps/qdirstat
 sys-apps/qingy
