@@ -28,7 +28,7 @@ Mouse 3 I N Menu FvwmWindowOpsMenu
 
 Mouse 3 T N Menu FvwmWindowOpsMenu
 
-Key Tab A SM WindowList Root c c NoDeskSort
+Key Tab	A SM WindowList Root c c NoDeskSort, SelectOnRelease Meta_L
 
 Key Right A CS GotoPage +1p +0p
 Key Left A CS GotoPage -1p +0p

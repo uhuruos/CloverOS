@@ -941,6 +941,7 @@ net-dns/bind-tools
 net-dns/dnscrypt-proxy
 net-dns/dnsmasq
 net-dns/ldns-utils
+net-dns/openresolv
 net-dns/unbound
 net-firewall/iptables
 net-firewall/nftables
