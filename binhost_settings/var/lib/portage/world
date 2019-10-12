@@ -1006,6 +1006,7 @@ net-misc/gofish
 net-misc/icecast
 net-misc/kafka-bin
 net-misc/megatools
+net-misc/modemmanager
 net-misc/mosh
 net-misc/ntp
 net-misc/onioncircuits
