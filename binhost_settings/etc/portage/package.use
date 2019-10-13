@@ -90,7 +90,7 @@ net-vpn/i2p -ecdsa
 x11-libs/libfm gtk
 net-p2p/mldonkey bittorrent gnutella magic fasttrack gd
 media-sound/qmmp alsa mad vorbis aac analyzer bs2b cdda cover crossfade cue curl enca ffmpeg flac game ladspa lyrics midi modplug musepack notifier opus projectm scrobbler sid sndfile soxr stereo tray wavpack archive shout qsui
-media-sound/audacity id3tag ffmpeg
+media-sound/audacity id3tag ffmpeg -lv2
 media-sound/darkice vorbis mp3
 games-fps/urbanterror server
 media-gfx/krita color-management
