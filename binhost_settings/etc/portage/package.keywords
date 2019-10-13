@@ -59,6 +59,7 @@ www-client/elinks
 media-gfx/argyllcms
 
 #keyworded, remove when stable exists
+games-board/pysolfc
 sys-apps/psensor
 dev-libs/intel-neo
 media-libs/gmmlib # intel-neo
