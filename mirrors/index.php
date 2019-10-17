@@ -58,7 +58,7 @@ CloverOS GNU/Linux
 Git: <a target="_blank" href="https://gitgud.io/cloveros/cloveros">https://gitgud.io/cloveros/cloveros</a><br>
 ISO: <a href="s/'.$isoname.'">https://cloveros.ga/s/'.$isoname.'</a><br>
 Libre ISO: <a href="s/'.$libreisoname.'">https://cloveros.ga/s/'.$libreisoname.'</a><br>
-Minimal ISO: <a href="s/'.$minimalisoname.'">https://cloveros.ga/s/'.$minimalisoname.'</a><br>
+Minimal ISO: <a href="s/'.$minimalisoname.'">https://nl.cloveros.ga/s/'.$minimalisoname.'</a><br>
 GPG: <a target="_blank" href="s/cloveros.gpg">78F5 AC55 A120 07F2 2DF9  A28A 78B9 3F76 B8E4 2805</a><br>
 IRC: <a target="_blank" href="irc://irc.rizon.net/cloveros">#cloveros</a> on irc.rizon.net<br>
 Twitter: <a target="_blank" href="https://twitter.com/cloveros_ga">https://twitter.com/cloveros_ga</a><br>

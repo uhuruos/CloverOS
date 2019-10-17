@@ -36,12 +36,6 @@ media-fonts/vlgothic # old
 games-emulation/dolphin ** # old
 games-emulation/ppsspp ** # old
 www-plugins/lightspark ** # stable relies on llvm6
-xfce-base/xfdesktop # remove dbus requirement for thunar
-xfce-base/thunar # xfdesktop
-xfce-extra/thunar-shares-plugin # xfdesktop
-xfce-extra/thunar-vcs-plugin # xfdesktop
-xfce-extra/thunar-media-tags-plugin # xfdesktop
-xfce-extra/thunar-archive-plugin # xfdesktop
 dev-python/xcffib # qtile
 dev-python/cairocffi # qtile
 
@@ -145,6 +139,7 @@ games-misc/katawa-shoujo
 media-sound/milkytracker
 media-plugins/refocus-it
 net-wireless/iwd
+dev-libs/ell # iwd
 app-emulation/nemu
 app-shells/mcfly
 app-portage/kuroo
@@ -260,6 +255,7 @@ sci-calculators/calcoo
 net-p2p/soulseek-qt
 www-servers/onionshare
 net-libs/stem # onionshare
+dev-python/flask-httpauth # onionshare
 app-emacs/emms
 games-roguelike/nethack
 sys-apps/qdirstat

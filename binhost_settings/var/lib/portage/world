@@ -1623,7 +1623,6 @@ xfce-extra/tumbler
 xfce-extra/xfce4-alsa-plugin
 xfce-extra/xfce4-battery-plugin
 xfce-extra/xfce4-clipman-plugin
-xfce-extra/xfce4-composite-editor
 xfce-extra/xfce4-cpufreq-plugin
 xfce-extra/xfce4-cpugraph-plugin
 xfce-extra/xfce4-datetime-plugin
@@ -1658,4 +1657,3 @@ xfce-extra/xfce4-weather-plugin
 xfce-extra/xfce4-whiskermenu-plugin
 xfce-extra/xfce4-windowck-plugin
 xfce-extra/xfce4-xkb-plugin
-xfce-extra/xfdashboard

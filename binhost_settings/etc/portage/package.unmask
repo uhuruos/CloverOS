@@ -10,7 +10,6 @@ www-client/palemoon::palemoon
 sys-devel/autofdo::pentoo
 
 net-im/profanity::optmzr
-dev-libs/libmesode::optmzr # profanity
 
 dev-qt/qtnetwork::libressl
 net-libs/nodejs::libressl
@@ -163,6 +162,7 @@ sys-kernel/dkms::farmboy0
 
 www-client/torbrowser::torbrowser
 www-servers/onionshare::torbrowser
+dev-python/flask-httpauth::torbrowser # onionshare
 app-misc/mat2::torbrowser
 net-misc/onioncircuits::torbrowser
 
