@@ -11,7 +11,7 @@ packages that don't build:
 telegram-purple edbrowse fingerprint-gui opentoonz eduke32 racket bsnes-libretro-cplusplus98 monodevelop
 
 # packages with no libressl support
-nxplayer murmur makemkv eiskaltdcpp retroshare acme-tiny spyder johntheripper-jumbo eagle
+zeronet nxplayer murmur makemkv eiskaltdcpp retroshare acme-tiny spyder johntheripper-jumbo eagle
 
 # requires jack2
 cadence ladish

@@ -1009,6 +1009,7 @@ net-misc/megatools
 net-misc/modemmanager
 net-misc/mosh
 net-misc/ntp
+net-misc/ofono
 net-misc/onioncircuits
 net-misc/proxychains
 net-misc/putty
@@ -1070,6 +1071,7 @@ net-vpn/zeronet
 net-wireless/aircrack-ng
 net-wireless/blueman
 net-wireless/bluez
+net-wireless/bluez-hcidump
 net-wireless/broadcom-sta
 net-wireless/chirp
 net-wireless/cubicsdr
