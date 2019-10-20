@@ -1067,7 +1067,6 @@ net-vpn/openvpn
 net-vpn/pptpd
 net-vpn/tor
 net-vpn/wireguard
-net-vpn/zeronet
 net-wireless/aircrack-ng
 net-wireless/blueman
 net-wireless/bluez
