@@ -40,7 +40,7 @@ dev-python/xcffib # qtile
 dev-python/cairocffi # qtile
 
 #libressl, remove when stable supports libressl
-=dev-qt/qtnetwork-5.12.3::libressl
+=dev-qt/qtnetwork-5.12.5::libressl
 app-crypt/qca::libressl
 net-libs/nodejs::libressl
 =net-dns/c-ares-1.15.0 # nodejs
