@@ -4,7 +4,6 @@ sys-kernel/gentoo-sources
 media-libs/mesa
 x11-libs/gtk+:3::mv # removes dbus
 app-emulation/winetricks::cloveros ** # overlay
-games-emulation/pcsx2::cloveros ** # overlay
 
 #old, remove when stable is bumped up
 sys-fs/zfs # kernel 5.3
@@ -33,6 +32,7 @@ media-libs/libopenshot-audio # openshot
 app-emulation/xen # fixes build
 app-emulation/xen-tools # xen
 media-fonts/vlgothic # old
+games-emulation/pcsx2 ** # old
 games-emulation/dolphin ** # old
 games-emulation/ppsspp ** # old
 www-plugins/lightspark ** # stable relies on llvm6

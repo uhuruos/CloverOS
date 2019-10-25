@@ -10,6 +10,7 @@ www-client/palemoon::palemoon
 sys-devel/autofdo::pentoo
 
 net-im/profanity::optmzr
+dev-libs/libmesode::optmzr # profanity
 
 dev-qt/qtnetwork::libressl
 net-libs/nodejs::libressl
