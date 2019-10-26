@@ -38,6 +38,7 @@ games-emulation/ppsspp ** # old
 www-plugins/lightspark ** # stable relies on llvm6
 dev-python/xcffib # qtile
 dev-python/cairocffi # qtile
+=dev-libs/libuv-1.33.1 # neovim
 
 #libressl, remove when stable supports libressl
 =dev-qt/qtnetwork-5.12.5::libressl
@@ -241,6 +242,7 @@ app-editors/neovim
 dev-libs/unibilium # neovim
 dev-libs/msgpack # neovim
 dev-libs/libvterm # neovim
+dev-lua/luv # neovim
 sys-fs/ecryptfs-utils
 media-gfx/maim
 x11-misc/slop # maim

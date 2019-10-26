@@ -283,6 +283,7 @@ dev-libs/libsodium -minimal # qtox
 x11-drivers/nvidia-drivers compat # primus
 media-libs/leptonica tiff # tesseract, vapoursynth
 dev-lua/mpack luajit # neovim
+dev-lua/luv luajit # neovim
 dev-python/pyyaml libyaml # qutebrowser
 app-text/xmlto text # xdg-utils
 x11-base/xorg-server xvfb # firefox

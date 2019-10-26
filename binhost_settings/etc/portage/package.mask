@@ -63,4 +63,3 @@ dev-qt/qtnetwork::gentoo # libressl
 >media-sound/supercollider-3.9.3-r1
 >sys-apps/pkgcore-0.9.7
 >dev-python/dnspython-1.15.0-r1
->app-editors/neovim-0.3.8
