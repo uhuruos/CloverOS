@@ -206,6 +206,7 @@ www-client/chromium jumbo-build
 www-client/ungoogled-chromium optimize-thinlto optimize-webui new-tcmalloc jumbo-build -system-openjpeg
 mail-client/thunderbird -crypt
 www-client/firefox -pgo
+www-client/waterfox -pgo
 www-client/seamonkey -crypt -minimal
 www-client/palemoon -official-branding
 media-sound/sox alsa openmp encode flac id3tag ladspa mad ogg opus sndfile twolame wavpack
@@ -257,7 +258,6 @@ media-sound/bitwig-studio -jack # removes dependency jack2
 app-portage/portage-utils -qmanifest # removes dependency gpgme
 mate-base/mate-panel X # fixes build
 x11-plugins/gkrelltop X # fixes build
-www-client/waterfox -pgo # fixes build
 dev-libs/efl luajit # fixes build
 app-emulation/q4wine dbus # fixes build
 games-emulation/dolphin-libretro -custom-cflags # fixes build

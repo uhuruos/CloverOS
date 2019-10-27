@@ -322,8 +322,8 @@ case "$choice" in
 		portageworkdir=portageworkdir$(< /dev/urandom tr -dc 0-9 | head -c 8)
 		mkdir -p $portageworkdir/env/
 		wget $gitprefix/binhost_settings/etc/portage/{package.use,package.keywords,package.env,package.mask,package.unmask,make.conf} -P $portageworkdir/
-		wget $gitprefix/binhost_settings/etc/portage/env/{gold,no-gnu2,no-gold,no-hashgnu,no-lto,no-lto-graphite,no-lto-graphite-ofast,no-lto-o3,no-lto-ofast,no-ofast,pcsx2,size} -P $portageworkdir/env/
-		if [[ $(find $portageworkdir -type f | wc -l) == "18" ]]; then
+		wget $gitprefix/binhost_settings/etc/portage/env/{gold,no-gnu2,no-gold,no-hashgnu,no-lto,no-lto-graphite,no-lto-o3,no-lto-ofast,no-ofast,pcsx2,size} -P $portageworkdir/env/
+		if [[ $(find $portageworkdir -type f | wc -l) == "17" ]]; then
 			backupportagedir=backupportage$(< /dev/urandom tr -dc 0-9 | head -c 8)
 			mkdir $backupportagedir/
 			sudo mv /etc/portage/{package.use,package.keywords,package.env,package.mask,package.unmask} /etc/portage/env/ $backupportagedir/ && cp /etc/portage/make.conf $backupportagedir/
