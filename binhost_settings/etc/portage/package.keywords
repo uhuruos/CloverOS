@@ -33,14 +33,16 @@ media-libs/libopenshot # openshot
 media-libs/libopenshot-audio # openshot
 app-emulation/xen # fixes build
 app-emulation/xen-tools # xen
+www-plugins/lightspark ** # stable relies on llvm6
 media-fonts/vlgothic # old
 games-emulation/pcsx2 ** # old
 games-emulation/dolphin ** # old
 games-emulation/ppsspp ** # old
-www-plugins/lightspark ** # stable relies on llvm6
 dev-python/xcffib # qtile
 dev-python/cairocffi # qtile
 =dev-libs/libuv-1.33.1 # neovim
+=dev-libs/nss-3.47 # ungoogled-chromium
+dev-libs/ell # iwd
 
 #libressl, remove when stable supports libressl
 =dev-qt/qtnetwork-5.12.5::libressl
@@ -142,7 +144,6 @@ games-misc/katawa-shoujo
 media-sound/milkytracker
 media-plugins/refocus-it
 net-wireless/iwd
-dev-libs/ell # iwd
 app-emulation/nemu
 app-shells/mcfly
 app-portage/kuroo

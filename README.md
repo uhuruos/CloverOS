@@ -177,7 +177,7 @@ Run `./cloveros_settings.sh c` to get the CloverOS Portage configuration.
 * [Starting X automatically after login](#starting-x-automatically-after-login)
 * [I want to bypass the mixer to play >48KHz audio / DSD](#i-want-to-bypass-the-mixer-to-play-48khz-audio-dsd)
 * [Wayland howto](#wayland-howto)
-* [Things preventing CloverOS Libre from being 100% free software:](#things-preventing-cloveros-libre-from-being-100-free-software)
+* [Things preventing CloverOS Libre from being EFF-approved:](#things-preventing-cloveros-libre-from-being-eff-approved)
 * [Does CloverOS have binaries?](#does-cloveros-have-binaries)
 * [How often is this updated?](#how-often-is-this-updated)
 * [Does everything build with CFLAGS="-Ofast -mssse3 -mfpmath=both -pipe -funroll-loops -flto=8 -fgraphite-identity -floop-nest-optimize -malign-data=cacheline -mtls-dialect=gnu2 -Wl,--hash-style=gnu"](#does-everything-build-with-cflags-ofast-mssse3-mfpmathboth-pipe-funroll-loops-flto8-fgraphite-identity-floop-nest-optimize-malign-datacacheline-mtls-dialectgnu2-wl-hash-stylegnu)
@@ -624,7 +624,7 @@ modules=xwayland.so' >> ~/.config/weston.ini
 XDG_RUNTIME_DIR=. weston-launch
 ```
 
-### Things preventing CloverOS Libre from being 100% free software:
+### Things preventing CloverOS Libre from being EFF-approved:
 - /usr/portage/ needs to be filtered to not include the .ebuilds of proprietary software, also requiring a separate Portage mirror
 
 - It needs a cloveros.ga mirror that doesn't host the non-free software packages

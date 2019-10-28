@@ -126,8 +126,8 @@ HEREDOC
 
 cd ..
 umount -l mini_image/*
-wget https://cloveros.ga/s/kernel-livecd.tar.lzma
-tar -C mini_image/lib/modules/ -xf kernel-livecd.tar.lzma --wildcards \*-aufs/\*
+wget https://cloveros.ga/s/kernel-livecd-libre.tar.lzma
+tar -C mini_image/lib/modules/ -xf kernel-livecd-libre.tar.lzma --wildcards \*-aufs-gnu/\*
 mksquashfs mini_image/ mini_image.squashfs -b 1M -comp xz -Xbcj x86 -Xdict-size 1M
 mkdir mini_iso/
 builddate=$(wget -O - http://distfiles.gentoo.org/releases/amd64/autobuilds/current-install-amd64-minimal/ | sed -nr "s/.*href=\"install-amd64-minimal-([0-9].*).iso\">.*/\1/p")
@@ -135,9 +135,9 @@ wget http://distfiles.gentoo.org/releases/amd64/autobuilds/current-install-amd64
 xorriso -osirrox on -indev mini_iso/*.iso -extract / mini_iso/
 rm mini_iso/*.iso
 mv mini_image.squashfs mini_iso/image.squashfs
-tar -xOf kernel-livecd.tar.lzma --wildcards ./kernel-genkernel-x86_64-\* > mini_iso/boot/gentoo
-tar -xOf kernel-livecd.tar.lzma --wildcards ./initramfs-genkernel-x86_64-\* | xz -d | gzip > mini_iso/boot/gentoo.igz
-tar -xOf kernel-livecd.tar.lzma --wildcards ./System.map-genkernel-x86_64-\* > mini_iso/boot/System-gentoo.map
+tar -xOf kernel-livecd-libre.tar.lzma --wildcards ./kernel-genkernel-x86_64-\* > mini_iso/boot/gentoo
+tar -xOf kernel-livecd-libre.tar.lzma --wildcards ./initramfs-genkernel-x86_64-\* | xz -d | gzip > mini_iso/boot/gentoo.igz
+tar -xOf kernel-livecd-libre.tar.lzma --wildcards ./System.map-genkernel-x86_64-\* > mini_iso/boot/System-gentoo.map
 sed -i "s@dokeymap@aufs@g" mini_iso/isolinux/isolinux.cfg
 sed -i "s@dokeymap@aufs@g" mini_iso/grub/grub.cfg
 xorriso -as mkisofs -r -J \
@@ -147,4 +147,4 @@ xorriso -as mkisofs -r -J \
 	-b isolinux/isolinux.bin -c isolinux/boot.cat \
 	-no-emul-boot -boot-load-size 4 -boot-info-table  \
 	-o CloverOS_Minimal-x86_64-$(date +"%Y%m%d").iso mini_iso/
-rm -Rf mini_image/ mini_iso/ kernel-livecd.tar.lzma
+rm -Rf mini_image/ mini_iso/ kernel-livecd-libre.tar.lzma
