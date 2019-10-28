@@ -22,6 +22,7 @@ app-emulation/winetricks::cloveros # winetricks-9999::gentoo with removed RDEPEN
 mate-base/mate::cloveros # mate-1.22::gentoo with removed "extras? ( sys-apps/gnome-disk-utility:0 )"
 media-gfx/meh::cloveros # taken from media-gfx/meh::lanodanOverlay
 media-video/vidcutter::cloveros # media-video/vidcutter::jorgicio with removed RDEPEND=">=dev-python/PyQt5-5.7[dbus]"
+www-client/firefox::cloveros ## firefox-70::pg_overlay with removed DEPEND=sys-apps/dbus
 media-gfx/nip2::cloveros
 media-libs/vips::cloveros
 

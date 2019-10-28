@@ -30,6 +30,7 @@
 */*::palemoon
 */*::pentoo
 */*::pf4public
+*/*::pg_overlay
 */*::pixlra
 */*::poly-c
 */*::raiagent

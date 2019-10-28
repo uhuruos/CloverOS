@@ -122,7 +122,7 @@ HEREDOC
 cd ..
 umount -l libre_image/*
 wget https://cloveros.ga/s/kernel-livecd-libre.tar.lzma
-tar -C libre_image/lib/modules/ -xf kernel-livecd-libre.tar.lzma --wildcards \*-aufs/\*
+tar -C libre_image/lib/modules/ -xf kernel-livecd-libre.tar.lzma --wildcards \*-aufs-gnu/\*
 mksquashfs libre_image/ libre_image.squashfs -b 1M -comp xz -Xbcj x86 -Xdict-size 1M
 mkdir libre_iso/
 builddate=$(wget -O - http://distfiles.gentoo.org/releases/amd64/autobuilds/current-install-amd64-minimal/ | sed -nr "s/.*href=\"install-amd64-minimal-([0-9].*).iso\">.*/\1/p")
