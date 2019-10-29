@@ -1,9 +1,8 @@
-www-client/firefox
-
 #preference
 sys-devel/gcc
 sys-kernel/gentoo-sources
 media-libs/mesa
+www-client/firefox::cloveros
 x11-libs/gtk+:3::mv # removes dbus
 app-emulation/winetricks::cloveros ** # overlay
 
@@ -58,6 +57,7 @@ www-client/elinks
 media-gfx/argyllcms
 
 #keyworded, remove when stable exists
+media-sound/parlatype
 www-client/torbrowser-launcher
 games-board/pysolfc
 sys-apps/psensor
@@ -124,9 +124,6 @@ x11-misc/clipster
 games-emulation/libretro-dosbox
 app-emulation/fs-uae
 app-emulation/wine-staging
-virtual/wine # wine-staging
-app-emulation/wine-mono # wine-staging
-app-eselect/eselect-wine # wine-staging
 x11-misc/cvt12
 app-i18n/fbterm
 sys-apps/kmscon
@@ -237,8 +234,8 @@ net-im/discord-bin
 games-roguelike/dwarf-fortress
 www-client/qutebrowser
 dev-python/pypeg2 # qutebrowser
-x11-terms/termite
-x11-libs/vte # termite
+x11-terms/termite::eroen
+x11-libs/vte::eroen # termite
 media-video/handbrake
 x11-misc/i3blocks-gaps
 net-im/telegram-desktop-bin

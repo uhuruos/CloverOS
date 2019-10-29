@@ -1,3 +1,4 @@
+app-accessibility/sphinx2
 app-admin/clsync
 app-admin/conky
 app-admin/consul
@@ -1211,7 +1212,6 @@ sys-process/htop
 sys-process/iotop
 sys-process/lsof
 sys-process/parallel
-virtual/wine
 www-apps/otrs
 www-apps/trac
 www-client/dillo

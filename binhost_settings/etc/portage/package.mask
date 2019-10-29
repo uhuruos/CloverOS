@@ -46,9 +46,6 @@
 */*::vapoursynth
 */*::vifino-overlay
 
-x11-libs/vte:2.91::gentoo # ::eroen, termite
-virtual/wine::gentoo # ::bobwya
-app-emulation/wine-staging::gentoo # ::bobwya
 net-im/profanity::gentoo # optmzr
 
 net-libs/nodejs::gentoo # libressl

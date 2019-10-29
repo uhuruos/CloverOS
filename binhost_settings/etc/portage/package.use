@@ -15,7 +15,7 @@ net-vpn/zeronet tor
 sys-fs/lvm2 -thin
 games-fps/eduke32 demo
 x11-misc/xdg-utils -perl
-app-emulation/wine-staging -custom-cflags vkd3d esync
+app-emulation/wine-staging -custom-cflags vkd3d
 virtual/wine staging
 app-emulation/xen -custom-cflags
 app-emulation/xen-tools -custom-cflags

@@ -28,12 +28,6 @@ net-libs/nodejs::libressl
 app-crypt/qca::libressl
 
 sys-fs/exfat-nofuse::bobwya
-virtual/wine::bobwya
-app-emulation/wine-staging::bobwya
-app-eselect/eselect-wine::bobwya # wine-staging
-app-emulation/wine-desktop-common::bobwya # wine-staging
-app-emulation/wine-mono::bobwya # wine-staging
-
 games-fps/dhewm3::bobwya
 
 x11-misc/synergy::vifino-overlay
@@ -112,6 +106,7 @@ x11-misc/clipit::jorgicio
 media-fonts/emojione-color-font::jorgicio
 media-fonts/twemoji-color-font::jorgicio
 media-gfx/lsix::jorgicio
+media-sound/parlatype::jorgicio
 
 games-util/steam-launcher::steam-overlay
 
