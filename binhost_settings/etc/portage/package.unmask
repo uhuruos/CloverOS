@@ -1,10 +1,11 @@
 games-emulation/pcsx2::cloveros # pcsx2-9999::gentoo with added "src_configure() { local mycmakeargs=( -DDISABLE_ADVANCE_SIMD=ON ) }"
-games-emulation/rpcs3::cloveros # rpcs3-0.0.5::jm-overlay with added "src_configure() { local mycmakeargs=( -DUSE_NATIVE_INSTRUCTIONS=OFF ) }" and turned into git
+games-emulation/rpcs3::cloveros # rpcs3-0.0.7::menelkir with added "src_configure() { local mycmakeargs=( -DUSE_NATIVE_INSTRUCTIONS=OFF ) }" and turned into git
 app-emulation/winetricks::cloveros # winetricks-9999::gentoo with removed RDEPEND="x11-misc/xdg-utils"
 mate-base/mate::cloveros # mate-1.22::gentoo with removed "extras? ( sys-apps/gnome-disk-utility:0 )"
 media-gfx/meh::cloveros # taken from media-gfx/meh::lanodanOverlay
-media-video/vidcutter::cloveros # media-video/vidcutter::jorgicio with removed RDEPEND=">=dev-python/PyQt5-5.7[dbus]"
+media-video/vidcutter::cloveros # vidcutter::jorgicio with removed RDEPEND=">=dev-python/PyQt5-5.7[dbus]"
 www-client/firefox::cloveros ## firefox-70::pg_overlay with removed DEPEND=sys-apps/dbus
+www-client/torbrowser::cloveros ## torbrowser::torbrowser with added mozconfig_annotate '' --disable-necko-wifi
 media-gfx/nip2::cloveros
 media-libs/vips::cloveros
 
@@ -162,11 +163,11 @@ sys-fs/libostree::flatpak-overlay
 
 sys-kernel/dkms::farmboy0
 
-www-client/torbrowser::torbrowser
 www-servers/onionshare::torbrowser
 dev-python/flask-httpauth::torbrowser # onionshare
 app-misc/mat2::torbrowser
 net-misc/onioncircuits::torbrowser
+www-client/torbrowser-launcher::torbrowser
 
 app-shells/fzf::rasdark
 x11-drivers/xf86-video-sis671::rasdark
