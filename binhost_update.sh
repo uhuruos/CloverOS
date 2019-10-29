@@ -17,7 +17,7 @@ if [ "$1" = 'deep' ]; then
 	emerge -C hwinfo ntfs3g ; emerge ntfs3g ; emerge hwinfo ; emerge -C sys-apps/dbus obs-studio ; emerge obs-studio ; emerge -1 sys-apps/dbus ; emerge -C jack-audio-connection-kit audacity ; emerge audacity ; emerge jack-audio-connection-kit
 	quickpkg --include-unmodified-config=y "*/*" 2>&1 | ansi2html > /usr/portage/packages/s/quickpkg.html
 	BINPKG_COMPRESS="xz" XZ_OPT="--x86 --lzma2=preset=9e,dict=1024MB,nice=273,depth=200,lc=4" quickpkg --include-unmodified-config=y app-doc/gimp-help games-strategy/wesnoth games-misc/katawa-shoujo games-action/supertuxkart dev-texlive/texlive-fontsextra media-fonts/noto-cjk x11-themes/ubuntu-wallpapers dev-util/android-studio dev-util/pycharm-professional dev-util/pycharm-community dev-util/android-ndk games-fps/urbanterror-data games-fps/xonotic games-fps/redeclipse games-fps/nexuiz games-fps/sauerbraten games-fps/alienarena games-fps/openarena games-fps/enemy-territory games-fps/quake3-cpma
-	emerge -B sudo openssh dcron cronie fcron anacron chromium mail-mta/postfix acct-user/postfix acct-group/postfix
+	emerge -B sudo openssh linux-firmware dcron cronie fcron anacron chromium mail-mta/postfix acct-user/postfix acct-group/postfix
 fi
 
 emerge --sync
