@@ -123,6 +123,7 @@ app-emulation/virtualbox
 app-emulation/virtualbox-additions
 app-emulation/virtualbox-extpack-oracle
 app-emulation/virtualbox-guest-additions
+app-emulation/wine-staging
 app-emulation/winetricks
 app-emulation/xen-tools
 app-eselect/eselect-repository
@@ -1212,6 +1213,7 @@ sys-process/htop
 sys-process/iotop
 sys-process/lsof
 sys-process/parallel
+virtual/wine
 www-apps/otrs
 www-apps/trac
 www-client/dillo

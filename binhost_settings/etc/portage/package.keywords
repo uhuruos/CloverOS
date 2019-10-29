@@ -124,6 +124,8 @@ x11-misc/clipster
 games-emulation/libretro-dosbox
 app-emulation/fs-uae
 app-emulation/wine-staging
+app-emulation/faudio # wine-staging
+app-emulation/wine-mono # wine-staging
 x11-misc/cvt12
 app-i18n/fbterm
 sys-apps/kmscon
