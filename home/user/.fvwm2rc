@@ -1,5 +1,20 @@
 #Style * NoTitle
 
+Style * SmartPlacement
+Style * RandomPlacement
+
+Style * DecorateTransient
+
+Style * FPLenient
+
+Style * ResizeOpaque
+
+OpaqueMoveSize unlimited
+
+IgnoreModifiers L25
+
+EdgeScroll 0 0
+
 AddToFunc "WindowMove" "I" Raise
 + "H" Move
 + "M" Move
@@ -45,18 +60,12 @@ Key Print A N Exec scrot -e nomacs\ \$f
 Key Print A M Exec scrot -ue nomacs\ \$f
 Key L A 4 Exec slock
 
-OpaqueMoveSize unlimited
-
-Style * BorderWidth 1, HandleWidth 1
-Style * FPLenient
-Style * ResizeOpaque
-
-EdgeScroll 0 0
-
 Style * ForeColor #ffffff
 Style * BackColor #056839
 Style * HilightFore #ffffff
 Style * HilightBack #056839
+
+Style * BorderWidth 1, HandleWidth 1
 
 TitleStyle MiniIcon -- Left Flat
 
@@ -72,9 +81,6 @@ ButtonStyle 4 Vector 5 30x30@3 30x70@3 70x70@3 70x30@3 30x30@3
 ButtonStyle 2 Vector 5 70x70@3 30x30@3 70x30@4 70x30@3 30x70@3
 ButtonStyle All -- Flat
 
-Style * SmartPlacement
-Style * RandomPlacement
-
 Style * IconBox +0 -0 -0 -0, IconFill left bottom
 Style * IconSize 0 0
 Style * IconTitleRelief 1
@@ -83,8 +89,6 @@ Style * IconTitleColorset 1
 Style * HilightIconTitleColorset 1
 Colorset 2 bg green, fg blue, hi purple, sh red
 Style * IconBackgroundColorset 2
-
-Style * DecorateTransient
 
 Style stats.sh !Title, Sticky, WindowListSkip, BorderWidth 0, HandleWidth 0
 Style Plank !Title, StaysOnTop, Sticky, WindowListSkip, BorderWidth 0, HandleWidth 0
@@ -108,11 +112,11 @@ AddToMenu   FvwmWindowOpsMenu "Window Operations" Title
 + "StaysOnBottom"  Pick (CirculateHit) Layer 0 2
 
 DestroyMenu ProgramList
-AddToMenu ProgramList "Program List" Title
-+ DynamicPopUpAction Function MakeProgramList
+AddToMenu ProgramList "Applications" Title
++ DynamicPopUpAction Function UsrShareApplications
 
-DestroyFunc MakeProgramList
-AddToFunc MakeProgramList
+DestroyFunc UsrShareApplications
+AddToFunc UsrShareApplications
 + I DestroyMenu recreate ProgramList
 + I AddToMenu ProgramList "Program List" Title
 + I PipeRead 'for i in $(ls -1 /usr/share/applications/ | sed "s/.desktop//g; /mimeinfo.cache/d"); do echo "+ $i Exec $i"; done'
@@ -129,7 +133,7 @@ AddToMenu ShutdownList "Shutdown" Title
 
 DestroyMenu MenuFvwmRoot
 AddToMenu MenuFvwmRoot Applications Title
-+ "Program List" Popup ProgramList
++ "program list" Popup ProgramList
 + "urxvt" Exec if pgrep urxvtd; then urxvtc -e zsh; else urxvtd -o -f && urxvtc -e zsh; fi
 + "spacefm" Exec spacefm
 + "wifi" Exec sudo rc-service wpa_supplicant start & wpa_gui
@@ -142,7 +146,6 @@ AddToMenu MenuFvwmRoot Applications Title
 + "nomacs" Exec nomacs ~
 + "rtorrent" Exec if pgrep urxvtd; then urxvtc -e rtorrent; else urxvtd -o -f && urxvtc -e rtorrent; fi
 + "weechat" Exec if pgrep urxvtd; then urxvtc -e weechat; else urxvtd -o -f && urxvtc -e weechat; fi
-+ "top" Exec if pgrep urxvtd; then urxvtc -e top -o %MEM; else urxvtd -o -f && urxvtc -e top -o %MEM; fi
 + "desktop" Exec spacefm --desktop
 + "stats.sh" Exec if pgrep urxvtd; then urxvtc -geometry 1000x1+0+0 -fn 6x13 -letsp 0 -sl 0 -e ~/stats.sh; else urxvtd -o -f && urxvtc -geometry 1000x1+0+0 -fn 6x13 -letsp 0 -sl 0 -e ~/stats.sh; fi
 + "comptonvsync" Exec compton --backend glx --vsync opengl-swc --glx-no-stencil --paint-on-overlay --unredir-if-possible # --glx-swap-method buffer-age --glx-no-rebind-pixmap
@@ -150,8 +153,10 @@ AddToMenu MenuFvwmRoot Applications Title
 + "resolution" Exec arandr
 + "volume" Exec qasmixer
 + "settings.sh" Exec if pgrep urxvtd; then urxvtc -e sh -c "~/cloveros_settings.sh && read"; else urxvtd -o -f && urxvtc -e sh -c "~/cloveros_settings.sh && read"; fi
++ "top" Exec if pgrep urxvtd; then urxvtc -e top -o %MEM; else urxvtd -o -f && urxvtc -e top -o %MEM; fi
 + "gparted" Exec sudo gparted
-+ "screenshot" Exec scrot && nomacs ~/$(ls -1t ~ | grep scrot | head -n1)
++ "screenshot" Exec scrot -e nomacs\ \$f
++ "settings" Popup SettingsList
 + "shutdown" Popup ShutdownList
 
 Colorset 3 bg #ffffff, fg #000000, hi #000000, sh #000000
