@@ -131,6 +131,10 @@ AddToMenu ShutdownList "Shutdown" Title
 + "reboot" Exec sudo reboot
 + "poweroff" Exec sudo poweroff
 
+DestroyMenu SettingsList
+AddToMenu SettingsList "Settings" Title
++ "kill X" Exec pkill X
+
 DestroyMenu MenuFvwmRoot
 AddToMenu MenuFvwmRoot Applications Title
 + "program list" Popup ProgramList
@@ -152,9 +156,9 @@ AddToMenu MenuFvwmRoot Applications Title
 + "wallpaper" Exec nitrogen
 + "resolution" Exec arandr
 + "volume" Exec qasmixer
-+ "settings.sh" Exec if pgrep urxvtd; then urxvtc -e sh -c "~/cloveros_settings.sh && read"; else urxvtd -o -f && urxvtc -e sh -c "~/cloveros_settings.sh && read"; fi
-+ "top" Exec if pgrep urxvtd; then urxvtc -e top -o %MEM; else urxvtd -o -f && urxvtc -e top -o %MEM; fi
 + "gparted" Exec sudo gparted
++ "top" Exec if pgrep urxvtd; then urxvtc -e top -o %MEM; else urxvtd -o -f && urxvtc -e top -o %MEM; fi
++ "settings.sh" Exec if pgrep urxvtd; then urxvtc -e sh -c "~/cloveros_settings.sh && read"; else urxvtd -o -f && urxvtc -e sh -c "~/cloveros_settings.sh && read"; fi
 + "screenshot" Exec scrot -e nomacs\ \$f
 + "settings" Popup SettingsList
 + "shutdown" Popup ShutdownList

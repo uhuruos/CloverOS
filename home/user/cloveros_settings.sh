@@ -82,7 +82,7 @@ case "$choice" in
 		if [ -d /var/db/pkg/dev-perl/Locale-gettext*/ ]; then
 			sudo emerge -C dev-perl/Locale-gettext
 			sudo emerge -v @preserved-rebuild
-			sudo emerge -1 app-crypt/rhash dev-python/m2crypto sys-apps/help2man dev-perl/libintl-perl dev-perl/Text-Unidecode dev-perl/XML-Parser dev-perl/Unicode-EastAsianWidth virtual/perl-CPAN-Meta virtual/perl-CPAN-Meta-YAML virtual/perl-Carp virtual/perl-Compress-Raw-Bzip2 virtual/perl-Compress-Raw-Zlib virtual/perl-Data-Dumper virtual/perl-Digest virtual/perl-Digest-MD5 virtual/perl-Digest-SHA virtual/perl-Encode virtual/perl-Exporter virtual/perl-ExtUtils-CBuilder virtual/perl-ExtUtils-Install virtual/perl-ExtUtils-MakeMaker virtual/perl-ExtUtils-Manifest virtual/perl-ExtUtils-ParseXS virtual/perl-File-Path virtual/perl-File-Spec virtual/perl-File-Temp virtual/perl-Getopt-Long virtual/perl-IO virtual/perl-IO-Compress virtual/perl-IPC-Cmd virtual/perl-JSON-PP virtual/perl-MIME-Base64 virtual/perl-Math-Complex virtual/perl-Memoize virtual/perl-Module-Metadata virtual/perl-Parse-CPAN-Meta virtual/perl-Perl-OSType virtual/perl-Pod-Parser virtual/perl-Scalar-List-Utils virtual/perl-Storable virtual/perl-Sys-Syslog virtual/perl-Term-ANSIColor virtual/perl-Term-ReadLine virtual/perl-Test-Harness virtual/perl-Text-Balanced virtual/perl-Text-ParseWords virtual/perl-Text-Tabs+Wrap virtual/perl-Time-HiRes virtual/perl-Time-Local virtual/perl-Time-Piece virtual/perl-XSLoader virtual/perl-if virtual/perl-libnet virtual/perl-parent virtual/perl-podlators virtual/perl-version dev-perl/TimeDate dev-perl/MailTools dev-perl/Digest-HMAC dev-perl/Module-Build dev-perl/Authen-SASL dev-perl/Error dev-perl/Net-SSLeay
+			sudo emerge -1v app-crypt/rhash dev-python/m2crypto sys-apps/help2man dev-perl/libintl-perl dev-perl/Text-Unidecode dev-perl/XML-Parser dev-perl/Unicode-EastAsianWidth virtual/perl-CPAN-Meta virtual/perl-CPAN-Meta-YAML virtual/perl-Carp virtual/perl-Compress-Raw-Bzip2 virtual/perl-Compress-Raw-Zlib virtual/perl-Data-Dumper virtual/perl-Digest virtual/perl-Digest-MD5 virtual/perl-Digest-SHA virtual/perl-Encode virtual/perl-Exporter virtual/perl-ExtUtils-CBuilder virtual/perl-ExtUtils-Install virtual/perl-ExtUtils-MakeMaker virtual/perl-ExtUtils-Manifest virtual/perl-ExtUtils-ParseXS virtual/perl-File-Path virtual/perl-File-Spec virtual/perl-File-Temp virtual/perl-Getopt-Long virtual/perl-IO virtual/perl-IO-Compress virtual/perl-IPC-Cmd virtual/perl-JSON-PP virtual/perl-MIME-Base64 virtual/perl-Math-Complex virtual/perl-Memoize virtual/perl-Module-Metadata virtual/perl-Parse-CPAN-Meta virtual/perl-Perl-OSType virtual/perl-Pod-Parser virtual/perl-Scalar-List-Utils virtual/perl-Storable virtual/perl-Sys-Syslog virtual/perl-Term-ANSIColor virtual/perl-Term-ReadLine virtual/perl-Test-Harness virtual/perl-Text-Balanced virtual/perl-Text-ParseWords virtual/perl-Text-Tabs+Wrap virtual/perl-Time-HiRes virtual/perl-Time-Local virtual/perl-Time-Piece virtual/perl-XSLoader virtual/perl-if virtual/perl-libnet virtual/perl-parent virtual/perl-podlators virtual/perl-version dev-perl/TimeDate dev-perl/MailTools dev-perl/Digest-HMAC dev-perl/Module-Build dev-perl/Authen-SASL dev-perl/Error dev-perl/Net-SSLeay
 			sudo emerge --depclean
 		fi
 		if [[ $(eselect profile show | tail -n1) == "  default/linux/amd64/17.0/hardened" ]]; then
@@ -136,7 +136,7 @@ case "$choice" in
 			if sudo gpg --verify kernel.tar.lzma.asc kernel.tar.lzma; then
 				sudo tar -C / -xf kernel.tar.lzma
 				sudo grub-mkconfig -o /boot/grub/grub.cfg
-				sudo emerge @module-rebuild
+				sudo emerge -v @module-rebuild
 				sudo depmod $kernelversion-gentoo
 				echo -e "\nKernel upgraded. (/boot/, /lib/modules/)"
 			else
@@ -275,7 +275,7 @@ case "$choice" in
 			if sudo gpg --verify kernel-libre.tar.lzma.asc kernel-libre.tar.lzma; then
 				sudo tar -C / -xf kernel-libre.tar.lzma
 				sudo grub-mkconfig -o /boot/grub/grub.cfg
-				sudo emerge @module-rebuild
+				sudo emerge -v @module-rebuild
 				sudo depmod $kernelversion-gentoo-gnu
 				echo -e "\nKernel upgraded. (/boot/, /lib/modules/)"
 			else
@@ -287,7 +287,7 @@ case "$choice" in
 
 	e)
 		if [ ! -d /var/db/pkg/x11-apps/setxkbmap-*/ ]; then
-			sudo emerge setxkbmap
+			sudo emerge -v setxkbmap
 		fi
 		echo -e "Available keyboard maps: $(ls /usr/share/X11/xkb/symbols | tr "\n" " ") \n"
 		read -erp "Select a keyboard map: " keyboardmap
@@ -304,15 +304,15 @@ case "$choice" in
 
 	t)
 		if [ ! -d /var/db/pkg/x11-apps/xinput-*/ ]; then
-			sudo emerge setxkbmap
+			sudo emerge -v xinput
 		fi
-		xinput set-prop "SynPS/2 Synaptics TouchPad" "libinput Tapping Enabled" 1
+		xinput set-prop "SynPS/2 Synaptics TouchPad" "libinput Tapping Enabled" 1 &> /dev/null
 		echo "Tap to click enabled. (xinput set-prop \"SynPS/2 Synaptics TouchPad\" \"libinput Tapping Enabled\" 0)"
 		;;
 
 	d)
 		if [ ! -d /var/db/pkg/x11-apps/xinput-*/ ]; then
-			sudo emerge setxkbmap
+			sudo emerge -v xinput
 		fi
 		xinput list --name-only | sed "/Virtual core pointer/,/Virtual core keyboard/"\!"d;//d" | xargs -I{} xinput set-prop pointer:{} "libinput Accel Profile Enabled" 0 1 &> /dev/null
 		echo -e "\nMouse acceleration disabled. (xinput set-prop \"Your Device\" \"libinput Accel Profile Enabled\" 0 1)"
@@ -342,7 +342,7 @@ case "$choice" in
 			fi
 			sudo binutils-config --linker ld.gold
 			if [ ! -d /var/db/pkg/app-eselect/eselect-repository-*/ ]; then
-				sudo emerge eselect-repository
+				sudo emerge -v eselect-repository
 				sudo mkdir /etc/portage/repos.conf
 			fi
 			sudo eselect repository remove {1..500} &> /dev/null && sudo rm -R /var/db/repos/* && sudo rm /etc/portage/repos.conf/*
@@ -374,7 +374,7 @@ case "$choice" in
 		echo "sudo /etc/init.d/bluealsa start"
 		echo "blueman-manager &"
 		sleep 2
-		sudo emerge blueman bluez-alsa
+		sudo emerge -v blueman bluez-alsa
 		sudo usermod -aG plugdev $USER
 		sudo /etc/init.d/bluetooth start
 		sudo /etc/init.d/bluealsa start
@@ -390,7 +390,7 @@ case "$choice" in
 		echo "sudo useradd -a $USER vboxusers"
 		echo "sudo modprobe -a vboxdrv vboxnetadp vboxnetflt"
 		sleep 2
-		sudo emerge virtualbox
+		sudo emerge -v virtualbox
 		sudo depmod
 		./cloveros_settings.sh 4
 		sudo useradd -g $USER vboxusers
@@ -406,7 +406,7 @@ case "$choice" in
 		echo "sudo sh -c 'echo \"static domain_name_servers=127.0.0.1\" >> /etc/dhcpcd.conf'"
 		echo "sudo /etc/init.d/dhcpcd restart"
 		sleep 2
-		sudo emerge net-dns/dnscrypt-proxy
+		sudo emerge -v net-dns/dnscrypt-proxy
 		sudo /etc/init.d/dnscrypt-proxy start
 		sudo rc-config add dnscrypt-proxy
 		sudo sh -c 'echo "static domain_name_servers=127.0.0.1" >> /etc/dhcpcd.conf'
@@ -425,11 +425,11 @@ case "$choice" in
 		echo "sudo eselect opencl set nvidia"
 		echo "sudo sh -c 'echo -e \"blacklist nouveau\nblacklist vga16fb\nblacklist rivafb\nblacklist nvidiafb\nblacklist rivatv\" >> /etc/modprobe.d/blacklist.conf'"
 		sleep 2
-		sudo EMERGE_DEFAULT_OPTS="" emerge \=gentoo-sources-$(uname -r | sed 's/-.*//')
+		sudo EMERGE_DEFAULT_OPTS="" emerge -v \=gentoo-sources-$(uname -r | sed 's/-.*//')
 		sudo eselect kernel set linux-$(uname -r)
 		sudo wget https://raw.githubusercontent.com/damentz/liquorix-package/$(uname -r | sed 's/\.[^.]*$//')/linux-liquorix/debian/config/kernelarch-x86/config-arch-64 -O /usr/src/linux/.config
 		sudo sed -i "s/CONFIG_CRYPTO_CRC32C=m/CONFIG_CRYPTO_CRC32C=y/; s/CONFIG_FW_LOADER_USER_HELPER=y/CONFIG_FW_LOADER_USER_HELPER=n/; s/CONFIG_I2C_NVIDIA_GPU=/#CONFIG_I2C_NVIDIA_GPU=/" /usr/src/linux/.config
-		sudo emerge nvidia-drivers bumblebee
+		sudo emerge -v nvidia-drivers bumblebee
 		sudo depmod
 		sudo eselect opengl set nvidia
 		sudo eselect opencl set nvidia
