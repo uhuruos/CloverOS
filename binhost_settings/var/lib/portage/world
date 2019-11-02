@@ -841,11 +841,13 @@ media-sound/musique
 media-sound/ncmpc
 media-sound/ncmpcpp
 media-sound/padthv1
+media-sound/patchage
 media-sound/pianobar
 media-sound/protux
 media-sound/pure-data
 media-sound/pympd
 media-sound/qastools
+media-sound/qjackctl
 media-sound/qmmp
 media-sound/qsynth
 media-sound/qtagger

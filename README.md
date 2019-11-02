@@ -177,7 +177,7 @@ Run `./cloveros_settings.sh c` to get the CloverOS Portage configuration.
 * [Starting X automatically after login](#starting-x-automatically-after-login)
 * [I want to bypass the mixer to play >48KHz audio / DSD](#i-want-to-bypass-the-mixer-to-play-48khz-audio-dsd)
 * [Wayland howto](#wayland-howto)
-* [Things preventing CloverOS Libre from being EFF-approved:](#things-preventing-cloveros-libre-from-being-eff-approved)
+* [Things preventing CloverOS Libre from being EFF-approved](#things-preventing-cloveros-libre-from-being-eff-approved)
 * [Does CloverOS have binaries?](#does-cloveros-have-binaries)
 * [How often is this updated?](#how-often-is-this-updated)
 * [Does everything build with CFLAGS="-Ofast -mssse3 -mfpmath=both -pipe -funroll-loops -flto=8 -fgraphite-identity -floop-nest-optimize -malign-data=cacheline -mtls-dialect=gnu2 -Wl,--hash-style=gnu"](#does-everything-build-with-cflags-ofast-mssse3-mfpmathboth-pipe-funroll-loops-flto8-fgraphite-identity-floop-nest-optimize-malign-datacacheline-mtls-dialectgnu2-wl-hash-stylegnu)
@@ -455,7 +455,7 @@ sudo /etc/init.d/dhcpcd restart
 `sudo find /boot/ /lib/modules/ -mindepth 1 -maxdepth 1 -name \*gentoo\* ! -name \*$(uname -r) -exec rm -R {} \;`
 
 ### Sound in OBS / Open Broadcaster Software using ALSA
-Run `sudo modprobe snd_aloop` and edit the following file, replacing `device 0` and `hw:0,0` with your sound device:
+Run `sudo modprobe snd_aloop` and edit the following file, replacing "device 0" and "hw:0,0" with your sound device:
 
 `~/.asoundrc`
 
@@ -525,6 +525,52 @@ Run `sudo modprobe snd_aloop` and edit the following file, replacing `device 0` 
 Start playing something, then run `obs`, then add Audio Capture Device (ALSA) to your Sources.
 
 ![OBS with ALSA](https://i.imgur.com/tc1pMRX.png)
+
+### Sound in OBS / Open Broadcaster Software using JACK
+First get jack, alsa-plugins and qjackctl with `sudo emerge jack-audio-connection-kit alsa-plugins qjackctl` and add the following line to file, replacing "user" with your Linux username:
+
+`/etc/limits`
+
+```
+user N524288 O99 M5300658
+```
+
+This gives jackd the rtprio/memlock it needs for realtime scheduling and wine the max open files it needs for esync.
+
+Run jackd with `jackd -d alsa -d hw:0 &`, replace "hw:0" with your output audio device (speakers/headphones) and edit the following file:
+
+`~/.asoundrc`
+
+```
+pcm.!default {
+    type plug
+    slave { pcm "rawjack" }
+}
+
+pcm.rawjack {
+    type jack
+    playback_ports {
+        0 system:playback_1
+        1 system:playback_2
+    }
+    capture_ports {
+        0 system:capture_1
+        1 system:capture_2
+    }
+}
+
+pcm.jack {
+    type plug
+    slave { pcm "rawjack" }
+    hint {
+	description "JACK Audio Connection Kit"
+    }
+}
+```
+
+Run `obs` and add JACK Input Client to your Sources. Then run `qjackctl` and click Start and then Connect. Drag and drop your program's audio channels to the input client (OBS).
+
+![OBS with JACK](https://i.imgur.com/snQ1PkY.png)
 
 ### Bluetooth audio using ALSA
 ```
@@ -612,7 +658,7 @@ pcm.!default {
 }
 ```
 
-Replace card 0 with your device number
+Replace "card 0" with your device number
 
 ### Wayland howto
 ```
@@ -624,7 +670,7 @@ modules=xwayland.so' >> ~/.config/weston.ini
 XDG_RUNTIME_DIR=. weston-launch
 ```
 
-### Things preventing CloverOS Libre from being EFF-approved:
+### Things preventing CloverOS Libre from being EFF-approved
 - /usr/portage/ needs to be filtered to not include the .ebuilds of proprietary software, also requiring a separate Portage mirror
 
 - It needs a cloveros.ga mirror that doesn't host the non-free software packages
