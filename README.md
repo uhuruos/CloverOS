@@ -166,6 +166,7 @@ Run `./cloveros_settings.sh c` to get the CloverOS Portage configuration.
 * [Dnscrypt-proxy howto](#dnscrypt-proxy-howto)
 * [Clean outdated kernels](#clean-outdated-kernels)
 * [Sound in OBS (Open Broadcaster Software) using ALSA](#sound-in-obs-open-broadcaster-software-using-alsa)
+* [Sound in OBS (Open Broadcaster Software) using JACK](#sound-in-obs-open-broadcaster-software-using-jack)
 * [Bluetooth audio using ALSA](#bluetooth-audio-using-alsa)
 * [Install Quake 3](#install-quake-3)
 * [What is Gentoo?](#what-is-gentoo)
