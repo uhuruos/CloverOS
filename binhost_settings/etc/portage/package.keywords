@@ -28,6 +28,7 @@ x11-themes/sddm-gentoo-black-theme ** # fixes build
 x11-themes/terminology-themes ** # fixes build
 net-misc/freerdp ** # fixes build
 media-video/openshot # fixes build
+media-gfx/librecad # fixes build
 media-libs/libopenshot # openshot
 media-libs/libopenshot-audio # openshot
 app-emulation/xen # fixes build
@@ -194,13 +195,15 @@ net-wireless/sdrplay
 net-wireless/rtl-sdr
 media-sound/pure-data
 media-sound/bitwig-studio
-media-sound/mididings
+media-sound/mididings **
 media-sound/setbfree
 media-sound/serialosc
 media-sound/synthv1
 media-sound/padthv1
 media-sound/drumkv1
 media-sound/samplv1
+media-sound/sequencer64 **
+media-sound/carla **
 x11-themes/wm-icons
 media-sound/mumble
 net-vpn/logmein-hamachi
