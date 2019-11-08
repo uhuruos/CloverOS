@@ -111,15 +111,15 @@ AddToMenu   FvwmWindowOpsMenu "Window Operations" Title
 + "Layer -1"  Pick (CirculateHit) Layer -1
 + "StaysOnBottom"  Pick (CirculateHit) Layer 0 2
 
-DestroyMenu ProgramList
-AddToMenu ProgramList "Applications" Title
+DestroyMenu ProgramsList
+AddToMenu ProgramsList "Applications" Title
 + DynamicPopUpAction Function UsrShareApplications
 
 DestroyFunc UsrShareApplications
 AddToFunc UsrShareApplications
-+ I DestroyMenu recreate ProgramList
-+ I AddToMenu ProgramList "Program List" Title
-+ I PipeRead 'for i in $(ls -1 /usr/share/applications/ | sed "s/.desktop//g; /mimeinfo.cache/d"); do echo "+ $i Exec $i"; done'
++ I DestroyMenu recreate ProgramsList
++ I AddToMenu ProgramsList "Programs List" Title
++ I PipeRead `for i in $(ls -1 /usr/share/applications/ | sed "s/.desktop//g; /mimeinfo.cache/d"); do echo "+ $i Exec \$(grep -m1 ^Exec /usr/share/applications/$i.desktop | sed \"s/^Exec=//; s/%.//; s/^\\\"//g; s/\\\" *$//g\")"; done`
 
 DestroyMenu ShutdownList
 AddToMenu ShutdownList "Shutdown" Title
@@ -140,7 +140,7 @@ AddToMenu SettingsList "Settings" Title
 
 DestroyMenu MenuFvwmRoot
 AddToMenu MenuFvwmRoot Applications Title
-+ "programs" Popup ProgramList
++ "programs" Popup ProgramsList
 + "urxvt" Exec if pgrep urxvtd; then urxvtc -e zsh; else urxvtd -o -f && urxvtc -e zsh; fi
 + "spacefm" Exec spacefm
 + "wifi" Exec sudo rc-service wpa_supplicant start & wpa_gui
