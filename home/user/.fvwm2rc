@@ -135,7 +135,7 @@ DestroyMenu ToolsList
 AddToMenu ToolsList "Tools" Title
 + "settings.sh" Exec if pgrep urxvtd; then urxvtc -e sh -c "~/cloveros_settings.sh && read"; else urxvtd -o -f && urxvtc -e sh -c "~/cloveros_settings.sh && read"; fi
 + "top" Exec urxvtc -e top -o %MEM
-+ "screenshot" Exec urxvtc -e scrot -e "(meh \$f || sxiv \$f || feh \$f || nomacs \$f) &> /dev/null & read -erp \"Upload to 0x0.st? \" -n1 yn && [ \\\$yn == y ] && curl -F file=@\$f https://0x0.st; read"
++ "screenshot" Exec urxvtc -e scrot -e "(meh \$f || sxiv \$f || feh \$f || nomacs \$f) &> /dev/null & read -erp \"Upload to 0x0.st? \" -n1 yn && [ \\\$yn == y ] && curl -F file=@\$f https://0x0.st & read"
 + "mouse accel disable" Exec xinput list --name-only | sed "/Virtual core pointer/,/Virtual core keyboard/"\!"d;//d" | xargs -I{} xinput set-prop pointer:{} "libinput Accel Profile Enabled" 0 1 &> /dev/null
 + "mouse accel enable" Exec xinput list --name-only | sed "/Virtual core pointer/,/Virtual core keyboard/"\!"d;//d" | xargs -I{} xinput set-prop pointer:{} "libinput Accel Profile Enabled" 1 0 &> /dev/null
 #+ "temps" Exec urxvtc -e sh -c "for tempdevice in /sys/class/hwmon/*; do [ -f $tempdevice/temp1_input ] && (temp=$(<$tempdevice/temp1_input); echo "$(<$tempdevice/name) ${temp:0:-3}C"); done; read"
