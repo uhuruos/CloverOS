@@ -119,7 +119,7 @@ DestroyFunc UsrShareApplications
 AddToFunc UsrShareApplications
 + I DestroyMenu recreate ProgramsList
 + I AddToMenu ProgramsList "Programs List" Title
-+ I PipeRead `for i in $(ls -1 /usr/share/applications/ | sed "s/.desktop//g; /mimeinfo.cache/d"); do echo "+ $i Exec \$(grep -m1 ^Exec /usr/share/applications/$i.desktop | sed \"s/^Exec=//; s/%.//; s/^\\\"//g; s/\\\" *$//g\")"; done`
++ I PipeRead `for i in $(ls -1 /usr/share/applications/	| sed "s/.desktop//g; /mimeinfo.cache/d"); do echo '+ '$i' Exec	$(grep -m1 ^Exec /usr/share/applications/'$i'.desktop | sed "s/^Exec=//; s/%.//; s/^\"//g; s/\" *$//g")'; done`
 
 DestroyMenu ShutdownList
 AddToMenu ShutdownList "Shutdown" Title
