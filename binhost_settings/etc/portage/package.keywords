@@ -41,6 +41,7 @@ games-emulation/ppsspp ** # old
 dev-python/xcffib # qtile
 dev-python/cairocffi # qtile
 =dev-libs/libuv-1.33.1 # neovim
+=x11-libs/libdrm-2.4.100 # abiword
 =dev-libs/nss-3.47 # ungoogled-chromium
 dev-libs/ell # iwd
 

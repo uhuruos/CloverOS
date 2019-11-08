@@ -131,12 +131,14 @@ AddToMenu ShutdownList "Shutdown" Title
 + "reboot" Exec sudo reboot
 + "poweroff" Exec sudo poweroff
 
-DestroyMenu SettingsList
-AddToMenu SettingsList "Settings" Title
+DestroyMenu ToolsList
+AddToMenu ToolsList "Tools" Title
 + "settings.sh" Exec if pgrep urxvtd; then urxvtc -e sh -c "~/cloveros_settings.sh && read"; else urxvtd -o -f && urxvtc -e sh -c "~/cloveros_settings.sh && read"; fi
-+ "screenshot" Exec scrot -e nomacs\ \$f
++ "top" Exec if pgrep urxvtd; then urxvtc -e top -o %MEM; else urxvtd -o -f && urxvtc -e top -o %MEM; fi
++ "screenshot" Exec urxvtc -e scrot -e "(meh \$f || sxiv \$f || feh \$f || nomacs \$f) &> /dev/null && read -erp \"Upload to 0x0.st? \" -n1 yn && [ \\\$yn == y ] && curl -F file=@\$f https://0x0.st"
 + "mouse accel disable" Exec xinput list --name-only | sed "/Virtual core pointer/,/Virtual core keyboard/"\!"d;//d" | xargs -I{} xinput set-prop pointer:{} "libinput Accel Profile Enabled" 0 1 &> /dev/null;
 + "mouse accel enable" Exec xinput list --name-only | sed "/Virtual core pointer/,/Virtual core keyboard/"\!"d;//d" | xargs -I{} xinput set-prop pointer:{} "libinput Accel Profile Enabled" 1 0 &> /dev/null;
++ "temps" Exec urxvtc -e sh -c "for tempdevice in /sys/class/hwmon/*; do [ -f $tempdevice/temp1_input ] && (temp=$(<$tempdevice/temp1_input); echo "$(<$tempdevice/name) ${temp:0:-3}C"); done;"
 
 DestroyMenu MenuFvwmRoot
 AddToMenu MenuFvwmRoot Applications Title
@@ -159,9 +161,8 @@ AddToMenu MenuFvwmRoot Applications Title
 + "wallpaper" Exec nitrogen
 + "resolution" Exec arandr
 + "volume" Exec qasmixer
-+ "top" Exec if pgrep urxvtd; then urxvtc -e top -o %MEM; else urxvtd -o -f && urxvtc -e top -o %MEM; fi
 + "gparted" Exec sudo gparted
-+ "settings" Popup SettingsList
++ "tools" Popup ToolsList
 + "shutdown" Popup ShutdownList
 
 Colorset 3 bg #ffffff, fg #000000, hi #000000, sh #000000
@@ -179,4 +180,4 @@ MenuStyle Applications !TitleWarp
 MenuStyle Applications VerticalItemSpacing 2 2
 MenuStyle Applications PopupOffset 0 100
 MenuStyle Applications PopupImmediately
-ChangeMenuStyle Applications MenuFvwmRoot ProgramList SettingsList ShutdownList
+ChangeMenuStyle Applications MenuFvwmRoot ProgramsList ToolsList ShutdownList
