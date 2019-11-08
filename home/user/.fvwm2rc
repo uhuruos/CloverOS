@@ -134,6 +134,7 @@ AddToMenu ShutdownList "Shutdown" Title
 DestroyMenu SettingsList
 AddToMenu SettingsList "Settings" Title
 + "settings.sh" Exec if pgrep urxvtd; then urxvtc -e sh -c "~/cloveros_settings.sh && read"; else urxvtd -o -f && urxvtc -e sh -c "~/cloveros_settings.sh && read"; fi
++ "screenshot" Exec scrot -e nomacs\ \$f
 + "mouse accel disable" Exec xinput list --name-only | sed "/Virtual core pointer/,/Virtual core keyboard/"\!"d;//d" | xargs -I{} xinput set-prop pointer:{} "libinput Accel Profile Enabled" 0 1 &> /dev/null;
 + "mouse accel enable" Exec xinput list --name-only | sed "/Virtual core pointer/,/Virtual core keyboard/"\!"d;//d" | xargs -I{} xinput set-prop pointer:{} "libinput Accel Profile Enabled" 1 0 &> /dev/null;
 
@@ -158,9 +159,8 @@ AddToMenu MenuFvwmRoot Applications Title
 + "wallpaper" Exec nitrogen
 + "resolution" Exec arandr
 + "volume" Exec qasmixer
-+ "gparted" Exec sudo gparted
 + "top" Exec if pgrep urxvtd; then urxvtc -e top -o %MEM; else urxvtd -o -f && urxvtc -e top -o %MEM; fi
-+ "screenshot" Exec scrot -e nomacs\ \$f
++ "gparted" Exec sudo gparted
 + "settings" Popup SettingsList
 + "shutdown" Popup ShutdownList
 
