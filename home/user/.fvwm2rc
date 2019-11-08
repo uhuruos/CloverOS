@@ -133,12 +133,13 @@ AddToMenu ShutdownList "Shutdown" Title
 
 DestroyMenu SettingsList
 AddToMenu SettingsList "Settings" Title
++ "settings.sh" Exec if pgrep urxvtd; then urxvtc -e sh -c "~/cloveros_settings.sh && read"; else urxvtd -o -f && urxvtc -e sh -c "~/cloveros_settings.sh && read"; fi
 + "mouse accel disable" Exec xinput list --name-only | sed "/Virtual core pointer/,/Virtual core keyboard/"\!"d;//d" | xargs -I{} xinput set-prop pointer:{} "libinput Accel Profile Enabled" 0 1 &> /dev/null;
 + "mouse accel enable" Exec xinput list --name-only | sed "/Virtual core pointer/,/Virtual core keyboard/"\!"d;//d" | xargs -I{} xinput set-prop pointer:{} "libinput Accel Profile Enabled" 1 0 &> /dev/null;
 
 DestroyMenu MenuFvwmRoot
 AddToMenu MenuFvwmRoot Applications Title
-+ "program list" Popup ProgramList
++ "programs" Popup ProgramList
 + "urxvt" Exec if pgrep urxvtd; then urxvtc -e zsh; else urxvtd -o -f && urxvtc -e zsh; fi
 + "spacefm" Exec spacefm
 + "wifi" Exec sudo rc-service wpa_supplicant start & wpa_gui
@@ -153,13 +154,12 @@ AddToMenu MenuFvwmRoot Applications Title
 + "weechat" Exec if pgrep urxvtd; then urxvtc -e weechat; else urxvtd -o -f && urxvtc -e weechat; fi
 + "desktop" Exec spacefm --desktop
 + "stats.sh" Exec if pgrep urxvtd; then urxvtc -geometry 1000x1+0+0 -fn 6x13 -letsp 0 -sl 0 -e ~/stats.sh; else urxvtd -o -f && urxvtc -geometry 1000x1+0+0 -fn 6x13 -letsp 0 -sl 0 -e ~/stats.sh; fi
-+ "comptonvsync" Exec compton --backend glx --vsync opengl-swc --glx-no-stencil --paint-on-overlay --unredir-if-possible # --glx-swap-method buffer-age --glx-no-rebind-pixmap
++ "vsync" Exec compton --backend glx --vsync opengl-swc --glx-no-stencil --paint-on-overlay --unredir-if-possible # --glx-swap-method buffer-age --glx-no-rebind-pixmap
 + "wallpaper" Exec nitrogen
 + "resolution" Exec arandr
 + "volume" Exec qasmixer
 + "gparted" Exec sudo gparted
 + "top" Exec if pgrep urxvtd; then urxvtc -e top -o %MEM; else urxvtd -o -f && urxvtc -e top -o %MEM; fi
-+ "settings.sh" Exec if pgrep urxvtd; then urxvtc -e sh -c "~/cloveros_settings.sh && read"; else urxvtd -o -f && urxvtc -e sh -c "~/cloveros_settings.sh && read"; fi
 + "screenshot" Exec scrot -e nomacs\ \$f
 + "settings" Popup SettingsList
 + "shutdown" Popup ShutdownList
@@ -179,4 +179,4 @@ MenuStyle Applications !TitleWarp
 MenuStyle Applications VerticalItemSpacing 2 2
 MenuStyle Applications PopupOffset 0 100
 MenuStyle Applications PopupImmediately
-ChangeMenuStyle Applications MenuFvwmRoot ProgramList ShutdownList
+ChangeMenuStyle Applications MenuFvwmRoot ProgramList SettingsList ShutdownList
