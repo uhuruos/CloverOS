@@ -133,7 +133,8 @@ AddToMenu ShutdownList "Shutdown" Title
 
 DestroyMenu SettingsList
 AddToMenu SettingsList "Settings" Title
-+ "kill X" Exec pkill X
++ "mouse accel disable" Exec xinput list --name-only | sed "/Virtual core pointer/,/Virtual core keyboard/"\!"d;//d" | xargs -I{} xinput set-prop pointer:{} "libinput Accel Profile Enabled" 0 1 &> /dev/null;
++ "mouse accel enable" Exec xinput list --name-only | sed "/Virtual core pointer/,/Virtual core keyboard/"\!"d;//d" | xargs -I{} xinput set-prop pointer:{} "libinput Accel Profile Enabled" 1 0 &> /dev/null;
 
 DestroyMenu MenuFvwmRoot
 AddToMenu MenuFvwmRoot Applications Title
