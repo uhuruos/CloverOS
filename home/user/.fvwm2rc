@@ -138,9 +138,9 @@ AddToMenu ToolsList "Tools" Title
 + "screenshot" Exec urxvtc -e scrot -e "(meh \$f || sxiv \$f || feh \$f || nomacs \$f) &> /dev/null && read -erp \"Upload to 0x0.st? \" -n1 yn && [ \\\$yn == y ] && curl -F file=@\$f https://0x0.st"
 + "mouse accel disable" Exec xinput list --name-only | sed "/Virtual core pointer/,/Virtual core keyboard/"\!"d;//d" | xargs -I{} xinput set-prop pointer:{} "libinput Accel Profile Enabled" 0 1 &> /dev/null
 + "mouse accel enable" Exec xinput list --name-only | sed "/Virtual core pointer/,/Virtual core keyboard/"\!"d;//d" | xargs -I{} xinput set-prop pointer:{} "libinput Accel Profile Enabled" 1 0 &> /dev/null
-+ "temps" Exec urxvtc -e sh -c "for tempdevice in /sys/class/hwmon/*; do [ -f $tempdevice/temp1_input ] && (temp=$(<$tempdevice/temp1_input); echo "$(<$tempdevice/name) ${temp:0:-3}C"); done; read"
-+ "cputemp" Exec urxvtc -e sh -c "for cputempdevice in /sys/class/hwmon/*; do cputempname=$(<$cputempdevice/name); [[ $cputempname == coretemp || $cputempname == it87* || $cputempname == nct6775 || $cputempname == k8temp || $cputempname == k9temp ]] && break; done; temp=$(<$cputempdevice/temp1_input); echo ${temp:0:-3}C; read"
-+ "freeram" Exec lsmod | sed "s/ .*//" | xargs -I{} sudo rmmod {}; sudo /etc/init.d/udev restart; sudo sysctl vm.drop_caches=3
+#+ "temps" Exec urxvtc -e sh -c "for tempdevice in /sys/class/hwmon/*; do [ -f $tempdevice/temp1_input ] && (temp=$(<$tempdevice/temp1_input); echo "$(<$tempdevice/name) ${temp:0:-3}C"); done; read"
+#+ "cputemp" Exec urxvtc -e sh -c "for cputempdevice in /sys/class/hwmon/*; do cputempname=$(<$cputempdevice/name); [[ $cputempname == coretemp || $cputempname == it87* || $cputempname == nct6775 || $cputempname == k8temp || $cputempname == k9temp ]] && break; done; temp=$(<$cputempdevice/temp1_input); echo ${temp:0:-3}C; read"
+#+ "freeram" Exec lsmod | sed "s/ .*//" | xargs -I{} sudo rmmod {}; sudo /etc/init.d/udev restart; sudo sysctl vm.drop_caches=3
 + "passgen" Exec urxvtc -e sh -c "echo -n Generating password...\ ; head -c 100 /dev/random | tr -cd "[:print:]"; echo; read"
 + "flipcoin" Exec urxvtc -e sh -c "(($(od -An -N1 /dev/random) % 2)) && echo heads || echo tails; read"
 + "settime" Exec sudo date +%s -s @"$(curl -s http://www.4webhelp.net/us/timestamp.php | grep -oP "(?<=p\" value=\").*(?=\" s)")"; date;
