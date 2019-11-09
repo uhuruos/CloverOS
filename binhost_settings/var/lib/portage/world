@@ -1065,6 +1065,9 @@ net-print/hplip
 net-print/hplip-plugin
 net-print/pnm2ppa
 net-print/splix
+net-proxy/sshuttle
+net-proxy/torsocks
+net-proxy/tsocks
 net-vpn/i2p
 net-vpn/i2pd
 net-vpn/logmein-hamachi
