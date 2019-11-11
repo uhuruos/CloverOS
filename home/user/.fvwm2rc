@@ -111,14 +111,14 @@ AddToMenu   FvwmWindowOpsMenu "Window Operations" Title
 + "Layer -1"  Pick (CirculateHit) Layer -1
 + "StaysOnBottom"  Pick (CirculateHit) Layer 0 2
 
-DestroyMenu ProgramsList
-AddToMenu ProgramsList "Applications" Title
+DestroyMenu ProgramList
+AddToMenu ProgramList "Applications" Title
 + DynamicPopUpAction Function UsrShareApplications
 
 DestroyFunc UsrShareApplications
 AddToFunc UsrShareApplications
-+ I DestroyMenu recreate ProgramsList
-+ I AddToMenu ProgramsList "Programs" Title
++ I DestroyMenu recreate ProgramList
++ I AddToMenu ProgramList "Program List" Title
 + I PipeRead `for i in $(ls -1 /usr/share/applications/	| sed "s/.desktop//g; /mimeinfo.cache/d"); do echo '+ '$i' Exec	$(grep -m1 ^Exec /usr/share/applications/'$i'.desktop | sed "s/^Exec=//; s/%.//; s/^\"//g; s/\" *$//g")'; done`
 
 DestroyMenu ShutdownList
@@ -147,7 +147,7 @@ AddToMenu ToolsList "Tools" Title
 
 DestroyMenu MenuFvwmRoot
 AddToMenu MenuFvwmRoot Applications Title
-+ "programs" Popup ProgramsList
++ "program list" Popup ProgramList
 + "urxvt" Exec if pgrep urxvtd; then urxvtc -e zsh; else urxvtd -o -f && urxvtc -e zsh; fi
 + "spacefm" Exec spacefm
 + "wifi" Exec sudo rc-service wpa_supplicant start & wpa_gui
@@ -185,4 +185,4 @@ MenuStyle Applications !TitleWarp
 MenuStyle Applications VerticalItemSpacing 2 2
 MenuStyle Applications PopupOffset 0 100
 MenuStyle Applications PopupImmediately
-ChangeMenuStyle Applications MenuFvwmRoot ProgramsList ToolsList ShutdownList
+ChangeMenuStyle Applications MenuFvwmRoot ProgramList ToolsList ShutdownList
