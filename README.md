@@ -523,7 +523,7 @@ Run `sudo modprobe snd_aloop` and edit the following file, replacing "device 0" 
     }
 ```
 
-Start playing something, then run `obs`, then add Audio Capture Device (ALSA) to your Sources.
+Start playing something, then run `obs`, then add Audio Capture Device (ALSA) to your Sources. You can alternatively use ffmpeg to record using `-f alsa -i hw:Loopback,1,0` or `-f alsa -i looprec`.
 
 ![OBS with ALSA](https://i.imgur.com/tc1pMRX.png)
 
