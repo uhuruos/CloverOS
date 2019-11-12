@@ -456,7 +456,7 @@ sudo /etc/init.d/dhcpcd restart
 `sudo find /boot/ /lib/modules/ -mindepth 1 -maxdepth 1 -name \*gentoo\* ! -name \*$(uname -r) -exec rm -R {} \;`
 
 ### Sound in OBS / Open Broadcaster Software using ALSA
-Run `sudo modprobe snd_aloop` and edit the following file, replacing "device 0" and "hw:0,0" with your sound device:
+Run `sudo modprobe snd_aloop` and edit the following file, replacing "hw:0,0" with your sound device:
 
 `~/.asoundrc`
 
@@ -470,8 +470,8 @@ Run `sudo modprobe snd_aloop` and edit the following file, replacing "device 0" 
     pcm.looprec {
         type hw
         card "Loopback"
-        device 0
-        subdevice 1
+        device 1
+        subdevice 0
     }
 
     pcm.LoopAndReal {
