@@ -471,7 +471,7 @@ Run `sudo modprobe snd_aloop` and edit the following file, replacing "device 0" 
         type hw
         card "Loopback"
         device 0
-        subdevice 0
+        subdevice 1
     }
 
     pcm.LoopAndReal {

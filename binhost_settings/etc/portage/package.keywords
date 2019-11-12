@@ -59,6 +59,7 @@ www-client/elinks
 media-gfx/argyllcms
 
 #keyworded, remove when stable exists
+x11-wm/vtwm
 media-sound/parlatype
 www-client/torbrowser-launcher
 games-board/pysolfc
