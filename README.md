@@ -569,7 +569,7 @@ pcm.jack {
 }
 ```
 
-Run `obs` and add JACK Input Client to your Sources. Then run `qjackctl` and click Start and then Connect. Drag and drop your program's audio channels to the input client (OBS).
+Run `obs` and add JACK Input Client to your Sources. Then run `qjackctl` and click Start and then Connect. Drag and drop your program's audio channels to the input client (OBS). You can alternatively use ffmpeg to record using `-f jack -i ffmpeginput`.
 
 ![OBS with JACK](https://i.imgur.com/snQ1PkY.png)
 

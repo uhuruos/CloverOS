@@ -1,3 +1,6 @@
+x11-wm/metacity
+x11-wm/gala **
+
 #preference
 sys-devel/gcc
 sys-kernel/gentoo-sources
