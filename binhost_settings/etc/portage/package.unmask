@@ -1,6 +1,3 @@
-x11-wm/gala::elementary
-x11-libs/granite::elementary
-
 games-emulation/pcsx2::cloveros # pcsx2-9999::gentoo with added "src_configure() { local mycmakeargs=( -DDISABLE_ADVANCE_SIMD=ON ) }"
 games-emulation/rpcs3::cloveros # rpcs3-0.0.7::menelkir with added "src_configure() { local mycmakeargs=( -DUSE_NATIVE_INSTRUCTIONS=OFF ) }" and turned into git
 app-emulation/winetricks::cloveros # winetricks-9999::gentoo with removed RDEPEND="x11-misc/xdg-utils"
@@ -11,6 +8,8 @@ www-client/firefox::cloveros ## firefox-70::pg_overlay with removed DEPEND=sys-a
 www-client/torbrowser::cloveros ## torbrowser::torbrowser with added mozconfig_annotate '' --disable-necko-wifi
 media-gfx/nip2::cloveros
 media-libs/vips::cloveros
+
+net-p2p/etherwall::reagentoo
 
 www-client/ungoogled-chromium::pf4public
 

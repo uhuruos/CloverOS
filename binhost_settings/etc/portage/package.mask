@@ -35,6 +35,7 @@
 */*::poly-c
 */*::raiagent
 */*::rasdark
+*/*::reagentoo
 */*::seden
 */*::sk-overlay
 */*::ssnb

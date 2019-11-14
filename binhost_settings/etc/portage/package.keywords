@@ -1,6 +1,3 @@
-x11-wm/metacity
-x11-wm/gala **
-
 #preference
 sys-devel/gcc
 sys-kernel/gentoo-sources
@@ -62,7 +59,8 @@ www-client/elinks
 media-gfx/argyllcms
 
 #keyworded, remove when stable exists
-x11-wm/vtwm
+net-p2p/etherwall
+net-p2p/go-ethereum
 media-sound/parlatype
 www-client/torbrowser-launcher
 games-board/pysolfc
@@ -108,15 +106,11 @@ media-gfx/openexr_viewers
 dev-util/android-ndk
 sys-fs/squashfuse
 sys-fs/archivemount
-x11-wm/stumpwm
-dev-lisp/alexandria # stumpwm
-dev-lisp/clx # stumpwm
 net-dialup/diald
 app-laptop/tpacpi-bat
 media-video/syncplay
 x11-misc/easystroke
 x11-misc/xplanetFX
-x11-wm/stumpwm-contrib
 net-im/profanity
 dev-libs/libmesode # profanity
 app-misc/mat2
@@ -550,6 +544,10 @@ dev-php/xdebug-handler  # composer
 dev-php/symfony-process  # composer
 dev-php/spdx-licenses  # composer
 dev-php/jsonlint # composer
+x11-wm/stumpwm
+dev-lisp/alexandria # stumpwm
+dev-lisp/clx # stumpwm
+x11-wm/stumpwm-contrib
 x11-wm/e16
 x11-themes/e16-themes # e16
 x11-plugins/e16-epplets
@@ -570,6 +568,8 @@ x11-wm/wmfs
 x11-wm/xoat **
 x11-wm/subtle
 x11-wm/wmii
+x11-wm/vtwm
+x11-wm/metacity
 media-fonts/twemoji-color-font
 media-fonts/emojione-color-font
 media-fonts/ibm-plex
