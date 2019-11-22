@@ -38,7 +38,7 @@ media-gfx/nomacs zip
 app-crypt/kbfs git
 media-libs/vips imagemagick fftw fits tiff matio
 media-gfx/nip2 fftw
-net-misc/connman nftables -wifi
+net-misc/connman nftables -iptables -wifi
 media-libs/fontconfig-infinality -nyx
 app-text/zathura-meta pdf cb djvu postscript
 media-sound/bluez-alsa hcitop ldac ofono
