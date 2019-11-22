@@ -115,7 +115,7 @@ urxvtc -geometry 1000x1+0+0 -fn 6x13 -letsp 0 -sl 0 -e ~/stats.sh
 xinput set-prop "SynPS/2 Synaptics TouchPad" "libinput Tapping Enabled" 1 & xinput list --name-only | sed "/Virtual core pointer/,/Virtual core keyboard/"\!"d;//d" | xargs -I{} xinput set-prop pointer:{} "libinput Accel Profile Enabled" 0 1 &> /dev/null &
 fi' >> /home/$username/.bash_profile
 
-rm -Rf /var/cache/binpkgs/* /var/cache/edb/binhost/* /etc/resolv.conf
+rm -Rf /var/cache/binpkgs/* /var/cache/edb/binhost/* /etc/resolv.conf /etc/portage/package.use/
 exit
 HEREDOC
 

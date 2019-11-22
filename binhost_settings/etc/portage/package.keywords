@@ -1,3 +1,8 @@
+=x11-terms/pangoterm-0.0_pre20171111 ~amd64
+# required by cool-retro-term (argument)
+=x11-terms/cool-retro-term-1.1.1 ~amd64
+
+
 #preference
 sys-devel/gcc
 sys-kernel/gentoo-sources
@@ -59,6 +64,7 @@ www-client/elinks
 media-gfx/argyllcms
 
 #keyworded, remove when stable exists
+app-emulation/dxvk
 net-p2p/etherwall
 net-p2p/go-ethereum
 media-sound/parlatype
