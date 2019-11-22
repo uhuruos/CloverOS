@@ -221,6 +221,7 @@ media-gfx/apngdis
 net-dns/dnscrypt-proxy
 dev-util/plan9port
 net-vpn/i2p
+net-libs/nativebiginteger # i2p
 dev-util/vmtouch
 app-arch/zpaq
 media-sound/spek
@@ -403,6 +404,10 @@ dev-ruby/i18n # vagrant
 dev-ruby/hashicorp-checkpoint # vagrant
 dev-ruby/rake # vagrant
 www-apps/otrs
+dev-perl/GD # otrs
+dev-perl/LWP-UserAgent-Determined # otrs
+dev-perl/GDGraph # otrs
+dev-perl/GDTextUtil # otrs
 media-sound/ezstream
 x11-themes/arc-theme
 sys-libs/libixp # wmii
@@ -523,6 +528,7 @@ games-fps/openjk-outcast **
 games-fps/openjk-academy **
 games-fps/openjk-academy-mp **
 media-sound/guitarix
+media-libs/zita-resampler # guitarix
 sys-fs/go-mtpfs **
 dev-libs/go-usb ** # go-mtpfs
 dev-libs/go-fuse # go-mtpfs

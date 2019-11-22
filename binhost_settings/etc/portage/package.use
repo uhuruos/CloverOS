@@ -286,7 +286,6 @@ media-libs/leptonica tiff # tesseract, vapoursynth
 dev-lua/mpack luajit # neovim
 dev-lua/luv luajit # neovim
 dev-python/pyyaml libyaml # qutebrowser
-app-text/xmlto text # xdg-utils
 x11-base/xorg-server xvfb # firefox
 media-libs/libsdl2 gles # wayland
 x11-libs/libdrm video_cards_vmware # mesa
@@ -304,6 +303,7 @@ media-libs/clutter-gtk X # abiword
 dev-libs/gtkd vte dmd-2_086 # tilix
 games-emulation/retroarch X # USE=xinerama
 sci-libs/hdf5 -threads # USE=cxx hl
+app-text/xmlto text # xdg-utils
 dev-qt/qtsingleapplication X
 x11-libs/gtk+ X
 x11-libs/libva X
