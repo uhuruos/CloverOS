@@ -1,3 +1,5 @@
+app-shells/gentoo-zsh-completions **
+
 =x11-terms/pangoterm-0.0_pre20171111 ~amd64
 # required by cool-retro-term (argument)
 =x11-terms/cool-retro-term-1.1.1 ~amd64
