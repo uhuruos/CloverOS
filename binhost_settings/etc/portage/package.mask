@@ -55,9 +55,8 @@ dev-qt/qtnetwork::gentoo # libressl
 
 >dev-lang/tk-8.6 # doesn't build
 >dev-lang/tcl-8.6 # doesn't build
->x11-wm/stumpwm-1.0.1_rc # doesn't build
 
 # version dependency
->media-sound/supercollider-3.9.3-r1
 >sys-apps/pkgcore-0.9.7
 >dev-python/dnspython-1.15.0-r1
+>media-video/handbrake-1.2.2-r3

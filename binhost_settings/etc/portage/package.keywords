@@ -206,6 +206,7 @@ media-sound/bitwig-studio
 media-sound/mididings **
 media-sound/setbfree
 media-sound/serialosc
+media-libs/libmonome # serialosc
 media-sound/synthv1
 media-sound/padthv1
 media-sound/drumkv1
@@ -533,6 +534,8 @@ sys-fs/go-mtpfs **
 dev-libs/go-usb ** # go-mtpfs
 dev-libs/go-fuse # go-mtpfs
 www-client/netsurf
+dev-libs/libnsutils # netsurf
+dev-libs/libwapcaplet # netsurf
 dev-util/netsurf-buildsystem # netsurf
 net-libs/libdom # netsurf
 media-libs/librosprite # netsurf

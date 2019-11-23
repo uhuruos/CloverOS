@@ -43,7 +43,7 @@ mkdir /etc/portage/repos.conf
 xargs eselect repository enable <<< $(grep -Po "(?<=\*/\*::).*" /etc/portage/package.mask)
 echo -e "\n[cloveros]\nlocation = /var/db/repos/cloveros\nsync-type = git\nsync-uri = https://gitgud.io/cloveros/cloveros-overlay.git\n\n\n[flatpak-overlay]\nlocation = /var/db/repos/flatpak-overlay\nsync-type = git\nsync-uri = https://github.com/fosero/flatpak-overlay.git\n\n\n[tlp]\nlocation = /var/db/repos/tlp\nsync-type = git\nsync-uri = https://github.com/dywisor/tlp-portage.git\n" >> /etc/portage/repos.conf/eselect-repo.conf
 
-USE="-vaapi binary" emerge -1 gcc mesa scala netcat6
+USE="-vaapi binary -color-management -opengl" emerge -1av gcc mesa scala netcat6 opencolorio openimageio
 emerge --depclean
 emerge -veD @world
 emerge @preserved-rebuild
