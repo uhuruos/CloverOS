@@ -4,7 +4,6 @@ app-shells/gentoo-zsh-completions **
 # required by cool-retro-term (argument)
 =x11-terms/cool-retro-term-1.1.1 ~amd64
 
-
 #preference
 sys-devel/gcc
 sys-kernel/gentoo-sources

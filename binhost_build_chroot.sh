@@ -29,7 +29,7 @@ mkdir /etc/portage/env/
 wget $gitprefix/binhost_settings/etc/portage/env/{gold,no-gnu2,no-gold,no-hashgnu,no-lto,no-lto-graphite,no-lto-o3,no-lto-ofast,no-ofast,pcsx2,size} -P /etc/portage/env/
 wget $gitprefix/binhost_settings/var/lib/portage/world -O /var/lib/portage/world
 
-emerge genkernel gentoo-sources
+emerge genkernel gentoo-sources app-arch/lz4
 eselect kernel set 1
 wget https://raw.githubusercontent.com/damentz/liquorix-package/master/linux-liquorix/debian/config/kernelarch-x86/config-arch-64
 sed -i "s/CONFIG_CRYPTO_CRC32C=m/CONFIG_CRYPTO_CRC32C=y/; s/CONFIG_FW_LOADER_USER_HELPER=y/CONFIG_FW_LOADER_USER_HELPER=n/; s/CONFIG_I2C_NVIDIA_GPU=/#CONFIG_I2C_NVIDIA_GPU=/" config-arch-64
