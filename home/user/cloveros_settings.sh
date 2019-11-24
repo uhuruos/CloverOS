@@ -357,7 +357,11 @@ case "$choice" in
 		;;
 
 	m)
-		sudo wget -q $gitprefix/home/user/make.conf -O make.conf.new
+		if grep -q PORTDIR=\"/usr/portage\" /etc/portage/make.conf; then
+			sudo wget -q $gitprefix/home/user/make.conf2 -O make.conf.new
+		else
+			sudo wget -q $gitprefix/home/user/make.conf -O make.conf.new
+		fi
 		if [[ -s make.conf.new ]]; then
 			backupmakeconf="make.conf.bak"$(< /dev/urandom tr -dc 0-9 | head -c 8)
 			sudo mv /etc/portage/make.conf $backupmakeconf
