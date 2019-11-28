@@ -136,6 +136,7 @@ mkdir -p .mozilla/firefox/default/
 echo -e "[Profile0]\nName=default\nIsRelative=1\nPath=default\nDefault=1" > .mozilla/firefox/profiles.ini
 echo -e "[11457493C5A56847]\nDefault=default" > .mozilla/firefox/installs.ini
 wget -O - https://spyware.neocities.org/guides/firefox.html | sed '/user_pref/,\$!d; s/<br>//; /devtools.webide.autoinstallADBHelper/q' > .mozilla/firefox/default/user.js
+echo 'user_pref("pdfjs.disabled", false);' >> .mozilla/firefox/default/user.js
 wget $gitprefix/home/user/.config/spacefm/session -P .config/spacefm/
 sed -i "s@/home/user/@/home/$username/@" .config/spacefm/session
 wget $gitprefix/home/user/.config/mimeapps.list -P .config/
@@ -145,7 +146,7 @@ cp /usr/share/applications/{firefox.desktop,smplayer.desktop,emacs.desktop,zzz-g
 echo -e "~rows=0\n1=home.desktop\n2=applications.desktop\n3=porthole.desktop\n4=firefox.desktop\n5=smplayer.desktop\n6=emacs.desktop\n7=zzz-gimp.desktop\n8=xarchiver.desktop" > .config/spacefm/desktop0
 chown -R $username /home/$username/
 
-rm -Rf /var/cache/binpkgs/* /var/cache/edb/binhost/* /etc/resolv.conf
+rm -Rf /var/cache/binpkgs/* /var/cache/edb/binhost/* /etc/resolv.conf /etc/portage/package.use/
 exit
 HEREDOC
 

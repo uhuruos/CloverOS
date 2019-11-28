@@ -392,6 +392,7 @@ games-emulation/stella
 games-emulation/vbam
 games-emulation/vgba
 games-emulation/yabause
+games-emulation/yabause-libretro
 games-emulation/zinc
 games-engines/odamex
 games-engines/openmw

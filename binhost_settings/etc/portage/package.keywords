@@ -65,6 +65,7 @@ www-client/elinks
 media-gfx/argyllcms
 
 #keyworded, remove when stable exists
+net-misc/youtube-comment-downloader
 www-plugins/chrome-binary-plugins
 app-emulation/dxvk
 net-p2p/etherwall
@@ -891,4 +892,4 @@ games-emulation/tgbdual-libretro **
 games-emulation/tyrquake-libretro **
 games-emulation/vbam-libretro **
 games-emulation/vba-next-libretro **
-games-emulation/yabause-libretro **
+games-emulation/yabause-libretro

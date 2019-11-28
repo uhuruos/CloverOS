@@ -46,6 +46,7 @@ echo -e "\n[cloveros]\nlocation = /var/db/repos/cloveros\nsync-type = git\nsync-
 USE="-vaapi binary -color-management -opengl" emerge -1av gcc mesa scala netcat6 opencolorio openimageio
 emerge --depclean
 emerge -veD --exclude palemoon @world
+ax_cv_c_float_words_bigendian=no emerge -1 texlive-core ; sed -i "s/AR=\"gcc-ar\"/#AR=\"gcc-ar\"/" /etc/portage/make.conf ; emerge -1 ftjam argyllcms ; sed -i "s/#AR=\"gcc-ar\"/AR=\"gcc-ar\"/" /etc/portage/make.conf ; emerge -uvDN --exclude palemoon @world
 emerge @preserved-rebuild
 emerge --depclean
 
