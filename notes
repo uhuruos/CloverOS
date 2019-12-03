@@ -23,3 +23,5 @@ zsnes
 ftjam argyllcms
 # builds, requires ax_cv_c_float_words_bigendian=no
 texlive-core
+# no longer emerges
+ckermit ng

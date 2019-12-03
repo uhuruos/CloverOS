@@ -392,7 +392,6 @@ games-emulation/stella
 games-emulation/vbam
 games-emulation/vgba
 games-emulation/yabause
-games-emulation/yabause-libretro
 games-emulation/zinc
 games-engines/odamex
 games-engines/openmw
@@ -1056,6 +1055,7 @@ net-p2p/qbittorrent
 net-p2p/rtorrent
 net-p2p/soulseek-qt
 net-p2p/syncthing
+net-p2p/torrentinfo
 net-p2p/transmission
 net-p2p/transmission-remote-gtk
 net-p2p/vuze
