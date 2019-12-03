@@ -892,13 +892,13 @@ media-tv/plex-media-server
 media-video/aegisub
 media-video/avidemux
 media-video/baka-mplayer
+media-video/celluloid
 media-video/cinelerra
 media-video/dvdbackup
 media-video/ffcast
 media-video/ffmpeg
 media-video/ffmpegthumbnailer
 media-video/flowblade
-media-video/gnome-mpv
 media-video/gpac
 media-video/handbrake
 media-video/kaffeine

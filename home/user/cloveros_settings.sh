@@ -326,7 +326,8 @@ case "$choice" in
 		if [[ $(find $portageworkdir -type f | wc -l) == "17" ]]; then
 			backupportagedir=backupportage$(< /dev/urandom tr -dc 0-9 | head -c 8)
 			mkdir $backupportagedir/
-			sudo mv /etc/portage/{package.use,package.keywords,package.env,package.mask,package.unmask} /etc/portage/env/ $backupportagedir/ && cp /etc/portage/make.conf $backupportagedir/
+			sudo mv /etc/portage/{package.use,package.keywords,package.env,package.mask,package.unmask} /etc/portage/env/ $backupportagedir/
+			cp /etc/portage/make.conf $backupportagedir/
 			sudo mv $portageworkdir/{package.use,package.keywords,package.env,package.mask,package.unmask} $portageworkdir/env/ /etc/portage/
 			useflags=$(grep "^USE=" $portageworkdir/make.conf)
 			if ! grep -q "$useflags" /etc/portage/make.conf; then
@@ -343,12 +344,9 @@ case "$choice" in
 			sudo binutils-config --linker ld.gold
 			if [ ! -d /var/db/pkg/app-eselect/eselect-repository-*/ ]; then
 				sudo emerge -v eselect-repository
-				sudo mkdir /etc/portage/repos.conf
+				sudo mkdir /etc/portage/repos.conf/
 			fi
-			sudo eselect repository remove {1..500} &> /dev/null ; rm /etc/portage/repos.conf/eselect-repo.conf &> /dev/null
-			sudo xargs eselect repository enable <<< $(grep -Po "(?<=\*/\*::).*" /etc/portage/package.mask)
-			echo -e "\n[cloveros]\nlocation = /var/db/repos/cloveros\nsync-type = git\nsync-uri = https://gitgud.io/cloveros/cloveros-overlay.git\n\n\n[flatpak-overlay]\nlocation = /var/db/repos/flatpak-overlay\nsync-type = git\nsync-uri = https://github.com/fosero/flatpak-overlay.git\n\n\n[tlp]\nlocation = /var/db/repos/tlp\nsync-type = git\nsync-uri = https://github.com/dywisor/tlp-portage.git\n" >> /etc/portage/repos.conf/eselect-repo.conf
-
+			sudo wget $gitprefix/binhost_settings/etc/portage/repos.conf/eselect-repo.conf -P /etc/portage/repos.conf/
 			echo -e "\nPortage configuration now mirrors binhost Portage configuration. emerge --sync to retrieve overlays (/etc/portage/package.*, /etc/portage/env/, /etc/portage/repos.conf/) Previous Portage config stored in ~/$backupportagedir"
 		else
 			echo -e "\nCould not retrieve file. Please connect to the Internet or try again."
@@ -406,7 +404,7 @@ case "$choice" in
 
 	s)
 		echo "Running the following:"
-		echo "sudo emerge dnscrypt-proxy"
+		echo "sudo emerge net-dns/dnscrypt-proxy"
 		echo "sudo /etc/init.d/dnscrypt-proxy start"
 		echo "sudo rc-config add dnscrypt-proxy"
 		echo "sudo sh -c 'echo \"static domain_name_servers=127.0.0.1\" >> /etc/dhcpcd.conf'"

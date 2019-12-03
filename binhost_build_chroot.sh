@@ -29,6 +29,11 @@ mkdir /etc/portage/env/
 wget $gitprefix/binhost_settings/etc/portage/env/{gold,no-gnu2,no-gold,no-hashgnu,no-lto,no-lto-graphite,no-lto-o3,no-lto-ofast,no-ofast,pcsx2,size} -P /etc/portage/env/
 wget $gitprefix/binhost_settings/var/lib/portage/world -O /var/lib/portage/world
 
+emerge eselect-repository
+mkdir /etc/portage/repos.conf/
+wget $gitprefix/binhost_settings/etc/portage/repos.conf/eselect-repo.conf -P /etc/portage/repos.conf/
+emerge --sync
+
 emerge genkernel gentoo-sources app-arch/lz4
 eselect kernel set 1
 wget https://raw.githubusercontent.com/damentz/liquorix-package/master/linux-liquorix/debian/config/kernelarch-x86/config-arch-64
@@ -37,11 +42,6 @@ echo -e "CONFIG_SND_HDA_INPUT_BEEP=y\nCONFIG_SND_HDA_INPUT_BEEP_MODE=0" >> confi
 genkernel --kernel-config=config-arch-64 --luks --lvm all
 (cd /usr/src/linux/ ; make clean ; make prepare ; make modules_prepare)
 binutils-config --linker ld.gold
-
-emerge eselect-repository
-mkdir /etc/portage/repos.conf
-xargs eselect repository enable <<< $(grep -Po "(?<=\*/\*::).*" /etc/portage/package.mask)
-echo -e "\n[cloveros]\nlocation = /var/db/repos/cloveros\nsync-type = git\nsync-uri = https://gitgud.io/cloveros/cloveros-overlay.git\n\n\n[flatpak-overlay]\nlocation = /var/db/repos/flatpak-overlay\nsync-type = git\nsync-uri = https://github.com/fosero/flatpak-overlay.git\n\n\n[tlp]\nlocation = /var/db/repos/tlp\nsync-type = git\nsync-uri = https://github.com/dywisor/tlp-portage.git\n" >> /etc/portage/repos.conf/eselect-repo.conf
 
 USE="-vaapi binary -color-management -opengl" emerge -1av gcc mesa scala netcat6 opencolorio openimageio
 emerge --depclean
