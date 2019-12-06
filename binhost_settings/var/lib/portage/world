@@ -256,6 +256,7 @@ app-text/unrtf
 app-text/wgetpaste
 app-text/zathura
 app-text/zathura-meta
+app-text/zathura-pdf-mupdf
 app-vim/editorconfig-vim
 app-vim/extra-syntax
 app-vim/vim-tmux

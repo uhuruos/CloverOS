@@ -24,4 +24,4 @@ ftjam argyllcms
 # builds, requires ax_cv_c_float_words_bigendian=no
 texlive-core
 # no longer emerges
-ckermit ng subversion soulseek-qt
+ckermit ng subversion soulseek-qt app-text/ots ncdc go-mtpfs quakeforge generator matplotlib pouetchess quake3-cpma wlroots
