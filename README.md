@@ -608,7 +608,7 @@ No systemd, maximized CFLAGS, lower RAM usage, it's Gentoo, package versions are
 ### What is CloverOS Libre?
 CloverOS Libre doesn't have the `sys-kernel/linux-firmware` package.
 
-The kernel is the same gentoo-sources with Liquorix config but with https://linux-libre.fsfla.org/pub/linux-libre/releases/5.0.8-gnu/deblob-5.0 ran on it.
+The kernel is the same gentoo-sources with Liquorix config https://raw.githubusercontent.com/damentz/liquorix-package/master/linux-liquorix/debian/config/kernelarch-x86/config-arch-64 but with https://linux-libre.fsfla.org/pub/linux-libre/releases/5.0.8-gnu/deblob-5.0 ran on it.
 
 ### Turning CloverOS into CloverOS Libre
 `emerge -C linux-firmware`
