@@ -1,3 +1,4 @@
+games-emulation/retroarch cheevos
 gui-wm/sway X
 gui-libs/wlroots X # sway USE=X
 media-gfx/librecad tools
@@ -77,7 +78,7 @@ media-fonts/tewi-font bdf pcf
 games-emulation/nestopia gui
 games-emulation/stella joystick
 media-sound/clementine cdda lastfm moodbar projectm
-games-emulation/libretro-meta -bsnes-cpp98 dolphin melonds mame2000 mame2003 citra 2048 4do beetle-psx bsnes desmume fbalpha gambatte genplus handy mednafen-ngp mednafen-pce-fast mednafen-saturn mednafen-supergrafx mednafen-vb mednafen-wswan mgba mupen64plus nestopia nxengine prboom prosystem psp1 reicast scummvm stella tyrquake bnes craft easyrpg fbalpha2012 fceumm mame mame2016 mednafen-gba mednafen-snes meowpc98 meteor mrboom openlara parallel-n64 pcsx-rearmed picodrive ppsspp px68k quicknes redream sameboy snes9x snes9x2002 snes9x2010 tgbdual vba-next vbam yabause
+games-emulation/libretro-meta 2048 4do beetle-psx beetle-saturn bnes bsnes2014 citra craft desmume dolphin -easyrpg fbalpha2012 fbneo fceumm flycast gambatte genplus handy -mame mame2000 mame2003 mame2003-plus mame2016 mednafen-gba mednafen-ngp mednafen-pce-fast mednafen-snes mednafen-supergrafx mednafen-vb mednafen-wswan melonds meowpc98 meteor mgba mrboom mupen64plus nestopia nxengine openlara parallel-n64 pcsx-rearmed picodrive ppsspp prboom prosystem px68k quicknes -redream -sameboy scummvm snes9x snes9x2002 snes9x2010 -stella tgbdual tyrquake vba-next vbam yabause -bsnes-cpp98 bsnes-mercury flycast-wince kronos mesen stella2014 yabasanshiro
 media-libs/sdl2-mixer flac mikmod vorbis mod mp3 mad midi fluidsynth
 media-video/obs-studio jack truetype imagemagick v4l
 media-plugins/alsa-plugins jack
@@ -207,7 +208,7 @@ dev-db/sqlite secure-delete
 media-libs/phonon -vlc
 media-libs/libsdl X
 www-client/chromium jumbo-build
-www-client/ungoogled-chromium optimize-thinlto optimize-webui new-tcmalloc jumbo-build
+www-client/ungoogled-chromium thinlto optimize-thinlto optimize-webui new-tcmalloc jumbo-build
 mail-client/thunderbird -crypt
 www-client/waterfox -pgo
 www-client/seamonkey -crypt -minimal
@@ -259,11 +260,13 @@ gnome-base/gvfs udisks # required by caja (dbus)
 mate-extra/mate-screensaver -pam # removes dependency gnome-keyring
 media-sound/bitwig-studio -jack # removes dependency jack2
 app-portage/portage-utils -qmanifest # removes dependency gpgme
+dev-qt/qt-creator -clang # don't build with clang
+games-emulation/mesen-libretro -clang # don't build with clang
+games-emulation/stella-libretro -custom-cflags # fixes build
 mate-base/mate-panel X # fixes build
 x11-plugins/gkrelltop X # fixes build
 dev-libs/efl luajit # fixes build
 app-emulation/q4wine dbus # fixes build
-games-emulation/dolphin-libretro -custom-cflags # fixes build
 x11-misc/clipit gtk3 # fixes build
 sys-apps/shadow -pam # fix: login won't work (but su - user would)
 sys-power/suspend -crypt -lzo # otherwise requires USE=static-libs dev-libs/libgcrypt dev-libs/lzo

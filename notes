@@ -6,11 +6,13 @@ livecd_install.sh: uefi install, encryption
 
 packages that don't build:
 # doesn't emerge
-telegram-purple edbrowse fingerprint-gui opentoonz eduke32 racket bsnes-libretro-cplusplus98 monodevelop mididings
+telegram-purple edbrowse fingerprint-gui opentoonz eduke32 racket monodevelop mididings
 # packages with no libressl support
 zeronet nxplayer murmur makemkv eiskaltdcpp retroshare acme-tiny spyder johntheripper-jumbo eagle
 # requires jack2
 cadence ladish
+# requires systemd/elogind
+mutter
 # dependency use flag requirements
 buzztrax # clutter USE=gtk
 plasma-applet-weather-widget # qtdeclarative USE=xml
@@ -24,6 +26,8 @@ ftjam argyllcms
 # builds, requires ax_cv_c_float_words_bigendian=no
 texlive-core
 # no longer emerges
-ckermit ng subversion soulseek-qt app-text/ots ncdc go-mtpfs quakeforge generator matplotlib pouetchess quake3-cpma wlroots distcc
+ckermit ng subversion soulseek-qt app-text/ots ncdc go-mtpfs quakeforge generator matplotlib pouetchess quake3-cpma wlroots distcc tiemu pinta guayadeque sbt webkit-gtk
 # gcc8 only
-pcsx2
+pcsx2 palemoon
+# figure out working cflags
+redeclipse sauerbraten

@@ -1,3 +1,6 @@
+=dev-lang/go-1.13.4 # fzf
+=dev-python/pycountry-18.5.26 # kde-meta
+
 app-shells/gentoo-zsh-completions **
 
 =x11-terms/pangoterm-0.0_pre20171111 ~amd64
@@ -462,6 +465,7 @@ kde-misc/kio-gopher
 kde-misc/kio-stash
 kde-plasma/plasma-applet-active-window-control
 kde-misc/plasma-applet-network-monitor
+kde-misc/zanshin
 media-plugins/gimp-plugin-bimp
 media-plugins/gimp-paint-studio
 media-plugins/gimp-resynthesizer
@@ -833,13 +837,13 @@ games-emulation/slang-shaders **
 games-emulation/common-overlays **
 games-emulation/libretro-database **
 games-emulation/libretro-info **
-#games-emulation/libretro-meta
+games-emulation/libretro-meta **
 games-emulation/2048-libretro **
 games-emulation/4do-libretro **
 games-emulation/beetle-psx-libretro **
 games-emulation/bnes-libretro **
 games-emulation/bsnes-libretro **
-#games-emulation/bsnes-libretro-cplusplus98 **
+games-emulation/bsnes-libretro-cplusplus98 **
 games-emulation/craft-libretro **
 games-emulation/citra-libretro **
 games-emulation/desmume-libretro **
@@ -893,3 +897,15 @@ games-emulation/tyrquake-libretro **
 games-emulation/vbam-libretro **
 games-emulation/vba-next-libretro **
 games-emulation/yabause-libretro **
+games-emulation/fbneo-libretro **
+games-emulation/bsnes2014-libretro **
+games-emulation/beetle-saturn-libretro **
+games-emulation/flycast-libretro **
+games-emulation/mame2003-plus-libretro **
+games-emulation/yabasanshiro-libretro **
+games-emulation/bsnes-mercury-libretro **
+games-emulation/bsnes-libretro-cplusplus98 **
+games-emulation/kronos-libretro **
+games-emulation/flycast-wince-libretro **
+games-emulation/mesen-libretro **
+games-emulation/stella2014-libretro **

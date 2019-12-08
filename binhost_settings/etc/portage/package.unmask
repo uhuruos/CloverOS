@@ -196,7 +196,7 @@ games-emulation/4do-libretro::abendbrot
 games-emulation/beetle-psx-libretro::abendbrot
 games-emulation/bnes-libretro::abendbrot
 games-emulation/bsnes-libretro::abendbrot
-#games-emulation/bsnes-libretro-cplusplus98::abendbrot
+games-emulation/bsnes-libretro-cplusplus98::abendbrot
 games-emulation/craft-libretro::abendbrot
 games-emulation/citra-libretro::abendbrot
 games-emulation/desmume-libretro::abendbrot
@@ -250,6 +250,18 @@ games-emulation/tyrquake-libretro::abendbrot
 games-emulation/vbam-libretro::abendbrot
 games-emulation/vba-next-libretro::abendbrot
 games-emulation/yabause-libretro::abendbrot
+games-emulation/fbneo-libretro::abendbrot
+games-emulation/bsnes2014-libretro::abendbrot
+games-emulation/beetle-saturn-libretro::abendbrot
+games-emulation/mame2003-plus-libretro::abendbrot
+games-emulation/flycast-libretro::abendbrot
+games-emulation/yabasanshiro-libretro::abendbrot
+games-emulation/bsnes-mercury-libretro::abendbrot
+games-emulation/bsnes-libretro-cplusplus98::abendbrot
+games-emulation/kronos-libretro::abendbrot
+games-emulation/flycast-wince-libretro::abendbrot
+games-emulation/mesen-libretro::abendbrot
+games-emulation/stella2014-libretro::abendbrot
 
 media-libs/vapoursynth::vapoursynth
 media-libs/waifu2x-converter-cpp::vapoursynth

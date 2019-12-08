@@ -372,6 +372,7 @@ games-emulation/gngeo
 games-emulation/hatari
 games-emulation/higan
 games-emulation/libretro-dosbox
+games-emulation/libretro-meta
 games-emulation/lxdream
 games-emulation/mednafen
 games-emulation/mednaffe
@@ -1607,7 +1608,6 @@ x11-wm/marco
 x11-wm/matwm2
 x11-wm/metacity
 x11-wm/musca
-x11-wm/mutter
 x11-wm/notion
 x11-wm/openbox
 x11-wm/oroborus
