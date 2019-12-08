@@ -1,12 +1,3 @@
-=dev-lang/go-1.13.4 # fzf
-=dev-python/pycountry-18.5.26 # kde-meta
-
-app-shells/gentoo-zsh-completions **
-
-=x11-terms/pangoterm-0.0_pre20171111 ~amd64
-# required by cool-retro-term (argument)
-=x11-terms/cool-retro-term-1.1.1 ~amd64
-
 #preference
 sys-devel/gcc
 sys-kernel/gentoo-sources
@@ -16,9 +7,9 @@ x11-libs/gtk+:3::mv # removes dbus
 app-emulation/winetricks::cloveros ** # overlay
 
 #old, remove when stable is bumped up
-sys-fs/zfs # kernel 5.3
+sys-fs/zfs # kernel 5.4
 sys-fs/zfs-kmod # zfs
-app-emulation/virtualbox # kernel 5.0
+app-emulation/virtualbox # kernel 5.x
 app-emulation/virtualbox-guest-additions # virtualbox
 app-emulation/virtualbox-additions # virtualbox
 app-emulation/virtualbox-modules # virtualbox
@@ -30,7 +21,6 @@ net-p2p/mldonkey # fixes build
 games-emulation/mgba # fixes build
 media-libs/osl # fixes build
 net-misc/spice-gtk # fixes build
-x11-misc/polybar # fixes build
 app-emulation/spice-protocol # spice-gtk
 x11-misc/x11vnc # fixes build
 x11-themes/sddm-gentoo-black-theme ** # fixes build
@@ -38,29 +28,27 @@ x11-themes/terminology-themes ** # fixes build
 net-misc/freerdp ** # fixes build
 media-video/openshot # fixes build
 media-gfx/librecad # fixes build
-media-libs/libopenshot # openshot
-media-libs/libopenshot-audio # openshot
 app-emulation/xen # fixes build
 app-emulation/xen-tools # xen
 www-plugins/lightspark ** # stable relies on llvm6
-media-fonts/vlgothic # old
 games-emulation/pcsx2 ** # old
 games-emulation/dolphin ** # old
 games-emulation/ppsspp ** # old
+app-shells/gentoo-zsh-completions ** # old
 dev-python/xcffib # qtile
 dev-python/cairocffi # qtile
 =dev-libs/libuv-1.33.1 # neovim
 =x11-libs/libdrm-2.4.100 # abiword
 =dev-libs/nss-3.47 # ungoogled-chromium
 dev-libs/ell # iwd
+=dev-lang/go-1.13.4 # fzf
+=dev-python/pycountry-18.5.26 # kde-meta
 
 #libressl, remove when stable supports libressl
 =dev-qt/qtnetwork-5.12.5::libressl
 app-crypt/qca::libressl
 net-libs/nodejs::libressl
-=net-dns/c-ares-1.15.0 # nodejs
 =net-libs/http-parser-2.9.2 # nodejs
-dev-perl/Net-SSLeay
 net-misc/megatools::jm-overlay
 www-client/dillo
 app-editors/xemacs
