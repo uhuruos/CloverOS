@@ -1206,8 +1206,7 @@ sys-fs/zfs-auto-snapshot
 sys-kernel/dkms
 sys-kernel/dracut
 sys-kernel/genkernel
-sys-kernel/gentoo-sources
-sys-kernel/gentoo-sources:5.3.10
+sys-kernel/gentoo-sources:5.3.15
 sys-kernel/linux-firmware
 sys-power/acpi_call
 sys-power/acpitool
@@ -1620,8 +1619,6 @@ x11-wm/sawfish
 x11-wm/selectwm
 x11-wm/sithwm
 x11-wm/spectrwm
-x11-wm/stumpwm
-x11-wm/stumpwm-contrib
 x11-wm/subtle
 x11-wm/treewm
 x11-wm/twm
