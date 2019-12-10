@@ -11,8 +11,6 @@ telegram-purple edbrowse fingerprint-gui opentoonz eduke32 racket monodevelop mi
 zeronet nxplayer murmur makemkv eiskaltdcpp retroshare acme-tiny spyder johntheripper-jumbo eagle
 # requires jack2
 cadence ladish
-# requires systemd/elogind
-mutter
 # dependency use flag requirements
 buzztrax # clutter USE=gtk
 plasma-applet-weather-widget # qtdeclarative USE=xml
@@ -30,4 +28,4 @@ ckermit ng subversion soulseek-qt app-text/ots ncdc go-mtpfs quakeforge generato
 # gcc8 only
 pcsx2 palemoon
 # figure out working cflags
-redeclipse sauerbraten
+redeclipse sauerbraten qt-creator
