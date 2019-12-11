@@ -63,4 +63,4 @@ HEREDOC
 
 umount -l gentoo/*
 
-echo "Build finished. Packages are in gentoo/usr/portage/packages/"
+echo "Build finished. Packages are in gentoo/var/cache/binpkgs/"

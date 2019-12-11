@@ -6,16 +6,16 @@ fi
 
 trap exit SIGINT
 
-if [ ! -d '/usr/portage/packages/s/signatures/' ]; then
-	mkdir -p /usr/portage/packages/s/signatures/
+if [ ! -d '/var/cache/binpkgs/s/signatures/' ]; then
+	mkdir -p /var/cache/binpkgs/s/signatures/
 fi
 
 export BINPKG_COMPRESS="xz" XZ_OPT="--x86 --lzma2=preset=9e,dict=128MB,nice=273,depth=200,lc=4"
 
 if [ "$1" = 'deep' ]; then
-	find /usr/portage/packages/ -mindepth 1 -maxdepth 1 ! -name s -exec rm -Rf {} \;
+	find /var/cache/binpkgs/ -mindepth 1 -maxdepth 1 ! -name s -exec rm -Rf {} \;
 	emerge -C hwinfo ntfs3g ; emerge ntfs3g ; emerge hwinfo ; emerge -C jack-audio-connection-kit audacity ; emerge audacity ; emerge jack-audio-connection-kit ; emerge -C sys-apps/dbus obs-studio ; emerge obs-studio ; emerge -1 sys-apps/dbus
-	quickpkg --include-unmodified-config=y "*/*" 2>&1 | ansi2html > /usr/portage/packages/s/quickpkg.html
+	quickpkg --include-unmodified-config=y "*/*" 2>&1 | ansi2html > /var/cache/binpkgs/s/quickpkg.html
 	emerge -B sudo openssh linux-firmware dcron cronie fcron anacron chromium torbrowser-launcher mail-mta/postfix acct-user/postfix acct-group/postfix
 fi
 
@@ -27,15 +27,15 @@ emerge -b @preserved-rebuild
 emerge --depclean
 
 sed -i -n "/^\(RTL\|rtl\|ar\|ath\|brcm\|iwlwifi\|rt\)/p" /etc/portage/savedconfig/sys-kernel/$(ls -1 /etc/portage/savedconfig/sys-kernel/ | tail -n1)
-rm -R /usr/portage/packages/s/nodbus/ ; mkdir /usr/portage/packages/s/nodbus/ && PKGDIR="/usr/portage/packages/s/nodbus/" USE="-dbus -qt5 -udisks -trash-panel-plugin -video-thumbnails -video_cards_radeon -video_cards_radeonsi -llvm -opencl savedconfig" emerge -B glib qtgui thunar spacefm wpa_supplicant poppler gpgme gvfs mesa linux-firmware desktop-file-utils freedesktop-icon-theme lcms openjpeg
+rm -R /var/cache/binpkgs/s/nodbus/ ; mkdir /var/cache/binpkgs/s/nodbus/ && PKGDIR="/var/cache/binpkgs/s/nodbus/" USE="-dbus -qt5 -udisks -trash-panel-plugin -video-thumbnails -video_cards_radeon -video_cards_radeonsi -llvm -opencl savedconfig" emerge -B glib qtgui thunar spacefm wpa_supplicant poppler gpgme gvfs mesa linux-firmware desktop-file-utils freedesktop-icon-theme lcms openjpeg
 
-php mirrors/index.php > /usr/portage/packages/index.html
-./mirrors/indexalt.sh > /usr/portage/packages/indexalt.html
-EIX_LIMIT=0 eix -IF | grep -v "Available versions" | ansi2html > /usr/portage/packages/s/packages.html &
+php mirrors/index.php > /var/cache/binpkgs/index.html
+./mirrors/indexalt.sh > /var/cache/binpkgs/indexalt.html
+EIX_LIMIT=0 eix -IF | grep -v "Available versions" | ansi2html > /var/cache/binpkgs/s/packages.html &
 
-rm -Rf /usr/portage/packages/s/signatures/*
-find /usr/portage/packages/ -type d -not -path "/usr/portage/packages/s/signatures*" | sed "s#/usr/portage/packages/##" | xargs -I{} mkdir /usr/portage/packages/s/signatures/{}
-find /usr/portage/packages/ -type f -not -path "/usr/portage/packages/s/signatures*" | sed "s#/usr/portage/packages/##" | xargs -P 8 -I{} gpg --armor --detach-sign --output /usr/portage/packages/s/signatures/{}.asc --sign /usr/portage/packages/{}
+rm -Rf /var/cache/binpkgs/s/signatures/*
+find /var/cache/binpkgs/ -type d -not -path "/var/cache/binpkgs/s/signatures*" | sed "s#/var/cache/binpkgs/##" | xargs -I{} mkdir /var/cache/binpkgs/s/signatures/{}
+find /var/cache/binpkgs/ -type f -not -path "/var/cache/binpkgs/s/signatures*" | sed "s#/var/cache/binpkgs/##" | xargs -P 8 -I{} gpg --armor --detach-sign --output /var/cache/binpkgs/s/signatures/{}.asc --sign /var/cache/binpkgs/{}
 
-chmod -R 755 /usr/portage/packages/
-rsync -a --delete /usr/portage/packages/ root@nl.cloveros.ga:/var/www/html/cloveros.ga/
+chmod -R 755 /var/cache/binpkgs/
+rsync -a --delete /var/cache/binpkgs/ root@nl.cloveros.ga:/var/www/html/cloveros.ga/

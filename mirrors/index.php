@@ -1,9 +1,9 @@
 <?php
 chdir(__DIR__);
 $git = 'https://gitgud.io/cloveros/cloveros/raw/master';
-$isoname = basename(glob('/usr/portage/packages/s/CloverOS-x86_64-*.iso')[0]);
-$libreisoname = basename(glob('/usr/portage/packages/s/CloverOS_Libre-x86_64-*.iso')[0]);
-$minimalisoname = basename(glob('/usr/portage/packages/s/CloverOS_Minimal-x86_64-*.iso')[0]);
+$isoname = basename(glob('/var/cache/binpkgs/s/CloverOS-x86_64-*.iso')[0]);
+$libreisoname = basename(glob('/var/cache/binpkgs/s/CloverOS_Libre-x86_64-*.iso')[0]);
+$minimalisoname = basename(glob('/var/cache/binpkgs/s/CloverOS_Minimal-x86_64-*.iso')[0]);
 
 $packageuse = file_get_contents('../binhost_settings/etc/portage/package.use');
 $packageenv = file_get_contents('../binhost_settings/etc/portage/package.env');
@@ -12,7 +12,7 @@ $makeconf = file_get_contents('../binhost_settings/etc/portage/make.conf');
 $worldtxt = file_get_contents('../binhost_settings/var/lib/portage/world');
 $installscriptsh = file_get_contents('../installscript.sh');
 $usermake = file_get_contents('../home/user/make.conf');
-$quickpkg = file_get_contents('/usr/portage/packages/s/quickpkg.html');
+$quickpkg = file_get_contents('/var/cache/binpkgs/s/quickpkg.html');
 $quickpkg = substr($quickpkg, strpos($quickpkg, '<pre class="ansi2html-content">')+strlen('<pre class="ansi2html-content">')+1);
 $quickpkg = rtrim($quickpkg, "</pre></body>\n</html>");
 $packagecount = count(glob('/var/db/pkg/*/*'));
@@ -25,7 +25,7 @@ foreach ($mirrors as $line) {
 	$mirrorlinks .= '<a target="_blank" href="'.$line.'">'.$line.'</a> ';
 }
 
-$dir = '/usr/portage/packages/';
+$dir = '/var/cache/binpkgs/';
 $files = '<h1>Index of /</h1><hr><pre>';
 foreach (scandir($dir) as $line) {
 	if ($line == '.') {
