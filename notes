@@ -20,11 +20,11 @@ picard # qtgui USE=accessibility
 # builds, but doesn't work
 zsnes
 # builds, requires AR="gcc-ar" commented out
-ftjam argyllcms
+ftjam argyllcms mongodb
 # builds, requires ax_cv_c_float_words_bigendian=no
 texlive-core
 # no longer emerges
-ckermit ng subversion soulseek-qt app-text/ots ncdc go-mtpfs quakeforge generator matplotlib pouetchess quake3-cpma wlroots distcc tiemu pinta guayadeque sbt webkit-gtk distcc scribus
+ckermit ng subversion soulseek-qt app-text/ots ncdc go-mtpfs quakeforge generator matplotlib pouetchess quake3-cpma distcc tiemu pinta guayadeque sbt webkit-gtk distcc scribus
 # gcc8 only
 pcsx2 palemoon
 # figure out working cflags

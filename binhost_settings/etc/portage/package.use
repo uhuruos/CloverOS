@@ -1,6 +1,4 @@
 games-emulation/retroarch cheevos
-gui-wm/sway X
-gui-libs/wlroots X # sway USE=X
 media-gfx/librecad tools
 net-misc/ofono bluetooth
 media-libs/vapoursynth vapoursynth_plugins_eedi3 vapoursynth_plugins_imagemagick vapoursynth_plugins_miscfilters vapoursynth_plugins_morpho vapoursynth_plugins_ocr vapoursynth_plugins_removegrain vapoursynth_plugins_subtext vapoursynth_plugins_vinverse vapoursynth_plugins_vivtc

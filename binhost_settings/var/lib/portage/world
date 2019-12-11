@@ -273,6 +273,7 @@ dev-java/junit
 dev-java/maven-bin
 dev-lang/R
 dev-lang/dmd
+dev-lang/elixir
 dev-lang/go
 dev-lang/open-cobol
 dev-lang/php
@@ -1162,6 +1163,7 @@ sys-block/gparted
 sys-block/mbuffer
 sys-block/open-iscsi
 sys-block/sas3flash
+sys-block/thin-provisioning-tools
 sys-block/zram-init
 sys-boot/grub
 sys-boot/os-prober
@@ -1206,7 +1208,6 @@ sys-fs/zfs-auto-snapshot
 sys-kernel/dkms
 sys-kernel/dracut
 sys-kernel/genkernel
-sys-kernel/gentoo-sources:5.3.15
 sys-kernel/linux-firmware
 sys-power/acpi_call
 sys-power/acpitool

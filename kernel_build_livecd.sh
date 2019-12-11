@@ -18,7 +18,7 @@ echo -e "CONFIG_NUMA_BALANCING=y\nCONFIG_NUMA_BALANCING_DEFAULT_ENABLED=y\nCONFI
 sed -i "s/CONFIG_ISO9660_FS=m/CONFIG_ISO9660_FS=y/" config-aufs
 mkdir -p /usr/src/linux-$kernelversion-aufs/build/kernel/ /usr/src/linux-$kernelversion-aufs/build/modules/
 genkernel --kernel-config=config-aufs --luks --lvm --kerneldir=/usr/src/linux-$kernelversion-aufs/ --bootdir=/usr/src/linux-$kernelversion-aufs/build/kernel/ --module-prefix=/usr/src/linux-$kernelversion-aufs/build/modules/ all
-XZ_OPT="--lzma1=preset=9e,dict=128MB,nice=273,depth=200,lc=4" tar --lzma -cf /usr/portage/packages/s/kernel-livecd.tar.lzma -C /usr/src/linux-$kernelversion-aufs/build/kernel/ . -C /usr/src/linux-$kernelversion-aufs/build/modules/lib/modules/ .
+XZ_OPT="--lzma1=preset=9e,dict=128MB,nice=273,depth=200,lc=4" tar --lzma -cf /var/cache/binpkgs/s/kernel-livecd.tar.lzma -C /usr/src/linux-$kernelversion-aufs/build/kernel/ . -C /usr/src/linux-$kernelversion-aufs/build/modules/lib/modules/ .
 
 cp -R /usr/src/linux-$kernelversion-aufs/ /usr/src/linux-$kernelversion-aufs-gnu/
 rm -R /usr/src/linux-$kernelversion-aufs-gnu/build/*/*
@@ -26,7 +26,7 @@ wget https://linux-libre.fsfla.org/pub/linux-libre/releases/$kernelversion-gnu/d
 chmod +x /usr/src/linux-$kernelversion-aufs-gnu/deblob-$kernelmajversion /usr/src/linux-$kernelversion-aufs-gnu/deblob-check
 cd /usr/src/linux-$kernelversion-aufs-gnu/ ; PYTHON="python2.7" /usr/src/linux-$kernelversion-aufs-gnu/deblob-$kernelmajversion ; cd -
 genkernel --kernel-config=config-aufs --luks --lvm --kerneldir=/usr/src/linux-$kernelversion-aufs-gnu/ --bootdir=/usr/src/linux-$kernelversion-aufs-gnu/build/kernel/ --module-prefix=/usr/src/linux-$kernelversion-aufs-gnu/build/modules/ all
-XZ_OPT="--lzma1=preset=9e,dict=128MB,nice=273,depth=200,lc=4" tar --lzma -cf /usr/portage/packages/s/kernel-livecd-libre.tar.lzma -C /usr/src/linux-$kernelversion-aufs-gnu/build/kernel/ . -C /usr/src/linux-$kernelversion-aufs-gnu/build/modules/lib/modules/ .
+XZ_OPT="--lzma1=preset=9e,dict=128MB,nice=273,depth=200,lc=4" tar --lzma -cf /var/cache/binpkgs/s/kernel-livecd-libre.tar.lzma -C /usr/src/linux-$kernelversion-aufs-gnu/build/kernel/ . -C /usr/src/linux-$kernelversion-aufs-gnu/build/modules/lib/modules/ .
 
 sudo emerge -C aufs-sources
 sudo rm -Rf /usr/src/linux-$kernelversion-aufs/ /usr/src/linux-$kernelversion-aufs-gnu/ config-aufs
