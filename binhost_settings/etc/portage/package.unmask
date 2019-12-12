@@ -166,6 +166,7 @@ sys-fs/libostree::flatpak-overlay
 
 sys-kernel/dkms::farmboy0
 
+www-client/torbrowser::torbrowser
 www-servers/onionshare::torbrowser
 dev-python/flask-httpauth::torbrowser # onionshare
 app-misc/mat2::torbrowser
