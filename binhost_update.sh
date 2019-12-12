@@ -16,7 +16,7 @@ if [ "$1" = 'deep' ]; then
 	find /var/cache/binpkgs/ -mindepth 1 -maxdepth 1 ! -name s -exec rm -Rf {} \;
 	emerge -C hwinfo ntfs3g ; emerge ntfs3g ; emerge hwinfo ; emerge -C jack-audio-connection-kit audacity ; emerge audacity ; emerge jack-audio-connection-kit ; emerge -C sys-apps/dbus obs-studio ; emerge obs-studio ; emerge -1 sys-apps/dbus
 	quickpkg --include-unmodified-config=y "*/*" 2>&1 | ansi2html > /var/cache/binpkgs/s/quickpkg.html
-	emerge -B sudo openssh linux-firmware dcron cronie fcron anacron chromium torbrowser-launcher mail-mta/postfix acct-user/postfix acct-group/postfix
+	emerge -B sudo openssh glibc baselayout sysvinit linux-firmware dcron cronie fcron anacron chromium torbrowser-launcher mail-mta/postfix acct-user/postfix acct-group/postfix
 fi
 
 emerge --sync
