@@ -21,7 +21,7 @@ mount --rbind /sys sys
 
 cat << HEREDOC | chroot .
 emerge-webrsync
-eselect profile set "default/linux/amd64/17.0/hardened"
+eselect profile set "default/linux/amd64/17.1/hardened"
 
 rm -R /var/lib/portage/world /etc/portage/package.* /etc/portage/make.conf
 wget $gitprefix/binhost_settings/etc/portage/{make.conf,package.use,package.keywords,package.env,package.mask,package.unmask} -P /etc/portage/
@@ -45,16 +45,17 @@ binutils-config --linker ld.gold
 
 USE="-vaapi binary -color-management -opengl" emerge -1av gcc mesa scala netcat6 opencolorio openimageio
 emerge --depclean
+
 emerge -veD @world
+
 ax_cv_c_float_words_bigendian=no emerge -1 texlive-core
-sed -i "s/AR=\"gcc-ar\"/#AR=\"gcc-ar\"/" /etc/portage/make.conf ; emerge -1 ftjam argyllcms ; sed -i "s/#AR=\"gcc-ar\"/AR=\"gcc-ar\"/" /etc/portage/make.conf
+sed -i "s/AR=\"gcc-ar\"/#AR=\"gcc-ar\"/" /etc/portage/make.conf ; emerge argyllcms mongodb ; emerge -1 ftjam ; sed -i "s/#AR=\"gcc-ar\"/AR=\"gcc-ar\"/" /etc/portage/make.conf
 groupadd foldingathome ; emerge foldingathome
 emerge -uvDN @world
+emerge -C hwinfo ntfs3g ; emerge ntfs3g ; emerge hwinfo ; emerge -C sys-apps/dbus obs-studio ; emerge obs-studio ; emerge -1 sys-apps/dbus ; emerge -C jack-audio-connection-kit audacity ; emerge audacity ; emerge jack-audio-connection-kit
 
 emerge @preserved-rebuild
 emerge --depclean
-
-emerge -C hwinfo ntfs3g ; emerge ntfs3g ; emerge hwinfo ; emerge -C sys-apps/dbus obs-studio ; emerge obs-studio ; emerge -1 sys-apps/dbus ; emerge -C jack-audio-connection-kit audacity ; emerge audacity ; emerge jack-audio-connection-kit
 
 BINPKG_COMPRESS="xz" XZ_OPT="--x86 --lzma2=preset=9e,dict=1024MB,nice=273,depth=200,lc=4" quickpkg --include-unmodified-config=y "*/*"
 
