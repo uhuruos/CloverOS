@@ -72,7 +72,7 @@ USE flags: <span class="mono">USE="-systemd -pulseaudio -avahi -dbus -consolekit
 DL & Validate ISO: <span class="mono pre">gpg --keyserver hkp://pool.sks-keyservers.net --recv-key "78F5 AC55 A120 07F2 2DF9 A28A 78B9 3F76 B8E4 2805"
 wget https://cloveros.ga/s/'.$isoname.' https://cloveros.ga/s/signatures/s/'.$isoname.'.asc
 gpg --verify '.$isoname.'.asc '.$isoname.'</span>
-<br><br>
+<br>
 <a target="_blank" href="'.$git.'/installscript.sh">CloverOS install script</a>
 <div class="mono pre fileinfo">'.$installscriptsh.'</div>
 <a target="_blank" href="s/quickpkg.html"><span class="mono">$ sudo quickpkg --include-unmodified-config=y "*/*"</div></a>
