@@ -274,9 +274,10 @@ body {
 			<div class="dropdown-content" id="news">13-Dec-19
 Packages updated
 Kernel updated to 5.4.2
+ISO: https://cloveros.ga/s/CloverOS-x86_64-20191029.iso
 All packages rebuilt, so big update (sorry, nothing i can do)
-Retroarch updated to -9999 using https://github.com/barbudreadmon/abendbrot
-Wine updated to wine-staging/4.21::gentoo
+retroarch-9999 from https://github.com/barbudreadmon/abendbrot
+wine-staging-4.21::gentoo
 Overlays now in binhost_settings/etc/portage/repos.conf/eselect-repo.conf
 
 28-Oct-19
