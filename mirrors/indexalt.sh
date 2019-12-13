@@ -271,7 +271,15 @@ body {
 		<a id="logo" href="#">&zwnj;</a>
 		<div class="dropdown">
 			<a href="https://twitter.com/cloveros_ga">News</a>
-			<div class="dropdown-content" id="news">28-Oct-19
+			<div class="dropdown-content" id="news">13-Dec-19
+Packages updated
+Kernel updated to 5.4.2
+All packages rebuilt, so big update (sorry, nothing i can do)
+Retroarch updated to -9999 using https://github.com/barbudreadmon/abendbrot
+Wine updated to wine-staging/4.21::gentoo
+Overlays now in binhost_settings/etc/portage/repos.conf/eselect-repo.conf
+
+28-Oct-19
 Packages updated
 Kernel updated to 5.3.7
 ISO: https://cloveros.ga/s/CloverOS-x86_64-20191028.iso
