@@ -2,7 +2,7 @@
 sys-devel/gcc
 sys-kernel/gentoo-sources
 media-libs/mesa
-www-client/firefox::cloveros
+www-client/firefox::pg_overlay
 x11-libs/gtk+:3::mv # removes dbus
 app-emulation/winetricks::cloveros ** # overlay
 
@@ -43,6 +43,7 @@ dev-python/cairocffi # qtile
 dev-libs/ell # iwd
 =dev-lang/go-1.13.4 # fzf
 =dev-python/pycountry-18.5.26 # kde-meta
+=dev-libs/nspr-4.24 # firefox
 
 #libressl, remove when stable supports libressl
 =dev-qt/qtnetwork-5.12.5::libressl
@@ -56,6 +57,8 @@ www-client/elinks
 media-gfx/argyllcms
 
 #keyworded, remove when stable exists
+media-sound/whipper
+www-apps/gitea
 net-misc/youtube-comment-downloader
 www-plugins/chrome-binary-plugins
 app-emulation/dxvk
