@@ -25,7 +25,5 @@ ftjam argyllcms mongodb
 texlive-core
 # no longer emerges
 ckermit ng subversion soulseek-qt app-text/ots ncdc go-mtpfs quakeforge generator matplotlib pouetchess quake3-cpma distcc tiemu pinta guayadeque sbt webkit-gtk distcc scribus
-# gcc8 only
-pcsx2 palemoon
 # figure out working cflags
 redeclipse sauerbraten qt-creator

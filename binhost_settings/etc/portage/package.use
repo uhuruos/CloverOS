@@ -262,6 +262,7 @@ dev-qt/qt-creator -clang # don't build with clang
 www-client/ungoogled-chromium -clang # don't build with clang
 games-emulation/mesen-libretro -clang # don't build with clang
 games-emulation/stella-libretro -custom-cflags # fixes build
+www-client/firefox -pgo # ebuild says GCC+PGO won't work
 mate-base/mate-panel X # fixes build
 x11-plugins/gkrelltop X # fixes build
 dev-libs/efl luajit # fixes build

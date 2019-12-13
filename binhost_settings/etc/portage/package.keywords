@@ -57,8 +57,9 @@ www-client/elinks
 media-gfx/argyllcms
 
 #keyworded, remove when stable exists
+app-misc/rpick
 media-sound/whipper
-www-apps/gitea
+dev-python/pycdio # whipper
 net-misc/youtube-comment-downloader
 www-plugins/chrome-binary-plugins
 app-emulation/dxvk

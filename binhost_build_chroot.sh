@@ -45,11 +45,11 @@ binutils-config --linker ld.gold
 
 USE="-vaapi binary -color-management -opengl" emerge -1av gcc mesa scala netcat6 opencolorio openimageio
 emerge --depclean
-emerge -veD --exclude palemoon @world
+emerge -veD @world
 ax_cv_c_float_words_bigendian=no emerge -1 texlive-core
 sed -i "s/AR=\"gcc-ar\"/#AR=\"gcc-ar\"/" /etc/portage/make.conf ; emerge -1 ftjam argyllcms ; sed -i "s/#AR=\"gcc-ar\"/AR=\"gcc-ar\"/" /etc/portage/make.conf
 groupadd foldingathome ; emerge foldingathome
-emerge -uvDN --exclude palemoon @world
+emerge -uvDN @world
 
 emerge @preserved-rebuild
 emerge --depclean
