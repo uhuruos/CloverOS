@@ -147,7 +147,7 @@ void main(void) {
 				break;
 			}
 			*strchr(file, '\n') = '\0';
-			if (strcmp(file, "coretemp") == 0 || strcmp(file, "nct6775") == 0 || strncmp(file, "it8", 3) == 0 || strcmp(file, "k8temp") == 0 || strcmp(file, "k9temp") == 0) {
+			if (strcmp(file, "coretemp") == 0 || strcmp(file, "nct6775") == 0 || strncmp(file, "it8", 3) == 0 || strcmp(file, "k8temp") == 0 || strcmp(file, "k9temp") == 0 || strcmp(file, "k10temp") == 0) {
 				break;
 			}
 		}
