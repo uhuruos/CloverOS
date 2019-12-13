@@ -99,6 +99,9 @@ case "$choice" in
 			sudo unsymlink-lib --finish
 			sudo eselect profile set default/linux/amd64/17.1/hardened
 		fi
+		if [ -d /var/db/pkg/games-emulation/mednafen-saturn-libretro*/ ] ; then
+			sudo emerge -C games-emulation/mednafen-saturn-libretro
+		fi
 
 		sudo emerge --sync
 		sudo emerge -uvD @world
