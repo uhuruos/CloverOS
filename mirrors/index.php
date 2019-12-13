@@ -9,6 +9,7 @@ $packageuse = file_get_contents('../binhost_settings/etc/portage/package.use');
 $packageenv = file_get_contents('../binhost_settings/etc/portage/package.env');
 $packagekeywords = file_get_contents('../binhost_settings/etc/portage/package.keywords');
 $makeconf = file_get_contents('../binhost_settings/etc/portage/make.conf');
+$reposconf = file_get_contents('../binhost_settings/etc/portage/repos.conf/eselect-repo.conf');
 $worldtxt = file_get_contents('../binhost_settings/var/lib/portage/world');
 $installscriptsh = file_get_contents('../installscript.sh');
 $usermake = file_get_contents('../home/user/make.conf');
@@ -74,19 +75,16 @@ gpg --verify '.$isoname.'.asc '.$isoname.'</span>
 <br><br>
 <a target="_blank" href="'.$git.'/installscript.sh">CloverOS install script</a>
 <div class="mono pre fileinfo">'.$installscriptsh.'</div>
-<br>
 <a target="_blank" href="s/quickpkg.html"><span class="mono">$ sudo quickpkg --include-unmodified-config=y "*/*"</div></a>
 <div class="mono pre fileinfo">'.$quickpkg.'</div>
-<br>
 <a href="'.$git.'/binhost_settings/etc/portage/make.conf" target="_blank">/etc/portage/make.conf</a>
 <div class="mono pre fileinfo">'.$makeconf.'</div>
-<br>
 <a href="'.$git.'/binhost_settings/etc/portage/package.use" target="_blank">/etc/portage/package.use</a>
 <div class="mono pre fileinfo">'.$packageuse.'</div>
-<br>
 <a href="'.$git.'/binhost_settings/etc/portage/package.env" target="_blank">/etc/portage/package.env</a>
 <div class="mono pre fileinfo">'.$packageenv.'</div>
-<br>
+<a href="'.$git.'/binhost_settings/etc/portage/repos.conf/eselect-repo.conf" target="_blank">/etc/portage/repos.conf/eselect-repo.conf</a>
+<div class="mono pre fileinfo">'.$reposconf.'</div>
 <a href="'.$git.'/binhost_settings/var/lib/portage/world" target="_blank">/var/lib/portage/world</a>
 <div class="mono pre fileinfo">'.$worldtxt.'</div>
 '.$files.'
