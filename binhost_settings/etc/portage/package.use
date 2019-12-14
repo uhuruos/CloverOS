@@ -190,7 +190,7 @@ app-text/texlive X cjk context detex dvi2tty dvipdfm epspdf extra games graphics
 media-video/ffmpeg X bluray cdio rubberband libass vorbis ogg network vpx rtmp x264 aac wavpack opus mp3 sdl gme v4l webp theora xvid xcb cpudetection x265 libaom truetype libsoxr modplug
 virtual/ffmpeg X sdl x264
 www-servers/varnish jit jemalloc
-media-video/mpv rubberband archive cdda bluray dvd encode libmpv cplugins v4l
+media-video/mpv rubberband archive cdda bluray dvd encode libmpv cplugins v4l libcaca
 dev-lang/php curl gd fpm pdo fpm curl intl sqlite xmlreader xmlwriter nls mysqli zip
 app-eselect/eselect-php fpm
 net-p2p/retroshare feedreader voip

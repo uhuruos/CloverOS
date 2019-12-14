@@ -208,7 +208,7 @@ body {
 	background-size: cover;
 	border-radius: 320px;
 	margin-right: 50px;
-	margin-bottom: 100px;
+	margin-bottom: 160px;
 }
 #linksbg {
 	clear: both;
@@ -274,7 +274,7 @@ body {
 			<div class="dropdown-content" id="news">13-Dec-19
 Packages updated
 Kernel updated to 5.4.2
-ISO: https://cloveros.ga/s/CloverOS-x86_64-20191029.iso
+ISO: https://cloveros.ga/s/CloverOS-x86_64-20191213.iso
 All packages rebuilt, so big update (sorry, nothing i can do)
 retroarch-9999 from https://github.com/barbudreadmon/abendbrot
 wine-staging-4.21::gentoo
@@ -831,12 +831,14 @@ CloverOS GNU/Linux (Package Signing) 78F5 AC55 A120 07F2 2DF9 A28A 78B9 3F76 B8E
 		<div id="clover"></div>
 		<h3>Gentoo Linux, untouched</h3>
 		<p>CloverOS is an as default as possible Gentoo install with all system configuration done in /etc/portage/make.conf</p>
-		<h3>No bloat and easy to use</h3>
-		<p>A CloverOS desktop has OpenRC, fvwm, udev, agetty, dhcpcd and wpa_supplicant. That'\''s it. No hidden services.</p>
+		<h3>No bloat</h3>
+		<p>A CloverOS desktop just has OpenRC, fvwm, udev, agetty, dhcpcd and wpa_supplicant running.</p>
 		<h3>Easy and straightforward</h3>
-		<p>Simple desktop with a large variety of packages, just emerge and run.</p>
+		<p>Simple desktop with a large variety of packages available, just emerge and run.</p>
 		<h3>Pest-free</h3>
 		<p>Don'\''t need systemd, pulseaudio, dbus, avahi or nls? Neither does CloverOS.</p>
+		<h3>Performance optimizations</h3>
+		<p>Packages are built with Ofast, LTO and Graphite, or the next best CFLAGS.</p>
 </div>
 <div id="linksbg">
 	<div id="links">
