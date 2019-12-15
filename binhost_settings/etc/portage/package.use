@@ -199,6 +199,8 @@ x11-wm/e16 xcomposite # opengl
 net-im/pidgin spell
 net-irc/hexchat spell plugin-sysinfo
 dev-libs/weston xwayland
+gui-wm/sway X
+gui-libs/wlroots X # sway USE=X
 www-servers/nginx nginx_modules_http_dav nginx_modules_http_realip rtmp
 media-libs/freetype infinality -bindist
 net-libs/webkit-gtk -webgl -geolocation

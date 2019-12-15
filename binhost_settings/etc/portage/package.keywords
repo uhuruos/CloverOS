@@ -34,6 +34,7 @@ www-plugins/lightspark ** # stable relies on llvm6
 games-emulation/pcsx2 ** # old
 games-emulation/dolphin ** # old
 games-emulation/ppsspp ** # old
+dev-libs/weston # old
 app-shells/gentoo-zsh-completions ** # old
 dev-python/xcffib # qtile
 dev-python/cairocffi # qtile
@@ -57,6 +58,7 @@ www-client/elinks
 media-gfx/argyllcms
 
 #keyworded, remove when stable exists
+media-gfx/gif2apng
 app-misc/rpick
 media-sound/whipper
 dev-python/pycdio # whipper
