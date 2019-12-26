@@ -1,3 +1,5 @@
+=dev-lang/go-1.13.4
+
 #preference
 sys-devel/gcc
 sys-kernel/gentoo-sources
@@ -14,7 +16,7 @@ app-emulation/virtualbox-guest-additions # virtualbox
 app-emulation/virtualbox-additions # virtualbox
 app-emulation/virtualbox-modules # virtualbox
 app-emulation/virtualbox-extpack-oracle # virtualbox
-net-misc/youtube-dl # stable always outdated/never works
+net-misc/youtube-dl # stable always outdated and never works
 media-libs/zimg ** # vapoursynth
 media-fonts/opendesktop-fonts # fixes bug
 net-p2p/mldonkey # fixes build
@@ -28,9 +30,6 @@ x11-themes/terminology-themes ** # fixes build
 net-misc/freerdp ** # fixes build
 media-video/openshot # fixes build
 media-gfx/librecad # fixes build
-app-emulation/xen # fixes build
-app-emulation/xen-tools # xen
-www-plugins/lightspark ** # stable relies on llvm6
 games-emulation/pcsx2 ** # old
 games-emulation/dolphin ** # old
 games-emulation/ppsspp ** # old
@@ -38,19 +37,14 @@ dev-libs/weston # old
 app-shells/gentoo-zsh-completions ** # old
 dev-python/xcffib # qtile
 dev-python/cairocffi # qtile
-=dev-libs/libuv-1.33.1 # neovim
-=x11-libs/libdrm-2.4.100 # abiword
-=dev-libs/nss-3.47 # ungoogled-chromium
 dev-libs/ell # iwd
-=dev-lang/go-1.13.4 # fzf
-=dev-python/pycountry-18.5.26 # kde-meta
 =dev-libs/nspr-4.24 # firefox
+=media-libs/lv2-1.16.0
 
 #libressl, remove when stable supports libressl
 =dev-qt/qtnetwork-5.12.5::libressl
 app-crypt/qca::libressl
 net-libs/nodejs::libressl
-=net-libs/http-parser-2.9.2 # nodejs
 net-misc/megatools::jm-overlay
 www-client/dillo
 app-editors/xemacs
@@ -58,6 +52,10 @@ www-client/elinks
 media-gfx/argyllcms
 
 #keyworded, remove when stable exists
+www-plugins/lightspark
+app-i18n/ibus-kkc
+app-i18n/libkkc # ibus-kkc
+games-action/minetest
 media-gfx/gif2apng
 app-misc/rpick
 media-sound/whipper

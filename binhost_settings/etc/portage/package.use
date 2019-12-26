@@ -1,3 +1,6 @@
+sys-libs/ncurses-compat abi_x86_32
+www-client/firefox thinlto
+app-i18n/mozc ibus fcitx4
 games-emulation/retroarch cheevos
 media-gfx/librecad tools
 net-misc/ofono bluetooth
@@ -264,7 +267,6 @@ dev-qt/qt-creator -clang # don't build with clang
 www-client/ungoogled-chromium -clang # don't build with clang
 games-emulation/mesen-libretro -clang # don't build with clang
 games-emulation/stella-libretro -custom-cflags # fixes build
-www-client/firefox -pgo # ebuild says GCC+PGO won't work
 mate-base/mate-panel X # fixes build
 x11-plugins/gkrelltop X # fixes build
 dev-libs/efl luajit # fixes build
@@ -311,6 +313,7 @@ dev-libs/gtkd vte dmd-2_086 # tilix
 games-emulation/retroarch X # USE=xinerama
 sci-libs/hdf5 -threads # USE=cxx hl
 app-text/xmlto text # xdg-utils
+net-libs/zeromq drafts # ntopng
 dev-qt/qtsingleapplication X
 x11-libs/gtk+ X
 x11-libs/libva X

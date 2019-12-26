@@ -139,9 +139,11 @@ app-i18n/ibus-input-pad
 app-i18n/ibus-typing-booster
 app-i18n/ibus-unikey
 app-i18n/jfbterm
+app-i18n/mozc
 app-i18n/scim
 app-i18n/scim-anthy
 app-i18n/scim-m17n
+app-i18n/uim
 app-i18n/zhcon
 app-laptop/laptop-mode-tools
 app-laptop/thinkfan
@@ -247,6 +249,7 @@ app-text/kchmviewer
 app-text/lesspipe
 app-text/master-pdf-editor
 app-text/mupdf
+app-text/ocrad
 app-text/ots
 app-text/pandoc
 app-text/pstotext
@@ -342,6 +345,7 @@ dev-vcs/hgsubversion
 dev-vcs/mercurial
 dev-vcs/subversion
 games-action/extreme-tuxracer
+games-action/minetest
 games-action/supertuxkart
 games-action/violetland
 games-arcade/blobby
@@ -1211,7 +1215,7 @@ sys-fs/zfs-auto-snapshot
 sys-kernel/dkms
 sys-kernel/dracut
 sys-kernel/genkernel
-sys-kernel/gentoo-sources:5.4.2
+sys-kernel/gentoo-sources:5.4.3
 sys-kernel/linux-firmware
 sys-power/acpi_call
 sys-power/acpitool
