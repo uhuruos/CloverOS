@@ -1,3 +1,6 @@
+net-misc/pyhoca-gui python_targets_python3_6
+dev-python/wxpython python_targets_python3_6
+
 sys-libs/ncurses-compat abi_x86_32
 www-client/firefox thinlto
 app-i18n/mozc ibus fcitx4
@@ -12,7 +15,7 @@ x11-base/xorg-drivers video_cards_i915 video_cards_i965 video_cards_virtualbox i
 x11-libs/libva video_cards_i965
 virtual/opencl -video_cards_i965 -video_cards_amdgpu
 x11-wm/enlightenment acpi wifi
-dev-libs/efl X sound harfbuzz physics xpm drm gles2 -opengl
+dev-libs/efl X sound harfbuzz physics xpm drm gles2 fontconfig -opengl
 net-misc/dhcpcd-ui gtk
 media-sound/muse gtk
 x11-terms/tilix dmd-2_086
@@ -210,6 +213,7 @@ net-libs/webkit-gtk -webgl -geolocation
 dev-db/sqlite secure-delete
 media-libs/phonon -vlc
 media-libs/libsdl X
+dev-qt/qtwebengine jumbo-build
 www-client/chromium jumbo-build
 www-client/ungoogled-chromium optimize-webui jumbo-build
 mail-client/thunderbird -crypt

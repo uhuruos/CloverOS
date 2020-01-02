@@ -942,7 +942,6 @@ net-analyzer/nagstamon
 net-analyzer/nethogs
 net-analyzer/nload
 net-analyzer/nmap
-net-analyzer/ntopng
 net-analyzer/speedtest-cli
 net-analyzer/traceroute
 net-analyzer/vnstat
@@ -1086,7 +1085,6 @@ net-vpn/logmein-hamachi
 net-vpn/openvpn
 net-vpn/pptpd
 net-vpn/tor
-net-vpn/wireguard
 net-wireless/aircrack-ng
 net-wireless/blueman
 net-wireless/bluez
@@ -1232,6 +1230,7 @@ sys-process/iotop
 sys-process/lsof
 sys-process/parallel
 virtual/wine
+virtual/wireguard
 www-apps/otrs
 www-apps/trac
 www-client/dillo

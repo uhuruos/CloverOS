@@ -8,7 +8,7 @@ packages that don't build:
 # doesn't emerge
 telegram-purple edbrowse fingerprint-gui opentoonz eduke32 racket monodevelop mididings stumpwm stumpwm-contrib
 # packages with no libressl support
-zeronet nxplayer murmur makemkv eiskaltdcpp retroshare acme-tiny spyder johntheripper-jumbo eagle
+ntopng zeronet nxplayer murmur makemkv eiskaltdcpp retroshare acme-tiny spyder johntheripper-jumbo eagle
 # requires jack2
 cadence ladish
 # dependency use flag requirements
