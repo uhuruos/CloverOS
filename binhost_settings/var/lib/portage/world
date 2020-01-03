@@ -281,7 +281,6 @@ dev-lang/elixir
 dev-lang/go
 dev-lang/open-cobol
 dev-lang/php
-dev-lang/rust
 dev-lang/scala
 dev-lang/tauthon
 dev-lang/tcc
@@ -302,8 +301,6 @@ dev-python/pystache
 dev-python/sphinx
 dev-python/sympy
 dev-python/virtualenv
-dev-python/yolk
-dev-python/yolk-portage
 dev-qt/qt-creator
 dev-ruby/nokogiri
 dev-util/android-ndk
@@ -1484,7 +1481,6 @@ x11-terms/kterm
 x11-terms/lilyterm
 x11-terms/mlterm
 x11-terms/mrxvt
-x11-terms/multi-aterm
 x11-terms/qterminal
 x11-terms/root-tail
 x11-terms/roxterm
