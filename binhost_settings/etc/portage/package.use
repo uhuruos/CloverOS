@@ -1,8 +1,8 @@
-net-misc/pyhoca-gui python_targets_python3_6
-dev-python/wxpython python_targets_python3_6
+#temporary
+www-client/firefox thinlto clang cross-lto
+www-client/ungoogled-chromium thinlto clang optimize-thinlto
+www-client/torbrowser clang
 
-sys-libs/ncurses-compat abi_x86_32
-www-client/firefox thinlto
 app-i18n/mozc ibus fcitx4
 games-emulation/retroarch cheevos
 media-gfx/librecad tools
@@ -215,7 +215,7 @@ media-libs/phonon -vlc
 media-libs/libsdl X
 dev-qt/qtwebengine jumbo-build
 www-client/chromium jumbo-build
-www-client/ungoogled-chromium optimize-webui jumbo-build
+www-client/ungoogled-chromium optimize-webui jumbo-build closure-compile
 mail-client/thunderbird -crypt
 www-client/waterfox -pgo
 www-client/seamonkey -crypt -minimal
@@ -268,7 +268,7 @@ mate-extra/mate-screensaver -pam # removes dependency gnome-keyring
 media-sound/bitwig-studio -jack # removes dependency jack2
 app-portage/portage-utils -qmanifest # removes dependency gpgme
 dev-qt/qt-creator -clang # don't build with clang
-www-client/ungoogled-chromium -clang # don't build with clang
+#www-client/ungoogled-chromium -clang # don't build with clang
 games-emulation/mesen-libretro -clang # don't build with clang
 games-emulation/stella-libretro -custom-cflags # fixes build
 mate-base/mate-panel X # fixes build
