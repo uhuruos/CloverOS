@@ -1,0 +1,2 @@
+CFLAGS="-Ofast -mssse3 -pipe -funroll-loops -flto=8 -Wl,--hash-style=gnu"
+CXXFLAGS="${CFLAGS}"

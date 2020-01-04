@@ -1,7 +1,4 @@
-#testing
-www-client/waterfox pgo
-
-#temporary
+# temporary
 www-client/firefox clang thinlto cross-lto
 www-client/ungoogled-chromium clang thinlto optimize-thinlto
 www-client/torbrowser clang
@@ -270,9 +267,9 @@ mate-extra/mate-screensaver -pam # removes dependency gnome-keyring
 media-sound/bitwig-studio -jack # removes dependency jack2
 app-portage/portage-utils -qmanifest # removes dependency gpgme
 dev-qt/qt-creator -clang # don't build with clang
-#www-client/ungoogled-chromium -clang # don't build with clang
 games-emulation/mesen-libretro -clang # don't build with clang
 games-emulation/stella-libretro -custom-cflags # fixes build
+www-client/waterfox -pgo # fixes build
 mate-base/mate-panel X # fixes build
 x11-plugins/gkrelltop X # fixes build
 dev-libs/efl luajit # fixes build

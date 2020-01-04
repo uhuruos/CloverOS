@@ -899,15 +899,18 @@ media-tv/plex-media-server
 media-video/aegisub
 media-video/avidemux
 media-video/baka-mplayer
+media-video/blind
 media-video/celluloid
 media-video/cinelerra
 media-video/dvdbackup
 media-video/ffcast
 media-video/ffmpeg
 media-video/ffmpegthumbnailer
+media-video/gaupol
 media-video/gpac
 media-video/handbrake
 media-video/kaffeine
+media-video/kino
 media-video/mediainfo
 media-video/mkvtoolnix
 media-video/mpv
@@ -918,6 +921,8 @@ media-video/rtmpdump
 media-video/shotcut
 media-video/smplayer
 media-video/smtube
+media-video/subtitlecomposer
+media-video/subtitleeditor
 media-video/subtitleripper
 media-video/syncplay
 media-video/vdr

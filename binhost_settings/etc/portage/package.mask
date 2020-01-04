@@ -59,8 +59,7 @@ x11-libs/vte::gentoo # eroen
 >dev-lang/tcl-8.6 # doesn't build
 
 # version dependency
-#>sys-apps/pkgcore-0.9.7
-#>dev-python/dnspython-1.15.0-r1
-#>media-video/handbrake-1.2.2-r3
-#>app-editors/emacs-26.2
+>media-video/handbrake-1.2.2-r3
+>dev-python/dnspython-1.15.0-r1
 >net-misc/pyhoca-gui-0.5.1.0
+>media-video/flowblade-2.2
