@@ -1,6 +1,9 @@
+#testing
+www-client/waterfox pgo
+
 #temporary
-www-client/firefox thinlto clang cross-lto
-www-client/ungoogled-chromium thinlto clang optimize-thinlto
+www-client/firefox clang thinlto cross-lto
+www-client/ungoogled-chromium clang thinlto optimize-thinlto
 www-client/torbrowser clang
 
 app-i18n/mozc ibus fcitx4
@@ -217,7 +220,6 @@ dev-qt/qtwebengine jumbo-build
 www-client/chromium jumbo-build
 www-client/ungoogled-chromium optimize-webui jumbo-build closure-compile
 mail-client/thunderbird -crypt
-www-client/waterfox -pgo
 www-client/seamonkey -crypt -minimal
 www-client/palemoon -official-branding
 media-sound/sox alsa openmp encode flac id3tag ladspa mad ogg opus sndfile twolame wavpack

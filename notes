@@ -6,7 +6,7 @@ livecd_install.sh: uefi install, encryption
 
 packages that don't build:
 # doesn't emerge
-telegram-purple edbrowse fingerprint-gui opentoonz eduke32 racket monodevelop mididings stumpwm stumpwm-contrib
+flowblade telegram-purple edbrowse fingerprint-gui opentoonz eduke32 racket monodevelop mididings stumpwm stumpwm-contrib
 # packages with no libressl support
 ntopng zeronet nxplayer murmur makemkv eiskaltdcpp retroshare acme-tiny spyder johntheripper-jumbo eagle
 # requires jack2
@@ -25,5 +25,3 @@ ftjam argyllcms mongodb
 texlive-core
 # no longer emerges
 ckermit ng subversion soulseek-qt app-text/ots ncdc go-mtpfs quakeforge generator matplotlib pouetchess quake3-cpma distcc tiemu pinta guayadeque sbt webkit-gtk distcc scribus
-# figure out working cflags
-redeclipse sauerbraten qt-creator
