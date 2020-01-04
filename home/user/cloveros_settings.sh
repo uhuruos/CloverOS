@@ -76,7 +76,7 @@ case "$choice" in
 		if [ -d /var/db/pkg/sys-devel/gcc-8*/ ]; then
 			sudo FETCHCOMMAND_HTTPS="wget -O \"\${DISTDIR}/\${FILE}\" \"\${URI}\"" emerge -1 gcc glibc
 		fi
-		if [ ! -d /var/db/pkg/net-libs/gnutls-3.6.7/ ]; then
+		if [ ! -d /var/db/pkg/net-libs/gnutls-3.6.7-r1/ ]; then
 			sudo FETCHCOMMAND_HTTPS="wget -O \"\${DISTDIR}/\${FILE}\" \"\${URI}\"" emerge -1 gnutls aria2
 		fi
 		if [ -d /var/db/pkg/dev-perl/Locale-gettext*/ ]; then
