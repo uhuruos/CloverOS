@@ -19,7 +19,7 @@ colorhug-client # libusb USE=udev
 picard # qtgui USE=accessibility
 # builds, but doesn't work
 zsnes
-# builds, requires AR="gcc-ar" commented out
+# builds, requires AR="gcc-ar" in make.conf commented out
 ftjam argyllcms mongodb
 # builds, requires ax_cv_c_float_words_bigendian=no
 texlive-core
