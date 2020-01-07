@@ -58,6 +58,8 @@ x11-libs/vte::gentoo # eroen
 >dev-lang/tk-8.6 # doesn't build
 >dev-lang/tcl-8.6 # doesn't build
 
+>sys-kernel/genkernel-3.5.3.3 # genkernel 4 is buggy, incorrect filenames
+
 # version dependency
 >media-video/handbrake-1.2.2-r3
 >dev-python/dnspython-1.15.0-r1
