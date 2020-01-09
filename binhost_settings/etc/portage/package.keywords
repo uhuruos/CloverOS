@@ -5,6 +5,8 @@ media-libs/mesa
 www-client/firefox::pg_overlay
 x11-libs/gtk+:3::mv # removes dbus
 app-emulation/winetricks::cloveros ** # overlay
+media-video/mpv
+media-video/smplayer
 
 #old, remove when stable is bumped up
 sys-fs/zfs # kernel 5.4
@@ -37,6 +39,8 @@ dev-python/xcffib # qtile
 dev-python/cairocffi # qtile
 dev-libs/ell # iwd
 =dev-libs/nspr-4.24 # firefox
+=dev-libs/nss-3.48-r1 # firefox
+=dev-util/cbindgen-0.10.1 # firefox
 =media-libs/lv2-1.16.0
 =net-misc/pyhoca-gui-0.6.1.0
 =dev-libs/libuv-1.34.0

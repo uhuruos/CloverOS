@@ -43,6 +43,10 @@ binutils-config --linker ld.gold
 
 FETCHCOMMAND_HTTPS="wget -O \"\\\${DISTDIR}/\\\${FILE}\" \"\\\${URI}\"" emerge -1 gcc glibc acct-group/input acct-group/kvm acct-group/render
 
+#emerge gentoo-sources genkernel
+#wget https://raw.githubusercontent.com/damentz/liquorix-package/master/linux-liquorix/debian/config/kernelarch-x86/config-arch-64
+#genkernel --kernel-config=config-arch-64 all
+
 emerge grub dhcpcd
 rc-update add dhcpcd default
 
@@ -113,7 +117,6 @@ urxvtc -geometry 1000x1+0+0 -fn 6x13 -letsp 0 -sl 0 -e ~/stats.sh
 xinput set-prop "SynPS/2 Synaptics TouchPad" "libinput Tapping Enabled" 1 & xinput list --name-only | sed "/Virtual core pointer/,/Virtual core keyboard/"\!"d;//d" | xargs -I{} xinput set-prop pointer:{} "libinput Accel Profile Enabled" 0 1 &> /dev/null &
 fi' >> /home/$username/.bash_profile
 
-sed -i "s@unsquashfs\(.*\)@unsquashfs\1\ncp /mnt/cdrom/boot/gentoo gentoo/boot/kernel-genkernel-x86_64-\\\$(uname -r)\ncat /mnt/cdrom/boot/gentoo.igz | gzip -d | xz --format=lzma > gentoo/boot/initramfs-genkernel-x86_64-\\\$(uname -r)\ncp /mnt/cdrom/boot/System-gentoo.map gentoo/boot/System.map-genkernel-x86_64-\\\$(uname -r)@; s@ /lib/modules/\*aufs\*@@" livecd_install.sh
 sed -i "s/nomacs/geeqie/g" .fvwm2rc .config/mimeapps.list
 sed -i "s/qasmixer/alsamixergui/" .fvwm2rc
 mkdir .config/geeqie/
@@ -127,18 +130,18 @@ HEREDOC
 
 cd ..
 umount -l mini_image/*
-wget https://cloveros.ga/s/kernel-livecd-libre.tar.lzma
-tar -C mini_image/lib/modules/ -xf kernel-livecd-libre.tar.lzma --wildcards \*-aufs-gnu/\*
-mksquashfs mini_image/ mini_image.squashfs -b 1M -comp xz -Xbcj x86 -Xdict-size 1M
+wget https://cloveros.ga/s/kernel.tar.lzma
+tar -C mini_image/lib/modules/ -xf kernel.tar.lzma --wildcards \*-aufs/\*
+mksquashfs mini_image/ image.squashfs -b 1M -comp xz -Xbcj x86 -Xdict-size 1M
 mkdir mini_iso/
 builddate=$(wget -O - http://distfiles.gentoo.org/releases/amd64/autobuilds/current-install-amd64-minimal/ | sed -nr "s/.*href=\"install-amd64-minimal-([0-9].*).iso\">.*/\1/p")
 wget http://distfiles.gentoo.org/releases/amd64/autobuilds/current-install-amd64-minimal/install-amd64-minimal-$builddate.iso -P mini_iso/
 xorriso -osirrox on -indev mini_iso/*.iso -extract / mini_iso/
 rm mini_iso/*.iso
-mv mini_image.squashfs mini_iso/image.squashfs
-tar -xOf kernel-livecd-libre.tar.lzma --wildcards ./kernel-genkernel-x86_64-\* > mini_iso/boot/gentoo
-tar -xOf kernel-livecd-libre.tar.lzma --wildcards ./initramfs-genkernel-x86_64-\* | xz -d | gzip > mini_iso/boot/gentoo.igz
-tar -xOf kernel-livecd-libre.tar.lzma --wildcards ./System.map-genkernel-x86_64-\* > mini_iso/boot/System-gentoo.map
+mv image.squashfs mini_iso/image.squashfs
+tar -xOf kernel.tar.lzma --wildcards ./kernel-genkernel-x86_64-\* > mini_iso/boot/gentoo
+tar -xOf kernel.tar.lzma --wildcards ./initramfs-genkernel-x86_64-\* | xz -d | gzip > mini_iso/boot/gentoo.igz
+tar -xOf kernel.tar.lzma --wildcards ./System.map-genkernel-x86_64-\* > mini_iso/boot/System-gentoo.map
 sed -i "s@dokeymap@aufs@g" mini_iso/isolinux/isolinux.cfg
 sed -i "s@dokeymap@aufs@g" mini_iso/grub/grub.cfg
 xorriso -as mkisofs -r -J \
@@ -148,4 +151,4 @@ xorriso -as mkisofs -r -J \
 	-b isolinux/isolinux.bin -c isolinux/boot.cat \
 	-no-emul-boot -boot-load-size 4 -boot-info-table  \
 	-o CloverOS_Minimal-x86_64-$(date +"%Y%m%d").iso mini_iso/
-rm -Rf mini_image/ mini_iso/ kernel-livecd-libre.tar.lzma
+rm -Rf mini_image/ mini_iso/ kernel.tar.lzma

@@ -57,6 +57,10 @@ mount /dev/$partition gentoo
 
 unsquashfs -f -d gentoo /mnt/cdrom/image.squashfs
 
+cp /mnt/cdrom/boot/gentoo gentoo/boot/kernel-genkernel-x86_64-$(uname -r)
+cat /mnt/cdrom/boot/gentoo.igz | gzip -d | xz --format=lzma > gentoo/boot/initramfs-genkernel-x86_64-$(uname -r)
+cp /mnt/cdrom/boot/System-gentoo.map gentoo/boot/System.map-genkernel-x86_64-$(uname -r)
+
 cd gentoo/
 mount -t proc none proc
 mount --rbind /dev dev
@@ -75,7 +79,7 @@ sed -i "s/set timeout=5/set timeout=0/" /boot/grub/grub.cfg
 sed -i "s@c1:12345:respawn:/sbin/agetty -a $livecduser --noclear 38400 tty1 linux@c1:12345:respawn:/sbin/agetty --noclear 38400 tty1 linux@" /etc/inittab
 sed -i '/^#/!d' /home/$livecduser/.bash_profile
 sed -i "s/^#\(.*\)/\1/g" /home/$livecduser/.bash_profile
-rm -Rf /home/$livecduser/livecd_install.sh /lib/modules/*aufs*
+rm /home/$livecduser/livecd_install.sh
 
 sed -i "s@/home/$livecduser/@/home/$username/@" /home/$livecduser/.rtorrent.rc
 sed -i "s@/home/$livecduser/@/home/$username/@" /home/$livecduser/.config/nitrogen/nitrogen.cfg
