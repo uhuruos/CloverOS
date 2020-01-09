@@ -13,7 +13,7 @@ mkdir libre_image/
 cd libre_image/
 
 builddate=$(wget -O - http://distfiles.gentoo.org/releases/amd64/autobuilds/current-stage3-amd64/ | sed -nr "s/.*href=\"stage3-amd64-([0-9].*).tar.xz\">.*/\1/p")
-wget http://distfiles.gentoo.org/releases/amd64/autobuilds/current-stage3-amd64/stage3-amd64-"$builddate".tar.xz
+wget http://distfiles.gentoo.org/releases/amd64/autobuilds/current-stage3-amd64/stage3-amd64-$builddate.tar.xz
 tar pxf stage3*
 rm -f stage3*
 
@@ -45,9 +45,6 @@ FETCHCOMMAND_HTTPS="wget -O \"\\\${DISTDIR}/\\\${FILE}\" \"\\\${URI}\"" emerge -
 #emerge gentoo-sources genkernel
 #wget https://raw.githubusercontent.com/damentz/liquorix-package/master/linux-liquorix/debian/config/kernelarch-x86/config-arch-64
 #genkernel --kernel-config=config-arch-64 all
-wget https://cloveros.ga/s/kernel-libre.tar.lzma https://cloveros.ga/s/signatures/s/kernel-libre.tar.lzma.asc
-gpg --verify kernel-libre.tar.lzma.asc kernel-libre.tar.lzma && tar xf kernel-libre.tar.lzma
-rm kernel-libre.tar.lzma kernel-libre.tar.lzma.asc
 
 emerge grub dhcpcd
 rc-update add dhcpcd default

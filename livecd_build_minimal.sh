@@ -13,7 +13,7 @@ mkdir mini_image/
 cd mini_image/
 
 builddate=$(wget -O - http://distfiles.gentoo.org/releases/amd64/autobuilds/current-stage3-amd64/ | sed -nr "s/.*href=\"stage3-amd64-([0-9].*).tar.xz\">.*/\1/p")
-wget http://distfiles.gentoo.org/releases/amd64/autobuilds/current-stage3-amd64/stage3-amd64-"$builddate".tar.xz
+wget http://distfiles.gentoo.org/releases/amd64/autobuilds/current-stage3-amd64/stage3-amd64-$builddate.tar.xz
 tar pxf stage3*
 rm -f stage3*
 
@@ -132,7 +132,6 @@ cd ..
 umount -l mini_image/*
 wget https://cloveros.ga/s/kernel.tar.lzma https://cloveros.ga/s/signatures/s/kernel.tar.lzma.asc
 gpg --verify kernel.tar.lzma.asc kernel.tar.lzma && tar xf kernel.tar.lzma
-rm kernel.tar.lzma kernel.tar.lzma.asc
 tar -C mini_image/lib/modules/ -xf kernel.tar.lzma --wildcards \*-aufs/\*
 mksquashfs mini_image/ image.squashfs -b 1M -comp xz -Xbcj x86 -Xdict-size 1M
 mkdir mini_iso/
