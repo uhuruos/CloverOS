@@ -46,9 +46,6 @@ FETCHCOMMAND_HTTPS="wget -O \"\\\${DISTDIR}/\\\${FILE}\" \"\\\${URI}\"" emerge -
 #emerge gentoo-sources genkernel
 #wget https://raw.githubusercontent.com/damentz/liquorix-package/master/linux-liquorix/debian/config/kernelarch-x86/config-arch-64
 #genkernel --kernel-config=config-arch-64 all
-wget https://cloveros.ga/s/kernel.tar.lzma https://cloveros.ga/s/signatures/s/kernel.tar.lzma.asc
-gpg --verify kernel.tar.lzma.asc kernel.tar.lzma && tar xf kernel.tar.lzma
-rm kernel.tar.lzma kernel.tar.lzma.asc
 
 emerge grub dhcpcd
 rc-update add dhcpcd default
@@ -123,8 +120,9 @@ HEREDOC
 
 cd ..
 umount -l image/*
-wget https://cloveros.ga/s/kernel-livecd.tar.lzma
-tar -C image/lib/modules/ -xf kernel-livecd.tar.lzma --wildcards \*-aufs/\*
+wget https://cloveros.ga/s/kernel.tar.lzma https://cloveros.ga/s/signatures/s/kernel.tar.lzma.asc
+gpg --verify kernel.tar.lzma.asc kernel.tar.lzma && tar xf kernel.tar.lzma
+tar -C image/lib/modules/ -xf kernel.tar.lzma --wildcards \*-aufs/\*
 mksquashfs image/ image.squashfs -b 1M -comp xz -Xbcj x86 -Xdict-size 1M
 mkdir iso/
 builddate=$(wget -O - http://distfiles.gentoo.org/releases/amd64/autobuilds/current-install-amd64-minimal/ | sed -nr "s/.*href=\"install-amd64-minimal-([0-9].*).iso\">.*/\1/p")
@@ -132,9 +130,9 @@ wget http://distfiles.gentoo.org/releases/amd64/autobuilds/current-install-amd64
 xorriso -osirrox on -indev iso/*.iso -extract / iso/
 rm iso/*.iso
 mv image.squashfs iso/image.squashfs
-tar -xOf kernel-livecd.tar.lzma --wildcards ./kernel-genkernel-x86_64-\* > iso/boot/gentoo
-tar -xOf kernel-livecd.tar.lzma --wildcards ./initramfs-genkernel-x86_64-\* | xz -d | gzip > iso/boot/gentoo.igz
-tar -xOf kernel-livecd.tar.lzma --wildcards ./System.map-genkernel-x86_64-\* > iso/boot/System-gentoo.map
+tar -xOf kernel.tar.lzma --wildcards ./kernel-genkernel-x86_64-\* > iso/boot/gentoo
+tar -xOf kernel.tar.lzma --wildcards ./initramfs-genkernel-x86_64-\* | xz -d | gzip > iso/boot/gentoo.igz
+tar -xOf kernel.tar.lzma --wildcards ./System.map-genkernel-x86_64-\* > iso/boot/System-gentoo.map
 sed -i "s@dokeymap@aufs@g" iso/isolinux/isolinux.cfg
 sed -i "s@dokeymap@aufs@g" iso/grub/grub.cfg
 xorriso -as mkisofs -r -J \
@@ -144,4 +142,4 @@ xorriso -as mkisofs -r -J \
 	-b isolinux/isolinux.bin -c isolinux/boot.cat \
 	-no-emul-boot -boot-load-size 4 -boot-info-table  \
 	-o CloverOS-x86_64-$(date +"%Y%m%d").iso iso/
-rm -Rf image/ iso/ kernel-livecd.tar.lzma
+rm -Rf image/ iso/ kernel.tar.lzma kernel.tar.lzma.asc

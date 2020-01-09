@@ -122,8 +122,8 @@ HEREDOC
 
 cd ..
 umount -l libre_image/*
-wget https://cloveros.ga/s/kernel-livecd-libre.tar.lzma
-tar -C libre_image/lib/modules/ -xf kernel-livecd-libre.tar.lzma --wildcards \*-aufs-gnu/\*
+wget https://cloveros.ga/s/kernel-libre.tar.lzma https://cloveros.ga/s/signatures/s/kernel-libre.tar.lzma.asc
+gpg --verify kernel-libre.tar.lzma.asc kernel-libre.tar.lzma && tar xf kernel-libre.tar.lzma
 mksquashfs libre_image/ libre_image.squashfs -b 1M -comp xz -Xbcj x86 -Xdict-size 1M
 mkdir libre_iso/
 builddate=$(wget -O - http://distfiles.gentoo.org/releases/amd64/autobuilds/current-install-amd64-minimal/ | sed -nr "s/.*href=\"install-amd64-minimal-([0-9].*).iso\">.*/\1/p")
@@ -131,9 +131,9 @@ wget http://distfiles.gentoo.org/releases/amd64/autobuilds/current-install-amd64
 xorriso -osirrox on -indev libre_iso/*.iso -extract / libre_iso/
 rm libre_iso/*.iso
 mv libre_image.squashfs libre_iso/image.squashfs
-tar -xOf kernel-livecd-libre.tar.lzma --wildcards ./kernel-genkernel-x86_64-\* > libre_iso/boot/gentoo
-tar -xOf kernel-livecd-libre.tar.lzma --wildcards ./initramfs-genkernel-x86_64-\* | xz -d | gzip > libre_iso/boot/gentoo.igz
-tar -xOf kernel-livecd-libre.tar.lzma --wildcards ./System.map-genkernel-x86_64-\* > libre_iso/boot/System-gentoo.map
+tar -xOf kernel--libre.tar.lzma --wildcards ./kernel-genkernel-x86_64-\* > libre_iso/boot/gentoo
+tar -xOf kernel-libre.tar.lzma --wildcards ./initramfs-genkernel-x86_64-\* | xz -d | gzip > libre_iso/boot/gentoo.igz
+tar -xOf kernel-libre.tar.lzma --wildcards ./System.map-genkernel-x86_64-\* > libre_iso/boot/System-gentoo.map
 sed -i "s@dokeymap@aufs@g" libre_iso/isolinux/isolinux.cfg
 sed -i "s@dokeymap@aufs@g" libre_iso/grub/grub.cfg
 xorriso -as mkisofs -r -J \
@@ -143,4 +143,4 @@ xorriso -as mkisofs -r -J \
 	-b isolinux/isolinux.bin -c isolinux/boot.cat \
 	-no-emul-boot -boot-load-size 4 -boot-info-table  \
 	-o CloverOS_Libre-x86_64-$(date +"%Y%m%d").iso libre_iso/
-rm -Rf libre_image/ libre_iso/ kernel-livecd-libre.tar.lzma
+rm -Rf libre_image/ libre_iso/ kernel-libre.tar.lzma kernel-libre.tar.lzma.asc

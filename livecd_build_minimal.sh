@@ -130,7 +130,9 @@ HEREDOC
 
 cd ..
 umount -l mini_image/*
-wget https://cloveros.ga/s/kernel.tar.lzma
+wget https://cloveros.ga/s/kernel.tar.lzma https://cloveros.ga/s/signatures/s/kernel.tar.lzma.asc
+gpg --verify kernel.tar.lzma.asc kernel.tar.lzma && tar xf kernel.tar.lzma
+rm kernel.tar.lzma kernel.tar.lzma.asc
 tar -C mini_image/lib/modules/ -xf kernel.tar.lzma --wildcards \*-aufs/\*
 mksquashfs mini_image/ image.squashfs -b 1M -comp xz -Xbcj x86 -Xdict-size 1M
 mkdir mini_iso/
@@ -151,4 +153,4 @@ xorriso -as mkisofs -r -J \
 	-b isolinux/isolinux.bin -c isolinux/boot.cat \
 	-no-emul-boot -boot-load-size 4 -boot-info-table  \
 	-o CloverOS_Minimal-x86_64-$(date +"%Y%m%d").iso mini_iso/
-rm -Rf mini_image/ mini_iso/ kernel.tar.lzma
+rm -Rf mini_image/ mini_iso/ kernel.tar.lzma kernel.tar.lzma.asc
