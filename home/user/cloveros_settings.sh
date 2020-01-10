@@ -99,6 +99,9 @@ case "$choice" in
 		if [ ! -d /var/db/pkg/net-libs/gnutls-3.6.7-r1/ ]; then
 			sudo FETCHCOMMAND_HTTPS="wget -O \"\${DISTDIR}/\${FILE}\" \"\${URI}\"" emerge -1 gnutls aria2
 		fi
+		if grep -q "^python3.5$" /etc/python-exec/python-exec.conf; then
+			sudo eselect python cleanup
+		fi
 
 		sudo emerge --sync
 		sudo emerge -uvD @world
