@@ -121,7 +121,7 @@ HEREDOC
 cd ..
 umount -l image/*
 wget https://cloveros.ga/s/kernel.tar.lzma https://cloveros.ga/s/signatures/s/kernel.tar.lzma.asc
-gpg --verify kernel.tar.lzma.asc kernel.tar.lzma && tar xf kernel.tar.lzma
+gpg --verify kernel.tar.lzma.asc kernel.tar.lzma
 tar -C image/lib/modules/ -xf kernel.tar.lzma --wildcards \*-gentoo/\*
 mksquashfs image/ image.squashfs -b 1M -comp xz -Xbcj x86 -Xdict-size 1M
 mkdir iso/
@@ -130,9 +130,9 @@ wget http://distfiles.gentoo.org/releases/amd64/autobuilds/current-install-amd64
 xorriso -osirrox on -indev iso/*.iso -extract / iso/
 rm iso/*.iso
 mv image.squashfs iso/image.squashfs
-tar -xOf kernel.tar.lzma --wildcards ./kernel-genkernel-x86_64-\* > iso/boot/gentoo
-tar -xOf kernel.tar.lzma --wildcards ./initramfs-genkernel-x86_64-\* | xz -d | gzip > iso/boot/gentoo.igz
-tar -xOf kernel.tar.lzma --wildcards ./System.map-genkernel-x86_64-\* > iso/boot/System-gentoo.map
+tar -xOf kernel.tar.lzma --wildcards boot/kernel-genkernel-x86_64-\* > iso/boot/gentoo
+tar -xOf kernel.tar.lzma --wildcards boot/initramfs-genkernel-x86_64-\* | xz -d | gzip > iso/boot/gentoo.igz
+tar -xOf kernel.tar.lzma --wildcards boot/System.map-genkernel-x86_64-\* > iso/boot/System-gentoo.map
 sed -i "s@dokeymap@aufs@g" iso/isolinux/isolinux.cfg
 sed -i "s@dokeymap@aufs@g" iso/grub/grub.cfg
 xorriso -as mkisofs -r -J \
