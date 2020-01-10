@@ -129,7 +129,7 @@ wget http://distfiles.gentoo.org/releases/amd64/autobuilds/current-install-amd64
 xorriso -osirrox on -indev libre_iso/*.iso -extract / libre_iso/
 rm libre_iso/*.iso
 mv libre_image.squashfs libre_iso/image.squashfs
-tar -xOf kernel--libre.tar.lzma --wildcards ./kernel-genkernel-x86_64-\* > libre_iso/boot/gentoo
+tar -xOf kernel-libre.tar.lzma --wildcards ./kernel-genkernel-x86_64-\* > libre_iso/boot/gentoo
 tar -xOf kernel-libre.tar.lzma --wildcards ./initramfs-genkernel-x86_64-\* | xz -d | gzip > libre_iso/boot/gentoo.igz
 tar -xOf kernel-libre.tar.lzma --wildcards ./System.map-genkernel-x86_64-\* > libre_iso/boot/System-gentoo.map
 sed -i "s@dokeymap@aufs@g" libre_iso/isolinux/isolinux.cfg
