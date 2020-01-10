@@ -271,7 +271,12 @@ body {
 		<a id="logo" href="#">&zwnj;</a>
 		<div class="dropdown">
 			<a href="https://twitter.com/cloveros_ga">News</a>
-			<div class="dropdown-content" id="news">07-Jan-20
+			<div class="dropdown-content" id="news">10-Jan-20
+Packages updated
+ISO: https://cloveros.ga/s/CloverOS-x86_64-20200110.iso
+Main kernel now has aufs patched in - livecd kernel is the same as regular
+
+07-Jan-20
 Packages updated
 Kernel updated to 5.4.8
 ISO: https://cloveros.ga/s/CloverOS-x86_64-20200106.iso
