@@ -106,7 +106,7 @@ export DISPLAY=:0
 fvwm &
 while sleep 0.2; do if [ -d /proc/\$! ]; then ((i++)); [ "\$i" -gt 6 ] && break; else i=0; fvwm & fi; done
 urxvtd -o -f
-urxvtc -geometry 80x24+100+100 -e sudo ./livecd_install.sh
+urxvtc -geometry 80x24+120+100 -e sudo ./livecd_install.sh
 rc-config start wpa_supplicant &> /dev/null &
 nitrogen --set-zoom wallpaper.png &
 spacefm --desktop &
