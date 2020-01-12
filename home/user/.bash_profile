@@ -29,7 +29,7 @@ if [ -z "$DISPLAY" ] && [ -z "$SSH_CLIENT" ] && [ -z "$TMUX" ] && ! pgrep X > /d
 	wmspkg[e]="enlightenment:0.17 terminology"
 	wmspost[e]=""
 
-	wms[k]=startkde
+	wms[k]=startplasma-x11
 	wmspkg[k]="kdebase-meta gwenview"
 	wmspost[k]=""
 
