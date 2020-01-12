@@ -54,6 +54,7 @@ x11-misc/cvt12::haarp
 games-util/zdbsp::jacendi-overlay
 games-util/acc::jacendi-overlay
 games-util/udmf-convert::jacendi-overlay
+games-fps/doomretro::jacendi-overlay
 
 games-util/rejoystick::gamerlay
 games-fps/zdoom::gamerlay
@@ -117,6 +118,7 @@ media-fonts/emojione-color-font::jorgicio
 media-fonts/twemoji-color-font::jorgicio
 media-gfx/lsix::jorgicio
 media-sound/parlatype::jorgicio
+games-fps/crispy-doom::jorgicio
 
 games-util/steam-launcher::steam-overlay
 

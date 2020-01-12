@@ -129,7 +129,7 @@ exit
 HEREDOC
 
 cd ..
-umount -l mini_image/*
+umount -l mini_image/proc mini_image/dev mini_image/sys
 wget https://cloveros.ga/s/kernel.tar.lzma https://cloveros.ga/s/signatures/s/kernel.tar.lzma.asc
 gpg --verify kernel.tar.lzma.asc kernel.tar.lzma
 tar -C mini_image/ -xf kernel.tar.lzma --wildcards lib/modules/\*-gentoo/\*

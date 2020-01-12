@@ -17,6 +17,7 @@ plasma-applet-weather-widget # qtdeclarative USE=xml
 net-analyzer/munin # perl USE=berkdb
 colorhug-client # libusb USE=udev
 picard # qtgui USE=accessibility
+crispy-doom # libsamplerate USE=sndfile
 # builds, but doesn't work
 zsnes
 # builds, requires AR="gcc-ar" in make.conf commented out

@@ -119,7 +119,7 @@ exit
 HEREDOC
 
 cd ..
-umount -l image/*
+umount -l image/proc image/dev image/sys
 wget https://cloveros.ga/s/kernel.tar.lzma https://cloveros.ga/s/signatures/s/kernel.tar.lzma.asc
 gpg --verify kernel.tar.lzma.asc kernel.tar.lzma
 tar -C image/ -xf kernel.tar.lzma --wildcards lib/modules/\*-gentoo/\*

@@ -2,11 +2,11 @@
 sys-devel/gcc
 sys-kernel/gentoo-sources
 media-libs/mesa
+media-video/mpv
+media-video/smplayer
 www-client/firefox::pg_overlay
 x11-libs/gtk+:3::mv # removes dbus
 app-emulation/winetricks::cloveros ** # overlay
-media-video/mpv
-media-video/smplayer
 
 #old, remove when stable is bumped up
 sys-fs/zfs # kernel 5.4
@@ -61,6 +61,8 @@ www-client/elinks
 media-gfx/argyllcms
 
 #keyworded, remove when stable exists
+games-fps/doomretro
+games-fps/crispy-doom
 media-video/blind
 www-plugins/lightspark
 app-i18n/ibus-kkc

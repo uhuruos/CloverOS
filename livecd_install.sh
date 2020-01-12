@@ -95,7 +95,7 @@ exit
 HEREDOC
 
 cd ..
-umount -l gentoo/*
+umount -l gentoo/proc gentoo/dev gentoo/sys
 umount gentoo/
 sync
 echo Installed, you can reboot and remove install media now

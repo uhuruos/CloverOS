@@ -118,7 +118,7 @@ exit
 HEREDOC
 
 cd ..
-umount -l libre_image/*
+umount -l libre_image/proc libre_image/dev libre_image/sys
 wget https://cloveros.ga/s/kernel-libre.tar.lzma https://cloveros.ga/s/signatures/s/kernel-libre.tar.lzma.asc
 gpg --verify kernel-libre.tar.lzma.asc kernel-libre.tar.lzma
 tar -C libre_image/ -xf kernel-libre.tar.lzma --wildcards lib/modules/\*-gnu/\*
