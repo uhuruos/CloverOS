@@ -49,6 +49,7 @@ dev-libs/ell # iwd
 =dev-lang/go-1.13.4
 =media-libs/mlt-6.18.0
 =dev-python/snakeoil-0.8.5 # pkgcore
+=net-libs/nghttp2-1.40.0 # nodejs
 
 #libressl, remove when stable supports libressl
 =dev-qt/qtnetwork-5.12.5::libressl
@@ -524,6 +525,9 @@ games-emulation/advancemame
 games-emulation/advancescan
 games-misc/ckmame
 sci-mathematics/rstudio
+dev-java/gin # rstudio
+dev-java/gwt # rstudio
+dev-java/validation-api # rstudio
 games-fps/wolfgl ~*
 x11-plugins/gkrellm-plugins ~*
 games-emulation/rpcs3 **
