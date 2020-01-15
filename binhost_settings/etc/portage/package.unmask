@@ -18,6 +18,7 @@ app-emulation/dxvk::tastytea
 net-p2p/etherwall::reagentoo
 
 www-client/ungoogled-chromium::pf4public
+app-misc/font-manager::pf4public
 
 dev-lang/dmd::dlang
 app-eselect/eselect-dlang::dlang
