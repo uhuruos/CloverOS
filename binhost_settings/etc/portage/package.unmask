@@ -120,6 +120,9 @@ media-fonts/twemoji-color-font::jorgicio
 media-gfx/lsix::jorgicio
 media-sound/parlatype::jorgicio
 games-fps/crispy-doom::jorgicio
+kde-misc/peruse::jorgicio
+media-gfx/yacreader::jorgicio
+app-arch/unarr::jorgicio # yacreader
 
 games-util/steam-launcher::steam-overlay
 

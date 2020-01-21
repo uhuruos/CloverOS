@@ -479,6 +479,7 @@ kde-misc/krename
 kde-misc/krusader
 kde-misc/kshutdown
 kde-misc/kwebkitpart
+kde-misc/peruse
 kde-misc/plasma-applet-network-monitor
 kde-plasma/bluedevil
 kde-plasma/plasma-applet-active-window-control
@@ -631,7 +632,6 @@ media-fonts/mplus-fonts
 media-fonts/mplus-outline-fonts
 media-fonts/nanum
 media-fonts/nanumfont
-media-fonts/nepali-fonts
 media-fonts/noto
 media-fonts/noto-cjk
 media-fonts/noto-emoji
@@ -735,6 +735,7 @@ media-gfx/krita
 media-gfx/librecad
 media-gfx/lximage-qt
 media-gfx/maim
+media-gfx/mcomix
 media-gfx/meh
 media-gfx/mirage
 media-gfx/mypaint
@@ -761,6 +762,7 @@ media-gfx/w3mimgfb
 media-gfx/wkhtmltopdf
 media-gfx/xsane
 media-gfx/xzgv
+media-gfx/yacreader
 media-libs/alsa-oss
 media-libs/glyr
 media-libs/osl
@@ -791,7 +793,6 @@ media-sound/audacious
 media-sound/audacity
 media-sound/beets
 media-sound/bempc
-media-sound/bitwig-studio
 media-sound/bluez-alsa
 media-sound/cantata
 media-sound/carla
@@ -1120,7 +1121,6 @@ sci-chemistry/gperiodic
 sci-chemistry/gromacs
 sci-chemistry/moldy
 sci-chemistry/mustang
-sci-electronics/kicad
 sci-mathematics/gimps
 sci-mathematics/maxima
 sci-mathematics/octave

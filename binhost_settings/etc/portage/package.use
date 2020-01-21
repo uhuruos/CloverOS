@@ -1,4 +1,4 @@
-www-client/firefox -custom-cflags -custom-optimization # illegal instruction
+www-client/firefox -custom-cflags -custom-optimization # fix: illegal instruction
 
 app-i18n/mozc ibus fcitx4
 games-emulation/retroarch cheevos

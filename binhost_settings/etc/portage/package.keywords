@@ -62,6 +62,8 @@ www-client/elinks
 media-gfx/argyllcms
 
 #keyworded, remove when stable exists
+media-gfx/yacreader
+app-arch/unarr # yacreader
 games-fps/doomretro
 games-fps/crispy-doom
 media-video/blind
