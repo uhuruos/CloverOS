@@ -1,5 +1,4 @@
-www-client/firefox -custom-cflags -custom-optimization # fix: illegal instruction
-
+media-gfx/apngasm 7z zopfli
 app-i18n/mozc ibus fcitx4
 games-emulation/retroarch cheevos
 media-gfx/librecad tools

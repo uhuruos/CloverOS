@@ -4,7 +4,7 @@ sys-kernel/gentoo-sources
 media-libs/mesa
 media-video/mpv
 media-video/smplayer
-www-client/firefox::pg_overlay
+www-client/firefox::cloveros
 x11-libs/gtk+:3::mv # removes dbus
 app-emulation/winetricks::cloveros ** # overlay
 
@@ -62,6 +62,7 @@ www-client/elinks
 media-gfx/argyllcms
 
 #keyworded, remove when stable exists
+media-gfx/apngopt
 media-gfx/yacreader
 app-arch/unarr # yacreader
 games-fps/doomretro

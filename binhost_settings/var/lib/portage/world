@@ -704,6 +704,7 @@ media-fonts/x11fonts-jmk
 media-fonts/zh-kcfonts
 media-gfx/apngasm
 media-gfx/apngdis
+media-gfx/apngopt
 media-gfx/argyllcms
 media-gfx/cropgui
 media-gfx/darktable
@@ -1216,7 +1217,7 @@ sys-fs/zfs-auto-snapshot
 sys-kernel/dkms
 sys-kernel/dracut
 sys-kernel/genkernel
-sys-kernel/gentoo-sources:5.4.11
+sys-kernel/gentoo-sources:5.4.13
 sys-kernel/linux-firmware
 sys-power/acpi_call
 sys-power/acpitool
@@ -1232,6 +1233,7 @@ sys-process/htop
 sys-process/iotop
 sys-process/lsof
 sys-process/parallel
+virtual/emacs
 virtual/wine
 virtual/wireguard
 www-apps/otrs
