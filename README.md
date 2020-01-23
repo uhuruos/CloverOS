@@ -200,7 +200,7 @@ Switch to source and then emerge
 ### It hangs on boot in VirtualBox
 In VirtualBox 6.x, change Graphics Controller to VBoxSVGA. This fixes the "Setting system clock using the hardware clock [UTC] ..." hang.
 
-VMSVGA graphics does technically work if you enter username, password and y and start X. Just TTY doesn't work. Looking for solution...
+VMSVGA graphics does technically work if you enter username, password and y and start X. The screen doesn't update in TTY. Looking for solution...
 
 ![VirtualBox graphics adapters](https://i.imgur.com/pTtWptS.png)
 
