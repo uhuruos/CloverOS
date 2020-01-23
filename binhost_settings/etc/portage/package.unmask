@@ -9,7 +9,7 @@ x11-misc/xdg-utils::cloveros # xdg-utils::gentoo with removed DEPEND=sys-apps/db
 media-gfx/nip2::cloveros
 media-libs/vips::cloveros
 
-www-client/firefox::pg_overlay
+x11-terms/termite::gig
 
 app-emulation/dxvk::tastytea
 
@@ -183,9 +183,6 @@ app-shells/fzf::rasdark
 x11-drivers/xf86-video-sis671::rasdark
 
 x11-libs/bamf::elementary
-
-x11-terms/termite::eroen
-x11-libs/vte::eroen # termite
 
 dev-db/dbeaver-bin::erayd
 

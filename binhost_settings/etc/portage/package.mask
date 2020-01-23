@@ -53,8 +53,6 @@ net-im/profanity::gentoo # optmzr
 net-libs/nodejs::gentoo # libressl
 dev-qt/qtnetwork::gentoo # libressl
 
-x11-libs/vte::gentoo # eroen
-
 >dev-lang/tk-8.6 # doesn't build
 >dev-lang/tcl-8.6 # doesn't build
 

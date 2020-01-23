@@ -356,7 +356,7 @@ kde-apps/akonadi -mysql sqlite
 kde-apps/ktp-common-internals otr
 kde-apps/artikulate qtmedia
 x11-libs/libva-intel-driver X
-x11-libs/cairo X xcb
+x11-libs/cairo X
 dev-cpp/cairomm X
 x11-libs/libxkbcommon X
 x11-libs/pango X

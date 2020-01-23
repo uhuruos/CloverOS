@@ -62,6 +62,7 @@ www-client/elinks
 media-gfx/argyllcms
 
 #keyworded, remove when stable exists
+x11-terms/termite
 media-gfx/apngopt
 media-gfx/yacreader
 app-arch/unarr # yacreader
@@ -262,8 +263,6 @@ net-im/discord-bin
 games-roguelike/dwarf-fortress
 www-client/qutebrowser
 dev-python/pypeg2 # qutebrowser
-x11-terms/termite::eroen
-x11-libs/vte::eroen # termite
 media-video/handbrake
 x11-misc/i3blocks-gaps
 net-im/telegram-desktop-bin
