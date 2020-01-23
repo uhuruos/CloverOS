@@ -82,7 +82,6 @@ games-emulation/libretro-meta 2048 4do beetle-psx beetle-saturn bnes bsnes2014 c
 media-libs/sdl2-mixer flac mikmod vorbis mod mp3 mad midi fluidsynth
 media-video/obs-studio jack truetype imagemagick v4l
 media-plugins/alsa-plugins jack
-x11-libs/vte termite-patch
 media-sound/ncmpc help-screen artist-screen chat-screen colors key-screen lirc lyrics-screen mouse search-screen song-screen
 media-sound/beets convert discogs lastgenre lastimport bpd chroma mpdstats thumbnails web
 media-sound/moc ffmpeg

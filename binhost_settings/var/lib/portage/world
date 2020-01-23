@@ -89,6 +89,7 @@ app-doc/gimp-help
 app-doc/linux-kernel-in-a-nutshell
 app-doc/phrack-all
 app-doc/zsh-lovers
+app-editors/emacs
 app-editors/gedit
 app-editors/gvim
 app-editors/mg
@@ -1232,6 +1233,7 @@ sys-process/htop
 sys-process/iotop
 sys-process/lsof
 sys-process/parallel
+virtual/emacs
 virtual/wine
 virtual/wireguard
 www-apps/otrs

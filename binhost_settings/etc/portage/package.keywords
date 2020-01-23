@@ -62,7 +62,6 @@ www-client/elinks
 media-gfx/argyllcms
 
 #keyworded, remove when stable exists
-x11-terms/termite
 media-gfx/apngopt
 media-gfx/yacreader
 app-arch/unarr # yacreader

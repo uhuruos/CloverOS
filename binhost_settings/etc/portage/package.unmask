@@ -9,8 +9,6 @@ x11-misc/xdg-utils::cloveros # xdg-utils::gentoo with removed DEPEND=sys-apps/db
 media-gfx/nip2::cloveros
 media-libs/vips::cloveros
 
-x11-terms/termite::gig
-
 app-emulation/dxvk::tastytea
 
 net-p2p/etherwall::reagentoo
