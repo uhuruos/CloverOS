@@ -265,7 +265,6 @@ games-emulation/mame2003-plus-libretro::abendbrot
 games-emulation/flycast-libretro::abendbrot
 games-emulation/yabasanshiro-libretro::abendbrot
 games-emulation/bsnes-mercury-libretro::abendbrot
-games-emulation/bsnes-libretro-cplusplus98::abendbrot
 games-emulation/kronos-libretro::abendbrot
 games-emulation/flycast-wince-libretro::abendbrot
 games-emulation/mesen-libretro::abendbrot
