@@ -1,5 +1,4 @@
 games-emulation/pcsx2::cloveros # pcsx2-9999::gentoo with added "src_configure() { local mycmakeargs=( -DDISABLE_ADVANCE_SIMD=ON ) }"
-games-emulation/rpcs3::cloveros # rpcs3-0.0.7::menelkir with added "src_configure() { local mycmakeargs=( -DUSE_NATIVE_INSTRUCTIONS=OFF ) }" and turned into git
 app-emulation/winetricks::cloveros # winetricks-9999::gentoo with removed RDEPEND="x11-misc/xdg-utils"
 mate-base/mate::cloveros # mate-1.22::gentoo with removed "extras? ( sys-apps/gnome-disk-utility:0 )"
 media-gfx/meh::cloveros # taken from media-gfx/meh::lanodanOverlay
@@ -72,6 +71,7 @@ media-sound/serialosc::audio-overlay
 media-libs/libmonome::audio-overlay # serialosc
 
 net-misc/megatools::jm-overlay
+games-emulation/rpcs3::jm-overlay
 
 games-fps/openjk-academy::luke-jr
 games-fps/openjk-academy-mp::luke-jr
