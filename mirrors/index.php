@@ -73,8 +73,6 @@ DL & Validate ISO: <span class="mono pre">gpg --keyserver hkp://pool.sks-keyserv
 wget https://cloveros.ga/s/'.$isoname.' https://cloveros.ga/s/signatures/s/'.$isoname.'.asc
 gpg --verify '.$isoname.'.asc '.$isoname.'</span>
 <br>
-<a target="_blank" href="'.$git.'/installscript.sh">CloverOS install script</a>
-<div class="mono pre fileinfo">'.$installscriptsh.'</div>
 <a target="_blank" href="s/quickpkg.html"><span class="mono">$ sudo quickpkg --include-unmodified-config=y "*/*"</div></a>
 <div class="mono pre fileinfo">'.$quickpkg.'</div>
 <a href="'.$git.'/binhost_settings/etc/portage/make.conf" target="_blank">/etc/portage/make.conf</a>
