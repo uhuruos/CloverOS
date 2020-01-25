@@ -140,7 +140,7 @@ void main(void) {
 		totallastoutt = totaloutt;
 
 		char temperature[40];
-		for (int i = 0; i < 5; i++) {
+		for (int i = 0; i < 10; i++) {
 			sprintf(temperature, "%s%d%s", "/sys/class/hwmon/hwmon", i, "/name");
 			file = getfile(temperature, buffer);
 			if (!file) {
