@@ -13,7 +13,7 @@ else
 	echo "1) Update cloveros_settings.sh
 2) Update system
 3) Change default sound device
-4) Update kernel
+4) Update kernel and grub config
 5) Change emerge to source/binary
 6) Revert to default dot files
 7) Sync time
@@ -132,6 +132,7 @@ case "$choice" in
 	4)
 		kernelversion=$(wget -qO - https://cloveros.ga/s/kernel.tar.lzma | lzma -d | strings | grep -aoPm1 "(?<=x86_64-).*(?=-gentoo)")
 		if ls /boot/ | grep -q $kernelversion; then
+			sudo grub-mkconfig -o /boot/grub/grub.cfg
 			echo "Kernel up to date."
 		else
 			rm kernel.tar.lzma kernel.tar.lzma.asc &> /dev/null
