@@ -11,11 +11,10 @@ $packagekeywords = file_get_contents('../binhost_settings/etc/portage/package.ke
 $makeconf = file_get_contents('../binhost_settings/etc/portage/make.conf');
 $reposconf = file_get_contents('../binhost_settings/etc/portage/repos.conf/eselect-repo.conf');
 $worldtxt = file_get_contents('../binhost_settings/var/lib/portage/world');
-$installscriptsh = file_get_contents('../installscript.sh');
 $usermake = file_get_contents('../home/user/make.conf');
 $quickpkg = file_get_contents('/var/cache/binpkgs/s/quickpkg.html');
 $quickpkg = substr($quickpkg, strpos($quickpkg, '<pre class="ansi2html-content">')+strlen('<pre class="ansi2html-content">')+1);
-$quickpkg = rtrim($quickpkg, "</pre></body>\n</html>");
+$quickpkg = rtrim($quickpkg, '</pre></body>\n</html>');
 $packagecount = count(glob('/var/db/pkg/*/*'));
 
 $mirrors = substr($usermake, strpos($usermake, 'binhost_mirrors="$PORTAGE_BINHOST,') + 34);
