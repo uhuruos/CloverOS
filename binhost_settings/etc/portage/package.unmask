@@ -159,6 +159,8 @@ net-vpn/zeronet::raiagent
 dev-python/base58::raiagent # zeronet
 dev-python/bencode_py::raiagent # zeronet
 dev-python/coincurve::raiagent # zeronet
+dev-python/maxminddb::raiagent # zeronet
+dev-python/merkletools::raiagent # zeronet
 app-misc/powerline::raiagent
 
 pantheon-base/plank::elementary

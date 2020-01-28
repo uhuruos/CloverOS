@@ -319,6 +319,8 @@ net-vpn/zeronet
 dev-python/base58 # zeronet
 dev-python/bencode_py # zeronet
 dev-python/coincurve # zeronet
+dev-python/maxminddb # zeronet
+dev-python/merkletools # zeronet
 net-p2p/go-ipfs-bin
 media-sound/beets
 dev-python/discogs-client # beets
