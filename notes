@@ -1,6 +1,7 @@
 todo list:
 rewrite index.php
 finish fvwm tools
+indexalt parse Packages for package dates
 make iso from scratch instead of replacing gentoo iso squashfs
 spacefm drive/ssh/ftp mounting
 automatic ~/.asoundrc configuration. it gets the first audio device without hdmi in the name
