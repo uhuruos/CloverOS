@@ -6,7 +6,7 @@ livecd_install.sh: uefi install, encryption
 
 packages that don't build:
 # doesn't emerge
-intel-neo kicad flowblade telegram-purple edbrowse fingerprint-gui opentoonz eduke32 racket monodevelop mididings stumpwm stumpwm-contrib
+intel-neo kicad flowblade opentoonz eduke32 racket monodevelop mididings stumpwm stumpwm-contrib
 # packages with no libressl support
 ntopng zeronet nxplayer murmur makemkv eiskaltdcpp retroshare acme-tiny spyder johntheripper-jumbo eagle
 # requires jack2
