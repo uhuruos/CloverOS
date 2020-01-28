@@ -159,7 +159,6 @@ Run `./cloveros_settings.sh c` to get the CloverOS Portage configuration.
 * [Change FVWM titlebar color](#change-fvwm-titlebar-color)
 * [KDE theme in qt5 programs without KDE](#kde-theme-in-qt5-programs-without-kde)
 * [Firefox and Pulseaudio](#firefox-and-pulseaudio)
-* [Vertical tabs in Firefox 57+](#vertical-tabs-in-firefox-57)
 * [Enable tap to click on touchpads](#enable-tap-to-click-on-touchpads)
 * [Disable mouse acceleration](#disable-mouse-acceleration)
 * [Suspend when laptop lid is closed](#suspend-when-laptop-lid-is-closed)
@@ -314,7 +313,7 @@ Masked (Red) is just another step forward of keywording and the file is at /etc/
 You can unmask or unkeyword a specific version by doing =media-gfx/gimp-2.9.6
 
 ### Emerge error relating to openssl, fix OpenGL 3/4 not working
-Add this to `/etc/portage/package.use`:
+This is a general Gentoo thing. Add this to `/etc/portage/package.use`:
 ```
 dev-libs/openssl -bindist
 net-misc/openssh -bindist
@@ -684,7 +683,7 @@ Yes. It's a pre-setup Gentoo image with `PORTAGE_BINHOST="https://cloveros.ga" e
 ### How often is this updated?
 It's stable rolling release (Gentoo Stable). The binaries reflect current Portage (amd64) about once a week: http://twitter.com/cloveros_ga
 
-### Does everything build with CFLAGS="-Ofast -mssse3 -mfpmath=both -pipe -funroll-loops -flto=8 -fgraphite-identity -floop-nest-optimize -malign-data=cacheline -mtls-dialect=gnu2 -Wl,--hash-style=gnu"
+### Does everything build with Ofast, LTO, Graphite
 These are all the packages that don't build with the full CFLAGS: https://gitgud.io/cloveros/cloveros/blob/master/binhost_settings/etc/portage/package.env
 
 ### The default shell is bash but fvwm launches urxvt -e zsh?

@@ -416,13 +416,11 @@ games-fps/ezquake-bin
 games-fps/freedoom
 games-fps/gzdoom
 games-fps/nexuiz
-games-fps/openarena
 games-fps/openjk-academy
 games-fps/openjk-academy-mp
 games-fps/openjk-outcast
 games-fps/prboom-plus
 games-fps/quake3
-games-fps/quake3-cpma
 games-fps/quakeforge
 games-fps/qudos
 games-fps/redeclipse
@@ -1117,7 +1115,6 @@ sci-chemistry/dssp
 sci-chemistry/easychem
 sci-chemistry/eden
 sci-chemistry/elem
-sci-chemistry/gabedit
 sci-chemistry/gelemental
 sci-chemistry/gperiodic
 sci-chemistry/gromacs

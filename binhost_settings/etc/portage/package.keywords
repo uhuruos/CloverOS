@@ -46,7 +46,7 @@ dev-libs/ell # iwd
 =dev-libs/libuv-1.34.0
 =dev-util/rocm-cmake-3.0.0
 =dev-python/pyyaml-5.1.2
-=dev-lang/go-1.13.4
+dev-lang/go
 =media-libs/mlt-6.18.0
 =dev-python/snakeoil-0.8.5 # pkgcore
 =net-libs/nghttp2-1.40.0 # nodejs
@@ -62,6 +62,8 @@ www-client/elinks
 media-gfx/argyllcms
 
 #keyworded, remove when stable exists
+media-sound/mhwaveedit
+x11-misc/xfe
 media-video/makemkv
 media-gfx/opentoonz
 games-fps/eduke32
