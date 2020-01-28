@@ -28,7 +28,7 @@ eselect profile set "default/linux/amd64/17.1/hardened"
 PORTAGE_BINHOST="https://cloveros.ga" emerge -G aria2
 while ! gpg --list-keys "CloverOS GNU/Linux (Package signing)"; do gpg --keyserver hkp://pool.sks-keyservers.net --recv-key "78F5 AC55 A120 07F2 2DF9 A28A 78B9 3F76 B8E4 2805"; done
 echo '
-CFLAGS="-O3 -march=native -mfpmath=both -pipe -funroll-loops -fgraphite-identity -floop-nest-optimize -fipa-pta -fdevirtualize-at-ltrans -malign-data=cacheline -Wl,--hash-style=gnu"
+CFLAGS="-O3 -march=native -mfpmath=both -pipe -funroll-loops -fgraphite-identity -floop-nest-optimize -fipa-pta -fdevirtualize-at-ltrans -ftracer -fno-plt -fno-semantic-interposition -malign-data=cacheline -Wl,--hash-style=gnu"
 CXXFLAGS="\${CFLAGS}"
 CPU_FLAGS_X86="mmx mmxext sse sse2 ssse3 sse3"
 MAKEOPTS="-j8"

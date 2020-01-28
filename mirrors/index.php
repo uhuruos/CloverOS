@@ -16,6 +16,8 @@ $quickpkg = file_get_contents('/var/cache/binpkgs/s/quickpkg.html');
 $quickpkg = substr($quickpkg, strpos($quickpkg, '<pre class="ansi2html-content">')+strlen('<pre class="ansi2html-content">')+1);
 $quickpkg = rtrim($quickpkg, '</pre></body>\n</html>');
 $packagecount = count(glob('/var/db/pkg/*/*'));
+$cflags = shell_exec('grep ^CFLAGS=\"- ../binhost_settings/etc/portage/make.conf');
+$use = shell_exec('grep ^USE= ../binhost_settings/etc/portage/make.conf');
 
 $mirrors = substr($usermake, strpos($usermake, 'binhost_mirrors="$PORTAGE_BINHOST,') + 34);
 $mirrors = substr($mirrors, 0, strpos($mirrors, ',"'));
@@ -66,8 +68,8 @@ Rsync: rsync://nl.cloveros.ga/cloveros<br>
 License: WTFPL<br>
 Mirrors: '.$mirrorlinks.'<br>
 Packages: <a target="_blank" href="s/packages.html">'.$packagecount.' https://cloveros.ga/s/packages.html</a><br>
-CFLAGS: <span class="mono">CFLAGS="-Ofast -mssse3 -mfpmath=both -pipe -funroll-loops -flto=8 -fgraphite-identity -floop-nest-optimize -malign-data=cacheline -mtls-dialect=gnu2 -Wl,--hash-style=gnu"</span><br>
-USE flags: <span class="mono">USE="-systemd -pulseaudio -avahi -dbus -consolekit -libnotify -udisks -zeroconf -nls -doc -gnome-keyring -gstreamer -libav -openal -kde -gnome -openssl libressl bindist ipv6 cli jpeg gif png exif lcms openexr joystick alsa xinerama wayland otr minimal offensive zsh-completion custom-cflags custom-optimization threads aio jit fftw lto graphite pgo numa egl dga dri dri3 vulkan opengl opencl vaapi vdpau system-ffmpeg system-icu system-libvpx system-harfbuzz system-jpeg system-libevent system-sqlite system-cairo system-compress system-images system-nss system-pixman system-vpx system-llvm system-lua system-cmark system-libyaml system-lcms system-lz4 system-uulib system-snappy system-binutils system-clang system-tbb system-renpy system-libs system-heimdal system-leveldb system-libmspack system-zlib system-av1 system-digest"</span><br>
+CFLAGS: <span class="mono">'.$cflags.'</span><br>
+USE flags: <span class="mono">'.$use.'</span><br>
 DL & Validate ISO: <span class="mono pre">gpg --keyserver hkp://pool.sks-keyservers.net --recv-key "78F5 AC55 A120 07F2 2DF9 A28A 78B9 3F76 B8E4 2805"
 wget https://cloveros.ga/s/'.$isoname.' https://cloveros.ga/s/signatures/s/'.$isoname.'.asc
 gpg --verify '.$isoname.'.asc '.$isoname.'</span>
