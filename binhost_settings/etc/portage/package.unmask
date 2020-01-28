@@ -162,6 +162,7 @@ dev-python/coincurve::raiagent # zeronet
 dev-python/maxminddb::raiagent # zeronet
 dev-python/merkletools::raiagent # zeronet
 dev-python/python-bitcoinlib::raiagent # zeronet
+dev-python/pyelliptic::raiagent # zeronet
 app-misc/powerline::raiagent
 
 pantheon-base/plank::elementary
