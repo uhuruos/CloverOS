@@ -16,8 +16,8 @@ $quickpkg = file_get_contents('/var/cache/binpkgs/s/quickpkg.html');
 $quickpkg = substr($quickpkg, strpos($quickpkg, '<pre class="ansi2html-content">')+strlen('<pre class="ansi2html-content">')+1);
 $quickpkg = rtrim($quickpkg, '</pre></body>\n</html>');
 $packagecount = count(glob('/var/db/pkg/*/*'));
-$cflags = shell_exec('grep ^CFLAGS=\"- ../binhost_settings/etc/portage/make.conf');
-$use = shell_exec('grep ^USE= ../binhost_settings/etc/portage/make.conf');
+$cflags = trim(shell_exec('grep ^CFLAGS=\"- ../binhost_settings/etc/portage/make.conf'));
+$use = trim(shell_exec('grep ^USE= ../binhost_settings/etc/portage/make.conf'));
 
 $mirrors = substr($usermake, strpos($usermake, 'binhost_mirrors="$PORTAGE_BINHOST,') + 34);
 $mirrors = substr($mirrors, 0, strpos($mirrors, ',"'));

@@ -163,6 +163,7 @@ dev-python/maxminddb::raiagent # zeronet
 dev-python/merkletools::raiagent # zeronet
 dev-python/python-bitcoinlib::raiagent # zeronet
 dev-python/pyelliptic::raiagent # zeronet
+dev-libs/libsecp256k1::raiagent # zeronet
 app-misc/powerline::raiagent
 
 pantheon-base/plank::elementary

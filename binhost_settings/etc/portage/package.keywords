@@ -323,6 +323,7 @@ dev-python/maxminddb # zeronet
 dev-python/merkletools # zeronet
 dev-python/python-bitcoinlib # zeronet
 dev-python/pyelliptic # zeronet
+dev-libs/libsecp256k1 # zeronet
 net-p2p/go-ipfs-bin
 media-sound/beets
 dev-python/discogs-client # beets
