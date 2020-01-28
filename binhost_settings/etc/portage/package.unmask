@@ -161,6 +161,7 @@ dev-python/bencode_py::raiagent # zeronet
 dev-python/coincurve::raiagent # zeronet
 dev-python/maxminddb::raiagent # zeronet
 dev-python/merkletools::raiagent # zeronet
+dev-python/python-bitcoinlib::raiagent # zeronet
 app-misc/powerline::raiagent
 
 pantheon-base/plank::elementary
