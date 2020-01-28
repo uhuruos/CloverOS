@@ -180,7 +180,7 @@ Run `./cloveros_settings.sh c` to get the CloverOS Portage configuration.
 * [Things preventing CloverOS Libre from being EFF-approved](#things-preventing-cloveros-libre-from-being-eff-approved)
 * [Does CloverOS have binaries?](#does-cloveros-have-binaries)
 * [How often is this updated?](#how-often-is-this-updated)
-* [Does everything build with CFLAGS="-Ofast -mssse3 -mfpmath=both -pipe -funroll-loops -flto=8 -fgraphite-identity -floop-nest-optimize -malign-data=cacheline -mtls-dialect=gnu2 -Wl,--hash-style=gnu"](#does-everything-build-with-cflags-ofast-mssse3-mfpmathboth-pipe-funroll-loops-flto8-fgraphite-identity-floop-nest-optimize-malign-datacacheline-mtls-dialectgnu2-wl-hash-stylegnu)
+* [Does everything build with Ofast, LTO, Graphite](#does-everything-build-with-ofast-lto-graphite)
 * [The default shell is bash but fvwm launches urxvt -e zsh?](#the-default-shell-is-bash-but-fvwm-launches-urxvt-e-zsh)
 * [Which DE does this come with?](#which-de-does-this-come-with)
 * [Installing a DE](#installing-a-de)
