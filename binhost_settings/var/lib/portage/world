@@ -399,6 +399,7 @@ games-emulation/vbam
 games-emulation/vgba
 games-emulation/yabause
 games-emulation/zinc
+games-emulation/zsnes
 games-engines/odamex
 games-engines/openmw
 games-engines/openxcom
@@ -412,10 +413,13 @@ games-fps/doom-data
 games-fps/doomretro
 games-fps/doomsday
 games-fps/enemy-territory
+games-fps/etlegacy
+games-fps/etqw-bin
 games-fps/ezquake-bin
 games-fps/freedoom
 games-fps/gzdoom
 games-fps/nexuiz
+games-fps/openarena
 games-fps/openjk-academy
 games-fps/openjk-academy-mp
 games-fps/openjk-outcast
@@ -438,6 +442,7 @@ games-roguelike/dwarf-fortress
 games-roguelike/nethack
 games-roguelike/wrogue
 games-rpg/freedink
+games-server/etqw-ded
 games-server/mednafen-server
 games-simulation/corsix-th
 games-simulation/openttd
@@ -451,6 +456,7 @@ games-util/joystick
 games-util/lutris
 games-util/qjoypad
 games-util/rejoystick
+games-util/sdl-jstest
 games-util/steam-launcher
 games-util/udmf-convert
 games-util/xboxdrv
@@ -1285,6 +1291,7 @@ www-servers/tomcat
 www-servers/varnish
 x11-apps/copyq
 x11-apps/igt-gpu-tools
+x11-apps/jstest-gtk
 x11-apps/mesa-progs
 x11-apps/xbacklight
 x11-apps/xclipboard
@@ -1385,6 +1392,7 @@ x11-plugins/fsviewer
 x11-plugins/gkrellm-plugins
 x11-plugins/pidgin-otr
 x11-plugins/pidgin-skypeweb
+x11-plugins/pidgin-telegram
 x11-plugins/purple-discord
 x11-plugins/purple-hangouts
 x11-plugins/purple-libnotify-plus

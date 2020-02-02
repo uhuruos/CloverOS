@@ -8,10 +8,8 @@ automatic ~/.asoundrc configuration. it gets the first audio device without hdmi
 livecd_install.sh: uefi install, encryption
 
 packages that don't build:
-#eol
-sci-chemistry/gabedit
 # doesn't emerge
-intel-neo kicad flowblade opentoonz eduke32 racket monodevelop mididings stumpwm stumpwm-contrib
+dxvk intel-neo kicad flowblade opentoonz eduke32 racket monodevelop mididings stumpwm stumpwm-contrib
 # packages with no libressl support
 ntopng zeronet nxplayer murmur eiskaltdcpp retroshare acme-tiny johntheripper-jumbo eagle
 # requires jack2
@@ -24,8 +22,6 @@ colorhug-client # libusb USE=udev
 picard # qtgui USE=accessibility
 crispy-doom # libsamplerate USE=sndfile
 bitwig-stuidio # cairo USE=xcb
-# builds, but doesn't work
-zsnes
 # builds, requires AR="gcc-ar" in make.conf commented out
 ftjam argyllcms mongodb
 # builds, requires ax_cv_c_float_words_bigendian=no
@@ -33,4 +29,6 @@ texlive-core
 # no longer emerges
 ckermit ng subversion soulseek-qt app-text/ots ncdc go-mtpfs quakeforge generator matplotlib pouetchess quake3-cpma distcc tiemu pinta guayadeque sbt webkit-gtk distcc scribus
 # 404
-mathematica-fonts
+enemy-territory-etpro mathematica-fonts
+# eol
+sci-chemistry/gabedit

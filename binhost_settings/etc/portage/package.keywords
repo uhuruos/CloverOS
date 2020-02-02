@@ -17,7 +17,6 @@ app-emulation/virtualbox-additions # virtualbox
 app-emulation/virtualbox-modules # virtualbox
 app-emulation/virtualbox-extpack-oracle # virtualbox
 net-misc/youtube-dl # stable always outdated and never works
-media-libs/zimg ** # vapoursynth
 media-fonts/opendesktop-fonts # fixes bug
 net-p2p/mldonkey # fixes build
 games-emulation/mgba # fixes build
@@ -28,7 +27,6 @@ x11-misc/x11vnc # fixes build
 x11-themes/sddm-gentoo-black-theme ** # fixes build
 x11-themes/terminology-themes ** # fixes build
 net-misc/freerdp ** # fixes build
-media-video/openshot # fixes build
 media-gfx/librecad # fixes build
 games-emulation/pcsx2 ** # old
 games-emulation/dolphin ** # old
@@ -37,22 +35,30 @@ dev-libs/weston # old
 app-shells/gentoo-zsh-completions ** # old
 dev-python/xcffib # qtile
 dev-python/cairocffi # qtile
-dev-libs/ell # iwd
 =dev-libs/nspr-4.24 # firefox
 =dev-libs/nss-3.48-r1 # firefox
 =dev-util/cbindgen-0.10.1 # firefox
-=media-libs/lv2-1.16.0
 =net-misc/pyhoca-gui-0.6.1.0
 =dev-libs/libuv-1.34.0
 =dev-util/rocm-cmake-3.0.0
 =dev-python/pyyaml-5.1.2
 dev-lang/go
 =media-libs/mlt-6.18.0
+media-libs/zimg ** # vapoursynth
 =dev-python/snakeoil-0.8.5 # pkgcore
 =net-libs/nghttp2-1.40.0 # nodejs
+#=sys-apps/hwloc-2.0.4 # tensorflow
+#=dev-libs/re2-0.2019.08.01 # tensorflow
+#=dev-python/astor-0.7.1 # tensorflow
+#=dev-python/wrapt-1.11.2 # tensorflow
+#=sci-libs/keras-applications-1.0.8 # tensorflow
+#=sci-libs/keras-preprocessing-1.1.0 # tensorflow
+#=dev-python/google-auth-1.6.3 # tensorflow
+#=sci-libs/scipy-1.4.1 # tensorflow
+#=dev-python/cython-0.29.13 # tensorflow
 
 #libressl, remove when stable supports libressl
-=dev-qt/qtnetwork-5.12.5::libressl
+=dev-qt/qtnetwork-5.13.2::libressl
 app-crypt/qca::libressl
 net-libs/nodejs::libressl
 net-misc/megatools::jm-overlay
@@ -62,6 +68,25 @@ www-client/elinks
 media-gfx/argyllcms
 
 #keyworded, remove when stable exists
+media-video/cheese
+x11-misc/xkeyboard-config
+x11-apps/jstest-gtk
+games-server/etqw-ded
+games-fps/etlegacy
+games-emulation/zsnes
+games-fps/etqw-bin
+games-fps/enemy-territory-etpro
+games-util/sdl-jstest
+sci-libs/tensorflow
+net-libs/grpc # tensorflow
+dev-python/opt-einsum # tensorflow
+dev-python/grpcio # tensorflow
+net-libs/google-cloud-cpp # tensorflow
+sci-visualization/tensorboard # tensorflow
+sci-libs/tensorflow-estimator # tensorflow
+dev-python/grpcio-tools # tensorflow
+dev-python/google-auth-oauthlib # tensorflow
+dev-python/pybind11 # tensorflow
 media-sound/mhwaveedit
 x11-misc/xfe
 media-video/makemkv
@@ -172,7 +197,6 @@ www-client/opera-developer
 games-misc/katawa-shoujo
 media-sound/milkytracker
 media-plugins/refocus-it
-net-wireless/iwd
 app-emulation/nemu
 app-shells/mcfly
 app-portage/kuroo

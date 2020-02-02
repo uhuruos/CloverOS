@@ -8,6 +8,10 @@ x11-misc/xdg-utils::cloveros # xdg-utils::gentoo with removed DEPEND=sys-apps/db
 media-gfx/nip2::cloveros
 media-libs/vips::cloveros
 
+x11-apps/jstest-gtk::gamarouns
+
+games-fps/quake3::slyfox
+
 app-emulation/dxvk::tastytea
 
 net-p2p/etherwall::reagentoo
@@ -85,6 +89,9 @@ media-plugins/refocus-it::stefantalpalaru
 
 www-client/waterfox::poly-c
 x11-themes/sddm-gentoo-black-theme::poly-c
+games-fps/enemy-territory::poly-c
+games-fps/enemy-territory-etpro::poly-c
+games-fps/etlegacy::poly-c
 
 games-misc/ckmame::linxon
 net-misc/youtube-dl-gui::linxon
@@ -119,6 +126,7 @@ games-fps/crispy-doom::jorgicio
 kde-misc/peruse::jorgicio
 media-gfx/yacreader::jorgicio
 app-arch/unarr::jorgicio # yacreader
+games-fps/openarena::jorgicio
 
 games-util/steam-launcher::steam-overlay
 
@@ -194,6 +202,7 @@ dev-db/dbeaver-bin::erayd
 
 kde-plasma/plasma-applet-active-window-control::abendbrot
 dev-lang/rgbds::abendbrot
+games-util/sdl-jstest::abendbrot
 games-emulation/retroarch::abendbrot
 games-emulation/retroarch-assets::abendbrot
 games-emulation/retroarch-joypad-autoconfig::abendbrot

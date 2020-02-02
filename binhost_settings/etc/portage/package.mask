@@ -38,6 +38,7 @@
 */*::reagentoo
 */*::seden
 */*::sk-overlay
+*/*::slyfox
 */*::ssnb
 */*::steam-overlay
 */*::stefantalpalaru

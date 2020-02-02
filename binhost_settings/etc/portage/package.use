@@ -30,6 +30,7 @@ sys-boot/syslinux -custom-cflags
 sys-fs/zfs -custom-cflags
 sys-fs/zfs-kmod -custom-cflags
 sys-kernel/spl -custom-cflags
+games-emulation/zsnes -custom-cflags
 x11-misc/colord argyllcms examples extra-print-profiles -gusb -scanner
 games-engines/openmw devtools
 dev-util/trace-cmd gtk udis86
@@ -320,6 +321,7 @@ net-libs/zeromq drafts # ntopng
 sys-libs/ncurses-compat tinfo abi_x86_32 # dev-util/android-ndk
 sys-fs/quota rpc # nfs-utils
 dev-java/validation-api source # rstudio
+virtual/jpeg-compat abi_x86_32 # qtqw-bin
 dev-qt/qtsingleapplication X
 x11-libs/gtk+ X
 x11-libs/libva X
