@@ -8,6 +8,26 @@ x11-misc/xdg-utils::cloveros # xdg-utils::gentoo with removed DEPEND=sys-apps/db
 media-gfx/nip2::cloveros
 media-libs/vips::cloveros
 
+x11-plugins/compiz-plugins-meta::compiz-reloaded
+dev-python/compizconfig-python::compiz-reloaded
+x11-apps/compiz-boxmenu::compiz-reloaded
+x11-apps/compiz-manager::compiz-reloaded
+x11-apps/fusion-icon::compiz-reloaded
+x11-libs/compiz-bcop::compiz-reloaded
+x11-libs/libcompizconfig::compiz-reloaded
+x11-misc/ccsm::compiz-reloaded
+x11-misc/simple-ccsm::compiz-reloaded
+x11-plugins/compicc::compiz-reloaded
+x11-plugins/compiz-extra-snowflake-t::compiz-reloadedextures
+x11-plugins/compiz-plugins-community::compiz-reloaded
+x11-plugins/compiz-plugins-experimental::compiz-reloaded
+x11-plugins/compiz-plugins-extra::compiz-reloaded
+x11-plugins/compiz-plugins-main::compiz-reloaded
+x11-themes/emerald-themes::compiz-reloaded
+x11-wm/compiz::compiz-reloaded
+x11-wm/compiz-meta::compiz-reloaded
+x11-wm/emerald::compiz-reloaded
+
 x11-apps/jstest-gtk::gamarouns
 
 games-fps/quake3::slyfox

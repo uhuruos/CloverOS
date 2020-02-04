@@ -64,3 +64,4 @@ dev-qt/qtnetwork::gentoo # libressl
 >dev-python/dnspython-1.15.0-r1
 >net-misc/pyhoca-gui-0.5.1.0
 >media-video/flowblade-2.2
+>app-emulation/vagrant-2.2.6-r1

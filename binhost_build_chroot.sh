@@ -46,7 +46,7 @@ binutils-config --linker ld.gold
 USE="-vaapi binary -color-management -opengl" emerge -1av gcc mesa scala netcat6 opencolorio openimageio
 emerge --depclean
 
-emerge -veD @world
+emerge -veD --exclude sas3flash --exclude texlive-core --exclude ftjam --exclude argyllcms --exclude mongodb @world
 
 ax_cv_c_float_words_bigendian=no emerge -1 texlive-core
 sed -i "s/AR=\"gcc-ar\"/#AR=\"gcc-ar\"/" /etc/portage/make.conf ; emerge argyllcms mongodb ; emerge -1 ftjam ; sed -i "s/#AR=\"gcc-ar\"/AR=\"gcc-ar\"/" /etc/portage/make.conf

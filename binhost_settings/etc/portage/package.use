@@ -1,5 +1,5 @@
 media-video/flowblade python_targets_python3_7
-
+x11-apps/fusion-icon gtk3
 sys-boot/grub device-mapper
 media-gfx/apngasm 7z zopfli
 app-i18n/mozc ibus fcitx4
@@ -143,7 +143,7 @@ media-sound/synthv1 qt5 standalone
 media-sound/samplv1 qt5 standalone
 media-sound/padthv1 qt5 standalone
 media-sound/drumkv1 qt5 standalone
-media-plugins/audacious-plugins qt5 adplug alsa aac -ampache -aosd bs2b cdda cue ffmpeg flac fluidsynth gme -gnome -gtk -gtk3 -hotkeys http -jack lame -libav libsamplerate lirc mms modplug mp3 -nls -pulseaudio scrobbler sdl sid sndfile soxr speedpitch vorbis wavpack
+media-plugins/audacious-plugins qt5 alsa aac -ampache -aosd bs2b cdda cue ffmpeg flac fluidsynth gme -gnome -gtk -gtk3 -hotkeys http -jack lame -libav libsamplerate lirc mms modplug mp3 -nls -pulseaudio scrobbler sdl sid sndfile soxr speedpitch vorbis wavpack
 games-emulation/yabause qt5
 games-emulation/citra sdl2 qt5
 games-emulation/dolphin qt5 ffmpeg
@@ -228,7 +228,7 @@ net-p2p/qbittorrent geoip webui
 media-gfx/gimp smp aalib python xpm vector-icons unwind
 net-fs/nfs-utils nfsv41
 net-fs/cifs-utils -acl -ads
-media-sound/mpd chromaprint sid sqlite alsa bzip2 curl ffmpeg fifo flac glib icu id3tag inotify mad network ogg opus tcpd unicode vorbis adplug ao audiofile cdio expat faad fluidsynth gme lame libsamplerate libsoxr mikmod mms modplug mp4v2 mpg123 musepack pipe recorder sndfile soundcloud twolame wavpack wildmidi zip libmpdclient
+media-sound/mpd chromaprint sid sqlite alsa bzip2 curl ffmpeg fifo flac glib icu id3tag inotify mad network ogg opus tcpd unicode vorbi ao audiofile cdio expat faad fluidsynth gme lame libsamplerate libsoxr mikmod mms modplug mp4v2 mpg123 musepack pipe recorder sndfile soundcloud twolame wavpack wildmidi zip libmpdclient
 media-sound/flacon aac opus vorbis qt5 flac mac mp3 mp4 ogg replaygain tta wavpack
 media-sound/cmus ffmpeg alsa mad unicode aac ao cddb cdio cue discid examples flac mikmod modplug mp4 musepack opus vorbis wavpack wma zsh-completion
 media-sound/streamripper vorbis
@@ -244,7 +244,7 @@ media-gfx/feh curl
 x11-terms/rxvt-unicode 256-color blink fading-colors unicode3 xft
 net-analyzer/vnstat gd
 net-p2p/rtorrent xmlrpc
-media-sound/deadbeef aac adplug alac alsa cdda converter cover cover-imlib2 cover-network curl dts dumb equalizer ffmpeg flac hotkeys lastfm libsamplerate m3u mad midi mms mono2stereo mp3 musepack nullout psf shn sid sndfile tta vorbis vtx wavpack wma zip cdparanoia gme gtk3 -libav mac mpg123 -nls playlist-browser -pulseaudio sc68 -shell-exec -unity
+media-sound/deadbeef aac alac alsa cdda converter cover cover-imlib2 cover-network curl dts dumb equalizer ffmpeg flac hotkeys lastfm libsamplerate m3u mad midi mms mono2stereo mp3 musepack nullout psf shn sid sndfile tta vorbis vtx wavpack wma zip cdparanoia gme gtk3 -libav mac mpg123 -nls playlist-browser -pulseaudio sc68 -shell-exec -unity
 media-plugins/deadbeef-plugins-meta -archive bookmark-manager bs2b decast filebrowser -gnome-mmkeys infobar -jack -librarybrowser mpris musical-spectrum opus quick-search replaygain-control soxr -statusnotifier stereo-widener vk vu-meter waveform-seekbar spectrogram
 media-plugins/deadbeef-decast gtk3
 media-plugins/deadbeef-fb gtk3

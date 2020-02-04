@@ -2,8 +2,6 @@
 sys-devel/gcc
 sys-kernel/gentoo-sources
 media-libs/mesa
-media-video/mpv
-media-video/smplayer
 www-client/firefox::cloveros
 x11-libs/gtk+:3::mv # removes dbus
 app-emulation/winetricks::cloveros ** # overlay
@@ -17,6 +15,7 @@ app-emulation/virtualbox-additions # virtualbox
 app-emulation/virtualbox-modules # virtualbox
 app-emulation/virtualbox-extpack-oracle # virtualbox
 net-misc/youtube-dl # stable always outdated and never works
+media-video/smplayer # stable smplayer doesn't work with stable mpv
 media-fonts/opendesktop-fonts # fixes bug
 net-p2p/mldonkey # fixes build
 games-emulation/mgba # fixes build
@@ -39,13 +38,13 @@ dev-python/cairocffi # qtile
 =dev-libs/nss-3.48-r1 # firefox
 =dev-util/cbindgen-0.10.1 # firefox
 =net-misc/pyhoca-gui-0.6.1.0
-=dev-libs/libuv-1.34.0
+=dev-libs/libuv-1.34.1
 =dev-util/rocm-cmake-3.0.0
 =dev-python/pyyaml-5.1.2
 dev-lang/go
 =media-libs/mlt-6.18.0
 media-libs/zimg ** # vapoursynth
-=dev-python/snakeoil-0.8.5 # pkgcore
+=dev-python/snakeoil-0.8.7 # pkgcore
 =net-libs/nghttp2-1.40.0 # nodejs
 #=sys-apps/hwloc-2.0.4 # tensorflow
 #=dev-libs/re2-0.2019.08.01 # tensorflow
@@ -68,8 +67,25 @@ www-client/elinks
 media-gfx/argyllcms
 
 #keyworded, remove when stable exists
-media-video/cheese
-x11-misc/xkeyboard-config
+x11-wm/compiz-meta
+dev-python/compizconfig-python # compiz-meta
+x11-apps/fusion-icon # compiz-meta
+x11-libs/compiz-bcop # compiz-meta
+x11-libs/libcompizconfig # compiz-meta
+x11-misc/ccsm # compiz-meta
+x11-plugins/compicc # compiz-meta
+x11-plugins/compiz-extra-snowflak # compiz-metae-textures
+x11-plugins/compiz-plugins-main # compiz-meta
+x11-plugins/compiz-plugins-meta # compiz-meta
+x11-themes/emerald-themes # compiz-meta
+x11-wm/compiz # compiz-meta
+x11-wm/emerald # compiz-meta
+x11-misc/simple-ccsm
+x11-apps/compiz-manager
+x11-apps/compiz-boxmenu
+x11-plugins/compiz-plugins-community
+x11-plugins/compiz-plugins-experimental
+x11-plugins/compiz-plugins-extra
 x11-apps/jstest-gtk
 games-server/etqw-ded
 games-fps/etlegacy

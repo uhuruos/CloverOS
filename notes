@@ -8,6 +8,7 @@ automatic ~/.asoundrc configuration. it gets the first audio device without hdmi
 livecd_install.sh: uefi install, encryption
 
 packages that don't build:
+syncthing adplug
 # doesn't emerge
 dxvk intel-neo kicad flowblade opentoonz eduke32 racket monodevelop mididings stumpwm stumpwm-contrib
 # packages with no libressl support
@@ -15,13 +16,14 @@ ntopng zeronet nxplayer murmur eiskaltdcpp retroshare acme-tiny johntheripper-ju
 # requires jack2
 cadence ladish
 # dependency use flag requirements
-buzztrax # clutter USE=gtk
-plasma-applet-weather-widget # qtdeclarative USE=xml
-net-analyzer/munin # perl USE=berkdb
-colorhug-client # libusb USE=udev
-picard # qtgui USE=accessibility
-crispy-doom # libsamplerate USE=sndfile
-bitwig-stuidio # cairo USE=xcb
+buzztrax / clutter USE=gtk
+plasma-applet-weather-widget / qtdeclarative USE=xml
+net-analyzer/munin / perl USE=berkdb
+colorhug-client / libusb USE=udev
+picard / qtgui USE=accessibility
+crispy-doom / libsamplerate USE=sndfile
+bitwig-stuidio / cairo USE=xcb
+cheese / clutter USE=X
 # builds, requires AR="gcc-ar" in make.conf commented out
 ftjam argyllcms mongodb
 # builds, requires ax_cv_c_float_words_bigendian=no
@@ -32,3 +34,5 @@ ckermit ng subversion soulseek-qt app-text/ots ncdc go-mtpfs quakeforge generato
 enemy-territory-etpro mathematica-fonts
 # eol
 sci-chemistry/gabedit
+# fetch restriction
+sas3flash

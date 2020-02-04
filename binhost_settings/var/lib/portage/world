@@ -145,7 +145,6 @@ app-i18n/scim
 app-i18n/scim-anthy
 app-i18n/scim-m17n
 app-i18n/uim
-app-i18n/zhcon
 app-laptop/laptop-mode-tools
 app-laptop/thinkfan
 app-laptop/tlp
@@ -1289,6 +1288,8 @@ www-servers/onionshare
 www-servers/thttpd
 www-servers/tomcat
 www-servers/varnish
+x11-apps/compiz-boxmenu
+x11-apps/compiz-manager
 x11-apps/copyq
 x11-apps/igt-gpu-tools
 x11-apps/jstest-gtk
@@ -1346,6 +1347,7 @@ x11-misc/qt5ct
 x11-misc/redshift
 x11-misc/rofi
 x11-misc/sct
+x11-misc/simple-ccsm
 x11-misc/skippy
 x11-misc/slock
 x11-misc/spacefm
@@ -1387,6 +1389,9 @@ x11-plugins/asapm
 x11-plugins/asclock
 x11-plugins/asmon
 x11-plugins/astime
+x11-plugins/compiz-plugins-community
+x11-plugins/compiz-plugins-experimental
+x11-plugins/compiz-plugins-extra
 x11-plugins/e16-epplets
 x11-plugins/fsviewer
 x11-plugins/gkrellm-plugins
@@ -1602,6 +1607,7 @@ x11-wm/amiwm
 x11-wm/awesome
 x11-wm/blackbox
 x11-wm/bspwm
+x11-wm/compiz-meta
 x11-wm/ctwm
 x11-wm/cwm
 x11-wm/dwm
