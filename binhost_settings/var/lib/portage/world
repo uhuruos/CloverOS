@@ -925,7 +925,6 @@ media-video/obs-studio
 media-video/openshot
 media-video/pitivi
 media-video/rtmpdump
-media-video/shotcut
 media-video/smplayer
 media-video/smtube
 media-video/subtitlecomposer
@@ -1036,7 +1035,6 @@ net-misc/onioncircuits
 net-misc/proxychains
 net-misc/putty
 net-misc/pyhoca-cli
-net-misc/pyhoca-gui
 net-misc/python-x2go
 net-misc/ripme
 net-misc/sgopherd

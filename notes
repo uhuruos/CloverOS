@@ -8,7 +8,7 @@ automatic ~/.asoundrc configuration. it gets the first audio device without hdmi
 livecd_install.sh: uefi install, encryption
 
 packages that don't build:
-syncthing adplug
+shotcut flowblade pyhoca-gui syncthing adplug
 # doesn't emerge
 dxvk intel-neo kicad flowblade opentoonz eduke32 racket monodevelop mididings stumpwm stumpwm-contrib
 # packages with no libressl support

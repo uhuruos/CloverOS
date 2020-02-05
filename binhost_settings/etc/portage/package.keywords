@@ -46,15 +46,6 @@ dev-lang/go
 media-libs/zimg ** # vapoursynth
 =dev-python/snakeoil-0.8.7 # pkgcore
 =net-libs/nghttp2-1.40.0 # nodejs
-#=sys-apps/hwloc-2.0.4 # tensorflow
-#=dev-libs/re2-0.2019.08.01 # tensorflow
-#=dev-python/astor-0.7.1 # tensorflow
-#=dev-python/wrapt-1.11.2 # tensorflow
-#=sci-libs/keras-applications-1.0.8 # tensorflow
-#=sci-libs/keras-preprocessing-1.1.0 # tensorflow
-#=dev-python/google-auth-1.6.3 # tensorflow
-#=sci-libs/scipy-1.4.1 # tensorflow
-#=dev-python/cython-0.29.13 # tensorflow
 
 #libressl, remove when stable supports libressl
 =dev-qt/qtnetwork-5.13.2::libressl
@@ -65,6 +56,26 @@ www-client/dillo
 app-editors/xemacs
 www-client/elinks
 media-gfx/argyllcms
+
+#=sys-apps/hwloc-2.0.4 # tensorflow
+#=dev-libs/re2-0.2019.08.01 # tensorflow
+#=dev-python/astor-0.7.1 # tensorflow
+#=dev-python/wrapt-1.11.2 # tensorflow
+#=sci-libs/keras-applications-1.0.8 # tensorflow
+#=sci-libs/keras-preprocessing-1.1.0 # tensorflow
+#=dev-python/google-auth-1.6.3 # tensorflow
+#=sci-libs/scipy-1.4.1 # tensorflow
+#=dev-python/cython-0.29.13 # tensorflow
+sci-libs/tensorflow
+net-libs/grpc # tensorflow
+dev-python/opt-einsum # tensorflow
+dev-python/grpcio # tensorflow
+net-libs/google-cloud-cpp # tensorflow
+sci-visualization/tensorboard # tensorflow
+sci-libs/tensorflow-estimator # tensorflow
+dev-python/grpcio-tools # tensorflow
+dev-python/google-auth-oauthlib # tensorflow
+dev-python/pybind11 # tensorflow
 
 #keyworded, remove when stable exists
 x11-wm/compiz-meta
@@ -93,16 +104,6 @@ games-emulation/zsnes
 games-fps/etqw-bin
 games-fps/enemy-territory-etpro
 games-util/sdl-jstest
-sci-libs/tensorflow
-net-libs/grpc # tensorflow
-dev-python/opt-einsum # tensorflow
-dev-python/grpcio # tensorflow
-net-libs/google-cloud-cpp # tensorflow
-sci-visualization/tensorboard # tensorflow
-sci-libs/tensorflow-estimator # tensorflow
-dev-python/grpcio-tools # tensorflow
-dev-python/google-auth-oauthlib # tensorflow
-dev-python/pybind11 # tensorflow
 media-sound/mhwaveedit
 x11-misc/xfe
 media-video/makemkv
@@ -570,7 +571,6 @@ games-util/qjoypad
 games-util/joystick
 app-crypt/hashcat
 app-arch/lzma # hashcat
-net-print/hplip
 net-print/hplip-plugin
 media-gfx/nip2
 media-libs/vips # nip2

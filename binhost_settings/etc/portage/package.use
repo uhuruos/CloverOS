@@ -1,4 +1,6 @@
+games-emulation/sdlmame tools
 media-video/flowblade python_targets_python3_7
+net-misc/pyhoca-gui -python_targets_python3_6 python_targets_python3_7
 x11-apps/fusion-icon gtk3
 sys-boot/grub device-mapper
 media-gfx/apngasm 7z zopfli
@@ -180,7 +182,6 @@ app-emulation/virtualbox-guest-additions X
 media-video/xine-ui curl X
 sci-mathematics/octave X gui fftw curl gnuplot postscript jit
 app-text/mupdf X
-games-emulation/sdlmame X
 net-im/qtox X
 dev-util/plan9port X
 app-editors/xemacs X

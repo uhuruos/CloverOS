@@ -46,13 +46,13 @@ binutils-config --linker ld.gold
 USE="-vaapi binary -color-management -opengl" emerge -1av gcc mesa scala netcat6 opencolorio openimageio
 emerge --depclean
 
-emerge -veD --exclude sas3flash --exclude texlive-core --exclude ftjam --exclude argyllcms --exclude mongodb @world
+emerge -veD --exclude sas3flash --exclude texlive-core --exclude ftjam --exclude argyllcms --exclude mongodb --exclude palemoon @world
 
 ax_cv_c_float_words_bigendian=no emerge -1 texlive-core
 sed -i "s/AR=\"gcc-ar\"/#AR=\"gcc-ar\"/" /etc/portage/make.conf ; emerge argyllcms mongodb ; emerge -1 ftjam ; sed -i "s/#AR=\"gcc-ar\"/AR=\"gcc-ar\"/" /etc/portage/make.conf
 groupadd foldingathome ; emerge foldingathome
-emerge -uvDN @world
 emerge -C hwinfo ntfs3g ; emerge ntfs3g ; emerge hwinfo ; emerge -C sys-apps/dbus obs-studio ; emerge obs-studio ; emerge -1 sys-apps/dbus ; emerge -C jack-audio-connection-kit audacity ; emerge audacity ; emerge jack-audio-connection-kit
+emerge -uvDN @world
 
 emerge @preserved-rebuild
 emerge --depclean
