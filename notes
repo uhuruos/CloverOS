@@ -29,7 +29,7 @@ ftjam argyllcms mongodb
 # builds, requires ax_cv_c_float_words_bigendian=no
 texlive-core
 # no longer emerges
-ckermit ng subversion soulseek-qt app-text/ots ncdc go-mtpfs quakeforge generator matplotlib pouetchess quake3-cpma distcc tiemu pinta guayadeque sbt webkit-gtk distcc scribus
+ckermit ng subversion soulseek-qt app-text/ots ncdc go-mtpfs generator matplotlib pouetchess distcc tiemu pinta guayadeque sbt webkit-gtk distcc scribus
 # 404
 enemy-territory-etpro mathematica-fonts
 # eol

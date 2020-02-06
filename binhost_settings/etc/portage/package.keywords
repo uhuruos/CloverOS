@@ -78,6 +78,7 @@ dev-python/google-auth-oauthlib # tensorflow
 dev-python/pybind11 # tensorflow
 
 #keyworded, remove when stable exists
+games-fps/zandronum
 x11-wm/compiz-meta
 dev-python/compizconfig-python # compiz-meta
 x11-apps/fusion-icon # compiz-meta

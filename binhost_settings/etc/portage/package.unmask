@@ -69,6 +69,7 @@ x11-libs/gtk+:3::mv
 dev-util/eclipse-sdk-bin::ssnb
 
 x11-misc/cvt12::haarp
+games-fps/zandronum::haarp
 
 games-util/zdbsp::jacendi-overlay
 games-util/acc::jacendi-overlay
