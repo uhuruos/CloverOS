@@ -1,2 +1,2 @@
-CFLAGS="-Ofast -mssse3 -mfpmath=both -pipe -fgraphite-identity -floop-nest-optimize -funroll-loops -fipa-pta -ftracer -fno-plt -fno-semantic-interposition -malign-data=cacheline -mtls-dialect=gnu2 -Wl,--hash-style=gnu"
+CFLAGS="-Ofast -mssse3 -mfpmath=both -pipe -fgraphite-identity -floop-nest-optimize -funroll-loops -fipa-pta -ftracer -fno-semantic-interposition -malign-data=cacheline -mtls-dialect=gnu2 -Wl,--hash-style=gnu"
 CXXFLAGS="${CFLAGS}"

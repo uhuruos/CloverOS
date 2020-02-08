@@ -1,5 +1,4 @@
 #preference
-sys-devel/gcc
 sys-kernel/gentoo-sources
 media-libs/mesa
 www-client/firefox::cloveros
@@ -78,6 +77,10 @@ dev-python/google-auth-oauthlib # tensorflow
 dev-python/pybind11 # tensorflow
 
 #keyworded, remove when stable exists
+net-proxy/obfs4proxy
+dev-go/ed25519 # obfs4proxy
+dev-go/go-text # obfs4proxy
+=net-print/hplip-plugin-3.18.12
 games-fps/zandronum
 x11-wm/compiz-meta
 dev-python/compizconfig-python # compiz-meta
@@ -572,7 +575,6 @@ games-util/qjoypad
 games-util/joystick
 app-crypt/hashcat
 app-arch/lzma # hashcat
-net-print/hplip-plugin
 media-gfx/nip2
 media-libs/vips # nip2
 net-print/pnm2ppa
