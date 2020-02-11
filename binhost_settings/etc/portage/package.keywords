@@ -80,6 +80,7 @@ dev-python/pybind11 # tensorflow
 net-proxy/obfs4proxy
 dev-go/ed25519 # obfs4proxy
 dev-go/go-text # obfs4proxy
+dev-go/goptlib # obfs4proxy
 =net-print/hplip-plugin-3.18.12
 games-fps/zandronum
 x11-wm/compiz-meta

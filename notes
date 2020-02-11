@@ -8,9 +8,8 @@ automatic ~/.asoundrc configuration. it gets the first audio device without hdmi
 livecd_install.sh: uefi install, encryption
 
 packages that don't build:
-shotcut flowblade pyhoca-gui syncthing adplug
 # doesn't emerge
-dxvk intel-neo kicad flowblade opentoonz eduke32 racket monodevelop mididings stumpwm stumpwm-contrib
+shotcut flowblade pyhoca-gui syncthing dxvk intel-neo kicad flowblade opentoonz eduke32 racket monodevelop mididings stumpwm stumpwm-contrib
 # packages with no libressl support
 ntopng zeronet nxplayer murmur eiskaltdcpp retroshare acme-tiny johntheripper-jumbo eagle
 # requires jack2
@@ -28,11 +27,15 @@ cheese / clutter USE=X
 ftjam argyllcms mongodb
 # builds, requires ax_cv_c_float_words_bigendian=no
 texlive-core
-# no longer emerges
-ckermit ng subversion soulseek-qt app-text/ots ncdc go-mtpfs generator matplotlib pouetchess distcc tiemu pinta guayadeque sbt webkit-gtk distcc scribus
 # 404
 enemy-territory-etpro mathematica-fonts
-# eol
-sci-chemistry/gabedit
 # fetch restriction
 sas3flash
+# needs gcc8
+pcsx2
+
+# no longer emerges
+ckermit ng subversion soulseek-qt app-text/ots ncdc go-mtpfs generator matplotlib pouetchess distcc tiemu pinta guayadeque sbt webkit-gtk distcc scribus acpi_call tp_smapi wireguard-modules virtualbox-modules sys-fs/vhba net-wireless/broadcom-sta dev-tex/pdfannotextractor dev-java/sbt sys-fs/zfs-kmod app-misc/ckermit sys-power/bbswitch app-editors/ng dev-lang/open-cobol media-libs/alsa-oss dev-lang/ocaml sys-devel/gdb media-sound/alsa-tools net-libs/nodejs sys-fs/xfsdump net-p2p/soulseek-qt games-emulation/pcsx-rearmed-libretro sys-fs/exfat-nofuse sys-fs/go-mtpfs games-emulation/generator games-board/pouetchess games-fps/quakeforge media-sound/streamripper app-text/ots net-p2p/ncdc games-misc/ckmame dev-vcs/subversion kde-frameworks/kjs app-emulation/virtualbox-guest-additions media-libs/libcaca games-fps/dhewm3 games-fps/sauerbraten games-emulation/citra-libretro x11-misc/polybar games-fps/redeclipse net-misc/gerbera net-im/corebird dev-libs/rocm-device-libs dev-libs/rocm-comgr dev-qt/qtwebkit x11-plugins/purple-hangouts media-sound/deadbeef
+
+# newly masked
+sci-chemistry/gabedit adplug
