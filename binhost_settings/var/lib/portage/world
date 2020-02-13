@@ -256,6 +256,7 @@ app-text/pandoc
 app-text/pstotext
 app-text/tesseract
 app-text/texlive
+app-text/texlive-core
 app-text/tree
 app-text/unrtf
 app-text/wgetpaste
@@ -1043,7 +1044,6 @@ net-misc/telnet-bsd
 net-misc/throttle
 net-misc/tigervnc
 net-misc/whois
-net-misc/wicd
 net-misc/x2goclient
 net-misc/youtube-comment-downloader
 net-misc/youtube-dl
