@@ -70,6 +70,7 @@ dev-util/eclipse-sdk-bin::ssnb
 
 x11-misc/cvt12::haarp
 games-fps/zandronum::haarp
+media-libs/fmod::haarp # zandronum
 
 games-util/zdbsp::jacendi-overlay
 games-util/acc::jacendi-overlay
