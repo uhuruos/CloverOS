@@ -1,4 +1,4 @@
-gcc -Ofast -march=native -mfpmath=both -fgraphite-identity -floop-nest-optimize -funroll-loops -fipa-pta -ftracer -fno-semantic-interposition -malign-data=cacheline -mtls-dialect=gnu2 -o /tmp/stats -xc - <<HEREDOC && exec /tmp/stats
+gcc -Ofast -march=native -mfpmath=both -fgraphite-identity -floop-nest-optimize -funroll-loops -fipa-pta -ftracer -fno-plt -fno-semantic-interposition -malign-data=cacheline -mtls-dialect=gnu2 -o /tmp/stats -xc - <<HEREDOC && exec /tmp/stats
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
