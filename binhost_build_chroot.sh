@@ -26,7 +26,7 @@ eselect profile set "default/linux/amd64/17.1/hardened"
 rm -R /var/lib/portage/world /etc/portage/package.* /etc/portage/make.conf
 wget $gitprefix/binhost_settings/etc/portage/{make.conf,package.use,package.keywords,package.env,package.mask,package.unmask} -P /etc/portage/
 mkdir /etc/portage/env/
-wget $gitprefix/binhost_settings/etc/portage/env/{gold,no-gnu2,no-gold,no-hashgnu,no-lto,no-lto-graphite,no-lto-o3,no-lto-ofast,no-ofast,pcsx2,size,clang} -P /etc/portage/env/
+wget $gitprefix/binhost_settings/etc/portage/env/{gold,no-gnu2,no-gold,no-hashgnu,no-lto,no-lto-graphite,no-lto-o3,no-lto-ofast,no-ofast,no-noplt,pcsx2,size,clang} -P /etc/portage/env/
 wget $gitprefix/binhost_settings/var/lib/portage/world -O /var/lib/portage/world
 
 emerge eselect-repository
