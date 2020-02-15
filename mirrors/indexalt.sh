@@ -271,7 +271,13 @@ body {
 		<a id="logo" href="#">&zwnj;</a>
 		<div class="dropdown">
 			<a href="https://twitter.com/cloveros_ga">News</a>
-			<div class="dropdown-content" id="news">25-Jan-20
+			<div class="dropdown-content" id="news">15-Feb-20
+Packages updated
+Kernel updated to 5.4.19
+ISO: https://cloveros.ga/s/CloverOS-x86_64-20200215.iso
+Packages rebuilt with new CFLAGS: CFLAGS="-Ofast -mssse3 -mfpmath=both -pipe -flto=8 -fgraphite-identity -floop-nest-optimize -funroll-loops -fipa-pta -ftracer -fdevirtualize-at-ltrans -fno-plt -fno-semantic-interposition -malign-data=cacheline -mtls-dialect=gnu2 -Wl,--hash-style=gnu"
+
+25-Jan-20
 Packages updated
 Kernel updated to 5.4.13
 ISO: https://cloveros.ga/s/CloverOS-x86_64-20200123.iso
