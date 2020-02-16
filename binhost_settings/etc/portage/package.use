@@ -1,3 +1,4 @@
+sys-devel/binutils default-gold
 app-portage/pfl -network-cron
 games-emulation/sdlmame tools
 media-video/flowblade python_targets_python3_7

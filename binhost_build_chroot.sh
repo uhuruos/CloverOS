@@ -26,7 +26,7 @@ eselect profile set "default/linux/amd64/17.1/hardened"
 rm -R /var/lib/portage/world /etc/portage/package.* /etc/portage/make.conf
 wget $gitprefix/binhost_settings/etc/portage/{make.conf,package.use,package.keywords,package.env,package.mask,package.unmask} -P /etc/portage/
 mkdir /etc/portage/env/
-wget $gitprefix/binhost_settings/etc/portage/env/{gold,no-gnu2,no-gold,no-hashgnu,no-lto,no-lto-graphite,no-lto-o3,no-lto-ofast,no-ofast,no-noplt,pcsx2,size,clang} -P /etc/portage/env/
+wget $gitprefix/binhost_settings/etc/portage/env/{no-gnu2,no-gold,no-hashgnu,no-lto,no-lto-graphite,no-lto-o3,no-lto-ofast,no-ofast,no-noplt,pcsx2,size,clang} -P /etc/portage/env/
 wget $gitprefix/binhost_settings/var/lib/portage/world -O /var/lib/portage/world
 
 emerge eselect-repository
@@ -41,7 +41,6 @@ sed -i "s/CONFIG_CRYPTO_CRC32C=m/CONFIG_CRYPTO_CRC32C=y/; s/CONFIG_FW_LOADER_USE
 echo -e "CONFIG_SND_HDA_INPUT_BEEP=y\nCONFIG_SND_HDA_INPUT_BEEP_MODE=0" >> config-arch-64
 genkernel --kernel-config=config-arch-64 --luks --lvm all
 (cd /usr/src/linux/ ; make clean ; make prepare ; make modules_prepare)
-binutils-config --linker ld.gold
 
 USE="-vaapi binary -color-management -opengl" emerge -1av gcc mesa scala netcat6 opencolorio openimageio
 emerge --depclean

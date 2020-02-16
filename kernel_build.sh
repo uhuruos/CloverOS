@@ -13,8 +13,6 @@ fi
 
 export BINPKG_COMPRESS="xz" XZ_OPT="--x86 --lzma2=preset=9e,dict=128MB,nice=273,depth=200,lc=4"
 
-binutils-config --linker ld.bfd
-
 emerge -C gentoo-sources
 rm -Rf /usr/src/*-gentoo*
 find /boot/ /lib/modules/ -mindepth 1 -maxdepth 1 -name \*gentoo\* ! -name \*$(uname -r) -exec rm -R {} \;
@@ -36,7 +34,7 @@ cp -R aufs5-standalone/{Documentation,fs} .
 cp aufs5-standalone/include/uapi/linux/aufs_type.h include/uapi/linux/
 cd -
 
-genkernel --kernel-config=config-arch-64 --luks --lvm all
+LD=ld.bfd genkernel --kernel-config=config-arch-64 --luks --lvm all
 XZ_OPT="--lzma1=preset=9e,dict=128MB,nice=273,depth=200,lc=4" tar --lzma -cf /var/cache/binpkgs/s/kernel.tar.lzma /boot/*$kernelversion-gentoo /lib/modules/$kernelversion-gentoo &
 
 cp -R /usr/src/linux-$kernelversion-gentoo/ /usr/src/linux-$kernelversion-gentoo-gnu/
@@ -47,7 +45,7 @@ chmod +x deblob-$kernelmajversion deblob-check
 PYTHON="python2.7" ./deblob-$kernelmajversion
 cd -
 
-genkernel --kernel-config=config-arch-64 --luks --lvm --kerneldir=/usr/src/linux-$kernelversion-gentoo-gnu/ all
+LD=ld.bfd genkernel --kernel-config=config-arch-64 --luks --lvm --kerneldir=/usr/src/linux-$kernelversion-gentoo-gnu/ all
 XZ_OPT="--lzma1=preset=9e,dict=128MB,nice=273,depth=200,lc=4" tar --lzma -cf /var/cache/binpkgs/s/kernel-libre.tar.lzma /boot/*$kernelversion-gentoo-gnu /lib/modules/$kernelversion-gentoo-gnu &
 
 rm -Rf /usr/src/linux-$kernelversion-gentoo-gnu/ config-arch-64
@@ -56,6 +54,4 @@ make clean
 make prepare
 make modules_prepare
 wait
-emerge -b @module-rebuild
-
-binutils-config --linker ld.gold
+LD=ld.bfd emerge -b @module-rebuild
