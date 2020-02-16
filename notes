@@ -1,6 +1,7 @@
 todo list:
 rewrite index.php
 finish fvwm tools
+fix virtualbox's vmware driver by disabling terminal modeline
 indexalt parse Packages for package dates
 make iso from scratch instead of replacing gentoo iso squashfs
 spacefm drive/ssh/ftp mounting
