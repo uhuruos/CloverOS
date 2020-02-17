@@ -144,7 +144,6 @@ Run `./cloveros_settings.sh c` to get the CloverOS Portage configuration.
 ### Table of contents
 * [What is CloverOS?](#what-is-cloveros)
 * [How do I install systemd/avahi/pulseaudio?](#how-do-i-install-systemdavahipulseaudio)
-* [It hangs on boot in VirtualBox](#it-hangs-on-boot-in-virtualbox)
 * [Nvidia card crashes on boot with a green screen](#nvidia-card-crashes-on-boot-with-a-green-screen)
 * [Using old Radeon card with new video drivers](#using-old-radeon-card-with-new-video-drivers)
 * [Installing proprietary Nvidia drivers](#installing-proprietary-nvidia-drivers)
@@ -195,13 +194,6 @@ It's a default Gentoo install with a binary packages repo. I made it to make my 
 
 ### How do I install systemd/avahi/pulseaudio?
 Switch to source and then emerge
-
-### It hangs on boot in VirtualBox
-In VirtualBox 6.x, change Graphics Controller to VBoxSVGA. This fixes the "Setting system clock using the hardware clock [UTC] ..." hang.
-
-VMSVGA graphics does technically work if you enter username, password and y and start X. The screen doesn't update in TTY. Looking for solution...
-
-![VirtualBox graphics adapters](https://i.imgur.com/pTtWptS.png)
 
 ### Nvidia card crashes on boot with a green screen
 /etc/modprobe.d/blacklist.conf:
@@ -704,7 +696,7 @@ Run `rsync -av --delete rsync://nl.cloveros.ga/cloveros /your/webserver/location
 
 ### Disabling Intel mitigations for performance
 ```
-sudo GRUB_CMDLINE_LINUX_DEFAULT="kpti=0 l1tf=off pti=off spectre_v2=off spectre_v2_user=off spec_store_bypass_disable=off ssbd=force-off intel_iommu=on" grub-mkconfig -o /boot/grub/grub.cfg
+sudo GRUB_CMDLINE_LINUX_DEFAULT="mitigations=off" grub-mkconfig -o /boot/grub/grub.cfg
 ```
 
 Make sure the computer you run this on has nothing important on it. (Dedicated gaming machines, etc.)

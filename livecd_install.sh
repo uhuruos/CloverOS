@@ -73,7 +73,10 @@ echo "$username:$userpassword" | chpasswd
 gpasswd -a $username wheel
 
 grub-install --target=i386-pc /dev/$drive &> /dev/null
-grub-mkconfig -o /boot/grub/grub.cfg &> /dev/null
+grub-mkconfig -o /boot/grub/grub.cfg
+if grep -q hypervisor /proc/cpuinfo; then
+	GRUB_CMDLINE_LINUX_DEFAULT="nomodeset" grub-mkconfig -o /boot/grub/grub.cfg
+fi
 sed -i "s/set timeout=5/set timeout=0/" /boot/grub/grub.cfg
 
 sed -i "s@c1:12345:respawn:/sbin/agetty -a $livecduser --noclear 38400 tty1 linux@c1:12345:respawn:/sbin/agetty --noclear 38400 tty1 linux@" /etc/inittab
