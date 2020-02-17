@@ -682,9 +682,9 @@ These are all the packages that don't build with the full CFLAGS: https://gitgud
 This is done to keep it as default as possible.
 
 ### Which DE does this come with?
-None, it comes with fvwm and a `~/.bash_profile` that can select/install a DE for you:
+It comes with fvwm window manager and a `~/.bash_profile` that can select/install a DE for you:
 
-![bash profile](https://i.imgur.com/YD4IPRf.png)
+![bash profile](https://i.imgur.com/eUt5OQu.png)
 
 ### Installing a DE
 First, connect to wifi using wpa_gui ('wifi' in fvwm)
