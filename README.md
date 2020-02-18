@@ -717,7 +717,7 @@ sudo sh -c "patch -d /usr/src/linux/ -p1 < enable_additional_cpu_optimizations_f
 sed -i "s/CONFIG_GENERIC_CPU=y/CONFIG_MNATIVE=y/;" config-arch-64
 sudo LD=ld.bfd genkernel --kernel-config=config-arch-64 all
 sudo grub-mkconfig -o /boot/grub/grub.cfg
-sudo LD=ld.bfd emerge -b @module-rebuild
+sudo LD=ld.bfd emerge @module-rebuild
 ```
 
 To update the system using source: `./cloveros_settings.sh c && sudo emerge --sync && sudo emerge -uavDN world`
