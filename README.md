@@ -715,11 +715,9 @@ echo -e "CONFIG_SND_HDA_INPUT_BEEP=y\nCONFIG_SND_HDA_INPUT_BEEP_MODE=0" >> confi
 wget https://raw.githubusercontent.com/graysky2/kernel_gcc_patch/master/enable_additional_cpu_optimizations_for_gcc_v8.1%2B_kernel_v4.13%2B.patch
 sudo sh -c "patch -d /usr/src/linux/ -p1 < enable_additional_cpu_optimizations_for_gcc_v8.1+_kernel_v4.13+.patch" 
 sed -i "s/CONFIG_GENERIC_CPU=y/CONFIG_MNATIVE=y/;" config-arch-64
-sudo binutils-config --linker ld.bfd
-sudo genkernel --kernel-config=config-arch-64 all
+sudo LD=ld.bfd genkernel --kernel-config=config-arch-64 all
 sudo grub-mkconfig -o /boot/grub/grub.cfg
-sudo emerge -b @module-rebuild
-sudo binutils-config --linker ld.gold
+sudo LD=ld.bfd emerge -b @module-rebuild
 ```
 
 To update the system using source: `./cloveros_settings.sh c && sudo emerge --sync && sudo emerge -uavDN world`
