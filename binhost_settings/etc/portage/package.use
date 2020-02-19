@@ -1,3 +1,4 @@
+app-portage/cfg-update X
 pantheon-base/pantheon -lightdm
 sys-devel/binutils default-gold
 app-portage/pfl -network-cron

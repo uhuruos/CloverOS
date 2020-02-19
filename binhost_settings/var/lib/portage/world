@@ -198,6 +198,7 @@ app-office/orage
 app-office/scribus
 app-office/texmaker
 app-office/texstudio
+app-portage/cfg-update
 app-portage/conf-update
 app-portage/cpuid2cpuflags
 app-portage/diffmask
@@ -209,6 +210,8 @@ app-portage/g-cpan
 app-portage/gemato
 app-portage/genlop
 app-portage/gentoolkit
+app-portage/golop
+app-portage/gpytage
 app-portage/gpyutils
 app-portage/kuroo
 app-portage/layman
@@ -217,6 +220,7 @@ app-portage/overlint
 app-portage/pfl
 app-portage/porthole
 app-portage/portpeek
+app-portage/prefix-toolkit
 app-portage/repoman
 app-portage/smart-live-rebuild
 app-portage/ufed

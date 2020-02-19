@@ -77,10 +77,10 @@ dev-python/google-auth-oauthlib # tensorflow
 dev-python/pybind11 # tensorflow
 
 #keyworded, remove when stable exists
+app-portage/prefix-toolkit
+app-portage/gpytage
 app-portage/golop
 x11-wm/2bwm
-pantheon-base/pantheon **
-x11-wm/gala **
 games-engines/love
 games-fps/quake3 **
 net-proxy/obfs4proxy
