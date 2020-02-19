@@ -23,8 +23,9 @@ picard / qtgui USE=accessibility
 crispy-doom / libsamplerate USE=sndfile
 bitwig-stuidio / cairo USE=xcb
 cheese / clutter USE=X
+xdg-desktop-portal-kde / qtprintsupport USE=cups
 # builds, requires AR="gcc-ar" in make.conf commented out
-ftjam argyllcms mongodb
+ftjam argyllcms mongodb	
 # builds, requires ax_cv_c_float_words_bigendian=no
 texlive-core
 # 404

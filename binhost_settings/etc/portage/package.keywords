@@ -77,6 +77,7 @@ dev-python/google-auth-oauthlib # tensorflow
 dev-python/pybind11 # tensorflow
 
 #keyworded, remove when stable exists
+x11-wm/2bwm
 games-engines/love
 games-fps/quake3 **
 net-proxy/obfs4proxy

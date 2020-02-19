@@ -217,7 +217,7 @@ media-libs/phonon -vlc
 media-libs/libsdl X
 dev-qt/qtwebengine jumbo-build
 www-client/chromium jumbo-build
-www-client/ungoogled-chromium  clang thinlto optimize-thinlto optimize-webui jumbo-build closure-compile
+www-client/ungoogled-chromium clang thinlto optimize-thinlto optimize-webui jumbo-build closure-compile
 mail-client/thunderbird -crypt
 www-client/seamonkey -crypt -minimal
 www-client/palemoon -official-branding

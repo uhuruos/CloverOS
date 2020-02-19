@@ -239,6 +239,7 @@ app-shells/zsh-syntax-highlighting
 app-text/agrep
 app-text/antiword
 app-text/atril
+app-text/bibletime
 app-text/calibre
 app-text/catdoc
 app-text/convmv
@@ -1601,6 +1602,7 @@ x11-themes/wm-icons
 x11-themes/xcursor-themes
 x11-themes/xfce-gant-icon-theme
 x11-themes/xfwm4-themes
+x11-wm/2bwm
 x11-wm/aewm
 x11-wm/aewm++
 x11-wm/amiwm
