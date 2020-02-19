@@ -1,5 +1,5 @@
 if [ -z "$DISPLAY" ] && [ -z "$SSH_CLIENT" ] && [ -z "$TMUX" ] && ! pgrep X > /dev/null; then
-	echo "WM Options: (y) Default (i) i3 (a) Awesome (o) Openbox (e) Enlightenment (k) KDE (m) MATE (x) XFCE (l) LXDE (q) LXQT (f) Fluxbox (d) dwm (c) IceWM (w) Window Maker (t) FVWM Themes (p) xmonad (s) Sawfish (b) bspwm (g) goomwwm (h) herbstluftwm (v) evilwm (u) Blackbox (z) Compiz Reloaded (!) aewm (+) aewm++ (@) amiwm (#) ctwm ($) cwm (%) echinus (^) jwm (&) larswm (*) lumina (<) lwm (>) matwm2 (:) musca (;) notion (/) oroborus (?) pagewm (P) pekwm (|) plwm (-) qtile (_) ratpoison (5) selectwm2 (=) sithwm (S) spectrwm (U) subtle (T) treewm (W) twm (L) windowlab (1) wmfs (2) wm2 (3) wmii (4) xoat (5) vtwm (6) metacity (7) 2bwm"
+	echo "WM Options: (y) Default (i) i3 (a) Awesome (o) Openbox (e) Enlightenment (k) KDE (m) MATE (x) XFCE (l) LXDE (q) LXQT (f) Fluxbox (d) dwm (c) IceWM (w) Window Maker (t) FVWM Themes (p) xmonad (s) Sawfish (b) bspwm (g) goomwwm (h) herbstluftwm (v) evilwm (u) Blackbox (z) Compiz Reloaded (!) aewm (+) aewm++ (@) amiwm (#) ctwm ($) cwm (%) echinus (^) jwm (&) larswm (*) lumina (<) lwm (>) matwm2 (:) musca (;) notion (/) oroborus (?) pagewm (P) pekwm (|) plwm (-) qtile (_) ratpoison (5) selectwm2 (=) sithwm (S) spectrwm (U) subtle (T) treewm (W) twm (L) windowlab (1) wmfs (2) wm2 (3) wmii (4) xoat (5) vtwm (6) metacity (7) 2bwm (8) xpra"
 	read -erp "Start X? [y/n] " -n 1 choice
 	declare -A wms wmspkg wmspost
 
@@ -231,6 +231,10 @@ if [ -z "$DISPLAY" ] && [ -z "$SSH_CLIENT" ] && [ -z "$TMUX" ] && ! pgrep X > /d
 
 	wms[7]=2bwm
 	wmspkg[7]=2bwm
+	wmspost[7]=$defaultpost
+
+	wms[7]=xpra
+	wmspkg[7]=xpra
 	wmspost[7]=$defaultpost
 
 	if [ -v wms[$choice] ]; then

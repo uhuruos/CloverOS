@@ -1,3 +1,4 @@
+pantheon-base/pantheon -lightdm
 sys-devel/binutils default-gold
 app-portage/pfl -network-cron
 games-emulation/sdlmame tools

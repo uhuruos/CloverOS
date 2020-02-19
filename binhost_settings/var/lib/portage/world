@@ -1655,6 +1655,7 @@ x11-wm/wmii
 x11-wm/xmonad
 x11-wm/xmonad-contrib
 x11-wm/xoat
+x11-wm/xpra
 xfce-base/exo
 xfce-base/xfce4-meta
 xfce-extra/multiload-nandhp

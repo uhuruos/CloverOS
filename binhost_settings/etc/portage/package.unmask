@@ -197,6 +197,8 @@ app-misc/powerline::raiagent
 
 pantheon-base/plank::elementary
 x11-themes/plank-theme-pantheon::elementary
+pantheon-base/pantheon::elementary
+x11-wm/gala::elementary # pantheon
 
 sys-apps/flatpak::flatpak-overlay
 acct-user/flatpak::flatpak-overlay # flatpak
