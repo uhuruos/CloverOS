@@ -467,6 +467,7 @@ virtual/libffi abi_x86_32
 dev-libs/libffi abi_x86_32
 virtual/opengl abi_x86_32
 media-libs/mesa abi_x86_32
+app-arch/zstd abi_x86_32
 x11-libs/libxshmfence abi_x86_32
 x11-libs/libXdamage abi_x86_32
 dev-libs/ocl-icd abi_x86_32
