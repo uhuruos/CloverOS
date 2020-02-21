@@ -4,7 +4,7 @@ if [ $(id -u) != "0" ]; then
 	exit 1
 fi
 
-kernelversion=5.4.19
+kernelversion=5.4.21
 kernelmajversion=5.4
 
 if [ ! -d '/var/cache/binpkgs/s/' ]; then
@@ -34,7 +34,7 @@ cp -R aufs5-standalone/{Documentation,fs} .
 cp aufs5-standalone/include/uapi/linux/aufs_type.h include/uapi/linux/
 cd -
 
-LD=ld.bfd genkernel --kernel-config=config-arch-64 --luks --lvm all
+genkernel --kernel-ld=ld.bfd --kernel-config=config-arch-64 --luks --lvm all
 XZ_OPT="--lzma1=preset=9e,dict=128MB,nice=273,depth=200,lc=4" tar --lzma -cf /var/cache/binpkgs/s/kernel.tar.lzma /boot/*$kernelversion-gentoo /lib/modules/$kernelversion-gentoo &
 
 cp -R /usr/src/linux-$kernelversion-gentoo/ /usr/src/linux-$kernelversion-gentoo-gnu/
@@ -45,7 +45,7 @@ chmod +x deblob-$kernelmajversion deblob-check
 PYTHON="python2.7" ./deblob-$kernelmajversion
 cd -
 
-LD=ld.bfd genkernel --kernel-config=config-arch-64 --luks --lvm --kerneldir=/usr/src/linux-$kernelversion-gentoo-gnu/ all
+genkernel --kernel-ld=ld.bfd --kernel-config=config-arch-64 --luks --lvm --kerneldir=/usr/src/linux-$kernelversion-gentoo-gnu/ all
 XZ_OPT="--lzma1=preset=9e,dict=128MB,nice=273,depth=200,lc=4" tar --lzma -cf /var/cache/binpkgs/s/kernel-libre.tar.lzma /boot/*$kernelversion-gentoo-gnu /lib/modules/$kernelversion-gentoo-gnu &
 
 rm -Rf /usr/src/linux-$kernelversion-gentoo-gnu/ config-arch-64
