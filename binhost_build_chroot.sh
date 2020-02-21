@@ -40,7 +40,7 @@ wget https://raw.githubusercontent.com/damentz/liquorix-package/master/linux-liq
 sed -i "s/CONFIG_CRYPTO_CRC32C=m/CONFIG_CRYPTO_CRC32C=y/; s/CONFIG_FW_LOADER_USER_HELPER=y/CONFIG_FW_LOADER_USER_HELPER=n/; s/CONFIG_I2C_NVIDIA_GPU=/#CONFIG_I2C_NVIDIA_GPU=/" config-arch-64
 echo -e "CONFIG_SND_HDA_INPUT_BEEP=y\nCONFIG_SND_HDA_INPUT_BEEP_MODE=0" >> config-arch-64
 genkernel --kernel-ld=ld.bfd --kernel-config=config-arch-64 --luks --lvm all
-(cd /usr/src/linux/ ; make clean ; make prepare ; make modules_prepare)
+(cd /usr/src/linux/ ; make clean ; LD=ld.bfd make prepare ; LD=ld.bfd make modules_prepare)
 
 USE="-vaapi binary -color-management -opengl" emerge -1av gcc mesa scala netcat6 opencolorio openimageio
 emerge --depclean

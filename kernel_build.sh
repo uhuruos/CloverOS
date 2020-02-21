@@ -51,7 +51,7 @@ XZ_OPT="--lzma1=preset=9e,dict=128MB,nice=273,depth=200,lc=4" tar --lzma -cf /va
 rm -Rf /usr/src/linux-$kernelversion-gentoo-gnu/ config-arch-64
 cd /usr/src/linux/
 make clean
-make prepare
-make modules_prepare
+LD=ld.bfd make prepare
+LD=ld.bfd make modules_prepare
 wait
 LD=ld.bfd emerge -b @module-rebuild
