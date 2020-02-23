@@ -77,6 +77,8 @@ dev-python/google-auth-oauthlib # tensorflow
 dev-python/pybind11 # tensorflow
 
 #keyworded, remove when stable exists
+dde-base/dde-meta
+trinity-base/tdebase-meta **
 app-portage/prefix-toolkit
 app-portage/gpytage
 app-portage/golop

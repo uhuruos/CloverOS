@@ -1,3 +1,4 @@
+dde-base/dde-meta kwin elogind
 app-portage/cfg-update X
 pantheon-base/pantheon -lightdm
 sys-devel/binutils default-gold

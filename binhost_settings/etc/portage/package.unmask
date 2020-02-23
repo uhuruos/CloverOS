@@ -7,6 +7,10 @@ x11-misc/xdg-utils::cloveros # xdg-utils::gentoo with removed DEPEND=sys-apps/db
 media-gfx/nip2::cloveros
 media-libs/vips::cloveros
 
+trinity-base/tdebase-meta::trinity
+
+dde-base/dde-meta::deepin
+
 x11-plugins/compiz-plugins-meta::compiz-reloaded
 dev-python/compizconfig-python::compiz-reloaded
 x11-apps/compiz-boxmenu::compiz-reloaded
