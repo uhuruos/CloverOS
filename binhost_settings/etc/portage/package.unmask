@@ -8,6 +8,9 @@ media-gfx/nip2::cloveros
 media-libs/vips::cloveros
 
 trinity-base/tdebase-meta::trinity
+trinity-base/tdeinit::trinity
+trinity-base/drkonqi::trinity
+trinity-base/kappfinder::trinity
 
 dde-base/dde-meta::deepin
 

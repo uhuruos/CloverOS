@@ -77,8 +77,13 @@ dev-python/google-auth-oauthlib # tensorflow
 dev-python/pybind11 # tensorflow
 
 #keyworded, remove when stable exists
+xfce-extra/eatmonkey
+net-p2p/cpuminer-opt
 dde-base/dde-meta
 trinity-base/tdebase-meta **
+trinity-base/tdeinit ** # tdebase-meta
+trinity-base/drkonqi ** # tdebase-meta
+trinity-base/kappfinder ** # tdebase-meta
 app-portage/prefix-toolkit
 app-portage/gpytage
 app-portage/golop

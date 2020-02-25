@@ -57,7 +57,7 @@ gpasswd -a $username wheel
 PORTAGE_BINHOST="https://cloveros.ga/s/nodbus" FETCHCOMMAND_HTTPS="wget -O \"\\\${DISTDIR}/\\\${FILE}\" \"\\\${URI}\"" emerge -1O glib wpa_supplicant gpgme spacefm linux-firmware mesa
 rm -Rf /var/cache/binpkgs/*
 emerge --noreplace wpa_supplicant spacefm linux-firmware
-emerge -eDv --exclude "glib wpa_supplicant gpgme spacefm linux-firmware mesa" @world xorg-server fvwm rxvt-unicode nitrogen compton sudo porthole rtorrent weechat alsa-utils zsh zsh-completions gentoo-zsh-completions liberation-fonts hack vlgothic scrot xbindkeys xinput arandr slock p7zip games-envd gparted squashfs-tools os-prober exfat-nofuse sshfs curlftpfs geeqie alsamixergui
+emerge -eDv --exclude "glib wpa_supplicant gpgme spacefm linux-firmware mesa" @world xorg-server fvwm rxvt-unicode nitrogen compton sudo porthole rtorrent weechat alsa-utils zsh zsh-completions gentoo-zsh-completions liberation-fonts hack vlgothic scrot xbindkeys xinput arandr slock xarchiver p7zip games-envd gparted squashfs-tools os-prober exfat-nofuse sshfs curlftpfs geeqie alsamixergui
 emerge --depclean
 emerge -1O mesa
 echo "frozen-files=\"/etc/sudoers\"" >> /etc/dispatch-conf.conf
@@ -94,8 +94,8 @@ sed -i "s@/home/user/@/home/$username/@" .config/spacefm/session
 wget $gitprefix/home/user/.config/mimeapps.list -P .config/
 echo -e "[Desktop Entry]\nEncoding=UTF-8\nType=Link\nName=Home\nIcon=user-home\nExec=spacefm ~/" > Desktop/home.desktop
 echo -e "[Desktop Entry]\nEncoding=UTF-8\nType=Link\nName=Applications\nIcon=folder\nExec=spacefm /usr/share/applications/" > Desktop/applications.desktop
-cp /usr/share/applications/porthole.desktop Desktop/
-echo -e "~rows=0\n1=home.desktop\n2=applications.desktop\n3=porthole.desktop" > .config/spacefm/desktop0
+cp /usr/share/applications/{porthole.desktop,xarchiver.desktop} Desktop/
+echo -e "~rows=0\n1=home.desktop\n2=applications.desktop\n3=porthole.desktop\n4=xarchiver.desktop" > .config/spacefm/desktop0
 chown -R $username /home/$username/
 
 wget $gitprefix/livecd_install.sh -P /home/$username/

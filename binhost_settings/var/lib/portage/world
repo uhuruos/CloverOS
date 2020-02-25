@@ -1062,6 +1062,7 @@ net-nntp/pan
 net-nntp/sabnzbd
 net-p2p/amule
 net-p2p/bitcoin-qt
+net-p2p/cpuminer-opt
 net-p2p/deluge
 net-p2p/etherwall
 net-p2p/freenet
@@ -1178,6 +1179,7 @@ sys-block/buffer
 sys-block/gparted
 sys-block/mbuffer
 sys-block/open-iscsi
+sys-block/partitionmanager
 sys-block/sas3flash
 sys-block/thin-provisioning-tools
 sys-block/zram-init
