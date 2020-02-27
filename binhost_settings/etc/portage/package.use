@@ -174,7 +174,7 @@ app-emulation/open-vm-tools X gtkmm multimon
 media-tv/kodi X -wayland
 x11-terms/kitty -wayland
 x11-wm/mutter -wayland
-app-admin/conky X thinkpad mpd rss curl iostats
+app-admin/conky X thinkpad mpd rss curl iostats truetype
 media-libs/vulkan-loader X
 media-gfx/fontforge X gtk
 media-libs/gst-plugins-bad X gtk

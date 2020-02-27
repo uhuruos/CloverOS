@@ -6,11 +6,30 @@ www-client/firefox::cloveros # firefox::pg_overlay with removed -Ctarget-cpu=nat
 x11-misc/xdg-utils::cloveros # xdg-utils::gentoo with removed DEPEND=sys-apps/dbus
 media-gfx/nip2::cloveros
 media-libs/vips::cloveros
+app-portage/porthole::cloveros # porthole::gentoo
+dev-python/pygtk::cloveros # porthole
+dev-python/pygtksourceview::cloveros # porthole
+media-gfx/cropgui::cloveros # cropgui::gentoo
 
 trinity-base/tdebase-meta::trinity
 trinity-base/tdeinit::trinity
 trinity-base/drkonqi::trinity
 trinity-base/kappfinder::trinity
+trinity-base/kate::trinity
+trinity-base/kcheckpass::trinity
+trinity-base/kcminit::trinity
+trinity-base/kcontrol::trinity
+trinity-base/kdcop::trinity
+trinity-base/tdedebugdialog::trinity
+trinity-base/tdepasswd::trinity
+trinity-base/tdeprint::trinity
+trinity-base/tdeeject::trinity
+trinity-base/kdesktop::trinity
+trinity-base/tdesu::trinity
+trinity-base/kdialog::trinity
+trinity-base/tdm::trinity
+trinity-base/kfind::trinity
+trinity-base/khelpcenter::trinity
 
 dde-base/dde-meta::deepin
 

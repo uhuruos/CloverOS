@@ -218,7 +218,6 @@ app-portage/layman
 app-portage/mirrorselect
 app-portage/overlint
 app-portage/pfl
-app-portage/porthole
 app-portage/portpeek
 app-portage/prefix-toolkit
 app-portage/repoman

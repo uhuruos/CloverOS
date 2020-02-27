@@ -1,3 +1,4 @@
+media-gfx/gimp **
 #preference
 sys-kernel/gentoo-sources
 media-libs/mesa
@@ -77,6 +78,7 @@ dev-python/google-auth-oauthlib # tensorflow
 dev-python/pybind11 # tensorflow
 
 #keyworded, remove when stable exists
+media-gfx/cropgui
 xfce-extra/eatmonkey
 net-p2p/cpuminer-opt
 dde-base/dde-meta
@@ -84,6 +86,22 @@ trinity-base/tdebase-meta **
 trinity-base/tdeinit ** # tdebase-meta
 trinity-base/drkonqi ** # tdebase-meta
 trinity-base/kappfinder ** # tdebase-meta
+trinity-base/kate ** # tdebase-meta
+trinity-base/kcheckpass ** # tdebase-meta
+trinity-base/kcminit ** # tdebase-meta
+trinity-base/kcontrol ** # tdebase-meta
+trinity-base/kdcop ** # tdebase-meta
+trinity-base/tdedebugdialog ** # tdebase-meta
+trinity-base/tdepasswd ** # tdebase-meta
+trinity-base/tdeprint ** # tdebase-meta
+trinity-base/tdeeject ** # tdebase-meta
+trinity-base/kdesktop ** # tdebase-meta
+trinity-base/tdesu ** # tdebase-meta
+trinity-base/kdialog ** # tdebase-meta
+trinity-base/tdm ** # tdebase-meta
+trinity-base/kfind ** # tdebase-meta
+trinity-base/khelpcenter ** # tdebase-meta
+
 app-portage/prefix-toolkit
 app-portage/gpytage
 app-portage/golop
