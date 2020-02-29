@@ -12,7 +12,7 @@ packages that don't build:
 # doesn't emerge
 shotcut flowblade pyhoca-gui dxvk intel-neo kicad opentoonz eduke32 racket monodevelop mididings stumpwm stumpwm-contrib
 # packages with no libressl support
-zanronum ntopng zeronet nxplayer murmur eiskaltdcpp retroshare acme-tiny johntheripper-jumbo eagle
+tdebase-meta zanronum ntopng zeronet nxplayer murmur eiskaltdcpp retroshare acme-tiny johntheripper-jumbo eagle
 # requires jack2
 cadence ladish
 # dependency use flag requirements
