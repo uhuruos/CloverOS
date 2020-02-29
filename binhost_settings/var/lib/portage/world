@@ -204,7 +204,6 @@ app-portage/cpuid2cpuflags
 app-portage/diffmask
 app-portage/eix
 app-portage/elogviewer
-app-portage/euscan
 app-portage/fquery
 app-portage/g-cpan
 app-portage/gemato
@@ -290,7 +289,6 @@ dev-lang/php
 dev-lang/scala
 dev-lang/tauthon
 dev-lang/tcc
-dev-libs/beignet
 dev-libs/input-pad
 dev-libs/libisoburn
 dev-libs/rocm-opencl-runtime
@@ -486,7 +484,6 @@ kde-misc/kio-stash
 kde-misc/krename
 kde-misc/krusader
 kde-misc/kshutdown
-kde-misc/kwebkitpart
 kde-misc/peruse
 kde-misc/plasma-applet-network-monitor
 kde-plasma/bluedevil
@@ -863,7 +860,6 @@ media-sound/patchage
 media-sound/pianobar
 media-sound/protux
 media-sound/pure-data
-media-sound/pympd
 media-sound/qastools
 media-sound/qjackctl
 media-sound/qmmp
@@ -898,7 +894,6 @@ media-sound/timidity++
 media-sound/tomahawk
 media-sound/ttaenc
 media-sound/umurmur
-media-sound/volti
 media-sound/wavbreaker
 media-sound/whipper
 media-sound/xmms2

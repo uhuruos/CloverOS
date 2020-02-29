@@ -44,8 +44,8 @@
 */*::steam-overlay
 */*::stefantalpalaru
 */*::tastytea
+*/*::TDE
 */*::tlp
-*/*::trinity
 */*::torbrowser
 */*::vampire
 */*::vapoursynth

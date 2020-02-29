@@ -1,10 +1,11 @@
-media-gfx/gimp **
 #preference
 sys-kernel/gentoo-sources
 media-libs/mesa
 www-client/firefox::cloveros
 x11-libs/gtk+:3::mv # removes dbus
 app-emulation/winetricks::cloveros ** # overlay
+media-gfx/gimp ** # gtk3
+media-libs/gegl # gimp
 
 #old, remove when stable is bumped up
 sys-fs/zfs # kernel 5.4
@@ -30,78 +31,38 @@ media-gfx/librecad # fixes build
 games-emulation/pcsx2 ** # old
 games-emulation/dolphin ** # old
 games-emulation/ppsspp ** # old
-dev-libs/weston # old
 app-shells/gentoo-zsh-completions ** # old
+dev-libs/weston # old
+media-libs/zimg ** # vapoursynth
 dev-python/xcffib # qtile
 dev-python/cairocffi # qtile
 =dev-libs/nspr-4.24 # firefox
 =dev-libs/nss-3.48-r1 # firefox
 =dev-util/cbindgen-0.10.1 # firefox
-=net-misc/pyhoca-gui-0.6.1.0
 =dev-libs/libuv-1.34.1
 =dev-util/rocm-cmake-3.0.0
 =dev-python/pyyaml-5.1.2
-dev-lang/go
 =media-libs/mlt-6.18.0
-media-libs/zimg ** # vapoursynth
 =dev-python/snakeoil-0.8.7 # pkgcore
 =net-libs/nghttp2-1.40.0 # nodejs
+=dev-python/colorama-0.4.3 # qutebrowser
+=dev-go/siphash-1.2.1 # obfs4proxy
 
 #libressl, remove when stable supports libressl
 =dev-qt/qtnetwork-5.13.2::libressl
 app-crypt/qca::libressl
-net-libs/nodejs::libressl
+=net-libs/nodejs-12.14.0::libressl
 net-misc/megatools::jm-overlay
 www-client/dillo
 app-editors/xemacs
 www-client/elinks
 media-gfx/argyllcms
 
-#=sys-apps/hwloc-2.0.4 # tensorflow
-#=dev-libs/re2-0.2019.08.01 # tensorflow
-#=dev-python/astor-0.7.1 # tensorflow
-#=dev-python/wrapt-1.11.2 # tensorflow
-#=sci-libs/keras-applications-1.0.8 # tensorflow
-#=sci-libs/keras-preprocessing-1.1.0 # tensorflow
-#=dev-python/google-auth-1.6.3 # tensorflow
-#=sci-libs/scipy-1.4.1 # tensorflow
-#=dev-python/cython-0.29.13 # tensorflow
-sci-libs/tensorflow
-net-libs/grpc # tensorflow
-dev-python/opt-einsum # tensorflow
-dev-python/grpcio # tensorflow
-net-libs/google-cloud-cpp # tensorflow
-sci-visualization/tensorboard # tensorflow
-sci-libs/tensorflow-estimator # tensorflow
-dev-python/grpcio-tools # tensorflow
-dev-python/google-auth-oauthlib # tensorflow
-dev-python/pybind11 # tensorflow
-
 #keyworded, remove when stable exists
 media-gfx/cropgui
 xfce-extra/eatmonkey
 net-p2p/cpuminer-opt
 dde-base/dde-meta
-trinity-base/tdebase-meta **
-trinity-base/tdeinit ** # tdebase-meta
-trinity-base/drkonqi ** # tdebase-meta
-trinity-base/kappfinder ** # tdebase-meta
-trinity-base/kate ** # tdebase-meta
-trinity-base/kcheckpass ** # tdebase-meta
-trinity-base/kcminit ** # tdebase-meta
-trinity-base/kcontrol ** # tdebase-meta
-trinity-base/kdcop ** # tdebase-meta
-trinity-base/tdedebugdialog ** # tdebase-meta
-trinity-base/tdepasswd ** # tdebase-meta
-trinity-base/tdeprint ** # tdebase-meta
-trinity-base/tdeeject ** # tdebase-meta
-trinity-base/kdesktop ** # tdebase-meta
-trinity-base/tdesu ** # tdebase-meta
-trinity-base/kdialog ** # tdebase-meta
-trinity-base/tdm ** # tdebase-meta
-trinity-base/kfind ** # tdebase-meta
-trinity-base/khelpcenter ** # tdebase-meta
-
 app-portage/prefix-toolkit
 app-portage/gpytage
 app-portage/golop
@@ -158,6 +119,7 @@ www-plugins/lightspark
 app-i18n/ibus-kkc
 app-i18n/libkkc # ibus-kkc
 games-action/minetest
+dev-games/irrlicht-headers # minetest
 media-gfx/gif2apng
 app-misc/rpick
 media-sound/whipper
@@ -694,6 +656,85 @@ x11-wm/subtle
 x11-wm/wmii
 x11-wm/vtwm
 x11-wm/metacity
+
+trinity-base/tde-base
+trinity-video/kaffeine
+dev-qt/tqtinterface
+dev-qt/tqt3
+trinity-base/tdetoys
+trinity-base/tdelibs
+trinity-base/tdewebdev
+trinity-base/tdeutils
+trinity-base/tdeedu
+trinity-base/tdebase
+trinity-base/tdesdk
+trinity-base/tde-minimal
+trinity-base/tdemultimedia
+trinity-base/tdegraphics
+trinity-base/tde-common-admin
+trinity-base/arts
+trinity-base/libcarddav
+trinity-base/tde-i18n
+trinity-base/tdevelop
+trinity-base/tdepim
+trinity-base/tqca-tls
+trinity-base/tde-common-cmake
+trinity-base/avahi-tqt
+trinity-base/tdegames
+trinity-base/tdenetwork
+trinity-base/libcaldav
+trinity-base/akode
+trinity-base/tqca
+dev-libs/dbus-tqt
+dev-libs/dbus-1-tqt
+trinity-apps/ksensors
+trinity-apps/koffice-i18n
+trinity-apps/konversation
+trinity-apps/knmap
+trinity-apps/kmyfirewall
+trinity-apps/dolphin
+trinity-apps/tderadio
+trinity-apps/yakuake
+trinity-apps/libr
+trinity-apps/piklab
+trinity-apps/gtk-qt-engine
+trinity-apps/kbfx
+trinity-apps/tdenetworkmanager
+trinity-apps/ktechlab
+trinity-apps/koffice
+trinity-apps/gtk3-tqt-engine
+trinity-apps/twin-style-crystal
+trinity-apps/kmymoney
+trinity-apps/gwenview
+trinity-apps/amarok
+trinity-apps/gwenview-i18n
+trinity-apps/kvirc
+trinity-apps/kstreamripper
+trinity-apps/kpicosim
+media-libs/libart-lgpl
+trinity-apps/tde-style-lipstik
+trinity-apps/tde-style-qtcurve
+trinity-apps/tde-style-domino
+trinity-apps/tde-style-ia-ora
+trinity-apps/tde-style-baghira
+trinity-base/tdeadmin
+trinity-apps/tdepowersave
+trinity-apps/kscope
+trinity-apps/tdeio-ftps
+trinity-apps/tde-systemsettings
+trinity-apps/tdeio-locate
+trinity-apps/tdeio-sword
+trinity-apps/kcmautostart
+trinity-apps/ktorrent
+trinity-apps/katapult
+trinity-apps/kbarcode
+trinity-apps/kkbswitch
+trinity-apps/klcddimmer
+trinity-apps/tellico
+trinity-apps/krecipes
+trinity-apps/kshowmail
+trinity-base/tde-common-libltdl
+
 media-fonts/essays1743
 media-fonts/twemoji-color-font
 media-fonts/emojione-color-font
@@ -737,6 +778,7 @@ media-fonts/crosextrafonts-carlito
 media-fonts/polarsys-b612-fonts
 media-fonts/solarize
 media-fonts/paratype-astra
+
 media-libs/vapoursynth
 media-libs/waifu2x-converter-cpp
 media-libs/l-smash **
@@ -907,6 +949,7 @@ x11-plugins/wmacpiload-ac
 x11-plugins/wmbatteries *
 x11-plugins/wmping
 x11-plugins/wmamixer
+
 games-misc/fortune-mod-all
 games-misc/fortune-mod-bofh-excuses
 games-misc/fortune-mod-calvin
@@ -928,6 +971,7 @@ games-misc/fortune-mod-starwars
 games-misc/fortune-mod-strangelove
 games-misc/fortune-mod-tao
 games-misc/fortune-mod-zx-error
+
 games-emulation/retroarch **
 games-emulation/retroarch-assets **
 games-emulation/retroarch-joypad-autoconfig **
@@ -1007,3 +1051,23 @@ games-emulation/kronos-libretro **
 games-emulation/flycast-wince-libretro **
 games-emulation/mesen-libretro **
 games-emulation/stella2014-libretro **
+
+#=sys-apps/hwloc-2.0.4 # tensorflow
+#=dev-libs/re2-0.2019.08.01 # tensorflow
+#=dev-python/astor-0.7.1 # tensorflow
+#=dev-python/wrapt-1.11.2 # tensorflow
+#=sci-libs/keras-applications-1.0.8 # tensorflow
+#=sci-libs/keras-preprocessing-1.1.0 # tensorflow
+#=dev-python/google-auth-1.6.3 # tensorflow
+#=sci-libs/scipy-1.4.1 # tensorflow
+#=dev-python/cython-0.29.13 # tensorflow
+sci-libs/tensorflow
+net-libs/grpc # tensorflow
+dev-python/opt-einsum # tensorflow
+dev-python/grpcio # tensorflow
+net-libs/google-cloud-cpp # tensorflow
+sci-visualization/tensorboard # tensorflow
+sci-libs/tensorflow-estimator # tensorflow
+dev-python/grpcio-tools # tensorflow
+dev-python/google-auth-oauthlib # tensorflow
+dev-python/pybind11 # tensorflow
