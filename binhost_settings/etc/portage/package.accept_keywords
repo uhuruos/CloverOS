@@ -45,7 +45,6 @@ dev-python/cairocffi # qtile
 =media-libs/mlt-6.18.0
 =dev-python/snakeoil-0.8.7 # pkgcore
 =net-libs/nghttp2-1.40.0 # nodejs
-=dev-python/colorama-0.4.3 # qutebrowser
 =dev-go/siphash-1.2.1 # obfs4proxy
 
 #libressl, remove when stable supports libressl

@@ -165,7 +165,6 @@ app-misc/fdupes
 app-misc/figlet
 app-misc/font-manager
 app-misc/fsearch
-app-misc/fslint
 app-misc/gentoo
 app-misc/icdiff
 app-misc/mat2
@@ -743,7 +742,6 @@ media-gfx/lximage-qt
 media-gfx/maim
 media-gfx/mcomix
 media-gfx/meh
-media-gfx/mirage
 media-gfx/mypaint
 media-gfx/nip2
 media-gfx/nomacs
@@ -1082,6 +1080,7 @@ net-print/hplip
 net-print/hplip-plugin
 net-print/pnm2ppa
 net-print/splix
+net-proxy/obfs4proxy
 net-proxy/sshuttle
 net-proxy/torsocks
 net-proxy/tsocks

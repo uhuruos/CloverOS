@@ -333,14 +333,14 @@ case "$choice" in
 	c)
 		portageworkdir=portageworkdir$(< /dev/urandom tr -dc 0-9 | head -c 8)
 		mkdir -p $portageworkdir/env/
-		wget $gitprefix/binhost_settings/etc/portage/{package.use,package.keywords,package.env,package.mask,package.unmask,make.conf} -P $portageworkdir/
+		wget $gitprefix/binhost_settings/etc/portage/{package.use,package.accept_keywords,package.env,package.mask,package.unmask,make.conf} -P $portageworkdir/
 		wget $gitprefix/binhost_settings/etc/portage/env/{no-gnu2,no-gold,no-hashgnu,no-lto,no-lto-graphite,no-lto-o3,no-lto-ofast,no-ofast,no-noplt,no-noplt-lto,no-sinter,no-fipapta,pcsx2,size,clang} -P $portageworkdir/env/
 		if [[ $(find $portageworkdir -type f | wc -l) == "21" ]]; then
 			backupportagedir=backupportage$(< /dev/urandom tr -dc 0-9 | head -c 8)
 			mkdir $backupportagedir/
-			sudo mv /etc/portage/{package.use,package.keywords,package.env,package.mask,package.unmask} /etc/portage/env/ $backupportagedir/
+			sudo mv /etc/portage/{package.usepackage.accept_keywords,package.env,package.mask,package.unmask} /etc/portage/env/ $backupportagedir/
 			cp /etc/portage/make.conf $backupportagedir/
-			sudo mv $portageworkdir/{package.use,package.keywords,package.env,package.mask,package.unmask} $portageworkdir/env/ /etc/portage/
+			sudo mv $portageworkdir/{package.use,package.keywords,package.accept_keywords,package.env,package.mask,package.unmask} $portageworkdir/env/ /etc/portage/
 			useflags=$(grep "^USE=" $portageworkdir/make.conf)
 			if ! grep -q "$useflags" /etc/portage/make.conf; then
 				echo $useflags | sudo tee --append /etc/portage/make.conf > /dev/null

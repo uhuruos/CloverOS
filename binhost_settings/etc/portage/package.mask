@@ -65,3 +65,5 @@ dev-qt/qtnetwork::gentoo # libressl
 >media-video/handbrake-1.2.2-r3
 >dev-python/dnspython-1.15.0-r1
 >app-emulation/vagrant-2.2.6-r1
+>www-client/qutebrowser-1.8.3
+>games-action/minetest-5.1.0-r1
