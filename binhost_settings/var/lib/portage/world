@@ -18,6 +18,7 @@ app-admin/metalog
 app-admin/mongo-tools
 app-admin/pass
 app-admin/passwordsafe
+app-admin/pprocm
 app-admin/sshguard
 app-admin/sudo
 app-admin/sysklogd
@@ -1268,7 +1269,6 @@ www-client/surf
 www-client/surfraw
 www-client/torbrowser
 www-client/uget
-www-client/ungoogled-chromium
 www-client/vivaldi
 www-client/vivaldi-snapshot
 www-client/w3m
