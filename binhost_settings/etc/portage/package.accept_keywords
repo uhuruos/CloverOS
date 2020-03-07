@@ -36,8 +36,8 @@ dev-libs/weston # old
 media-libs/zimg ** # vapoursynth
 dev-python/xcffib # qtile
 dev-python/cairocffi # qtile
-=dev-libs/nspr-4.24 # firefox
-=dev-libs/nss-3.48-r1 # firefox
+=dev-libs/nspr-4.25 # firefox
+=dev-libs/nss-3.50-r1 # firefox
 =dev-util/cbindgen-0.10.1 # firefox
 =dev-libs/libuv-1.34.1
 =dev-util/rocm-cmake-3.0.0
@@ -58,6 +58,7 @@ www-client/elinks
 media-gfx/argyllcms
 
 #keyworded, remove when stable exists
+games-emulation/jrommanager
 media-gfx/cropgui
 xfce-extra/eatmonkey
 net-p2p/cpuminer-opt

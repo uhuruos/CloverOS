@@ -217,6 +217,7 @@ app-portage/layman
 app-portage/mirrorselect
 app-portage/overlint
 app-portage/pfl
+app-portage/porthole
 app-portage/portpeek
 app-portage/prefix-toolkit
 app-portage/repoman
@@ -271,6 +272,7 @@ app-vim/extra-syntax
 app-vim/vim-tmux
 dev-db/dbeaver-bin
 dev-db/mariadb
+dev-db/mongodb
 dev-db/postgresql
 dev-db/redis
 dev-games/ogre
@@ -291,7 +293,6 @@ dev-lang/tauthon
 dev-lang/tcc
 dev-libs/input-pad
 dev-libs/libisoburn
-dev-libs/rocm-opencl-runtime
 dev-libs/weston
 dev-perl/rename
 dev-php/composer
@@ -300,7 +301,6 @@ dev-python/cgroup-utils
 dev-python/docker-py
 dev-python/pip
 dev-python/py-cpuinfo
-dev-python/pystache
 dev-python/sphinx
 dev-python/sympy
 dev-python/virtualenv
@@ -377,6 +377,7 @@ games-emulation/gngb
 games-emulation/gngeo
 games-emulation/hatari
 games-emulation/higan
+games-emulation/jrommanager
 games-emulation/libretro-dosbox
 games-emulation/libretro-meta
 games-emulation/lxdream
@@ -770,7 +771,6 @@ media-gfx/xzgv
 media-gfx/yacreader
 media-libs/alsa-oss
 media-libs/glyr
-media-libs/osl
 media-libs/vapoursynth
 media-libs/vips
 media-libs/vulkan-loader
@@ -1067,7 +1067,6 @@ net-p2p/ncdc
 net-p2p/nicotine+
 net-p2p/qbittorrent
 net-p2p/rtorrent
-net-p2p/soulseek-qt
 net-p2p/syncthing
 net-p2p/torrentinfo
 net-p2p/transmission

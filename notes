@@ -37,6 +37,8 @@ enemy-territory-etpro mathematica-fonts
 sas3flash
 # needs gcc8
 pcsx2
+# needs llvm8
+osl
 
 # no longer emerges
 ckermit ng subversion soulseek-qt app-text/ots ncdc go-mtpfs generator matplotlib pouetchess distcc tiemu pinta guayadequey webkit-gtk distcc scribusdev-tex/pdfannotextractor dev-java/sbt app-misc/ckermit app-editors/ng dev-lang/open-cobol media-libs/alsa-oss dev-lang/ocaml sys-devel/gdb media-sound/alsa-tools net-libs/nodejs sys-fs/xfsdump net-p2p/soulseek-qt games-emulation/pcsx-rearmed-libretro sys-fs/exfat-nofuse sys-fs/go-mtpfs games-emulation/generator games-board/pouetchess games-fps/quakeforge media-sound/streamripper app-text/ots net-p2p/ncdc games-misc/ckmame dev-vcs/subversion kde-frameworks/kjs app-emulation/virtualbox-guest-additions media-libs/libcaca games-fps/dhewm3 games-fps/sauerbraten games-emulation/citra-libretro x11-misc/polybar games-fps/redeclipse net-misc/gerbera net-im/corebird dev-libs/rocm-device-libs dev-libs/rocm-comgr dev-qt/qtwebkit x11-plugins/purple-hangouts media-sound/deadbeef

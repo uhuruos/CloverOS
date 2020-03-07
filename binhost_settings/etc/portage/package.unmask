@@ -10,6 +10,7 @@ app-portage/porthole::cloveros # porthole::gentoo
 dev-python/pygtk::cloveros # porthole
 dev-python/pygtksourceview::cloveros # porthole
 media-gfx/cropgui::cloveros # cropgui::gentoo
+dev-libs/beignet::cloveros # beignet::gentoo
 
 trinity-base/tde-base::TDE
 trinity-video/kaffeine::TDE
