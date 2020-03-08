@@ -7,7 +7,7 @@ $minimalisoname = basename(glob('/var/cache/binpkgs/s/CloverOS_Minimal-x86_64-*.
 
 $packageuse = file_get_contents('../binhost_settings/etc/portage/package.use');
 $packageenv = file_get_contents('../binhost_settings/etc/portage/package.env');
-$packagekeywords = file_get_contents('../binhost_settings/etc/portage/package.keywords');
+$packagekeywords = file_get_contents('../binhost_settings/etc/portage/package.accept_keywords');
 $makeconf = file_get_contents('../binhost_settings/etc/portage/make.conf');
 $reposconf = file_get_contents('../binhost_settings/etc/portage/repos.conf/eselect-repo.conf');
 $worldtxt = file_get_contents('../binhost_settings/var/lib/portage/world');
