@@ -94,12 +94,12 @@ app-doc/zsh-lovers
 app-editors/emacs
 app-editors/gedit
 app-editors/gvim
+app-editors/leafpad
 app-editors/mg
 app-editors/mousepad
 app-editors/nano
 app-editors/neovim
 app-editors/ng
-app-editors/nvi
 app-editors/pluma
 app-editors/vim
 app-editors/vis
@@ -293,6 +293,7 @@ dev-lang/tauthon
 dev-lang/tcc
 dev-libs/input-pad
 dev-libs/libisoburn
+dev-libs/rocm-opencl-runtime
 dev-libs/weston
 dev-perl/rename
 dev-php/composer
