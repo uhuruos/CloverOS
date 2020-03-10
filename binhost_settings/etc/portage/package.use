@@ -1,4 +1,4 @@
-media-libs/libglvnd X # xorg-server
+www-client/ungoogled-chromium -optimize-webui -system-openh264 # temp
 games-emulation/rpcs3 -system-llvm evdev
 dde-base/dde-meta kwin elogind
 app-portage/cfg-update X
@@ -328,6 +328,7 @@ sys-libs/ncurses-compat tinfo abi_x86_32 # dev-util/android-ndk
 sys-fs/quota rpc # nfs-utils
 dev-java/validation-api source # rstudio
 virtual/jpeg-compat abi_x86_32 # qtqw-bin
+media-libs/libglvnd X # xorg-server
 media-libs/babl introspection # gimp
 media-libs/gegl introspection # gimp
 dev-qt/qtsingleapplication X
