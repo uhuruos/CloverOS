@@ -1,4 +1,3 @@
-www-client/ungoogled-chromium -optimize-webui -system-openh264 # temp
 games-emulation/rpcs3 -system-llvm evdev
 dde-base/dde-meta kwin elogind
 app-portage/cfg-update X
@@ -221,6 +220,7 @@ media-libs/libsdl X
 dev-qt/qtwebengine jumbo-build
 www-client/chromium jumbo-build
 www-client/ungoogled-chromium clang thinlto optimize-thinlto optimize-webui jumbo-build closure-compile pdf
+www-client/ungoogled-chromium -optimize-webui -system-openh264 # temp
 mail-client/thunderbird -crypt
 www-client/seamonkey -crypt -minimal
 www-client/palemoon -official-branding
