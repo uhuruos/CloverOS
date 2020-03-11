@@ -1168,6 +1168,7 @@ sys-apps/smartmontools
 sys-apps/udevil
 sys-apps/usermode-utilities
 sys-apps/vbetool
+sys-auth/libfprint
 sys-auth/pam_yubico
 sys-block/buffer
 sys-block/gparted
