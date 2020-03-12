@@ -2,7 +2,6 @@ www-client/chromium
 #preference
 sys-kernel/gentoo-sources
 media-libs/mesa
-www-client/firefox::cloveros
 x11-libs/gtk+:3::mv # removes dbus
 app-emulation/winetricks::cloveros ** # overlay
 media-gfx/gimp ** # gtk3

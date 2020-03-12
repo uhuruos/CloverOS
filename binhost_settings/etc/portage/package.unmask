@@ -2,7 +2,6 @@ games-emulation/pcsx2::cloveros # pcsx2-9999::gentoo with added "src_configure()
 app-emulation/winetricks::cloveros # winetricks-9999::gentoo with removed RDEPEND="x11-misc/xdg-utils"
 mate-base/mate::cloveros # mate-1.22::gentoo with removed "extras? ( sys-apps/gnome-disk-utility:0 )"
 media-gfx/meh::cloveros # taken from media-gfx/meh::lanodanOverlay
-www-client/firefox::cloveros # firefox::pg_overlay with removed -Ctarget-cpu=native
 x11-misc/xdg-utils::cloveros # xdg-utils::gentoo with removed DEPEND=sys-apps/dbus
 media-gfx/nip2::cloveros
 media-libs/vips::cloveros
@@ -11,6 +10,8 @@ dev-python/pygtk::cloveros # porthole
 dev-python/pygtksourceview::cloveros # porthole
 media-gfx/cropgui::cloveros # cropgui::gentoo
 dev-libs/beignet::cloveros # beignet::gentoo
+
+www-client/firefox::prototype99
 
 trinity-base/tde-base::TDE
 trinity-video/kaffeine::TDE
