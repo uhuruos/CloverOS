@@ -33,7 +33,6 @@
 */*::pf4public
 */*::pixlra
 */*::poly-c
-*/*::prototype
 */*::raiagent
 */*::rasdark
 */*::reagentoo
