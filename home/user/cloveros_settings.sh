@@ -339,7 +339,7 @@ case "$choice" in
 		if [[ $(find $portageworkdir -type f | wc -l) == "22" ]]; then
 			backupportagedir=backupportage$(< /dev/urandom tr -dc 0-9 | head -c 8)
 			mkdir $backupportagedir/
-			sudo mv /etc/portage/{package.use,package.accept_keywords,package.env,package.mask,package.unmask} /etc/portage/env/ /etc/portage/repos.conf/ $backupportagedir/
+			sudo mv /etc/portage/{package.use,package.keywords,package.env,package.mask,package.unmask} /etc/portage/env/ /etc/portage/repos.conf/ $backupportagedir/
 			cp /etc/portage/make.conf $backupportagedir/
 			sudo mv $portageworkdir/{package.use,package.accept_keywords,package.env,package.mask,package.unmask} $portageworkdir/env/ $portageworkdir/repos.conf/ /etc/portage/
 			useflags=$(grep "^USE=" $portageworkdir/make.conf)
