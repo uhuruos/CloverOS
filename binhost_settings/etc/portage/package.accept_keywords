@@ -59,6 +59,7 @@ www-client/elinks
 media-gfx/argyllcms
 
 #keyworded, remove when stable exists
+app-editors/vscode-bin
 games-emulation/jrommanager
 media-gfx/cropgui
 xfce-extra/eatmonkey

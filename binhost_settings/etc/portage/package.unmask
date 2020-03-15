@@ -237,6 +237,7 @@ kde-misc/peruse::jorgicio
 media-gfx/yacreader::jorgicio
 app-arch/unarr::jorgicio # yacreader
 games-fps/openarena::jorgicio
+app-editors/vscode-bin::jorgicio
 
 games-util/steam-launcher::steam-overlay
 
