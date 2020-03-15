@@ -341,7 +341,7 @@ case "$choice" in
 			mkdir $backupportagedir/
 			sudo mv /etc/portage/{package.use,package.accept_keywords,package.env,package.mask,package.unmask} /etc/portage/env/ /etc/portage/repos.conf/ $backupportagedir/
 			cp /etc/portage/make.conf $backupportagedir/
-			sudo mv $portageworkdir/{package.use,package.keywords,package.accept_keywords,package.env,package.mask,package.unmask} $portageworkdir/env/ $portageworkdir/repos.conf/ /etc/portage/
+			sudo mv $portageworkdir/{package.use,package.accept_keywords,package.env,package.mask,package.unmask} $portageworkdir/env/ $portageworkdir/repos.conf/ /etc/portage/
 			useflags=$(grep "^USE=" $portageworkdir/make.conf)
 			if ! grep -q "$useflags" /etc/portage/make.conf; then
 				echo $useflags | sudo tee --append /etc/portage/make.conf > /dev/null
