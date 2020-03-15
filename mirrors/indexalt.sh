@@ -271,7 +271,12 @@ body {
 		<a id="logo" href="#">&zwnj;</a>
 		<div class="dropdown">
 			<a href="https://twitter.com/cloveros_ga">News</a>
-			<div class="dropdown-content" id="news">15-Feb-20
+			<div class="dropdown-content" id="news">13-Mar-20
+Packages updated
+Kernel updated to 5.4.24
+ISO: https://cloveros.ga/s/CloverOS-x86_64-20200313.iso
+
+15-Feb-20
 Packages updated
 Kernel updated to 5.4.19
 ISO: https://cloveros.ga/s/CloverOS-x86_64-20200215.iso

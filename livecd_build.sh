@@ -134,11 +134,5 @@ tar -xOf kernel.tar.lzma --wildcards boot/initramfs-genkernel-x86_64-\* | xz -d 
 tar -xOf kernel.tar.lzma --wildcards boot/System.map-genkernel-x86_64-\* > iso/boot/System-gentoo.map
 sed -i "s@dokeymap@aufs@g" iso/isolinux/isolinux.cfg
 sed -i "s@dokeymap@aufs@g" iso/grub/grub.cfg
-xorriso -as mkisofs -r -J \
-	-joliet-long -l -cache-inodes \
-	-isohybrid-mbr /usr/share/syslinux/isohdpfx.bin \
-	-partition_offset 16 -A "Gentoo Live" \
-	-b isolinux/isolinux.bin -c isolinux/boot.cat \
-	-no-emul-boot -boot-load-size 4 -boot-info-table  \
-	-o CloverOS-x86_64-$(date +"%Y%m%d").iso iso/
-rm -Rf image/ iso/ kernel.tar.lzma kernel.tar.lzma.asc
+xorriso -as mkisofs -r -J -joliet-long -l -cache-inodes -isohybrid-mbr /usr/share/syslinux/isohdpfx.bin -partition_offset 16 -A "Gentoo Live" -b isolinux/isolinux.bin -c isolinux/boot.cat -no-emul-boot -boot-load-size 4 -boot-info-table -eltorito-alt-boot -e iso/gentoo.efimg -no-emul-boot -isohybrid-gpt-basdat -o CloverOS-x86_64-$(date +"%Y%m%d").iso iso/
+#rm -Rf image/ iso/ kernel.tar.lzma kernel.tar.lzma.asc
