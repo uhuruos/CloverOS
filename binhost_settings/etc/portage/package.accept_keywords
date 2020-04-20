@@ -1,4 +1,3 @@
-www-client/chromium
 #preference
 sys-kernel/gentoo-sources
 media-libs/mesa
@@ -21,9 +20,6 @@ media-video/smplayer # stable smplayer doesn't work with stable mpv
 media-fonts/opendesktop-fonts # fixes bug
 net-p2p/mldonkey # fixes build
 games-emulation/mgba # fixes build
-media-libs/osl # fixes build
-net-misc/spice-gtk # fixes build
-app-emulation/spice-protocol # spice-gtk
 x11-misc/x11vnc # fixes build
 x11-themes/sddm-gentoo-black-theme ** # fixes build
 x11-themes/terminology-themes ** # fixes build
@@ -34,31 +30,20 @@ games-emulation/dolphin ** # old
 games-emulation/ppsspp ** # old
 app-shells/gentoo-zsh-completions ** # old
 dev-libs/weston # old
+x11-wm/fvwm # old
 media-libs/zimg ** # vapoursynth
-dev-python/xcffib # qtile
-dev-python/cairocffi # qtile
-=dev-libs/nspr-4.25 # firefox
-=dev-libs/nss-3.50-r1 # firefox
-=dev-util/cbindgen-0.10.1 # firefox
-=dev-libs/libuv-1.34.1
-=dev-util/rocm-cmake-3.0.0
-=dev-python/pyyaml-5.1.2
-=media-libs/mlt-6.18.0
-=dev-python/snakeoil-0.8.7 # pkgcore
-=net-libs/nghttp2-1.40.0 # nodejs
-=dev-go/siphash-1.2.1 # obfs4proxy
 
 #libressl, remove when stable supports libressl
-=dev-qt/qtnetwork-5.13.2::libressl
+=dev-qt/qtnetwork-5.14.1::libressl
 app-crypt/qca::libressl
 =net-libs/nodejs-12.14.0::libressl
 net-misc/megatools::jm-overlay
 www-client/dillo
 app-editors/xemacs
 www-client/elinks
-media-gfx/argyllcms
 
 #keyworded, remove when stable exists
+media-gfx/gmic
 app-editors/vscode-bin
 games-emulation/jrommanager
 media-gfx/cropgui
@@ -147,6 +132,7 @@ sys-devel/llvm-roc # rocm-opencl-runtime
 dev-libs/rocm-device-libs # rocm-opencl-runtime
 dev-libs/rocm-opencl-driver # rocm-opencl-runtime
 dev-libs/rocm-comgr # rocm-opencl-runtime
+dev-util/rocm-cmake # rocm-opencl-runtime
 media-sound/guimup
 media-sound/gtkguitune
 media-sound/gtklick
@@ -555,6 +541,7 @@ x11-plugins/pidgin-skypeweb
 net-misc/youtube-dl-gui
 x11-plugins/purple-hangouts
 x11-terms/kitty
+x11-terms/kitty-terminfo # kitty
 app-misc/ddccontrol-db
 app-i18n/ibus-typing-booster
 app-i18n/ibus-input-pad
@@ -1073,3 +1060,90 @@ sci-libs/tensorflow-estimator # tensorflow
 dev-python/grpcio-tools # tensorflow
 dev-python/google-auth-oauthlib # tensorflow
 dev-python/pybind11 # tensorflow
+
+#temp
+dev-libs/ocl-icd
+virtual/opencl
+kde-plasma/breeze
+kde-frameworks/ki18n
+kde-frameworks/syndication
+kde-frameworks/kpty
+kde-frameworks/kdesu
+kde-frameworks/kservice
+kde-frameworks/kcrash
+kde-frameworks/kactivities-stats
+kde-frameworks/kcontacts
+kde-frameworks/kimageformats
+kde-frameworks/kxmlrpcclient
+kde-frameworks/purpose
+kde-frameworks/kjs
+kde-frameworks/khtml
+kde-frameworks/kcmutils
+kde-frameworks/knotifyconfig
+kde-frameworks/kross
+kde-frameworks/kdewebkit
+kde-frameworks/kitemmodels
+kde-frameworks/kunitconversion
+kde-frameworks/kemoticons
+kde-frameworks/kdesignerplugin
+kde-frameworks/kdelibs4support
+kde-frameworks/kpeople
+kde-frameworks/threadweaver
+kde-frameworks/krunner
+kde-frameworks/syntax-highlighting
+kde-frameworks/kparts
+kde-frameworks/ktexteditor
+kde-frameworks/kwayland
+kde-frameworks/kdeclarative
+kde-frameworks/kactivities
+kde-frameworks/kidletime
+kde-frameworks/kfilemetadata
+kde-frameworks/baloo
+kde-frameworks/kio
+kde-frameworks/qqc2-desktop-style
+kde-frameworks/kirigami
+kde-frameworks/sonnet
+kde-frameworks/kinit
+kde-frameworks/kded
+kde-frameworks/kwallet
+kde-frameworks/solid
+kde-frameworks/kglobalaccel
+kde-frameworks/kxmlgui
+kde-frameworks/ktextwidgets
+kde-frameworks/kservice
+kde-frameworks/kjobwidgets
+kde-frameworks/kdbusaddons
+kde-frameworks/kcrash
+kde-frameworks/kbookmarks
+kde-frameworks/kio
+kde-frameworks/kcompletion
+kde-frameworks/attica
+kde-frameworks/kdoctools
+kde-frameworks/kguiaddons
+kde-frameworks/kcodecs
+kde-frameworks/kauth
+kde-frameworks/kitemviews
+kde-frameworks/karchive
+kde-frameworks/kwindowsystem
+kde-frameworks/kcoreaddons
+kde-frameworks/extra-cmake-modules
+kde-frameworks/kwidgetsaddons
+kde-frameworks/kpackage
+kde-frameworks/knotifications
+kde-frameworks/knewstuff
+kde-frameworks/frameworkintegration
+kde-frameworks/kiconthemes
+kde-frameworks/kconfig
+kde-frameworks/kconfigwidgets
+kde-frameworks/plasma
+kde-plasma/kdecoration
+kde-plasma/libkworkspace
+kde-plasma/kde-cli-tools
+kde-plasma/plasma-integration
+kde-plasma/milou
+kde-plasma/ksysguard
+kde-plasma/libksysguard
+kde-plasma/libkscreen
+kde-plasma/kwin
+kde-plasma/plasma-workspace
+kde-plasma/kscreenlocker

@@ -167,7 +167,6 @@ games-util/udmf-convert::jacendi-overlay
 games-fps/doomretro::jacendi-overlay
 
 games-util/rejoystick::gamerlay
-games-fps/zdoom::gamerlay
 
 net-print/brother-genml1-bin::brother-overlay
 

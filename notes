@@ -9,7 +9,7 @@ spacefm drive/ssh/ftp mounting
 automatic ~/.asoundrc configuration. it gets the first audio device without hdmi in the name
 livecd_install.sh: uefi install, encryption
 
-packages that don't build:
+packages that don't build
 # doesn't emerge
 osl shotcut flowblade pyhoca-gui dxvk kicad opentoonz eduke32 racket monodevelop mididings stumpwm stumpwm-contrib
 # packages with no libressl support
