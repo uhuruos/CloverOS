@@ -1197,6 +1197,7 @@ sys-fs/jmtpfs
 sys-fs/mtpfs
 sys-fs/multipath-tools
 sys-fs/ncdu
+sys-fs/ntfs3g
 sys-fs/safecopy
 sys-fs/simple-mtpfs
 sys-fs/squashfs-tools
