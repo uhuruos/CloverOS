@@ -225,7 +225,6 @@ sudo wget https://raw.githubusercontent.com/damentz/liquorix-package/$(uname -r 
 sudo sed -i "s/CONFIG_CRYPTO_CRC32C=m/CONFIG_CRYPTO_CRC32C=y/; s/CONFIG_FW_LOADER_USER_HELPER=y/CONFIG_FW_LOADER_USER_HELPER=n/; s/CONFIG_I2C_NVIDIA_GPU=/#CONFIG_I2C_NVIDIA_GPU=/; s/CONFIG_R8169=m/CONFIG_R8169=y/" /usr/src/linux/.config
 sudo emerge nvidia-drivers
 sudo depmod
-sudo eselect opengl set nvidia
 sudo eselect opencl set nvidia
 sudo sh -c 'echo -e "blacklist nouveau\nblacklist vga16fb\nblacklist rivafb\nblacklist nvidiafb\nblacklist rivatv" >> /etc/modprobe.d/blacklist.conf'
 ```
