@@ -1125,7 +1125,6 @@ sys-apps/fbset
 sys-apps/firejail
 sys-apps/flatpak
 sys-apps/hprofile
-sys-apps/hwinfo
 sys-apps/hwloc
 sys-apps/i2c-tools
 sys-apps/idle3-tools
@@ -1198,7 +1197,6 @@ sys-fs/jmtpfs
 sys-fs/mtpfs
 sys-fs/multipath-tools
 sys-fs/ncdu
-sys-fs/ntfs3g
 sys-fs/safecopy
 sys-fs/simple-mtpfs
 sys-fs/squashfs-tools
