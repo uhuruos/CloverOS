@@ -669,7 +669,6 @@ media-fonts/sophia-nubian
 media-fonts/source-han-sans
 media-fonts/source-pro
 media-fonts/stix-fonts
-media-fonts/symbola
 media-fonts/takao-fonts
 media-fonts/tengwar-fonts
 media-fonts/terminus-font
@@ -786,7 +785,6 @@ media-sound/ardour
 media-sound/ario
 media-sound/audacious
 media-sound/audacity
-media-sound/beets
 media-sound/bempc
 media-sound/bluez-alsa
 media-sound/cantata
@@ -920,7 +918,6 @@ media-video/smtube
 media-video/subtitlecomposer
 media-video/subtitleeditor
 media-video/subtitleripper
-media-video/syncplay
 media-video/vdr
 media-video/vlc
 media-video/xine-ui
@@ -995,6 +992,7 @@ net-libs/libotr
 net-libs/loudmouth
 net-libs/nodejs
 net-mail/dovecot
+net-mail/fetchmail
 net-mail/isync
 net-mail/mailman
 net-mail/mlmmj
@@ -1039,7 +1037,6 @@ net-misc/youtube-dl
 net-misc/youtube-dl-gui
 net-misc/zssh
 net-news/liferea
-net-news/newsboat
 net-news/quiterss
 net-nntp/pan
 net-nntp/sabnzbd
@@ -1251,7 +1248,6 @@ www-client/opera-beta
 www-client/opera-developer
 www-client/palemoon
 www-client/pybugz
-www-client/ripe-atlas-cousteau
 www-client/seamonkey
 www-client/surf
 www-client/surfraw
@@ -1263,7 +1259,6 @@ www-client/vivaldi-snapshot
 www-client/w3m
 www-client/w3mmee
 www-client/waterfox
-www-client/weboob
 www-misc/fcgiwrap
 www-misc/urlwatch
 www-plugins/adobe-flash
@@ -1486,7 +1481,6 @@ x11-terms/mlterm
 x11-terms/mrxvt
 x11-terms/qterminal
 x11-terms/root-tail
-x11-terms/roxterm
 x11-terms/rxvt-unicode
 x11-terms/sakura
 x11-terms/st
@@ -1495,7 +1489,6 @@ x11-terms/terminology
 x11-terms/tilda
 x11-terms/tilix
 x11-terms/xfce4-terminal
-x11-terms/xvt
 x11-terms/yeahconsole
 x11-themes/adwaita-icon-theme
 x11-themes/arc-icon-theme

@@ -5,7 +5,7 @@ x11-libs/gtk+:3::mv # removes dbus
 app-emulation/winetricks::cloveros **
 www-client/firefox::cloveros
 media-gfx/gimp ** # gtk3
-media-libs/gegl # gimp
+media-libs/gegl ** # gimp
 
 #old, remove when stable is bumped up
 sys-fs/zfs # kernel 5.4
@@ -32,6 +32,9 @@ app-shells/gentoo-zsh-completions ** # old
 dev-libs/weston # old
 x11-wm/fvwm # old
 media-libs/zimg ** # vapoursynth
+dev-libs/ocl-icd
+virtual/opencl
+dev-util/opencl-headers
 
 #libressl, remove when stable supports libressl
 =dev-qt/qtnetwork-5.14.1::libressl
@@ -1062,8 +1065,6 @@ dev-python/google-auth-oauthlib # tensorflow
 dev-python/pybind11 # tensorflow
 
 #temp
-dev-libs/ocl-icd
-virtual/opencl
 kde-plasma/breeze
 kde-frameworks/ki18n
 kde-frameworks/syndication
