@@ -993,6 +993,7 @@ net-libs/loudmouth
 net-libs/nodejs
 net-mail/dovecot
 net-mail/fetchmail
+net-mail/getmail
 net-mail/isync
 net-mail/mailman
 net-mail/mlmmj
@@ -1208,7 +1209,7 @@ sys-fs/zfs-auto-snapshot
 sys-kernel/dkms
 sys-kernel/dracut
 sys-kernel/genkernel
-sys-kernel/gentoo-sources:5.4.24
+sys-kernel/gentoo-sources:5.5.19
 sys-kernel/linux-firmware
 sys-power/acpi_call
 sys-power/acpitool

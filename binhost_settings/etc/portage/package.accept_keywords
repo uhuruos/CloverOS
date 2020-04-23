@@ -1,3 +1,4 @@
+media-gfx/inkscape
 #preference
 sys-kernel/gentoo-sources
 media-libs/mesa
@@ -8,8 +9,8 @@ media-gfx/gimp ** # gtk3
 media-libs/gegl ** # gimp
 
 #old, remove when stable is bumped up
-sys-fs/zfs # kernel 5.4
-sys-fs/zfs-kmod # zfs
+sys-fs/zfs ** # kernel 5.4
+sys-fs/zfs-kmod ** # zfs
 app-emulation/virtualbox # kernel 5.x
 app-emulation/virtualbox-guest-additions # virtualbox
 app-emulation/virtualbox-additions # virtualbox
@@ -35,6 +36,7 @@ media-libs/zimg ** # vapoursynth
 dev-libs/ocl-icd
 virtual/opencl
 dev-util/opencl-headers
+x11-drivers/nvidia-drivers
 
 #libressl, remove when stable supports libressl
 =dev-qt/qtnetwork-5.14.1::libressl
