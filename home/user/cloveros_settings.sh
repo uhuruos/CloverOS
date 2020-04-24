@@ -98,6 +98,7 @@ case "$choice" in
 		fi
 		if [ -d /var/db/pkg/dev-python/pycrypto*/ ] ; then
 			sudo emerge -C pycrypto
+			sudo sed -i "s/>dev-python\/dnspython-1.15.0-r1//" /etc/portage/package.mask
 		fi
 		if [ ! -d /var/db/pkg/net-libs/gnutls-3.6.7-r1/ ]; then
 			sudo FETCHCOMMAND_HTTPS="wget -O \"\${DISTDIR}/\${FILE}\" \"\${URI}\"" emerge -1 gnutls aria2
