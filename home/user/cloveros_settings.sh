@@ -96,6 +96,9 @@ case "$choice" in
 		if [ -d /var/db/pkg/games-emulation/mednafen-saturn-libretro*/ ] ; then
 			sudo emerge -C games-emulation/mednafen-saturn-libretro
 		fi
+		if [ -d /var/db/pkg/dev-python/pycrypto*/ ] ; then
+			sudo emerge -C pycrypto
+		fi
 		if [ ! -d /var/db/pkg/net-libs/gnutls-3.6.7-r1/ ]; then
 			sudo FETCHCOMMAND_HTTPS="wget -O \"\${DISTDIR}/\${FILE}\" \"\${URI}\"" emerge -1 gnutls aria2
 		fi

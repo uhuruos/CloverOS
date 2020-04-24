@@ -1,4 +1,7 @@
+media-gfx/inkscape python_single_target_python3_7
 www-client/ungoogled-chromium python_targets_python3_7
+x11-wm/qtile python_targets_python3_6
+
 games-emulation/rpcs3 -system-llvm evdev
 dde-base/dde-meta kwin elogind
 app-portage/cfg-update X
