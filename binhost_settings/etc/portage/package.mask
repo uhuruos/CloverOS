@@ -51,7 +51,6 @@
 */*::vifino-overlay
 
 net-im/profanity::gentoo # optmzr
-
 net-libs/nodejs::gentoo # libressl
 dev-qt/qtnetwork::gentoo # libressl
 
