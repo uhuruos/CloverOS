@@ -93,10 +93,10 @@ case "$choice" in
 		if [ -d /var/db/pkg/dev-lang/perl-5.2*/ ]; then
 			sudo emerge -v1 dev-perl/MailTools:0 dev-perl/Error:0 dev-perl/Digest-HMAC:0 dev-perl/Text-Unidecode:0 dev-perl/Unicode-EastAsianWidth:0 dev-perl/Module-Build:0 dev-perl/TimeDate:0 dev-perl/libintl-perl:0 dev-perl/Authen-SASL:0 dev-vcs/git:0 x11-terms/rxvt-unicode:0 net-irc/weechat:0 virtual/perl-Getopt-Long virtual/perl-ExtUtils-MakeMaker virtual/perl-Perl-OSType virtual/perl-libnet virtual/perl-Scalar-List-Utils virtual/perl-Parse-CPAN-Meta virtual/perl-Text-ParseWords sys-apps/texinfo virtual/perl-ExtUtils-Install virtual/perl-CPAN-Meta virtual/perl-Digest-MD5 virtual/perl-CPAN-Meta-YAML
 		fi
-		if [ -d /var/db/pkg/games-emulation/mednafen-saturn-libretro*/ ] ; then
+		if [ -d /var/db/pkg/games-emulation/mednafen-saturn-libretro-*/ ] ; then
 			sudo emerge -C games-emulation/mednafen-saturn-libretro
 		fi
-		if [ -d /var/db/pkg/dev-python/pycrypto*/ ] ; then
+		if [ -d /var/db/pkg/dev-python/pycrypto-*/ ] ; then
 			sudo emerge -C pycrypto
 			sudo sed -i "s/>dev-python\/dnspython-1.15.0-r1//" /etc/portage/package.mask
 		fi

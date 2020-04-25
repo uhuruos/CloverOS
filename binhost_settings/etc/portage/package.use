@@ -224,10 +224,10 @@ dev-qt/qtwebengine jumbo-build
 www-client/chromium jumbo-build
 www-client/ungoogled-chromium clang thinlto optimize-thinlto optimize-webui jumbo-build closure-compile pdf
 www-client/ungoogled-chromium -optimize-webui -system-openh264 # temp
-mail-client/thunderbird -crypt
 www-client/seamonkey -crypt -minimal
 www-client/palemoon -official-branding
-www-client/firefox clang thinlto cross-lto
+www-client/firefox clang thinlto cross-lto -system-av1
+mail-client/thunderbird clang
 www-client/torbrowser clang
 media-sound/sox alsa openmp encode flac id3tag ladspa mad ogg opus sndfile twolame wavpack
 net-analyzer/rrdtool perl graph
