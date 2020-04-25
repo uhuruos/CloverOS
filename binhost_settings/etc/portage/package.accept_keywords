@@ -1,4 +1,3 @@
-media-gfx/inkscape
 #preference
 sys-kernel/gentoo-sources
 media-libs/mesa
@@ -37,11 +36,12 @@ dev-libs/ocl-icd
 virtual/opencl
 dev-util/opencl-headers
 x11-drivers/nvidia-drivers
+media-gfx/inkscape
 
 #libressl, remove when stable supports libressl
 =dev-qt/qtnetwork-5.14.1::libressl
 app-crypt/qca::libressl
-=net-libs/nodejs-12.14.0::libressl
+net-libs/nodejs::libressl
 net-misc/megatools::jm-overlay
 www-client/dillo
 app-editors/xemacs
