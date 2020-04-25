@@ -100,7 +100,7 @@ case "$choice" in
 			sudo emerge -C pycrypto
 			sudo sed -i "s/>dev-python\/dnspython-1.15.0-r1//" /etc/portage/package.mask
 		fi
-		if [ ! -d /var/db/pkg/net-libs/gnutls-3.6.7-r1/ ]; then
+		if [ ! -d /var/db/pkg/net-libs/gnutls-3.6.13/ ]; then
 			sudo FETCHCOMMAND_HTTPS="wget -O \"\${DISTDIR}/\${FILE}\" \"\${URI}\"" emerge -1 gnutls aria2
 		fi
 		if grep -q "^python3.5$" /etc/python-exec/python-exec.conf; then
@@ -338,7 +338,7 @@ case "$choice" in
 		portageworkdir=portageworkdir$(< /dev/urandom tr -dc 0-9 | head -c 8)
 		mkdir -p $portageworkdir/env/ $portageworkdir/repos.conf/
 		wget $gitprefix/binhost_settings/etc/portage/{package.use,package.accept_keywords,package.env,package.mask,package.unmask,make.conf} -P $portageworkdir/
-		wget $gitprefix/binhost_settings/etc/portage/env/{no-gnu2,no-gold,no-hashgnu,no-lto,no-lto-graphite,no-lto-o3,no-lto-ofast,no-ofast,no-noplt,no-noplt-lto,no-sinter,no-fipapta,pcsx2,size,clang} -P $portageworkdir/env/
+		wget $gitprefix/binhost_settings/etc/portage/env/{no-gnu2,no-gold,no-hashgnu,no-lto,no-lto-graphite,no-lto-o3,no-lto-ofast,no-ofast,no-noplt,no-noplt-lto,no-sinter,no-fipapta,no-lto-ofast-noplt,pcsx2,size,clang} -P $portageworkdir/env/
 		wget $gitprefix/binhost_settings/etc/portage/repos.conf/eselect-repo.conf -P $portageworkdir/repos.conf/
 		if [[ $(find $portageworkdir -type f | wc -l) == "22" ]]; then
 			backupportagedir=backupportage$(< /dev/urandom tr -dc 0-9 | head -c 8)
