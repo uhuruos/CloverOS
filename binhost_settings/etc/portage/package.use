@@ -539,7 +539,7 @@ media-libs/libepoxy abi_x86_32
 
 
 #temp
-media-gfx/inkscape python_single_target_python3_7
+media-gfx/inkscape python_single_target_python3_7 -python_single_target_python3_6
 www-client/ungoogled-chromium python_targets_python3_7
 x11-wm/qtile python_targets_python3_7
 # required by media-gfx/inkscape-1.0_rc1::gentoo[python_single_target_python3_7]
