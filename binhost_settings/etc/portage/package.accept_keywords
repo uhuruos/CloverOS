@@ -49,6 +49,8 @@ app-editors/xemacs
 www-client/elinks
 
 #keyworded, remove when stable exists
+x11-misc/plank
+x11-misc/xdock
 media-gfx/gmic
 app-editors/vscode-bin
 games-emulation/jrommanager

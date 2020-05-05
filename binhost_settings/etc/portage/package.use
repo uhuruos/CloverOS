@@ -335,6 +335,7 @@ media-libs/mlt ffmpeg # kde-meta
 kde-frameworks/kfilemetadata taglib # kde-meta
 dev-libs/gmp cxx # openscad
 media-sound/elisa vlc # kde-meta
+kde-frameworks/plasma X # latte-dock
 dev-qt/qtsingleapplication X
 x11-libs/gtk+ X
 x11-libs/libva X
