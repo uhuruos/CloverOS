@@ -237,7 +237,7 @@ void main(void) {
 			}
 		}
 
-		char brightness[5];
+		char brightness[10];
 		dp = opendir("/sys/class/backlight/");
 		if (dp) {
 			char brightnessfilename[60];
