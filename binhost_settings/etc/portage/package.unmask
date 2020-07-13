@@ -56,7 +56,6 @@ net-im/profanity::optmzr
 dev-libs/libmesode::optmzr # profanity
 
 dev-qt/qtnetwork::libressl
-net-libs/nodejs::libressl
 app-crypt/qca::libressl
 
 sys-fs/exfat-nofuse::bobwya
@@ -76,6 +75,7 @@ dev-util/eclipse-sdk-bin::ssnb
 x11-misc/cvt12::haarp
 games-fps/zandronum::haarp
 media-libs/fmod::haarp # zandronum
+games-rpg/doukutsu-bin::haarp
 
 games-util/zdbsp::jacendi-overlay
 games-util/acc::jacendi-overlay
@@ -99,7 +99,6 @@ media-sound/sequencer64::audio-overlay
 media-sound/serialosc::audio-overlay
 media-libs/libmonome::audio-overlay # serialosc
 
-net-misc/megatools::jm-overlay
 games-emulation/rpcs3::jm-overlay
 
 games-fps/openjk-academy::luke-jr
@@ -112,7 +111,7 @@ dev-lang/tauthon::stefantalpalaru
 media-plugins/gimp-refocus::stefantalpalaru
 media-plugins/refocus-it::stefantalpalaru
 
-www-client/waterfox::poly-c
+www-client/waterfox-classic::poly-c
 x11-themes/sddm-gentoo-black-theme::poly-c
 games-fps/enemy-territory::poly-c
 games-fps/enemy-territory-etpro::poly-c
@@ -198,6 +197,8 @@ dev-python/merkletools::raiagent # zeronet
 dev-python/python-bitcoinlib::raiagent # zeronet
 dev-python/pyelliptic::raiagent # zeronet
 dev-libs/libsecp256k1::raiagent # zeronet
+acct-group/zeronet # zeronet
+acct-user/zeronet # zeronet
 app-misc/powerline::raiagent
 
 x11-misc/plank::elementary
@@ -276,6 +277,7 @@ games-emulation/mame2003-libretro::abendbrot
 games-emulation/nestopia-libretro::abendbrot
 games-emulation/nxengine-libretro::abendbrot
 games-emulation/openlara-libretro::abendbrot
+games-emulation/opera-libretro::abendbrot
 games-emulation/parallel-n64-libretro::abendbrot
 games-emulation/pcsx-rearmed-libretro::abendbrot
 games-emulation/picodrive-libretro::abendbrot

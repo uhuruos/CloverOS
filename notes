@@ -13,7 +13,7 @@ packages that don't build
 # doesn't emerge
 osl shotcut flowblade pyhoca-gui dxvk kicad opentoonz eduke32 racket monodevelop mididings stumpwm stumpwm-contrib
 # packages with no libressl support
-tdebase-meta zanronum ntopng zeronet nxplayer murmur eiskaltdcpp retroshare acme-tiny johntheripper-jumbo eagle
+tdebase-meta zanronum ntopng zeronet nxplayer murmur eiskaltdcpp retroshare acme-tiny johntheripper-jumbo eagle megatools
 # requires jack2
 cadence ladish
 # dependency use flag requirements

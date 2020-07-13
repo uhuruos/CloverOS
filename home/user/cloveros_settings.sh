@@ -100,7 +100,7 @@ case "$choice" in
 			sudo emerge -C pycrypto
 			sudo sed -i "s/>dev-python\/dnspython-1.15.0-r1//" /etc/portage/package.mask
 		fi
-		if [ ! -d /var/db/pkg/net-libs/gnutls-3.6.13/ ]; then
+		if [ ! -d /var/db/pkg/net-libs/gnutls-3.6.14/ ]; then
 			sudo FETCHCOMMAND_HTTPS="wget -O \"\${DISTDIR}/\${FILE}\" \"\${URI}\"" emerge -1 gnutls aria2
 		fi
 		if grep -q "^python3.5$" /etc/python-exec/python-exec.conf; then

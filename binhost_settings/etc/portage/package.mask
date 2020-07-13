@@ -31,6 +31,7 @@
 */*::palemoon
 */*::pentoo
 */*::pf4public
+*/*::pg_overlay
 */*::pixlra
 */*::poly-c
 */*::raiagent
@@ -51,7 +52,7 @@
 */*::vifino-overlay
 
 net-im/profanity::gentoo # optmzr
-net-libs/nodejs::gentoo # libressl
 dev-qt/qtnetwork::gentoo # libressl
 
 >sys-kernel/genkernel-3.5.3.3 # genkernel 4 is buggy, incorrect filenames
+>net-nntp/sabnzbd-3

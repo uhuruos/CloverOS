@@ -1,3 +1,14 @@
+dev-libs/libutf8proc
+mail-client/thunderbird
+dev-libs/plasma-wayland-protocols
+kde-plasma/kwayland-server
+dev-ruby/rubyzip
+dev-python/websockets
+sci-libs/volk
+dev-python/click-plugins
+=media-libs/libvpx-1.8.2 # handbrake
+=dev-python/jinja-2.11.2 # qutebrowser
+
 #preference
 sys-kernel/gentoo-sources
 sys-devel/gcc
@@ -5,6 +16,7 @@ media-libs/mesa
 x11-libs/gtk+:3::mv # removes dbus
 app-emulation/winetricks::cloveros **
 www-client/firefox::cloveros
+=dev-libs/nss-3.52.1
 
 #old, remove when stable is bumped up
 sys-fs/zfs ** # kernel 5.4
@@ -15,42 +27,43 @@ app-emulation/virtualbox-additions # virtualbox
 app-emulation/virtualbox-modules # virtualbox
 app-emulation/virtualbox-extpack-oracle # virtualbox
 net-misc/youtube-dl # stable always outdated and never works
-media-video/smplayer # stable smplayer doesn't work with stable mpv
 media-fonts/opendesktop-fonts # fixes bug
 net-p2p/mldonkey # fixes build
 games-emulation/mgba # fixes build
 x11-misc/x11vnc # fixes build
 x11-themes/sddm-gentoo-black-theme ** # fixes build
-x11-themes/terminology-themes ** # fixes build
 net-misc/freerdp ** # fixes build
-media-gfx/librecad # fixes build
 games-emulation/pcsx2 ** # old
 games-emulation/dolphin ** # old
 games-emulation/ppsspp ** # old
 app-shells/gentoo-zsh-completions ** # old
-dev-libs/weston # old
 x11-wm/fvwm # old
 media-libs/zimg ** # vapoursynth
 media-gfx/gimp ** # gtk3
 media-libs/gegl ** # gimp
-dev-libs/ocl-icd
-virtual/opencl
-dev-util/opencl-headers
-x11-drivers/nvidia-drivers
-media-gfx/inkscape
-=media-libs/libvpx-1.8.2 # handbrake
+media-libs/babl ** # gimp
 
 #libressl, remove when stable supports libressl
-=dev-qt/qtnetwork-5.14.1::libressl
+=dev-qt/qtnetwork-5.14.2::libressl
 app-crypt/qca::libressl
-net-libs/nodejs::libressl
-net-misc/megatools::jm-overlay
 www-client/dillo
 app-editors/xemacs
 www-client/elinks
 
 #keyworded, remove when stable exists
+app-text/xournalpp
+x11-apps/xinput_calibrator
+games-rpg/doukutsu-bin
+kde-misc/peruse
+app-text/pandoc
 x11-misc/plank
+dev-haskell/haskell-platform
+dev-haskell/async # haskell-platform
+dev-haskell/parallel # haskell-platform
+dev-haskell/primitive
+media-sound/solfege
+x11-wm/xmonad
+x11-wm/xmonad-contrib
 x11-misc/xdock
 media-gfx/gmic
 app-editors/vscode-bin
@@ -69,7 +82,7 @@ net-proxy/obfs4proxy
 dev-go/ed25519 # obfs4proxy
 dev-go/go-text # obfs4proxy
 dev-go/goptlib # obfs4proxy
-=net-print/hplip-plugin-3.18.12
+net-print/hplip-plugin
 games-fps/zandronum
 x11-wm/compiz-meta
 dev-python/compizconfig-python # compiz-meta
@@ -142,6 +155,7 @@ dev-libs/rocm-device-libs # rocm-opencl-runtime
 dev-libs/rocm-opencl-driver # rocm-opencl-runtime
 dev-libs/rocm-comgr # rocm-opencl-runtime
 dev-util/rocm-cmake # rocm-opencl-runtime
+dev-libs/rocclr # rocm-opencl-runtime
 media-sound/guimup
 media-sound/gtkguitune
 media-sound/gtklick
@@ -199,6 +213,7 @@ dev-libs/libtsm # kmscon
 app-i18n/zhcon
 media-gfx/openscad
 media-gfx/opencsg # openscad
+media-libs/lib3mf # openscad
 games-roguelike/wrogue
 net-im/corebird
 games-emulation/reicast
@@ -222,7 +237,7 @@ app-editors/vis
 media-gfx/imv
 media-sound/cplay
 media-gfx/meh
-www-client/waterfox
+www-client/waterfox-classic
 virtual/wireguard
 net-vpn/wireguard-tools # wireguard
 net-vpn/wireguard-modules # wireguard
@@ -1049,6 +1064,7 @@ games-emulation/kronos-libretro **
 games-emulation/flycast-wince-libretro **
 games-emulation/mesen-libretro **
 games-emulation/stella2014-libretro **
+games-emulation/opera-libretro **
 
 #=sys-apps/hwloc-2.0.4 # tensorflow
 #=dev-libs/re2-0.2019.08.01 # tensorflow
@@ -1069,88 +1085,3 @@ sci-libs/tensorflow-estimator # tensorflow
 dev-python/grpcio-tools # tensorflow
 dev-python/google-auth-oauthlib # tensorflow
 dev-python/pybind11 # tensorflow
-
-#temp
-kde-plasma/breeze
-kde-frameworks/ki18n
-kde-frameworks/syndication
-kde-frameworks/kpty
-kde-frameworks/kdesu
-kde-frameworks/kservice
-kde-frameworks/kcrash
-kde-frameworks/kactivities-stats
-kde-frameworks/kcontacts
-kde-frameworks/kimageformats
-kde-frameworks/kxmlrpcclient
-kde-frameworks/purpose
-kde-frameworks/kjs
-kde-frameworks/khtml
-kde-frameworks/kcmutils
-kde-frameworks/knotifyconfig
-kde-frameworks/kross
-kde-frameworks/kdewebkit
-kde-frameworks/kitemmodels
-kde-frameworks/kunitconversion
-kde-frameworks/kemoticons
-kde-frameworks/kdesignerplugin
-kde-frameworks/kdelibs4support
-kde-frameworks/kpeople
-kde-frameworks/threadweaver
-kde-frameworks/krunner
-kde-frameworks/syntax-highlighting
-kde-frameworks/kparts
-kde-frameworks/ktexteditor
-kde-frameworks/kwayland
-kde-frameworks/kdeclarative
-kde-frameworks/kactivities
-kde-frameworks/kidletime
-kde-frameworks/kfilemetadata
-kde-frameworks/baloo
-kde-frameworks/kio
-kde-frameworks/qqc2-desktop-style
-kde-frameworks/kirigami
-kde-frameworks/sonnet
-kde-frameworks/kinit
-kde-frameworks/kded
-kde-frameworks/kwallet
-kde-frameworks/solid
-kde-frameworks/kglobalaccel
-kde-frameworks/kxmlgui
-kde-frameworks/ktextwidgets
-kde-frameworks/kservice
-kde-frameworks/kjobwidgets
-kde-frameworks/kdbusaddons
-kde-frameworks/kcrash
-kde-frameworks/kbookmarks
-kde-frameworks/kio
-kde-frameworks/kcompletion
-kde-frameworks/attica
-kde-frameworks/kdoctools
-kde-frameworks/kguiaddons
-kde-frameworks/kcodecs
-kde-frameworks/kauth
-kde-frameworks/kitemviews
-kde-frameworks/karchive
-kde-frameworks/kwindowsystem
-kde-frameworks/kcoreaddons
-kde-frameworks/extra-cmake-modules
-kde-frameworks/kwidgetsaddons
-kde-frameworks/kpackage
-kde-frameworks/knotifications
-kde-frameworks/knewstuff
-kde-frameworks/frameworkintegration
-kde-frameworks/kiconthemes
-kde-frameworks/kconfig
-kde-frameworks/kconfigwidgets
-kde-frameworks/plasma
-kde-plasma/kdecoration
-kde-plasma/libkworkspace
-kde-plasma/kde-cli-tools
-kde-plasma/plasma-integration
-kde-plasma/milou
-kde-plasma/ksysguard
-kde-plasma/libksysguard
-kde-plasma/libkscreen
-kde-plasma/kwin
-kde-plasma/plasma-workspace
-kde-plasma/kscreenlocker
