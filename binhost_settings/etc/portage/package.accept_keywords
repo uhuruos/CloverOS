@@ -1,3 +1,4 @@
+net-libs/webkit-gtk
 dev-libs/libutf8proc
 mail-client/thunderbird
 dev-libs/plasma-wayland-protocols
@@ -60,7 +61,8 @@ x11-misc/plank
 dev-haskell/haskell-platform
 dev-haskell/async # haskell-platform
 dev-haskell/parallel # haskell-platform
-dev-haskell/primitive
+dev-haskell/primitive # haskell-platform
+dev-haskell/xhtml # haskell-platform
 media-sound/solfege
 x11-wm/xmonad
 x11-wm/xmonad-contrib
@@ -464,8 +466,6 @@ games-emulation/gngeo
 games-emulation/fceux
 x11-misc/lemonbar
 media-sound/sidplayfp
-media-sound/audacious
-media-plugins/audacious-plugins
 media-sound/coquillo
 media-gfx/phototonic
 media-sound/qtractor

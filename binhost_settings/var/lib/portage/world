@@ -184,7 +184,6 @@ app-misc/wipe
 app-misc/xmind
 app-mobilephone/gammu
 app-mobilephone/heimdall
-app-mobilephone/wammu
 app-office/calligra
 app-office/gnumeric
 app-office/libreoffice
@@ -441,7 +440,6 @@ games-util/deutex
 games-util/glbsp
 games-util/higan-purify
 games-util/joystick
-games-util/lutris
 games-util/qjoypad
 games-util/rejoystick
 games-util/sdl-jstest
@@ -993,7 +991,6 @@ net-misc/youtube-comment-downloader
 net-misc/youtube-dl
 net-misc/youtube-dl-gui
 net-misc/zssh
-net-news/liferea
 net-news/quiterss
 net-nntp/pan
 net-nntp/sabnzbd
@@ -1189,9 +1186,7 @@ www-client/google-chrome-beta
 www-client/google-chrome-unstable
 www-client/jd
 www-client/links
-www-client/luakit
 www-client/lynx
-www-client/midori
 www-client/netrik
 www-client/netsurf
 www-client/opera
@@ -1201,7 +1196,6 @@ www-client/otter
 www-client/palemoon
 www-client/pybugz
 www-client/qutebrowser
-www-client/surf
 www-client/surfraw
 www-client/uget
 www-client/vivaldi
@@ -1554,7 +1548,6 @@ x11-wm/openbox
 x11-wm/oroborus
 x11-wm/page
 x11-wm/pekwm
-x11-wm/plwm
 x11-wm/qtile
 x11-wm/ratpoison
 x11-wm/sawfish
