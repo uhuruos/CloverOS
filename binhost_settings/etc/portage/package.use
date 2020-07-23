@@ -1,4 +1,12 @@
-kde-plasma/plasma-meta -networkmanager
+x11-base/xorg-server suid -elogind
+dev-libs/libindicate gtk # claws-mail
+dev-games/openscenegraph-openmw svg sdl ffmpeg truetype # openmw
+media-gfx/sane-backends -sane_backends_escl # avoids zeroconfig
+www-client/waterfox-classic -system-libvpx -pgo # temp
+www-client/torbrowser -system-libvpx # temp
+www-client/ungoogled-chromium -system-libvpx -vdpau # temp
+mail-client/thunderbird -system-libvpx # temp
+kde-plasma/plasma-meta -networkmanager # avoids dbus
 games-emulation/rpcs3 -system-llvm evdev
 dde-base/dde-meta kwin elogind
 app-portage/cfg-update X
@@ -21,7 +29,7 @@ x11-base/xorg-drivers video_cards_i915 video_cards_i965 video_cards_virtualbox i
 x11-libs/libva video_cards_i965
 virtual/opencl -video_cards_i965 -video_cards_amdgpu
 x11-wm/enlightenment acpi wifi
-dev-libs/efl X sound harfbuzz physics xpm drm gles2 fontconfig -opengl
+dev-libs/efl gles2-only X sound harfbuzz physics xpm drm gles2 fontconfig -opengl
 net-misc/dhcpcd-ui gtk
 media-sound/muse gtk
 x11-terms/tilix dmd-2_086
@@ -88,7 +96,7 @@ games-emulation/stella joystick
 media-sound/clementine cdda lastfm moodbar projectm
 games-emulation/libretro-meta 2048 4do beetle-psx beetle-saturn bnes bsnes2014 citra craft desmume dolphin -easyrpg fbalpha2012 fbneo fceumm flycast gambatte genplus handy -mame mame2000 mame2003 mame2003-plus mame2016 mednafen-gba mednafen-ngp mednafen-pce-fast mednafen-snes mednafen-supergrafx mednafen-vb mednafen-wswan melonds meowpc98 meteor mgba mrboom mupen64plus nestopia nxengine openlara parallel-n64 pcsx-rearmed picodrive ppsspp prboom prosystem px68k quicknes -redream -sameboy scummvm snes9x snes9x2002 snes9x2010 stella tgbdual tyrquake vba-next vbam yabause -bsnes-cpp98 bsnes-mercury flycast-wince kronos mesen stella2014 yabasanshiro
 media-libs/sdl2-mixer flac mikmod vorbis mod mp3 mad midi fluidsynth
-media-video/obs-studio jack truetype imagemagick v4l
+media-video/obs-studio jack truetype v4l
 media-plugins/alsa-plugins jack
 media-sound/ncmpc help-screen artist-screen chat-screen colors key-screen lirc lyrics-screen mouse search-screen song-screen
 media-sound/beets convert discogs lastgenre lastimport bpd chroma mpdstats thumbnails web
@@ -216,12 +224,12 @@ dev-db/sqlite secure-delete
 media-libs/phonon -vlc
 media-libs/libsdl X
 dev-qt/qtwebengine jumbo-build
-www-client/chromium jumbo-build
-www-client/ungoogled-chromium clang thinlto optimize-thinlto optimize-webui jumbo-build closure-compile pdf
+www-client/chromium jumbo-build ozone
+www-client/ungoogled-chromium clang thinlto optimize-thinlto optimize-webui jumbo-build closure-compile pdf ozone
 www-client/ungoogled-chromium -optimize-webui -system-openh264 # temp
 www-client/seamonkey -crypt -minimal
 www-client/palemoon -official-branding
-www-client/firefox clang -thinlto cross-lto -system-av1
+www-client/firefox clang -thinlto cross-lto
 www-client/firefox -system-av1 # temp
 mail-client/thunderbird clang
 www-client/torbrowser clang
@@ -564,3 +572,6 @@ dev-python/docutils python_targets_python2_7
 media-gfx/blender python_single_target_python3_6
 x11-terms/guake python_single_target_python3_6
 media-libs/avidemux-plugins python_single_target_python3_6
+x11-terms/guake python_single_target_python3_7 -python_single_target_python3_6
+media-gfx/openvdb python_single_target_python3_6
+app-portage/porthole python_targets_python2_7

@@ -119,7 +119,12 @@ app-emulation/q4wine
 app-emulation/qemu
 app-emulation/qt-virt-manager
 app-emulation/spice-vdagent
+app-emulation/vagrant
 app-emulation/virt-manager
+app-emulation/virtualbox
+app-emulation/virtualbox-additions
+app-emulation/virtualbox-extpack-oracle
+app-emulation/virtualbox-guest-additions
 app-emulation/wine-staging
 app-emulation/winetricks
 app-emulation/xen-tools
@@ -205,10 +210,12 @@ app-portage/gentoolkit
 app-portage/golop
 app-portage/gpytage
 app-portage/gpyutils
+app-portage/kuroo
 app-portage/layman
 app-portage/mirrorselect
 app-portage/overlint
 app-portage/pfl
+app-portage/porthole
 app-portage/portpeek
 app-portage/prefix-toolkit
 app-portage/repoman
@@ -233,6 +240,7 @@ app-text/agrep
 app-text/antiword
 app-text/atril
 app-text/bibletime
+app-text/calibre
 app-text/catdoc
 app-text/convmv
 app-text/dos2unix
@@ -266,7 +274,6 @@ dev-db/mongodb
 dev-db/postgresql
 dev-db/redis
 dev-games/ogre
-dev-games/openscenegraph
 dev-java/android-util
 dev-java/icedtea
 dev-java/junit
@@ -300,6 +307,7 @@ dev-util/android-ndk
 dev-util/android-studio
 dev-util/android-tools
 dev-util/android-udev-rules
+dev-util/bbe
 dev-util/bless
 dev-util/catalyst
 dev-util/catfish
@@ -311,6 +319,7 @@ dev-util/eclipse-sdk-bin
 dev-util/geany
 dev-util/geany-plugins
 dev-util/jenkins-bin
+dev-util/kdevelop
 dev-util/lldb
 dev-util/lxqt-build-tools
 dev-util/patchutils
@@ -399,10 +408,12 @@ games-fps/darkplaces
 games-fps/dhewm3
 games-fps/doom-data
 games-fps/doomretro
+games-fps/doomsday
 games-fps/enemy-territory
 games-fps/etlegacy
 games-fps/etqw-bin
 games-fps/ezquake-bin
+games-fps/freedoom
 games-fps/gzdoom
 games-fps/nexuiz
 games-fps/openarena
@@ -448,6 +459,30 @@ games-util/udmf-convert
 games-util/xboxdrv
 games-util/zdbsp
 gnome-extra/gnome-calculator
+gnome-extra/gnome-color-manager
+gui-wm/sway
+kde-apps/kamoso
+kde-apps/kbackup
+kde-apps/kdebase-meta
+kde-apps/kdenlive
+kde-apps/konqueror
+kde-apps/yakuake
+kde-frameworks/breeze-icons-rcc
+kde-misc/basket
+kde-misc/kdeconnect
+kde-misc/kdirstat
+kde-misc/kio-gopher
+kde-misc/kio-locate
+kde-misc/kio-stash
+kde-misc/krename
+kde-misc/krusader
+kde-misc/kshutdown
+kde-misc/latte-dock
+kde-misc/peruse
+kde-misc/plasma-applet-network-monitor
+kde-plasma/bluedevil
+kde-plasma/plasma-applet-active-window-control
+kde-plasma/plasma-meta
 lxde-base/lxappearance
 lxde-base/lxde-meta
 lxde-base/lxtask
@@ -456,6 +491,7 @@ lxqt-base/lxqt-meta
 mail-client/alpine
 mail-client/mutt
 mail-client/neomutt
+mail-client/thunderbird
 mail-mta/sendmail
 mate-base/mate
 mate-extra/caja-extensions
@@ -669,6 +705,8 @@ media-fonts/zh-kcfonts
 media-gfx/apngasm
 media-gfx/apngdis
 media-gfx/apngopt
+media-gfx/argyllcms
+media-gfx/blender
 media-gfx/cropgui
 media-gfx/darktable
 media-gfx/digikam
@@ -693,6 +731,7 @@ media-gfx/graphviz
 media-gfx/gthumb
 media-gfx/imagemagick
 media-gfx/imv
+media-gfx/inkscape
 media-gfx/jpegoptim
 media-gfx/krita
 media-gfx/librecad
@@ -744,7 +783,6 @@ media-sound/aqualung
 media-sound/ardour
 media-sound/ario
 media-sound/audacious
-media-sound/audacity
 media-sound/bempc
 media-sound/bluez-alsa
 media-sound/cantata
@@ -849,6 +887,7 @@ media-sound/xnoise
 media-sound/xwax
 media-sound/yarock
 media-sound/yoshimi
+media-tv/kodi
 media-tv/plex-media-server
 media-video/aegisub
 media-video/avidemux
@@ -884,6 +923,8 @@ net-analyzer/bwbar
 net-analyzer/bwm-ng
 net-analyzer/cutter
 net-analyzer/dhcpdump
+net-analyzer/flent
+net-analyzer/fping
 net-analyzer/iftop
 net-analyzer/iptraf-ng
 net-analyzer/masscan
@@ -913,6 +954,7 @@ net-firewall/nftables
 net-fs/autofs
 net-fs/cifs-utils
 net-fs/curlftpfs
+net-fs/nfs-utils
 net-fs/samba
 net-fs/sshfs
 net-ftp/filezilla
@@ -935,6 +977,7 @@ net-im/pidgin
 net-im/profanity
 net-im/prosody
 net-im/qtox
+net-im/telegram-cli
 net-im/telegram-desktop-bin
 net-im/ysm
 net-irc/hexchat
@@ -1003,6 +1046,7 @@ net-p2p/deluge
 net-p2p/etherwall
 net-p2p/freenet
 net-p2p/go-ipfs-bin
+net-p2p/ktorrent
 net-p2p/mktorrent
 net-p2p/mldonkey
 net-p2p/ncdc
@@ -1039,6 +1083,7 @@ net-wireless/bluez-hcidump
 net-wireless/broadcom-sta
 net-wireless/chirp
 net-wireless/cubicsdr
+net-wireless/gnuradio
 net-wireless/iw
 net-wireless/iwd
 net-wireless/rtl-sdr
@@ -1054,7 +1099,6 @@ sci-chemistry/chemtool
 sci-chemistry/cluster
 sci-chemistry/dssp
 sci-chemistry/easychem
-sci-chemistry/eden
 sci-chemistry/elem
 sci-chemistry/gelemental
 sci-chemistry/gperiodic
@@ -1125,6 +1169,7 @@ sys-boot/woeusb
 sys-devel/autofdo
 sys-devel/crossdev
 sys-devel/distcc
+sys-devel/gdb
 sys-devel/lld
 sys-firmware/b43-firmware
 sys-firmware/ipw2200-firmware
@@ -1176,6 +1221,7 @@ sys-process/lsof
 sys-process/parallel
 virtual/emacs
 virtual/wine
+www-apps/trac
 www-client/dillo
 www-client/elinks
 www-client/falkon
@@ -1197,11 +1243,13 @@ www-client/palemoon
 www-client/pybugz
 www-client/qutebrowser
 www-client/surfraw
+www-client/torbrowser
 www-client/uget
 www-client/vivaldi
 www-client/vivaldi-snapshot
 www-client/w3m
 www-client/w3mmee
+www-client/waterfox-classic
 www-misc/fcgiwrap
 www-misc/urlwatch
 www-plugins/adobe-flash
@@ -1236,10 +1284,12 @@ x11-base/xorg-x11
 x11-drivers/nvidia-drivers
 x11-drivers/xf86-input-wacom
 x11-drivers/xf86-video-sis671
+x11-misc/arandr
 x11-misc/autocutsel
 x11-misc/bumblebee
 x11-misc/clipit
 x11-misc/clipster
+x11-misc/colord
 x11-misc/compton
 x11-misc/cvt12
 x11-misc/dmenu
@@ -1272,6 +1322,7 @@ x11-misc/qt5ct
 x11-misc/redshift
 x11-misc/rofi
 x11-misc/sct
+x11-misc/sddm
 x11-misc/simple-ccsm
 x11-misc/skippy
 x11-misc/slock
@@ -1414,6 +1465,7 @@ x11-plugins/wmxkb
 x11-plugins/wmxres
 x11-terms/alacritty
 x11-terms/eterm
+x11-terms/guake
 x11-terms/kitty
 x11-terms/kterm
 x11-terms/lilyterm
@@ -1479,6 +1531,7 @@ x11-themes/haematite-xcursors
 x11-themes/hicolor-icon-theme
 x11-themes/iceicons
 x11-themes/kfaenza
+x11-themes/kvantum
 x11-themes/larry-backgrounds
 x11-themes/laughlin-backgrounds
 x11-themes/leonidas-backgrounds
@@ -1493,6 +1546,7 @@ x11-themes/oxygen-gtk
 x11-themes/pearlgrey-xcursors
 x11-themes/qtcurve
 x11-themes/redhat-artwork
+x11-themes/sddm-gentoo-black-theme
 x11-themes/shiki-colors
 x11-themes/silver-xcursors
 x11-themes/slim-themes
@@ -1538,6 +1592,7 @@ x11-wm/i3-gaps
 x11-wm/icewm
 x11-wm/jwm
 x11-wm/larswm
+x11-wm/lumina
 x11-wm/lwm
 x11-wm/marco
 x11-wm/matwm2

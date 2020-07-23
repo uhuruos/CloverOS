@@ -43,6 +43,8 @@ media-libs/zimg ** # vapoursynth
 media-gfx/gimp ** # gtk3
 media-libs/gegl ** # gimp
 media-libs/babl ** # gimp
+net-analyzer/fping # doesn't build
+www-servers/varnish
 
 #libressl, remove when stable supports libressl
 =dev-qt/qtnetwork-5.14.2::libressl
@@ -63,6 +65,12 @@ dev-haskell/async # haskell-platform
 dev-haskell/parallel # haskell-platform
 dev-haskell/primitive # haskell-platform
 dev-haskell/xhtml # haskell-platform
+dev-haskell/fgl # haskell-platform
+dev-haskell/haskell-src # haskell-platform
+dev-haskell/html # haskell-platform
+dev-haskell/gluraw # haskell-platform
+dev-haskell/glut # haskell-platform
+dev-haskell/opengl # haskell-platform
 media-sound/solfege
 x11-wm/xmonad
 x11-wm/xmonad-contrib
@@ -313,6 +321,8 @@ media-sound/yoshimi
 net-libs/tox
 net-im/qtox
 games-engines/openmw
+dev-games/openscenegraph-openmw # openmw
+dev-games/recastnavigation # openmw
 sci-calculators/tiemu
 sci-libs/libticonv # tiemu
 sci-libs/libticalcs2 # tiemu
