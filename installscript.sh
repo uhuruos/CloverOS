@@ -31,14 +31,14 @@ done
 
 while :; do
 	echo
-	read -erp "Enter preferred root password " rootpassword
 	read -erp "Enter preferred username " username
+	read -srp "Enter preferred root password " rootpassword
 	newuser=$(echo "$username" | tr A-Z a-z | tr -cd "[:alpha:][:digit:]" | sed "s/^[0-9]\+//" | cut -c -31)
 	if [[ "$newuser" != "$username" ]]; then
 		username=$newuser
 		echo username changed to $username
 	fi
-	read -erp "Enter preferred user password " userpassword
+	read -srp "Enter preferred user password " userpassword
 	read -erp "Is this correct? [y/n] " -n 1 yn
 	if [[ $yn == "y" ]]; then
 		break
