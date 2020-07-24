@@ -142,9 +142,10 @@ AddToMenu ToolsList "Tools" Title
 #+ "temps" Exec urxvtc -e sh -c "for tempdevice in /sys/class/hwmon/*; do [ -f $tempdevice/temp1_input ] && (temp=$(<$tempdevice/temp1_input); echo "$(<$tempdevice/name) ${temp:0:-3}C"); done; read"
 #+ "cputemp" Exec urxvtc -e sh -c "for cputempdevice in /sys/class/hwmon/*; do cputempname=$(<$cputempdevice/name); [[ $cputempname == coretemp || $cputempname == it87* || $cputempname == nct6775 || $cputempname == k8temp || $cputempname == k9temp ]] && break; done; temp=$(<$cputempdevice/temp1_input); echo ${temp:0:-3}C; read"
 #+ "freeram" Exec lsmod | sed "s/ .*//" | xargs -I{} sudo rmmod {}; sudo /etc/init.d/udev restart; sudo sysctl vm.drop_caches=3
-+ "passgen" Exec urxvtc -e sh -c "echo -n Generating password...\ ; head -c 100 /dev/random | tr -cd "[:print:]"; echo; read"
++ "passgen" Exec urxvtc -e sh -c "echo -n Generating password...\ ; head -c 100 /dev/random | tr -cd [:print:]; echo; read"
 + "flipcoin" Exec urxvtc -e sh -c "(($(od -An -N1 /dev/random) % 2)) && echo heads || echo tails; read"
-+ "settime" Exec sudo date +%s -s @"$(curl -s http://www.4webhelp.net/us/timestamp.php | grep -oP "(?<=p\" value=\").*(?=\" s)")"; date;
++ "settime" Exec sudo date +%s -s @"$(curl -s http://www.4webhelp.net/us/timestamp.php | grep -oP "(?<=p\" value=\").*(?=\" s)")"; date
++ "defaultalsadevice" Exec urxvtc -e sh -c 'grep " \[" /proc/asound/cards; echo -n "Select the audio device to become default: "; read choiceaudio; echo -e "defaults.pcm.card ${choiceaudio}\ndefaults.ctl.card ${choiceaudio}" > ~/.asoundrc; echo -e "\nAudio device ${choiceaudio} is now the default for ALSA programs. (~/.asoundrc)"'
 
 DestroyMenu MenuFvwmRoot
 AddToMenu MenuFvwmRoot Applications Title

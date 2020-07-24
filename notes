@@ -8,12 +8,23 @@ make iso from scratch instead of replacing gentoo iso squashfs
 spacefm drive/ssh/ftp mounting
 automatic ~/.asoundrc configuration. it gets the first audio device without hdmi in the name
 livecd_install.sh: uefi install, encryption
+installer: fix some characters in password not working
 
-packages that don't build
+# builds, requires AR="gcc-ar" in make.conf commented out
+ftjam argyllcms mongodb	
+# builds, requires ax_cv_c_float_words_bigendian=no
+texlive-core
+# 404
+enemy-territory-etpro mathematica-fonts
+# fetch restriction
+sas3flash
+# needs gcc8
+pcsx2 spacefm
+
 # doesn't emerge
-osl shotcut flowblade pyhoca-gui dxvk kicad opentoonz eduke32 racket monodevelop mididings stumpwm stumpwm-contrib
+osl shotcut flowblade pyhoca-gui dxvk kicad opentoonz eduke32 racket monodevelop mididings stumpwm stumpwm-contrib varnish surf midori luakit gkrellm lutris liferea mypaint gkrellm-plugins gkrellm-themes abiword gkrellmpc displaycal pitivi ungoogled-chromium rpcs3 kde-meta
 # packages with no libressl support
-tdebase-meta zanronum ntopng zeronet nxplayer murmur eiskaltdcpp retroshare acme-tiny johntheripper-jumbo eagle megatools
+tdebase-meta zanronum zeronet nxplayer murmur eiskaltdcpp retroshare acme-tiny johntheripper-jumbo eagle megatools
 # requires jack2
 cadence ladish
 # dependency use flag requirements
@@ -27,19 +38,3 @@ bitwig-stuidio / cairo USE=xcb
 cheese / clutter USE=X
 xdg-desktop-portal-kde / qtprintsupport USE=cups
 eatmonkey / aria2 USE=bittorrent xmlrpc
-# builds, requires AR="gcc-ar" in make.conf commented out
-ftjam argyllcms mongodb	
-# builds, requires ax_cv_c_float_words_bigendian=no
-texlive-core
-# 404
-enemy-territory-etpro mathematica-fonts
-# fetch restriction
-sas3flash
-# needs gcc8
-pcsx2
-
-# no longer emerges
-ckermit ng subversion soulseek-qt app-text/ots ncdc go-mtpfs generator matplotlib pouetchess distcc tiemu pinta guayadequey webkit-gtk distcc scribusdev-tex/pdfannotextractor dev-java/sbt app-misc/ckermit app-editors/ng dev-lang/open-cobol media-libs/alsa-oss dev-lang/ocaml sys-devel/gdb media-sound/alsa-tools net-libs/nodejs sys-fs/xfsdump net-p2p/soulseek-qt games-emulation/pcsx-rearmed-libretro sys-fs/exfat-nofuse sys-fs/go-mtpfs games-emulation/generator games-board/pouetchess games-fps/quakeforge media-sound/streamripper app-text/ots net-p2p/ncdc games-misc/ckmame dev-vcs/subversion kde-frameworks/kjs app-emulation/virtualbox-guest-additions media-libs/libcaca games-fps/dhewm3 games-fps/sauerbraten games-emulation/citra-libretro x11-misc/polybar games-fps/redeclipse net-misc/gerbera net-im/corebird dev-libs/rocm-device-libs dev-libs/rocm-comgr dev-qt/qtwebkit x11-plugins/purple-hangouts media-sound/deadbeef
-
-# newly masked
-sci-chemistry/gabedit adplug wicd
