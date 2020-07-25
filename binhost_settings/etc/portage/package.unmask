@@ -2,14 +2,14 @@ www-client/firefox::cloveros
 games-emulation/pcsx2::cloveros # pcsx2-9999::gentoo with added "src_configure() { local mycmakeargs=( -DDISABLE_ADVANCE_SIMD=ON ) }"
 app-emulation/winetricks::cloveros # winetricks-9999::gentoo with removed RDEPEND="x11-misc/xdg-utils"
 mate-base/mate::cloveros # mate-1.22::gentoo with removed "extras? ( sys-apps/gnome-disk-utility:0 )"
-media-gfx/meh::cloveros # taken from media-gfx/meh::lanodanOverlay
+media-gfx/meh::cloveros # media-gfx/meh::lanodanOverlay
 x11-misc/xdg-utils::cloveros # xdg-utils::gentoo with removed DEPEND=sys-apps/dbus
 media-gfx/nip2::cloveros
-media-libs/vips::cloveros
 app-portage/porthole::cloveros # porthole::gentoo
 dev-python/pygtksourceview::cloveros # porthole
-media-gfx/cropgui::cloveros # cropgui::gentoo
 dev-libs/beignet::cloveros # beignet::gentoo
+
+net-p2p/soulseek-qt::hering-overlay
 
 x11-plugins/compiz-plugins-meta::compiz-reloaded
 dev-python/compizconfig-python::compiz-reloaded
@@ -66,6 +66,7 @@ x11-misc/bumblebee::seden
 
 games-emulation/reicast::lanodanOverlay
 x11-plugins/purple-discord::lanodanOverlay
+media-libs/vips::lanodanOverlay
 
 x11-libs/gtk+:3::mv
 

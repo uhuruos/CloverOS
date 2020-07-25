@@ -18,6 +18,7 @@
 */*::gamerlay
 */*::genthree
 */*::haarp
+*/*::hering-overlay
 */*::jacendi-overlay
 */*::jm-overlay
 */*::jorgicio

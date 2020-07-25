@@ -1,14 +1,10 @@
-net-libs/webkit-gtk
 dev-libs/libutf8proc
-mail-client/thunderbird
 dev-libs/plasma-wayland-protocols
 kde-plasma/kwayland-server
 dev-ruby/rubyzip
 dev-python/websockets
 sci-libs/volk
 dev-python/click-plugins
-=media-libs/libvpx-1.8.2 # handbrake
-=dev-python/jinja-2.11.2 # qutebrowser
 
 #preference
 sys-kernel/gentoo-sources
@@ -44,7 +40,8 @@ media-gfx/gimp ** # gtk3
 media-libs/gegl ** # gimp
 media-libs/babl ** # gimp
 net-analyzer/fping # doesn't build
-www-servers/varnish
+=media-libs/libvpx-1.8.2 # handbrake
+=dev-python/jinja-2.11.2 # qutebrowser
 
 #libressl, remove when stable supports libressl
 =dev-qt/qtnetwork-5.14.2::libressl
@@ -55,6 +52,7 @@ www-client/elinks
 
 #keyworded, remove when stable exists
 app-text/xournalpp
+media-gfx/cropgui
 x11-apps/xinput_calibrator
 games-rpg/doukutsu-bin
 kde-misc/peruse
@@ -78,7 +76,6 @@ x11-misc/xdock
 media-gfx/gmic
 app-editors/vscode-bin
 games-emulation/jrommanager
-media-gfx/cropgui
 xfce-extra/eatmonkey
 net-p2p/cpuminer-opt
 dde-base/dde-meta

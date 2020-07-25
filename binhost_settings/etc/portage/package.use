@@ -2,10 +2,6 @@ x11-base/xorg-server suid -elogind
 dev-libs/libindicate gtk # claws-mail
 dev-games/openscenegraph-openmw svg sdl ffmpeg truetype # openmw
 media-gfx/sane-backends -sane_backends_escl # avoids zeroconfig
-www-client/waterfox-classic -system-libvpx -pgo # temp
-www-client/torbrowser -system-libvpx # temp
-www-client/ungoogled-chromium -system-libvpx -vdpau # temp
-mail-client/thunderbird -system-libvpx # temp
 kde-plasma/plasma-meta -networkmanager # avoids dbus
 games-emulation/rpcs3 -system-llvm evdev
 dde-base/dde-meta kwin elogind
@@ -226,11 +222,9 @@ media-libs/libsdl X
 dev-qt/qtwebengine jumbo-build
 www-client/chromium jumbo-build ozone
 www-client/ungoogled-chromium clang thinlto optimize-thinlto optimize-webui jumbo-build closure-compile pdf ozone
-www-client/ungoogled-chromium -optimize-webui -system-openh264 # temp
 www-client/seamonkey -crypt -minimal
 www-client/palemoon -official-branding
 www-client/firefox clang -thinlto cross-lto
-www-client/firefox -system-av1 # temp
 mail-client/thunderbird clang
 www-client/torbrowser clang
 media-sound/sox alsa openmp encode flac id3tag ladspa mad ogg opus sndfile twolame wavpack
@@ -345,6 +339,8 @@ media-sound/elisa vlc # kde-meta
 kde-frameworks/plasma X # latte-dock
 media-gfx/openvdb -abi3-compat # blender
 kde-frameworks/kitemmodels qml # ktorrent
+app-arch/unarr 7z # yacreader
+media-fonts/font-misc-misc X # amiwm
 dev-qt/qtsingleapplication X
 x11-libs/gtk+ X
 x11-libs/libva X
@@ -548,15 +544,6 @@ x11-libs/wxGTK:3.0-gtk3 abi_x86_32
 x11-libs/gtk+:3 abi_x86_32
 media-libs/libepoxy abi_x86_32
 
-# required by x11-wm/amiwm-0.22.01_p20200826::gentoo
-# required by @selected
-# required by @world (argument)
->=media-fonts/font-misc-misc-1.1.2-r1 X
-# required by media-gfx/yacreader-9.6.2_p20200411::jorgicio
-# required by @selected
-# required by @world (argument)
->=app-arch/unarr-1.1.0_pre20200131 7z
-
 >=dev-python/docutils-0.16 -python_targets_python2_7
 */* PYTHON_TARGETS: python2_7 python3_6 python3_7
 */* PYTHON_SINGLE_TARGET: -python3_6 python3_7
@@ -575,3 +562,10 @@ media-libs/avidemux-plugins python_single_target_python3_6
 x11-terms/guake python_single_target_python3_7 -python_single_target_python3_6
 media-gfx/openvdb python_single_target_python3_6
 app-portage/porthole python_targets_python2_7
+www-client/waterfox-classic -system-libvpx -pgo # temp
+www-client/torbrowser -system-libvpx # temp
+www-client/ungoogled-chromium -system-libvpx -vdpau # temp
+mail-client/thunderbird -system-libvpx # temp
+www-client/seamonkey -system-libvpx # temp
+www-client/firefox -system-av1 # temp
+www-client/ungoogled-chromium -optimize-webui -system-openh264 # temp

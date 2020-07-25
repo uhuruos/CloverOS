@@ -1053,6 +1053,7 @@ net-p2p/ncdc
 net-p2p/nicotine+
 net-p2p/qbittorrent
 net-p2p/rtorrent
+net-p2p/soulseek-qt
 net-p2p/syncthing
 net-p2p/torrentinfo
 net-p2p/transmission
@@ -1242,6 +1243,7 @@ www-client/otter
 www-client/palemoon
 www-client/pybugz
 www-client/qutebrowser
+www-client/seamonkey
 www-client/surfraw
 www-client/torbrowser
 www-client/uget

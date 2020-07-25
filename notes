@@ -9,6 +9,7 @@ spacefm drive/ssh/ftp mounting
 automatic ~/.asoundrc configuration. it gets the first audio device without hdmi in the name
 livecd_install.sh: uefi install, encryption
 installer: fix some characters in password not working
+make posix compliant (replace read with echo read)
 
 # builds, requires AR="gcc-ar" in make.conf commented out
 ftjam argyllcms mongodb	

@@ -1,5 +1,5 @@
 cd $( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )
-recentpackages=$(find /var/cache/binpkgs/ -iname \*.tbz2 -printf '%T+%p\n' | grep -v /nodbus/ | sort -r | sed 's@:[0-9]*\.[0-9]*/var/cache/binpkgs/@ @; s/\.tbz2//; s/+/ /; s/2019-//; s@\(.*\) \(.*\) \(.*\)@\1 \2 <a href="\3.tbz2">\3</a>@')
+recentpackages=$(for line in `grep -oP "(?<=CPV: |BUILD_TIME: ).*" /var/cache/binpkgs/Packages`; do [ $((n%2)) -eq 0 ] && echo -n `date -d @$line "+%Y-%m-%d %H:%M"`\ || echo "<a href=\"$line.tbz2\">$line</a>"; n=$((n+1)); done | sort -r)
 isoname=(/var/cache/binpkgs/s/CloverOS-x86_64-*.iso)
 isoname=${isoname##*/}
 isolist=$(grep 'binhost_mirrors=' ../home/user/make.conf | sed "s@,@/s/$isoname\n@g" | sed 's@\(.*\)@<a href="\1">\1</a>@g' | sed '1d;$d')
