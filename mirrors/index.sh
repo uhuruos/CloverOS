@@ -1,3 +1,4 @@
+cd $( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )
 git=https://gitgud.io/cloveros/cloveros/raw/master
 site=cloveros.ga
 isoname=`basename /var/cache/binpkgs/s/CloverOS-x86_64-*.iso`
@@ -16,9 +17,8 @@ packagecount=`echo /var/db/pkg/*/* | wc -w`
 cflags=`grep ^CFLAGS=\"- ../binhost_settings/etc/portage/make.conf`
 use=`grep ^USE= ../binhost_settings/etc/portage/make.conf`
 mirrors=`grep binhost_mirrors= ../home/user/make.conf | tr "," "\n" | sed 's@\(.*\)@<a href="\1">\1</a>@g; 1d;$d;' | tr "\n" " "`
-files="<h1>Index of /</h1><hr><pre><a href="../">../</a>		-"
-filelisting=$(for line in `ls -1p /var/cache/binpkgs/`; do echo "<a href=\"$line\">$line</a>	$(date -r /var/cache/binpkgs/$line "+%d-%b-%Y %H:%M")	-"; done)
-files="$files $filelisting"
+files="<h1>Index of /</h1><hr><pre><a href=\"../\">../</a>		-
+$(for line in `ls -1p /var/cache/binpkgs/`; do echo "<a href=\"$line\">$line</a>	$(date -r /var/cache/binpkgs/$line "+%d-%b-%Y %H:%M")	-"; done)"
 echo '<!DOCTYPE html>
 <html>
 <link rel="icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQAgMAAABinRfyAAAACVBMVEXKbt4AmQAAzAArTnekAAAAAXRSTlMAQObYZgAAADdJREFUeAFjYGARYGBgEA0BEqGhUIJLNGQBg1Zr0AqGVQu9VjFordBaASIgXLAEWAlcB8QAsFEAnzYQ4QKPcGQAAAAASUVORK5CYII=" type="image/x-ico" />
