@@ -1,8 +1,7 @@
 cd $( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )
-recentpackages=$(for line in `grep -oP "(?<=CPV: |BUILD_TIME: ).*" /var/cache/binpkgs/Packages`; do [ $((n%2)) -eq 0 ] && echo -n `date -d @$line "+%Y-%m-%d %H:%M"`\ || echo "<a href=\"$line.tbz2\">$line</a>"; n=$((n+1)); done | sort -r)
-isoname=(/var/cache/binpkgs/s/CloverOS-x86_64-*.iso)
-isoname=${isoname##*/}
-isolist=$(grep 'binhost_mirrors=' ../home/user/make.conf | sed "s@,@/s/$isoname\n@g" | sed 's@\(.*\)@<a href="\1">\1</a>@g' | sed '1d;$d')
+recentpackages=$(for line in `grep -oP "(?<=CPV: |BUILD_TIME: ).*" /var/cache/binpkgs/Packages`; do [ $((n%2)) -eq 0 ] && echo -n `date -d @"$line" "+%Y-%m-%d %H:%M"`\ || echo "<a href=\"$line.tbz2\">$line</a>"; n=$((n+1)); done | sort -r)
+isoname=`basename /var/cache/binpkgs/s/CloverOS-x86_64-*.iso`
+isolist=`grep binhost_mirrors= ../home/user/make.conf | sed "s@,@/s/$isoname\n@g" | sed 's@\(.*\)@<a href="\1">\1</a>@g; 1d;$d'`
 echo '<!DOCTYPE html>
 <html lang="en">
 <title>CloverOS GNU/Linux</title>

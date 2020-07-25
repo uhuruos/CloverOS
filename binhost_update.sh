@@ -28,7 +28,7 @@ emerge --depclean
 sed -i -n "/^\(RTL\|rtl\|ar\|ath\|brcm\|iwlwifi\|rt\)/p" /etc/portage/savedconfig/sys-kernel/$(ls -1 /etc/portage/savedconfig/sys-kernel/ | tail -n1)
 rm -R /var/cache/binpkgs/s/nodbus/ ; mkdir /var/cache/binpkgs/s/nodbus/ && PKGDIR="/var/cache/binpkgs/s/nodbus/" USE="-dbus -qt5 -udisks -trash-panel-plugin -video-thumbnails -video_cards_radeon -video_cards_radeonsi -llvm -opencl savedconfig" emerge -B glib qtgui thunar spacefm wpa_supplicant poppler gpgme gvfs mesa linux-firmware desktop-file-utils freedesktop-icon-theme lcms openjpeg
 
-php mirrors/index.php > /var/cache/binpkgs/index.html
+./mirrors/index.sh > /var/cache/binpkgs/index.html
 ./mirrors/indexalt.sh > /var/cache/binpkgs/indexalt.html
 EIX_LIMIT=0 eix -IF | grep -v "Available versions" | ansi2html > /var/cache/binpkgs/s/packages.html &
 

@@ -3,7 +3,6 @@ site=cloveros.ga
 isoname=`basename /var/cache/binpkgs/s/CloverOS-x86_64-*.iso`
 libreisoname=`basename /var/cache/binpkgs/s/CloverOS_Libre-x86_64-*.iso`
 minimalisoname=`basename /var/cache/binpkgs/s/CloverOS_Minimal-x86_64-*.iso`
-
 packageuse=`cat ../binhost_settings/etc/portage/package.use`
 packageenv=`cat ../binhost_settings/etc/portage/package.env`
 packagekeywords=`cat ../binhost_settings/etc/portage/package.accept_keywords`
@@ -12,34 +11,14 @@ reposconf=`cat ../binhost_settings/etc/portage/repos.conf/eselect-repo.conf`
 worldtxt=`cat ../binhost_settings/var/lib/portage/world`
 usermake=`cat ../home/user/make.conf`
 quickpkg=`cat /var/cache/binpkgs/s/quickpkg.html`
-<< 'MULTILINE-COMMENT'
-$quickpkg = substr($quickpkg, strpos($quickpkg, '<pre class="ansi2html-content">')+strlen('<pre class="ansi2html-content">')+1);
-$quickpkg = rtrim($quickpkg, '</pre></body>\n</html>');
-$packagecount = count(glob('/var/db/pkg/*/*'));
-$cflags = trim(shell_exec('grep ^CFLAGS=\"- ../binhost_settings/etc/portage/make.conf'));
-$use = trim(shell_exec('grep ^USE= ../binhost_settings/etc/portage/make.conf'));
-
-$mirrors = substr($usermake, strpos($usermake, 'binhost_mirrors="$PORTAGE_BINHOST,') + 34);
-$mirrors = substr($mirrors, 0, strpos($mirrors, ',"'));
-$mirrors = explode(',', $mirrors);
-$mirrorlinks = '';
-foreach ($mirrors as $line) {
-	$mirrorlinks .= '<a target="_blank" href="'.$line.'">'.$line.'</a> ';
-}
-
-$dir = '/var/cache/binpkgs/';
-$files = '<h1>Index of /</h1><hr><pre>';
-foreach (scandir($dir) as $line) {
-	if ($line == '.') {
-		continue;
-	}
-	if (is_dir($dir.$line)) {
-		$line = $line.'/';
-	}
-	$files .= '<a href="'.$line.'">'.str_pad($line.'</a>', 55).gmdate('d-M-Y H:i', filemtime($dir.$line)).'       -'."\n";
-}
-$files .= '</pre><hr>';
-MULTILINE-COMMENT
+quickpkg=`grep span /var/cache/binpkgs/s/quickpkg.html`
+packagecount=`echo /var/db/pkg/*/* | wc -w`
+cflags=`grep ^CFLAGS=\"- ../binhost_settings/etc/portage/make.conf`
+use=`grep ^USE= ../binhost_settings/etc/portage/make.conf`
+mirrors=`grep binhost_mirrors= ../home/user/make.conf | tr "," "\n" | sed 's@\(.*\)@<a href="\1">\1</a>@g; 1d;$d;' | tr "\n" " "`
+files="<h1>Index of /</h1><hr><pre><a href="../">../</a>		-"
+filelisting=$(for line in `ls -1p /var/cache/binpkgs/`; do echo "<a href=\"$line\">$line</a>	$(date -r /var/cache/binpkgs/$line "+%d-%b-%Y %H:%M")	-"; done)
+files="$files $filelisting"
 echo '<!DOCTYPE html>
 <html>
 <link rel="icon" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQAgMAAABinRfyAAAACVBMVEXKbt4AmQAAzAArTnekAAAAAXRSTlMAQObYZgAAADdJREFUeAFjYGARYGBgEA0BEqGhUIJLNGQBg1Zr0AqGVQu9VjFordBaASIgXLAEWAlcB8QAsFEAnzYQ4QKPcGQAAAAASUVORK5CYII=" type="image/x-ico" />
@@ -66,7 +45,7 @@ IRC: <a target="_blank" href="irc://irc.rizon.net/cloveros">#cloveros</a> on irc
 Twitter: <a target="_blank" href="https://twitter.com/cloveros_ga">https://twitter.com/cloveros_ga</a><br>
 Rsync: rsync://nl.cloveros.ga/cloveros<br>
 License: WTFPL<br>
-Mirrors: '"$mirrorlinks"'<br>
+Mirrors: '"$mirrors"'<br>
 Packages: <a target="_blank" href="s/packages.html">'"$packagecount"' https://'"$site"'/s/packages.html</a><br>
 CFLAGS: <span class="mono">'"$cflags"'</span><br>
 USE flags: <span class="mono">'"$use"'</span><br>
