@@ -21,7 +21,7 @@ sas3flash
 pcsx2 spacefm
 
 # doesn't emerge
-osl shotcut flowblade pyhoca-gui dxvk kicad opentoonz eduke32 racket monodevelop mididings stumpwm stumpwm-contrib varnish surf midori luakit gkrellm lutris liferea mypaint gkrellm-plugins gkrellm-themes abiword gkrellmpc displaycal pitivi ungoogled-chromium rpcs3 kde-meta
+shotcut flowblade pyhoca-gui dxvk kicad opentoonz eduke32 racket stumpwm stumpwm-contrib varnish surf midori luakit gkrellm lutris liferea mypaint gkrellm-plugins gkrellm-themes abiword gkrellmpc displaycal pitivi ungoogled-chromium rpcs3 kde-meta
 # packages with no libressl support
 tdebase-meta zanronum zeronet nxplayer murmur eiskaltdcpp retroshare acme-tiny johntheripper-jumbo eagle megatools
 # requires jack2
@@ -37,3 +37,5 @@ bitwig-stuidio / cairo USE=xcb
 cheese / clutter USE=X
 xdg-desktop-portal-kde / qtprintsupport USE=cups
 eatmonkey / aria2 USE=bittorrent xmlrpc
+
+monodevelop

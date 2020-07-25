@@ -30,7 +30,7 @@ rm -R /var/cache/binpkgs/s/nodbus/ ; mkdir /var/cache/binpkgs/s/nodbus/ && PKGDI
 
 ./mirrors/index.sh > /var/cache/binpkgs/index.html
 ./mirrors/indexalt.sh > /var/cache/binpkgs/indexalt.html
-EIX_LIMIT=0 eix -IF | grep -v "Available versions" | ansi2html > /var/cache/binpkgs/s/packages.html &
+EIX_LIMIT=0 eix -IF | grep -v "Available versions" | ansi2html > /var/cache/binpkgs/s/packages.html
 
 rm -Rf /var/cache/binpkgs/s/signatures/*
 find /var/cache/binpkgs/ -type d -not -path "/var/cache/binpkgs/s/signatures*" | sed "s#/var/cache/binpkgs/##" | xargs -I{} mkdir /var/cache/binpkgs/s/signatures/{}
