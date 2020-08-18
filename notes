@@ -18,10 +18,10 @@ enemy-territory-etpro mathematica-fonts
 # fetch restriction
 sas3flash
 # needs gcc8
-pcsx2 spacefm
+pcsx2 spacefm gdb
 
 # doesn't emerge
-shotcut flowblade pyhoca-gui dxvk kicad opentoonz eduke32 racket stumpwm stumpwm-contrib varnish surf midori luakit gkrellm lutris liferea mypaint gkrellm-plugins gkrellm-themes abiword gkrellmpc displaycal pitivi ungoogled-chromium rpcs3 kde-meta
+flowblade pyhoca-gui kicad opentoonz eduke32 racket stumpwm stumpwm-contrib varnish surf midori luakit gkrellm lutris liferea mypaint gkrellm-plugins gkrellm-themes abiword gkrellmpc displaycal pitivi ungoogled-chromium rpcs3 kde-meta
 # packages with no libressl support
 tdebase-meta zanronum zeronet nxplayer murmur eiskaltdcpp retroshare acme-tiny johntheripper-jumbo eagle megatools
 # requires jack2
@@ -38,4 +38,4 @@ cheese / clutter USE=X
 xdg-desktop-portal-kde / qtprintsupport USE=cups
 eatmonkey / aria2 USE=bittorrent xmlrpc
 
-monodevelop
+monodevelop dxvk
