@@ -9,6 +9,9 @@ livecd_install.sh: uefi install, encryption
 installer: fix some characters in password not working
 make posix compliant (replace read with echo read)
 
+#update
+eog graphwiz sabnzbd mypaint www-client/surf liferea lutris midori luakit ungoogled-chromium waterfox-classic haskell-platform vagrant virtualbox-additions virtualbox-extpack-oracle virtualbox-guest-additions virtualbox guake abiword pitivi gkrellm-themes gkrellmpc gkrellm-plugins gkrellm lastpass-cli displaycal mypaint sway  varnish gdb telegram-cli torbrowser kodi
+
 # builds, requires AR="gcc-ar" in make.conf commented out
 ftjam argyllcms mongodb	
 # builds, requires ax_cv_c_float_words_bigendian=no
@@ -26,6 +29,8 @@ flowblade pyhoca-gui kicad opentoonz eduke32 racket stumpwm stumpwm-contrib varn
 tdebase-meta zanronum zeronet nxplayer murmur eiskaltdcpp retroshare acme-tiny johntheripper-jumbo eagle megatools
 # requires jack2
 cadence ladish
+# requires pulseaudio
+qtile
 # dependency use flag requirements
 buzztrax / clutter USE=gtk
 plasma-applet-weather-widget / qtdeclarative USE=xml

@@ -4,7 +4,7 @@ if [ $(id -u) != "0" ]; then
 	exit 1
 fi
 
-kernelversion=5.7.7
+kernelversion=5.7.19
 kernelmajversion=5.7
 
 if [ ! -d '/var/cache/binpkgs/s/' ]; then
