@@ -1,3 +1,4 @@
+=media-libs/harfbuzz-2.6.8
 dev-libs/libutf8proc
 dev-libs/plasma-wayland-protocols
 kde-plasma/kwayland-server
@@ -13,7 +14,8 @@ media-libs/mesa
 x11-libs/gtk+:3::mv # removes dbus
 app-emulation/winetricks::cloveros **
 www-client/firefox::cloveros
-=dev-libs/nss-3.52.1
+dev-libs/nss # firefox
+dev-libs/nspr # firefox
 
 #old, remove when stable is bumped up
 sys-fs/zfs ** # kernel 5.4
@@ -51,6 +53,7 @@ app-editors/xemacs
 www-client/elinks
 
 #keyworded, remove when stable exists
+games-action/oolite
 app-text/xournalpp
 media-gfx/cropgui
 x11-apps/xinput_calibrator
@@ -59,16 +62,9 @@ kde-misc/peruse
 app-text/pandoc
 x11-misc/plank
 dev-haskell/haskell-platform
-dev-haskell/async # haskell-platform
-dev-haskell/parallel # haskell-platform
-dev-haskell/primitive # haskell-platform
-dev-haskell/xhtml # haskell-platform
-dev-haskell/fgl # haskell-platform
-dev-haskell/haskell-src # haskell-platform
-dev-haskell/html # haskell-platform
-dev-haskell/gluraw # haskell-platform
-dev-haskell/glut # haskell-platform
-dev-haskell/opengl # haskell-platform
+dev-haskell/* # haskell-platform
+dev-lang/ghc # haskell-platform
+app-admin/haskell-updater # haskell-platform
 media-sound/solfege
 x11-wm/xmonad
 x11-wm/xmonad-contrib
@@ -480,6 +476,7 @@ media-sound/protux
 net-wireless/broadcom-sta
 x11-plugins/gkrellm-countdown
 games-fps/gzdoom
+media-libs/zmusic # gzdoom
 games-fps/redeclipse
 dev-lang/open-cobol
 net-misc/sgopherd

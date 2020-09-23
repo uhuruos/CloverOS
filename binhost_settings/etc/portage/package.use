@@ -1,12 +1,14 @@
+x11-misc/virtualgl abi_x86_32 -ssl -libressl
+x11-libs/libXtst abi_x86_32
+x11-libs/libXv abi_x86_32
+media-libs/mlt jack # shotcut
 x11-base/xorg-server suid -elogind
 dev-libs/libindicate gtk # claws-mail
 dev-games/openscenegraph-openmw svg sdl ffmpeg truetype # openmw
 media-gfx/sane-backends -sane_backends_escl # avoids zeroconfig
 kde-plasma/plasma-meta -networkmanager # avoids dbus
 games-emulation/rpcs3 -system-llvm evdev
-dde-base/dde-meta kwin elogind
 app-portage/cfg-update X
-pantheon-base/pantheon -lightdm
 sys-devel/binutils default-gold
 app-portage/pfl -network-cron
 games-emulation/sdlmame tools
@@ -14,7 +16,7 @@ x11-apps/fusion-icon gtk3
 sys-boot/grub device-mapper
 media-gfx/apngasm 7z zopfli
 app-i18n/mozc ibus fcitx4
-games-emulation/retroarch sdl cheevos -armvfp
+games-emulation/retroarch sdl2 cheevos -armvfp
 media-gfx/librecad tools
 net-misc/ofono bluetooth
 media-libs/vapoursynth vapoursynth_plugins_eedi3 vapoursynth_plugins_imagemagick vapoursynth_plugins_miscfilters vapoursynth_plugins_morpho vapoursynth_plugins_ocr vapoursynth_plugins_removegrain vapoursynth_plugins_subtext vapoursynth_plugins_vinverse vapoursynth_plugins_vivtc
@@ -61,7 +63,7 @@ app-text/zathura-meta pdf cb djvu postscript
 media-sound/bluez-alsa hcitop ldac ofono
 app-office/abiword readline calendar latex -map math ots spell thesaurus wordperfect
 app-office/libreoffice-l10n l10n_af l10n_am l10n_ar l10n_as l10n_ast l10n_be l10n_bg l10n_bn l10n_bn-IN l10n_bo l10n_br l10n_brx l10n_bs l10n_ca l10n_ca-valencia l10n_cs l10n_cy l10n_da l10n_de l10n_dgo l10n_dz l10n_el l10n_en l10n_en-GB l10n_en-ZA l10n_eo l10n_es l10n_et l10n_eu l10n_fa l10n_fi l10n_fr l10n_ga l10n_gd l10n_gl l10n_gu l10n_gug l10n_he l10n_hi l10n_hr l10n_hu l10n_id l10n_is l10n_it l10n_ja l10n_ka l10n_kk l10n_km l10n_kmr-Latn l10n_kn l10n_ko l10n_kok l10n_ks l10n_lb l10n_lo l10n_lt l10n_lv l10n_mai l10n_mk l10n_ml l10n_mn l10n_mni l10n_mr l10n_my l10n_nb l10n_ne l10n_nl l10n_nn l10n_nr l10n_nso l10n_oc l10n_om l10n_or l10n_pa l10n_pl l10n_pt l10n_pt-BR l10n_ro l10n_ru l10n_rw l10n_sa l10n_sat l10n_sd l10n_si l10n_sid l10n_sk l10n_sl l10n_sq l10n_sr l10n_sr-Latn l10n_ss l10n_st l10n_sv l10n_sw-TZ l10n_ta l10n_te l10n_tg l10n_th l10n_tn l10n_tr l10n_ts l10n_tt l10n_ug l10n_uk l10n_uz l10n_ve l10n_vi l10n_xh l10n_zh-CN l10n_zh-TW l10n_zu
-media-gfx/blender cycles openimageio opensubdiv tiff bullet dds elbeem game-engine openmp tiff collada colorio ffmpeg fftw jemalloc -llvm ndof openvdb player sdl sndfile valgrind color-management osl
+media-gfx/blender cycles openimageio opensubdiv tiff bullet dds elbeem game-engine openmp tiff collada colorio ffmpeg fftw jemalloc -llvm ndof openvdb player sdl sndfile valgrind color-management -osl
 sys-kernel/genkernel cryptsetup -firmware
 x11-misc/nitrogen nls
 x11-misc/spacefm -startup-notification -gtk3 gtk2 # gtk3 has drag and drop crash bug
@@ -89,7 +91,7 @@ media-libs/opencv -opengl
 media-fonts/tewi-font bdf pcf
 games-emulation/nestopia gui
 games-emulation/stella joystick
-media-sound/clementine cdda lastfm moodbar projectm
+media-sound/clementine cdda moodbar projectm
 games-emulation/libretro-meta 2048 4do beetle-psx beetle-saturn bnes bsnes2014 citra craft desmume dolphin -easyrpg fbalpha2012 fbneo fceumm flycast gambatte genplus handy -mame mame2000 mame2003 mame2003-plus mame2016 mednafen-gba mednafen-ngp mednafen-pce-fast mednafen-snes mednafen-supergrafx mednafen-vb mednafen-wswan melonds meowpc98 meteor mgba mrboom mupen64plus nestopia nxengine openlara parallel-n64 pcsx-rearmed picodrive ppsspp prboom prosystem px68k quicknes -redream -sameboy scummvm snes9x snes9x2002 snes9x2010 stella tgbdual tyrquake vba-next vbam yabause -bsnes-cpp98 bsnes-mercury flycast-wince kronos mesen stella2014 yabasanshiro
 media-libs/sdl2-mixer flac mikmod vorbis mod mp3 mad midi fluidsynth
 media-video/obs-studio jack truetype v4l
@@ -104,7 +106,7 @@ net-vpn/i2p -ecdsa
 x11-libs/libfm gtk
 net-p2p/mldonkey bittorrent gnutella magic fasttrack gd
 media-sound/qmmp alsa mad vorbis aac analyzer bs2b cdda cover crossfade cue curl enca ffmpeg flac game ladspa lyrics midi modplug musepack notifier opus projectm scrobbler sid sndfile soxr stereo tray wavpack archive shout qsui
-media-sound/audacity id3tag -lv2
+media-sound/audacity ffmpeg id3tag -lv2
 media-sound/darkice vorbis mp3
 games-fps/urbanterror server
 media-gfx/krita color-management
@@ -134,7 +136,6 @@ games-fps/nexuiz dedicated
 games-fps/darkplaces dedicated
 games-fps/dhewm3 curl
 games-fps/quake3 dedicated curl
-games-fps/quake3-cpma dedicated
 app-mobilephone/heimdall qt5
 games-emulation/mgba qt5
 media-sound/supercollider qt5 X
@@ -265,11 +266,13 @@ media-plugins/deadbeef-spectrogram gtk3
 media-plugins/deadbeef-musical-spectrum gtk3
 media-plugins/deadbeef-vk gtk3
 app-emulation/qemu sdl usb virtfs gtk
-dev-libs/glib dbus # required by mate flatpak pitivi evince eog bluez-alsa gthumb gedit flowblade
-dev-qt/qtgui dbus # required by kde
-sys-auth/consolekit policykit # required by kde (dbus)
-sys-auth/polkit consolekit # required by kde/mate (dbus)
-sys-apps/accountsservice consolekit # required by kde/mate (dbus)
+dev-libs/glib dbus # mate flatpak pitivi evince eog bluez-alsa gthumb gedit flowblade
+dev-qt/qtgui dbus # kde
+sys-apps/accountsservice elogind
+mate-extra/mate-power-manager elogind
+dde-base/dde-meta kwin elogind
+mate-base/mate-session-manager elogind
+sys-auth/polkit elogind # kde/mate
 gnome-base/gvfs udisks # required by caja (dbus)
 mate-extra/mate-screensaver -pam # removes dependency gnome-keyring
 media-sound/bitwig-studio -jack # removes dependency jack2
@@ -277,7 +280,6 @@ app-portage/portage-utils -qmanifest # removes dependency gpgme
 dev-qt/qt-creator -clang # don't build with clang
 games-emulation/mesen-libretro -clang # don't build with clang
 games-emulation/stella-libretro -custom-cflags # fixes build
-www-client/waterfox -pgo # fixes build
 mate-base/mate-panel X # fixes build
 x11-plugins/gkrelltop X # fixes build
 dev-libs/efl luajit # fixes build
@@ -528,7 +530,7 @@ x11-libs/pixman abi_x86_32
 media-gfx/graphite2 abi_x86_32
 dev-libs/libpcre abi_x86_32
 dev-libs/atk abi_x86_32
-gnome-base/librsvg abi_x86_32
+#gnome-base/librsvg abi_x86_32
 sys-devel/gettext abi_x86_32
 dev-libs/libcroco abi_x86_32
 x11-libs/libxkbcommon abi_x86_32
@@ -558,7 +560,6 @@ dev-python/numpy python_targets_python3_6
 dev-python/docutils python_targets_python2_7
 media-gfx/blender python_single_target_python3_6
 x11-terms/guake python_single_target_python3_6
-media-libs/avidemux-plugins python_single_target_python3_6
 x11-terms/guake python_single_target_python3_7 -python_single_target_python3_6
 media-gfx/openvdb python_single_target_python3_6
 app-portage/porthole python_targets_python2_7

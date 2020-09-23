@@ -56,4 +56,3 @@ net-im/profanity::gentoo # optmzr
 dev-qt/qtnetwork::gentoo # libressl
 
 >sys-kernel/genkernel-3.5.3.3 # genkernel 4 is buggy, incorrect filenames
->net-nntp/sabnzbd-3

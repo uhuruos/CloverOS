@@ -90,6 +90,8 @@ app-doc/gimp-help
 app-doc/linux-kernel-in-a-nutshell
 app-doc/phrack-all
 app-doc/zsh-lovers
+app-editors/aee
+app-editors/ee
 app-editors/emacs
 app-editors/gedit
 app-editors/gvim
@@ -302,7 +304,6 @@ dev-python/sphinx
 dev-python/sympy
 dev-python/virtualenv
 dev-qt/qt-creator
-dev-ruby/nokogiri
 dev-util/android-ndk
 dev-util/android-studio
 dev-util/android-tools
@@ -351,7 +352,6 @@ games-board/crafty
 games-board/eboard
 games-board/gnuchess
 games-board/phalanx
-games-board/pouetchess
 games-board/pychess
 games-board/sjeng
 games-board/stockfish
@@ -389,6 +389,7 @@ games-emulation/pcsxr
 games-emulation/ppsspp
 games-emulation/reicast
 games-emulation/retroarch
+games-emulation/rpcs3
 games-emulation/sdlmame
 games-emulation/snes9x
 games-emulation/stella
@@ -463,6 +464,7 @@ gnome-extra/gnome-color-manager
 gui-wm/sway
 kde-apps/kamoso
 kde-apps/kbackup
+kde-apps/kde-meta
 kde-apps/kdebase-meta
 kde-apps/kdenlive
 kde-apps/konqueror
@@ -489,6 +491,8 @@ lxde-base/lxtask
 lxde-base/lxterminal
 lxqt-base/lxqt-meta
 mail-client/alpine
+mail-client/claws-mail
+mail-client/clawsker
 mail-client/mutt
 mail-client/neomutt
 mail-client/thunderbird
@@ -783,6 +787,7 @@ media-sound/aqualung
 media-sound/ardour
 media-sound/ario
 media-sound/audacious
+media-sound/audacity
 media-sound/bempc
 media-sound/bluez-alsa
 media-sound/cantata
@@ -795,7 +800,6 @@ media-sound/deadbeef
 media-sound/drumkv1
 media-sound/drumstick
 media-sound/easytag
-media-sound/exaile
 media-sound/ezstream
 media-sound/flacon
 media-sound/gimmix
@@ -888,7 +892,6 @@ media-sound/xwax
 media-sound/yarock
 media-sound/yoshimi
 media-tv/kodi
-media-tv/plex-media-server
 media-video/aegisub
 media-video/avidemux
 media-video/baka-mplayer
@@ -911,6 +914,7 @@ media-video/mpv
 media-video/obs-studio
 media-video/openshot
 media-video/rtmpdump
+media-video/shotcut
 media-video/smplayer
 media-video/smtube
 media-video/subtitlecomposer
@@ -993,7 +997,6 @@ net-libs/nodejs
 net-mail/dovecot
 net-mail/fetchmail
 net-mail/isync
-net-mail/mailman
 net-mail/mlmmj
 net-misc/aria2
 net-misc/autossh
@@ -1036,7 +1039,6 @@ net-misc/youtube-dl-gui
 net-misc/zssh
 net-news/quiterss
 net-nntp/pan
-net-nntp/sabnzbd
 net-p2p/amule
 net-p2p/bitcoin-qt
 net-p2p/bittornado
@@ -1170,6 +1172,7 @@ sys-boot/woeusb
 sys-devel/autofdo
 sys-devel/crossdev
 sys-devel/distcc
+sys-devel/gcc
 sys-devel/gdb
 sys-devel/lld
 sys-firmware/b43-firmware
@@ -1204,7 +1207,7 @@ sys-fs/zfs-auto-snapshot
 sys-kernel/dkms
 sys-kernel/dracut
 sys-kernel/genkernel
-sys-kernel/gentoo-sources:5.7.7
+sys-kernel/gentoo-sources:5.7.19
 sys-kernel/linux-firmware
 sys-power/acpi_call
 sys-power/acpitool
@@ -1222,7 +1225,6 @@ sys-process/lsof
 sys-process/parallel
 virtual/emacs
 virtual/wine
-www-apps/trac
 www-client/dillo
 www-client/elinks
 www-client/falkon
@@ -1256,7 +1258,6 @@ www-misc/fcgiwrap
 www-misc/urlwatch
 www-plugins/adobe-flash
 www-plugins/chrome-binary-plugins
-www-plugins/freshplayerplugin
 www-plugins/lightspark
 www-servers/apache
 www-servers/lighttpd
@@ -1605,7 +1606,6 @@ x11-wm/openbox
 x11-wm/oroborus
 x11-wm/page
 x11-wm/pekwm
-x11-wm/qtile
 x11-wm/ratpoison
 x11-wm/sawfish
 x11-wm/selectwm
