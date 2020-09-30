@@ -272,6 +272,7 @@ sys-apps/accountsservice elogind
 mate-extra/mate-power-manager elogind
 dde-base/dde-meta kwin elogind
 mate-base/mate-session-manager elogind
+gnome-base/gnome-settings-daemon elogind
 sys-auth/polkit elogind # kde/mate
 gnome-base/gvfs udisks # required by caja (dbus)
 mate-extra/mate-screensaver -pam # removes dependency gnome-keyring
