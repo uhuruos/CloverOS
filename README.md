@@ -599,7 +599,7 @@ No systemd, maximized CFLAGS, lower RAM usage, it's Gentoo, package versions are
 ### What is CloverOS Libre?
 CloverOS Libre doesn't have the `sys-kernel/linux-firmware` package.
 
-The kernel is the same gentoo-sources with Liquorix config https://raw.githubusercontent.com/damentz/liquorix-package/master/linux-liquorix/debian/config/kernelarch-x86/config-arch-64 but with https://linux-libre.fsfla.org/pub/linux-libre/releases/5.0.8-gnu/deblob-5.0 ran on it.
+The kernel is the same gentoo-sources with Liquorix config https://raw.githubusercontent.com/damentz/liquorix-package/$(uname -r | sed 's/\.[^.]*$//')/master/linux-liquorix/debian/config/kernelarch-x86/config-arch-64 but with https://linux-libre.fsfla.org/pub/linux-libre/releases/5.0.8-gnu/deblob-5.0 ran on it.
 
 ### Turning CloverOS into CloverOS Libre
 `emerge -C linux-firmware`
@@ -707,11 +707,11 @@ sudo emerge -eDv --jobs=4 --keep-going=y @world
 
 sudo emerge gentoo-sources genkernel lz4
 sudo eselect kernel set 1
-wget https://raw.githubusercontent.com/damentz/liquorix-package/master/linux-liquorix/debian/config/kernelarch-x86/config-arch-64
+wget https://raw.githubusercontent.com/damentz/liquorix-package/$(uname -r | sed 's/\.[^.]*$//')/master/linux-liquorix/debian/config/kernelarch-x86/config-arch-64
 sed -i "s/CONFIG_CRYPTO_CRC32C=m/CONFIG_CRYPTO_CRC32C=y/; s/CONFIG_FW_LOADER_USER_HELPER=y/CONFIG_FW_LOADER_USER_HELPER=n/; s/CONFIG_I2C_NVIDIA_GPU=/#CONFIG_I2C_NVIDIA_GPU=/; s/CONFIG_R8169=m/CONFIG_R8169=y/" config-arch-64
 echo -e "CONFIG_SND_HDA_INPUT_BEEP=y\nCONFIG_SND_HDA_INPUT_BEEP_MODE=0" >> config-arch-64
-wget https://raw.githubusercontent.com/graysky2/kernel_gcc_patch/master/enable_additional_cpu_optimizations_for_gcc_v8.1%2B_kernel_v4.13%2B.patch
-sudo sh -c "patch -d /usr/src/linux/ -p1 < enable_additional_cpu_optimizations_for_gcc_v8.1+_kernel_v4.13+.patch" 
+wget https://raw.githubusercontent.com/graysky2/kernel_gcc_patch/master/enable_additional_cpu_optimizations_for_gcc_v10.1%2B_kernel_v5.8%2B.patch
+sudo sh -c "patch -d /usr/src/linux/ -p1 < enable_additional_cpu_optimizations_for_gcc_v10.1%2B_kernel_v5.8%2B.patch" 
 sed -i "s/CONFIG_GENERIC_CPU=y/CONFIG_MNATIVE=y/;" config-arch-64
 sudo genkernel --kernel-ld=ld.bfd --kernel-config=config-arch-64 all
 sudo grub-mkconfig -o /boot/grub/grub.cfg
