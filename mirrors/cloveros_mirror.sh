@@ -21,7 +21,7 @@ if [ ! -d "nginx/" ] || [ ! -d "conf/" ]; then
 	if [ ! -f "/usr/bin/gcc" ] || [ ! -f "/usr/bin/make" ] || [ ! -f "/usr/bin/git" ] || [ ! -f "/usr/bin/wget" ] || [ ! -f "/usr/include/pcre.h" ] || [ ! -f "/usr/include/zlib.h" ] || [ ! -d "/usr/include/openssl/" ]; then
 		if [ -f "/usr/bin/dpkg" ]; then
 			apt update && apt -y install gcc make git libpcre3-dev libssl-dev zlib1g-dev rsync
-			echo "Run script to reduce Debian install size?"
+			echo "(Y/N) Run script to reduce Debian install size?"
 			read yn
 			if [ $yn == "Y" ] || [ $yn == "y" ]; then
 				apt -y purge linux-image-* vim* python* ispell bash-completion ca-certificates bind9-host debian-faq dnsutils doc-debian eject file laptop-detect manpages net-tools traceroute tasksel ; apt -y install linux-image-amd64 ; locale-gen --purge en_US en_US.UTF-8 ; apt -y upgrade ; apt -y clean ; apt -y autoremove ; rm -Rf /var/log/* /usr/share/dict/ /usr/share/locale/ /usr/share/doc/
