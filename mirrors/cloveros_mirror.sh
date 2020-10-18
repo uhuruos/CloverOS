@@ -3,11 +3,9 @@ if [ $(id -u) != "0" ]; then
 	echo "This script must be run as root" 1>&2
 	exit 1
 fi
-if [ "$(ping -c1 $1 2> /dev/null | awk -F "[()]" "NR==1 {print \$2}")" != "$(wget -qO - ifconfig.co)" ] && [ "$1" != "start" ]; then
-	echo "Usage:
-For install: cloveros_mirror.sh YourDomain.com www.YourDomain.com YourOtherDomain.com
-For post-install: cloveros_mirror.sh start
-Domain name is required and must point to current IP. Only the first domain will be configured in nginx.
+if [ "$(ping -c1 $1 2> /dev/null | awk -F "[()]" "NR==1 {print \$2}")" != "$(wget -qO - ifconfig.co)" ]; then
+	echo "Usage: cloveros_mirror.sh YourDomain.com www.YourDomain.com YourOtherDomain.com
+Domain names are required and must point to current IP. Only the first domain will be configured in nginx.
 
 Required dependencies for nginx build: gcc, make, git, wget, includes for pcre/zlib/openssl
 Debian: apt update && apt -y install gcc make git libpcre3-dev libssl-dev zlib1g-dev rsync
