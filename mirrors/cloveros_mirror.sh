@@ -3,8 +3,10 @@ if [ $(id -u) != "0" ]; then
 	echo "This script must be run as root" 1>&2
 	exit 1
 fi
-if [ "$(ping -c1 $1 2> /dev/null | awk -F "[()]" "NR==1 {print \$2}")" != "$(wget -qO - ifconfig.co)" ]; then
-	echo "Usage: cloveros_mirror.sh YourDomain.com www.YourDomain.com YourOtherDomain.com
+if [ "$(ping -c1 $1 2> /dev/null | awk -F "[()]" "NR==1 {print \$2}")" != "$(wget -qO - ifconfig.co)" ] && [ $1 != "start" ]; then
+	echo "Usage:
+For install: cloveros_mirror.sh YourDomain.com www.YourDomain.com YourOtherDomain.com
+For post-install: cloveros_mirror.sh start
 Domain name is required and must point to current IP. Only the first domain will be configured in nginx.
 
 Required dependencies for nginx build: gcc, make, git, wget, includes for pcre/zlib/openssl
@@ -40,7 +42,7 @@ if [ ! -d "nginx/" ] || [ ! -d "conf/" ]; then
 	git clone --depth 1 https://github.com/eustas/ngx_brotli
 	git clone --depth 1 https://github.com/arut/nginx-rtmp-module
 	cd ngx_brotli ; git submodule update --init ; cd ..
-	CFLAGS="-Ofast -march=native -mfpmath=both -pipe -funroll-loops -flto=8 -fgraphite-identity -floop-nest-optimize -malign-data=cacheline -mtls-dialect=gnu2 -Wl,--hash-style=gnu" auto/configure --with-http_v2_module --with-http_realip_module --with-http_ssl_module --add-module=ngx_brotli --add-module=nginx-rtmp-module --with-file-aio --with-threads
+	CFLAGS="-Ofast -mssse3 -mfpmath=both -pipe -flto=8 -fdevirtualize-at-ltrans -fgraphite-identity -floop-nest-optimize -funroll-loops -fipa-pta -ftracer -fno-plt -fno-semantic-interposition -malign-data=cacheline -mtls-dialect=gnu2 -Wl,--hash-style=gnu" auto/configure --with-http_v2_module --with-http_realip_module --with-http_ssl_module --add-module=ngx_brotli --add-module=nginx-rtmp-module --with-file-aio --with-threads
 	make -j8
 	cp -R conf ..
 	cd ..
@@ -70,6 +72,8 @@ if [ ! -d "nginx/" ] || [ ! -d "conf/" ]; then
 	sleep 1
 	nginx/objs/nginx -p $(pwd)/conf/ -c nginx.conf
 fi
+
+echo "Starting automatic maintenance (Checks if nginx is running, certificate needs to be updated, updates Cloveros rsync every 10 minutes)"
 
 while :; do
 	if ! pidof nginx; then
