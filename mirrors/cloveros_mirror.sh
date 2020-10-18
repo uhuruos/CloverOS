@@ -18,7 +18,7 @@ done
 domains="${domains%?}"
 if [ ! -d "nginx/" ] || [ ! -d "conf/" ]; then
 	prereqs() { return [ ! -f "/usr/bin/gcc" ] || [ ! -f "/usr/bin/make" ] || [ ! -f "/usr/bin/git" ] || [ ! -f "/usr/bin/wget" ] || [ ! -f "/usr/include/pcre.h" ] || [ ! -f "/usr/include/zlib.h" ] || [ ! -d "/usr/include/openssl/" ] }
-	if [ ! $prereqs ]; then
+	if ! prereqs; then
 		if [ -f "/usr/bin/dpkg" ]; then
 			apt update && apt -y install gcc make git libpcre3-dev libssl-dev zlib1g-dev rsync
 			echo "Run script to reduce Debian install size? (Y/N)"
@@ -34,7 +34,7 @@ if [ ! -d "nginx/" ] || [ ! -d "conf/" ]; then
 			yum update && yum install gcc make git wget libpcre-devel openssl-devel zlib-devel rsync
 		fi
 	fi
-	if [ ! $prereqs ]; then
+	if ! prereqs; then
 		echo "Exited. Need gcc, make, git, wget, pcre.h, zlib.h, openssl headers"
 		exit
 	fi
