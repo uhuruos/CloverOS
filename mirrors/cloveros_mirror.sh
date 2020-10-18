@@ -8,9 +8,9 @@ if [ "$(ping -c1 $1 2> /dev/null | awk -F "[()]" "NR==1 {print \$2}")" != "$(wge
 Domain name is required and must point to current IP. Only the first domain will be configured in nginx.
 
 Required dependencies for nginx build: gcc, make, git, wget, includes for pcre/zlib/openssl
-Debian: apt update && apt -y install gcc make git libpcre3-dev libssl-dev zlib1g-dev
+Debian: apt update && apt -y install gcc make git libpcre3-dev libssl-dev zlib1g-dev rsync
 Gentoo: emerge --sync && emerge git
-CentOS/Fedora: yum update && yum install gcc make git wget libpcre-devel openssl-devel zlib-devel"
+CentOS/Fedora: yum update && yum install gcc make git wget libpcre-devel openssl-devel zlib-devel rsync"
 	exit 1
 fi
 for domain in "$@"; do
@@ -20,13 +20,13 @@ domains="${domains%?}"
 if [ ! -d "nginx/" ] || [ ! -d "conf/" ]; then
 	if [ ! -f "/usr/bin/gcc" ] || [ ! -f "/usr/bin/make" ] || [ ! -f "/usr/bin/git" ] || [ ! -f "/usr/bin/wget" ] || [ ! -f "/usr/include/pcre.h" ] || [ ! -f "/usr/include/zlib.h" ] || [ ! -d "/usr/include/openssl/" ]; then
 		if [ -f "/usr/bin/dpkg" ]; then
-			apt update && apt -y install gcc make git libpcre3-dev libssl-dev zlib1g-dev
+			apt update && apt -y install gcc make git libpcre3-dev libssl-dev zlib1g-dev rsync
 		fi
 		if [ -f "/usr/bin/emerge" ]; then
 			emerge --sync && emerge git
 		fi
 		if [ -f "/usr/bin/yum" ]; then
-			yum update && yum install gcc make git wget libpcre-devel openssl-devel zlib-devel
+			yum update && yum install gcc make git wget libpcre-devel openssl-devel zlib-devel rsync
 		fi
 	fi
 	useradd www-data
