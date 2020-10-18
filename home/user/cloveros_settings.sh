@@ -341,7 +341,7 @@ case "$choice" in
 		portageworkdir=portageworkdir$(< /dev/urandom tr -dc 0-9 | head -c 8)
 		mkdir -p $portageworkdir/env/ $portageworkdir/repos.conf/
 		wget $gitprefix/binhost_settings/etc/portage/{package.use,package.accept_keywords,package.env,package.mask,package.unmask,make.conf} -P $portageworkdir/
-		wget $gitprefix/binhost_settings/etc/portage/env/{no-gnu2,no-gold,no-hashgnu,no-lto,no-lto-graphite,no-lto-o3,no-lto-ofast,no-ofast,no-noplt,no-noplt-lto,no-nosinter,no-fipapta,no-lto-ofast-nosinter,size,clang} -P $portageworkdir/env/
+		wget $gitprefix/binhost_settings/etc/portage/env/{no-gnu2,no-gold,no-hashgnu,no-lto,no-lto-graphite,no-lto-o3,no-lto-ofast,no-ofast,no-noplt,no-noplt-lto,llvm,no-fipapta,no-lto-ofast-nosinter,size,clang} -P $portageworkdir/env/
 		wget $gitprefix/binhost_settings/etc/portage/repos.conf/eselect-repo.conf -P $portageworkdir/repos.conf/
 		if [[ $(find $portageworkdir -type f | wc -l) == "23" ]]; then
 			backupportagedir=backupportage$(< /dev/urandom tr -dc 0-9 | head -c 8)

@@ -116,7 +116,6 @@ app-emulation/fs-uae
 app-emulation/fuse
 app-emulation/nemu
 app-emulation/open-vm-tools
-app-emulation/playonlinux
 app-emulation/q4wine
 app-emulation/qemu
 app-emulation/qt-virt-manager
@@ -191,7 +190,6 @@ app-misc/wipe
 app-misc/xmind
 app-mobilephone/gammu
 app-mobilephone/heimdall
-app-office/calligra
 app-office/gnumeric
 app-office/libreoffice
 app-office/orage
@@ -366,7 +364,6 @@ games-emulation/dosbox
 games-emulation/emutos
 games-emulation/fakenes
 games-emulation/fceux
-games-emulation/gambatte
 games-emulation/generator
 games-emulation/gens
 games-emulation/gngb
@@ -1111,7 +1108,6 @@ sci-chemistry/mustang
 sci-mathematics/gimps
 sci-mathematics/maxima
 sci-mathematics/octave
-sci-mathematics/rstudio
 sci-visualization/gnuplot
 sys-apps/ack
 sys-apps/baobab
@@ -1207,6 +1203,7 @@ sys-fs/zfs-auto-snapshot
 sys-kernel/dkms
 sys-kernel/dracut
 sys-kernel/genkernel
+sys-kernel/gentoo-sources:5.8.13
 sys-kernel/linux-firmware
 sys-power/acpi_call
 sys-power/acpitool

@@ -10,7 +10,7 @@ installer: fix some characters in password not working
 make posix compliant (replace read with echo read)
 
 #update
-gpaste eog graphwiz sabnzbd mypaint www-client/surf liferea lutris midori luakit ungoogled-chromium waterfox-classic haskell-platform vagrant virtualbox-additions virtualbox-extpack-oracle virtualbox-guest-additions virtualbox guake abiword pitivi gkrellm-themes gkrellmpc gkrellm-plugins gkrellm lastpass-cli displaycal mypaint sway  varnish gdb telegram-cli torbrowser kodi
+calligra rstudio gpaste eog graphwiz sabnzbd mypaint www-client/surf liferea lutris midori luakit ungoogled-chromium waterfox-classic haskell-platform vagrant virtualbox-additions virtualbox-extpack-oracle virtualbox-guest-additions virtualbox guake abiword pitivi gkrellm-themes gkrellmpc gkrellm-plugins gkrellm lastpass-cli displaycal mypaint sway  varnish gdb telegram-cli torbrowser kodi
 
 # builds, requires AR="gcc-ar" in make.conf commented out
 ftjam argyllcms mongodb	

@@ -46,7 +46,6 @@ net-analyzer/fping # doesn't build
 =dev-python/jinja-2.11.2 # qutebrowser
 
 #libressl, remove when stable supports libressl
-=dev-qt/qtnetwork-5.14.2::libressl
 app-crypt/qca::libressl
 www-client/dillo
 app-editors/xemacs
@@ -209,6 +208,7 @@ app-emulation/wine-staging
 app-emulation/faudio # wine-staging
 app-emulation/wine-mono # wine-staging
 app-emulation/wine-gecko # wine-staging
+app-emulation/vkd3d # wine-staging
 x11-misc/cvt12
 app-i18n/fbterm
 sys-apps/kmscon

@@ -53,6 +53,7 @@
 */*::vifino-overlay
 
 net-im/profanity::gentoo # optmzr
-dev-qt/qtnetwork::gentoo # libressl
 
 >sys-kernel/genkernel-3.5.3.3 # genkernel 4 is buggy, incorrect filenames
+>kde-plasma/plasma-meta-5.19
+>sys-apps/rng-tools-6.9

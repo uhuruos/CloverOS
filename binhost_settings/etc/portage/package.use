@@ -1,3 +1,11 @@
+media-libs/freeimage -raw
+media-libs/libopenshot -python_single_target_python3_7 python_single_target_python3_6
+media-video/openshot -python_single_target_python3_7 python_single_target_python3_6
+sys-apps/xdg-desktop-portal screencast
+dev-libs/efl -wayland
+x11-wm/enlightenment -wayland
+#kde-plasma/plasma-meta -sddm -display-manager
+app-office/libreoffice  -gtk
 x11-misc/virtualgl abi_x86_32 -ssl -libressl
 x11-libs/libXtst abi_x86_32
 x11-libs/libXv abi_x86_32

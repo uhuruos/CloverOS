@@ -75,7 +75,7 @@ while :; do
 		wget -qO - https://raw.githubusercontent.com/diafygi/acme-tiny/master/acme_tiny.py | python - --account-key conf/ssl/account.key --csr conf/ssl/certificate.csr --acme-dir /var/www/html/.well-known/acme-challenge/ > conf/ssl/certificate.crt
 		nginx/objs/nginx -p $(pwd)/conf/ -c nginx.conf -s reload
 	fi
-	rsync -a --delete rsync://nl.cloveros.ga/cloveros /var/www/html/cloveros.ga/;
+	rsync -a --delete --exclude "games-fps/" --exclude "s/CloverOS_*" --exclude "games-action/" --exclude "dev-util/android*" --exclude "dev-util/pycharm*" --exclude "media-fonts/noto*" rsync://nl.cloveros.ga/cloveros /var/www/html/cloveros.ga/;
 	sleep 600
 done
 }

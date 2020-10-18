@@ -1,3 +1,4 @@
+x11-libs/pangox-compat
 www-client/firefox::cloveros # firefox::pg_overlay without march=native
 games-emulation/pcsx2::cloveros # pcsx2-9999::gentoo with added "src_configure() { local mycmakeargs=( -DDISABLE_ADVANCE_SIMD=ON ) }"
 app-emulation/winetricks::cloveros # winetricks-9999::gentoo with removed RDEPEND="x11-misc/xdg-utils"
