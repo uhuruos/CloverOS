@@ -3,7 +3,7 @@ if [ $(id -u) != "0" ]; then
 	echo "This script must be run as root" 1>&2
 	exit 1
 fi
-if [ "$(ping -c1 $1 2> /dev/null | awk -F "[()]" "NR==1 {print \$2}")" != "$(wget -qO - ifconfig.co)" ] && [ $1 != "start" ]; then
+if [ "$(ping -c1 $1 2> /dev/null | awk -F "[()]" "NR==1 {print \$2}")" != "$(wget -qO - ifconfig.co)" ] && [ "$1" != "start" ]; then
 	echo "Usage:
 For install: cloveros_mirror.sh YourDomain.com www.YourDomain.com YourOtherDomain.com
 For post-install: cloveros_mirror.sh start
