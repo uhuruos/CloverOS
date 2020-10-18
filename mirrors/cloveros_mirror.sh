@@ -56,7 +56,7 @@ if [ ! -d "nginx/" ] || [ ! -d "conf/" ]; then
 	openssl genrsa 4096 > conf/ssl/account.key
 	openssl genrsa 4096 > conf/ssl/certificate.key
 	openssl req -new -sha256 -key conf/ssl/certificate.key -subj "/" -reqexts SAN -config <(cat /etc/ssl/openssl.cnf <(printf "[SAN]\nsubjectAltName=$domains")) > conf/ssl/certificate.csr
-	wget -qO - https://raw.githubusercontent.com/diafygi/acme-tiny/master/acme_tiny.py | python - --account-key conf/ssl/account.key --csr conf/ssl/certificate.csr --acme-dir /var/www/html/.well-known/acme-challenge/ > conf/ssl/certificate.crt
+	wget -qO - https://raw.githubusercontent.com/diafygi/acme-tiny/master/acme_tiny.py | python3 - --account-key conf/ssl/account.key --csr conf/ssl/certificate.csr --acme-dir /var/www/html/.well-known/acme-challenge/ > conf/ssl/certificate.crt
 	pkill nginx
 	sed -ri "s/#(ssl_certificate.*;)/\1/; s/#(listen 443 ssl http2;)/\1/" conf/nginx.conf
 	sed -i "$ s@}@\n\
@@ -81,7 +81,7 @@ while :; do
 	fi
 	if [ $(($(date +%s -d "$(openssl x509 -enddate -noout -in conf/ssl/certificate.crt | sed s/notAfter=//)") - $(date +%s))) -lt "2592000" ]; then
 		openssl req -new -sha256 -key conf/ssl/certificate.key -subj "/" -reqexts SAN -config <(cat /etc/ssl/openssl.cnf <(printf "[SAN]\nsubjectAltName=$domains")) > conf/ssl/certificate.csr
-		wget -qO - https://raw.githubusercontent.com/diafygi/acme-tiny/master/acme_tiny.py | python - --account-key conf/ssl/account.key --csr conf/ssl/certificate.csr --acme-dir /var/www/html/.well-known/acme-challenge/ > conf/ssl/certificate.crt
+		wget -qO - https://raw.githubusercontent.com/diafygi/acme-tiny/master/acme_tiny.py | python3 - --account-key conf/ssl/account.key --csr conf/ssl/certificate.csr --acme-dir /var/www/html/.well-known/acme-challenge/ > conf/ssl/certificate.crt
 		nginx/objs/nginx -p $(pwd)/conf/ -c nginx.conf -s reload
 	fi
 	rsync -a --delete --exclude "games-fps/" --exclude "s/CloverOS_*" --exclude "games-action/" --exclude "dev-util/android*" --exclude "dev-util/pycharm*" --exclude "media-fonts/noto*" rsync://nl.cloveros.ga/cloveros /var/www/html/cloveros.ga/;
