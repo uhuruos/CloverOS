@@ -34,7 +34,7 @@ if [ ! -d "nginx/" ] || [ ! -d "conf/" ]; then
 			yum update && yum install gcc make git wget libpcre-devel openssl-devel zlib-devel rsync
 		fi
 	fi
-	if [ ! $prereqs == "n" ]; then
+	if [ ! $prereqs ]; then
 		echo "Exited. Need gcc, make, git, wget, pcre.h, zlib.h, openssl headers"
 		exit
 	fi
