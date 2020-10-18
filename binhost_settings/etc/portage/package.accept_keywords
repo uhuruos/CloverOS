@@ -232,7 +232,6 @@ app-shells/mcfly
 app-portage/kuroo
 x11-misc/synergy
 x11-misc/primus
-sys-auth/fingerprint-gui
 dev-lang/tcc
 media-video/ffcast
 app-admin/entr
