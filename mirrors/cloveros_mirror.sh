@@ -1,4 +1,3 @@
-main() {
 if [ $(id -u) != "0" ]; then
 	echo "This script must be run as root" 1>&2
 	exit 1
@@ -18,10 +17,8 @@ for domain in "$@"; do
 done
 domains="${domains%?}"
 if [ ! -d "nginx/" ] || [ ! -d "conf/" ]; then
-	if [ ! -f "/usr/bin/gcc" ] || [ ! -f "/usr/bin/make" ] || [ ! -f "/usr/bin/git" ] || [ ! -f "/usr/bin/wget" ] || [ ! -f "/usr/include/pcre.h" ] || [ ! -f "/usr/include/zlib.h" ] || [ ! -d "/usr/include/openssl/" ]; then
-		prereqs="n"
-	fi
-	if [ $prereqs == "n" ]; then
+	prereqs() { [ ! -f "/usr/bin/gcc" ] || [ ! -f "/usr/bin/make" ] || [ ! -f "/usr/bin/git" ] || [ ! -f "/usr/bin/wget" ] || [ ! -f "/usr/include/pcre.h" ] || [ ! -f "/usr/include/zlib.h" ] || [ ! -d "/usr/include/openssl/" ] }
+	if [ ! $prereqs ]; then
 		if [ -f "/usr/bin/dpkg" ]; then
 			apt update && apt -y install gcc make git libpcre3-dev libssl-dev zlib1g-dev rsync
 			echo "Run script to reduce Debian install size? (Y/N)"
@@ -37,7 +34,7 @@ if [ ! -d "nginx/" ] || [ ! -d "conf/" ]; then
 			yum update && yum install gcc make git wget libpcre-devel openssl-devel zlib-devel rsync
 		fi
 	fi
-	if [ $prereqs == "n" ]; then
+	if [ ! $prereqs == "n" ]; then
 		echo "Exited. Need gcc, make, git, wget, pcre.h, zlib.h, openssl headers"
 		exit
 	fi
@@ -51,7 +48,7 @@ if [ ! -d "nginx/" ] || [ ! -d "conf/" ]; then
 	make -j8
 	cp -R conf ..
 	cd ..
-	echo "$(nginxconfigtemplatefn)" > conf/nginx.conf
+	tac cloveros_mirror.sh | sed "/<< 'MULTILINE-COMMENT/q" | tac | sed "1d; \$d" > conf/nginx.conf
 	openssl dhparam -out conf/dhparam.pem 4096
 	mkdir conf/ssl/
 	mkdir conf/logs/
@@ -92,10 +89,8 @@ while :; do
 	rsync -a --delete --exclude "s/CloverOS_*" --exclude "games-fps/*" --exclude "games-action/*" --exclude "dev-util/android*" --exclude "dev-util/pycharm*" --exclude "media-fonts/noto*" rsync://nl.cloveros.ga/cloveros /var/www/html/cloveros.ga/;
 	sleep 600
 done
-}
 
-nginxconfigtemplatefn() {
-	local config='
+<< 'MULTILINE-COMMENT'
 user www-data;
 worker_processes auto;
 
@@ -179,10 +174,4 @@ http {
 		add_header X-Content-Type-Options nosniff;
 	}
 }
-'
-	config="${config:1}"
-	config="${config%?}"
-	echo "$config"
-}
-
-main $@
+MULTILINE-COMMENT
