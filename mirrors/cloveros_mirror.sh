@@ -17,7 +17,9 @@ for domain in "$@"; do
 done
 domains="${domains%?}"
 if [ ! -d "nginx/" ] || [ ! -d "conf/" ]; then
-	prereqs() { return [ ! -f "/usr/bin/gcc" ] || [ ! -f "/usr/bin/make" ] || [ ! -f "/usr/bin/git" ] || [ ! -f "/usr/bin/wget" ] || [ ! -f "/usr/include/pcre.h" ] || [ ! -f "/usr/include/zlib.h" ] || [ ! -d "/usr/include/openssl/" ] }
+	prereqs() {
+		[ -f "/usr/bin/gcc" ] && [ -f "/usr/bin/make" ] && [ -f "/usr/bin/git" ] && [ -f "/usr/bin/wget" ] && [ -f "/usr/include/pcre.h" ] && [ -f "/usr/include/zlib.h" ] && [ -d "/usr/include/openssl/" ] && return 0 || return 1
+	}
 	if ! prereqs; then
 		if [ -f "/usr/bin/dpkg" ]; then
 			apt update && apt -y install gcc make git libpcre3-dev libssl-dev zlib1g-dev rsync
