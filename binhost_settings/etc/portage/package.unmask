@@ -81,7 +81,6 @@ media-libs/fmod::haarp # zandronum
 games-rpg/doukutsu-bin::haarp
 
 games-util/zdbsp::jacendi-overlay
-games-util/acc::jacendi-overlay
 games-util/udmf-convert::jacendi-overlay
 games-fps/doomretro::jacendi-overlay
 
