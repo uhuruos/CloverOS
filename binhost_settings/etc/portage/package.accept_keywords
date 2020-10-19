@@ -1,3 +1,4 @@
+#temp
 =media-libs/harfbuzz-2.6.8
 dev-libs/libutf8proc
 dev-libs/plasma-wayland-protocols
@@ -106,6 +107,7 @@ x11-plugins/compiz-plugins-community
 x11-plugins/compiz-plugins-experimental
 x11-plugins/compiz-plugins-extra
 x11-apps/jstest-gtk
+x11-libs/gtkglext # jstest-gtk
 games-server/etqw-ded
 games-fps/etlegacy
 games-emulation/zsnes
@@ -1068,6 +1070,7 @@ games-emulation/bsnes-libretro-cplusplus98 **
 games-emulation/kronos-libretro **
 games-emulation/flycast-wince-libretro **
 games-emulation/mesen-s-libretro **
+games-emulation/mesen-libretro **
 games-emulation/stella2014-libretro **
 games-emulation/opera-libretro **
 

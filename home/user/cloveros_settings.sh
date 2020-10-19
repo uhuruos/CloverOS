@@ -96,9 +96,6 @@ case "$choice" in
 		if [ -d /var/db/pkg/games-emulation/mednafen-saturn-libretro-*/ ] ; then
 			sudo emerge -C games-emulation/mednafen-saturn-libretro
 		fi
-		if [ -d /var/db/pkg/games-emulation/mesen-libretro-*/ ] ; then
-			sudo emerge -C games-emulation/mesen-libretro
-		fi
 		if [ -d /var/db/pkg/games-emulation/mupen64plus-libretro-*/ ] ; then
 			sudo emerge -C games-emulation/mupen64plus-libretro
 		fi

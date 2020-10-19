@@ -275,6 +275,7 @@ games-emulation/melonds-libretro::abendbrot
 games-emulation/meowpc98-libretro::abendbrot
 games-emulation/meteor-libretro::abendbrot
 games-emulation/mesen-s-libretro::abendbrot
+games-emulation/mesen-libretro::abendbrot
 games-emulation/mgba-libretro::abendbrot
 games-emulation/mrboom-libretro::abendbrot
 games-emulation/mupen64plus-next-libretro::abendbrot
