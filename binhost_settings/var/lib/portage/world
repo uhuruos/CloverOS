@@ -372,7 +372,6 @@ games-emulation/hatari
 games-emulation/higan
 games-emulation/jrommanager
 games-emulation/libretro-dosbox
-games-emulation/libretro-meta
 games-emulation/lxdream
 games-emulation/mednafen
 games-emulation/mednaffe
@@ -1316,7 +1315,6 @@ x11-misc/plank
 x11-misc/polybar
 x11-misc/primus
 x11-misc/qlipper
-x11-misc/qt5ct
 x11-misc/redshift
 x11-misc/rofi
 x11-misc/sct

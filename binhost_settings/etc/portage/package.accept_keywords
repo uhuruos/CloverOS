@@ -992,6 +992,7 @@ games-emulation/retroarch **
 games-emulation/retroarch-assets **
 games-emulation/retroarch-joypad-autoconfig **
 games-emulation/slang-shaders **
+games-emulation/glsl-shaders **
 games-emulation/common-overlays **
 games-emulation/libretro-database **
 games-emulation/libretro-info **
@@ -1006,6 +1007,7 @@ games-emulation/craft-libretro **
 games-emulation/citra-libretro **
 games-emulation/desmume-libretro **
 games-emulation/dolphin-libretro **
+games-emulation/duckstation-libretro **
 games-emulation/easyrpg-libretro **
 games-emulation/fbalpha2012-libretro **
 games-emulation/fbalpha-libretro **
@@ -1028,7 +1030,7 @@ games-emulation/meowpc98-libretro **
 games-emulation/meteor-libretro **
 games-emulation/mgba-libretro **
 games-emulation/mrboom-libretro **
-games-emulation/mupen64plus-libretro **
+games-emulation/mupen64plus-next-libretro **
 games-emulation/mame2000-libretro **
 games-emulation/mame2003-libretro **
 games-emulation/nestopia-libretro **
@@ -1065,7 +1067,7 @@ games-emulation/bsnes-mercury-libretro **
 games-emulation/bsnes-libretro-cplusplus98 **
 games-emulation/kronos-libretro **
 games-emulation/flycast-wince-libretro **
-games-emulation/mesen-libretro **
+games-emulation/mesen-s-libretro **
 games-emulation/stella2014-libretro **
 games-emulation/opera-libretro **
 

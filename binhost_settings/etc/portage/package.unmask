@@ -238,6 +238,7 @@ games-emulation/retroarch::abendbrot
 games-emulation/retroarch-assets::abendbrot
 games-emulation/retroarch-joypad-autoconfig::abendbrot
 games-emulation/slang-shaders::abendbrot
+games-emulation/glsl-shaders::abendbrot
 games-emulation/common-overlays::abendbrot
 games-emulation/libretro-database::abendbrot
 games-emulation/libretro-info::abendbrot
@@ -252,6 +253,7 @@ games-emulation/craft-libretro::abendbrot
 games-emulation/citra-libretro::abendbrot
 games-emulation/desmume-libretro::abendbrot
 games-emulation/dolphin-libretro::abendbrot
+games-emulation/duckstation-libretro::abendbrot
 games-emulation/easyrpg-libretro::abendbrot
 games-emulation/fbalpha2012-libretro::abendbrot
 games-emulation/fbalpha-libretro::abendbrot
@@ -272,9 +274,10 @@ games-emulation/mednafen-wswan-libretro::abendbrot
 games-emulation/melonds-libretro::abendbrot
 games-emulation/meowpc98-libretro::abendbrot
 games-emulation/meteor-libretro::abendbrot
+games-emulation/mesen-s-libretro::abendbrot
 games-emulation/mgba-libretro::abendbrot
 games-emulation/mrboom-libretro::abendbrot
-games-emulation/mupen64plus-libretro::abendbrot
+games-emulation/mupen64plus-next-libretro::abendbrot
 games-emulation/mame2000-libretro::abendbrot
 games-emulation/mame2003-libretro::abendbrot
 games-emulation/nestopia-libretro::abendbrot
@@ -311,7 +314,6 @@ games-emulation/yabasanshiro-libretro::abendbrot
 games-emulation/bsnes-mercury-libretro::abendbrot
 games-emulation/kronos-libretro::abendbrot
 games-emulation/flycast-wince-libretro::abendbrot
-games-emulation/mesen-libretro::abendbrot
 games-emulation/stella2014-libretro::abendbrot
 
 media-libs/vapoursynth::vapoursynth

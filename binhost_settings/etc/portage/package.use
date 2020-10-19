@@ -100,7 +100,7 @@ media-fonts/tewi-font bdf pcf
 games-emulation/nestopia gui
 games-emulation/stella joystick
 media-sound/clementine cdda moodbar projectm
-games-emulation/libretro-meta 2048 4do beetle-psx beetle-saturn bnes bsnes2014 citra craft desmume dolphin -easyrpg fbalpha2012 fbneo fceumm flycast gambatte genplus handy -mame mame2000 mame2003 mame2003-plus mame2016 mednafen-gba mednafen-ngp mednafen-pce-fast mednafen-snes mednafen-supergrafx mednafen-vb mednafen-wswan melonds meowpc98 meteor mgba mrboom mupen64plus nestopia nxengine openlara parallel-n64 pcsx-rearmed picodrive ppsspp prboom prosystem px68k quicknes -redream -sameboy scummvm snes9x snes9x2002 snes9x2010 stella tgbdual tyrquake vba-next vbam yabause -bsnes-cpp98 bsnes-mercury flycast-wince kronos mesen stella2014 yabasanshiro
+games-emulation/libretro-meta 2048 4do beetle-psx beetle-saturn bnes bsnes2014 citra craft desmume dolphin duckstation -easyrpg fbalpha2012 fbneo fceumm flycast gambatte genplus handy -mame mame2000 mame2003 mame2003-plus mame2016 mednafen-gba mednafen-ngp mednafen-pce-fast mednafen-snes mednafen-supergrafx mednafen-vb mednafen-wswan melonds meowpc98 meteor mgba mrboom mupen64plus nestopia nxengine openlara parallel-n64 pcsx-rearmed picodrive ppsspp prboom prosystem px68k quicknes -redream -sameboy scummvm snes9x snes9x2002 snes9x2010 stella tgbdual tyrquake vba-next vbam yabause -bsnes-cpp98 bsnes-mercury flycast-wince kronos mesen mesen-s stella2014 yabasanshiro
 media-libs/sdl2-mixer flac mikmod vorbis mod mp3 mad midi fluidsynth
 media-video/obs-studio jack truetype v4l
 media-plugins/alsa-plugins jack
