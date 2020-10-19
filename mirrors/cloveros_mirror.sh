@@ -26,7 +26,7 @@ if [ ! -d "nginx/" ] || [ ! -d "conf/" ]; then
 			echo "Run script to reduce Debian install size? (Y/N)"
 			read yn
 			if [ $yn == "Y" ] || [ $yn == "y" ]; then
-				apt -y purge linux-image-* vim* python* dbus ispell bash-completion bind9-host debian-faq dnsutils doc-debian eject file laptop-detect manpages net-tools traceroute tasksel ; apt -y install linux-image-amd64 ; locale-gen --purge en_US en_US.UTF-8 ; apt -y upgrade ; apt -y clean ; apt -y autoremove ; rm -Rf /var/log/* /usr/share/dict/ /usr/share/locale/ /usr/share/doc/
+				apt -y purge linux-image-* vim* python* dbus unattended-upgrades ispell bash-completion bind9-host debian-faq dnsutils doc-debian eject file laptop-detect manpages net-tools traceroute tasksel ; apt -y install linux-image-amd64 ; locale-gen --purge en_US en_US.UTF-8 ; apt -y upgrade ; apt -y clean ; apt -y autoremove ; rm -Rf /var/log/* /usr/share/dict/ /usr/share/locale/ /usr/share/doc/
 			fi
 		fi
 		if [ -f "/usr/bin/emerge" ]; then
