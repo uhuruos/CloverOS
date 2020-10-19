@@ -70,6 +70,7 @@ if [ ! -d "nginx/" ] || [ ! -d "conf/" ]; then
 		add_header Strict-Transport-Security \"max-age=31536000; includeSubDomains; preload\";\n\
 		add_header X-Content-Type-Options nosniff;\n\
 		root /var/www/html/cloveros.ga/;\n\
+		autoindex on;\n\
 	}\n\
 }@" conf/nginx.conf
 	mkdir /var/www/html/cloveros.ga/
