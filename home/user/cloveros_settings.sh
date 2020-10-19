@@ -96,6 +96,12 @@ case "$choice" in
 		if [ -d /var/db/pkg/games-emulation/mednafen-saturn-libretro-*/ ] ; then
 			sudo emerge -C games-emulation/mednafen-saturn-libretro
 		fi
+		if [ -d /var/db/pkg/games-emulation/mesen-libretro-*/ ] ; then
+			sudo emerge -C games-emulation/mesen-libretro
+		fi
+		if [ -d /var/db/pkg/games-emulation/mupen64plus-libretro-*/ ] ; then
+			sudo emerge -C games-emulation/mupen64plus-libretro
+		fi
 		if [ -d /var/db/pkg/dev-python/pycrypto-*/ ] ; then
 			sudo emerge -C pycrypto
 			sudo sed -i "s/>dev-python\/dnspython-1.15.0-r1//" /etc/portage/package.mask
