@@ -50,7 +50,7 @@ if [ ! -d "nginx/" ] || [ ! -d "conf/" ]; then
 	make -j8
 	cp -R conf ..
 	cd ..
-	tac cloveros_mirror.sh | sed "/<< 'MULTILINE-COMMENT/q" | tac | sed "1d; \$d" > conf/nginx.conf
+	tac cloveros_mirror.sh | sed "/<< 'MULTILINE-COMMENT'/q" | tac | sed "1d; \$d" > conf/nginx.conf
 	openssl dhparam -out conf/dhparam.pem 4096
 	mkdir conf/ssl/
 	mkdir conf/logs/
