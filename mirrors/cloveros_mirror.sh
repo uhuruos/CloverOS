@@ -77,7 +77,7 @@ if [ ! -d "nginx/" ] || [ ! -d "conf/" ]; then
 	nginx/objs/nginx -p $(pwd)/conf/ -c nginx.conf
 fi
 
-echo "Starting automatic maintenance (Checks if nginx is running, certificate needs to be updated, updates Cloveros rsync every 10 minutes)"
+echo "Starting automatic maintenance (Checks if nginx is running, checks if certificate needs to be updated and updates CloverOS rsync every 10 minutes)"
 
 while :; do
 	if ! pidof nginx; then
