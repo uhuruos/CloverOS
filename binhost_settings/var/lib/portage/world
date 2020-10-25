@@ -1202,7 +1202,7 @@ sys-fs/zfs-auto-snapshot
 sys-kernel/dkms
 sys-kernel/dracut
 sys-kernel/genkernel
-sys-kernel/gentoo-sources:5.8.13
+sys-kernel/gentoo-sources:5.9.1
 sys-kernel/linux-firmware
 sys-power/acpi_call
 sys-power/acpitool
@@ -1262,7 +1262,6 @@ www-servers/thttpd
 www-servers/tomcat
 x11-apps/compiz-boxmenu
 x11-apps/compiz-manager
-x11-apps/copyq
 x11-apps/igt-gpu-tools
 x11-apps/jstest-gtk
 x11-apps/mesa-progs
@@ -1289,6 +1288,7 @@ x11-misc/clipit
 x11-misc/clipster
 x11-misc/colord
 x11-misc/compton
+x11-misc/copyq
 x11-misc/cvt12
 x11-misc/dmenu
 x11-misc/dunst

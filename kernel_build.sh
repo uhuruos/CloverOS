@@ -4,8 +4,8 @@ if [ $(id -u) != "0" ]; then
 	exit 1
 fi
 
-kernelversion=5.8.13
-kernelmajversion=5.8
+kernelversion=5.9.1
+kernelmajversion=5.9
 
 if [ ! -d '/var/cache/binpkgs/s/' ]; then
 	mkdir -p /var/cache/binpkgs/s/
