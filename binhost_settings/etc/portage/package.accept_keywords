@@ -54,6 +54,7 @@ www-client/elinks
 
 #keyworded, remove when stable exists
 sys-apps/flatpak
+dev-util/ostree # flatpak
 games-action/oolite
 app-text/xournalpp
 media-gfx/cropgui

@@ -208,13 +208,6 @@ x11-misc/plank::elementary
 pantheon-base/plank::elementary
 x11-themes/plank-theme-pantheon::elementary
 
-sys-apps/flatpak::flatpak-overlay
-acct-user/flatpak::flatpak-overlay # flatpak
-acct-group/flatpak::flatpak-overlay # flatpak
-sys-apps/xdg-desktop-portal::flatpak-overlay
-sys-apps/xdg-desktop-portal-gtk::flatpak-overlay
-sys-fs/libostree::flatpak-overlay
-
 sys-kernel/dkms::farmboy0
 
 www-client/torbrowser::torbrowser
