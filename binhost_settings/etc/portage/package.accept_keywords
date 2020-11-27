@@ -1,13 +1,6 @@
-#temp
-=media-libs/harfbuzz-2.6.8
-dev-libs/libutf8proc
-dev-libs/plasma-wayland-protocols
-kde-plasma/kwayland-server
-dev-ruby/rubyzip
-dev-python/websockets
-sci-libs/volk
-dev-python/click-plugins
-
+media-tv/kodi
+dev-python/markdown
+media-libs/libplacebo
 #preference
 sys-kernel/gentoo-sources
 sys-devel/gcc
@@ -17,6 +10,12 @@ app-emulation/winetricks::cloveros **
 www-client/firefox::pg_overlay
 dev-libs/nss # firefox
 dev-libs/nspr # firefox
+games-emulation/pcsx2::cloveros **
+games-emulation/dolphin **
+games-emulation/ppsspp **
+media-gfx/gimp **
+media-libs/gegl ** # gimp
+media-libs/babl ** # gimp
 
 #old, remove when stable is bumped up
 sys-fs/zfs ** # kernel 5.4
@@ -28,20 +27,11 @@ app-emulation/virtualbox-modules # virtualbox
 app-emulation/virtualbox-extpack-oracle # virtualbox
 net-misc/youtube-dl # stable always outdated and never works
 media-fonts/opendesktop-fonts # fixes bug
-net-p2p/mldonkey # fixes build
 games-emulation/mgba # fixes build
 x11-misc/x11vnc # fixes build
 x11-themes/sddm-gentoo-black-theme ** # fixes build
 net-misc/freerdp ** # fixes build
-games-emulation/pcsx2 ** # old
-games-emulation/dolphin ** # old
-games-emulation/ppsspp ** # old
-app-shells/gentoo-zsh-completions ** # old
-x11-wm/fvwm # old
 media-libs/zimg ** # vapoursynth
-media-gfx/gimp ** # gtk3
-media-libs/gegl ** # gimp
-media-libs/babl ** # gimp
 net-analyzer/fping # doesn't build
 =media-libs/libvpx-1.8.2 # handbrake
 =dev-python/jinja-2.11.2 # qutebrowser
@@ -53,6 +43,10 @@ app-editors/xemacs
 www-client/elinks
 
 #keyworded, remove when stable exists
+net-news/rssguard
+net-p2p/gnunet
+media-gfx/waifu2x-ncnn-vulkan
+dev-libs/ncnn # waifu2x-ncnn-vulkan
 sys-apps/flatpak
 dev-util/ostree # flatpak
 games-action/oolite
@@ -87,6 +81,7 @@ net-proxy/obfs4proxy
 dev-go/ed25519 # obfs4proxy
 dev-go/go-text # obfs4proxy
 dev-go/goptlib # obfs4proxy
+net-print/hplip
 net-print/hplip-plugin
 games-fps/zandronum
 x11-wm/compiz-meta
@@ -803,6 +798,18 @@ media-libs/vapoursynth
 media-libs/waifu2x-converter-cpp
 media-libs/l-smash **
 media-plugins/vsutil
+media-plugins/acsuite
+media-plugins/audiocutter
+media-plugins/ocsuite
+media-plugins/vapoursynth-cas
+media-plugins/vs-placebo
+media-plugins/vapoursynth-lvsfunc
+media-plugins/vapoursynth-lghost
+media-plugins/vapoursynth-edgefixer
+media-plugins/vapoursynth-dpid
+media-plugins/vapoursynth-bwdif
+media-plugins/vapoursynth-asharp
+media-plugins/vapoursynth-arearesize
 media-plugins/vapoursynth-vaguedenoiser
 media-plugins/vapoursynth-finesharp
 media-plugins/vapoursynth-bifrost
@@ -824,6 +831,7 @@ media-plugins/vapoursynth-videoscope
 media-plugins/vapoursynth-flash3kyuu_deband
 media-plugins/vapoursynth-vs-maskdetail
 media-plugins/vapoursynth-waifu2x-w2xc
+media-plugins/vapoursynth-waifu2x-ncnn-vulkan **
 media-plugins/vapoursynth-mvsfunc
 media-plugins/vapoursynth-yadifmod
 media-plugins/vapoursynth-reduceflicker

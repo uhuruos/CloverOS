@@ -10,7 +10,7 @@ installer: fix some characters in password not working
 make posix compliant (replace read with echo read)
 
 #update
-qt5ct kvantum calligra rstudio gpaste eog graphwiz sabnzbd mypaint www-client/surf liferea lutris midori luakit ungoogled-chromium waterfox-classic haskell-platform vagrant virtualbox-additions virtualbox-extpack-oracle virtualbox-guest-additions virtualbox guake abiword pitivi gkrellm-themes gkrellmpc gkrellm-plugins gkrellm lastpass-cli displaycal mypaint sway  varnish gdb telegram-cli torbrowser kodi
+apache calibre lxqt-meta mongodb falkon qt5ct kvantum calligra rstudio gpaste eog graphwiz sabnzbd mypaint www-client/surf liferea lutris midori luakit ungoogled-chromium waterfox-classic haskell-platform vagrant virtualbox-additions virtualbox-extpack-oracle virtualbox-guest-additions virtualbox guake abiword pitivi gkrellm-themes gkrellmpc gkrellm-plugins gkrellm lastpass-cli displaycal mypaint sway  varnish gdb telegram-cli torbrowser kodi
 
 # builds, requires AR="gcc-ar" in make.conf commented out
 ftjam argyllcms mongodb	
@@ -23,6 +23,8 @@ sas3flash
 # needs gcc8
 pcsx2 spacefm gdb
 
+# masked
+shotcut
 # doesn't emerge
 flowblade pyhoca-gui kicad opentoonz eduke32 racket stumpwm stumpwm-contrib varnish surf midori luakit gkrellm lutris liferea mypaint gkrellm-plugins gkrellm-themes abiword gkrellmpc displaycal pitivi ungoogled-chromium rpcs3 kde-meta
 # packages with no libressl support

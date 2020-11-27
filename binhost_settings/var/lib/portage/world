@@ -240,7 +240,6 @@ app-text/agrep
 app-text/antiword
 app-text/atril
 app-text/bibletime
-app-text/calibre
 app-text/catdoc
 app-text/convmv
 app-text/dos2unix
@@ -270,7 +269,6 @@ app-vim/extra-syntax
 app-vim/vim-tmux
 dev-db/dbeaver-bin
 dev-db/mariadb
-dev-db/mongodb
 dev-db/postgresql
 dev-db/redis
 dev-games/ogre
@@ -460,8 +458,6 @@ gnome-extra/gnome-color-manager
 gui-wm/sway
 kde-apps/kamoso
 kde-apps/kbackup
-kde-apps/kde-meta
-kde-apps/kdebase-meta
 kde-apps/kdenlive
 kde-apps/konqueror
 kde-apps/yakuake
@@ -485,7 +481,6 @@ lxde-base/lxappearance
 lxde-base/lxde-meta
 lxde-base/lxtask
 lxde-base/lxterminal
-lxqt-base/lxqt-meta
 mail-client/alpine
 mail-client/claws-mail
 mail-client/clawsker
@@ -758,6 +753,7 @@ media-gfx/sxiv
 media-gfx/ufraw
 media-gfx/viewnior
 media-gfx/w3mimgfb
+media-gfx/waifu2x-ncnn-vulkan
 media-gfx/wkhtmltopdf
 media-gfx/xsane
 media-gfx/xzgv
@@ -910,7 +906,6 @@ media-video/mpv
 media-video/obs-studio
 media-video/openshot
 media-video/rtmpdump
-media-video/shotcut
 media-video/smplayer
 media-video/smtube
 media-video/subtitlecomposer
@@ -1033,7 +1028,7 @@ net-misc/youtube-comment-downloader
 net-misc/youtube-dl
 net-misc/youtube-dl-gui
 net-misc/zssh
-net-news/quiterss
+net-news/rssguard
 net-nntp/pan
 net-p2p/amule
 net-p2p/bitcoin-qt
@@ -1202,7 +1197,7 @@ sys-fs/zfs-auto-snapshot
 sys-kernel/dkms
 sys-kernel/dracut
 sys-kernel/genkernel
-sys-kernel/gentoo-sources:5.9.1
+sys-kernel/gentoo-sources:5.8.18
 sys-kernel/linux-firmware
 sys-power/acpi_call
 sys-power/acpitool
@@ -1222,7 +1217,6 @@ virtual/emacs
 virtual/wine
 www-client/dillo
 www-client/elinks
-www-client/falkon
 www-client/fetch
 www-client/firefox
 www-client/google-chrome
@@ -1254,7 +1248,6 @@ www-misc/urlwatch
 www-plugins/adobe-flash
 www-plugins/chrome-binary-plugins
 www-plugins/lightspark
-www-servers/apache
 www-servers/lighttpd
 www-servers/nginx
 www-servers/onionshare
