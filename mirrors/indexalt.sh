@@ -843,16 +843,16 @@ CloverOS GNU/Linux (Package Signing) 78F5 AC55 A120 07F2 2DF9 A28A 78B9 3F76 B8E
 #pgp #fingerprint</div>
 			</div>
 			<div class="dropdown">
-				<a href="https://useast.cloveros.ga">Packages</a>
+				<a href="https://useast.cloveros.org">Packages</a>
 				<div class="dropdown-content" id="packages">'"$recentpackages"'</div>
 			</div>
 			<a href="https://gitgud.io/cloveros/cloveros/issues">Bugs</a>
-			<a href="https://wiki.cloveros.ga">Wiki</a>
-			<a href="https://forums.cloveros.ga">Forums</a>
+			<a href="https://wiki.cloveros.org">Wiki</a>
+			<a href="https://forums.cloveros.org">Forums</a>
 			<a href="irc://irc.rizon.net/cloveros">IRC</a>
 			<a href="https://gitgud.io/cloveros/cloveros#cloveros">Docs</a>
 			<div class="dropdown">
-				<a href="https://cloveros.ga/s/'"$isoname"'">Download</a>
+				<a href="https://cloveros.org/s/'"$isoname"'">Download</a>
 				<div class="dropdown-content" id="downloads">'"$isolist"'</div>
 			</div>
 		</div>

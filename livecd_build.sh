@@ -25,7 +25,7 @@ mount --rbind /sys sys
 cat <<HEREDOC | chroot .
 emerge-webrsync
 eselect profile set "default/linux/amd64/17.1/hardened"
-PORTAGE_BINHOST="https://cloveros.ga" emerge -G aria2
+PORTAGE_BINHOST="https://cloveros.org" emerge -G aria2
 while ! gpg --list-keys "CloverOS GNU/Linux (Package signing)"; do gpg --keyserver hkp://pool.sks-keyservers.net --recv-key "78F5 AC55 A120 07F2 2DF9 A28A 78B9 3F76 B8E4 2805"; done
 echo '
 CFLAGS="-O3 -march=native -mfpmath=both -pipe -fgraphite-identity -floop-nest-optimize -funroll-loops -fipa-pta -ftracer -malign-data=cacheline -Wl,--hash-style=gnu"
@@ -34,10 +34,10 @@ CPU_FLAGS_X86="mmx mmxext sse sse2 ssse3 sse3"
 ACCEPT_LICENSE="*"
 MAKEOPTS="-j8"
 PORTAGE_NICENESS=19
-PORTAGE_BINHOST="https://cloveros.ga"
+PORTAGE_BINHOST="https://cloveros.org"
 EMERGE_DEFAULT_OPTS="--jobs=4 --keep-going=y --autounmask-write=y -G"
 ACCEPT_KEYWORDS="**"
-binhost_mirrors="\$PORTAGE_BINHOST,https://useast.cloveros.ga,https://uswest.cloveros.ga,https://ca.cloveros.ga,https://fr.cloveros.ga,https://nl.cloveros.ga,https://uk.cloveros.ga,https://au.cloveros.ga,https://sg.cloveros.ga,https://jp.cloveros.ga,https://mirrors.nju.edu.cn/cloveros,https://cernet.mirrors.ustc.edu.cn/cloveros,"
+binhost_mirrors="\$PORTAGE_BINHOST,https://useast.cloveros.org,https://uswest.cloveros.org,https://ca.cloveros.org,https://fr.cloveros.org,https://nl.cloveros.org,https://uk.cloveros.org,https://au.cloveros.org,https://sg.cloveros.org,https://jp.cloveros.org,https://mirrors.nju.edu.cn/cloveros,https://cernet.mirrors.ustc.edu.cn/cloveros,"
 FETCHCOMMAND_HTTPS="sh -c \"aria2c -x2 -s99 -j99 -k1M -d \"\\\${DISTDIR}\" -o \"\\\${FILE}\" \\\\\\\$(sed -e \"s#,#\\\${DISTDIR}/\\\${FILE}\"\ \"#g\" -e \"s#\$PKGDIR##g\" -e \"s#.partial##g\" <<< \$binhost_mirrors) & aria2c --allow-overwrite -d \"\\\${DISTDIR}\" -o \"\\\${FILE}.asc\" \\\\\\\$(sed -e \"s#,#/s/signatures/\\\${DISTDIR}/\\\${FILE}.asc\"\ \"#g\" -e \"s#\$PKGDIR##g\" -e \"s#.partial##g\" <<< \$binhost_mirrors) && wait && gpg --verify \"\\\${DISTDIR}/\\\${FILE}.asc\" \"\\\${DISTDIR}/\\\${FILE}\" && rm \"\\\${DISTDIR}/\\\${FILE}.asc\"\""' >> /etc/portage/make.conf
 
 FETCHCOMMAND_HTTPS="wget -O \"\\\${DISTDIR}/\\\${FILE}\" \"\\\${URI}\"" emerge -1 gcc glibc acct-group/input acct-group/kvm acct-group/render sys-libs/pam virtual/libcrypt man-db gdbm rsync python:3.7 curl wget iputils openssh python:2.7
@@ -55,7 +55,7 @@ echo "$username:$userpassword" | chpasswd
 gpasswd -a $username wheel
 
 emerge -eDv @world xorg-server fvwm spacefm rxvt-unicode nitrogen compton nomacs sudo wpa_supplicant porthole firefox emacs gimp mpv smplayer rtorrent weechat alsa-utils zsh zsh-completions gentoo-zsh-completions liberation-fonts hack vlgothic nano scrot xbindkeys xinput arandr qastools slock xarchiver p7zip games-envd gparted squashfs-tools os-prober exfat-nofuse sshfs curlftpfs linux-firmware
-PORTAGE_BINHOST="https://cloveros.ga/s/nodbus" FETCHCOMMAND_HTTPS="wget -O \"\\\${DISTDIR}/\\\${FILE}\" \"\\\${URI}\"" emerge -1 glib qtgui
+PORTAGE_BINHOST="https://cloveros.org/s/nodbus" FETCHCOMMAND_HTTPS="wget -O \"\\\${DISTDIR}/\\\${FILE}\" \"\\\${URI}\"" emerge -1 glib qtgui
 emerge --depclean
 echo "frozen-files=\"/etc/sudoers\"" >> /etc/dispatch-conf.conf
 sed -i "s/# %wheel ALL=(ALL) NOPASSWD: ALL/%wheel ALL=(ALL) NOPASSWD: ALL/" /etc/sudoers
@@ -119,7 +119,7 @@ HEREDOC
 
 cd ..
 umount -l image/proc image/dev image/sys
-wget https://cloveros.ga/s/kernel.tar.lzma https://cloveros.ga/s/signatures/s/kernel.tar.lzma.asc
+wget https://cloveros.org/s/kernel.tar.lzma https://cloveros.org/s/signatures/s/kernel.tar.lzma.asc
 gpg --verify kernel.tar.lzma.asc kernel.tar.lzma
 tar -C image/ -xf kernel.tar.lzma --wildcards lib/modules/\*-gentoo/\*
 mksquashfs image/ image.squashfs -b 1M -comp xz -Xbcj x86 -Xdict-size 1M

@@ -38,4 +38,4 @@ find /var/cache/binpkgs/ -type d -not -path "/var/cache/binpkgs/s/signatures*" |
 find /var/cache/binpkgs/ -type f -not -path "/var/cache/binpkgs/s/signatures*" | sed "s#/var/cache/binpkgs/##" | xargs -P 8 -I{} gpg --armor --detach-sign --output /var/cache/binpkgs/s/signatures/{}.asc --sign /var/cache/binpkgs/{}
 
 chmod -R 755 /var/cache/binpkgs/
-rsync -a --delete /var/cache/binpkgs/ root@nl.cloveros.ga:/var/www/html/cloveros.ga/
+rsync -a --delete /var/cache/binpkgs/ root@nl.cloveros.org:/var/www/html/cloveros.org/

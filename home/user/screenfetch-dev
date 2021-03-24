@@ -661,7 +661,7 @@ detectdistro () {
 						'**')   distro_release=experimental ;; #experimental usually includes git-versions.
 					esac
 
-					if [[ $PORTAGE_BINHOST == 'https://'*'cloveros.ga' ]]; then distro="CloverOS GNU/Linux"; fi
+					if [[ $PORTAGE_BINHOST == 'https://'*'cloveros.org' ]]; then distro="CloverOS GNU/Linux"; fi
 					;;
 				"Hyperbola GNU/Linux-libre"|"Hyperbola")
 					distro="Hyperbola GNU/Linux-libre"
@@ -958,7 +958,7 @@ detectdistro () {
 					distro="Crunchbang"
 				elif [[ "${distro}" == "gentoo" ]]; then
 					grep -q -i 'Funtoo' /etc/gentoo-release && distro="Funtoo"
-					grep -q 'PORTAGE_BINHOST="https://.*cloveros.ga"' /etc/portage/make.conf && distro="CloverOS GNU/Linux"
+					grep -q 'PORTAGE_BINHOST="https://.*cloveros.org"' /etc/portage/make.conf && distro="CloverOS GNU/Linux"
 				elif [[ "${distro}" == "mandrake" ]] || [[ "${distro}" == "mandriva" ]]; then
 					grep -q -i 'PCLinuxOS' /etc/${distro}-release && distro="PCLinuxOS"
 				elif [[ "${distro}" == "fedora" ]]; then

@@ -1,6 +1,6 @@
 cd $( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )
 git=https://gitgud.io/cloveros/cloveros/raw/master
-site=cloveros.ga
+site=cloveros.org
 isoname=`basename /var/cache/binpkgs/s/CloverOS-x86_64-*.iso`
 libreisoname=`basename /var/cache/binpkgs/s/CloverOS_Libre-x86_64-*.iso`
 minimalisoname=`basename /var/cache/binpkgs/s/CloverOS_Minimal-x86_64-*.iso`
@@ -37,12 +37,12 @@ CloverOS GNU/Linux
 <br><br>
 Git: <a target="_blank" href="https://gitgud.io/cloveros/cloveros">https://gitgud.io/cloveros/cloveros</a><br>
 ISO: <a href="s/'"$isoname"'">https://'"$site"'/s/'"$isoname"'</a><br>
-Libre ISO: <a href="https://nl.cloveros.ga/s/'"$libreisoname"'">https://nl.cloveros.ga/s/'"$libreisoname"'</a><br>
-Minimal ISO: <a href="https://nl.cloveros.ga/s/'"$minimalisoname"'">https://nl.cloveros.ga/s/'"$minimalisoname"'</a><br>
+Libre ISO: <a href="https://nl.cloveros.org/s/'"$libreisoname"'">https://nl.cloveros.org/s/'"$libreisoname"'</a><br>
+Minimal ISO: <a href="https://nl.cloveros.org/s/'"$minimalisoname"'">https://nl.cloveros.org/s/'"$minimalisoname"'</a><br>
 GPG: <a target="_blank" href="s/cloveros.gpg">78F5 AC55 A120 07F2 2DF9  A28A 78B9 3F76 B8E4 2805</a><br>
 IRC: <a target="_blank" href="irc://irc.rizon.net/cloveros">#cloveros</a> on irc.rizon.net<br>
 Twitter: <a target="_blank" href="https://twitter.com/cloveros_ga">https://twitter.com/cloveros_ga</a><br>
-Rsync: rsync://nl.cloveros.ga/cloveros<br>
+Rsync: rsync://nl.cloveros.org/cloveros<br>
 License: WTFPL<br>
 Mirrors: '"$mirrors"'<br>
 Packages: <a target="_blank" href="s/packages.html">'"$packagecount"' https://'"$site"'/s/packages.html</a><br>

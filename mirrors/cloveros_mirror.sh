@@ -69,11 +69,11 @@ if [ ! -d "nginx/" ] || [ ! -d "conf/" ]; then
 		listen 443 ssl http2;\n\
 		add_header Strict-Transport-Security \"max-age=31536000; includeSubDomains; preload\";\n\
 		add_header X-Content-Type-Options nosniff;\n\
-		root /var/www/html/cloveros.ga/;\n\
+		root /var/www/html/cloveros.org/;\n\
 		autoindex on;\n\
 	}\n\
 }@" conf/nginx.conf
-	mkdir /var/www/html/cloveros.ga/
+	mkdir /var/www/html/cloveros.org/
 	sleep 1
 	nginx/objs/nginx -p $(pwd)/conf/ -c nginx.conf
 fi
@@ -89,7 +89,7 @@ while :; do
 		wget -qO - https://raw.githubusercontent.com/diafygi/acme-tiny/master/acme_tiny.py | python3 - --account-key conf/ssl/account.key --csr conf/ssl/certificate.csr --acme-dir /var/www/html/.well-known/acme-challenge/ > conf/ssl/certificate.crt
 		nginx/objs/nginx -p $(pwd)/conf/ -c nginx.conf -s reload
 	fi
-	rsync -a --delete --exclude "s/CloverOS_*" --exclude "games-fps/*" --exclude "games-action/*" --exclude "dev-util/android*" --exclude "dev-util/pycharm*" --exclude "media-fonts/noto*" rsync://nl.cloveros.ga/cloveros /var/www/html/cloveros.ga/;
+	rsync -a --delete --exclude "s/CloverOS_*" --exclude "games-fps/*" --exclude "games-action/*" --exclude "dev-util/android*" --exclude "dev-util/pycharm*" --exclude "media-fonts/noto*" rsync://nl.cloveros.org/cloveros /var/www/html/cloveros.org/;
 	sleep 600
 done
 
