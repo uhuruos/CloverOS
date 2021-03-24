@@ -5,7 +5,7 @@
 
 These scripts creates CloverOS GNU/Linux; a minimal (middleware-free) and default out-of-the-box Gentoo image (stage4) and a performance-optimized packages repo (Binhost)
 
-Mirrors and binary details: https://useast.cloveros.ga https://uswest.cloveros.ga https://ca.cloveros.ga https://fr.cloveros.ga https://nl.cloveros.ga https://au.cloveros.ga https://uk.cloveros.ga https://sg.cloveros.ga https://jp.cloveros.ga
+Mirrors and binary details: https://useast.cloveros.org https://uswest.cloveros.org https://ca.cloveros.org https://fr.cloveros.org https://nl.cloveros.org https://au.cloveros.org https://uk.cloveros.org https://sg.cloveros.org https://jp.cloveros.org
 
 Objectives: Lowest RAM usage desktop, no changes to Gentoo and kept as default as possible, easily install any package in its ideal form with emerge, easy out-of-the-box desktop, best CFLAGS
 
@@ -109,7 +109,7 @@ Web interface: https://packages.gentoo.org
 
 List of binaries (no dependencies): https://gitgud.io/cloveros/cloveros/blob/master/binhost_settings/var/lib/portage/world
 
-List of all binaries: https://cloveros.ga/s/packages.html
+List of all binaries: https://cloveros.org/s/packages.html
 
 ### Package isn't available
 Make an issue so I can add the package to binhost. In the meantime, install from source using `~/cloveros_settings.sh 5 ; sudo emerge [package] ; ~/cloveros_settings.sh 5`
@@ -665,10 +665,10 @@ XDG_RUNTIME_DIR=. weston-launch
 ### Things preventing CloverOS Libre from being EFF-approved
 - /usr/portage/ needs to be filtered to not include the .ebuilds of proprietary software, also requiring a separate Portage mirror
 
-- It needs a cloveros.ga mirror that doesn't host the non-free software packages
+- It needs a cloveros.org mirror that doesn't host the non-free software packages
 
 ### Does CloverOS have binaries?
-Yes. It's a pre-setup Gentoo image with `PORTAGE_BINHOST="https://cloveros.ga" emerge -G package` preset in /etc/portage/make.conf. It uses Gentoo for everything (versions, ebuilds, etc.) and gets packages from cloveros.ga instead of building
+Yes. It's a pre-setup Gentoo image with `PORTAGE_BINHOST="https://cloveros.org" emerge -G package` preset in /etc/portage/make.conf. It uses Gentoo for everything (versions, ebuilds, etc.) and gets packages from cloveros.org instead of building
 
 ### How often is this updated?
 It's stable rolling release (Gentoo Stable). The binaries reflect current Portage (amd64) about once a week: http://twitter.com/cloveros_ga
@@ -690,7 +690,7 @@ First, connect to wifi using wpa_gui ('wifi' in fvwm)
 Kill X and re-login. After you log in and the "Start X?" dialog pops up, instead of y/n, type one of the WM options and hit y when it asks to install.
 
 ### I want to donate/host a mirror
-Run `rsync -av --delete rsync://nl.cloveros.ga/cloveros /your/webserver/location/` and link me the https://
+Run `rsync -av --delete rsync://nl.cloveros.org/cloveros /your/webserver/location/` and link me the https://
 
 ### Disabling Intel mitigations for performance
 ```
@@ -725,7 +725,7 @@ To remove dbus: `sudo USE="-dbus" emerge -1 glib qtgui && sudo emerge --depclean
 ### Backing up CloverOS binhost example
 ```
 sudo mount /dev/sdb1 /mnt/usb/
-rsync -av --delete rsync://cloveros.ga/cloveros /mnt/usb/binhost/
+rsync -av --delete rsync://cloveros.org/cloveros /mnt/usb/binhost/
 sudo PKGDIR="/mnt/usb/binhost/" emerge -K [package]
 ```
 
