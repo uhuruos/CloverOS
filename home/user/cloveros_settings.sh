@@ -115,7 +115,7 @@ case "$choice" in
 
 		sudo emerge --sync
 		sudo emerge -uvD @world
-		for i in {dev-libs/glib,dev-qt/qtgui,xfce-base/thunar}; do [ -d /var/db/pkg/$i* ] && sudo PORTAGE_BINHOST="https://cloveros.ga/s/nodbus" FETCHCOMMAND_HTTPS="wget -O \"\${DISTDIR}/\${FILE}\" \"\${URI}\"" emerge --exclude mesa -1uD $i; done
+		for i in {dev-libs/glib,dev-qt/qtgui,xfce-base/thunar}; do [ -d /var/db/pkg/$i* ] && sudo PORTAGE_BINHOST="https://cloveros.org/s/nodbus" FETCHCOMMAND_HTTPS="wget -O \"\${DISTDIR}/\${FILE}\" \"\${URI}\"" emerge --exclude mesa -1uD $i; done
 		sudo emerge --depclean
 
 		kernel=$(uname -r)
@@ -140,12 +140,12 @@ case "$choice" in
 		;;
 
 	4)
-		kernelversion=$(wget -qO - https://cloveros.ga/s/kernel.tar.lzma | lzma -d | strings | grep -aoPm1 "(?<=x86_64-).*(?=-gentoo)")
+		kernelversion=$(wget -qO - https://cloveros.org/s/kernel.tar.lzma | lzma -d | strings | grep -aoPm1 "(?<=x86_64-).*(?=-gentoo)")
 		if ls /boot/ | grep -q $kernelversion; then
 			echo "Kernel up to date."
 		else
 			rm kernel.tar.lzma kernel.tar.lzma.asc &> /dev/null
-			wget https://cloveros.ga/s/kernel.tar.lzma https://cloveros.ga/s/signatures/s/kernel.tar.lzma.asc
+			wget https://cloveros.org/s/kernel.tar.lzma https://cloveros.org/s/signatures/s/kernel.tar.lzma.asc
 			if sudo gpg --verify kernel.tar.lzma.asc kernel.tar.lzma; then
 				sudo tar -C / -xf kernel.tar.lzma
 				sudo grub-mkconfig -o /boot/grub/grub.cfg
@@ -282,12 +282,12 @@ case "$choice" in
 		;;
 
 	l)
-		kernelversion=$(wget -qO - https://cloveros.ga/s/kernel-libre.tar.lzma | lzma -d | strings | grep -aoPm1 "(?<=x86_64-).*(?=-gentoo)")
+		kernelversion=$(wget -qO - https://cloveros.org/s/kernel-libre.tar.lzma | lzma -d | strings | grep -aoPm1 "(?<=x86_64-).*(?=-gentoo)")
 		if ls /boot/ | grep -q $kernelversion-gentoo-gnu; then
 			echo "Kernel up to date."
 		else
 			rm kernel-libre.tar.lzma kernel-libre.tar.lzma.asc &> /dev/null
-			wget https://cloveros.ga/s/kernel-libre.tar.lzma https://cloveros.ga/s/signatures/s/kernel-libre.tar.lzma.asc
+			wget https://cloveros.org/s/kernel-libre.tar.lzma https://cloveros.org/s/signatures/s/kernel-libre.tar.lzma.asc
 			if sudo gpg --verify kernel-libre.tar.lzma.asc kernel-libre.tar.lzma; then
 				sudo tar -C / -xf kernel-libre.tar.lzma
 				sudo grub-mkconfig -o /boot/grub/grub.cfg

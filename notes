@@ -10,7 +10,7 @@ installer: fix some characters in password not working
 make posix compliant (replace read with echo read)
 
 #update
-apache calibre lxqt-meta mongodb falkon qt5ct kvantum calligra rstudio gpaste eog graphwiz sabnzbd mypaint www-client/surf liferea lutris midori luakit ungoogled-chromium waterfox-classic haskell-platform vagrant virtualbox-additions virtualbox-extpack-oracle virtualbox-guest-additions virtualbox guake abiword pitivi gkrellm-themes gkrellmpc gkrellm-plugins gkrellm lastpass-cli displaycal mypaint sway  varnish gdb telegram-cli torbrowser kodi
+openldap dvisvgm plasma-meta gens openshot rpcs3 i3status pkgcore apache calibre lxqt-meta mongodb falkon qt5ct kvantum calligra rstudio gpaste eog graphwiz sabnzbd mypaint www-client/surf liferea lutris midori luakit ungoogled-chromium waterfox-classic haskell-platform vagrant virtualbox-additions virtualbox-extpack-oracle virtualbox-guest-additions virtualbox guake abiword pitivi gkrellm-themes gkrellmpc gkrellm-plugins gkrellm lastpass-cli displaycal mypaint sway  varnish gdb telegram-cli torbrowser kodi
 
 # builds, requires AR="gcc-ar" in make.conf commented out
 ftjam argyllcms mongodb	
@@ -33,6 +33,12 @@ tdebase-meta zanronum zeronet nxplayer murmur eiskaltdcpp retroshare acme-tiny j
 cadence ladish
 # requires pulseaudio
 qtile
+# removed from portage
+cinelerra qt-virt-manager
+# python version
+x11-apps/jstest-gtk
+# gnome-keyring
+wmpasman
 # dependency use flag requirements
 buzztrax / clutter USE=gtk
 plasma-applet-weather-widget / qtdeclarative USE=xml
@@ -44,5 +50,3 @@ bitwig-stuidio / cairo USE=xcb
 cheese / clutter USE=X
 xdg-desktop-portal-kde / qtprintsupport USE=cups
 eatmonkey / aria2 USE=bittorrent xmlrpc
-
-monodevelop dxvk
