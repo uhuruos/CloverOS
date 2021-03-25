@@ -112,6 +112,9 @@ case "$choice" in
 		if grep -q "^python3.5$" /etc/python-exec/python-exec.conf; then
 			sudo eselect python cleanup
 		fi
+		if grep -qF "cloveros.ga" /etc/portage/make.conf; then
+			sudo sed 's/cloveros.ga/cloveros.org/g' /etc/portage/make.conf
+		fi
 
 		sudo emerge --sync
 		sudo emerge -uvD @world
