@@ -118,7 +118,6 @@ app-emulation/nemu
 app-emulation/open-vm-tools
 app-emulation/q4wine
 app-emulation/qemu
-app-emulation/qt-virt-manager
 app-emulation/spice-vdagent
 app-emulation/vagrant
 app-emulation/virt-manager
@@ -246,7 +245,6 @@ app-text/dos2unix
 app-text/evince
 app-text/extract_url
 app-text/highlight
-app-text/kchmviewer
 app-text/lesspipe
 app-text/master-pdf-editor
 app-text/mupdf
@@ -360,10 +358,8 @@ games-emulation/dgen-sdl
 games-emulation/dolphin
 games-emulation/dosbox
 games-emulation/emutos
-games-emulation/fakenes
 games-emulation/fceux
 games-emulation/generator
-games-emulation/gens
 games-emulation/gngb
 games-emulation/gngeo
 games-emulation/hatari
@@ -383,7 +379,6 @@ games-emulation/pcsxr
 games-emulation/ppsspp
 games-emulation/reicast
 games-emulation/retroarch
-games-emulation/rpcs3
 games-emulation/sdlmame
 games-emulation/snes9x
 games-emulation/stella
@@ -476,7 +471,6 @@ kde-misc/peruse
 kde-misc/plasma-applet-network-monitor
 kde-plasma/bluedevil
 kde-plasma/plasma-applet-active-window-control
-kde-plasma/plasma-meta
 lxde-base/lxappearance
 lxde-base/lxde-meta
 lxde-base/lxtask
@@ -889,7 +883,6 @@ media-video/avidemux
 media-video/baka-mplayer
 media-video/blind
 media-video/celluloid
-media-video/cinelerra
 media-video/dvdbackup
 media-video/ffcast
 media-video/ffmpeg
@@ -904,7 +897,6 @@ media-video/mediainfo
 media-video/mkvtoolnix
 media-video/mpv
 media-video/obs-studio
-media-video/openshot
 media-video/rtmpdump
 media-video/smplayer
 media-video/smtube
@@ -1129,7 +1121,6 @@ sys-apps/mlocate
 sys-apps/moreutils
 sys-apps/msr-tools
 sys-apps/nvme-cli
-sys-apps/pkgcore
 sys-apps/pmount
 sys-apps/psensor
 sys-apps/pv
@@ -1256,7 +1247,6 @@ www-servers/tomcat
 x11-apps/compiz-boxmenu
 x11-apps/compiz-manager
 x11-apps/igt-gpu-tools
-x11-apps/jstest-gtk
 x11-apps/mesa-progs
 x11-apps/xbacklight
 x11-apps/xclipboard
@@ -1293,7 +1283,6 @@ x11-misc/grabc
 x11-misc/hsetroot
 x11-misc/i3blocks-gaps
 x11-misc/i3lock
-x11-misc/i3status
 x11-misc/idesk
 x11-misc/kdocker
 x11-misc/ktsuss
@@ -1427,7 +1416,6 @@ x11-plugins/wmmp3
 x11-plugins/wmnd
 x11-plugins/wmnet
 x11-plugins/wmpager
-x11-plugins/wmpasman
 x11-plugins/wmpinboard
 x11-plugins/wmping
 x11-plugins/wmpop3

@@ -1,11 +1,12 @@
+dev-qt/qtnetwork -bindist
+dev-libs/openssl -bindist # required for many packages
+games-emulation/ppsspp sdl
 media-libs/opencv contrib contribdnn # digikam
 media-video/x264-encoder -custom-cflags
 games-util/steam-launcher -udev
 net-dns/dnsmasq script # qt-virt-manager
 dev-util/ostree curl # flatpak
 media-libs/freeimage -raw
-media-libs/libopenshot -python_single_target_python3_7 python_single_target_python3_6
-media-video/openshot -python_single_target_python3_7 python_single_target_python3_6
 sys-apps/xdg-desktop-portal screencast
 dev-libs/efl -wayland
 x11-wm/enlightenment -wayland
@@ -237,7 +238,7 @@ dev-qt/qtwebengine jumbo-build
 www-client/chromium jumbo-build ozone
 www-client/ungoogled-chromium clang thinlto optimize-thinlto optimize-webui jumbo-build closure-compile pdf ozone
 www-client/seamonkey -crypt -minimal
-www-client/palemoon -official-branding
+www-client/palemoon -official-branding gtk2
 www-client/firefox clang -thinlto cross-lto
 mail-client/thunderbird clang
 www-client/torbrowser clang
@@ -429,24 +430,6 @@ dev-libs/xmlsec nss
 media-libs/libsdl2 X haptic
 dev-lang/tk truetype
 
-#libressl
-net-misc/curl curl_ssl_libressl -curl_ssl_openssl
-dev-python/pycurl curl_ssl_libressl -curl_ssl_openssl
-net-libs/nodejs bundled-ssl -system-ssl
-app-crypt/johntheripper minimal -openmp -opencl
-net-p2p/mktorrent -ssl
-net-misc/iputils -ssl
-net-print/gtklp -ssl
-sys-block/mbuffer -ssl
-net-ftp/gproftpd -ssl
-app-admin/mongo-tools -ssl
-www-client/jd gnutls
-net-ftp/proftpd -ssl -libressl
-www-client/w3mmee -ssl -libressl
-app-emulation/open-vm-tools -ssl -vgauth -grabbitmqproxy
-sys-fs/cryptsetup openssl
-dev-vcs/subversion -http
-
 #wine
 sys-apps/attr abi_x86_32
 x11-libs/libXcursor abi_x86_32
@@ -560,19 +543,8 @@ x11-libs/wxGTK:3.0-gtk3 abi_x86_32
 x11-libs/gtk+:3 abi_x86_32
 media-libs/libepoxy abi_x86_32
 
->=dev-python/docutils-0.16 -python_targets_python2_7
-*/* PYTHON_TARGETS: python2_7 python3_6 python3_7
-*/* PYTHON_SINGLE_TARGET: -python3_6 python3_7
-media-plugins/vapoursynth-kagefunc python_single_target_python3_7
-net-analyzer/nagstamon python_targets_python3_6
-x11-misc/compton python_targets_python3_6
-dev-python/cffi python_targets_python3_6
-dev-python/numpy python_targets_python3_6
-dev-python/docutils python_targets_python2_7
-media-gfx/blender python_single_target_python3_6
-x11-terms/guake python_single_target_python3_6
-x11-terms/guake python_single_target_python3_7 -python_single_target_python3_6
-media-gfx/openvdb python_single_target_python3_6
+*/* PYTHON_TARGETS: python2_7 python3_7 python3_8
+*/* PYTHON_SINGLE_TARGET: -python3_6 -python3_7 python3_8
 app-portage/porthole python_targets_python2_7
 www-client/waterfox-classic -system-libvpx -pgo # temp
 www-client/torbrowser -system-libvpx # temp
@@ -581,5 +553,50 @@ mail-client/thunderbird -system-libvpx # temp
 www-client/seamonkey -system-libvpx # temp
 www-client/firefox -system-av1 # temp
 www-client/ungoogled-chromium -optimize-webui -system-openh264 # temp
-net-misc/pyhoca-gui python_targets_python3_7
-dev-python/cheetah -python_targets_python2_7
+dev-vcs/git-cola python_single_target_python3_7
+games-emulation/hatari python_single_target_python3_7
+media-gfx/blender python_single_target_python3_7
+media-video/openshot python_single_target_python3_7
+x11-terms/guake python_single_target_python3_7
+media-libs/libopenshot python_single_target_python3_7
+net-misc/electrum-ltc python_targets_python3_7
+net-misc/pyhoca-cli python_targets_python3_7
+app-text/gnome-doc-utils -python_targets_python3_6
+net-misc/python-x2go python_targets_python3_7
+dev-vcs/git-cola python_single_target_python3_7 -python_single_target_python3_8
+app-editors/vis lua_single_target_lua5-4
+# required by sys-libs/libunwind-1.5.0::gentoo[zlib]
+# required by x11-apps/igt-gpu-tools-1.25::gentoo
+# required by @selected
+# required by @world (argument)
+>=sys-libs/zlib-1.2.11-r2 static-libs
+# required by dev-python/pycairo-1.20.0::gentoo
+# required by dev-python/pygobject-3.36.1-r1::gentoo[cairo]
+# required by x11-wm/xpra-3.0.5-r2::gentoo
+# required by @selected
+# required by @world (argument)
+>=dev-python/certifi-10001-r1 python_targets_python3_6
+app-misc/powerline -python_targets_python2_7
+app-misc/recoll -python_single_target_python3_7
+games-emulation/hatari -python_single_target_python3_7
+x11-terms/guake -python_single_target_python3_7
+
+
+# required by kde-plasma/plasma-workspace-5.20.5-r3::gentoo
+# required by kde-plasma/kdeplasma-addons-5.20.5::gentoo
+# required by kde-plasma/plasma-meta-5.20.5::gentoo
+# required by @selected
+# required by @world (argument)
+>=kde-frameworks/prison-5.77.0 qml
+# required by dev-lang/ruby-2.5.8::gentoo
+# required by virtual/ruby-ssl-11::gentoo[ruby_targets_ruby25]
+# required by dev-ruby/net-ssh-6.1.0-r1::gentoo
+# required by dev-ruby/net-sftp-3.0.0::gentoo[ruby_targets_ruby26]
+# required by app-emulation/vagrant-2.2.9-r1::gentoo[ruby_targets_ruby26]
+# required by @selected
+# required by @world (argument)
+>=dev-ruby/rake-13.0.3 ruby_targets_ruby25
+games-emulation/gens abi_x86_32
+app-editors/vis lua_single_target_lua5-3
+media-sound/sonata python_single_target_python3_9 -python_single_target_python3_8
+>=dev-util/wayland-scanner-1.19.0 abi_x86_32

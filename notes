@@ -10,7 +10,8 @@ installer: fix some characters in password not working
 make posix compliant (replace read with echo read)
 
 #update
-openldap dvisvgm plasma-meta gens openshot rpcs3 i3status pkgcore apache calibre lxqt-meta mongodb falkon qt5ct kvantum calligra rstudio gpaste eog graphwiz sabnzbd mypaint www-client/surf liferea lutris midori luakit ungoogled-chromium waterfox-classic haskell-platform vagrant virtualbox-additions virtualbox-extpack-oracle virtualbox-guest-additions virtualbox guake abiword pitivi gkrellm-themes gkrellmpc gkrellm-plugins gkrellm lastpass-cli displaycal mypaint sway  varnish gdb telegram-cli torbrowser kodi
+
+profanity android-udev-rules i3blocks-gap media-tv/plex-media-server x11-misc/lemonbar x11-misc/clipster deadbeef fzf openldap dvisvgm plasma-meta gens openshot rpcs3 i3status pkgcore apache calibre lxqt-meta mongodb falkon qt5ct kvantum calligra rstudio gpaste eog graphwiz sabnzbd mypaint www-client/surf liferea lutris midori luakit ungoogled-chromium waterfox-classic haskell-platform vagrant virtualbox-additions virtualbox-extpack-oracle virtualbox-guest-additions virtualbox guake abiword pitivi gkrellm-themes gkrellmpc gkrellm-plugins gkrellm lastpass-cli displaycal mypaint sway  varnish gdb telegram-cli torbrowser kodi
 
 # builds, requires AR="gcc-ar" in make.conf commented out
 ftjam argyllcms mongodb	

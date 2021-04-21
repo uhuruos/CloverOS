@@ -1,4 +1,3 @@
-*/*::0x4d4c
 */*::4nykey
 */*::abendbrot
 */*::audio-overlay
@@ -6,16 +5,13 @@
 */*::brother-overlay
 */*::calculate
 */*::cloveros
-*/*::deadbeef-overlay
 */*::deepin
 */*::dlang
 */*::elementary
 */*::erayd
 */*::eroen
 */*::farmboy0
-*/*::fkmclane
 */*::gamerlay
-*/*::genthree
 */*::haarp
 */*::hering-overlay
 */*::jacendi-overlay
@@ -24,10 +20,8 @@
 */*::lanodanOverlay
 */*::libressl
 */*::linxon
-*/*::lua
 */*::luke-jr
 */*::mv
-*/*::optmzr
 */*::palemoon
 */*::pentoo
 */*::pf4public
@@ -50,8 +44,6 @@
 */*::vampire
 */*::vapoursynth
 */*::vifino-overlay
-
-net-im/profanity::gentoo # optmzr
 
 >sys-kernel/genkernel-3.5.3.3 # genkernel 4 is buggy, incorrect filenames
 >sys-apps/rng-tools-6.9

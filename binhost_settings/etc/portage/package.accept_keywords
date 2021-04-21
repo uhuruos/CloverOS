@@ -1,3 +1,19 @@
+dev-util/meson
+gnome-base/librsvg
+dev-libs/libmpack
+dev-lua/LuaBitOp
+dev-lua/mpack
+dev-libs/libfmt
+dev-lua/luasocket
+dev-lua/lpeg
+dev-lua/luafilesystem
+app-eselect/eselect-lua
+dev-lang/lua
+sci-libs/volk
+dev-python/websockets
+dev-java/jna
+dev-python/pytaglib
+dev-python/click-plugins
 media-tv/kodi
 dev-python/markdown
 media-libs/libplacebo
@@ -13,9 +29,9 @@ dev-libs/nspr # firefox
 games-emulation/pcsx2::cloveros **
 games-emulation/dolphin **
 games-emulation/ppsspp **
-media-gfx/gimp **
-media-libs/gegl ** # gimp
-media-libs/babl ** # gimp
+#media-gfx/gimp **
+#media-libs/gegl ** # gimp
+#media-libs/babl ** # gimp
 
 #old, remove when stable is bumped up
 sys-fs/zfs ** # kernel 5.4
@@ -43,6 +59,7 @@ app-editors/xemacs
 www-client/elinks
 
 #keyworded, remove when stable exists
+www-servers/onionshare-cli
 net-news/rssguard
 net-p2p/gnunet
 media-gfx/waifu2x-ncnn-vulkan
@@ -199,7 +216,7 @@ app-misc/powerline
 media-video/vidcutter **
 x11-misc/gpaste
 x11-misc/clipit
-x11-apps/copyq
+x11-misc/copyq
 x11-misc/clipster
 games-emulation/libretro-dosbox
 app-emulation/fs-uae
@@ -338,6 +355,8 @@ media-gfx/maim
 x11-misc/slop # maim
 net-wireless/gnuradio
 net-p2p/freenet
+acct-group/freenet # freenet
+acct-user/freenet # freenet
 dev-java/bcprov # freenet
 net-libs/NativeThread # freenet
 media-sound/tomahawk
@@ -923,30 +942,6 @@ media-plugins/vapoursynth-matchhistogram
 media-plugins/vapoursynth-readmpls
 media-plugins/vapoursynth-temporalsoften2
 media-plugins/vapoursynth-tbilateral
-
-media-sound/deadbeef **
-media-plugins/deadbeef-plugins-meta
-media-plugins/deadbeef-replaygain-control
-media-plugins/deadbeef-spectrogram
-media-plugins/deadbeef-musical-spectrum
-media-plugins/deadbeef-quick-search
-media-plugins/deadbeef-bookmark-manager
-media-plugins/deadbeef-bs2b
-media-plugins/deadbeef-waveform-seekbar
-media-plugins/deadbeef-vu-meter
-media-plugins/deadbeef-stereo-widener
-media-plugins/deadbeef-mpris
-#media-plugins/deadbeef-jack
-media-plugins/deadbeef-infobar
-media-plugins/deadbeef-decast
-media-plugins/deadbeef-fb
-#media-plugins/deadbeef-statusnotifier
-media-plugins/deadbeef-vk
-media-plugins/deadbeef-soxr
-media-plugins/deadbeef-opus
-#media-plugins/deadbeef-librarybrowser
-#media-plugins/deadbeef-gnome-mmkeys
-#media-plugins/deadbeef-archive-reader
 
 x11-plugins/wmmand
 x11-plugins/wmhdplop
