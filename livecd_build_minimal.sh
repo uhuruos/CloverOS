@@ -12,8 +12,8 @@ userpassword=password
 mkdir mini_image/
 cd mini_image/
 
-builddate=$(wget -O - http://distfiles.gentoo.org/releases/amd64/autobuilds/current-stage3-amd64/ | sed -nr "s/.*href=\"stage3-amd64-([0-9].*).tar.xz\">.*/\1/p")
-wget http://distfiles.gentoo.org/releases/amd64/autobuilds/current-stage3-amd64/stage3-amd64-$builddate.tar.xz
+builddate=$(wget -O - https://distfiles.gentoo.org/releases/amd64/autobuilds/current-stage3-amd64-openrc/ | sed -nr "s/.*href=\"stage3-amd64-([0-9].*).tar.xz\">.*/\1/p")
+wget https://distfiles.gentoo.org/releases/amd64/autobuilds/current-stage3-amd64-openrc/stage3-amd64-$builddate.tar.xz
 tar pxf stage3*
 rm -f stage3*
 
